@@ -1,0 +1,122 @@
+---
+title: Code samples for SharePoint 2013
+ms.prod: SHAREPOINTDESIGNER
+ms.assetid: e6b52c6c-32f8-4689-8c1a-7b50039dcbe8
+---
+
+
+# Code samples for SharePoint 2013
+Find and download code samples for SharePoint 2013, including samples that demonstrate SharePoint Add-ins, user experience design, metadata management, workflows, mobile application development, REST, and other areas of SharePoint development. 
+ **Last modified:** September 17, 2015
+  
+    
+    
+
+ * **Applies to:** apps for SharePoint | Office 365 | SharePoint Foundation 2013 | SharePoint Server 2013* 
+## Code samples for SharePoint 2013 and SharePoint Add-ins
+
+
+
+|**Title **|**Summary **|**Subject **|
+|:-----|:-----|:-----|
+| [SharePoint 2013: Creating an OData source With BCS notifications](http://code.msdn.microsoft.com/SharePoint-2013-Creating-f47c3890)|Learn how to create a Windows Communication Foundation (WCF) data service that exposes data from the Northwind database using the OData protocol to provide data, as well as notifications of changes to that data found in the external system. |BCS, OData, WCF |
+| [SharePoint 2013: MyFileConnector custom BCS indexing connector sample](http://code.msdn.microsoft.com/SharePoint-2013-MyFileConne-79d2ea26)|Learn how to create a custom BCS indexing connector for Search in SharePoint 2013. |BCS |
+| [SharePoint 2013: Set the Bing Maps key by using the client object model](http://code.msdn.microsoft.com/SharePoint-2013-Set-the-b5925468)|Set the Bing Maps key at the farm or web level using the client object model. |CSOM, SharePoint Add-ins |
+| [SharePoint 2013: Hello World remote app using CSOM](http://code.msdn.microsoft.com/SharePoint-2013-Hello-0fd15fbf)|Learn how to create a basic "hello world" provider-hosted SharePoint Add-in that uses the SharePoint CSOM to read information about a SharePoint 2013 site from a remote web application. |CSOM, SharePoint Add-ins |
+| [SharePoint 2013: Get list items by using the cross-domain library (CSOM)](http://code.msdn.microsoft.com/SharePoint-2013-Get-items-d48150ae)|Learn how to use the cross-domain library in SharePoint Add-ins to read items in a list hosted in the app web. |CSOM, data access, SharePoint Add-ins |
+| [SharePoint 2013: Perform basic data access operations by using CSOM in apps](http://code.msdn.microsoft.com/SharePoint-2013-Perform-eba8df54)|Learn how to use the SharePoint CSOM to perform basic data access operations (Create, Read, Update, Delete) on SharePoint 2013 lists and list items. |CSOM, CRUD |
+| [SharePoint 2013: Automate tagging fields with terms (CSOM)](http://code.msdn.microsoft.com/SharePoint-2013-Automate-579cfc54)|Learn how to tag documents in SharePoint 2013 by using the .NET client object model (CSOM). |CSOM, ECM |
+| [SharePoint 2013: Get data from a remote service using the web proxy](http://code.msdn.microsoft.com/SharePoint-2013-Get-data-705bdcd5)|Learn how to read data in a remote service from a SharePoint webpage by using the web proxy in SharePoint Add-ins. |Data access, SharePoint Add-ins |
+| [SharePoint 2013: Get data by using a proxy page for the cross-domain library](http://code.msdn.microsoft.com/SharePoint-2013-Get-data-10039ff1)|Learn how to read data in a remote service from a SharePoint 2013 webpage by creating a custom proxy page for the cross-domain library in SharePoint Add-ins. |Data access, SharePoint Add-ins |
+| [SharePoint 2013: Automate tagging fields with terms (server object model)](http://code.msdn.microsoft.com/SharePoint-2013-Automate-c0f4a10e)|Learn how to tag documents in SharePoint 2013 by using the .NET server object model. |ECM, server object model |
+| [SharePoint 2013: Column usage report](http://code.msdn.microsoft.com/SharePoint-2013-Column-5bfc9643)|Learn how to create a column usage report for a specified SharePoint site. |ECM, metadata management |
+| [SharePoint 2013: Content type report](http://code.msdn.microsoft.com/SharePoint-2013-Content-1fe98b75)|Learn how to build a custom report that shows how content types are used on a specific SharePoint site. |ECM, metadata management |
+| [SharePoint 2013: Import a term set from an external source](http://code.msdn.microsoft.com/SharePoint-2013-Import-a-4d3d900b)|Learn how to import a term set that is stored in XML format from an external data source. |ECM, metadata management |
+| [SharePoint 2013: Synchronize term sets with the term store (CSOM)](http://code.msdn.microsoft.com/SharePoint-2013-Synchronize-d40638d1)|Learn how to synchronize SharePoint 2013 term sets with the term store by using the .NET client object model (CSOM). |ECM, metadata management, CSOM |
+| [SharePoint 2013: Synchronize term sets with the term store (server object model)](http://code.msdn.microsoft.com/SharePoint-2013-Synchronize-4c191e68)|Learn how to synchronize SharePoint 2013 term sets with the term store by using the .NET server object model. |ECM, metadata management, server object model |
+| [SharePoint 2013: XML object snapshot](http://code.msdn.microsoft.com/SharePoint-2013-XML-object-20d85b6f)|Learn how to use reflection to crawl a SharePoint site and write a snapshot of the site's objects and properties into a report in XML format. |ECM, metadata management |
+| [SharePoint 2013: Extract and insert bin-unit elements in XLIFF files](http://code.msdn.microsoft.com/SharePoint-2013-Extract-fe686878)|The BinarySample tool provides a simple means of extracting and inserting binary content from an XLIFF file produced from a SharePoint Server 2013 publishing site. |ECM |
+| [SharePoint 2013: Use event receivers to handle events in apps for SharePoint](http://code.msdn.microsoft.com/SharePoint-2013-Use-event-8b5a551f)|Learn how to handle events in an SharePoint Add-in by using the SharePoint development tools in Visual Studio 2010. |Event receivers, SharePoint Add-ins |
+| [SharePoint 2013: Create a remote event receiver for external data](http://code.msdn.microsoft.com/SharePoint-2013-Create-a-095c594c)|Learn how to create a remote event receiver that performs actions based on changes in external data. |Event receivers, data access |
+| [SharePoint 2013: Accessing complex external content types with CSOM](http://code.msdn.microsoft.com/SharePoint-2013-Accessing-ccbc24cf)|Learn how to use client code libraries to manipulate app-scoped external content types. |External content types, CSOM |
+| [SharePoint 2013: Create external list based on app scoped external content type](http://code.msdn.microsoft.com/SharePoint-2013-Create-ffc9af9f)|Learn how to create a new external content type based on an OData source and an external data list to display the data from the external system. |External content types, OData |
+| [SharePoint 2013: Create multiple external lists with associations](http://code.msdn.microsoft.com/SharePoint-2013-Create-2d2ec458)|Demonstrates how to create an external content type using multiple associated entities, and display that data in multiple external lists. |External content types, SharePoint Add-ins |
+| [SharePoint 2013: Create custom Geolocation field type with client-side rendering](http://code.msdn.microsoft.com/SharePoint-2013-Create-eb30a620)|Use client-side rendering technology in SharePoint 2013 to customize a Geolocation field type. |Geolocation |
+| [SharePoint 2013: Add a Geolocation column to a list programmatically](http://code.msdn.microsoft.com/SharePoint-2013-Add-a-d3fa8288)|Add a GeoLocation column to a list in SharePoint 2013 programmatically. |Geolocation |
+| [SharePoint 2013: Programmatically create a map view with Geolocation field type](http://code.msdn.microsoft.com/SharePoint-2013-Programmati-a9fa95db)|Learn how to use the new Geolocation field type to integrate location information and maps in a SharePoint list and create location-based map views. |Geolocation |
+| [SharePoint 2013: Create a Geolocation field that renders maps using Nokia Maps](http://code.msdn.microsoft.com/SharePoint-2013-Create-a-d9a91551)|Render data from Nokia maps in SharePoint 2013 by creating a custom field type that inherits from the Geolocation field type. |Geolocation, mobile development |
+| [SharePoint 2013: Get the host web title using the cross-domain library (JSOM)](http://code.msdn.microsoft.com/SharePoint-2013-Get-the-563f2a3d)|Learn how to use the cross-domain library in SharePoint Add-ins to read the host web title by using the JavaScript object model (JSOM). |JSOM, SharePoint Add-ins |
+| [SharePoint 2013: Execute basic tasks using the JavaScript object model (JSOM)](http://code.msdn.microsoft.com/SharePoint-2013-Execute-a41c49ff)|Learn how to perform basic tasks using the JavaScript object model (JSOM) in an SharePoint Add-in. This sample also shows how to use the JSOM in a SharePoint-hosted html page. |JSOM, SharePoint Add-ins |
+| [SharePoint 2013: Access Machine Translation Service from Silverlight application](http://code.msdn.microsoft.com/SharePoint-2013-Access-cdaff6b2)|Learn how to translate document libraries, single documents or folders, and text streams with the Machine Translation Service in SharePoint Server 2013 using the Silverlight client object model. |Machine translation, Silverlight, SharePoint Add-ins |
+| [SharePoint 2013: Access Machine Translation Service using server object model](http://code.msdn.microsoft.com/SharePoint-2013-Access-86639c3d)|Learn how to translate document libraries, single documents or folders, and text streams with the Machine Translation Service in SharePoint Server 2013 using the server object model. |Machine translation, SharePoint Add-ins, server object model |
+| [SharePoint 2013: Access Machine Translation Service using the CSOM](http://code.msdn.microsoft.com/SharePoint-2013-Perform-a-8e53b06a)|Learn how to translate document libraries, single documents or folders, and text streams with the Machine Translation Service in SharePoint Server 2013 using the .NET client object model. |Machine translation, CSOM, SharePoint Add-ins |
+| [SharePoint 2013: Accessing the Machine Translation Service with JavaScript](http://code.msdn.microsoft.com/SharePoint-2013-Accessing-647f6dd9)|Learn how to translate document libraries, single documents or folders, and text streams with the Machine Translation Service in SharePoint Server 2013 using the JavaScript client object model. |Machine translation, JavaScript, SharePoint Add-ins |
+| [SharePoint 2013: Assign new settings to a navigation term set (.NET server)](http://code.msdn.microsoft.com/SharePoint-2013-Assign-new-c79ce037)|Shows how to assign new settings to a navigation term set using .NET server managed code. |Metadata management, server object model |
+| [SharePoint 2013: Assign new settings to a navigation term set using CSOM](http://code.msdn.microsoft.com/SharePoint-2013-Assign-new-5c19062b)|Shows how to assign new settings to a navigation term set using the CSOM. |Metadata management, CSOM |
+| [SharePoint 2013: Create a Windows Phone app to receive push notifications](http://code.msdn.microsoft.com/SharePoint-2013-Create-a-f361dc38)|Create a Windows Phone app for receiving notifications from a SharePoint list. |Mobile development |
+| [SharePoint 2013: Customize the UI of a SharePoint list app for Windows Phone](http://code.msdn.microsoft.com/SharePoint-2013-Customize-e025ea68)|Customize the Windows Phone user interface that is generated by the Windows Phone SharePoint List Application template. |Mobile development, UI design, user experience |
+| [SharePoint 2013: Export the Name field in a Document Library list to a mobile app](http://code.msdn.microsoft.com/SharePoint-2013-Export-58d589e9)|Export the "Name" field of a document library list to a mobile app by using the Visual Studio SharePoint List wizard. |Mobile development |
+| [SharePoint 2013: Support and convert SharePoint field types in Windows Phone app](http://code.msdn.microsoft.com/SharePoint-2013-Support-e1d043b2)|Implement data-conversion logic to support SharePoint field types in Windows Phone apps. |Mobile development |
+| [SharePoint 2013: Create a simple external list-based phone app](http://code.msdn.microsoft.com/SharePoint-2013-Create-a-88800202)|Create a simple mobile app that contains data from an external data source by using Business Connectivity Services and an external list. |Mobile development, BCS |
+| [SharePoint 2013: Create a phone app that displays Maps for SharePoint 2013](http://code.msdn.microsoft.com/SharePoint-2013-Create-a-3b74c8f5)|Integrate location information and maps into SharePoint lists and location-based web and mobile apps for SharePoint by using the new Geolocation field. |Mobile development |
+| [SharePoint 2013: Store and retrieve SharePoint list items on a Windows Phone](http://code.msdn.microsoft.com/SharePoint-2013-Store-and-6044b7f0)|Learn about one of the most important considerations in the development of Windows Phone apps, the management of state information, both for the overall application and for individual pages or data items within the application. |Mobile development |
+| [SharePoint 2013: Use multiple SharePoint lists in a Windows Phone app (sample 1)](http://code.msdn.microsoft.com/SharePoint-2013-Use-a619f634)|Create Windows Phone apps that use data from multiple SharePoint lists. |Mobile development |
+| [SharePoint 2013: Use multiple SharePoint lists in a Windows Phone app (sample 2)](http://code.msdn.microsoft.com/SharePoint-2013-Use-d5389658)|Create Windows Phone apps that use data from multiple SharePoint lists. |Mobile development |
+| [SharePoint 2013: Create push notifications in SharePoint for Windows Phone apps](http://code.msdn.microsoft.com/SharePoint-2013-Using-push-a1530b51)|Create a solution in SharePoint Server 2013 for sending push notifications that can be received by Windows Phone apps. |Mobile development |
+| [SharePoint 2013: Implementing business logic and data validation](http://code.msdn.microsoft.com/SharePoint-2013-Implementin-ffdabd8e)|Implement data validation in a Windows Phone app created by using the Windows Phone SharePoint List Application template. |Mobile development |
+| [SharePoint 2013: Make app-only policy type calls in a remote app (CSOM)](http://code.msdn.microsoft.com/SharePoint-2013-Make-app-6e3d1ee9)|Uses the  **AllowAppOnlyPolicy** attribute and makes app-only policy type calls. It uses OAuth to call back into SharePoint Server. Sample uses CSOM.|OAuth, CSOM |
+| [SharePoint 2013: Make app-only policy type calls in a remote app (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Make-app-28141ce6)|Uses the  **AllowAppOnlyPolicy** attribute and makes app-only policy type calls. It uses OAuth to call back into SharePoint Server 2013. Sample uses REST.|OAuth, REST |
+| [SharePoint 2013: Use HTTPS in a remote app](http://code.msdn.microsoft.com/SharePoint-2013-Use-HTTPs-dc7227a7)|Contains a remote app that uses HTTPs protocol. It uses OAuth to call back into SharePoint Server 2013. |OAuth |
+| [SharePoint 2013: Perform basic data operations on files and folders using REST](http://code.msdn.microsoft.com/SharePoint-2013-Perform-ab9c4ae5)|Learn how to use Representational State Transfer (REST) and the SharePoint JavaScript cross-domain library to perform basic operations on document libraries and files. |REST, data access |
+| [SharePoint 2013: Get the host web title using the cross-domain library (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Get-the-0ec36bb6)|Learn how to use the cross-domain library in SharePoint Add-ins to read the host web's title by using the Representational State Transfer (REST) service. |REST, SharePoint Add-ins |
+| [SharePoint 2013: Build REST queries and use REST to traverse a site](http://code.msdn.microsoft.com/SharePoint-2013-Build-REST-b250c64d)|Learn how to use the SharePoint REST APIs to traverse a SharePoint 2013 site, and to create an app that builds queries that perform basic data operations (Create, Read, Update, and Delete) on basic SharePoint entities that are exposed at REST endpoints. |REST, CRUD, SharePoint Add-ins |
+| [SharePoint 2013: Perform basic data access operations by using REST in apps](http://code.msdn.microsoft.com/SharePoint-2013-Perform-335d925b)|Learn how to use the SharePoint REST APIs to perform basic data access operations (Create, Read, Update, Delete) on SharePoint 2013 lists and list items. |REST, data access, CRUD |
+| [SharePoint 2013: Create an app to access a public OData source](http://code.msdn.microsoft.com/SharePoint-2013-Create-an-33c2b211)|Learn how to create an app-scoped external content type and access that data using the REST API. |REST, SharePoint Add-ins |
+| [SharePoint 2013: Accessing external lists with REST](http://code.msdn.microsoft.com/SharePoint-2013-Accessing-a90295d2)|Learn how to create an SharePoint Add-in that will use RESTful URLs to query and manipulate data in an external list. |REST, SharePoint Add-ins |
+| [SharePoint 2013: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/SharePoint-2013-Perform-a-1bf3e87d)|Learn how to submit a search query to Search in SharePoint 2013 from within an SharePoint Add-in. |REST, search, SharePoint Add-ins |
+| [SharePoint 2013: Get list items by using the cross-domain library (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Get-items-7c27024f)|Learn how to use the cross-domain library in SharePoint Add-ins to read items in a list hosted in the app web. |REST, SharePoint Add-ins |
+| [SharePoint 2013: Hello World remote app using REST](http://code.msdn.microsoft.com/SharePoint-2013-Hello-25f8c6f1)|Learn how to create a basic "hello world" provider-hosted SharePoint Add-in that uses the SharePoint REST interface to read information about a SharePoint 2013 site from a remote web application. |REST, SharePoint Add-ins |
+| [SharePoint 2013: Mix remote web applications with SharePoint components in apps](http://code.msdn.microsoft.com/SharePoint-2013-Mix-remote-ead77c56)|Shows how to combine a remote web application and classic SharePoint components in a single SharePoint Add-in. Also shows how remote web applications can access the app web using REST/OData. |REST, OData, SharePoint Add-ins |
+| [SharePoint 2013: Customize a field type by using client-side rendering](http://code.msdn.microsoft.com/SharePoint-2013-Customize-0c9698e1)|Uses client-side rendering technology in SharePoint 2013 to customize a field type. |UI design, user experience, SharePoint Add-ins |
+| [SharePoint 2013: Customize a list view by using client-side rendering](http://code.msdn.microsoft.com/SharePoint-2013-Customize-61761017)|Uses client-side rendering technology in SharePoint 2013 to customize a view in an announcements list. |UI design, user experience, SharePoint Add-ins |
+| [SharePoint 2013: Bookstore, using custom actions and the cross-domain library in a sample](http://code.msdn.microsoft.com/SharePoint-2013-Bookstore-328060fc)|Simulates a bookstore by using a SharePoint 2013 document library in which every document is a book. End users can request new books and buy books by using the provided custom actions. |UI design, user experience, custom actions |
+| [SharePoint 2013: Display remote webpage content using the coffeemaker app part](http://code.msdn.microsoft.com/SharePoint-2013-App-part-9d83703c)|Includes an app part that displays a remote webpage's content. The remote page content consists of labels and images for a coffee cup. End users can further customize their coffee through the custom properties in the app part. |UI design, user experience, SharePoint Add-ins |
+| [SharePoint 2013: Open a remote app webpage using a Ribbon custom action](http://code.msdn.microsoft.com/SharePoint-2013-Open-e0ca1826)|Includes a Ribbon custom action that passes the SharePoint website URL, List ID, and selected Item IDs from where it is invoked to a remote webpage. |UI design, user experience, SharePoint Add-ins |
+| [SharePoint 2013: Use the chrome control in a cloud-hosted app](http://code.msdn.microsoft.com/SharePoint-2013-Work-with-089ecc6f)|This SharePoint 2013 code sample includes a remote webpage that hosts the chrome control. |UI design, user experience, CRUD, SharePoint Add-ins |
+| [SharePoint 2013: Use the SharePoint style sheet in an app](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-7a8684e2)|This code sample references the SharePoint 2013 style sheet control in a remote webpage and uses the available styles. |UI design, user experience, SharePoint Add-ins |
+| [SharePoint 2013: Use the chrome control and the cross-domain library (CSOM)](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-97c30a2e)|Includes a remote webpage that hosts the chrome control and retrieves information from the host web using the cross domain library and the CSOM in SharePoint 2013. |UI design, user experience, CSOM, SharePoint Add-ins |
+| [SharePoint 2013: Use the chrome control and the cross-domain library (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-a759e9f8)|Includes a remote webpage that hosts the chrome control and retrieves information from the host web using the cross domain library and Representational State Transfer (REST) in SharePoint 2013. |UI design, user experience, REST, SharePoint Add-ins |
+| [SharePoint 2013: Open a remote app webpage using an ECB custom action](http://code.msdn.microsoft.com/SharePoint-2013-Open-a-36d1598d)|Includes an ECB (Edit Control Block) custom action that passes the SharePoint website URL, List ID, and Item ID from where it is invoked to a remote webpage. |UI design, user experience, SharePoint Add-ins |
+| [SharePoint 2013 workflow: Call an external web service](http://code.msdn.microsoft.com/SharePoint-2013-workflow-48ea87d4)|Find out how to use Visual Studio 2012 to create a SharePoint 2013 workflow that calls an external web service. When calling the web service, the workflow also uses the new  **DynamicValue** data type.|Workflows |
+| [SharePoint 2013 workflow: Create a custom action](http://code.msdn.microsoft.com/SharePoint-2013-workflow-41e5c0f9)|Learn how to use Visual Studio 2012 to create a SharePoint 2013 workflow that uses a custom action and calls an external web service. When calling the web service, the workflow uses the new  **DynamicValue** data type.|Workflows |
+| [SharePoint 2013 workflow: Integrate with Netflix](http://code.msdn.microsoft.com/SharePoint-2013-workflow-e610ce71)|Learn about using Visual Studio 2012 and Workflow Manager Client 1.0 to create a workflow that uses a web service workflow activity with an OData query to access the Netflix service. |Workflows, OData |
+| [SharePoint 2013 workflow: Sales tax calculator](http://code.msdn.microsoft.com/SharePoint-2013-workflow-f7a1a8ba)|Learn about using Visual Studio 2012 and Workflow Manager Client 1.0 to create a workflow that calls a web service to obtain the sales tax rate for a given location. It then calculates the sales tax based on the base price in a product catalog. |Workflows |
+| [SharePoint 2013 workflow: Using task action](http://code.msdn.microsoft.com/SharePoint-2013-workflow-942a5441)|Illustrates how to use the new Task Actions feature that was added to SharePoint Designer 2013 for enhanced workflow design and development. |Workflows |
+| [SharePoint 2013: Display remote app content in the host web using an app part](http://code.msdn.microsoft.com/SharePoint-2013-Display-03c28286)|Includes a simple page hosted in a remote app. The app part displays the contents of the remote webpage and sends the value of the custom properties through the query string. |SharePoint Add-ins |
+| [SharePoint 2013: Hello World SharePoint-hosted app](http://code.msdn.microsoft.com/SharePoint-2013-Hello-b3ca20f3)|Learn how to create a basic SharePoint-hosted SharePoint Add-in that uses JavaScript to read and display information about a SharePoint 2013 site. |SharePoint Add-ins |
+   
+
+## Additional resources
+<a name="bk_addresources"> </a>
+
+
+-  [SharePoint general development](http://msdn.microsoft.com/library/fc829689-7cef-469d-a04c-4a433e49828a%28Office.15%29.aspx)
+    
+  
+-  [How-tos for SharePoint 2013](how-tos-for-sharepoint-2013.md)
+    
+  
+-  [SharePoint Dev Center](http://msdn.microsoft.com/en-US/sharepoint)
+    
+  
+-  [SharePoint Code Samples](http://code.msdn.microsoft.com/sharepoint) (on the SharePoint Dev Center)
+    
+  
+-  [Microsoft SharePoint Team Blog](http://sharepoint.microsoft.com/blog/Pages/default.aspx)
+    
+  
+
+  
+    
+    
+
