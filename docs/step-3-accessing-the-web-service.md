@@ -1,5 +1,5 @@
 ---
-title: Step 3: Accessing the Web Service
+title: Step 3 Accessing the Web Service
 ms.prod: OFFICE365
 ms.assetid: d27f654d-242f-4f34-8385-be857c170532
 ---
