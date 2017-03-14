@@ -23,18 +23,12 @@ ms.assetid: ca78b080-0be4-4da4-b112-b86b1bde66e4
     
     
 Find how-to articles and related code examples that show how to perform basic development tasks in SharePoint 2013, including how to set up your development environment and start building sites, mobile apps, and SharePoint Add-ins. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** apps for Office | apps for SharePoint | Office 365 | SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Getting started how-tos for SharePoint Add-ins
 <a name="bk_starthowtos"> </a>
 
 
 
-|**Title **|**Summary **|
+|**Title**|**Summary**|
 |:-----|:-----|
 |||
 | [Create a basic SharePoint-hosted add-in by using Napa Office 365 Development Tools](http://msdn.microsoft.com/library/3b47c97b-9e09-47b2-a65f-29b0f44e34bf%28Office.15%29.aspx)|Learn how to create a basic SharePoint Add-in by using Napa Office 365 Development Tools. |
@@ -48,7 +42,7 @@ Find how-to articles and related code examples that show how to perform basic de
 
 
 
-|**Title **|**Summary **|
+|**Title**|**Summary**|
 |:-----|:-----|
 | [Complete basic operations using SharePoint 2013 client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)|Learn how to write code to perform basic operations with the SharePoint 2013 .NET Framework client object model (CSOM). |
 | [Complete basic operations using JavaScript library code in SharePoint 2013](http://msdn.microsoft.com/library/29089af8-dbc0-49b7-a1a0-9e311f49c826%28Office.15%29.aspx)|Learn how to write code to perform basic operations using the JavaScript client object model in SharePoint 2013. |
@@ -77,7 +71,7 @@ Find how-to articles and related code examples that show how to perform basic de
 
 
 
-|**Title **|**Summary **|
+|**Title**|**Summary**|
 |:-----|:-----|
 | [Publish SharePoint Add-ins by using Visual Studio](http://msdn.microsoft.com/library/8137d0fa-52e2-4771-8639-60af80f693bb%28Office.15%29.aspx)|Learn how to package your SharePoint Add-in by using Visual Studio 2012. |
 | [Create or edit a Seller Dashboard seller account and add payout information](http://msdn.microsoft.com/library/6bd49ce6-c428-499c-96bb-6c857e48ecab%28Office.15%29.aspx)|The Microsoft Seller Dashboard is the central location for app developers to submit Office and SharePoint Add-ins. Learn how to create a seller account, including a marketing profile, so that you can submit apps for inclusion in the Office Store. |
@@ -91,7 +85,7 @@ Find how-to articles and related code examples that show how to perform basic de
 
 
 
-|**Title **|**Summary **|
+|**Title**|**Summary**|
 |:-----|:-----|
 | [Add license checks to your apps for Office](http://msdn.microsoft.com/library/996c5f3c-2cb0-474f-b452-0d835949bdf7%28Office.15%29.aspx)|Learn how to add code to your Office Add-in that checks the validity of a user's app license, and takes action based on the app license properties. Load test app license tokens to test your license checking code. |
 | [Add license checks to Office and SharePoint Add-ins](http://msdn.microsoft.com/library/eec76f9d-134a-4e88-b0c8-3d3067da2f61%28Office.15%29.aspx)|Learn how to add code to your SharePoint Add-in that checks the validity of a user's app license, and takes action based on the app license properties. Load test app license tokens to test your license checking code. |
@@ -104,7 +98,7 @@ Find how-to articles and related code examples that show how to perform basic de
 ****
 
 
-|**Title **|**Summary **|
+|**Title**|**Summary**|
 |:-----|:-----|
 | [How to: Detect the installed SKU of SharePoint 2013](how-to-detect-the-installed-sku-of-sharepoint-2013.md)|If the behavior of your solutions depends on the locally installed SKU of SharePoint 2013 or Project Server 2013, use the code sample in this article to find the SKU information you need. |
 | [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)|Learn about the system requirements and configuring a development environment for SharePoint mobility projects. |
@@ -117,7 +111,7 @@ Find how-to articles and related code examples that show how to perform basic de
 ****
 
 
-|**Title **|**Summary **|
+|**Title**|**Summary**|
 |:-----|:-----|
 | [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md)|Learn how to customize a field type by using the client-side rendering technology in SharePoint 2013. |
 | [How to: Customize list item queries and filter data for Windows Phone apps](how-to-customize-list-item-queries-and-filter-data-for-windows-phone-apps.md)|Customize the data queries on which the views in a Windows Phone app are based. |
@@ -131,7 +125,7 @@ Find how-to articles and related code examples that show how to perform basic de
 ****
 
 
-|**Title **|**Summary **|
+|**Title**|**Summary**|
 |:-----|:-----|
 |||
 | [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)|Learn about the system requirements and configuring a development environment for SharePoint mobility projects. |
@@ -154,7 +148,7 @@ Find how-to articles and related code examples that show how to perform basic de
 
 
 
-|**Title **|**Summary **|
+|**Title**|**Summary**|
 |:-----|:-----|
 | [How to: Use code to pin terms to navigation term sets in SharePoint 2013](how-to-use-code-to-pin-terms-to-navigation-term-sets-in-sharepoint-2013.md)|Learn how to use code to pin terms to navigation term sets. |
 | [Create device channels in SharePoint 2013](http://msdn.microsoft.com/library/339c7dba-95ee-46e0-8c76-0fe1adb6f366.aspx)|Learn how to create a device channel, change a device channel, delete a device channel, and reorder device channels in SharePoint Server 2013. |
@@ -178,7 +172,7 @@ Find how-to articles and related code examples that show how to perform basic de
 
 
 
-|**Title **|**Summary **|
+|**Title**|**Summary**|
 |:-----|:-----|
 | [How to: Build and deploy workflow custom actions](how-to-build-and-deploy-workflow-custom-actions.md)|Learn how to model business processes whose requirements are not met by the existing library of workflow actions in SharePoint Designer by creating custom workflow actions in SharePoint 2013. |
    
@@ -188,7 +182,7 @@ Find how-to articles and related code examples that show how to perform basic de
 
 
 
-|**Title **|**Summary **|
+|**Title**|**Summary**|
 |:-----|:-----|
 | [How to: Learn to read and write to the social feed by using the .NET client object model in SharePoint 2013](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-net-client-object.md)|Create a console application that reads and writes to the social feed by using the SharePoint 2013 .NET client object model. |
 | [How to: Learn to read and write to the social feed by using the REST service in SharePoint 2013](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md)|Create a SharePoint-hosted app that uses the REST service to publish a post and get the personal feed for the current user. |
@@ -222,7 +216,7 @@ Find how-to articles and related code examples that show how to perform basic de
 
 
 
-|**Title **|**Summary **|
+|**Title**|**Summary**|
 |:-----|:-----|
 | [How to: Crawl associated external content types in SharePoint 2013](how-to-crawl-associated-external-content-types-in-sharepoint-2013.md)|Learn how to use the search specific properties in the Business Data Connectivity (BDC) service metadata model for crawling associations, and the different user experiences that you can enable. |
 | [How to: Crawl binary large objects (BLOBs) in SharePoint 2013](how-to-crawl-binary-large-objects-blobs-in-sharepoint-2013.md)|Learn how to modify the BDC model file for a database BCS indexing connector to enable the Search in SharePoint 2013 crawler to crawl binary large object (BLOB) data stored in a SQL Server database. |
@@ -252,7 +246,7 @@ Find how-to articles and related code examples that show how to perform basic de
 
 
 
-|**Title **|**Summary **|
+|**Title**|**Summary**|
 |:-----|:-----|
 | [How to: Create report renderers for PerformancePoint Services in SharePoint 2013](how-to-create-report-renderers-for-performancepoint-services-in-sharepoint-2013.md)|Learn how to create the renderer component in a custom report extension for PerformancePoint Services. |
 | [How to: Create report editors for PerformancePoint Services in SharePoint 2013](how-to-create-report-editors-for-performancepoint-services-in-sharepoint-2013.md)|Learn how to create the editor component of a custom report extension for PerformancePoint Services. |
@@ -268,7 +262,7 @@ Find how-to articles and related code examples that show how to perform basic de
 
 
 
-|**Title **|**Summary **|
+|**Title**|**Summary**|
 |:-----|:-----|
 | [How to: Create a claims provider in SharePoint 2013](how-to-create-a-claims-provider-in-sharepoint-2013.md)|Learn how to create and implement a SharePoint 2013 claims provider that fulfills the requirements for claims augmentation and claims picking. |
 | [How to: Deploy a claims provider in SharePoint 2013](how-to-deploy-a-claims-provider-in-sharepoint-2013.md)|Learn how to deploy a SharePoint 2013 claims provider by using the features infrastructure and creating a class that inherits from  [SPClaimProviderFeatureReceiver](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.Claims.SPClaimProviderFeatureReceiver.aspx) .|

@@ -7,12 +7,6 @@ ms.assetid: f962922c-2967-492f-9a89-5ad10a1a6dd3
 
 # Office 2013 and SharePoint 2013 application services
 Learn about Access Services, Excel Services, Machine Translation Service, PerformancePoint Services, PowerPoint Automation Services, Visio Services, and Word Automation Services. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013 | Word Automation Services* 
 ## Overview and usage scenarios for Office and SharePoint services in SharePoint 2013
 <a name="bkmk_servicesOverview"> </a>
 
@@ -21,16 +15,16 @@ Office and SharePoint services run on individual application servers in the farm
     
     
 
--  **Business intelligence (BI) and Insights** enable people to find, analyze, and share information about their work or business.
+- **Business intelligence (BI) and Insights**enable people to find, analyze, and share information about their work or business.
     
   
--  **Simple apps** let users create basic apps that contain a reliable backing store.
+- **Simple apps**let users create basic apps that contain a reliable backing store.
     
   
--  **File conversion** converts Word and PowerPoint files and streams to other formats.
+- **File conversion**converts Word and PowerPoint files and streams to other formats.
     
   
--  **Translation** translates sites, documents, and streams for multilingual support.
+- **Translation**translates sites, documents, and streams for multilingual support.
     
   
 The following table shows high-level scenarios that apply to the services described in this section. 
@@ -41,7 +35,7 @@ The following table shows high-level scenarios that apply to the services descri
 **Table 1. Scenarios for Office and SharePoint services in SharePoint 2013**
 
 
-||**BI/Insights **|**Simple apps **|**File conversion **|**Translation **|
+||**BI/Insights**|**Simple apps**|**File conversion**|**Translation**|
 |:-----|:-----|:-----|:-----|:-----|
 |Access Services |X |X |||
 |Excel Services |X ||||
@@ -52,7 +46,7 @@ The following table shows high-level scenarios that apply to the services descri
 |Word Automation Services |||X ||
    
 
-> [!Note]  
+> [!NOTE]  
 > Not all services and scenarios are represented in this section. For links to developer documentation for other services, see  [Additional resources](#bkmk_Resources). 
   
     
@@ -70,7 +64,7 @@ Use the links in Table 2 to learn more about developing with the Office and Shar
 **Table 2. Overview of Office and SharePoint services in this section**
 
 
-|**Service **|**Description **|
+|**Service**|**Description**|
 |:-----|:-----|
 |Access Services See  [Develop Access web apps](develop-access-web-apps.md)|Enables users to create, deploy, and manage collaborative web-based Access applications. |
 |Excel Services See  [Excel Services in SharePoint 2013](excel-services-in-sharepoint-2013.md)|Enables users to load, calculate, and display Excel workbooks on SharePoint sites. |

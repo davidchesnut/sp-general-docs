@@ -7,12 +7,6 @@ ms.assetid: 4656f6a0-36fd-4b7d-898e-8cd4bdbbda57
 
 # Create a workflow with elevated permissions by using the SharePoint 2013 Workflow platform
 Learn how to create a workflow with elevated permissions by using the SharePoint 2013 Workflow platform. 
- **Last modified:** June 06, 2016
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013 Enterprise* 
 ## SharePoint Server 2013 App Catalog and workflow
 <a name="section1"> </a>
 
@@ -21,7 +15,7 @@ This article describes how to create SharePoint 2013 workflows that access objec
     
     
 
-> [!Important]  
+> [!IMPORTANT]  
 > This article assumes that the SharePoint 2013 Workflow platform has been installed and configured and that SharePoint 2013 has been configured for apps. For more information on SharePoint 2013 Workflow and apps for SharePoint 2013, including installation and configuration, see  [Workflow in SharePoint 2013](http://technet.microsoft.com/sharepoint/jj556245.aspx) and [Install and manage apps for SharePoint 2013](http://msdn.microsoft.com/library/733647a3-a5d3-475b-967d-3bb627c2a0c2.aspx). 
   
     
@@ -55,13 +49,13 @@ To solve this, you have to create a workflow with elevated permissions by doing 
 
 ### Allowing a workflow to use app permissions in a SharePoint Server 2013 site
 
-The first step is to allow workflow to use app permissions. You configure workflow to use app permissions on the  **Site Settings** page of the SharePoint Server 2013 site where the workflow will run. The following procedure configures the SharePoint Server 2013 site to allow workflow to use app permissions.
+The first step is to allow workflow to use app permissions. You configure workflow to use app permissions on the **Site Settings**page of the SharePoint Server 2013 site where the workflow will run. The following procedure configures the SharePoint Server 2013 site to allow workflow to use app permissions.
   
     
     
 
-> [!Important]  
-> The procedure must be completed by a user that has  **Site Owner** permissions.
+> [!IMPORTANT]  
+> The procedure must be completed by a user that has **Site Owner**permissions.
   
     
     
@@ -70,9 +64,9 @@ The first step is to allow workflow to use app permissions. You configure workfl
 ### To allow workflow to use app permissions
 
 
-1. Click the  **Settings** icon as shown in the figure.
+1. Click the **Settings**icon as shown in the figure.
     
-    **Figure: Opening the Site Settings page**
+   **Figure: Opening the Site Settings page**
 
   
 
@@ -82,18 +76,18 @@ The first step is to allow workflow to use app permissions. You configure workfl
   
 
   
-2. Go to  **Site Settings**. 
+2. Go to **Site Settings**. 
     
   
-3. In the  **Site Actions** section, select **Manage site features**. 
+3. In the **Site Actions**section, select**Manage site features**. 
     
   
-4. Locate the feature called  **Workflows can use app permissions**, as shown in the figure, and then click  **Activate**. 
+4. Locate the feature called **Workflows can use app permissions**, as shown in the figure, and then click **Activate**. 
     
-    > [!Caution]  
+    > [!CAUTION]  
 > This feature will not activate unless you have properly configured the SharePoint 2013 Workflow platform and also apps for SharePoint. 
 
-    **Figure: The site feature, 'Workflows can use app permissions'**
+   **Figure: The site feature, 'Workflows can use app permissions'**
 
   
 
@@ -111,9 +105,9 @@ In order for the workflow to function properly it must be granted full control i
     
     
 
-> [!Important]  
+> [!IMPORTANT]  
 >  The procedure assumes the following:
->  The procedure must be completed by a user that has **Site Owner** permissions.
+>  The procedure must be completed by a user that has**Site Owner**permissions.
 >  The workflow must already be published to the SharePoint Server 2013 site.
   
     
@@ -123,9 +117,9 @@ In order for the workflow to function properly it must be granted full control i
 ### To grant full control permission to a workflow
 
 
-1. Click the  **Settings** icon as shown in the figure.
+1. Click the **Settings**icon as shown in the figure.
     
-    **Figure: Opening the Site Settings page**
+   **Figure: Opening the Site Settings page**
 
   
 
@@ -135,15 +129,15 @@ In order for the workflow to function properly it must be granted full control i
   
 
   
-2. Go to  **Site Settings**. 
+2. Go to **Site Settings**. 
     
   
-3. In the  **Users and Permissions** section, select **Site app permissions**. 
+3. In the **Users and Permissions**section, select**Site app permissions**. 
     
   
-4. Copy the  **client** section of the **App Identifier**. This is the identifier between the last "|" and the "@" sign, as shown in the figure. 
+4. Copy the **client**section of the**App Identifier**. This is the identifier between the last "|" and the "@" sign, as shown in the figure. 
     
-    **Figure: Selecting the App Identifier**
+   **Figure: Selecting the App Identifier**
 
   
 
@@ -153,11 +147,11 @@ In order for the workflow to function properly it must be granted full control i
   
 
   
-5. Navigate to the  **Grant permission to an app** page. This must be done by browsing to the appinv.aspx page of the site.
+5. Navigate to the **Grant permission to an app**page. This must be done by browsing to the appinv.aspx page of the site.
     
     Example: http://{hostname}/{the Site Collection}/_layouts/15/appinv.aspx. 
     
-    > [!Note]  
+    > [!NOTE]  
 > The 'app' in this step refers to the Workflow app in general and not just a specific workflow. Individual workflows cannot be access controlled. When you enable app permissions you are enabling for all workflows within the Site Collection. 
 
     For more information about setting up a workflow, see  [Blog article from Sympraxis Consulting: Looping Through Content in a SharePoint 2013 Site Workflow](http://sympmarc.com/2016/01/14/looping-through-content-in-a-sharepoint-2013-site-workflow-part-1-introduction)
@@ -165,7 +159,7 @@ In order for the workflow to function properly it must be granted full control i
     The following figure shows an example. 
     
 
-    **Figure: The appinv.aspx page and URL example**
+   **Figure: The appinv.aspx page and URL example**
 
   
 
@@ -175,10 +169,10 @@ In order for the workflow to function properly it must be granted full control i
   
 
   
-6. Paste the client id in the  **App Id** field and then click **Lookup**, as shown in the figure. 
+6. Paste the client id in the **App Id**field and then click**Lookup**, as shown in the figure. 
     
   
-7. Paste the following  **Permissions Request** XML to grant full control permission.
+7. Paste the following **Permissions Request**XML to grant full control permission.
     
   ```
   
@@ -189,13 +183,13 @@ In order for the workflow to function properly it must be granted full control i
   ```
 
 
-    > [!Caution]  
-> There are no placeholders in the  **Scope** value above. It is a literal value. Enter it exactly as it appears here.
+    > [!CAUTION]  
+> There are no placeholders in the **Scope**value above. It is a literal value. Enter it exactly as it appears here.
 
     The following figure shows an example of the completed page. 
     
 
-    **Figure: Looking up an App Id**
+   **Figure: Looking up an App Id**
 
   
 
@@ -205,12 +199,12 @@ In order for the workflow to function properly it must be granted full control i
   
 
   
-8. Click  **Create**. 
+8. Click **Create**. 
     
   
-9. You will then be asked to trust the Workflow app, as shown in the figure. Click  **Trust It**. 
+9. You will then be asked to trust the Workflow app, as shown in the figure. Click **Trust It**. 
     
-    **Figure: Trust the Workflow app**
+   **Figure: Trust the Workflow app**
 
   
 
@@ -223,7 +217,7 @@ In order for the workflow to function properly it must be granted full control i
 
 ### Wrapping actions inside an App Step
 
-Finally, you need to wrap the workflow actions inside an App Step. The following procedure wraps a  **Send an Email** action inside an App Step. The workflow in this example sends an acknowledgement email message from a custom list.
+Finally, you need to wrap the workflow actions inside an App Step. The following procedure wraps a **Send an Email**action inside an App Step. The workflow in this example sends an acknowledgement email message from a custom list.
   
     
     
@@ -234,15 +228,15 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
 1. Open the App Catalog site in SharePoint Designer 2013. 
     
   
-2. Create a new Custom List on which to run the workflow. In this example the list name is  **App Demo**. 
+2. Create a new Custom List on which to run the workflow. In this example the list name is **App Demo**. 
     
   
-3. Click  **Workflows** in the navigation window.
+3. Click **Workflows**in the navigation window.
     
   
 4. Create a new List Workflow for the App Demo list, as shown in the figure. 
     
-    **Figure: Create a new List workflow**
+   **Figure: Create a new List workflow**
 
   
 
@@ -252,9 +246,9 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
   
 
   
-5. Insert an  **App Step**, as shown in the figure. 
+5. Insert an **App Step**, as shown in the figure. 
     
-    **Figure: Add an App Step**
+   **Figure: Add an App Step**
 
   
 
@@ -264,12 +258,12 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
   
 
   
-6. Insert a  **Send an Email** action in the **App Step**. 
+6. Insert a **Send an Email**action in the**App Step**. 
     
   
-7. Click the  **address book** button. In the **To** field select **Workflow lookup for a user** and click **add** as shown in the figure.
+7. Click the **address book**button. In the**To**field select**Workflow lookup for a user**and click**add**as shown in the figure.
     
-    **Figure: Select Workflow lookup for a user**
+   **Figure: Select Workflow lookup for a user**
 
   
 
@@ -279,9 +273,9 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
   
 
   
-8. Enter the  **Created By** field as the lookup value, as shown in the figure.
+8. Enter the **Created By**field as the lookup value, as shown in the figure.
     
-    **Figure: Lookup for Person dialog box**
+   **Figure: Lookup for Person dialog box**
 
   
 
@@ -294,9 +288,9 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
 9. Enter Email from App Demo list in the email message body.
     
   
-10. Click  **OK** to return to the workflow. The completed workflow is shown in the figure.
+10. Click **OK**to return to the workflow. The completed workflow is shown in the figure.
     
-    **Figure: Email action in App Step**
+   **Figure: Email action in App Step**
 
   
 
@@ -306,9 +300,9 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
   
 
   
-11. Click the  **Workflow Settings** icon in the ribbon, as shown in the figure.
+11. Click the **Workflow Settings**icon in the ribbon, as shown in the figure.
     
-    **Figure: Workflow Settings icon in ribbon**
+   **Figure: Workflow Settings icon in ribbon**
 
   
 
@@ -318,9 +312,9 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
   
 
   
-12. Clear the check box next to  **Automatic updates to workflow status to the current stage name**, and then click  **Publish**, as shown in the figure. 
+12. Clear the check box next to **Automatic updates to workflow status to the current stage name**, and then click **Publish**, as shown in the figure. 
     
-    **Figure: Clear the automatic updates check mark and then publish**
+   **Figure: Clear the automatic updates check mark and then publish**
 
   
 

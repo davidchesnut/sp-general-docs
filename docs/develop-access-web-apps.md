@@ -7,12 +7,6 @@ ms.assetid: 41131b27-d750-4d11-b3c7-c17ad4d666e2
 
 # Develop Access web apps
 Learn how Microsoft Access 2013 makes it easy to create, deploy, and manage collaborative web-based applications on premise or in the cloud.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** Access 2013 | SharePoint Server 2013* 
 ## Introduction
 <a name="dk2_DevelopingAccess15WebApps_Introduction"> </a>
 

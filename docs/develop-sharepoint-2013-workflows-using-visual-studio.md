@@ -8,17 +8,11 @@ ms.assetid: 28f5d3b1-6fe8-4b1f-8c4e-b11105fe6f46
 
 # Develop SharePoint 2013 workflows using Visual Studio
 SharePoint 2013 supports two primary workflow development environments for authoring workflows: SharePoint Designer and Visual Studio. This article summarizes both and discusses the advantages and disadvantages of each. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013 | Visual Studio 2012* 
 ## Authoring basics for SharePoint workflows
 <a name="bkm_AuthoringBasics"> </a>
 
 
-> [!Note]  
+> [!NOTE]  
 > For guidance on setting up and configuring Microsoft SharePoint Server 2013 and the Workflow Manager Client 1.0 server, see  [Set up and configure SharePoint 2013 Workflow Manager](set-up-and-configure-sharepoint-2013-workflow-manager.md). 
   
     
@@ -29,7 +23,7 @@ As with previous versions, Microsoft SharePoint 2013 provides two primary workfl
     
     
 
-> [!Note]  
+> [!NOTE]  
 > As a complement to authoring workflows in SharePoint Designer, you can also use Microsoft Visio 2013 to structure your workflow logic by using Visio 2013 shapes, and then import your logic into SharePoint Designer 2013. For information about using Visio 2013 to author your workflow logic, see  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md). 
   
     
@@ -62,10 +56,10 @@ Both of these workflow authoring environments—SharePoint Designer and Visual S
 ### Using SharePoint Designer
 
 
--  **Target users:** Information workers, business analysts, SharePoint developers.
+- **Target users:**Information workers, business analysts, SharePoint developers.
     
   
--  **Difficulty level:** Familiarity with SharePoint Designer, including the core workflow components, such as stages, gates, actions, conditions, and loops.
+- **Difficulty level:**Familiarity with SharePoint Designer, including the core workflow components, such as stages, gates, actions, conditions, and loops.
     
   
 With SharePoint Designer, users can create a workflow that is attached to a list, library, or site using a no-code, text-based designer. Or, they can use the new visual design environment in which graphical elements are arranged on a design surface to represent the logical flow of a business process. SharePoint Designer excels at enabling rapid workflow development by non-technical workers. 
@@ -76,10 +70,10 @@ With SharePoint Designer, users can create a workflow that is attached to a list
 ### Using Visual Studio
 
 
--  **Target users:** Intermediate or advanced software developers.
+- **Target users:**Intermediate or advanced software developers.
     
   
--  **Difficulty level:** Familiarity with Visual Studio, including software development concepts such as event receivers, packaging and deployment, and security.
+- **Difficulty level:**Familiarity with Visual Studio, including software development concepts such as event receivers, packaging and deployment, and security.
     
   
 Authoring workflows in Visual Studio provides flexibility to create workflows to support virtually any business process, regardless of its complexity, and allows debugging and reuse of workflow definitions. Perhaps most important, Visual Studio lets developers include SharePoint workflows as part of a broader SharePoint solution or SharePoint Add-in. 
@@ -102,19 +96,19 @@ The following table provides a side-by-side comparison of the features and requi
 **Table 1. Workflow authoring tool comparison**
 
 
-|**Feature / Requirement **|**SharePoint Designer **|**Visual Studio **|
+|**Feature / Requirement**|**SharePoint Designer**|**Visual Studio**|
 |:-----|:-----|:-----|
 |Allows rapid workflow development |Yes |Yes |
 |Enables reuse of workflows |A workflow can be used only by the list or library on which it was developed. However, SharePoint Designer provides reusable workflows that can be used multiple times within the same site. |A workflow can be written as a template so that after it is deployed, it can be reused and associated with any list or library. |
 |Allows you to include a workflow as part of a SharePoint solution or SharePoint Add-in |No |Yes |
 |Allows you to create custom actions |No. However, SharePoint Designer can consume and implement custom actions that are created and deployed by using Visual Studio. |Yes. However, be aware that in Visual Studio, the underlying activities, not their corresponding actions, are used. |
-|Allows you to write custom code |No |No > [!Note]  > This is changed from previous versions. In SharePoint 2013, workflows are declarative only and Visual Studio relies on the visual design surface for workflow development.           |
+|Allows you to write custom code |No |No > [!NOTE]  > This is changed from previous versions. In SharePoint 2013, workflows are declarative only and Visual Studio relies on the visual design surface for workflow development.           |
 |Can use Visio Professional to create workflow logic |Yes |No |
 |Deployment |Deployed automatically to list, library, or site on which they were created. |Create a SharePoint solution package (.wsp) file and deploy the solution package to the site (SPWeb). |
 |One-click publishing available for workflows |Yes |Yes |
 |Workflows can be packaged and deployed to a remote server |Yes |Yes |
 |Debugging |Cannot be debugged. |Workflow can be debugged by using Visual Studio. |
-|Can use only actions that are approved by site administrator |Yes |Yes > [!Note]  > This is changed from previous versions. Previously, workflows and actions that were authored by using Visual Studio were code-based and deployed at the farm scope, so administrator approval was not required.           |
+|Can use only actions that are approved by site administrator |Yes |Yes > [!NOTE]  > This is changed from previous versions. Previously, workflows and actions that were authored by using Visual Studio were code-based and deployed at the farm scope, so administrator approval was not required.           |
    
 
 ## Developing workflows using Visual Studio
@@ -141,22 +135,22 @@ To debug on-premises workflows in Visual Studio, you need to temporarily allow t
     
     
 
-1. In  **Control Panel**, choose  **System and Security**,  **Windows Firewall**. 
+1. In **Control Panel**, choose **System and Security**, **Windows Firewall**. 
     
   
-2. In the  **Control Panel Home** list, choose the **Advanced Settings** link.
+2. In the **Control Panel Home**list, choose the**Advanced Settings**link.
     
   
-3. In the left pane of Windows Firewall, choose  **Inbound Rules**. 
+3. In the left pane of Windows Firewall, choose **Inbound Rules**. 
     
   
-4. In the  **Inbound Rules** list, choose **Workflow Manager Tools 1.0 for Visual Studio 2012 - Test Service Host**. 
+4. In the **Inbound Rules**list, choose**Workflow Manager Tools 1.0 for Visual Studio 2012 - Test Service Host**. 
     
   
-5. In the  **Actions** list, choose **Enable Rule**. 
+5. In the **Actions**list, choose**Enable Rule**. 
     
   
-6. On the properties page of your SharePoint project, choose the  **SharePoint** tab, and then select the **Enable Workflow debugging** check box.
+6. On the properties page of your SharePoint project, choose the **SharePoint**tab, and then select the**Enable Workflow debugging**check box.
     
   
 
@@ -180,17 +174,17 @@ To debug SharePoint Online workflows in Visual Studio, perform the following ste
     
     For more information about the Microsoft Azure Service Bus, see  [Managing Service Bus Service Namespaces](http://msdn.microsoft.com/en-us/library/windowsazure/hh690928.aspx). 
     
-    > [!Note]  
+    > [!NOTE]  
 > SharePoint Online workflow debugging uses the Relay Service component of the Microsoft Azure Service Bus, so you'll be charged for using the Service Bus. See  [Service Bus Pricing FAQ](http://msdn.microsoft.com/library/hh667438.aspx). You get free access to Microsoft Azure each month that you subscribe to Visual Studio Professional with MSDN, Visual Studio Premium with MSDN, or Visual Studio Ultimate with MSDN. With this access, you can use the Service Bus relay for 1,500, 3,000, or 3,000 hours, depending on your MSDN subscription. See  [Get some amount of Microsoft Azure Services each month at no additional charge](http://www.windowsazure.com/en-us/pricing/member-offers/msdn-benefits/). 
-4. In Microsoft Azure, choose your service namespace, choose the  **Access Key** link, and then copy the text in the **Connection String** box.
+4. In Microsoft Azure, choose your service namespace, choose the **Access Key**link, and then copy the text in the**Connection String**box.
     
   
-5. On the properties page of your SharePoint Add-in project, choose the  **SharePoint** tab, and then select the **Enable Workflow debugging** check box.
+5. On the properties page of your SharePoint Add-in project, choose the **SharePoint**tab, and then select the**Enable Workflow debugging**check box.
     
     You must enable this feature to debug workflows in SharePoint Online. This property applies to all of your SharePoint projects in Visual Studio. Visual Studio automatically turns off workflow debugging if you package your app for distribution on the Office store. 
     
   
-6. Select the  **Enable debugging via Microsoft Azure Service Bus** check box. Then, in the **Microsoft Azure Service Bus connection string** box, paste the connection string that you copied.
+6. Select the **Enable debugging via Microsoft Azure Service Bus**check box. Then, in the**Microsoft Azure Service Bus connection string**box, paste the connection string that you copied.
     
   
 After you enable workflow debugging and provide a valid connection string for the Microsoft Azure Service Bus, you can debug SharePoint Online workflows. 
@@ -198,8 +192,8 @@ After you enable workflow debugging and provide a valid connection string for th
     
     
 
-> [!Note]  
-> If you haven't disabled workflow debugging and don't want to receive a notification whenever your project contains a workflow, clear the  **Notify me if Microsoft Azure Service Bus debugging is not configured** check box.
+> [!NOTE]  
+> If you haven't disabled workflow debugging and don't want to receive a notification whenever your project contains a workflow, clear the **Notify me if Microsoft Azure Service Bus debugging is not configured**check box.
   
     
     

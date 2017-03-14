@@ -7,12 +7,6 @@ ms.assetid: 0a3fbfb3-1a0b-4902-9317-525cf2f63d98
 
 # Optimize SharePoint site accessibility
 Improve the accessibility of your SharePoint pages. Enhance the SharePoint site experience for users with a variety of accessibility needs.
- **Last modified:** May 04, 2016
-  
-    
-    
-
- * **Applies to:** SharePoint 2013 | SharePoint 2016* 
 Some published SharePoint sites might not take advantage of the accessibility features that are available, which can make them difficult for people with disabilities to use. This article provides information that will help you optimize your SharePoint site for accessibility. 
   
     

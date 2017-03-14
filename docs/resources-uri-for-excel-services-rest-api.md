@@ -1,25 +1,19 @@
 ---
 title: Resources URI for Excel Services REST API
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: 79f95305-ec9e-4842-b937-85f66ced98e4
 ---
 
 
 # Resources URI for Excel Services REST API
 
- **Last modified:** August 11, 2016
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 You can link to entities directly by using the REST API in Excel Services. 
   
     
     
 
 
-> [!Note]  
+> [!NOTE]  
 > The Excel Services REST API applies to SharePoint 2013 and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
 ) endpoint.
   
@@ -83,7 +77,7 @@ Table 1 shows all the accessible resources in the Excel Services REST API. To ac
 **Table 1. Accessible resources in the Excel Services REST API**
 
 
-|** **Resource Location****|** **Format****|** **Example****|** **Notes****|
+|****Resource Location****|****Format****|****Example****|****Notes****|
 |:-----|:-----|:-----|:-----|
 |/model |Atom (default) |/model |Returns an Atom feed with the resources supported by the Excel Services REST API. The supported resources are ranges, charts, tables, and PivotTables. |
 |/model |workbook |/model?$format=workbook |This is the workbook. Supported workbook formats are xlsx, xlsb, and xlsm. |
@@ -100,7 +94,7 @@ Table 1 shows all the accessible resources in the Excel Services REST API. To ac
 |/model/PivotTables('[Name]') |Atom |/model/PivotTables('MyPivotTable')?$format=atom |An Atom entry that contains an XML representation of the data within the PivotTables. |
    
 
-> [!Note]  
+> [!NOTE]  
 > Excel Services limits the number of ranges that you can include in a URL to 10. If you include more than 10 Ranges in a URL, you will get an error that indicates that the service is unavailable. 
   
     

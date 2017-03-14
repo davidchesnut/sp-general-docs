@@ -1,5 +1,5 @@
 ---
-title: How to: Create tabular data source providers for PerformancePoint Services in SharePoint 2013
+title: How to Create tabular data source providers for PerformancePoint Services in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 8d734ed6-7636-40c5-a99b-bc038362cffe
 ---
@@ -7,12 +7,6 @@ ms.assetid: 8d734ed6-7636-40c5-a99b-bc038362cffe
 
 # How to: Create tabular data source providers for PerformancePoint Services in SharePoint 2013
 Learn how to create the data source provider component in a custom tabular data source extension for PerformancePoint Services. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013 Enterprise* 
 ## What are custom data source providers for PerformancePoint Services?
 <a name="bk_intro"> </a>
 
@@ -24,7 +18,7 @@ The main function of a tabular data source provider is to create and populate a 
   
     
     
-The procedures and code examples in this topic are based on the  **WSTabularDataSourceProvider** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The provider retrieves stock quotes from an external web service for specified stock symbols. It stores historical stock quote data in a cache file, which enables the data to be sliced by time. For the complete code for the class, see  [Code example: Create a data source provider for custom PerformancePoint Services tabular data sources in SharePoint Server 2013](#bk_example). 
+The procedures and code examples in this topic are based on the **WSTabularDataSourceProvider**class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The provider retrieves stock quotes from an external web service for specified stock symbols. It stores historical stock quote data in a cache file, which enables the data to be sliced by time. For the complete code for the class, see  [Code example: Create a data source provider for custom PerformancePoint Services tabular data sources in SharePoint Server 2013](#bk_example). 
   
     
     
@@ -57,15 +51,15 @@ We recommend that you use the sample data source provider as a template. The sam
     The sample data source provider also contains assembly references to System.Core.dll, System.ServiceModel.dll, System.Web.dll, System.Web.Services.dll, and System.Xml.Linq.dll. Depending on your extension's functionality, other project references may be required. 
     
   
-4. Add a service reference named  **StockQuotes** that references the Web service located at the address `http://www.webservicex.net/stockquote.asmx`. This is the Web service that provides stock quotes for the sample data source. 
+4. Add a service reference named **StockQuotes**that references the Web service located at the address `http://www.webservicex.net/stockquote.asmx`. This is the Web service that provides stock quotes for the sample data source. 
     
   
-5. Add the  **BasicTabularDataSourceProvider** and **SampleDSCacheHandler** classes from the sample to your project. **BasicTabularDataSourceProvider** inherits from the [TabularDataSourceProvider](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.aspx) class, which is the base class for tabular data source providers.
+5. Add the **BasicTabularDataSourceProvider**and**SampleDSCacheHandler**classes from the sample to your project.**BasicTabularDataSourceProvider**inherits from the [TabularDataSourceProvider](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.aspx) class, which is the base class for tabular data source providers.
     
     The sample data source also uses the class as a container for the overridden abstract methods that  [TabularDataSourceProvider](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.aspx) does not implement ( [GetDatabaseNames()](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.CustomDataSourceProvider.GetDatabaseNames.aspx) , [GetCubeNames()](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.CustomDataSourceProvider.GetCubeNames.aspx) , [GetCubeNameInfos()](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.CustomDataSourceProvider.GetCubeNameInfos.aspx) , [GetCubeMetaData](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.CustomDataSourceProvider.GetCubeMetaData.aspx) , and [Validate()](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.CustomDataSourceProvider.Validate.aspx) ).
     
   
-6. In your provider class, add  **using** directives for the following PerformancePoint Services namespaces:
+6. In your provider class, add **using**directives for the following PerformancePoint Services namespaces:
     
   -  [Microsoft.PerformancePoint.Scorecards](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.aspx)
     
@@ -73,14 +67,14 @@ We recommend that you use the sample data source provider as a template. The sam
   -  [Microsoft.PerformancePoint.Scorecards.ServerCommon](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.ServerCommon.aspx)
     
   
-  -  **Microsoft.PerformancePoint.SDK.Samples.StockQuotes** (represents the StockQuotes service reference created in step 4)
+  - **Microsoft.PerformancePoint.SDK.Samples.StockQuotes**(represents the StockQuotes service reference created in step 4)
     
   
 
-    Depending on your extension's functionality, other  **using** directives may be required.
+    Depending on your extension's functionality, other **using**directives may be required.
     
   
-7. Inherit from the  **BasicTabularDataSourceProvider** class.
+7. Inherit from the **BasicTabularDataSourceProvider**class.
     
   
 8. Declare variables and define properties that are used for parsing, storing, and retrieving stock symbols, the cache file location, and the URI of the proxy server. 
@@ -88,18 +82,18 @@ We recommend that you use the sample data source provider as a template. The sam
   
 9. Override the  [IsConnectionStringSecure](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.CustomDataSourceProvider.IsConnectionStringSecure.aspx) property. This property is not used by PerformancePoint Services, but it is intended for custom applications to optionally use to identify whether a connection string exposes information that might pose a security risk.
     
-    Return  **true** if your extension stores sensitive information—such as a user name or password—in the connection string for your data source. Return **false** if it does not store sensitive information or if your data source does not use a connection string.
+    Return **true**if your extension stores sensitive information—such as a user name or password—in the connection string for your data source. Return**false**if it does not store sensitive information or if your data source does not use a connection string.
     
   
-10. Override the  [GetId()](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.CustomDataSourceProvider.GetId.aspx) method to return the unique identifier for your provider. [GetId()](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.CustomDataSourceProvider.GetId.aspx) must return the same string as the **key** attribute that is registered in the PerformancePoint Services web.config file for the custom data source provider.
+10. Override the  [GetId()](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.CustomDataSourceProvider.GetId.aspx) method to return the unique identifier for your provider. [GetId()](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.CustomDataSourceProvider.GetId.aspx) must return the same string as the**key**attribute that is registered in the PerformancePoint Services web.config file for the custom data source provider.
     
   
-11. Override the  [SetDataSource](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.SetDataSource.aspx) method to define column mappings. [SetDataSource](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.SetDataSource.aspx) calls the **CreateDataColumnMappings** method to define data source columns as [Fact](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.MappedColumnTypes.Fact.aspx) , [Dimension](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.MappedColumnTypes.Dimension.aspx) , and [TimeDimension](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.MappedColumnTypes.TimeDimension.aspx) types.
+11. Override the  [SetDataSource](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.SetDataSource.aspx) method to define column mappings. [SetDataSource](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.SetDataSource.aspx) calls the**CreateDataColumnMappings**method to define data source columns as [Fact](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.MappedColumnTypes.Fact.aspx) , [Dimension](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.MappedColumnTypes.Dimension.aspx) , and [TimeDimension](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.MappedColumnTypes.TimeDimension.aspx) types.
     
      [SetDataSource](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.SetDataSource.aspx) also retrieves the stock symbols, cache file location, and proxy server address from the [CustomData](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.CustomData.aspx) property of the custom data source object. These values are defined by dashboard authors in the sample data source editor.
     
   
-12. Override the  [GetDataSet()](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.GetDataSet.aspx) method to create a [DataSet](https://msdn.microsoft.com/library/System.Data.DataSet.aspx) object to store the data from the data source. The sample data source provider uses the **FillResultsTable** and **GetLiveQuote** methods to populate a data table with data from a Web service.
+12. Override the  [GetDataSet()](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceProviders.TabularDataSourceProvider.GetDataSet.aspx) method to create a [DataSet](https://msdn.microsoft.com/library/System.Data.DataSet.aspx) object to store the data from the data source. The sample data source provider uses the**FillResultsTable**and**GetLiveQuote**methods to populate a data table with data from a Web service.
     
   
 

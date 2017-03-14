@@ -1,5 +1,5 @@
 ---
-title: How to: Use code to pin terms to navigation term sets in SharePoint 2013
+title: How to Use code to pin terms to navigation term sets in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 4a2811dc-25fd-4eb2-b0ab-1edded64c556
 ---
@@ -7,12 +7,6 @@ ms.assetid: 4a2811dc-25fd-4eb2-b0ab-1edded64c556
 
 # How to: Use code to pin terms to navigation term sets in SharePoint 2013
 Learn how to use code to pin terms to navigation term sets. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 In taxonomy creation, pinning is the ability to attach a term to a target. SharePoint 2013 introduces term pinning. A pinned term is just like a term that is reused, except it is read-only and cannot be changed in the location where the term is used. 
   
     
@@ -30,7 +24,7 @@ To understand pinning in SharePoint 2013, you may want to learn about managed me
 **Table 1. Core concepts for pinning**
 
 
-|**Article title **|**Description **|
+|**Article title**|**Description**|
 |:-----|:-----|
 | [A Brief Introduction to Enterprise Metadata Management for Microsoft SharePoint Server 2010 Developers](http://msdn.microsoft.com/library/113a5d75-ac4d-498b-8436-725e04fb685d%28Office.15%29.aspx)|Written for SharePoint Server 2010, this article provides a basic overview of the enterprise managed metadata programming model and core concepts, such as terms and term sets. |
 | [Managed navigation in SharePoint 2013](managed-navigation-in-sharepoint-2013.md)|An introduction to the taxonomy-driven managed navigation feature in SharePoint 2013. |
@@ -39,7 +33,7 @@ To understand pinning in SharePoint 2013, you may want to learn about managed me
 ## Use code to complete pinning tasks
 <a name="SP15_H2UseCodeToPinTerms_UseCodeToCompletePinning"> </a>
 
-You can use custom code from the .NET server, .NET client (CSOM), Silverlight, or JavaScript programming models to complete pinning operations on terms and term sets. The following .NET server code examples include a test for pinning terms to navigation term sets, and a method that you can use to test whether a  **Term** object is pinned to a specified **TermSet** object. Then, the test creates **Term** objects, and pins one of them to the specified **NavigationTermSet** object.
+You can use custom code from the .NET server, .NET client (CSOM), Silverlight, or JavaScript programming models to complete pinning operations on terms and term sets. The following .NET server code examples include a test for pinning terms to navigation term sets, and a method that you can use to test whether a **Term**object is pinned to a specified**TermSet**object. Then, the test creates**Term**objects, and pins one of them to the specified**NavigationTermSet**object.
   
     
     
@@ -49,7 +43,7 @@ You can use custom code from the .NET server, .NET client (CSOM), Silverlight, o
 
 - The following sample tests pinning terms to navigation term sets. It uses the  [NavigationTermSet](https://msdn.microsoft.com/library/Microsoft.SharePoint.SharePoint.NavigationTermSet.aspx) object, which contains methods and properties that are handy in managed navigation scenarios, such as creating taxonomy-driven site navigation menus.
     
-    The sample first checks whether a  **NavigationTermSet** object exists. If one doesn't exist, then the code creates a **NavigationTermSet**. (If one already exists, the code deletes the old one before it creates a new one). Then, after the code creates some  **Term** objects to pick from, it creates a publishing page (.aspx) file for demonstration purposes, sets it as the custom target page for pinned terms, and then pins some navigation properties to the page.
+    The sample first checks whether a **NavigationTermSet**object exists. If one doesn't exist, then the code creates a**NavigationTermSet**. (If one already exists, the code deletes the old one before it creates a new one). Then, after the code creates some **Term**objects to pick from, it creates a publishing page (.aspx) file for demonstration purposes, sets it as the custom target page for pinned terms, and then pins some navigation properties to the page.
     
 
 

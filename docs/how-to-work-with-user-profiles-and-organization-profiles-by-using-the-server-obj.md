@@ -1,5 +1,5 @@
 ---
-title: How to: Work with user profiles and organization profiles by using the server object model in SharePoint 2013
+title: How to Work with user profiles and organization profiles by using the server object model in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 13f16dc3-f652-4fb3-996b-5f2166236d2b
 ---
@@ -7,12 +7,6 @@ ms.assetid: 13f16dc3-f652-4fb3-996b-5f2166236d2b
 
 # How to: Work with user profiles and organization profiles by using the server object model in SharePoint 2013
 Learn how to create, retrieve, and change SharePoint 2013 user profiles and user profile properties programmatically by using the SharePoint 2013 server object model. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## What are user profiles in SharePoint 2013?
 
 In SharePoint 2013, user profiles represent SharePoint users. User profile properties represent information about the users and also about the properties themselves. For example, properties include the account name or email address of a user and the data type of a property. You can use the server object model to programmatically create, retrieve, and change user profiles, profile subtypes, and profile properties. 
@@ -20,7 +14,7 @@ In SharePoint 2013, user profiles represent SharePoint users. User profile prope
     
     
 
-> [!Note]  
+> [!NOTE]  
 > For more information about common programming tasks for working with user profiles and the API that you use to perform the tasks, see  [Work with user profiles in SharePoint 2013](work-with-user-profiles-in-sharepoint-2013.md). 
   
     
@@ -41,7 +35,7 @@ To create a console application that uses the server object model to work with u
 - Visual Studio 2012. 
     
   
-- Permissions to create, retrieve, and change user profile objects. (Creating and modifying profiles requires the  **Modify User Profiles** permission.)
+- Permissions to create, retrieve, and change user profile objects. (Creating and modifying profiles requires the **Modify User Profiles**permission.)
     
   
 
@@ -49,19 +43,19 @@ To create a console application that uses the server object model to work with u
 <a name="bkmk_CreateConsoleApp"> </a>
 
 
-1. Open Visual Studio and choose  **File**,  **New**,  **Project**. 
+1. Open Visual Studio and choose **File**, **New**, **Project**. 
     
   
-2. In the  **New Project** dialog box, choose **.NET Framework 4.5** from the drop-down list at the top of the dialog box.
+2. In the **New Project**dialog box, choose**.NET Framework 4.5**from the drop-down list at the top of the dialog box.
     
   
-3. In the  **Templates** list, choose **Windows**, and then choose  **Console Application**. 
+3. In the **Templates**list, choose**Windows**, and then choose **Console Application**. 
     
   
-4. Name the project UserProfilesSSOM, and then choose the  **OK** button.
+4. Name the project UserProfilesSSOM, and then choose the **OK**button.
     
-    > [!Note]  
-> Make sure the  **Prefer 32-bit** setting is not selected in the project's **Build** properties.
+    > [!NOTE]  
+> Make sure the **Prefer 32-bit**setting is not selected in the project's**Build**properties.
 5. Add references to the following assemblies: 
     
   - Microsoft.Office.Server 
@@ -76,7 +70,7 @@ To create a console application that uses the server object model to work with u
   - System.Web 
     
   
-6. Replace the contents of the  **Program** class with the code example from one of the following scenarios:
+6. Replace the contents of the **Program**class with the code example from one of the following scenarios:
     
   -  [Create a user profile](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md#bkmk_CreateUP)
     
@@ -93,7 +87,7 @@ To create a console application that uses the server object model to work with u
   -  [Retrieve and change values for user properties](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md#bkmk_GetChangePropValues)
     
   
-7. To test the console application, on the menu bar, choose  **Debug**,  **Start Debugging**. You can check your changes from the  **Manage Profile Service** page for the User Profile Service Application in Central Administration.
+7. To test the console application, on the menu bar, choose **Debug**, **Start Debugging**. You can check your changes from the **Manage Profile Service**page for the User Profile Service Application in Central Administration.
     
   
 
@@ -109,7 +103,7 @@ The following code example creates a  [UserProfile](https://msdn.microsoft.com/l
     
     
 
-> [!Note]  
+> [!NOTE]  
 > Change the domain\\\\username andservername placeholder values before you run the code.
   
     
@@ -180,7 +174,7 @@ The following code example creates a  [CoreProperty](https://msdn.microsoft.com/
     
     
 
-> [!Note]  
+> [!NOTE]  
 > Change the servername placeholder value before you run the code.
   
     
@@ -276,7 +270,7 @@ The following code example retrieves all user profiles within the context and ch
     
     
 
-> [!Note]  
+> [!NOTE]  
 > Change the domain\\\\username andservername placeholder values before you run the code.
   
     
@@ -349,7 +343,7 @@ The following code example retrieves the set of properties that represent a spec
     
     
 
-> [!Note]  
+> [!NOTE]  
 > Change the servername placeholder value before you run the code.
   
     
@@ -422,12 +416,12 @@ namespace UserProfilesSSOM
 ## Code example: Retrieve and change values for user properties by using the SharePoint 2013 server object model
 <a name="bkmk_GetChangePropValues"> </a>
 
-The following code example retrieves all  **UserProfile** type properties and retrieves the property values for a specific user. Then, it changes the single-value [PictureUrl](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.PictureUrl.aspx) property and the multivalue [PastProjects](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.PastProjects.aspx) property. For the complete list of profile property name constants, see [PropertyConstants](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.aspx) .
+The following code example retrieves all **UserProfile**type properties and retrieves the property values for a specific user. Then, it changes the single-value [PictureUrl](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.PictureUrl.aspx) property and the multivalue [PastProjects](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.PastProjects.aspx) property. For the complete list of profile property name constants, see [PropertyConstants](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.aspx) .
   
     
     
 
-> [!Note]  
+> [!NOTE]  
 > Change the domain\\\\username, http://servername/docLib/pic.jpg, and servername placeholder values before you run the code.
   
     

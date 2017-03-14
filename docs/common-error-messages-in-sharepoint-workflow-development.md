@@ -7,12 +7,6 @@ ms.assetid: e9bf6878-c722-4b1f-b5b5-b302ae0ea4da
 
 # Common error messages in SharePoint workflow development
 A listing of common error messages that you might encounter while developing SharePoint workflows and guidance for solving the underlying problem. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Online* 
 ## Common SharePoint workflow errors
 
 Although this list doesn't cover every possible error you may encounter when developing SharePoint workflows, it does cover those that you are most likely to face. 
@@ -131,7 +125,7 @@ There is an error in your sandbox configuration. For information about configuri
 ### The e-mail message cannot be sent. Make sure the outgoing e-mail settings for the server are configured correctly
 <a name="bkmk_error07"> </a>
 
-There are two issues of note to consider when troubleshooting email issues. In both on-premises and SharePoint Online installations, ensure that all addresses on the  **To:** and **Cc:** lines are valid email addresses. In on-premises installations, ensure that email settings on the server are configured correctly.
+There are two issues of note to consider when troubleshooting email issues. In both on-premises and SharePoint Online installations, ensure that all addresses on the **To:**and**Cc:**lines are valid email addresses. In on-premises installations, ensure that email settings on the server are configured correctly.
   
     
     
@@ -155,10 +149,10 @@ This error commonly results from one of two situations:
     
     
 
-- One of the list fields was removed or changed, but the workflow was not updated to account for the change and is therefore trying to set a value for the old field. You should check all  **Update List Item** actions in your workflow and make sure they are setting appropriate values for fields and that those fields exist on the list.
+- One of the list fields was removed or changed, but the workflow was not updated to account for the change and is therefore trying to set a value for the old field. You should check all **Update List Item**actions in your workflow and make sure they are setting appropriate values for fields and that those fields exist on the list.
     
   
-- There is a data type error wherein the workflow is trying to set a value in a field in the list item using the wrong data type. You should confirm that the  **Return Field As** operation in their lookup is of the correct data type.
+- There is a data type error wherein the workflow is trying to set a value in a field in the list item using the wrong data type. You should confirm that the **Return Field As**operation in their lookup is of the correct data type.
     
   
 
@@ -173,7 +167,7 @@ This indicates there is an error in the workflow logic. Check to ensure that you
 ### The workflow could not create the list item because the file name is either missing or invalid
 <a name="bkmk_error10"> </a>
 
-This indicates there is an error in the workflow logic. Ensure that the file name entered in the  **Path and Name** field is a valid file name. Common reasons for a file name to be invalid include a missing or incorrect file extension or a file/path string that is too long and exceeds the allowable number of characters.
+This indicates there is an error in the workflow logic. Ensure that the file name entered in the **Path and Name**field is a valid file name. Common reasons for a file name to be invalid include a missing or incorrect file extension or a file/path string that is too long and exceeds the allowable number of characters.
   
     
     
@@ -181,7 +175,7 @@ This indicates there is an error in the workflow logic. Ensure that the file nam
 ### Coercion Failed: Unable to transform the input lookup data into the requested type
 <a name="bkmk_error11"> </a>
 
-The operation failed to cast values between incompatible data types (for example, converting a random string to a Date/Time value). You should check the  **Return Field As** settings in your lookup to ensure that it is a valid data type for the expected data.
+The operation failed to cast values between incompatible data types (for example, converting a random string to a Date/Time value). You should check the **Return Field As**settings in your lookup to ensure that it is a valid data type for the expected data.
   
     
     
@@ -189,7 +183,7 @@ The operation failed to cast values between incompatible data types (for example
 ### The workflow operation failed because the action requires the document to be checked out
 <a name="bkmk_error12"> </a>
 
-You must check out the item using the  **Check Out Item** action before using the **Update Item** action.
+You must check out the item using the **Check Out Item**action before using the**Update Item**action.
   
     
     

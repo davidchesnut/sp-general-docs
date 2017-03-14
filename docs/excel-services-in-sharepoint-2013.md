@@ -7,12 +7,6 @@ ms.assetid: f7e13fcb-a86a-4a1e-af59-3bace98ce9d7
 
 # Excel Services in SharePoint 2013
 Learn about the new capabilities in Excel Services in SharePoint Server 2013 and how you can use them in your own development efforts. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## What's new in Excel Services for developers
 <a name="xlsWhatsNew"> </a>
 
@@ -41,7 +35,7 @@ SharePoint Server 2010 introduced the REST API for use in getting and setting in
 <a name="xlsOdata"> </a>
 
 
-> [!Note]  
+> [!NOTE]  
 > The Excel Interactive View feature has been disabled. For information about removing this feature from your website, see  [Removing Excel Interactive View from a webpage](removing-excel-interactive-view-from-a-webpage.md). 
   
     

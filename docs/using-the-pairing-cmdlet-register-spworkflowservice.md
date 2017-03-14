@@ -7,19 +7,13 @@ ms.assetid: 91fca6c2-60ca-4177-8560-2b310dac0e2c
 
 
 # Using the pairing cmdlet Register-SPWorkflowService
-Learn how to use the cmdlet  **Register-SPWorkflowService** to successfully pair SharePoint Server 2013 with Workflow Manager.
- **Last modified:** September 17, 2015
+Learn how to use the cmdlet **Register-SPWorkflowService**to successfully pair SharePoint Server 2013 with Workflow Manager.
+Installing and configuring Microsoft SharePoint Server 2013 to support workflow development requires "pairing" your installations of SharePoint Server 2013 and Workflow Manager. In most scenarios, this pairing is easily done by using the cmdlet **Register-SPWorkflowService**, which is included with your SharePoint installation. 
   
     
     
 
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Online* 
-Installing and configuring Microsoft SharePoint Server 2013 to support workflow development requires "pairing" your installations of SharePoint Server 2013 and Workflow Manager. In most scenarios, this pairing is easily done by using the cmdlet  **Register-SPWorkflowService**, which is included with your SharePoint installation. 
-  
-    
-    
-
-Importantly, this cmdlet is not useful for every pairing scenario.  **Register-SPWorkflowService** is useful only in the following pairing scenarios:
+Importantly, this cmdlet is not useful for every pairing scenario. **Register-SPWorkflowService**is useful only in the following pairing scenarios:
 - One-computer server farm where SharePoint Server 2013 and Workflow Manager are co-located on the server box. 
     
   
@@ -29,18 +23,18 @@ Importantly, this cmdlet is not useful for every pairing scenario.  **Register-S
 - Three-computer SharePoint Server 2013 farm paired with a non-co-located Workflow Manager server farm. 
     
   
-Also note that  **Register-SPWorkflowService** uses the credentials of the current user.
+Also note that **Register-SPWorkflowService**uses the credentials of the current user.
 ## Cmdlet design
 
 
 ****
 
 
-|**Detail **|**Description **|
+|**Detail**|**Description**|
 |:-----|:-----|
 |Verb |Register |
 |Noun |SPWorkflowService |
-|Description |Pairs a sps15short farm with a Workflow Manager farm. You must run this cmdlet once per farm. Before running the cmdlet, you must install root CA certificate in machine certificate store and SharePoint certificate store. To do this, use the cmdlet  **New-SPTrustedRootAuthority**. (See instructions below.) |
+|Description |Pairs a sps15short farm with a Workflow Manager farm. You must run this cmdlet once per farm. Before running the cmdlet, you must install root CA certificate in machine certificate store and SharePoint certificate store. To do this, use the cmdlet **New-SPTrustedRootAuthority**. (See instructions below.) |
 |Output type |None. |
 |Syntax | `Register-SPWorkflowService -SPSite <URI or GUID representing an SPSite object> -WorkflowHostUri <workflow service endpoint URL> -ScopeName <string> [-PartitionMode] [-AllowOAuthHttp] [-Force]`|
    
@@ -49,7 +43,7 @@ Also note that  **Register-SPWorkflowService** uses the credentials of the curre
 
 
 
-|**Parameter **|**Type **|**Description **|
+|**Parameter**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |SPSite          (Required) |**SPSitePipeBind**|The URL of a long-lasting site collection on the SharePoint Server farm that serves as the pairing endpoint. Information for pairing is deduced from this URL. |
 |WorkflowHostUri          (Required) |String |The URL of the Workflow Manager endpoint for the pairing. Provides the workflow host URI along with port number. |

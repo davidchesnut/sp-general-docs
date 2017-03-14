@@ -1,5 +1,5 @@
 ---
-title: How to: Access external data with REST in SharePoint 2013
+title: How to Access external data with REST in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 0663cc8c-a736-434d-9858-6ce12ce7f748
 ---
@@ -7,12 +7,6 @@ ms.assetid: 0663cc8c-a736-434d-9858-6ce12ce7f748
 
 # How to: Access external data with REST in SharePoint 2013
 Learn how to access external data from SharePoint 2013 by using Representational State Transfer (REST) URLs for Business Connectivity Services (BCS). 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 This article shows how to set up an external list that retrieves data from an Open Data protocol (OData) source. 
   
     
@@ -53,7 +47,7 @@ The SharePoint 2013 REST service provides a way to access external data using a 
 **Table 1. Core concepts for REST in SharePoint 2013**
 
 
-|**Article title **|**Description **|
+|**Article title**|**Description**|
 |:-----|:-----|
 | [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)|Learn how to use the SharePoint 2013 REST service, which provides a REST programming interface comparable to the existing client object model. |
 | [Get to know the SharePoint 2013 REST service](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx)|Get the basics of using the SharePoint 2013 REST service to access and update SharePoint data, using the REST and OData web protocol standards. |
@@ -74,31 +68,31 @@ The following procedures guide you through setting up an SharePoint Add-in and c
 1. Open Visual Studio 2012. 
     
   
-2. Create an  **App for SharePoint 2013** project.
+2. Create an **App for SharePoint 2013**project.
     
   
 3. Specify the app settings, including app name, the site URL for debugging the app, and how you want to host the app (Autohosted, Provider-hosted, SharePoint-hosted). For more information about hosting options, see  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx). 
     
   
-4. Choose  **Finish** to create the app.
+4. Choose **Finish**to create the app.
     
   
 
 ### To generate the external content type
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the project, and choose  **Add**,  **Content Types for External Data Source**. 
+1. In **Solution Explorer**, open the shortcut menu for the project, and choose **Add**, **Content Types for External Data Source**. 
     
   
-2. In the  **Specify OData Source** page, enter the URL of the OData service you want to connect to. In this case, use the Northwind OData source published at [http://www.odata.org/ecosystem](http://www.odata.org/ecosystem). Set the URL for the OData service to  `http://services.odata.org/Northwind/Northwind.svc/`, and provide a name for the data source. 
+2. In the **Specify OData Source**page, enter the URL of the OData service you want to connect to. In this case, use the Northwind OData source published at [http://www.odata.org/ecosystem](http://www.odata.org/ecosystem). Set the URL for the OData service to  `http://services.odata.org/Northwind/Northwind.svc/`, and provide a name for the data source. 
     
-    Choose  **Next**. 
-    
-  
-3. This displays a list of data entities that are being exposed by the OData Service. Select the  **Customers** entity. Ensure that the **Create list instances for the selected data entities (except Service Operations)** check box is selected.
+    Choose **Next**. 
     
   
-4. Choose  **Finish**. 
+3. This displays a list of data entities that are being exposed by the OData Service. Select the **Customers**entity. Ensure that the**Create list instances for the selected data entities (except Service Operations)**check box is selected.
+    
+  
+4. Choose **Finish**. 
     
   
 
@@ -117,10 +111,10 @@ The next objective is to modify the default.aspx page that was created when you 
 ### To add the container to the Default.aspx page
 
 
-1. In  **Solution Explorer**, open the Default.aspx page in the  **Pages** module.
+1. In **Solution Explorer**, open the Default.aspx page in the **Pages**module.
     
   
-2. Add the following  **div** element to the page.
+2. Add the following **div**element to the page.
     
   ```HTML
   

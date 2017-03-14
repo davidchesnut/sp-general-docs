@@ -7,12 +7,6 @@ ms.assetid: 882ea867-9acb-4313-99c9-865a523b72fd
 
 # Changes in the BDC model schema for SharePoint 2013
 Learn what has changed in SharePoint 2013 for the BDC model schema. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 The number of changes in the schema (BDCMetadata.xsd) for creating BDC models in SharePoint 2013 is relatively small. But these changes have significant impact on the feature set offerings of Business Connectivity Services (BCS). 
   
     
@@ -30,9 +24,9 @@ The following table shows what changes have been made to the top-level elements 
 **Table 1. New complex types**
 
 
-|**Element **|**Description **|
+|**Element**|**Description**|
 |:-----|:-----|
-|IndividuallySecurableMetadataObject |Used to designate that the specified  **MetadataObject** is able to be secured explicitly and not by association to its parent.|
+|IndividuallySecurableMetadataObject |Used to designate that the specified **MetadataObject**is able to be secured explicitly and not by association to its parent.|
 |MetadataObject |Used to store additional metadata about the connection to the external data source. |
    
 
@@ -47,7 +41,7 @@ The following table lists the changes that have been made to the attributes of e
 **Table 2. Changes to simple types**
 
 
-|**Element **|**Description **|
+|**Element**|**Description**|
 |:-----|:-----|
 |No changes ||
    
@@ -63,7 +57,7 @@ The following table lists the changes to the attributes of each element.
 **Table 3. Changes to attributes**
 
 
-|**Attribute **|**Parent **|**Description **|
+|**Attribute**|**Parent**|**Description**|
 |:-----|:-----|:-----|
 |No changes |||
    

@@ -1,18 +1,12 @@
 ---
-title: Walkthrough: Developing a Managed-Code UDF
-ms.prod: SHAREPOINT
+title: Walkthrough Developing a Managed-Code UDF
+ms.prod: OFFICE365
 ms.assetid: e6a00833-0606-4a7d-91c3-b89a6e340348
 ---
 
 
 # Walkthrough: Developing a Managed-Code UDF
 
- **Last modified:** July 20, 2011
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 This walkthrough describes the process for developing Excel Services user-defined functions (UDFs) using Microsoft Visual C#. 
   
     
@@ -44,7 +38,7 @@ In order to complete this walkthrough, you will need:
 
 - Microsoft SharePoint Server 2010. 
     
-    > [!Note]  
+    > [!NOTE]  
 > The easiest way to get all you need on the server is to do a basic, stand-alone install. All you need to add on top of that is a trusted location. 
 - Excel. 
     
@@ -55,7 +49,7 @@ In order to complete this walkthrough, you will need:
 - To enable running the UDF assembly. 
     
   
-- A trusted SharePoint document library in which to store a workbook, and to allow the workbook to call UDFs by setting the  **AllowUdfs** value to **true**. 
+- A trusted SharePoint document library in which to store a workbook, and to allow the workbook to call UDFs by setting the **AllowUdfs**value to**true**. 
     
   
 - A sample workbook that calls the UDF stored in a trusted SharePoint document library. 
@@ -63,15 +57,15 @@ In order to complete this walkthrough, you will need:
   
 - Permissions to view and publish a workbook to a SharePoint document library. 
     
-    > [!Note]  
+    > [!NOTE]  
 > For more information about setting permissions, see the Windows SharePoint Services 3.0 documentation. 
 - To create the workbook using Excel. 
     
   
 - To save the workbook as an .xlsx or .xlsb file. 
     
-    > [!Note]  
-> For more information about how to trust a location, how to enable UDFs, and how to set the  **AllowUdfs** flag, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
+    > [!NOTE]  
+> For more information about how to trust a location, how to enable UDFs, and how to set the **AllowUdfs**flag, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
 
 ## See also
 

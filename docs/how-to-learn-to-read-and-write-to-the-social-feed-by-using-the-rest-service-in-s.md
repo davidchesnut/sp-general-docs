@@ -1,5 +1,5 @@
 ---
-title: How to: Learn to read and write to the social feed by using the REST service in SharePoint 2013
+title: How to Learn to read and write to the social feed by using the REST service in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 1da8d484-3666-42c3-8a8f-8b3ef93e96e9
 ---
@@ -7,12 +7,6 @@ ms.assetid: 1da8d484-3666-42c3-8a8f-8b3ef93e96e9
 
 # How to: Learn to read and write to the social feed by using the REST service in SharePoint 2013
 Create a SharePoint-hosted app that uses the REST service to publish a post and get the personal feed for the current user. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## Prerequisites for creating a SharePoint-hosted SharePoint Add-in that publishes a post and gets the social feed by using the SharePoint 2013 REST service
 <a name="bkmk_Prereqs"> </a>
 
@@ -21,7 +15,7 @@ This article assumes that you create the SharePoint Add-in by using Napa on an O
     
     
 
-> [!Note]  
+> [!NOTE]  
 > Go to  [Set up a development environment for SharePoint Add-ins on Office 365](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx) to find out how to sign up for a Developer Site and start using Napa.
   
     
@@ -38,11 +32,11 @@ If you're not using Napa on a Developer Site, you'll need the following:
 - Visual Studio 2012 and Office Developer Tools for Visual Studio 2013 
     
   
--  **Full Control** access permissions to the User Profile service application for the logged-on user
+- **Full Control**access permissions to the User Profile service application for the logged-on user
     
   
 
-> [!Note]  
+> [!NOTE]  
 > For guidance about how to set up a development environment that fits your needs, see  [Start building apps for Office and SharePoint](http://msdn.microsoft.com/library/187f8c8c-1b15-471c-80b5-69a40e67deea.aspx). 
   
     
@@ -60,7 +54,7 @@ The SharePoint-hosted app that you create in this article uses JavaScript to bui
 **Table 1. Core concepts for working with SharePoint 2013 social feeds**
 
 
-|**Article title **|**Description **|
+|**Article title**|**Description**|
 |:-----|:-----|
 | [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)|Learn about SharePoint Add-ins and fundamental concepts for building them. |
 | [Get started developing with social features in SharePoint 2013](get-started-developing-with-social-features-in-sharepoint-2013.md)|Find out how to start programming with social feeds and microblog posts, following people and content (documents, sites, and tags), and working with user profiles. |
@@ -71,30 +65,30 @@ The SharePoint-hosted app that you create in this article uses JavaScript to bui
 <a name="bkmk_CreateApp"> </a>
 
 
-1. On your Developer Site, open Napa, and then choose  **Add New Project**. 
+1. On your Developer Site, open Napa, and then choose **Add New Project**. 
     
   
-2. Choose the  **App for SharePoint** template, name the projectSocialFeedREST, and then choose the  **Create** button.
+2. Choose the **App for SharePoint**template, name the projectSocialFeedREST, and then choose the **Create**button.
     
   
 3. Specify the permissions that your app needs: 
     
-1. Choose the  **Properties** button at the bottom of the page.
+1. Choose the **Properties**button at the bottom of the page.
     
   
-2. In the  **Properties** window, choose **Permissions**. 
+2. In the **Properties**window, choose**Permissions**. 
     
   
-3. In the  **Content** category, set **Write** permissions for the **Tenant** scope.
+3. In the **Content**category, set**Write**permissions for the**Tenant**scope.
     
   
-4. In the  **Social** category, set **Read** permissions for the **User Profiles** scope.
+4. In the **Social**category, set**Read**permissions for the**User Profiles**scope.
     
   
-5. Close the  **Properties** window.
+5. Close the **Properties**window.
     
   
-4. Expand the  **Scripts** node, choose the App.js file, and delete the contents of the file.
+4. Expand the **Scripts**node, choose the App.js file, and delete the contents of the file.
     
   
 
@@ -102,14 +96,14 @@ The SharePoint-hosted app that you create in this article uses JavaScript to bui
 <a name="bkmk_PubPost"> </a>
 
 
-1. In the App.js file, declare a global variable for the URL of the  **SocialFeedManager** endpoint.
+1. In the App.js file, declare a global variable for the URL of the **SocialFeedManager**endpoint.
     
   ```
   
 var feedManagerEndpoint;
   ```
 
-2. Add the following code, which gets the  **SPAppWebUrl** parameter from the query string and uses it to build the **SocialFeedManager** endpoint.
+2. Add the following code, which gets the **SPAppWebUrl**parameter from the query string and uses it to build the**SocialFeedManager**endpoint.
     
   ```
   $(document).ready(function () {
@@ -124,9 +118,9 @@ var feedManagerEndpoint;
 });
   ```
 
-3. Add the following code, which builds the HTTP  **POST** request for the `/my/Feed/Post` endpoint, defines the post's creation data, and publishes the post.
+3. Add the following code, which builds the HTTP **POST**request for the `/my/Feed/Post` endpoint, defines the post's creation data, and publishes the post.
     
-    The request sends a  **SocialRestPostCreationData** resource in the request body. **SocialRestPostCreationData** contains the target for the post (in this case, `null` to specify a root post for the current user) and a **SocialPostCreationData** complex type that defines the post's properties.
+    The request sends a **SocialRestPostCreationData**resource in the request body.**SocialRestPostCreationData**contains the target for the post (in this case, `null` to specify a root post for the current user) and a**SocialPostCreationData**complex type that defines the post's properties.
     
 
 
@@ -169,7 +163,7 @@ function postToMyFeed() {
 ## Retrieve the social feed for the current user by using the SharePoint 2013 REST service
 <a name="bkmk_GetFeed"> </a>
 
-Add the following code, which gets the  **Personal** feed type for the current user by using the `/my/Feed` endpoint. The **accept** header requests that the server return a JavaScript Object Notation (JSON) representation of the feed in its response.
+Add the following code, which gets the **Personal**feed type for the current user by using the `/my/Feed` endpoint. The**accept**header requests that the server return a JavaScript Object Notation (JSON) representation of the feed in its response.
   
     
     
@@ -195,7 +189,7 @@ function getMyFeed() {
 ## Iterate through the social feed and read from it by using the SharePoint 2013 REST service
 <a name="bkmk_ReadFeed"> </a>
 
-Add the following code, which prepares the returned data by using the  **JSON.stringify** function and the **JSON.parse** function, and then iterates through the feed and gets the thread's owner and the root post's text.
+Add the following code, which prepares the returned data by using the **JSON.stringify**function and the**JSON.parse**function, and then iterates through the feed and gets the thread's owner and the root post's text.
   
     
     
@@ -225,10 +219,10 @@ function feedRetrieved(data) {
 <a name="bkmk_ReadFeed"> </a>
 
 
-1. To run the app, choose the  **Run Project** button at the bottom of the page.
+1. To run the app, choose the **Run Project**button at the bottom of the page.
     
   
-2. In the  **Do you trust** page that opens, choose the **Trust It** button. The app page opens and displays the owner's name and the text of each root post in the feed.
+2. In the **Do you trust**page that opens, choose the**Trust It**button. The app page opens and displays the owner's name and the text of each root post in the feed.
     
   
 

@@ -7,12 +7,6 @@ ms.assetid: 65365b1d-cde5-47cd-8b04-1b76be0e3490
 
 # What's new for developers in social and collaboration features in SharePoint 2013
 Learn about new and changed social and collaboration features for My Site and Community Site development scenarios in SharePoint 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 Social and collaboration features in SharePoint 2013 make it easy for users to communicate and to stay engaged and informed. The improved social feed on personal sites and team sites helps users to keep up-to-date with the people and content that they care about. The new Community Site feature provides a rich community experience that lets users easily find and share information and find people who have similar interests. 
   
     
@@ -26,19 +20,19 @@ The My Site Social API, which includes user profiles and social data, contains m
   
     
     
-The  **Newsfeed** page on SharePoint Server 2013 displays several of these improvements, including a text box that enables users to quickly publish microblog posts and an interactive, conversational feed of posts and updates from the people and content that the user is following.
+The **Newsfeed**page on SharePoint Server 2013 displays several of these improvements, including a text box that enables users to quickly publish microblog posts and an interactive, conversational feed of posts and updates from the people and content that the user is following.
   
     
     
 
 ### New Social namespace provides APIs for social feeds and following people and content
 
-The  **Social** namespace contains the primary API for working with feeds and microblog posts and for following people and content. For more information, see [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) for the .NET client object model, [SP.Social](http://msdn.microsoft.com/library/43d47f01-c085-0e77-bd01-48bcb7d5bb35%28Office.15%29.aspx) for the JavaScript object model, and [Microsoft.Office.Server.Social](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.aspx) for the server object model.
+The **Social**namespace contains the primary API for working with feeds and microblog posts and for following people and content. For more information, see [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) for the .NET client object model, [SP.Social](http://msdn.microsoft.com/library/43d47f01-c085-0e77-bd01-48bcb7d5bb35%28Office.15%29.aspx) for the JavaScript object model, and [Microsoft.Office.Server.Social](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.aspx) for the server object model.
   
     
     
 
-> [!Note]  
+> [!NOTE]  
 > The API in the  [Microsoft.Office.Server.ActivityFeed](https://msdn.microsoft.com/library/Microsoft.Office.Server.ActivityFeed.aspx) namespace is deprecated. See [Deprecated and removed My Site Social API and features](#bkmk_DeprecatedAPI). 
   
     
@@ -63,16 +57,16 @@ For information about how to access the My Site Social client APIs, see  [Get st
 ### Use the ProfileLoader.CreatePersonalSiteEnqueueBulk method to provision personal sites and OneDrive for Business for multiple users (My Site Host administrators on SharePoint Online only)
 <a name="bk_CreatePersonalSiteEnqueueBulk"> </a>
 
-My Site Host administrators can use the  **ProfileLoader.CreatePersonalSiteEnqueueBulk** method to programmatically provision personal sites for multiple users on SharePoint Online, which include features such as OneDrive for Business and the Sites page.
+My Site Host administrators can use the **ProfileLoader.CreatePersonalSiteEnqueueBulk**method to programmatically provision personal sites for multiple users on SharePoint Online, which include features such as OneDrive for Business and the Sites page.
   
     
     
-The following code example uses the .NET client object model in a console application. Before you run the example, add references to Microsoft.SharePoint.Client.dll, Microsoft.SharePoint.Client.Runtime.dll and Microsoft.SharePoint.Client.UserProfiles.dll, and change the placeholder values for the  **userName**,  **passwordStr**, and  **serverUrl** variables. The **serverUrl** variable must be the URL of the SharePoint Online Administration Center.
+The following code example uses the .NET client object model in a console application. Before you run the example, add references to Microsoft.SharePoint.Client.dll, Microsoft.SharePoint.Client.Runtime.dll and Microsoft.SharePoint.Client.UserProfiles.dll, and change the placeholder values for the **userName**, **passwordStr**, and **serverUrl**variables. The**serverUrl**variable must be the URL of the SharePoint Online Administration Center.
   
     
     
 
-> [!Note]  
+> [!NOTE]  
 > To get the required client DLLs, download the  [SharePoint Online Client Components SDK](http://www.microsoft.com/en-us/download/details.aspx?id=42038). 
   
     
@@ -130,7 +124,7 @@ namespace CreatePersonalSiteBulkConsole
 }
 ```
 
-To use the  **CreatePersonalSiteEnqueueBulk** method with Windows PowerShell, first change the placeholder values (the URL of the SharePoint Online Administration Center and user names) in the following commands, and then run the commands in the SharePoint Management Shell.
+To use the **CreatePersonalSiteEnqueueBulk**method with Windows PowerShell, first change the placeholder values (the URL of the SharePoint Online Administration Center and user names) in the following commands, and then run the commands in the SharePoint Management Shell.
   
     
     
@@ -185,7 +179,7 @@ SharePoint Server 2013 includes new objects that represent users and user proper
     
   
 
-> [!Note]  
+> [!NOTE]  
 > Server object model versions are the  [SPSocialActor](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialActor.aspx) object and the [PersonProperties](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PersonProperties.aspx) object.
   
     
@@ -212,32 +206,32 @@ The following My Site Social API and features are deprecated in SharePoint Serve
     
     
 
-- The API in the  [Microsoft.Office.Server.ActivityFeed](https://msdn.microsoft.com/library/Microsoft.Office.Server.ActivityFeed.aspx) namespace is deprecated. The **Social** namespace provides the API for programmatically working with social feeds in SharePoint 2013. For backward compatibility, **ActivityEvent** items from SharePoint 2010 are displayed in SharePoint 2013 feeds as events that cannot be replied to. (Legacy event migration must be enabled in Central Administration.)
+- The API in the  [Microsoft.Office.Server.ActivityFeed](https://msdn.microsoft.com/library/Microsoft.Office.Server.ActivityFeed.aspx) namespace is deprecated. The**Social**namespace provides the API for programmatically working with social feeds in SharePoint 2013. For backward compatibility,**ActivityEvent**items from SharePoint 2010 are displayed in SharePoint 2013 feeds as events that cannot be replied to. (Legacy event migration must be enabled in Central Administration.)
     
   
 - The My Site RSS feed (ActivityFeed.aspx) is replaced with new APIs in the REST service, the client object model, and the JavaScript object model. To migrate custom SharePoint 2010 code that uses this API (preferably a client API), replace all requests to ActivityFeed.aspx with calls to the new API and handle feed data that is returned in JavaScript Object Notation (JSON) format. 
     
   
-- The  **Recent Activities** Web Part is replaced with a new **Newsfeed** Web Part that supports multithreaded conversations and dynamic feed retrieval.
+- The **Recent Activities**Web Part is replaced with a new**Newsfeed**Web Part that supports multithreaded conversations and dynamic feed retrieval.
     
-    > [!Note]  
+    > [!NOTE]  
 > We don't support customizations of the Newsfeed Web Part or other feed Web Parts (such as the Site Feed Web Part on team sites). If you do customize these Web Parts, for example by using JavaScript overrides, be aware that your customizations may break in updates to SharePoint. 
-- The  **Social Comments** Web Part is deprecated.
+- The **Social Comments**Web Part is deprecated.
     
   
 - The following activity events no longer automatically inform the feed: profile update, upcoming birthday, upcoming workplace anniversary, new membership, and change of manager. However, you can create custom event receivers for these activities. No new social events have been added. 
     
   
-- The following fields in the  [Privacy](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.Privacy.aspx) enumeration are deprecated: **Contacts**,  **Organization**, and  **Manager**. SharePoint 2013 offers only  **Private** ( **Only Me**) and  **Public** ( **Everyone**) privacy settings. Existing privacy settings are retained until they are changed by the user. To migrate custom SharePoint 2010 code that uses this API, replace all references to the deprecated privacy fields. 
+- The following fields in the  [Privacy](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.Privacy.aspx) enumeration are deprecated:**Contacts**, **Organization**, and **Manager**. SharePoint 2013 offers only **Private**(**Only Me**) and **Public**(**Everyone**) privacy settings. Existing privacy settings are retained until they are changed by the user. To migrate custom SharePoint 2010 code that uses this API, replace all references to the deprecated privacy fields. 
     
   
-- The  **Following People** API that is accessed from the **SocialFollowingManager** replaces the **Colleagues** functionality from SharePoint Server 2010. The **Colleagues** page is replaced with the **People I'm following** page. The **Groups** feature that enabled users to organize colleagues into groups is no longer available.
+- The **Following People**API that is accessed from the**SocialFollowingManager**replaces the**Colleagues**functionality from SharePoint Server 2010. The**Colleagues**page is replaced with the**People I'm following**page. The**Groups**feature that enabled users to organize colleagues into groups is no longer available.
     
   
-- Organization profiles are obsolete in SharePoint 2013, and the following types are deprecated:  **OrganizationProfile**,  **OrganizationProfileManager**,  **OrganizationMembershipType**,  **OrganizationNotFoundException**,  **OrganizationProfileChange**,  **OrganizationProfileChangeQuery**,  **OrganizationProfileMembershipChange**, and  **OrganizationProfileValueCollection**. 
+- Organization profiles are obsolete in SharePoint 2013, and the following types are deprecated: **OrganizationProfile**, **OrganizationProfileManager**, **OrganizationMembershipType**, **OrganizationNotFoundException**, **OrganizationProfileChange**, **OrganizationProfileChangeQuery**, **OrganizationProfileMembershipChange**, and **OrganizationProfileValueCollection**. 
     
   
-- The  **My Links** feature is deprecated in SharePoint 2013.
+- The **My Links**feature is deprecated in SharePoint 2013.
     
   
 
@@ -257,10 +251,10 @@ The following list contains information for developing with Community Site featu
     
     
 
-- Community Sites use the  **Community** site template ( [Id](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.WebTemplate.Id.aspx) = **62**). The site template is not available for public websites. The template type of the discussion board list is  [DiscussionBoard](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.ListTemplateType.DiscussionBoard.aspx) (value = **108**). 
+- Community Sites use the **Community**site template ( [Id](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.WebTemplate.Id.aspx) =**62**). The site template is not available for public websites. The template type of the discussion board list is  [DiscussionBoard](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.ListTemplateType.DiscussionBoard.aspx) (value =**108**). 
     
   
-- Activating the  **Community Site** feature activates the **CommunityEventReceiver** event receiver.
+- Activating the **Community Site**feature activates the**CommunityEventReceiver**event receiver.
     
   
 - To customize the client-side rendered list view, you must use JavaScript overrides to replace the view. List views cannot be extended through the SharePoint 2013 API. For more information, see  [Customize a list view in SharePoint Add-ins using client-side rendering](http://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx). 
@@ -268,7 +262,7 @@ The following list contains information for developing with Community Site featu
   
 - Community Sites use asynchronous events to update objects. If asynchronous events run in the background, you may encounter  *Save*  conflicts when you attempt to update lists or list items, and your handle to the object may become stale.
     
-    As a workaround, handle exceptions that are returned by  **Update** calls, refresh the instance before you retry the call, and loop for multiple retries, as shown in the following code example.
+    As a workaround, handle exceptions that are returned by **Update**calls, refresh the instance before you retry the call, and loop for multiple retries, as shown in the following code example.
     
 
 

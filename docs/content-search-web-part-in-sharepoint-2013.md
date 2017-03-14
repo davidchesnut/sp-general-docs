@@ -23,12 +23,6 @@ ms.assetid: 6fb4bf41-0846-4dca-ad9e-906afdfd3d2b
     
     
 Learn about the Content Search Web Part (CSWP) in SharePoint 2013.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## Introducing the Content Search Web Part (CSWP)
 <a name="SP15_CSWP_IntroducingCSWP"> </a>
 

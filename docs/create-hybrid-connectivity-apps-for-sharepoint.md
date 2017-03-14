@@ -7,12 +7,6 @@ ms.assetid: 311f036e-3442-4497-b35e-442b665462d3
 
 # Create hybrid connectivity apps for SharePoint
 Learn about the process of developing and deploying apps for SharePoint 2013 hybrid connectivity solutions. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** apps for SharePoint | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013* 
 ## Hybrid connectivity in SharePoint 2013 and SharePoint Online
 <a name="bk_hybridconnectivity"> </a>
 
@@ -29,7 +23,7 @@ For a complete description of how to configure a working hybrid solution, see  [
     
     
 
-> [!Caution]  
+> [!CAUTION]  
 > To configure a hybrid SharePoint environment, you need a combination of expert skills and significant hands-on experience with SharePoint Server 2013, SharePoint Online, and related products and technologies. We recommend that you engage Microsoft Consulting Services to provide technical guidance and support during the design and deployment of your hybrid environment. 
 > For more information, see  [Microsoft Services](http://www.microsoft.com/en-us/microsoftservices/deploy.aspx). 
   
@@ -87,15 +81,15 @@ To create an OData endpoint, you will need to follow these steps for creating a 
 
 1. Create an IIS website running at least Microsoft .NET Framework 4. Secure the site using basic authentication. 
     
-    > [!Note]  
+    > [!NOTE]  
 > It's not necessary for SharePoint to be installed on this server. In fact, for the sake of simplicity and performance, it's better if SharePoint is not installed on the server that hosts the WCF data service. 
-2. Create a new project in Visual Studio 2012 using the  **ASP.NET Empty Web Application** template.
+2. Create a new project in Visual Studio 2012 using the **ASP.NET Empty Web Application**template.
     
   
-3. In  **Solution Explorer** add a new **ADO.NET Entity Data Model**. 
+3. In **Solution Explorer**add a new**ADO.NET Entity Data Model**. 
     
   
-4. Choose the  **Generate from database** option in the **Entity Data Model Wizard**. 
+4. Choose the **Generate from database**option in the**Entity Data Model Wizard**. 
     
   
 5. Select an existing connection, or create a new one. 
@@ -104,13 +98,13 @@ To create an OData endpoint, you will need to follow these steps for creating a 
 6. Provide the URL and connection security information. 
     
   
-7. Select the items that you want to include in the model, and choose  **Finish**. 
+7. Select the items that you want to include in the model, and choose **Finish**. 
     
   
-8. Again in  **Solution Explorer**, add a new  **WCF Data Service** using the Visual Studio template.
+8. Again in **Solution Explorer**, add a new **WCF Data Service**using the Visual Studio template.
     
   
-9. Name the data service, and choose  **Next**. 
+9. Name the data service, and choose **Next**. 
     
     At this point, the entity model will be created and the resulting classes will be included in your project. 
     
@@ -147,7 +141,7 @@ One of the assumptions we are making here is that you are developing your app in
 2. Create a new app for SharePoint. 
     
   
-3. Specify the name of the app, the local SharePoint URL that will host your site for testing, and how you want the app to be hosted. Choose  **Finish**. 
+3. Specify the name of the app, the local SharePoint URL that will host your site for testing, and how you want the app to be hosted. Choose **Finish**. 
     
   
 
@@ -162,19 +156,19 @@ To add a BDC model or external content type to your project, do the following.
 ### To add an external content type
 
 
-1. With your new project still open, open the shortcut menu for the solution, and choose  **Add**,  **Content types for an External Data source**. 
+1. With your new project still open, open the shortcut menu for the solution, and choose **Add**, **Content types for an External Data source**. 
     
   
-2. The first page of the wizard is used to specify the URL of the data service. On the  **Specify OData Source** page, enter the URL of the OData service that you want to connect to. The URL should resemble the following: **http://services.odata.org/Northwind/Northwind.svc/**.
+2. The first page of the wizard is used to specify the URL of the data service. On the **Specify OData Source**page, enter the URL of the OData service that you want to connect to. The URL should resemble the following:**http://services.odata.org/Northwind/Northwind.svc/**.
     
   
-3. Choose a name for your OData source, and then choose  **Next**. 
+3. Choose a name for your OData source, and then choose **Next**. 
     
   
-4. A list of data entities that are being exposed by the OData service appears. Make sure that the  **Create list instances for the selected data entities** check box is selected.
+4. A list of data entities that are being exposed by the OData service appears. Make sure that the **Create list instances for the selected data entities**check box is selected.
     
   
-5. Select one or more of the entities, and choose  **Finish**. 
+5. Select one or more of the entities, and choose **Finish**. 
     
   
 6. The last thing you have to do before deployment is modify the URL in your newly created external content type file. 

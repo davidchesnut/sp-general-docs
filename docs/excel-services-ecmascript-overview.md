@@ -1,24 +1,24 @@
 ---
 title: Excel Services ECMAScript Overview
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: f8c1be86-df19-44c3-a3bc-c0da2b80df10
 ---
 
 
 # Excel Services ECMAScript Overview
 
- **Last modified:** July 20, 2011
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 In Microsoft SharePoint Server 2010, Excel Services added support for ECMAScript (JavaScript, JScript). JavaScript enables a new set of solutions by using Excel Services. 
   
     
     
 
-The JavaScript object model in Excel Services enables developers to automate, customize, and interact with the Excel Web Access Web Part control on a page. By using the JavaScript object model, you can build mashups and other integrated solutions that interact with one or more Excel Web Access Web Part controls on a page. It also enables you to add more capabilities to your workbooks and to code around them.By using the JavaScript object model, it is possible to detect and react to a user's interactions with an Excel Web Access Web Part and to programmatically interact with one or multiple Excel Web Access Web Parts.
+The JavaScript object model in Excel Services enables developers to automate, customize, and interact with the Excel Web Access Web Part control on a page. By using the JavaScript object model, you can build mashups and other integrated solutions that interact with one or more Excel Web Access Web Part controls on a page. It also enables you to add more capabilities to your workbooks and to code around them.
+By using the JavaScript object model, it is possible to detect and react to a user's interactions with an Excel Web Access Web Part and to programmatically interact with one or multiple Excel Web Access Web Parts.
+  
+    
+    
+
+
 ## Using the ECMAScript Object Model
 
 To use the JavaScript object model in Excel Services, you insert the JavaScript code on the page that contains the Excel Web Access Web Part. This can be done by adding the code to the Web Part page by using the Content Editor Web Part or by directly editing the .aspx page.

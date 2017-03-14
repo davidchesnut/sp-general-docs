@@ -7,12 +7,6 @@ ms.assetid: 39a1cc3f-c78d-478f-8c15-928b96386a52
 
 # What's new in SharePoint 2013 eDiscovery and compliance
 Learn what's new in SharePoint 2013 for eDiscovery and compliance features. Use these features to manage and recover evidence in civil litigations.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## What's new in SharePoint 2013 eDiscovery and compliance
 
 In SharePoint 2013, you can use eDiscovery and compliance features to manage and recover evidence used in civil litigations, and manage the records for your enterprise. SharePoint 2013 also includes built-in support for the Content Management Interoperability Services (CMIS) interoperability standard. To learn more about CMIS, see the specification for the standard on the  [OASIS website](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cmis).
@@ -27,16 +21,16 @@ Discovery is a legal process used to recover evidence in civil litigations. Shar
     
     
 
--  **Case Manager**, which enables records managers to create and manage enterprise-wide discovery projects, place potentially large amounts and various types of content on hold, and preserve a snapshot of content.
+- **Case Manager**, which enables records managers to create and manage enterprise-wide discovery projects, place potentially large amounts and various types of content on hold, and preserve a snapshot of content.
     
   
--  **Enterprise-wide access**, which includes the ability to put content on hold and to search for content from a central location. It also includes the ability to conduct searches, access SharePoint content, and place content on hold in any configured SharePoint location.
+- **Enterprise-wide access**, which includes the ability to put content on hold and to search for content from a central location. It also includes the ability to conduct searches, access SharePoint content, and place content on hold in any configured SharePoint location.
     
   
--  **In-Place Holds**, which enables an attorney to preserve a snapshot of content while ensuring that users can continue to make changes without disturbing the state of the content snapshot.
+- **In-Place Holds**, which enables an attorney to preserve a snapshot of content while ensuring that users can continue to make changes without disturbing the state of the content snapshot.
     
   
--  **Analytics**, which enable attorneys, administrators, and records managers to collect and analyze data about eDiscovery activity.
+- **Analytics**, which enable attorneys, administrators, and records managers to collect and analyze data about eDiscovery activity.
     
   
 

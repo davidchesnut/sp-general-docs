@@ -1,5 +1,5 @@
 ---
-title: How to: Add an Edit Mode Panel snippet in SharePoint 2013
+title: How to Add an Edit Mode Panel snippet in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 39fa1e32-9129-407d-914f-96f4c6e66dc8
 ---
@@ -7,12 +7,6 @@ ms.assetid: 39fa1e32-9129-407d-914f-96f4c6e66dc8
 
 # How to: Add an Edit Mode Panel snippet in SharePoint 2013
 An Edit Mode Panel is a snippet that you can use to display instructions or other content to content authors, who see the contents of that panel only when they edit a page. Conversely, this snippet can also be configured to display its contents only in regular (view) mode instead of in edit mode. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** Office 365 | SharePoint Server 2013* 
 ## Introduction to the Edit Mode Panel
 <a name="Introduction"> </a>
 
@@ -25,7 +19,7 @@ As a designer, you can add an Edit Mode Panel to a master page or page layout, a
     
     
 
-- A page field, such as  **Schedule Publishing Date**, that's important to the content author but not to visitors viewing the page on the live site. 
+- A page field, such as **Schedule Publishing Date**, that's important to the content author but not to visitors viewing the page on the live site. 
     
   
 - A description of what kind of content should be entered in a page field. 
@@ -61,30 +55,30 @@ Like all snippets, you add this snippet from the Snippet Gallery. To navigate to
 1. Browse to your publishing site. 
     
   
-2. In the upper-right corner of the page, choose the Settings gear, and then choose  **Design Manager**. 
+2. In the upper-right corner of the page, choose the Settings gear, and then choose **Design Manager**. 
     
   
-3. In Design Manager, in the left navigation pane, choose  **Edit Master Pages** or **Edit Page Layouts**, depending on what type of file you're editing. 
+3. In Design Manager, in the left navigation pane, choose **Edit Master Pages**or**Edit Page Layouts**, depending on what type of file you're editing. 
     
   
 4. Select the name of the master page or page layout that you want to add the snippet to. 
     
   
-5. To open the Snippet Gallery, choose  **Snippets** in the upper-right corner of the server-side preview.
+5. To open the Snippet Gallery, choose **Snippets**in the upper-right corner of the server-side preview.
     
   
-6. On the ribbon, on the  **Design** tab, choose **Edit Mode Panel**, and then choose the mode that you want your snippet to be displayed in. 
+6. On the ribbon, on the **Design**tab, choose**Edit Mode Panel**, and then choose the mode that you want your snippet to be displayed in. 
     
   
-7. On the right side of the Snippet Gallery, under  **About this Component**, click or select section headers to expand or collapse groups of properties, and then configure any custom settings that you want. 
+7. On the right side of the Snippet Gallery, under **About this Component**, click or select section headers to expand or collapse groups of properties, and then configure any custom settings that you want. 
     
-    The section named Important contains the properties that are most important to how this particular snippet works. For an Edit Mode Panel, the  **PageDisplayMode** property will be set to either **Edit** or **Display**, depending on the mode that you selected on the ribbon. 
-    
-  
-8. After you configure any properties, choose  **Update**. This updates the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose  **Reset** to return all properties to their default settings.
+    The section named Important contains the properties that are most important to how this particular snippet works. For an Edit Mode Panel, the **PageDisplayMode**property will be set to either**Edit**or**Display**, depending on the mode that you selected on the ribbon. 
     
   
-9. On the left side of the Snippet Gallery, under  **HTML Snippet**, choose  **Copy to Clipboard**. 
+8. After you configure any properties, choose **Update**. This updates the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose **Reset**to return all properties to their default settings.
+    
+  
+9. On the left side of the Snippet Gallery, under **HTML Snippet**, choose **Copy to Clipboard**. 
     
   
 10. In your HTML editor, open the mapped network drive on your computer, and then open the HTML file for the master page or page layout that you're adding the snippet to. For more information, see  [How to: Map a network drive to the SharePoint 2013 Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-2013-master-page-gallery.md). 
@@ -92,10 +86,10 @@ Like all snippets, you add this snippet from the Snippet Gallery. To navigate to
   
 11. In the HTML file, paste the snippet where you want the markup to appear. 
     
-    If you're adding the Edit Mode Panel to a page layout, make sure to paste the snippet inside  **PlaceHolderMain** so that the panel is visible to content authors in edit mode. You can paste the snippet immediately before a specific page field, or you can put one or more page fields inside the Edit Mode Panel.
+    If you're adding the Edit Mode Panel to a page layout, make sure to paste the snippet inside **PlaceHolderMain**so that the panel is visible to content authors in edit mode. You can paste the snippet immediately before a specific page field, or you can put one or more page fields inside the Edit Mode Panel.
     
   
-12. Replace the  **<div>** where `class="DefaultContentBlock"` with your own specific content—for example, with notes or instructions to content authors, or specific page fields that are useful for authors but not site visitors.
+12. Replace the **<div>**where `class="DefaultContentBlock"` with your own specific content—for example, with notes or instructions to content authors, or specific page fields that are useful for authors but not site visitors.
     
   
 13. Save the page, and then refresh the server-side preview in Design Manager to make sure the Edit Mode Panel appears as expected. 
@@ -105,18 +99,18 @@ Like all snippets, you add this snippet from the Snippet Gallery. To navigate to
 ## Understand the snippet markup
 <a name="UnderstandMarkup"> </a>
 
-The two most important parts of an Edit Mode Panel snippet are the  **PageDisplayMode** property and the **<div>** where `class="DefaultContentBlock"`. The  **PageDisplayMode** property determines whether the contents of the panel are displayed only in edit mode or in regular/display mode (meaning whenever the page is not in edit mode).
+The two most important parts of an Edit Mode Panel snippet are the **PageDisplayMode**property and the**<div>**where `class="DefaultContentBlock"`. The **PageDisplayMode**property determines whether the contents of the panel are displayed only in edit mode or in regular/display mode (meaning whenever the page is not in edit mode).
   
     
     
 
-> [!Note]  
-> This property doesn't appear in the markup unless you change the value to  **Display**. When the property does not appear in the markup, the default mode for the snippet is Edit mode. 
+> [!NOTE]  
+> This property doesn't appear in the markup unless you change the value to **Display**. When the property does not appear in the markup, the default mode for the snippet is Edit mode. 
   
     
     
 
-The  **<div>** where `class="DefaultContentBlock"` is what you replace with your own content, which can include other snippets and controls.
+The **<div>**where `class="DefaultContentBlock"` is what you replace with your own content, which can include other snippets and controls.
   
     
     

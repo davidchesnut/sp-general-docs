@@ -1,34 +1,34 @@
 ---
-title: Step 2: Creating a Managed-Code UDF
+title: Step 2 Creating a Managed-Code UDF
 keywords: soap
 f1_keywords:
 - soap
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: 3c9edf82-ee2d-41f0-9d66-e88e8dc0cc69
 ---
 
 
 # Step 2: Creating a Managed-Code UDF
 
- **Last modified:** July 20, 2011
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 After you have added a reference to Microsoft.Office.Excel.Server.Udf.dll to your project, the next step is to create some custom functions and mark them with the Excel Services user-defined function (UDF) attributes. 
   
     
     
 
-You must mark your UDF class with the  **Microsoft.Office.Excel.Server.Udf.UdfClass** attribute, and mark the UDF methods with the **Microsoft.Office.Excel.Server.Udf.UdfMethod** attribute.Any methods that are not marked with the  **Microsoft.Office.Excel.Server.Udf.UdfMethod** attribute in the UDF assembly will be ignored, because they will not be considered UDF methods.The  **Microsoft.Office.Excel.Server.Udf.UdfMethod** attribute has an **IsVolatile** property. You use the **IsVolatile** property to specify a UDF method as volatile or nonvolatile. The **IsVolatile** property takes a Boolean value. The default value is **false**, which means that particular UDF method is nonvolatile. 
+You must mark your UDF class with the **Microsoft.Office.Excel.Server.Udf.UdfClass**attribute, and mark the UDF methods with the**Microsoft.Office.Excel.Server.Udf.UdfMethod**attribute.
+Any methods that are not marked with the **Microsoft.Office.Excel.Server.Udf.UdfMethod**attribute in the UDF assembly will be ignored, because they will not be considered UDF methods.
+  
+    
+    
+
+The **Microsoft.Office.Excel.Server.Udf.UdfMethod**attribute has an**IsVolatile**property. You use the**IsVolatile**property to specify a UDF method as volatile or nonvolatile. The**IsVolatile**property takes a Boolean value. The default value is**false**, which means that particular UDF method is nonvolatile. 
 ## Creating UDFs
 
 
 ### To add directives
 
 
-- The types to use are defined in the ** Microsoft.Office.Excel.Server.Udf** namespace. Adding a **using** (or **Imports**) directive at the top of the Class1.cs file will allow you to use the types in  **Microsoft.Office.Excel.Server.Udf** without having to fully qualify the types in the namespace.
+- The types to use are defined in the**Microsoft.Office.Excel.Server.Udf**namespace. Adding a**using**(or**Imports**) directive at the top of the Class1.cs file will allow you to use the types in **Microsoft.Office.Excel.Server.Udf**without having to fully qualify the types in the namespace.
     
     To add this directive, add the following code to the beginning of your code in the Class1.cs file, after  `using System.Text:`
     
@@ -61,7 +61,7 @@ using Microsoft.Office.Excel.Server.Udf;
   <UdfClass>_
   ```
 
-2. Create a function that takes a number (of type  **double**), and in the function, multiply the number by 9. The function is a UDF method that is nonvolatile. Add the following code to  `Class1`: 
+2. Create a function that takes a number (of type **double**), and in the function, multiply the number by 9. The function is a UDF method that is nonvolatile. Add the following code to  `Class1`: 
     
   ```cs
   [UdfMethod]
@@ -81,9 +81,9 @@ End Function
   ```
 
 
-    > [!Note]  
-> The default value for the  **IsVolatile** property is **false**, which means that particular UDF method is nonvolatile. Therefore, it is sufficient to mark a nonvolatile UDF method as  `[UdfMethod]`. It is not necessary to mark it as  `[UdfMethod(IsVolatile = false)]`. 
-3. Create another function that returns the current date using the  **System.DateTime.Today** property. The function is a UDF method that is volatile. Add the following code to `Class1`: 
+    > [!NOTE]  
+> The default value for the **IsVolatile**property is**false**, which means that particular UDF method is nonvolatile. Therefore, it is sufficient to mark a nonvolatile UDF method as  `[UdfMethod]`. It is not necessary to mark it as  `[UdfMethod(IsVolatile = false)]`. 
+3. Create another function that returns the current date using the **System.DateTime.Today**property. The function is a UDF method that is volatile. Add the following code to `Class1`: 
     
   ```cs
   
@@ -107,7 +107,7 @@ End Function
 ### To build the project
 
 
-1. On the  **Build** menu, click **Build Solution**. 
+1. On the **Build**menu, click**Build Solution**. 
     
   
 2. You should find SampleUdf.dll assembly in the directory where you have saved your project. 

@@ -7,12 +7,6 @@ ms.assetid: c21cc3e2-45bd-4d34-a57d-dd0954436bd8
 
 # Troubleshooting SharePoint Server workflow validation errors in Visio
 Use this reference to resolve validation and error-checking issues in the Microsoft SharePoint 2013 Workflow template in Microsoft Visio 2013 and Microsoft SharePoint Designer 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013 | Visio 2013* 
 ## SharePoint workflow validation issues
 <a name="VSSPD_Trouble_Issues"> </a>
 
@@ -22,7 +16,7 @@ The following table lists all of the validation issues that can appear in the Is
     
 
 
-|**Error text **|**Suggested action **|
+|**Error text**|**Suggested action**|
 |:-----|:-----|
 |Duplicate connections exist between workflow shapes. |Remove the redundant connector by selecting and deleting it. |
 |Loop back to parent shape is not allowed within a stage or step. |Neither Visio Professional 2013 nor SharePoint Designer 2013 supports workflows with implicit loops inside of a stage. Check your workflow for loops and delete the looping connections. If you want to create a SharePoint workflow that includes a set of looping steps inside of a stage, you must use the loop containers. Any actions inside of these containers will loop. Another option is to use stages that go-to a previous stage. |

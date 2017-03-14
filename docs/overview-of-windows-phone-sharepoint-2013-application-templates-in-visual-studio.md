@@ -7,12 +7,6 @@ ms.assetid: 6ae27957-fa41-4e6f-92e3-db11dae1f6c2
 
 # Overview of Windows Phone SharePoint 2013 application templates in Visual Studio
 Learn about the Visual Studio templates installed by the Windows Phone SharePoint Software Development Kit for mobile app development. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013 | Visual Studio 2012* 
 ## Templates installed by the Windows Phone SharePoint Software Development Kit
 <a name="BKMK_TemplatesInstalled"> </a>
 
@@ -32,13 +26,13 @@ Currently, these templates are designed to be used only in C# projects. They are
     
     
 
-> [!Note]  
-> Windows Phone SharePoint templates don't appear in the  **New Project** menu of Expression Blend. However, you can edit a project in Expression Blend by choosing **Open in Expression Blend** from a shortcut menu in Visual Studio.
+> [!NOTE]  
+> Windows Phone SharePoint templates don't appear in the **New Project**menu of Expression Blend. However, you can edit a project in Expression Blend by choosing**Open in Expression Blend**from a shortcut menu in Visual Studio.
   
     
     
 
-When you create a project based on either one of these templates, you are not given the option of choosing a target Windows Phone platform. As for projects created from Visual Studio Express 2012 using these templates target Windows Phone 8 applications against SharePoint 2013 ; And projects created from Visual Studio 2010 Express using these templates target Windows Phone OS version 7.1 by default That is, the  **AppPlatformVersion** attribute of the **Deployment** element in the WMAppManifest.xml file has a value of 7.1.
+When you create a project based on either one of these templates, you are not given the option of choosing a target Windows Phone platform. As for projects created from Visual Studio Express 2012 using these templates target Windows Phone 8 applications against SharePoint 2013 ; And projects created from Visual Studio 2010 Express using these templates target Windows Phone OS version 7.1 by default That is, the **AppPlatformVersion**attribute of the**Deployment**element in the WMAppManifest.xml file has a value of 7.1.
   
     
     
@@ -51,7 +45,7 @@ When you create a project based on either one of these templates, you are not gi
 ```
 
 
-> [!Note]  
+> [!NOTE]  
 > For more information about settings in the WMAppManifest.xml file, see  [Application Manifest File for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509.aspx). 
   
     
@@ -66,7 +60,7 @@ If you create a Visual Studio project based on the Windows Phone Empty SharePoin
     
     
 
-> [!Note]  
+> [!NOTE]  
 > The same templates are available for Windows Phone 8 in Visual Studio Express 2012. 
   
     
@@ -99,7 +93,7 @@ The Windows Phone SharePoint List Application template is considerably more powe
     
     
 
-> [!Note]  
+> [!NOTE]  
 > The same templates are available for Windows Phone 8 in Visual Studio Express 2012. 
   
     
@@ -134,19 +128,19 @@ The project files for are described in Table 1.
 **Table 1. Windows Phone SharePoint List Application project files**
 
 
-|**File **|**Description **|
+|**File**|**Description**|
 |:-----|:-----|
-|App.xaml |Represents the overall Windows Phone application. Includes declarations of elements related to the application (instead of to individual pages within the application), such as application life-cycle events like  **Application_Deactivated** and **Application_Closing**. |
-|App.xaml.cs |The code-behind file associated with App.xaml (using the partial-class mechanism, as is the case for the other code-behind files in the project). Includes procedural code to handle the operations in the life-cycle events, such as  **Application_Deactivated** and **Application_Closing**. You write code in this file to manage offline (local) storage of data. |
+|App.xaml |Represents the overall Windows Phone application. Includes declarations of elements related to the application (instead of to individual pages within the application), such as application life-cycle events like **Application_Deactivated**and**Application_Closing**. |
+|App.xaml.cs |The code-behind file associated with App.xaml (using the partial-class mechanism, as is the case for the other code-behind files in the project). Includes procedural code to handle the operations in the life-cycle events, such as **Application_Deactivated**and**Application_Closing**. You write code in this file to manage offline (local) storage of data. |
 |ListDataProvider.cs |Contains code for accessing data on the SharePoint Server and provides access to the query syntax on which the various list views of the application are based. |
-|List.xaml |Defines the UI elements for the default view form in the phone application; analogous to the All Items (or All Tasks, All Contacts, or similar) view in SharePoint. The List.xaml file contains the  **Pivot** control that constitutes the primary container for visual elements in the application, including the **PivotItem** controls that render the list views chosen by the developer to be included in the Windows Phone app.|
-|List.xaml.cs |The code-behind file associated with List.xaml. Includes code to implement the methods and handlers for the buttons on the form, such as  **New** and **Refresh**. |
-|DisplayForm.xaml |Defines the UI elements for the  **Display Item** form (or page) in the application; analogous to the **View Item** form in SharePoint. In the Windows Phone app, the fields are rendered in a vertical "stack" by using a **StackPanel** control contained in a Silverlight **Pivot** control.|
-|DisplayForm.xaml.cs |The code-behind file associated with DisplayForm.xaml. Includes code to implement the methods and handlers for the buttons on the form, such as  **Edit** and **Delete**. |
-|EditForm.xaml |Defines the UI elements for the  **Edit Item** form in the phone application; analogous to the **Edit Item** form in SharePoint. As with the **Display Item** form, fields are rendered in a **StackPanel** control.|
-|EditForm.xaml.cs |The code-behind file associated with EditForm.xaml. Includes code to implement the methods and handlers for the buttons on the form, such as  **Submit** and **Cancel**. |
-|NewForm.xaml |Defines the UI elements for the  **New Item** form in the phone application; analogous to the **New Item** form in SharePoint. Fields are rendered in a **StackPanel** control.|
-|NewForm.xaml.cs |The code-behind file associated with NewForm.xaml. Includes code to implement the methods and handlers for the buttons on the form, such as  **Submit** and **Cancel**. |
+|List.xaml |Defines the UI elements for the default view form in the phone application; analogous to the All Items (or All Tasks, All Contacts, or similar) view in SharePoint. The List.xaml file contains the **Pivot**control that constitutes the primary container for visual elements in the application, including the**PivotItem**controls that render the list views chosen by the developer to be included in the Windows Phone app.|
+|List.xaml.cs |The code-behind file associated with List.xaml. Includes code to implement the methods and handlers for the buttons on the form, such as **New**and**Refresh**. |
+|DisplayForm.xaml |Defines the UI elements for the **Display Item**form (or page) in the application; analogous to the**View Item**form in SharePoint. In the Windows Phone app, the fields are rendered in a vertical "stack" by using a**StackPanel**control contained in a Silverlight**Pivot**control.|
+|DisplayForm.xaml.cs |The code-behind file associated with DisplayForm.xaml. Includes code to implement the methods and handlers for the buttons on the form, such as **Edit**and**Delete**. |
+|EditForm.xaml |Defines the UI elements for the **Edit Item**form in the phone application; analogous to the**Edit Item**form in SharePoint. As with the**Display Item**form, fields are rendered in a**StackPanel**control.|
+|EditForm.xaml.cs |The code-behind file associated with EditForm.xaml. Includes code to implement the methods and handlers for the buttons on the form, such as **Submit**and**Cancel**. |
+|NewForm.xaml |Defines the UI elements for the **New Item**form in the phone application; analogous to the**New Item**form in SharePoint. Fields are rendered in a**StackPanel**control.|
+|NewForm.xaml.cs |The code-behind file associated with NewForm.xaml. Includes code to implement the methods and handlers for the buttons on the form, such as **Submit**and**Cancel**. |
 |DisplayItemViewModel.cs |Serves as the data source for the DisplayForm.xaml file. |
 |EditItemViewModel.cs |Serves as the data source for the EditForm.xaml file. You write code in this file to validate data entered by users when editing a list item. |
 |ListViewModel.cs |Serves as the data source for the List.xaml file. |

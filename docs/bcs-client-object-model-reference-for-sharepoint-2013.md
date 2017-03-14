@@ -24,12 +24,6 @@ ms.assetid: fe7d12a3-6ea9-47f9-b69e-f66da9e661dc
     
     
 Learn about the objects that are available for creating client-side scripts using the SharePoint 2013 client object model to access external data exposed by Business Connectivity Services (BCS). 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 The following objects are available for creating client-side scripts using the SharePoint 2013 client object model to access external data that is exposed by Business Connectivity Services (BCS). The BCS object model components that are exposed to the client object model are located in Microsoft.SharePoint.Client.dll. 
   
     
@@ -39,7 +33,7 @@ The following objects are available for creating client-side scripts using the S
 ## Entity object
 <a name="bkmk_Entity"> </a>
 
-The  **Entity** object essentially represents a table in a database. The methods and properties presented here show the objects that can be manipulated through the use of the client code library. Each of these calls maps directly to a server object model call. However, they are callable by a detached client, such as in a web browser using JavaScript.
+The **Entity**object essentially represents a table in a database. The methods and properties presented here show the objects that can be manipulated through the use of the client code library. Each of these calls maps directly to a server object model call. However, they are callable by a detached client, such as in a web browser using JavaScript.
   
     
     
@@ -47,7 +41,7 @@ The  **Entity** object essentially represents a table in a database. The methods
 **Methods**
 
 
-|**Methods **|**Method signature **|**Description **|
+|**Methods**|**Method signature**|**Description**|
 |:-----|:-----|:-----|
 |**Create**| `Identity Create(FieldValueDictionary fieldValues, LobSystemInstance lobSystemInstanceName)`||
 |**FindSpecificDefault**| `EntityInstance FindSpecificDefault(Identity identity, LobSystemInstance lobSystemInstanceName)`||
@@ -64,7 +58,7 @@ The  **Entity** object essentially represents a table in a database. The methods
 **Properties**
 
 
-|**Property **|**Description **|
+|**Property**|**Description**|
 |:-----|:-----|
 | `long EstimatedInstanceCount { get; }`|Gets the number of expected external items of this external content type. |
 | `string Name { get; }`|Gets the name of the metadata object. |
@@ -79,7 +73,7 @@ The  **Entity** object essentially represents a table in a database. The methods
 **Namespaces**
 
 
-|**Managed **|**JavaScript **|
+|**Managed**|**JavaScript**|
 |:-----|:-----|
 |**Microsoft.BusinessData.Runtime**|**SP.BusinessData.Runtime**|
    
@@ -87,10 +81,10 @@ The  **Entity** object essentially represents a table in a database. The methods
 **Methods**
 
 
-|**Method **|**Return type **|**Description **|
+|**Method**|**Return type**|**Description**|
 |:-----|:-----|:-----|
 |**Delete**|void |Deletes the External Item. |
-|**FromXml**|void |Sets the values in this dictionary from specified XML.  **Method signature**           `FromXml(string xml)`|
+|**FromXml**|void |Sets the values in this dictionary from specified XML. **Method signature**          `FromXml(string xml)`|
 |**GetIdentity**|Identity |Gets the identity of this External Item. |
 |**Delete**|void |Deletes the External Item. |
 |**ToXml**|string |Retrieves the values in XML format. |
@@ -104,7 +98,7 @@ The  **Entity** object essentially represents a table in a database. The methods
 **Properties**
 
 
-|**Property **|**Return type **|**Description **|
+|**Property**|**Return type**|**Description**|
 |:-----|:-----|:-----|
 | `this[string fieldDotNotation] { get; set; }`|Object |Gets or sets the value of the field referred to by the dot notation. |
 | `RelatedSpecificFinderName { get; }`|string ||
@@ -113,7 +107,7 @@ The  **Entity** object essentially represents a table in a database. The methods
 ## EntityView method
 <a name="bkmk_entityview"> </a>
 
-Specifies a customized view of the  **Entity** data
+Specifies a customized view of the **Entity**data
   
     
     
@@ -121,7 +115,7 @@ Specifies a customized view of the  **Entity** data
 **Namespaces**
 
 
-|**Managed **|**JavaScript **|
+|**Managed**|**JavaScript**|
 |:-----|:-----|
 |**Microsoft.BusinessData.MetadataModel**|**SP.BusinessData**|
    
@@ -129,22 +123,22 @@ Specifies a customized view of the  **Entity** data
 **Methods**
 
 
-|**Method **|**Return type **|**Description **|
+|**Method**|**Return type**|**Description**|
 |:-----|:-----|:-----|
 |**GetDefaultValues_Client()**|**FieldValueDictionary**|Gets a field value dictionary that contains the default values for this view. |
 |**GetXmlSchema()**|**string**|Gets the XML Schema of the view. |
 |**GetType(string fieldDotNotation)**|**string**|Gets the type of the specified field. |
-|**GetType(string fieldDotNotation)**|**TypeDescriptor**|Gets the  **TypeDescriptor** object that corresponds to the given dot notation.|
+|**GetType(string fieldDotNotation)**|**TypeDescriptor**|Gets the **TypeDescriptor**object that corresponds to the given dot notation.|
    
 
 **Properties**
 
 
-|**Property **||**Description **|
+|**Property**||**Description**|
 |:-----|:-----|:-----|
 | `Fields { get; }`|**FieldCollection**|Gets the collection of fields in the view. |
-| `Name { get; }`|**string**|Gets the name of this  **View** object|
-| `RelatedSpecificFinderName { get; }`|**string**|Retrieves the name of the specific finder  **MethodInstance** that this view is tied to.|
+| `Name { get; }`|**string**|Gets the name of this **View**object|
+| `RelatedSpecificFinderName { get; }`|**string**|Retrieves the name of the specific finder **MethodInstance**that this view is tied to.|
    
 
 ## LobSystem method
@@ -158,7 +152,7 @@ Specifies a customized view of the  **Entity** data
 **Namespaces**
 
 
-|**Managed **|**JavaScript **|
+|**Managed**|**JavaScript**|
 |:-----|:-----|
 |**Microsoft.BusinessData.MetadataModel**|**SP.BusinessData**|
    
@@ -166,16 +160,16 @@ Specifies a customized view of the  **Entity** data
 **Methods**
 
 
-|**Method **|**Return type **|**Description **|
+|**Method**|**Return type**|**Description**|
 |:-----|:-----|:-----|
 |**GetLobSystemInstances()**|**void**|Gives the list of LOB system instances. |
-|**Name**|**void**|Gets the name of the  **LobSystem**. |
+|**Name**|**void**|Gets the name of the **LobSystem**. |
    
 
 **Properties**
 
 
-|**Property **|**Description **|
+|**Property**|**Description**|
 |:-----|:-----|
 |None. ||
    
@@ -191,7 +185,7 @@ Specifies a customized view of the  **Entity** data
 **Namespaces**
 
 
-|**Managed **|**JavaScript **|
+|**Managed**|**JavaScript**|
 |:-----|:-----|
 |**Microsoft.BusinessData.MetadataModel**|**SP.BusinessData**|
    
@@ -199,7 +193,7 @@ Specifies a customized view of the  **Entity** data
 **Methods**
 
 
-|**Method **|**Return type **|**Description **|
+|**Method**|**Return type**|**Description**|
 |:-----|:-----|:-----|
 |None. |**void**||
    
@@ -207,7 +201,7 @@ Specifies a customized view of the  **Entity** data
 **Properties**
 
 
-|**Property **|**Description **|
+|**Property**|**Description**|
 |:-----|:-----|
 |None. ||
    
@@ -223,7 +217,7 @@ Specifies a customized view of the  **Entity** data
 **Namespaces**
 
 
-|**Managed **|**JavaScript **|
+|**Managed**|**JavaScript**|
 |:-----|:-----|
 |**Microsoft.BusinessData.MetadataModel**|**SP.BusinessData**|
    
@@ -231,7 +225,7 @@ Specifies a customized view of the  **Entity** data
 **Methods**
 
 
-|**Method **|**Return type **|**Description **|
+|**Method**|**Return type**|**Description**|
 |:-----|:-----|:-----|
 |**ContainsLocalizedDisplayName**|**bool**|Determines whether the metadata object contains localized display name. |
 |**GetDefaultDisplayName**|**string**|Returns the default display name. |
@@ -241,7 +235,7 @@ Specifies a customized view of the  **Entity** data
 **Properties**
 
 
-|**Property **|**Return type **|**Description **|
+|**Property**|**Return type**|**Description**|
 |:-----|:-----|:-----|
 | `IdentifierType {get;}`|**string**|Returns the type of identifier. |
 | `Name {get;}`|**string**|Gets the name of the identifier. |
@@ -258,7 +252,7 @@ Specifies a customized view of the  **Entity** data
 **Namespaces**
 
 
-|**Managed **|**JavaScript **|
+|**Managed**|**JavaScript**|
 |:-----|:-----|
 |**Microsoft.BusinessData.MetadataModel.Collections**|**SP.BusinessData.Collections**|
    
@@ -266,7 +260,7 @@ Specifies a customized view of the  **Entity** data
 **Methods**
 
 
-|**Method **|**Return type **|**Description **|
+|**Method**|**Return type**|**Description**|
 |:-----|:-----|:-----|
 |None. |**void**||
    
@@ -274,7 +268,7 @@ Specifies a customized view of the  **Entity** data
 **Properties**
 
 
-|**Property **|**Description **|
+|**Property**|**Description**|
 |:-----|:-----|
 |None. ||
    
@@ -290,7 +284,7 @@ Specifies a customized view of the  **Entity** data
 **Namespaces**
 
 
-|**Managed **|**JavaScript **|
+|**Managed**|**JavaScript**|
 |:-----|:-----|
 |**Microsoft.BusinessData.Runtime**|**SP.BusinessData.Runtime**|
    
@@ -298,7 +292,7 @@ Specifies a customized view of the  **Entity** data
 **Constructor**
 
 
-|**Constructor **|**Description **|
+|**Constructor**|**Description**|
 |:-----|:-----|
 | `public Identity (Object[] identifierValues)`|Constructs a new instance of the class by using an array of identifier values. |
    
@@ -306,7 +300,7 @@ Specifies a customized view of the  **Entity** data
 **Methods**
 
 
-|**Method **|**Return type **|**Description **|
+|**Method**|**Return type**|**Description**|
 |:-----|:-----|:-----|
 |**Serialize**|**string**|Gets a string representation of the identity. |
    
@@ -314,7 +308,7 @@ Specifies a customized view of the  **Entity** data
 **Properties**
 
 
-|**Property **|**Return type **|**Description **|
+|**Property**|**Return type**|**Description**|
 |:-----|:-----|:-----|
 | `IdentifierCount { get; }`|**int**|Returns the number of identifiers. |
 | `IsTemporary { get; }`|**bool**|Checks whether the identity is temporary. |
@@ -333,7 +327,7 @@ Specifies a customized view of the  **Entity** data
 **Namespaces**
 
 
-|**Managed **|**JavaScript **|
+|**Managed**|**JavaScript**|
 |:-----|:-----|
 |**Microsoft.BusinessData.Runtime**|**SP.BusinessData.Runtime**|
    
@@ -341,7 +335,7 @@ Specifies a customized view of the  **Entity** data
 **Methods**
 
 
-|**Method **|**Return type **|**Description **|
+|**Method**|**Return type**|**Description**|
 |:-----|:-----|:-----|
 |**FromXml**|**void**|Sets the values in this dictionary from specified XML. |
 |**GetCollectionSize**|int |Returns the size of the collection that the dot notation refers to. |
@@ -351,7 +345,7 @@ Specifies a customized view of the  **Entity** data
 **Properties**
 
 
-|**Property **|**Description **|
+|**Property**|**Description**|
 |:-----|:-----|
 | `Object this[string fieldDotNotation] { get; set; }`|Gets or sets the value of the field referred to by the dot notation. |
    
@@ -367,7 +361,7 @@ Specifies a customized view of the  **Entity** data
 **Namespaces**
 
 
-|**Managed **|**JavaScript **|
+|**Managed**|**JavaScript**|
 |:-----|:-----|
 |**Microsoft.BusinessData.Runtime**|**SP.BusinessData.Runtime**|
    
@@ -375,7 +369,7 @@ Specifies a customized view of the  **Entity** data
 **Methods**
 
 
-|**Method **|**Return type **|**Description **|
+|**Method**|**Return type**|**Description**|
 |:-----|:-----|:-----|
 |None. |**void**||
    
@@ -383,7 +377,7 @@ Specifies a customized view of the  **Entity** data
 **Properties**
 
 
-|**Property **|**Description **|
+|**Property**|**Description**|
 |:-----|:-----|
 |None. ||
    
@@ -399,7 +393,7 @@ Specifies a customized view of the  **Entity** data
 **Namespaces**
 
 
-|**Managed **|**JavaScript **|
+|**Managed**|**JavaScript**|
 |:-----|:-----|
 |**Microsoft.BusinessData.Runtime**|**SP.BusinessData.Runtime**|
    
@@ -407,7 +401,7 @@ Specifies a customized view of the  **Entity** data
 **Methods**
 
 
-|**Method **|**Return type **|**Description **|
+|**Method**|**Return type**|**Description**|
 |:-----|:-----|:-----|
 |None. |void ||
    
@@ -415,7 +409,7 @@ Specifies a customized view of the  **Entity** data
 **Properties**
 
 
-|**Property **|**Return type **|**Read Only **|**Description **|
+|**Property**|**Return type**|**Read Only**|**Description**|
 |:-----|:-----|:-----|:-----|
 |**ContainsLocalizedDisplayName**|**Boolean**|Yes |Determines whether the field contains a localized display name. |
 |**DefaultDisplayName**|**string**|Yes |Retrieves the default display name of the Field. |
@@ -434,7 +428,7 @@ Specifies a customized view of the  **Entity** data
 **Namespaces**
 
 
-|**Managed **|**JavaScript **|
+|**Managed**|**JavaScript**|
 |:-----|:-----|
 |**Microsoft.BusinessData.MetadataModel**|**SP.BusinessData**|
    
@@ -442,7 +436,7 @@ Specifies a customized view of the  **Entity** data
 **Methods**
 
 
-|**Method **|**Return type **|**Read Only **|**Description **|
+|**Method**|**Return type**|**Read Only**|**Description**|
 |:-----|:-----|:-----|:-----|
 |**ContainsLocalizedDisplayName()**|**Boolean**|Yes |Determines whether the type descriptor contains a localized display name. |
 |**GetLocalizedDisplayName()**|**string**|Yes |Returns the localized display name. |
@@ -452,7 +446,7 @@ Specifies a customized view of the  **Entity** data
 **Properties**
 
 
-|**Property **|**Return type **|**Description **|
+|**Property**|**Return type**|**Description**|
 |:-----|:-----|:-----|
 |**Name**|string |Retrieves the name of the Field. |
 |**TypeName**|string |Retrieves the name of the data type represented by this type descriptor. |
@@ -464,32 +458,32 @@ Specifies a customized view of the  **Entity** data
 ## Interfaces
 <a name="bkmk_Interfaces"> </a>
 
-The namespace is  **Microsoft.BusinessData.MetadataModel**. 
+The namespace is **Microsoft.BusinessData.MetadataModel**. 
   
     
     
 
 
-|**Interface **|**Description **|
+|**Interface**|**Description**|
 |:-----|:-----|
-|**IMetadataCatalog**|The entry point into the BDC object model. Use the  **DatabaseBasedMetadataCatalog** on the server.|
+|**IMetadataCatalog**|The entry point into the BDC object model. Use the **DatabaseBasedMetadataCatalog**on the server.|
 |**ILobSystem**|Contains the details about an external system. |
 |**IEntity**|An external content type in the BDC Metadata Store. |
 |**IMethod**|An operation that can be performed on the external content type. |
-|**IEntityInstance**|An entity instance (also known as external item) is a single item returned from an external system in BDC. The  **IEntityInstance** interface abstracts the underlying data sources and insulates the clients from having to learn application-specific coding paradigms; it enables them to access all business data in a single, simplified way. By using the **IEntityInstance** interface, you can work with a row of data from a database in just the same way as working with a complex .NET Framework structure returned by a web service.An entity instance in BDC has special semantics attached to it. For example, it has the ability to know which field or fields in the row represent the identifier for the entity instance, and it enables you to call methods, such as  **GetAssociated**,  **GetIdentifierValues**, and  **Execute**, on that entity instance. |
-|**IEntityInstanceEnumerator**|Enumerators can be used to read the data in the external items collection, but they cannot be used to modify the underlying collection.  **IEntityInstanceEnumerator** supports streaming and is therefore very useful when the back-end application returns large amounts of data.|
+|**IEntityInstance**|An entity instance (also known as external item) is a single item returned from an external system in BDC. The **IEntityInstance**interface abstracts the underlying data sources and insulates the clients from having to learn application-specific coding paradigms; it enables them to access all business data in a single, simplified way. By using the**IEntityInstance**interface, you can work with a row of data from a database in just the same way as working with a complex .NET Framework structure returned by a web service.An entity instance in BDC has special semantics attached to it. For example, it has the ability to know which field or fields in the row represent the identifier for the entity instance, and it enables you to call methods, such as **GetAssociated**, **GetIdentifierValues**, and **Execute**, on that entity instance. |
+|**IEntityInstanceEnumerator**|Enumerators can be used to read the data in the external items collection, but they cannot be used to modify the underlying collection. **IEntityInstanceEnumerator**supports streaming and is therefore very useful when the back-end application returns large amounts of data.|
    
 
 ## Client Object model FAQ
 <a name="bkmk_ClientObjectModelFAQ"> </a>
 
 
--  **Does the <Method> tag need to be included in a CAML query when querying an external list**
+- **Does the <Method> tag need to be included in a CAML query when querying an external list**
     
     No. 
     
   
--  **Do all fields in the external list need to be specified in the CAML query?**
+- **Do all fields in the external list need to be specified in the CAML query?**
     
     Using the ViewXML tag in the BDC model, the developer can specify only those fields that are required and the CSOM APIs for Lists will return only those fields. 
     

@@ -7,12 +7,6 @@ ms.assetid: a8903440-ff8f-41a4-8c2a-5dbe12c07cfb
 
 # Workflow actions available using the workflow interop bridge
 Contains a concise list of workflow actions in SharePoint 2010 that are available to SharePoint 2013 workflows by using the workflow interop bridge.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Designer 2013 | SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Workflow actions for the interop bridge
 <a name="bkm_wfactions"> </a>
 
@@ -89,7 +83,7 @@ The following actions are available only when you use the workflow interop bridg
 ## Conditions and blocks
 <a name="bkm_wfconditions"> </a>
 
- **Conditions**
+**Conditions**
   
     
     
@@ -103,7 +97,7 @@ The following actions are available only when you use the workflow interop bridg
 - Check list item permissions
     
   
- **Blocks**
+**Blocks**
   
     
     

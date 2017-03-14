@@ -10,13 +10,7 @@ ms.assetid: a2643cd7-474d-4e4c-85bb-00f0b6685a1d
 
 # Get started with workflows in SharePoint 2013
 Learn about the newly engineered Workflow Manager Client 1.0, which provides the infrastructure for workflows in SharePoint 2013, and how SharePoint workflows are integrated with the new model for SharePoint Add-ins. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
-> [!Important]  
+> [!IMPORTANT]  
 > For instructions on setting up and configuring SharePoint Server 2013 and Microsoft Azure, see  [Set up and configure SharePoint 2013 Workflow Manager](set-up-and-configure-sharepoint-2013-workflow-manager.md). 
   
     
@@ -129,9 +123,9 @@ Visual Studio 2012 has SharePoint 2013 workflow project types built in. To creat
 ### To create a workflow using Visual Studio
 
 
-1. Open Visual Studio 2012 and create a new project. In the  **New Project** dialog box, choose **Templates**,  **Visual C#**,  **Office SharePoint**,  **SharePoint Solutions**, and  **SharePoint 2013 Project**, as shown in Figure 2. 
+1. Open Visual Studio 2012 and create a new project. In the **New Project**dialog box, choose**Templates**, **Visual C#**, **Office SharePoint**, **SharePoint Solutions**, and **SharePoint 2013 Project**, as shown in Figure 2. 
     
-    **Figure 2. New Project dialog box**
+   **Figure 2. New Project dialog box**
 
   
 
@@ -141,9 +135,9 @@ Visual Studio 2012 has SharePoint 2013 workflow project types built in. To creat
   
 
   
-2. With the project created, choose  **Add New Item** on the **Project** menu, and then choose **Workflow** under the **Office SharePoint** item, as shown in Figure 3.
+2. With the project created, choose **Add New Item**on the**Project**menu, and then choose**Workflow**under the**Office SharePoint**item, as shown in Figure 3.
     
-    **Figure 3. Add New Item dialog box**
+   **Figure 3. Add New Item dialog box**
 
   
 
@@ -155,7 +149,7 @@ Visual Studio 2012 has SharePoint 2013 workflow project types built in. To creat
   
 3. After the workflow project is created, you are presented with a designer surface on which to create your workflow. The workflow development environment includes a custom toolbox with a large palette of workflow authoring elements. 
     
-    **Figure 4. Visual Studio workflow authoring toolbox**
+   **Figure 4. Visual Studio workflow authoring toolbox**
 
   
 
@@ -169,7 +163,7 @@ Visual Studio 2012 has SharePoint 2013 workflow project types built in. To creat
 ## Additional resources
 <a name="information"> </a>
 
-For more information about  **SharePoint Add-ins**, see the following:
+For more information about **SharePoint Add-ins**, see the following:
   
     
     
@@ -186,7 +180,7 @@ For more information about  **SharePoint Add-ins**, see the following:
 -  [Work with external data in SharePoint 2013](http://msdn.microsoft.com/library/1534a5f4-1d83-45b4-9714-3a1995677d85%28Office.15%29.aspx)
     
   
-For more information about developing workflows using  **Visual Studio 2012** and **SharePoint Designer 2013**, see the following:
+For more information about developing workflows using **Visual Studio 2012**and**SharePoint Designer 2013**, see the following:
   
     
     

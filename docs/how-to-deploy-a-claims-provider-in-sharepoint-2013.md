@@ -1,5 +1,5 @@
 ---
-title: How to: Deploy a claims provider in SharePoint 2013
+title: How to Deploy a claims provider in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 3a5fcedc-aa9a-4ff4-95c0-0e0a7dea9d1f
 ---
@@ -7,12 +7,6 @@ ms.assetid: 3a5fcedc-aa9a-4ff4-95c0-0e0a7dea9d1f
 
 # How to: Deploy a claims provider in SharePoint 2013
 Learn how to deploy a SharePoint 2013 claims provider by using the features infrastructure and creating a class that inherits from  [SPClaimProviderFeatureReceiver](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.Claims.SPClaimProviderFeatureReceiver.aspx) .
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Deploying a claims provider as part of a setup
 <a name="SP15_HowToDeployClaimsProvider_DeployingClaimsSetup"> </a>
 

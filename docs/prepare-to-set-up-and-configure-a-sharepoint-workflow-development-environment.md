@@ -7,12 +7,6 @@ ms.assetid: b6a3321f-4131-4a8e-9cb7-7a1b4ab9e26b
 
 # Prepare to set up and configure a SharePoint workflow development environment
 Learn how to set up a workflow development environment to develop SharePoint 2013 workflows as free-standing  [apps for SharePoint](http://msdn.microsoft.com/library/fp179930.aspx) by using Visual Studio 2012.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013* 
 ## Overview of workflow development in SharePoint 2013
 
 Although workflows have been a part of SharePoint since early versions, workflows for SharePoint 2013 are a much enhanced and improved platform. 
@@ -60,7 +54,7 @@ Here are the components you need. It is important that you install these items i
     
     
 
-1.  **Install the SharePoint environment**
+1. **Install the SharePoint environment**
     
   -  [SharePoint Server 2013 update (KB2767999)](http://support.microsoft.com/kb/2767999)
     
@@ -68,12 +62,12 @@ Here are the components you need. It is important that you install these items i
   - Optionally, you can subscribe to an  [Office 365 development environment](http://msdn.microsoft.com/library/office/apps/fp179924%28v=office.15%29)
     
   
-2.  **Install the Workflow Manager environment**
+2. **Install the Workflow Manager environment**
     
   -  [Workflow Manager 1.0 Cumulative (KB2799754)](http://support.microsoft.com/kb/2799754/en-us)
     
   
-3.  **Install the Visual Studio 2012 development environment**
+3. **Install the Visual Studio 2012 development environment**
     
   -  [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/downloads#vs)
     
@@ -120,12 +114,12 @@ Here is a summary of changes that require you to update your workflow projects:
     
     
 
-- Activity references to  **Item Guid** are replaced by **Item Id**. This change has important consequences: 
+- Activity references to **Item Guid**are replaced by**Item Id**. This change has important consequences: 
     
-  - The  [LookupSPListItemGuid](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.Activities.LookupSPListItemGuid.aspx) and [GetCurrentItemGuid](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.Activities.GetCurrentItemGuid.aspx) activities are removed from the tooling; their replacement activities are **LookupSPListItemId** and **GetCurrentItemId**. 
+  - The  [LookupSPListItemGuid](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.Activities.LookupSPListItemGuid.aspx) and [GetCurrentItemGuid](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.Activities.GetCurrentItemGuid.aspx) activities are removed from the tooling; their replacement activities are**LookupSPListItemId**and**GetCurrentItemId**. 
     
   
-  - For other activities that use  **Item Guid**, you will find  **Item Id** added and **Item Guid** hidden. Your existing projects that use **Item Guid** will continue to work (except on very large lists with more than 5000 items, which is one of the reasons for the change).
+  - For other activities that use **Item Guid**, you will find **Item Id**added and**Item Guid**hidden. Your existing projects that use**Item Guid**will continue to work (except on very large lists with more than 5000 items, which is one of the reasons for the change).
     
   
 - There is a new packaging format for workflows in apps. 

@@ -7,12 +7,6 @@ ms.assetid: ba93e5c0-e591-48d0-a716-a08ec7ef6cea
 
 # SharePoint Online Suite Navigation control
 Learn about master page markup for the Suite Navigation control in SharePoint Online. 
- **Last modified:** March 09, 2015
-  
-    
-    
-
- * **Applies to:** apps for SharePoint | SharePoint Server 2013* 
 {insert introductory content} 
   
     
@@ -34,14 +28,14 @@ The new Suite Navigation control supports any theme applied to the site. If you 
     
     
 
-> [!Important]  
+> [!IMPORTANT]  
 > When customizing a site, the best practice is to apply a theme. While you can apply custom CSS to the site, custom CSS may break in the future if the Suite Navigation control is updated again in the service. 
   
     
     
 
 
-> [!Caution]  
+> [!CAUTION]  
 > If you do not want to use the new control, remove the Suite Navigation markup from your master page and add custom markup. However, be aware that customized master pages run the risk of not picking up updates to default master page controls or new functionality that is added to uncustomized master pages. Using a customized master page introduces the risk that service updates will break the functionality or style of your site. 
   
     
@@ -58,7 +52,7 @@ For intranet sites, use the following master page markup for the Suite Navigatio
 **Table 1. Suite Navigation web controls for intranet sites**
 
 
-|**Web Control **|**Description **|
+|**Web Control**|**Description**|
 |:-----|:-----|
 |SharePoint:Menu |Displays a menu in an ASP.NET web page. |
 |SharePoint:MenuItemTemplate |Represents a control that creates an item in a drop-down menu. |
@@ -182,7 +176,7 @@ For public-facing sites, use the following master page markup for the Suite Navi
 **Table 2. Suite Navigation web controls for public-facing sites**
 
 
-|**Web Control **|**Description **|
+|**Web Control**|**Description**|
 |:-----|:-----|
 |SharePoint:DelegateControl |Renders an ASP.NET web control. Delegate controls make their candidate controls pluggable and traceable. |
 |SharePoint:FeatureMenuTemplate |Represents a control that creates a template for a drop-down menu. |
@@ -190,7 +184,7 @@ For public-facing sites, use the following master page markup for the Suite Navi
 |SharePoint:MenuItemTemplate |Represents a control that creates an item in a drop-down menu. |
 |SharePoint:ScriptBlock |Represents a script block control on a page. |
 |SharePoint:SiteActions |Represents a template control for the Site Action menu. |
-|SharePoint:SPSecurityTrimmedControl |Renders conditionally the contents of the control to the current user only if the current user has permissions defined in the  **PermissionString**. |
+|SharePoint:SPSecurityTrimmedControl |Renders conditionally the contents of the control to the current user only if the current user has permissions defined in the **PermissionString**. |
    
 
 ### Suite Navigation control for public-facing sites

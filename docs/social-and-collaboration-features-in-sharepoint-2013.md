@@ -7,12 +7,6 @@ ms.assetid: 5060f676-9aaa-41fe-88ef-e862ee2e1c52
 
 # Social and collaboration features in SharePoint 2013
 Learn about social and collaboration features in SharePoint 2013 and development scenarios for My Sites, team sites, and Community Sites.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Social and collaboration features in SharePoint 2013
 
 The social and collaboration features on My Sites, team sites, and Community Sites in SharePoint 2013 make it easy for users to find and connect with the people and content that matter to them and to share information and ideas.

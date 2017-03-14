@@ -7,12 +7,6 @@ ms.assetid: dbe6f019-b4f2-480f-a8e7-bcb8842ab924
 
 # Transfer a workflow between SharePoint Designer 2013 and Visio Professional 2013 (SharePoint 2010 Workflow platform)
 Use SharePoint Designer to import a workflow from Visio or export a workflow to Visio. 
- **Last modified:** December 07, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013 | Visio 2013* 
 ## Transferring a workflow between SharePoint Designer 2013 and Visio Professional 2013
 <a name="section1"> </a>
 
@@ -45,13 +39,13 @@ To select the SharePoint 2010 Workflow platform when you create a workflow:
     
     
 
-1. In the  **Navigation** pane, click **Workflows**. 
+1. In the **Navigation**pane, click**Workflows**. 
     
   
-2. On the  **Workflows** tab, in the **New** section, click **List Workflow**,  **Reusable Workflow**, or  **Site Workflow**. 
+2. On the **Workflows**tab, in the**New**section, click**List Workflow**, **Reusable Workflow**, or **Site Workflow**. 
     
   
-3. In the  **Create Workflow** dialog box, in the **Platform Type** box, click **SharePoint 2010 Workflow**. 
+3. In the **Create Workflow**dialog box, in the**Platform Type**box, click**SharePoint 2010 Workflow**. 
     
   
 You can visualize workflows in SharePoint Designer in two ways: 
@@ -90,10 +84,10 @@ To import a SharePoint workflow, do the following:
     
     
 
-1. In SharePoint Designer 2013, in the  **Navigation** pane, click **Workflows**. 
+1. In SharePoint Designer 2013, in the **Navigation**pane, click**Workflows**. 
     
   
-2. On the  **Workflows** tab, in the **Manage** group, click **Import from Visio**. 
+2. On the **Workflows**tab, in the**Manage**group, click**Import from Visio**. 
     
      ![Import workflow](images/spd15-ImportFromVisio.JPG)
   
@@ -101,18 +95,18 @@ To import a SharePoint workflow, do the following:
   
 
   
-3. In the  **Import Workflow from Visio Drawing** dialog box, browse to and select the Visio Workflow Interchange (.vwi) file you want to use, and then click **Next**. 
+3. In the **Import Workflow from Visio Drawing**dialog box, browse to and select the Visio Workflow Interchange (.vwi) file you want to use, and then click**Next**. 
     
   
 4. Type a name for the workflow, and then select the type of workflow you want it to be once it has been imported. Your choices are: 
     
-  -  **List workflow** A workflow that is attached to a specific list. If you select this option, you must choose the list to which the workflow will be attached.
+  - **List workflow**A workflow that is attached to a specific list. If you select this option, you must choose the list to which the workflow will be attached.
     
   
-  -  **Reusable workflow** A workflow that is attached to a content type, and is therefore portable. It can be used by different lists on a SharePoint site. If you select this option, you must choose the content type on which the workflow will run.
+  - **Reusable workflow**A workflow that is attached to a content type, and is therefore portable. It can be used by different lists on a SharePoint site. If you select this option, you must choose the content type on which the workflow will run.
     
   
-5. Click  **Finish**. 
+5. Click **Finish**. 
     
   
 The imported workflow appears in the SharePoint Designer full-screen workflow editor. All text in the Visio custom shapes is imported into SharePoint Designer as activity labels (the gray text in the image below) to clarify the intent of the workflow: 
@@ -140,7 +134,7 @@ Once you have created or edited a workflow in SharePoint Designer 2013, you can 
     
     
 
-> [!Note]  
+> [!NOTE]  
 > Visio Professional 2013 does not support steps. Step information that has been added in SharePoint Designer may be lost when the workflow is viewed in Visio and then re-imported into SharePoint Designer. 
   
     
@@ -151,13 +145,13 @@ To export a workflow, do the following:
     
     
 
-1. In SharePoint Designer 2013, click  **Workflows** in the **Navigation** pane.
+1. In SharePoint Designer 2013, click **Workflows**in the**Navigation**pane.
     
   
-2. On the  **Workflow** tab, in the **Manage** group, click **Export to Visio**. 
+2. On the **Workflow**tab, in the**Manage**group, click**Export to Visio**. 
     
   
-3. In the  **Export Workflow to Visio Drawing** dialog box, name the file, select a location, and then click **Save**. The exported file is saved as a .vwi file that can be opened directly in Visio Professional 2013. 
+3. In the **Export Workflow to Visio Drawing**dialog box, name the file, select a location, and then click**Save**. The exported file is saved as a .vwi file that can be opened directly in Visio Professional 2013. 
     
   
 

@@ -7,12 +7,6 @@ ms.assetid: 416c8269-3c4e-40f4-bc20-a625f07a4dac
 
 # Validation issues in Visio (SharePoint 2010 Workflow platform)
 Use this reference to help resolve validation issues when you export a SharePoint workflow from Visio Professional 2013 to SharePoint Designer 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 This article describes validation issues that might arise when you use the SharePoint 2010 Workflow platform in SharePoint Designer 2013.
   
     
@@ -22,7 +16,7 @@ This article describes validation issues that might arise when you use the Share
 ## Introduction
 <a name="section1"> </a>
 
-When you export a SharePoint workflow from Microsoft Visio Professional 2013 to Microsoft SharePoint Designer 2013, the diagram must first be validated. If the workflow diagram is not valid, an  **Issues** window appears that includes a list of issues that must be repaired before the workflow can be exported..
+When you export a SharePoint workflow from Microsoft Visio Professional 2013 to Microsoft SharePoint Designer 2013, the diagram must first be validated. If the workflow diagram is not valid, an **Issues**window appears that includes a list of issues that must be repaired before the workflow can be exported..
   
     
     
@@ -58,7 +52,7 @@ Suggested action:
   
     
     
-If you want to add an action to your workflow and a master shape does not exist for it in the stencil, do not create your own shape or import one from a different stencil. Instead, use an existing shape, and then use the  **Add Comment** feature of the shape to specify the intended behavior.
+If you want to add an action to your workflow and a master shape does not exist for it in the stencil, do not create your own shape or import one from a different stencil. Instead, use an existing shape, and then use the **Add Comment**feature of the shape to specify the intended behavior.
   
     
     
@@ -90,7 +84,7 @@ Suggested action:
   
     
     
-If you want to add a condition to your workflow and a master shape does not exist for it in the stencil, do not create your own shape or import one from a different stencil. Instead, use an existing shape, and then use the  **Add Comment** feature of the shape to specify the intended behavior.
+If you want to add a condition to your workflow and a master shape does not exist for it in the stencil, do not create your own shape or import one from a different stencil. Instead, use an existing shape, and then use the **Add Comment**feature of the shape to specify the intended behavior.
   
     
     
@@ -122,7 +116,7 @@ Suggested action:
   
     
     
-If you want to add a condition to your workflow and a master shape does not exist for it in the stencil, do not create your own shape or import one from a different stencil. Instead, use an existing shape, and then use the  **Add a Comment** feature of the shape to specify the intended behavior.
+If you want to add a condition to your workflow and a master shape does not exist for it in the stencil, do not create your own shape or import one from a different stencil. Instead, use an existing shape, and then use the **Add a Comment**feature of the shape to specify the intended behavior.
   
     
     
@@ -442,7 +436,7 @@ Suggested action:
   
     
     
-All paths must originate from the same  **Start** shape. Remove extra **Start** shapes, and arrange the connectors so that the path starts in one place.
+All paths must originate from the same **Start**shape. Remove extra**Start**shapes, and arrange the connectors so that the path starts in one place.
   
     
     
@@ -506,7 +500,7 @@ Suggested action:
   
     
     
-Remove the incoming connector to the  **Start** shape.
+Remove the incoming connector to the **Start**shape.
   
     
     
@@ -538,7 +532,7 @@ Suggested action:
   
     
     
-Remove the outgoing connector from the  **Terminate** shape.
+Remove the outgoing connector from the **Terminate**shape.
   
     
     
@@ -570,7 +564,7 @@ Suggested action:
   
     
     
-Add a  **Start** shape to the beginning of the workflow, and connect it to the first activity.
+Add a **Start**shape to the beginning of the workflow, and connect it to the first activity.
   
     
     
@@ -602,7 +596,7 @@ Suggested action:
   
     
     
-If the workflow does not have a  **Terminate** shape, add one and connect it to the end of the workflow. If a workflow shape is missing a connection to another workflow shape (see example), you can remove it or connect it to another workflow shape.
+If the workflow does not have a **Terminate**shape, add one and connect it to the end of the workflow. If a workflow shape is missing a connection to another workflow shape (see example), you can remove it or connect it to another workflow shape.
   
     
     

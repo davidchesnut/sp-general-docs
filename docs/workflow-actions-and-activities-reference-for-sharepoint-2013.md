@@ -7,12 +7,6 @@ ms.assetid: 88e09f75-480f-4a68-87a6-b496350345cc
 
 # Workflow actions and activities reference for SharePoint 2013
 Learn about the workflow actions that are available for workflow authoring in SharePoint Designer 2013, and the workflow activity classes that are available to workflow developers using Visual Studio 2012.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Workflow activities and actions
 <a name="bkm_Activities"> </a>
 
@@ -40,7 +34,7 @@ Although the SharePoint platform and infrastructure provide you with specially c
   
     
     
-The WF 4.0 activity classes provide some useful features that you may not find in the SharePoint activity class library. For example, WF 4.0 includes the  **If** class, which allows you to create conditional activities. Additionally, you can use the [System.ServiceModel.Activities.Send](http://msdn.microsoft.com/en-us/library/system.servicemodel.activities.send.aspx) activity to connect to web services.
+The WF 4.0 activity classes provide some useful features that you may not find in the SharePoint activity class library. For example, WF 4.0 includes the **If**class, which allows you to create conditional activities. Additionally, you can use the [System.ServiceModel.Activities.Send](http://msdn.microsoft.com/en-us/library/system.servicemodel.activities.send.aspx) activity to connect to web services.
   
     
     

@@ -8,13 +8,7 @@ ms.assetid: 8852ce36-8309-45a7-a141-2e10ac17a123
 
 # Get started developing with social features in SharePoint 2013
 Get started programming with SharePoint 2013 social feeds and microblog posts, following people and content (documents, sites, and tags), and working with user profiles. 
- **Last modified:** June 16, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
- **In this article**
+**In this article**
   
     
     
@@ -79,7 +73,7 @@ To get started developing with social features, you'll need:
   
     
     
- **OR**
+**OR**
   
     
     
@@ -127,14 +121,14 @@ After you set up your development environment and choose your scenario, you can 
 **Table 1. How-to articles for developing with social features**
 
 
-|**Feature area **|**Description **|
+|**Feature area**|**Description**|
 |:-----|:-----|
 | [How to: Learn to read and write to the social feed by using the .NET client object model in SharePoint 2013](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-net-client-object.md)|Walk through detailed steps for creating an application that reads and writes to the social feed by using the .NET client object model. |
 | [How to: Learn to read and write to the social feed by using the REST service in SharePoint 2013](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md)|Walk through detailed steps for creating an application that reads and writes to the social feed by using the REST service. |
 | [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint 2013](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md)|Learn how to create and delete and microblog posts and retrieve social feeds by using the .NET client object model. |
 | [How to: Create and delete posts and retrieve the social feed by using the JavaScript object model in SharePoint 2013](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md)|Learn how to create and delete and microblog posts and retrieve social feeds by using the JavaScript object model. |
-| [How to: Include mentions, tags, and links to sites and documents in posts in SharePoint Server 2013](how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md)|Learn how to add  **SocialDataItem** objects to microblog posts, which render as mentions, tags, and links in social feeds.|
-| [How to: Embed images, videos, and documents in posts in SharePoint Server 2013](how-to-embed-images-videos-and-documents-in-posts-in-sharepoint-server-2013.md)|Learn how to add  **SocialAttachment** objects to microblog posts, which render as embedded pictures, videos, and documents in social feeds.|
+| [How to: Include mentions, tags, and links to sites and documents in posts in SharePoint Server 2013](how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md)|Learn how to add **SocialDataItem**objects to microblog posts, which render as mentions, tags, and links in social feeds.|
+| [How to: Embed images, videos, and documents in posts in SharePoint Server 2013](how-to-embed-images-videos-and-documents-in-posts-in-sharepoint-server-2013.md)|Learn how to add **SocialAttachment**objects to microblog posts, which render as embedded pictures, videos, and documents in social feeds.|
 | [How to: Follow people by using the .NET client object model in SharePoint 2013](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint-2013.md)|Learn how to work with Following People features by using the .NET client object model. |
 | [How to: Follow people by using the JavaScript object model in SharePoint 2013](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint-2013.md)|Learn how to work with Following People features by using the JavaScript object model. |
 | [How to: Follow documents and sites by using the .NET client object model in SharePoint 2013](how-to-follow-documents-and-sites-by-using-the-net-client-object-model-in-sharep.md)|Learn how to work with Following Content features by using the .NET client object model. |
@@ -155,7 +149,7 @@ Although apps and solutions access SharePoint differently, after you do access S
 **Table 2. APIs for programming with social features**
 
 
-|**API name **|**Source and path **|
+|**API name**|**Source and path**|
 |:-----|:-----|
 | [.NET client object model](http://msdn.microsoft.com/library/9cc3f70c-78ac-4d2d-b46e-77522ee5d937%28Office.15%29.aspx)|Microsoft.SharePoint.Client.UserProfiles.dll          in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ISAPI |
 |Silverlight client object model |Microsoft.SharePoint.Client.UserProfiles.Silverlight.dll          in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\LAYOUTS\\ClientBin |
@@ -165,7 +159,7 @@ Although apps and solutions access SharePoint differently, after you do access S
 | [Server object model](http://msdn.microsoft.com/library/87c5118c-ac0e-4bd9-a75f-7452a9eb0e41%28Office.15%29.aspx)|Microsoft.Office.Server.UserProfiles.dll          in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ISAPI |
    
 
-> [!Note]  
+> [!NOTE]  
 > Not all server-side functionality in the Microsoft.Office.Server.UserProfiles assembly is available from client APIs. To see which APIs are available, see the  [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) namespace and the [Microsoft.SharePoint.Client.UserProfiles](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.aspx) namespace.
   
     
@@ -175,7 +169,7 @@ Although apps and solutions access SharePoint differently, after you do access S
 ## App permission requests for accessing social features in SharePoint Add-ins
 <a name="bkmk_AppPerms"> </a>
 
-An SharePoint Add-in must request the permissions that it needs to access SharePoint resources from the user who installs it. For example, an app that posts to the feed should request  **Write** permission (at minimum) to the feed. You specify the permissions that your app need in the AppManifest.xml file in Visual Studio or in the **Properties** dialog box in Napa.
+An SharePoint Add-in must request the permissions that it needs to access SharePoint resources from the user who installs it. For example, an app that posts to the feed should request **Write**permission (at minimum) to the feed. You specify the permissions that your app need in the AppManifest.xml file in Visual Studio or in the**Properties**dialog box in Napa.
   
     
     
@@ -187,11 +181,11 @@ App permission requests are scoped to the SharePoint deployment landscape. Table
 **Table 3. App permission scopes and available rights for social features in SharePoint Server 2013**
 
 
-|**Scope name **|**Description **|**Available rights **|
+|**Scope name**|**Description**|**Available rights**|
 |:-----|:-----|:-----|
 |User Profiles          ( `http://sharepoint/social/tenant`) |The permission request scope used to access all user profiles. Only the profile picture can be changed; all other user profile properties are read-only for SharePoint Add-ins. Must be installed by a tenant administrator. |Read, Write, Manage, FullControl |
 |Core          ( `http://sharepoint/social/core`) |The permission request scope used to access the user's followed content and shared metadata that is used by microblogging features. This scope applies only to personal sites that support following content. If the app installs on any other type of site, use the Tenant scope. |Read, Write, Manage, FullControl |
-|News Feed          ( `http://sharepoint/social/microfeed`) |The permission request scope used to access the user's feed or the team feed. This scope applies to personal sites that support microblogging or to team sites where the  **Site Feed** feature is activated. If the app installs on any other type of site, use the Tenant scope.|Read, Write, Manage, FullControl |
+|News Feed          ( `http://sharepoint/social/microfeed`) |The permission request scope used to access the user's feed or the team feed. This scope applies to personal sites that support microblogging or to team sites where the **Site Feed**feature is activated. If the app installs on any other type of site, use the Tenant scope.|Read, Write, Manage, FullControl |
 | `http://sharepoint/social/trimming`|This permission request scope used to determine whether to display security-trimmed content in the social feed to apps. If this high-trust permission is not granted, some content (such as activities about documents and sites that the app doesn't have permissions to) is trimmed from the feed data that's returned to the app, even if the user has sufficient permissions. This permission must be manually added to the app's manifest file. |Read, Write, Manage, FullControl |
    
 
@@ -202,7 +196,7 @@ You should be aware of the following considerations when you specify app permiss
     
     
 
-- Apps that specify  **FullControl** rights are not allowed for Office Store apps. Only **Read**,  **Write**, and  **Manage** rights are allowed for Office Store apps.
+- Apps that specify **FullControl**rights are not allowed for Office Store apps. Only**Read**, **Write**, and **Manage**rights are allowed for Office Store apps.
     
   
 - You can specify permissions for feed and following features by using the Core, News Feed, and Tenant ( `http://sharepoint/content/tenant`) scopes. The Tenant scope represents the whole tenancy where an app is installed, including the Core and News Feed scopes. So if your app already specifies the rights that it needs at the Tenant scope, then you don't need to request permissions at the Core or News Feed scope. 
@@ -211,7 +205,7 @@ You should be aware of the following considerations when you specify app permiss
 - During development, use the Tenant scope if you get a "SocialListNotFound : The Social list does not exist in your personal site" or "File Not Found" message. If you want to use the Core or News Feed scope in your app, you can test the permissions by opening the app from the app catalog. 
     
   
-- The Core scope applies to personal sites that support following content. The News Feed scope applies to personal sites that support microblogging or to team sites where the  **Site Feed** feature is activated. If the app will be installed on any other type of site, you must use the Tenant scope. See [Tenancies and deployment scopes for SharePoint Add-ins](http://msdn.microsoft.com/library/1ceb3142-a7a5-453e-920f-5f953a79401a%28Office.15%29.aspx). 
+- The Core scope applies to personal sites that support following content. The News Feed scope applies to personal sites that support microblogging or to team sites where the **Site Feed**feature is activated. If the app will be installed on any other type of site, you must use the Tenant scope. See [Tenancies and deployment scopes for SharePoint Add-ins](http://msdn.microsoft.com/library/1ceb3142-a7a5-453e-920f-5f953a79401a%28Office.15%29.aspx). 
     
   
 - Apps that request rights for the User Profiles scope must be installed by a tenant administrator, and they cannot be installed in Office 365 Small Business Premium version of SharePoint Online. 
@@ -220,14 +214,14 @@ You should be aware of the following considerations when you specify app permiss
 - If licensing or feature activation requirements for social and microblogging features are not met, users get a message saying that they can't install the app. 
     
   
-- Apps that are launched outside of SharePoint 2013 can request permission on-the-fly (except  **Full Control**). For more information, see  [Authorization Code OAuth flow for SharePoint Add-ins](http://msdn.microsoft.com/library/e89e91c7-ea39-49b9-af5a-7f047a7e2ab7%28Office.15%29.aspx). 
+- Apps that are launched outside of SharePoint 2013 can request permission on-the-fly (except **Full Control**). For more information, see  [Authorization Code OAuth flow for SharePoint Add-ins](http://msdn.microsoft.com/library/e89e91c7-ea39-49b9-af5a-7f047a7e2ab7%28Office.15%29.aspx). 
     
   
 
 ## Additional resources
 <a name="bk_AddResources"> </a>
 
- **Conceptual articles**
+**Conceptual articles**
   
     
     
@@ -247,7 +241,7 @@ You should be aware of the following considerations when you specify app permiss
 -  [Social computing terminology and concepts in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj219804%28v=office.15%29.aspx)
     
   
- **Reference documentation**
+**Reference documentation**
   
     
     

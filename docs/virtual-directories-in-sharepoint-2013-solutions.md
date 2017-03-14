@@ -7,12 +7,6 @@ ms.assetid: c26c4160-31be-4358-89cf-082b8a1e6a6c
 
 # Virtual directories in SharePoint 2013 solutions
 Learn about how changes in the virtual directory system affect how you create farm solutions in SharePoint 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Make your solutions compatible with the new UI mode system
 
 When you are using the Microsoft SharePoint 2010 Software Development Kit (SDK), but developing for SharePoint 2013, there is a change in the virtual directory system that you need to consider as you work. The change is a side effect of the new SharePoint 2013 feature that enables a site collection to run in either SharePoint 2010 mode or SharePoint 2013 mode. The modes are sometimes called compatibility levels orUI versions. For files in the virtual folders  `_layouts` or `_controltemplates`, SharePoint needs to use the version of the files in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ (sometimes called the 15 hive) or in the corresponding 14 hive, depending on the mode of the site collection. SharePoint adds "/15" into the virtual directory path just after the virtual directory name to signal that the SharePoint 2013 files should be used. The absence of that extra string indicates that SharePoint 2010 files should be used. 
@@ -23,12 +17,12 @@ This new system has implications for you as you develop SharePoint 2013 solution
   
     
     
-If you need to make your solution compatible with site collections of either mode, you need branching logic to determine the mode of the current site collection and construct the virtual path accordingly. The  [CompatibilityLevel](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPSite.CompatibilityLevel.aspx) property, which is also available in all the SharePoint client object models and the REST interface, is one place where your code can check for the mode. The [SPUtility](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPUtility.aspx) class also has several new properties to aid in managing compatibility level in your solutions. These are not available in the client object models. Finally, there are several controls in SharePoint that expose a **UIVersion** property that your code can also use to find the current compatibility level.
+If you need to make your solution compatible with site collections of either mode, you need branching logic to determine the mode of the current site collection and construct the virtual path accordingly. The  [CompatibilityLevel](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPSite.CompatibilityLevel.aspx) property, which is also available in all the SharePoint client object models and the REST interface, is one place where your code can check for the mode. The [SPUtility](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPUtility.aspx) class also has several new properties to aid in managing compatibility level in your solutions. These are not available in the client object models. Finally, there are several controls in SharePoint that expose a**UIVersion**property that your code can also use to find the current compatibility level.
   
     
     
 
-> [!Note]  
+> [!NOTE]  
 > If the file in the virtual path is *.aspx, SharePoint will automatically detect the mode of the current site collection and return the file from the appropriate hive. So you do not have to insert the "/15" into the virtual path. 
   
     

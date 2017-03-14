@@ -1,5 +1,5 @@
 ---
-title: How to: Customize a field type using client-side rendering
+title: How to Customize a field type using client-side rendering
 ms.prod: SHAREPOINT
 ms.assetid: 18e32537-d7ed-4fe7-90cf-b6cfab3f85a3
 ---
@@ -8,12 +8,6 @@ ms.assetid: 18e32537-d7ed-4fe7-90cf-b6cfab3f85a3
 
 # How to: Customize a field type using client-side rendering
 Learn how to customize a field type by using the client-side rendering technology in SharePoint 2013. 
- **Last modified:** January 06, 2016
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 Client-side rendering provides a mechanism that you can use to produce your own output for a set of controls that are hosted in a SharePoint page. This mechanism enables you to use well-known technologies, such as HTML and JavaScript, to define the rendering logic of custom field types. In client-side rendering you can specify your own JavaScript resources and host them in the data storage options available to your farm solution, such as the _layouts folder. 
   
     
@@ -52,7 +46,7 @@ The following table lists useful articles that can help you understand the conce
 **Table 1. Core concepts for client-side rendering for field types**
 
 
-|**Article title **|**Description **|
+|**Article title**|**Description**|
 |:-----|:-----|
 | [Build farm solutions in SharePoint 2013](build-farm-solutions-in-sharepoint-2013.md)|Learn about developing, packaging, and deploying administrative extensions to SharePoint 2013 using farm solutions. |
 | [Custom Field Types](http://msdn.microsoft.com/en-us/library/ms446361.aspx)|Learn about creating custom field types. As you store your business information in SharePoint 2013, there may be times when your data does not conform to the field types that are available in SharePoint FoundationOr, you might just want to customize those field types. Custom fields can include custom data validation and custom field rendering. |
@@ -100,15 +94,15 @@ Figure 1 shows a view form with a custom-rendered field type.
 ### To create the farm solution project
 
 
-1. Open Visual Studio 2012 as administrator (right-click the Visual Studio 2012 icon in the  **Start** menu, and then choose **Run as administrator** ).
+1. Open Visual Studio 2012 as administrator (right-click the Visual Studio 2012 icon in the **Start**menu, and then choose**Run as administrator**).
     
   
-2. Create a new project using the  ** SharePoint 2013 Project** template
+2. Create a new project using the **SharePoint 2013 Project**template
     
-    Figure 2 shows the location of the  ** SharePoint 2013 Project** template in Visual Studio 2012, under **Templates**,  **Visual C#**,  **Office SharePoint**,  **SharePoint Solutions**. 
+    Figure 2 shows the location of the **SharePoint 2013 Project**template in Visual Studio 2012, under**Templates**, **Visual C#**, **Office SharePoint**, **SharePoint Solutions**. 
     
 
-    **Figure 2. SharePoint 2013 project Visual Studio template**
+   **Figure 2. SharePoint 2013 project Visual Studio template**
 
   
 
@@ -121,7 +115,7 @@ Figure 1 shows a view form with a custom-rendered field type.
 3. Provide the URL of the SharePoint website that you want to use for debugging. 
     
   
-4. Select the  **Deploy as a farm solution** option.
+4. Select the **Deploy as a farm solution**option.
     
   
 
@@ -133,15 +127,15 @@ Figure 1 shows a view form with a custom-rendered field type.
   
 2. Copy the following code and paste it in the FavoriteColorFieldType.cs file. The code performs the following tasks: 
     
-  - Declares a  **FavoriteColorField** class that inherits from **SPFieldText**. 
+  - Declares a **FavoriteColorField**class that inherits from**SPFieldText**. 
     
   
-  - Provides two constructors for the  **FavoriteColorField** class.
+  - Provides two constructors for the **FavoriteColorField**class.
     
   
-  - Overrides the  **JSLink** property.
+  - Overrides the **JSLink**property.
     
-    > [!Note]  
+    > [!NOTE]  
 > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
 
   ```cs
@@ -216,7 +210,7 @@ namespace Microsoft.SDK.SharePoint.Samples.WebControls
 ### To add an XML definition for the custom field type
 
 
-1. Right-click the farm solution project, and add a SharePoint mapped folder. In the dialog box, select the  **{SharePointRoot}\\Template\\XML** folder.
+1. Right-click the farm solution project, and add a SharePoint mapped folder. In the dialog box, select the **{SharePointRoot}\\Template\\XML**folder.
     
   
 2. Right-click the XML folder created in the last step, and add a new XML file. Name the XML file fldtypes_FavoriteColorFieldType.xml. 
@@ -311,7 +305,7 @@ function favoriteColorViewTemplate(ctx) {
 
 1. Press the F5 key. 
     
-    > [!Note]  
+    > [!NOTE]  
 > When you press F5, Visual Studio builds the solution, deploys the solution, and opens the SharePoint website where the solution is deployed. 
 2. Create a custom list and add a new Favorite color field column. 
     
@@ -321,7 +315,7 @@ function favoriteColorViewTemplate(ctx) {
   
 4. Figure 3 shows the create column page with the new custom field type. 
     
-    **Figure 3. Creating a new custom field type column**
+   **Figure 3. Creating a new custom field type column**
 
   
 
@@ -335,9 +329,9 @@ function favoriteColorViewTemplate(ctx) {
 ****
 
 
-|**Problem **|**Solution **|
+|**Problem**|**Solution**|
 |:-----|:-----|
-|Field type  **FavoriteColorField** is not installed properly. Go to the list settings page to delete this field.|Execute the following command from an elevated command prompt:  **iisreset /noforce**.> [!Caution]  > If you are deploying the solution to a production environment, wait for an appropriate time to reset the web server using  **iisreset /noforce**.          |
+|Field type **FavoriteColorField**is not installed properly. Go to the list settings page to delete this field.|Execute the following command from an elevated command prompt: **iisreset /noforce**.> [!CAUTION]  > If you are deploying the solution to a production environment, wait for an appropriate time to reset the web server using **iisreset /noforce**.          |
    
 
 ## Next steps

@@ -1,5 +1,5 @@
 ---
-title: How to: Programmatically Add an Excel Web Access Web Part to a Page
+title: How to Programmatically Add an Excel Web Access Web Part to a Page
 keywords: how to,howdoi,howto,webpart
 f1_keywords:
 - how to,howdoi,howto,webpart
@@ -10,26 +10,20 @@ ms.assetid: 858bb0f6-654a-4f12-ba0b-4776bda5ff6d
 
 # How to: Programmatically Add an Excel Web Access Web Part to a Page
 
- **Last modified:** July 20, 2011
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 This example shows how to programmatically add an Excel Web Access Web Part to a SharePoint page. It also shows you how to display an Excel workbook programmatically in an Excel Web Access Web Part. 
   
     
     
 
 The following project uses Microsoft Visual Studio. 
-> [!Note]  
+> [!NOTE]  
 > Depending on the Visual Studio version and the Visual Studio integrated development environment (IDE) settings that you are using, the process and steps to create a Visual Studio project could be slightly different from the procedures shown in this topic. 
   
     
     
 
 
-> [!Note]  
+> [!NOTE]  
 > It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information, see  [How to: Trust a Location](how-to-trust-a-location.md). 
   
     
@@ -43,7 +37,7 @@ The following steps show how to locate Microsoft.Office.Excel.WebUI.dll and how 
     
     
 
-> [!Note]  
+> [!NOTE]  
 > It is assumed that you have already copied Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll from the global assembly cache to a folder of your choice. For more information about how to locate and copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll, see  [How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll](how-to-locate-and-copy-microsoft-office-excel-webui-dll-and-microsoft-office-exc.md). 
   
     
@@ -53,20 +47,20 @@ The following steps show how to locate Microsoft.Office.Excel.WebUI.dll and how 
 ### To add a reference to Microsoft.Office.Excel.WebUI.dll
 
 
-1. On the  **Project** menu, click **Add Reference**. 
+1. On the **Project**menu, click**Add Reference**. 
     
   
-2. In the  **Add Reference** dialog box, click **Browse**. 
+2. In the **Add Reference**dialog box, click**Browse**. 
     
-    > [!Note]  
-> You can also open the  **Add Reference** dialog box in the **Solution Explorer** pane by right-clicking **References** and selecting **Add Reference**. 
+    > [!NOTE]  
+> You can also open the **Add Reference**dialog box in the**Solution Explorer**pane by right-clicking**References**and selecting**Add Reference**. 
 3. Browse to the location of Microsoft.Office.Excel.WebUI.dll. 
     
   
-4. Select Microsoft.Office.Excel.WebUI.dll, and then click  **OK**. 
+4. Select Microsoft.Office.Excel.WebUI.dll, and then click **OK**. 
     
   
-5. Click  **Add Reference**. A reference to Microsoft.Office.Excel.WebUI.dll is added to your project. 
+5. Click **Add Reference**. A reference to Microsoft.Office.Excel.WebUI.dll is added to your project. 
     
   
 
@@ -105,9 +99,9 @@ Dim ewaWebPart As New ExcelWebRenderer()
 ### To display a workbook programmatically
 
 
-1. In this example, the  **AddWebPart** method takes in the path to an Excel workbook location as an argument. The user provides the path by typing in a Windows Forms text box and clicking a button.
+1. In this example, the **AddWebPart**method takes in the path to an Excel workbook location as an argument. The user provides the path by typing in a Windows Forms text box and clicking a button.
     
-     **Sample code provided by:** Daniel Mullowney, Microsoft Corporation
+    **Sample code provided by:**Daniel Mullowney, Microsoft Corporation
     
 
 
@@ -155,11 +149,11 @@ End Sub
   ```
 
 
-    > [!Important]  
+    > [!IMPORTANT]  
 > Ensure that the location where the workbook is saved is a trusted location. 
 2. You can display an Excel workbook programmatically by using the following code. 
     
-     **Sample code provided by:** Daniel Mullowney, Microsoft Corporation
+    **Sample code provided by:**Daniel Mullowney, Microsoft Corporation
     
 
 
@@ -220,7 +214,7 @@ The code sample is the code from the Form1.cs and Form1.vb example files describ
   
     
     
- **Sample code provided by:** Daniel Mullowney, Microsoft Corporation
+**Sample code provided by:**Daniel Mullowney, Microsoft Corporation
   
     
     

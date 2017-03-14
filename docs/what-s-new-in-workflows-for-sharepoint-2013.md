@@ -7,12 +7,6 @@ ms.assetid: 1d51421b-61ac-46b6-a865-52f968ddc5b3
 
 # What's new in workflows for SharePoint 2013
 Learn about the capabilities and features that are new to workflows in SharePoint 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 The workflow framework in SharePoint 2013 is significantly changed from previous versions. The following sections provide brief summaries of the most significant updates and enhancements to the workflow infrastructure. 
   
     
@@ -108,7 +102,7 @@ Following are new workflow actions that are provided in SharePoint 2013. For a f
 **Table 1. New workflow actions in SharePoint 2013**
 
 
-|**Action **|**Description **|
+|**Action**|**Description**|
 |:-----|:-----|
 |Assign a Task |Assigns a single workflow task to a user or group. |
 |Start a Task Process |Initiates execution of a task process. |
@@ -116,9 +110,9 @@ Following are new workflow actions that are provided in SharePoint 2013. For a f
 |Call HTTP Web Service |Functions as a method call to a Representational State Transfer (REST) endpoint. |
 |Start a List Workflow |Starts a list-scoped workflow. |
 |Start a Site Workflow |Starts a site-scoped workflow. |
-|Build DynamicValue |Creates a new variable of type  **DynamicValue**. |
-|Get Property from DynamicValue |Retrieves a property value from a specified variable of type  **DynamicValue**. |
-|Count Items in DynamicValue |Returns the number of rows in a variable of type  **DynamicValue**. |
+|Build DynamicValue |Creates a new variable of type **DynamicValue**. |
+|Get Property from DynamicValue |Retrieves a property value from a specified variable of type **DynamicValue**. |
+|Count Items in DynamicValue |Returns the number of rows in a variable of type **DynamicValue**. |
 |Trim String |Removes all leading and trailing white-space characters from the current string. |
 |Find Substring in String |Returns 1-based index of the first occurrence of one or more characters, or the first occurrence of a string, within a string. |
 |Replace Substring in String |Returns a new string in which all occurrences of a specified character or string are replaced with another specified character or string. |

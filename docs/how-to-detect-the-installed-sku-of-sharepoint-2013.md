@@ -1,5 +1,5 @@
 ---
-title: How to: Detect the installed SKU of SharePoint 2013
+title: How to Detect the installed SKU of SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: d5d84d6f-6a8e-4ead-9296-7025baf1e154
 ---
@@ -7,12 +7,6 @@ ms.assetid: d5d84d6f-6a8e-4ead-9296-7025baf1e154
 
 # How to: Detect the installed SKU of SharePoint 2013
 If the behavior of your solutions depends on the locally installed SKU of SharePoint 2013 or Project Server 2013, use the code example in this article to find the SKU information you need. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** Project Server 2013 | SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Detect the installed SKU of SharePoint 2013 or Project Server 2013 by using code
 <a name="SP15DetectSKU_detect"> </a>
 

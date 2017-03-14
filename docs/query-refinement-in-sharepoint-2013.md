@@ -8,12 +8,6 @@ ms.assetid: ec31782e-1bc5-4dc3-8df7-c29cd5f7f05c
 
 # Query Refinement in SharePoint 2013
 Learn how to use SharePoint Server 2013 query refinement features programmatically when you are working with search queries and results. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 You can use query refinement features to provide end users with refinement options that are relevant for their queries. These features let the end user drill down into search results by using refinement data computed for the results. Refinement data is calculated by the index component, based on the aggregation of managed property statistics for all of the results of a search query. 
   
     
@@ -78,16 +72,16 @@ Where:
     
   
 
-> [!Note]  
+> [!NOTE]  
 > When you specify refiners, the minimum requirement is to specify a  `refiner-name`, which is a managed property. 
->  **Example**
+> **Example**
   
     
     
  `Refiners = "FileType"`
 > 
 > Or, you can also use the advanced syntax to adjust the refiner settings. 
->  **Example**
+> **Example**
   
     
     
@@ -100,19 +94,19 @@ Where:
 **Table 1: List of parameters for refiners**
 
 
-|**Parameter **|**Description **|
+|**Parameter**|**Description**|
 |:-----|:-----|
-| _deephits_|Overrides the default number of hits that is used as the basis for refinement computation. When refiners are produced, all results for the query will be evaluated. Normally, using this parameter will improve search performance.  **Syntax**           `deephits=<integer value>` **Example**           `price(deephits=1000)`> [!Note]  > This limit applies within each index partition. The actual number of hits that are evaluated will be larger than this value due to the aggregation across search partitions.           |
-| _discretize_| Specifies custom intervals (refinement bins) for numeric refiners. **Syntax**           `discretize=manual/<threshold>/<threshold>[/<threshold>]*` **Example**           `write(discretize=manual/2013-01-01/2013-08-22/2013-09-15/2013-09-21/2013-09-22)` The `<threshold>` attribute specifies the threshold for each refinement bin. There is one interval for everything below the first threshold specified, one interval between each consecutive threshold, and one interval for everything above the last threshold. For a refiner of type **DateTime**, specify the threshold according to one of the following ISO 8601-compatible formats:  _YYYY-MM-DD_ _YYYY-MM-DDThh:mm:ss_ _YYYY-MM-DDThh:mm:ss:Z_ The format values specify the following: _YYYY_ - Four-digit year. Only four-digit years are supported. _MM_ - Two-digit month. 01 = January. _DD_ - Two-digit day of month (01 through 31). _T_ - The letter "T". _hh_ - Two-digit hour (00 through 23). A.M. or P.M. indication is not allowed. _mm_ - Two-digit minute (00 through 59). _ss_ - Two-digit second (00 through 59).> [!Important]  >  All date/time values must be specified according to the Coordinated Universal Time (UTC), also known as Greenwich Mean Time (GMT) zone. The UTC zone identifier (a trailing "Z" character) is optional.          |
-| _sort_| Defines how to sort the bins within a string refiner. **Syntax**           `sort=<property>/<direction>` The attributes perform the following: _<property>_ - Specifies the sorting algorithm. These lowercase values are valid: **frequency** - Orders by occurrence within the bins. **name** - Orders by label name. **number** - Treats the strings as numeric and uses numeric sorting. This value can be useful to specify discrete values, for example, to perform numeric sorting of a value that is contained in a managed property of type **String**.  _<direction>_ - Specifies the sorting direction. These lowercase values are valid : **descending** **ascending** **Example**           `sort=name/ascending` **Default**: frequency/descending |
-| _filter_| Defines how bins within a refiner of type **String** are filtered before they are returned to the client. **Syntax**           `filter=<bins>/<freq>/<prefix>[<levels>]` The attributes perform the following: _<bins>_ - Specifies the maximum number of returned bins. After sorting the bins within the refiner, use this attribute to truncate any trailing bins. For example, if bins=10, only the first 10 bins are returned, according to the specified sorting algorithm. _<freq>_ - Limits the number of returned bins. Use this attribute to remove bins that have low frequency counts. For example, _freq_=2 indicates that only the bins with 2 or more members are returned.  _<prefix>_ - Specifies that only bins with a name that begins with this prefix are returned. The wildcard character "*" will match all names. **Example** `filter=30/2/*` _<levels>_ - Specifies the levels of taxonomy. Use this attribute to filter hierarchical refiner output based on taxonomy levels. The attribute should be a positive integer _n_. The  **default** value is _n_=0. If  _n_>0, only refiner entries that contain less than  _n_ taxonomy path separator symbols ("/") will be returned. If _n_=0, no level filtering is performed. The level separator is the forward slash character ("/").  Be aware of the performance cost of using a large taxonomy navigator. The filtering is performed as part of the result processing.> [!Note]  >  This parameter applies application-specific result-side filtering. This differs from the cutoff parameter, which applies limitations in every index partition for performance reasons.          |
-| _cutoff_| Limits the data that must be transferred and processed for deep string refiners. You can configure the refiners to return only the most relevant values (bins).> [!Note]  >  This cutoff filtering is performed within each index partition. This differs from the _filter_ parameter, which performs result-side filtering only. You can combine the two parameters.           **Syntax**           `cutoff=<frequency>/<minbins>/<maxbins>` The attributes perform the following: _<maxbins>_ - Limits the number of bins. This parameter limits the number of unique values (bins) that will be returned for a refiner. It is the preferred way to increase search performance when string refiners with large number of bins are returned. "0" implies that the default value specified in the search schema is used. _<frequency>_ - Limits the number of bins by frequency. If the number of occurrences of a refiner value in a result set is less than or equal to the frequency value, the refiner value is not returned. "0" implies that the default value according to the search schema is used. _<minbins>_ - Specifies the minimum value for frequency cutoff. If the number of unique refiner values for the query is less than this value, no frequency cutoff is performed, and all refiner values are returned from that search partition. When cutoff by frequency is used, this parameter can be used to specify a minimum number of unique refiner values that will be returned regardless of the number of occurrences. The default value of this attribute is "0", indicating that frequency cutoff is performed regardless of the number of unique navigator values. "0" implies that the default value specified in the index schema is used.> [!Note]  >  Use _<frequency>_ and _<minbins>_ with care. We recommend that you use only _<maxbins>_.           |
+| _deephits_|Overrides the default number of hits that is used as the basis for refinement computation. When refiners are produced, all results for the query will be evaluated. Normally, using this parameter will improve search performance. **Syntax**          `deephits=<integer value>`**Example**          `price(deephits=1000)`> [!NOTE]  > This limit applies within each index partition. The actual number of hits that are evaluated will be larger than this value due to the aggregation across search partitions.           |
+| _discretize_| Specifies custom intervals (refinement bins) for numeric refiners.**Syntax**          `discretize=manual/<threshold>/<threshold>[/<threshold>]*`**Example**          `write(discretize=manual/2013-01-01/2013-08-22/2013-09-15/2013-09-21/2013-09-22)` The `<threshold>` attribute specifies the threshold for each refinement bin. There is one interval for everything below the first threshold specified, one interval between each consecutive threshold, and one interval for everything above the last threshold. For a refiner of type**DateTime**, specify the threshold according to one of the following ISO 8601-compatible formats:  _YYYY-MM-DD_ _YYYY-MM-DDThh:mm:ss_ _YYYY-MM-DDThh:mm:ss:Z_ The format values specify the following: _YYYY_ - Four-digit year. Only four-digit years are supported. _MM_ - Two-digit month. 01 = January. _DD_ - Two-digit day of month (01 through 31). _T_ - The letter "T". _hh_ - Two-digit hour (00 through 23). A.M. or P.M. indication is not allowed. _mm_ - Two-digit minute (00 through 59). _ss_ - Two-digit second (00 through 59).> [!IMPORTANT]  >  All date/time values must be specified according to the Coordinated Universal Time (UTC), also known as Greenwich Mean Time (GMT) zone. The UTC zone identifier (a trailing "Z" character) is optional.          |
+| _sort_| Defines how to sort the bins within a string refiner.**Syntax**          `sort=<property>/<direction>` The attributes perform the following: _<property>_ - Specifies the sorting algorithm. These lowercase values are valid:**frequency**- Orders by occurrence within the bins.**name**- Orders by label name.**number**- Treats the strings as numeric and uses numeric sorting. This value can be useful to specify discrete values, for example, to perform numeric sorting of a value that is contained in a managed property of type**String**.  _<direction>_ - Specifies the sorting direction. These lowercase values are valid :**descending****ascending****Example**          `sort=name/ascending`**Default**: frequency/descending |
+| _filter_| Defines how bins within a refiner of type**String**are filtered before they are returned to the client.**Syntax**          `filter=<bins>/<freq>/<prefix>[<levels>]` The attributes perform the following: _<bins>_ - Specifies the maximum number of returned bins. After sorting the bins within the refiner, use this attribute to truncate any trailing bins. For example, if bins=10, only the first 10 bins are returned, according to the specified sorting algorithm. _<freq>_ - Limits the number of returned bins. Use this attribute to remove bins that have low frequency counts. For example, _freq_=2 indicates that only the bins with 2 or more members are returned.  _<prefix>_ - Specifies that only bins with a name that begins with this prefix are returned. The wildcard character "*" will match all names.**Example**`filter=30/2/*` _<levels>_ - Specifies the levels of taxonomy. Use this attribute to filter hierarchical refiner output based on taxonomy levels. The attribute should be a positive integer _n_. The **default**value is _n_=0. If  _n_>0, only refiner entries that contain less than  _n_ taxonomy path separator symbols ("/") will be returned. If _n_=0, no level filtering is performed. The level separator is the forward slash character ("/").  Be aware of the performance cost of using a large taxonomy navigator. The filtering is performed as part of the result processing.> [!NOTE]  >  This parameter applies application-specific result-side filtering. This differs from the cutoff parameter, which applies limitations in every index partition for performance reasons.          |
+| _cutoff_| Limits the data that must be transferred and processed for deep string refiners. You can configure the refiners to return only the most relevant values (bins).> [!NOTE]  >  This cutoff filtering is performed within each index partition. This differs from the _filter_ parameter, which performs result-side filtering only. You can combine the two parameters.          **Syntax**          `cutoff=<frequency>/<minbins>/<maxbins>` The attributes perform the following: _<maxbins>_ - Limits the number of bins. This parameter limits the number of unique values (bins) that will be returned for a refiner. It is the preferred way to increase search performance when string refiners with large number of bins are returned. "0" implies that the default value specified in the search schema is used. _<frequency>_ - Limits the number of bins by frequency. If the number of occurrences of a refiner value in a result set is less than or equal to the frequency value, the refiner value is not returned. "0" implies that the default value according to the search schema is used. _<minbins>_ - Specifies the minimum value for frequency cutoff. If the number of unique refiner values for the query is less than this value, no frequency cutoff is performed, and all refiner values are returned from that search partition. When cutoff by frequency is used, this parameter can be used to specify a minimum number of unique refiner values that will be returned regardless of the number of occurrences. The default value of this attribute is "0", indicating that frequency cutoff is performed regardless of the number of unique navigator values. "0" implies that the default value specified in the index schema is used.> [!NOTE]  >  Use _<frequency>_ and _<minbins>_ with care. We recommend that you use only _<maxbins>_.           |
    
 
 ### Example: Adding refiners
 <a name="SP15_Example_adding_refiners"> </a>
 
-The following CSOM example shows how to programmatically request three refiners:  **FileType**,  **Write**, and  **Companies**.  **Write** represents the last modified date for the item, and uses the advanced syntax to return fixed-size date/time bins.
+The following CSOM example shows how to programmatically request three refiners: **FileType**, **Write**, and **Companies**. **Write**represents the last modified date for the item, and uses the advanced syntax to return fixed-size date/time bins.
   
     
     
@@ -154,7 +148,7 @@ using (var context = new ClientContext("http://<serverName>/<siteCollectionPath>
 ## Understanding the refinement data in the search result
 <a name="SP15_Understanding_refinement_data"> </a>
 
-If you have enabled query refinement for a managed property in your query, the query result contains refinement data split into refinement bins. This data is located in the  **RefinementResults** table ( [RefinementResults](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.KnownTableTypes.RefinementResults.aspx) ) within the [ResultTableCollection](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ResultTableCollection.aspx) . One refinement bin represents a specific value or value range for the managed property.The **RefinementResults** table contains one row per refinement bin, and contains the columns, as specified in Table 2.
+If you have enabled query refinement for a managed property in your query, the query result contains refinement data split into refinement bins. This data is located in the **RefinementResults**table ( [RefinementResults](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.KnownTableTypes.RefinementResults.aspx) ) within the [ResultTableCollection](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ResultTableCollection.aspx) . One refinement bin represents a specific value or value range for the managed property.The**RefinementResults**table contains one row per refinement bin, and contains the columns, as specified in Table 2.
   
     
     
@@ -162,12 +156,12 @@ If you have enabled query refinement for a managed property in your query, the q
 **Table 2: Data returned for refinement bins**
 
 
-|**Parameter **|**Description **|
+|**Parameter**|**Description**|
 |:-----|:-----|
 |**RefinerName**|The name of the query refiner. |
 |**RefinementName**|The string that represents the refinement bin. This string is typically used when presenting the refinement options to the users on a search result page. |
 |**RefinementValue**|An implementation-specific formatted string that represents refinement. This data is returned for debugging and is typically not required for the client. |
-|**RefinementToken**|A string that represents the refinement bin to use with  **RefinerName** when you perform a refined query.|
+|**RefinementToken**|A string that represents the refinement bin to use with **RefinerName**when you perform a refined query.|
 |**RefinementCount**|The result count for this refinement bin. This data represents the number of items (including duplicates) in the search result with a value for the given managed property that falls into this refinement bin. |
    
 
@@ -182,7 +176,7 @@ Table 3 below contains two rows of refinement data. The first row holds refineme
 **Table 3: Format and contents of refinement data**
 
 
-|**RefinerName **|**RefinementName **|**RefinementValue **|**RefinementToken **|**RefinementCount **|
+|**RefinerName**|**RefinementName**|**RefinementValue**|**RefinementToken**|**RefinementCount**|
 |:-----|:-----|:-----|:-----|:-----|
 |FileType |Html |Html |"ǂǂ68746d6c" |50553 |
 |Write |From 2013-09-21T00:00:00Z up to 2013-09-22T00:00:00Z |From 2013-09-21T00:00:00Z up to 2013-09-22T00:00:00Z |range(2013-09-21T00:00:00Z, 2013-09-22T00:00:00Z) |37 |
@@ -191,11 +185,11 @@ Table 3 below contains two rows of refinement data. The first row holds refineme
 ## Creating a refined query
 <a name="SP15_Creating_refined_query"> </a>
 
-A search result presents refinement options in the form of string values or value ranges. Each string value or numeric value range is called a refinement bin, and each refinement bin has an associated  **RefinementToken** value. A refinement option is associated with a managed property, which is provided by the **RefinerName** value.
+A search result presents refinement options in the form of string values or value ranges. Each string value or numeric value range is called a refinement bin, and each refinement bin has an associated **RefinementToken**value. A refinement option is associated with a managed property, which is provided by the**RefinerName**value.
   
     
     
-Both the  **RefinementToken** and **RefinerName** values are concatenated to create a _refinement filter_ string. This string represents a filter that can be used to limit search result items to include only items where a managed property has a value within a refinement bin. In short:
+Both the **RefinementToken**and**RefinerName**values are concatenated to create a _refinement filter_ string. This string represents a filter that can be used to limit search result items to include only items where a managed property has a value within a refinement bin. In short:
   
     
     
@@ -210,7 +204,7 @@ You can provide one or more refinement filters for a refined query by adding ref
 
 ### Example 1: Creating a refined query for HTML file types
 
-The following CSOM example shows how to programmatically perform a refinement, to limit the search results to those of HTML file type only. As mentioned in  [Example: Refinement data](#SP15_Example_refinement_data), refinement data related to this refinement option has  **RefinerName** set to _Filetype_ and **RefinementToken** set to _"ǂǂ68746d6c"_. 
+The following CSOM example shows how to programmatically perform a refinement, to limit the search results to those of HTML file type only. As mentioned in  [Example: Refinement data](#SP15_Example_refinement_data), refinement data related to this refinement option has **RefinerName**set to _Filetype_ and**RefinementToken**set to _"ǂǂ68746d6c"_. 
   
     
     

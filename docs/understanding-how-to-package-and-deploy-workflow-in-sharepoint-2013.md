@@ -7,12 +7,6 @@ ms.assetid: 545b4930-ac05-4c9d-9980-5818cb800cf1
 
 # Understanding how to package and deploy workflow in SharePoint 2013
 Learn how to package and deploy a workflow in SharePoint Server 2013 with SharePoint Designer 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Designer 2013* 
 ## Overview of the workflow packaging capabilities of SharePoint Designer 2013
 <a name="section1"> </a>
 
@@ -24,7 +18,7 @@ SharePoint Designer 2013 provides the capability to save a workflow as a templat
 **Support, by platform, for saving a workflow as a template**
 
 
-|**Workflow type **|**SharePoint 2010 Workflow platform **|**SharePoint 2013 Workflow platform **|
+|**Workflow type**|**SharePoint 2010 Workflow platform**|**SharePoint 2013 Workflow platform**|
 |:-----|:-----|:-----|
 |List Workflow |No |Yes |
 |Site Workflow |No |Yes |
@@ -39,7 +33,7 @@ SharePoint Designer 2013 provides the capability to save a workflow as a templat
     
     
 
-> [!Note]  
+> [!NOTE]  
 > SharePoint Server 2013 contains two different workflow platforms: the SharePoint 2010 Workflow platform and the SharePoint 2013 Workflow platform. Both platforms are available in SharePoint Server 2013. For more information about the two workflow, see  [Getting started with SharePoint Server 2013 workflow.](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
   
     
@@ -60,9 +54,9 @@ The process for packaging a workflow involves saving the workflow to a template 
 1. Open an existing workflow, or develop a new workflow, in SharePoint Designer 2013. 
     
   
-2. On the  **Workflow Settings** tab in the ribbon, click the **Save as Template** button in the **Manage** section as shown in the figure.
+2. On the **Workflow Settings**tab in the ribbon, click the**Save as Template**button in the**Manage**section as shown in the figure.
     
-    **Figure: Save workflow as template**
+   **Figure: Save workflow as template**
 
   
 
@@ -72,12 +66,12 @@ The process for packaging a workflow involves saving the workflow to a template 
   
 
   
-3. An informational dialog box appears to let you know the template has been saved to the  **Site Assets** library.
+3. An informational dialog box appears to let you know the template has been saved to the **Site Assets**library.
     
   
 4. Click the Site Assets library to view the workflow template as shown in the figure. 
     
-    **Figure: A workflow template in Site Assets**
+   **Figure: A workflow template in Site Assets**
 
   
 
@@ -92,8 +86,8 @@ The process for packaging a workflow involves saving the workflow to a template 
     
     
 
-> [!Tip]  
-> A workflow template automatically saves to the  **Site Assets** library of the site collection in which the workflow resides.
+> [!TIP]  
+> A workflow template automatically saves to the **Site Assets**library of the site collection in which the workflow resides.
   
     
     
@@ -131,9 +125,9 @@ Before you can deploy a workflow you must first export the workflow template fro
 2. Select the workflow template you want to export by clicking it. 
     
   
-3. Click the  **Export File** button to save the template file to your local computer or a network drive, as shown in the figure.
+3. Click the **Export File**button to save the template file to your local computer or a network drive, as shown in the figure.
     
-    **Figure: Export workflow template from SharePoint Designer 2013**
+   **Figure: Export workflow template from SharePoint Designer 2013**
 
   
 
@@ -154,16 +148,16 @@ To deploy a workflow package follow this procedure.
 1. Open Internet Explorer and navigate to the SharePoint Server 2013 site collection where you want to deploy the workflow. 
     
   
-2. Click  **Site Actions** and select **Site Settings**. 
+2. Click **Site Actions**and select**Site Settings**. 
     
   
-3. In the  **Web Design Galleries** section click **Solutions**. 
+3. In the **Web Design Galleries**section click**Solutions**. 
     
-    > [!Note]  
-> You must be on the  **Site Settings** page for the site collection in order to see the **Solutions** gallery. If you are on the **Site Settings** page for a sub-site then the **Solutions** gallery is not visible.
-4. Click the  **Upload Solution** button to upload the solution as shown in the figure.
+    > [!NOTE]  
+> You must be on the **Site Settings**page for the site collection in order to see the**Solutions**gallery. If you are on the**Site Settings**page for a sub-site then the**Solutions**gallery is not visible.
+4. Click the **Upload Solution**button to upload the solution as shown in the figure.
     
-    **Figure: Upload Solution button**
+   **Figure: Upload Solution button**
 
   
 
@@ -173,9 +167,9 @@ To deploy a workflow package follow this procedure.
   
 
   
-5. Activate the solution by clicking the  **Activate** button as shown in the figure.
+5. Activate the solution by clicking the **Activate**button as shown in the figure.
     
-    **Figure: Activate Solution dialog and button**
+   **Figure: Activate Solution dialog and button**
 
   
 
@@ -193,13 +187,13 @@ After a workflow solution has been activated for a site collection, it is availa
 ### Activate the workflow feature
 
 
-1. Open  **Site Settings** on the site where you wish to activate the workflow feature.
+1. Open **Site Settings**on the site where you wish to activate the workflow feature.
     
   
-2. In the  **Site Actions** group, click **Manage site features**. 
+2. In the **Site Actions**group, click**Manage site features**. 
     
   
-3. Click  **Activate** next to the workflow feature as shown in the figure.
+3. Click **Activate**next to the workflow feature as shown in the figure.
     
   
 

@@ -10,12 +10,6 @@ ms.assetid: fb159708-d6b4-40c1-b5cc-4bb2071a7930
 
 # PerformancePoint Services in SharePoint 2013
 Learn about supported development scenarios and the extensibility architecture for PerformancePoint Services in SharePoint Server 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013 Enterprise* 
 PerformancePoint Services is a SharePoint Server 2013 service application. It enables users to create business intelligence (BI) dashboards that provide insight into an organization's performance. You can create custom reports, filters, tabular data sources, and scorecard transforms to extend the native functionality of PerformancePoint Services. For example, you can create a custom report visualization that is optimized for the medical industry and then integrate it into a reusable vertical solution. 
   
     
@@ -85,7 +79,7 @@ For more information about creating editors, see the following topics:
     
   
 
-> [!Note]  
+> [!NOTE]  
 > PerformancePoint Dashboard Designer can create and delete custom objects, so your editor does not need to provide logic for creating or deleting objects. 
   
     
@@ -94,7 +88,7 @@ For more information about creating editors, see the following topics:
 
 ### Configuration metadata for PerformancePoint Services extensions in SharePoint Server 2013
 
-You must specify metadata for your extension in the PerformancePoint Services web.config file during the installation process. The metadata includes  **type**,  **subType**,  **RendererClass**,  **EditorURI**, and  **Resources** attributes.
+You must specify metadata for your extension in the PerformancePoint Services web.config file during the installation process. The metadata includes **type**, **subType**, **RendererClass**, **EditorURI**, and **Resources**attributes.
   
     
     
@@ -119,7 +113,7 @@ For more information about scorecard transforms, see  [How to: Create scorecard 
     
     
 
-> [!Note]  
+> [!NOTE]  
 > If a transform modifies the data values in a scorecard, the changes propagate directly to Strategy Map reports that use the scorecard as a data source. In addition, changes to scorecards may affect KPI Details reports. 
   
     
@@ -158,7 +152,7 @@ Custom editors (and other supported custom applications) run on the front-end we
 - Report and filter objects should use  [SPDataStore](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Store.SPDataStore.aspx) for all repository tasks.
     
   
-- Data source objects should use  [BIMonitoringServiceApplicationProxy](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.BIMonitoringServiceApplicationProxy.aspx) to perform **Create** and **Update** tasks so that these tasks are performed within the context of the PerformancePoint Services service application. **Read** (get) and **Delete** tasks can be performed by using [BIMonitoringServiceApplicationProxy](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.BIMonitoringServiceApplicationProxy.aspx) or [SPDataStore](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Store.SPDataStore.aspx) . (However, custom data source applications that run on the application server can call [SPDataStore](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Store.SPDataStore.aspx) directly.)
+- Data source objects should use  [BIMonitoringServiceApplicationProxy](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.BIMonitoringServiceApplicationProxy.aspx) to perform**Create**and**Update**tasks so that these tasks are performed within the context of the PerformancePoint Services service application.**Read**(get) and**Delete**tasks can be performed by using [BIMonitoringServiceApplicationProxy](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.BIMonitoringServiceApplicationProxy.aspx) or [SPDataStore](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Store.SPDataStore.aspx) . (However, custom data source applications that run on the application server can call [SPDataStore](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Store.SPDataStore.aspx) directly.)
     
   
 

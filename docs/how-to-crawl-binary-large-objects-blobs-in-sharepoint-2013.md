@@ -1,5 +1,5 @@
 ---
-title: How to: Crawl binary large objects (BLOBs) in SharePoint 2013
+title: How to Crawl binary large objects (BLOBs) in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 99b3dd51-1651-4300-a2de-33681f4cc258
 ---
@@ -7,16 +7,10 @@ ms.assetid: 99b3dd51-1651-4300-a2de-33681f4cc258
 
 # How to: Crawl binary large objects (BLOBs) in SharePoint 2013
 Learn how to modify the BDC model file for a database BCS indexing connector to enable the Search in SharePoint 2013 crawler to crawl binary large object (BLOB) data stored in a SQL Server database. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## Crawling BLOB data
 <a name="HowToCrawlBlobs_CrawlingBlobData"> </a>
 
-The Business Data Connectivity (BDC) service supports reading BLOB data types, which is useful for streaming BLOB data from external systems. For this to work, you need to ensure that the database table containing the external data is set up to support this. You then add a  **StreamAccessor** method to the BDC model file for the external content source's BCS indexing connector.
+The Business Data Connectivity (BDC) service supports reading BLOB data types, which is useful for streaming BLOB data from external systems. For this to work, you need to ensure that the database table containing the external data is set up to support this. You then add a **StreamAccessor**method to the BDC model file for the external content source's BCS indexing connector.
   
     
     
@@ -32,7 +26,7 @@ The Microsoft SQL Server database table must have a column that specifies either
 **Table 1. Sample database table schema**
 
 
-|**Column Name **|**Data Type **|
+|**Column Name**|**Data Type**|
 |:-----|:-----|
 |Id |Int |
 |DisplayName |nvarchar(50) |
@@ -44,7 +38,7 @@ The Microsoft SQL Server database table must have a column that specifies either
 **Table 2. Sample database table values**
 
 
-|**Id **|**Display Name **|**Extension **|**Data **|**Content Type **|
+|**Id**|**Display Name**|**Extension**|**Data**|**Content Type**|
 |:-----|:-----|:-----|:-----|:-----|
 |1 |File1 |.docx |0x504B… |application/vnd.openxmlformats-officedocument.wordprocessingml.document |
 |2 |File2 |.doc |0xD… |application/msword |
@@ -66,16 +60,16 @@ After you create the BLOB external content type, you are ready to modify the BDC
 ### To export the BDC model file for the BLOB external content type
 
 
-1. In SharePoint Designer, click  **External Content Types** in the left navigation to display the external content types that are defined in that site's service application's BDC metadata store.
+1. In SharePoint Designer, click **External Content Types**in the left navigation to display the external content types that are defined in that site's service application's BDC metadata store.
     
   
-2. In the  **External Content Types** list, select the BLOB external content type. Then, click **Export BDC Model** on the Server ribbon.
+2. In the **External Content Types**list, select the BLOB external content type. Then, click**Export BDC Model**on the Server ribbon.
     
   
-3. Type a name in the  **BDC Model Name** text box, and then click **OK**. 
+3. Type a name in the **BDC Model Name**text box, and then click**OK**. 
     
   
-4. Select the location where you want to save the BDC model (.bdcm) file, and then click  **Save**. 
+4. Select the location where you want to save the BDC model (.bdcm) file, and then click **Save**. 
     
   
 
@@ -85,9 +79,9 @@ After you create the BLOB external content type, you are ready to modify the BDC
 1. In an XML editor, open the BDC model file you created in the previous section. 
     
   
-2. Create a new method that returns the BLOB field. You should define a  **StreamAccessor** type method instance for this method, as shown in the following example.
+2. Create a new method that returns the BLOB field. You should define a **StreamAccessor**type method instance for this method, as shown in the following example.
     
-    > [!Note]  
+    > [!NOTE]  
 > The table name in this example is Attachment. 
 
   ```XML

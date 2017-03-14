@@ -7,19 +7,13 @@ ms.assetid: 2a3a7d23-775a-4d95-9066-ebbd18c92ad4
 
 # Searching new content with SharePoint Search
 Learn how to make content available for users to search with SharePoint Server 2013.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## Making content available for search in SharePoint Server 2013
 
 Search in SharePoint 2013 provides two approaches for processing queries to return search results—federated search and content crawling.
   
     
     
- **Federated search** In this approach, search results are returned for content that is not crawled by your search server. The query is forwarded to an external content repository where it is processed by that repository's search engine. The repository's search engine then returns the results to the search server. The search server formats and renders the results from the external repository to display on the search results page. This approach offers the following advantages:
+**Federated search**In this approach, search results are returned for content that is not crawled by your search server. The query is forwarded to an external content repository where it is processed by that repository's search engine. The repository's search engine then returns the results to the search server. The search server formats and renders the results from the external repository to display on the search results page. This approach offers the following advantages:
   
     
     
@@ -36,7 +30,7 @@ Search in SharePoint 2013 provides two approaches for processing queries to retu
 - You can access repositories that are secured against crawls, but which can be accessed by search queries.
     
   
- **Content crawling** In this approach, results are returned from the Search service application's content index based on the user's query. The content index contains content that is crawled by the Search service application, and includes text content and metadata for each content item. This approach enables you to:
+**Content crawling**In this approach, results are returned from the Search service application's content index based on the user's query. The content index contains content that is crawled by the Search service application, and includes text content and metadata for each content item. This approach enables you to:
   
     
     

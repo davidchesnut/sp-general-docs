@@ -7,18 +7,18 @@ ms.assetid: 017df869-44fb-4ffe-82fb-4654e01329ad
 
 # Build mobile apps for other platforms using SharePoint 2013
 Learn how to use Representational State Transfer (REST) to create a SharePoint 2013 mobile app for any platform. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint | SharePoint Foundation 2013 | SharePoint Server 2013* 
 Mobile devices have become more powerful and easy to use nowadays. Laptops, netbooks, tablet PCs, and mobile phones provide workers access to the information and applications that they need to do their jobs. And developing applications for mobile devices is now easier than ever. As a result, more and more business scenarios demand integrating client applications together with their business processes. This article describes how to integrate mobile client apps together with SharePoint 2013. You can create a mobile app to browse SharePoint content from any location and connect with SharePoint lists and libraries to access data. 
   
     
     
 
-To develop a mobile app that interacts with SharePoint 2013, you can use common services that can be accessed using open protocols. SharePoint Foundation 2010 introduced the client object models, which enabled developers to perform remote communication with SharePoint by using the web programming technology of their choice: .NET Framework, Microsoft Silverlight, or JavaScript. SharePoint 2013 introduces a Representational State Transfer (REST) service that is fully comparable to the client object models. In SharePoint 2013, nearly every API in the client object models will have a corresponding REST endpoint. Now, developers can interact remotely with the SharePoint object model by using any technology that supports REST web requests. REST can be consumed by any programming language that you want to use for your mobile application development. You can perform basic create, read, update, and delete (CRUD) operations by using the REST interface provided by SharePoint 2013. REST exposes all of the SharePoint entities and operations that are available in the other SharePoint client APIs. One advantage of using REST is that you don't have to add references to any SharePoint 2013 libraries or client assemblies. Instead, you make HTTP requests to the appropriate endpoints to retrieve or update SharePoint entities, such as webs, lists, and list items. For a thorough introduction to the SharePoint 2013 REST interface and its architecture, see  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx). 
+To develop a mobile app that interacts with SharePoint 2013, you can use common services that can be accessed using open protocols. SharePoint Foundation 2010 introduced the client object models, which enabled developers to perform remote communication with SharePoint by using the web programming technology of their choice: .NET Framework, Microsoft Silverlight, or JavaScript. SharePoint 2013 introduces a Representational State Transfer (REST) service that is fully comparable to the client object models. In SharePoint 2013, nearly every API in the client object models will have a corresponding REST endpoint. Now, developers can interact remotely with the SharePoint object model by using any technology that supports REST web requests. REST can be consumed by any programming language that you want to use for your mobile application development. 
+You can perform basic create, read, update, and delete (CRUD) operations by using the REST interface provided by SharePoint 2013. REST exposes all of the SharePoint entities and operations that are available in the other SharePoint client APIs. One advantage of using REST is that you don't have to add references to any SharePoint 2013 libraries or client assemblies. Instead, you make HTTP requests to the appropriate endpoints to retrieve or update SharePoint entities, such as webs, lists, and list items. For a thorough introduction to the SharePoint 2013 REST interface and its architecture, see  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx). 
+  
+    
+    
+
+
 ## REST endpoints in SharePoint 2013
 <a name="BuildMobileAppsInSharePoint2013ForNonWindowsPhone_REST_EndpointsInSharePoint2013"> </a>
 
@@ -49,13 +49,13 @@ In general:
     
     
 
-- Endpoints that represent read operations map to HTTP  **GET** commands.
+- Endpoints that represent read operations map to HTTP **GET**commands.
     
   
-- Endpoints that represent update operations map to HTTP  **POST** commands.
+- Endpoints that represent update operations map to HTTP **POST**commands.
     
   
-- Endpoints that represent update or insert operations map to HTTP  **PUT** commands.
+- Endpoints that represent update or insert operations map to HTTP **PUT**commands.
     
   
 In choosing an HTTP request to use, you should also consider the following: 
@@ -63,16 +63,16 @@ In choosing an HTTP request to use, you should also consider the following:
     
     
 
-- Use  **POST** to create artifacts such as lists and sites. The SharePoint 2013 REST service supports sending **POST** commands that include object definitions to endpoints that represent collections.
+- Use **POST**to create artifacts such as lists and sites. The SharePoint 2013 REST service supports sending**POST**commands that include object definitions to endpoints that represent collections.
     
   
-- For  **POST** operations, any properties that are not required are set to their default values. If you try to set a read-only property as part of a **POST** operation, the service returns an exception.
+- For **POST**operations, any properties that are not required are set to their default values. If you try to set a read-only property as part of a**POST**operation, the service returns an exception.
     
   
-- Use  **PUT**,  **PATCH**, and  **MERGE** operations to update existing SharePoint objects. Any service endpoint that represents an object property **set** operation supports both **PUT** requests and **MERGE** requests. For **MERGE** requests, setting properties is optional; any properties that you do not explicitly set retain their current property. But for **PUT** commands, any properties you do not explicitly set are set to their default properties. In addition, if you do not specify all settable properties in object updates when you use HTTP **PUT** commands, the REST service returns an exception.
+- Use **PUT**, **PATCH**, and **MERGE**operations to update existing SharePoint objects. Any service endpoint that represents an object property**set**operation supports both**PUT**requests and**MERGE**requests. For**MERGE**requests, setting properties is optional; any properties that you do not explicitly set retain their current property. But for**PUT**commands, any properties you do not explicitly set are set to their default properties. In addition, if you do not specify all settable properties in object updates when you use HTTP**PUT**commands, the REST service returns an exception.
     
   
-- Use the HTTP  **DELETE** command against the specific endpoint URL to delete the SharePoint object represented by that endpoint. For recyclable objects, such as lists, files, and list items, this results in a **Recycle** operation. For more information, see [Get to know the SharePoint 2013 REST service](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx). 
+- Use the HTTP **DELETE**command against the specific endpoint URL to delete the SharePoint object represented by that endpoint. For recyclable objects, such as lists, files, and list items, this results in a**Recycle**operation. For more information, see [Get to know the SharePoint 2013 REST service](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx). 
     
   
 
@@ -133,11 +133,11 @@ void odataAt_AuthenticationCompleted(object sender, AuthenticationCompletedEvent
 
 ```
 
-To authenticate an  **HttpWebrequest** to the endpoint, you should first authenticate to SharePoint with the **ODataAuthenticator** class. Before calling the **Authenticate** method, register the **ODataAuthenticator** object to the **AuthenticationCompleted** event.
+To authenticate an **HttpWebrequest**to the endpoint, you should first authenticate to SharePoint with the**ODataAuthenticator**class. Before calling the**Authenticate**method, register the**ODataAuthenticator**object to the**AuthenticationCompleted**event.
   
     
     
-After authentication is done inside the  **OnAuthenticationCompleted** event, you can use the **CookieContainer** property on the **ODataAuthenticator** object, which can be attached to the **HttpWebRequest** object to authenticate the REST calls to SharePoint.
+After authentication is done inside the **OnAuthenticationCompleted**event, you can use the**CookieContainer**property on the**ODataAuthenticator**object, which can be attached to the**HttpWebRequest**object to authenticate the REST calls to SharePoint.
   
     
     
@@ -145,7 +145,7 @@ After authentication is done inside the  **OnAuthenticationCompleted** event, yo
 ## Work with SharePoint list items using REST
 <a name="BuildMobileAppsInSharePoint2013ForNonWindowsPhone_WorkingWithTheSharePointListItemUsingREST"> </a>
 
-The following example shows how to  **retrieve** all of a list's items.
+The following example shows how to **retrieve**all of a list's items.
   
     
     
@@ -163,7 +163,7 @@ headers:
 
 ```
 
-The following example shows how to  **retrieve** a specific list item.
+The following example shows how to **retrieve**a specific list item.
   
     
     
@@ -209,13 +209,13 @@ The following XML shows an example of the list item properties that are returned
 </content>
 ```
 
-The following example shows how to  **create** a list item.
+The following example shows how to **create**a list item.
   
     
     
 
-> [!Note]  
-> To do this operation, you must know the  **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
+> [!NOTE]  
+> To do this operation, you must know the **ListItemEntityTypeFullName**property of the list and pass that as the value of**type**in the HTTP request body.
   
     
     
@@ -238,13 +238,13 @@ headers:
     content-length:length of post body
 ```
 
-The following example shows how to  **update** a list item.
+The following example shows how to **update**a list item.
   
     
     
 
-> [!Note]  
-> To do this operation, you must know the  **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
+> [!NOTE]  
+> To do this operation, you must know the **ListItemEntityTypeFullName**property of the list and pass that as the value of**type**in the HTTP request body.
   
     
     
@@ -268,7 +268,7 @@ headers:
     content-length:length of post body
 ```
 
-The following example shows how to  **delete** a list item.
+The following example shows how to **delete**a list item.
   
     
     

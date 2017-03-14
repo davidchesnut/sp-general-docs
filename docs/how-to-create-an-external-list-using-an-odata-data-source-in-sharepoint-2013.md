@@ -1,5 +1,5 @@
 ---
-title: How to: Create an external list using an OData data source in SharePoint 2013
+title: How to Create an external list using an OData data source in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 601fbfce-a0c6-43dd-8398-540d094c083c
 ---
@@ -7,12 +7,6 @@ ms.assetid: 601fbfce-a0c6-43dd-8398-540d094c083c
 
 # How to: Create an external list using an OData data source in SharePoint 2013
 Learn how to create an external list programmatically and bind it to an OData-based external content type in SharePoint 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 Although a power user or SharePoint administrator will likely create an external list using SharePoint Designer 2013, a developer will be interested in the ability to create external lists using the tools of their trade, Visual Studio 2012 and the Office Developer Tools for Visual Studio 2012. This gives them more flexibility to add functionality and to package a solution that includes Business Connectivity Services (BCS) features for later deployment into one or many host environments. 
   
     
@@ -54,7 +48,7 @@ The following articles provide information about SharePoint Add-ins and other ba
 **Table 1. Core concepts for external lists**
 
 
-|**Article title **|**Description **|
+|**Article title**|**Description**|
 |:-----|:-----|
 | [Get started with Business Connectivity Services in SharePoint 2013](get-started-with-business-connectivity-services-in-sharepoint-2013.md)|Learn about Business Connectivity Services and how you can expose external data in SharePoint 2013. |
 | [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)|Learn about the new app model in SharePoint 2013 that enables you to create apps, which are small, easy-to-use solutions for end users. |
@@ -69,7 +63,7 @@ The following procedures will show you how to create a new external list, bind i
     
     
 
-> [!Note]  
+> [!NOTE]  
 > The first step assumes that you have successfully created an external content type, as described in  [How to: Create an external content type from an OData source in SharePoint 2013](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint-2013.md). 
   
     
@@ -79,7 +73,7 @@ The following procedures will show you how to create a new external list, bind i
 ### To add an external list automatically
 
 
-1. If you just want to add a simple list to your project that reflects what is in your external content type, you can use the Visual Studio 2012 autogeneration tools. The list is created when the external content type is created. When you select the  **Create list instances for the selected data entities (except Service Operations)** check box found in the second step of the autogeneration process (Select the Data Entities step), the wizard creates the XML declarations and add new external content types for each entity you selected.
+1. If you just want to add a simple list to your project that reflects what is in your external content type, you can use the Visual Studio 2012 autogeneration tools. The list is created when the external content type is created. When you select the **Create list instances for the selected data entities (except Service Operations)**check box found in the second step of the autogeneration process (Select the Data Entities step), the wizard creates the XML declarations and add new external content types for each entity you selected.
     
   
 2. Press F5 to deploy the project, and the new list is also deployed. 

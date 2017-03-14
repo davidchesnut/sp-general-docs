@@ -7,12 +7,6 @@ ms.assetid: c967be7c-f29f-481a-9ce2-915ead315dcd
 
 # Modify SharePoint components for MDS
 Learn how to modify the components in your SharePoint project to take advantage of Minimal Download Strategy (MDS) in SharePoint 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Online* 
 Minimal Download Strategy (MDS) improves the user experience by returning from the server only the portions of a page required to render it properly in the browser. Because the fully-rendered page is not returned to the client, the server must be able to accurately identify the portions that are required to render the page. You might need to modify the components in your SharePoint project so that they are identified as MDS-compliant and can work with the MDS engine. Learn more about MDS in  [Minimal Download Strategy overview](minimal-download-strategy-overview.md). 
   
     
@@ -54,7 +48,7 @@ The master page provides a template that lets MDS identify the content regions t
     
 
     
-> [!Note]  
+> [!NOTE]  
 > There are many more components in the Seattle.master master page that change from page to page, such as style sheets and JavaScript files. Figure 1 shows only a few examples. 
   
     
@@ -77,7 +71,7 @@ There are different patterns to optimize the components in a master page. You ca
 - Page title 
     
   
-HTML regions and controls are MDS compatible if they are wrapped in  **SharePoint:AjaxDelta** tags. By wrapping the content in **SharePoint:AjaxDelta** tags, you are signaling that the MDS engine should update the enclosed controls and HTML. If a control or HTML section doesn't change from page to page, it should not be sent to the client. Therefore, you should keep these controls outside of **AjaxDelta** tags. In the Seattle.master master page shown in Figure 1, the (1) main content area is wrapped in **AjaxDelta** tags, as shown here.
+HTML regions and controls are MDS compatible if they are wrapped in **SharePoint:AjaxDelta**tags. By wrapping the content in**SharePoint:AjaxDelta**tags, you are signaling that the MDS engine should update the enclosed controls and HTML. If a control or HTML section doesn't change from page to page, it should not be sent to the client. Therefore, you should keep these controls outside of**AjaxDelta**tags. In the Seattle.master master page shown in Figure 1, the (1) main content area is wrapped in**AjaxDelta**tags, as shown here.
   
     
     
@@ -95,7 +89,7 @@ HTML regions and controls are MDS compatible if they are wrapped in  **SharePoin
 </SharePoint:AjaxDelta>
 ```
 
-Another example of the  **AjaxDelta** pattern is the (2) left navigation bar in Figure 1. The following code shows how the control is wrapped in **AjaxDelta** tags along with many other controls and HTML.
+Another example of the **AjaxDelta**pattern is the (2) left navigation bar in Figure 1. The following code shows how the control is wrapped in**AjaxDelta**tags along with many other controls and HTML.
   
     
     
@@ -121,11 +115,11 @@ Another example of the  **AjaxDelta** pattern is the (2) left navigation bar in 
 </SharePoint:AjaxDelta>
 ```
 
-One last thing to remember about  **AjaxDelta** tags is that you can't nest them. You should specify **AjaxDelta** tags at the highest required level in the master page structure.
+One last thing to remember about **AjaxDelta**tags is that you can't nest them. You should specify**AjaxDelta**tags at the highest required level in the master page structure.
   
     
     
-The last example in Figure 1 is the (3) page title, which requires a special pattern that uses the  **SharePoint:PageTitle** tag. The following code shows the **PageTitle** tag as used in the Seattle.master master page.
+The last example in Figure 1 is the (3) page title, which requires a special pattern that uses the **SharePoint:PageTitle**tag. The following code shows the**PageTitle**tag as used in the Seattle.master master page.
   
     
     
@@ -154,7 +148,7 @@ Your master page can also include style sheets and JavaScript files. The server 
 <SharePoint:CssRegistration Name="my_styles.css" runat="server" />
 ```
 
-Note that you can have only one  **CssLink** tag per master page, but you can have many **CssRegistration** tags, so you can add many CSS files. Use the following pattern for JavaScript files.
+Note that you can have only one **CssLink**tag per master page, but you can have many**CssRegistration**tags, so you can add many CSS files. Use the following pattern for JavaScript files.
   
     
     
@@ -166,7 +160,7 @@ Note that you can have only one  **CssLink** tag per master page, but you can ha
 <SharePoint:ScriptLink language="javascript" name="my_javascript.js" runat="server" />
 ```
 
-Including CSS and JavaScript files using HTML  **style** and **script** tags is not supported in MDS.
+Including CSS and JavaScript files using HTML **style**and**script**tags is not supported in MDS.
   
     
     
@@ -174,11 +168,11 @@ Including CSS and JavaScript files using HTML  **style** and **script** tags is 
 ## ASP.NET pages
 <a name="SP15MDSDev_ASPNET"> </a>
 
-If your project includes ASP.NET pages, you probably need to reference CSS and JavaScript files. The HTML  **style** and **script** tags are not compatible with MDS. Instead, use the **CssRegistration** and **ScriptLink** patterns explained in the previous section.
+If your project includes ASP.NET pages, you probably need to reference CSS and JavaScript files. The HTML **style**and**script**tags are not compatible with MDS. Instead, use the**CssRegistration**and**ScriptLink**patterns explained in the previous section.
   
     
     
-Your ASP.NET pages may also use the  **Response.Output** method to write content to the page, which is not allowed in MDS. Instead, you can use the following MDS-compliant methods of the [SPHttpUtility](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPHttpUtility.aspx) class:
+Your ASP.NET pages may also use the **Response.Output**method to write content to the page, which is not allowed in MDS. Instead, you can use the following MDS-compliant methods of the [SPHttpUtility](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPHttpUtility.aspx) class:
   
     
     
@@ -234,11 +228,11 @@ namespace VisualWebPartProject2.VisualWebPart1
     // Rest of your control logic
 ```
 
-Also, your controls and Web Parts need to register their resources using the methods in the  [SPPageContentManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebControls.SPPageContentManager.aspx) class. The most common resources are JavaScript snippets and hidden files, which can be registered using the **RegisterClientScriptBlock** and **RegisterHiddenField**, respectively. 
+Also, your controls and Web Parts need to register their resources using the methods in the  [SPPageContentManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebControls.SPPageContentManager.aspx) class. The most common resources are JavaScript snippets and hidden files, which can be registered using the**RegisterClientScriptBlock**and**RegisterHiddenField**, respectively. 
   
     
     
-Your controls and Web Parts can also use XSLT files to control the rendering process. Your XSLT files can have embedded JavaScript code or files. The MDS engine needs to know about these resources. You can register the JavaScript resources using an XSLT extension object named  **pcm**. A great example of how to use the  **pcm** object is in the %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\LAYOUTS\\XSL\\fldtypes.xsl file. The following code shows how the **fldtypes.xsl** file uses the **pcm** object to register JavaScript resources.
+Your controls and Web Parts can also use XSLT files to control the rendering process. Your XSLT files can have embedded JavaScript code or files. The MDS engine needs to know about these resources. You can register the JavaScript resources using an XSLT extension object named **pcm**. A great example of how to use the **pcm**object is in the %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\LAYOUTS\\XSL\\fldtypes.xsl file. The following code shows how the**fldtypes.xsl**file uses the**pcm**object to register JavaScript resources.
   
     
     

@@ -10,12 +10,6 @@ ms.assetid: 56fa3913-c156-49da-bed0-a6a106fc129f
 
 # Excel Services Best Practices
 
- **Last modified:** July 20, 2011
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 This topic contains a list of best-practice recommendations for working with Excel Services. 
   
     
@@ -35,12 +29,12 @@ The following settings combination gives anonymous users access to any files in 
 - Anonymous access to Microsoft SharePoint Foundation is turned on. 
     
   
-- You have a UNC trusted location and the  **Process account** is turned on.
+- You have a UNC trusted location and the **Process account**is turned on.
     
   
 
-> [!Note]  
-> The  **Process account** is a global Excel Services setting that affects all trusted locations.
+> [!NOTE]  
+> The **Process account**is a global Excel Services setting that affects all trusted locations.
   
     
     
@@ -49,22 +43,22 @@ The following settings combination gives anonymous users access to any files in 
 ### To view the Process account option
 
 
-1. On the  **Start** menu, click **All Programs**. 
+1. On the **Start**menu, click**All Programs**. 
     
   
-2. Point to  **Microsoft SharePoint 2010 Products**, and then click  **SharePoint Central Administration**. 
+2. Point to **Microsoft SharePoint 2010 Products**, and then click **SharePoint Central Administration**. 
     
   
-3. Under  **Application Management**, click  **Manage service applications**. 
+3. Under **Application Management**, click **Manage service applications**. 
     
   
-4. On the Manage Service Applications page, click  **Excel Services Application**. 
+4. On the Manage Service Applications page, click **Excel Services Application**. 
     
   
-5. On the  **Excel Services Application** page, click **Global Settings**. 
+5. On the **Excel Services Application**page, click**Global Settings**. 
     
   
-6. In the  **Security** section, look under **File Access Method** for the **Process account** option.
+6. In the **Security**section, look under**File Access Method**for the**Process account**option.
     
   
 
@@ -78,7 +72,7 @@ We recommend that you use the Microsoft Internet Information Services (IIS) sett
   
     
     
-Use the  **maxRequestLength** attribute in the **httpRuntime** element in the **system.web** element to prevent denial of service attacks that are caused by users posting large files to the server. The default size is 4096 KB (4 MB).
+Use the **maxRequestLength**attribute in the**httpRuntime**element in the**system.web**element to prevent denial of service attacks that are caused by users posting large files to the server. The default size is 4096 KB (4 MB).
   
     
     

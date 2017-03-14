@@ -8,12 +8,6 @@ ms.assetid: c6bf3db0-db79-4b13-9834-891d24b2c9e5
 
 # Get started with Business Connectivity Services in SharePoint 2013
 Learn the basics of what Business Connectivity Services (BCS) provides to developers of SharePoint 2013 solutions, along with how to get started using BCS in various types of solutions. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## What is Business Connectivity Services?
 
 
@@ -96,7 +90,7 @@ The following table highlights the core concepts that you will need to be famili
 **Table 1. Core concepts for understanding BCS**
 
 
-|**Article **|**Description **|
+|**Article**|**Description**|
 |:-----|:-----|
 | [Entity Data Model Key Concepts](http://msdn.microsoft.com/en-us/library/ee382840.aspx)|The Entity Data Model (EDM) uses three key concepts to describe the structure of data: entity type, association type, and property. These are the most important concepts in describing the structure of data in any implementation of the EDM. |
 | [Basic Security Practices for Web Applications](http://msdn.microsoft.com/en-us/library/zdh19h94.aspx)|The topic of creating a secure web application is extensive. It requires study to understand security vulnerabilities. You also need to become familiar with the security facilities of the Windows operating system, the .NET Framework, and ASP.NET. Finally, it is essential to understand how to use these security features to counter threats. |
@@ -118,7 +112,7 @@ With BCS, you can bring information into SharePoint from many different sources.
 **Table 2. Basic tasks for working with Business Connectivity Services**
 
 
-|**Task **|**Description **|
+|**Task**|**Description**|
 |:-----|:-----|
 | [External content types in SharePoint 2013](external-content-types-in-sharepoint-2013.md)|Learn about creating Business Connectivity Services (BCS) external content types. |
 | [How to: Create an external content type from an OData source in SharePoint 2013](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint-2013.md)|Find information that is needed to get started creating external content types based on OData sources and using that data in SharePoint or Office components. |
@@ -138,7 +132,7 @@ When you master the basic concepts of BCS, you can use the more advanced feature
 **Table 3. Advanced concepts in BCS**
 
 
-|**Topic **|**Description **|
+|**Topic**|**Description**|
 |:-----|:-----|
 | [How to: Create an OData data service for use as a BCS external system](how-to-create-an-odata-data-service-for-use-as-a-bcs-external-system.md)|Learn how to create an Internet-addressable WCF service that uses OData to send notifications to SharePoint 2013 when the underlying data changes. These notifications are used to trigger events that are attached to external lists. |
 | [BDC model schema reference for SharePoint 2013](bdc-model-schema-reference-for-sharepoint-2013.md)|Find reference documentation for the schema of the BDC model. |

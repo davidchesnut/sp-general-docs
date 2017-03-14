@@ -1,5 +1,5 @@
 ---
-title: How to: Use the Content Enrichment web service callout for SharePoint Server
+title: How to Use the Content Enrichment web service callout for SharePoint Server
 ms.prod: SHAREPOINT
 ms.assetid: d4e44498-9a3d-4f2f-b5ba-6ebef9971dcb
 ---
@@ -7,12 +7,6 @@ ms.assetid: d4e44498-9a3d-4f2f-b5ba-6ebef9971dcb
 
 # How to: Use the Content Enrichment web service callout for SharePoint Server
 Learn how to implement the Content Enrichment web service in SharePoint Server 2013 to modify the managed properties of crawled items before they are indexed. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 Search in SharePoint 2013 enables developers to add a custom step to content processing to modify the managed properties of crawled items before they are indexed. This custom step requires the implementation of an external web service--the Content Enrichment web service--that can enrich managed properties of items being processed; and then configuring the system to call this external web service. 
   
     
@@ -50,16 +44,16 @@ These Windows PowerShell cmdlets enable an administrator to configure the follow
 - A custom set of managed properties to be returned by the external web service. 
     
   
-- A trigger condition, that represents a predicate to execute for every item being processed. If a trigger condition is used, the external web service is called only when the trigger evaluates to  **true**. If no trigger condition is used, all items are sent to the external web service. 
+- A trigger condition, that represents a predicate to execute for every item being processed. If a trigger condition is used, the external web service is called only when the trigger evaluates to **true**. If no trigger condition is used, all items are sent to the external web service. 
     
   
-- A  **FailureMode** that enables the web service to either fail items that cannot be processed during the content enrichment step or pass these items through without any modification. If the items are failed, they are not indexed and a warning is written to the ULS log.
+- A **FailureMode**that enables the web service to either fail items that cannot be processed during the content enrichment step or pass these items through without any modification. If the items are failed, they are not indexed and a warning is written to the ULS log.
     
   
-- A  **DebugMode**, that enables rapid prototyping of the external web service. When enabled, the external web service receives all available managed properties. In  **DebugMode**, the trigger condition is ignored and any managed properties output by the web service are also ignored. 
+- A **DebugMode**, that enables rapid prototyping of the external web service. When enabled, the external web service receives all available managed properties. In **DebugMode**, the trigger condition is ignored and any managed properties output by the web service are also ignored. 
     
   
-- A  **SendRawData** switch that sends the raw data of an item in binary form. This is useful when more metadata is required than what can be retrieved from the parsed version of the item.
+- A **SendRawData**switch that sends the raw data of an item in binary form. This is useful when more metadata is required than what can be retrieved from the parsed version of the item.
     
   
 In addition, there are options for specifying size limits and timeouts. See  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout.md) for a full list of configurable properties.
@@ -103,42 +97,42 @@ In this step, you will create the service implementation project and then add th
 ### To create the project for a content enrichment service
 
 
-1. In Visual Studio, on the menu bar choose  **File**,  **New**,  **Project**. 
+1. In Visual Studio, on the menu bar choose **File**, **New**, **Project**. 
     
   
-2. In  **Project types**, under Visual C#, choose  **WCF**. 
+2. In **Project types**, under Visual C#, choose **WCF**. 
     
   
-3. Under  **Templates**, choose  **WCF Service Application**. In the  **Name** field, type **ContentProcessingEnrichmentService**, and then choose the  **OK** button.
+3. Under **Templates**, choose **WCF Service Application**. In the **Name**field, type**ContentProcessingEnrichmentService**, and then choose the **OK**button.
     
   
-4. Delete the automatically generated  **Service1** class and **Service1** interface.
+4. Delete the automatically generated **Service1**class and**Service1**interface.
     
   
 
 ### To add references to the content enrichment service project
 
 
-1. On the  **Project** menu, choose **Add Reference**. 
+1. On the **Project**menu, choose**Add Reference**. 
     
   
-2. Choose  **Browse** and locate the **Microsoft.Office.Server.Search.ContentProcessingEnrichment** assembly in your SharePoint installation folder under _Installation Path_\\Microsoft Office Servers\\15.0\\Search\\Applications\\External. 
+2. Choose **Browse**and locate the**Microsoft.Office.Server.Search.ContentProcessingEnrichment**assembly in your SharePoint installation folder under _Installation Path_\\Microsoft Office Servers\\15.0\\Search\\Applications\\External. 
     
-    > [!Note]  
+    > [!NOTE]  
 > If SharePoint is installed on a machine other than your development machine, copy the assembly over to your development machine and reference it from there. 
 
 ## Create a content enrichment service
 <a name="SP15ContentEnrich_createservice"> </a>
 
-Your content processing enrichment service must implement the  **IContentProcessingEnrichmentService** interface from the [Microsoft.Office.Server.Search.ContentProcessingEnrichment](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.ContentProcessingEnrichment.aspx) namespace. The code example in this section is a basic implementation of this interface.
+Your content processing enrichment service must implement the **IContentProcessingEnrichmentService**interface from the [Microsoft.Office.Server.Search.ContentProcessingEnrichment](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.ContentProcessingEnrichment.aspx) namespace. The code example in this section is a basic implementation of this interface.
   
     
     
-The implementation requires two managed properties for each item received via the external web service:  **Author** and **Filename**. The  **Author** is a list of **String** objects and the **Filename** is a **String** object.
+The implementation requires two managed properties for each item received via the external web service: **Author**and**Filename**. The **Author**is a list of**String**objects and the**Filename**is a**String**object.
   
     
     
-The  **IContentProcessingEnrichmentService** implementation writes the raw binary data to a temporary location on disk, with **Filename** as the name of the file. Then, a new name is added to the list of authors and returned to the content processing component.
+The **IContentProcessingEnrichmentService**implementation writes the raw binary data to a temporary location on disk, with**Filename**as the name of the file. Then, a new name is added to the list of authors and returned to the content processing component.
   
     
     
@@ -146,23 +140,23 @@ The  **IContentProcessingEnrichmentService** implementation writes the raw binar
 ### To create the class file for the content enrichment service
 
 
-1. On the  **Project** menu, choose **Add New Item**. 
+1. On the **Project**menu, choose**Add New Item**. 
     
   
-2. Under  **Visual C#** in **Installed Templates**, choose  **Web**, and then choose  **WCF Service**. 
+2. Under **Visual C#**in**Installed Templates**, choose **Web**, and then choose **WCF Service**. 
     
   
-3. Type  **ContentProcessingEnrichmentService.svc**, and then choose  **Add**. 
+3. Type **ContentProcessingEnrichmentService.svc**, and then choose **Add**. 
     
   
-4. Delete the  **IContentProcessingEnrichmentService.cs** interface that is created.
+4. Delete the **IContentProcessingEnrichmentService.cs**interface that is created.
     
   
 
 ### To modify the default code in the ContentProcessingEnrichmentService class
 
 
-1. Replace the existing  **using** directives with the following **using** directives at the beginning of the class.
+1. Replace the existing **using**directives with the following**using**directives at the beginning of the class.
     
   ```cs
   
@@ -174,7 +168,7 @@ using Microsoft.Office.Server.Search.ContentProcessingEnrichment.PropertyTypes;
 
   ```
 
-2. Delete the  **DoWork** method.
+2. Delete the **DoWork**method.
     
   
 
@@ -206,7 +200,7 @@ private readonly ProcessedItem processedItemHolder = new ProcessedItem
 };
   ```
 
-2. Add the following code for the  **ProcessItem** method.
+2. Add the following code for the **ProcessItem**method.
     
   ```cs
   
@@ -267,10 +261,10 @@ public ProcessedItem ProcessItem(Item item)
 }
   ```
 
-3. Modify  **web.config** to accept messages up to 8 MB, and configure **readerQuotas** to be a sufficiently large value.
+3. Modify **web.config**to accept messages up to 8 MB, and configure**readerQuotas**to be a sufficiently large value.
     
   
-4. Add the following inside  **<system.serviceModel>**. 
+4. Add the following inside **<system.serviceModel>**. 
     
   ```XML
   
@@ -319,7 +313,7 @@ The sequence of Windows PowerShell cmdlets help you to first create a configurat
   
     
     
-The managed properties  **Author** and **Filename** are sent to your service for every item that is being processed. In addition, you have informed the web service client that the service will output a single managed property, **Author**. In additional to managed properties, the web service client is configured to send the raw data of the item with a limitation on the size of the data. Finally, the  [Set-SPEnterpriseSearchContentEnrichmentConfiguration](http://technet.microsoft.com/en-us/library/jj219659%28office.15%29.aspx)cmdlet is used to store the entire configuration. After this cmdlet returns, the configuration is active and the crawl component uses this configuration for its next crawl process. 
+The managed properties **Author**and**Filename**are sent to your service for every item that is being processed. In addition, you have informed the web service client that the service will output a single managed property,**Author**. In additional to managed properties, the web service client is configured to send the raw data of the item with a limitation on the size of the data. Finally, the  [Set-SPEnterpriseSearchContentEnrichmentConfiguration](http://technet.microsoft.com/en-us/library/jj219659%28office.15%29.aspx)cmdlet is used to store the entire configuration. After this cmdlet returns, the configuration is active and the crawl component uses this configuration for its next crawl process. 
   
     
     

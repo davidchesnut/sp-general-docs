@@ -7,13 +7,7 @@ ms.assetid: a5adf39b-8640-4871-be60-b786dcf9fafc
 
 # Debugging SharePoint Server 2013 workflows
 Demonstrates how SharePoint Server 2013 now relies on Workflow Manager 1.0 for all workflow processing and management, and demonstrates debugging options. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013* 
- **Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [www.AndrewConnell.com](http://www.andrewconnell.com)
+**Provided by:**[Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [www.AndrewConnell.com](http://www.andrewconnell.com)
   
     
     
@@ -59,7 +53,7 @@ Each option has advantages and disadvantages. It helps to have an understanding 
     
 
 
-||**SharePoint 2013 On-Premises **|**Office 365 SharePoint Online **|
+||**SharePoint 2013 On-Premises**|**Office 365 SharePoint Online**|
 |:-----|:-----|:-----|
 |SharePoint Designer 2013, SharePoint Online | Log to history list Fiddler| Log to history list|
 |Visual Studio 2012 | Log to history list Breakpoints Console debug messages Fiddler| Log to history list Breakpoints|
@@ -67,7 +61,7 @@ Each option has advantages and disadvantages. It helps to have an understanding 
 
 ## Debugging with the workflow history list
 
-The only debugging option that is available in every type of SharePoint 2013 deployment is writing log messages to the workflow history list. By using this method, you can use either the  **Log to History List** action in SharePoint Designer 2013 or the **WriteToHistory** activity in Visual Studio 2012 to write a string message as a new item to the list, specified in the workflow association, which is the container for all history logging messages. These can be simple strings or constructed by concatenating the contents of variables within the workflow.
+The only debugging option that is available in every type of SharePoint 2013 deployment is writing log messages to the workflow history list. By using this method, you can use either the **Log to History List**action in SharePoint Designer 2013 or the**WriteToHistory**activity in Visual Studio 2012 to write a string message as a new item to the list, specified in the workflow association, which is the container for all history logging messages. These can be simple strings or constructed by concatenating the contents of variables within the workflow.
   
     
     
@@ -125,7 +119,7 @@ Visual Studio will deploy the workflow to the target SharePoint environment and 
 
 ## Debugging workflows using debug messages and the test service host
 
-The introduction of Workflow Manager to the SharePoint 2013 workflow story introduces two new debugging opportunities available when you are creating custom workflows using Visual Studio 2012 and testing them in an on-premises deployment. Visual Studio 2012 includes a  **WriteLine** activity that accepts a single string-based message as an input.
+The introduction of Workflow Manager to the SharePoint 2013 workflow story introduces two new debugging opportunities available when you are creating custom workflows using Visual Studio 2012 and testing them in an on-premises deployment. Visual Studio 2012 includes a **WriteLine**activity that accepts a single string-based message as an input.
   
     
     
@@ -143,7 +137,7 @@ The introduction of Workflow Manager to the SharePoint 2013 workflow story intro
   
     
     
-This activity will write the message that resembles the  **System.Diagnostics.Debug.WriteLine()** method in a standard .NET Windows Console Application. The Workflow Manager 1.0 development tool includes a console utility that is named the **Test Service Host** that Visual Studio 2012 will open when a new debugging session is started and when testing with an on-premises SharePoint 2013 deployment. This console utility, **Microsoft.Workflow.TestServiceHost.exe** found in **C:\\Program Files (x86)\\Workflow Manager Tools\\1.0**, attaches to the registered Workflow Manager instance and listens for messages written using the  **WriteLine** activity, as shown in the following figure.
+This activity will write the message that resembles the **System.Diagnostics.Debug.WriteLine()**method in a standard .NET Windows Console Application. The Workflow Manager 1.0 development tool includes a console utility that is named the**Test Service Host**that Visual Studio 2012 will open when a new debugging session is started and when testing with an on-premises SharePoint 2013 deployment. This console utility,**Microsoft.Workflow.TestServiceHost.exe**found in**C:\\Program Files (x86)\\Workflow Manager Tools\\1.0**, attaches to the registered Workflow Manager instance and listens for messages written using the **WriteLine**activity, as shown in the following figure.
   
     
     
@@ -161,11 +155,11 @@ This activity will write the message that resembles the  **System.Diagnostics.De
   
     
     
-These messages resemble code comments or debug messages in a console application. Unlike writing to the workflow history list, you don't need to remove these before deploying the workflow to production. Unless the  **Test Service Host** utility is connected to Workflow Manager, the messages are harmless.
+These messages resemble code comments or debug messages in a console application. Unlike writing to the workflow history list, you don't need to remove these before deploying the workflow to production. Unless the **Test Service Host**utility is connected to Workflow Manager, the messages are harmless.
   
     
     
-This debugging option is not available for workflows created using SharePoint Designer 2013, because there is no action that maps to the  **WriteLine** activity. Unfortunately, this debugging option is available only to SharePoint 2013 on-premises installations, since the port used by the Test Service Host utility is typically not publically accessible outside an on-premises network. This is also true for Office 365. The ports SharePoint uses to connect to Workflow Manager are the same ones used by the Test Service Host, and those are only accessible within the trusted network. However, this does not mean that you need to change their workflows to remove any **WriteLine** activities before deployment to Office 365. These activities can be left in the workflow as they are not seen unless the **Test Service Host** is connected to Workflow Manager.
+This debugging option is not available for workflows created using SharePoint Designer 2013, because there is no action that maps to the **WriteLine**activity. Unfortunately, this debugging option is available only to SharePoint 2013 on-premises installations, since the port used by the Test Service Host utility is typically not publically accessible outside an on-premises network. This is also true for Office 365. The ports SharePoint uses to connect to Workflow Manager are the same ones used by the Test Service Host, and those are only accessible within the trusted network. However, this does not mean that you need to change their workflows to remove any**WriteLine**activities before deployment to Office 365. These activities can be left in the workflow as they are not seen unless the**Test Service Host**is connected to Workflow Manager.
   
     
     
@@ -176,7 +170,7 @@ The last debugging option for SharePoint Server 2013 workflows is a new addition
   
     
     
-This architecture yields a new debugging option for workflow authors. By using the HTTP debugging proxy tool Fiddler, you can monitor every request and corresponding response between the two products. In addition, any custom services called by the custom workflows using the  **HttpSend** activity in Visual Studio 2012 or corresponding **Call HTTP Web Service** action in SharePoint Designer 2013 can also be monitored and inspected by Fiddler. This debugging model is also available, regardless of the tool that you use to create custom workflows (SharePoint Designer 2013 or Visual Studio 2012).
+This architecture yields a new debugging option for workflow authors. By using the HTTP debugging proxy tool Fiddler, you can monitor every request and corresponding response between the two products. In addition, any custom services called by the custom workflows using the **HttpSend**activity in Visual Studio 2012 or corresponding**Call HTTP Web Service**action in SharePoint Designer 2013 can also be monitored and inspected by Fiddler. This debugging model is also available, regardless of the tool that you use to create custom workflows (SharePoint Designer 2013 or Visual Studio 2012).
   
     
     
@@ -254,7 +248,7 @@ The following sections explain how to configure Fiddler and SharePoint for workf
 
 #### Configure the .NET Framework default proxy configuration
 
-The first step is to first define the default proxy configuration for .NET Framework. These changes will allow Fiddler to intercept the traffic coming from both SharePoint Server 2013 and the Workflow Manager. Open the  **machine.config** file in both of the following locations:
+The first step is to first define the default proxy configuration for .NET Framework. These changes will allow Fiddler to intercept the traffic coming from both SharePoint Server 2013 and the Workflow Manager. Open the **machine.config**file in both of the following locations:
   
     
     
@@ -265,7 +259,7 @@ The first step is to first define the default proxy configuration for .NET Frame
 -  `%systemdrive%\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\Config\\machine.config`
     
   
-Next, add the following markup to the bottom of each file, just before the closing  **<configuration>** element:
+Next, add the following markup to the bottom of each file, just before the closing **<configuration>**element:
   
     
     
@@ -296,13 +290,13 @@ The next step is to configure Fiddler to intercept encrypted traffic and decrypt
 1. Start Fiddler. 
     
   
-2. If you are using the local HOSTS file, ensure that the entries are included in Fiddler by selecting the  **Tools -> HOSTS** menu option.
+2. If you are using the local HOSTS file, ensure that the entries are included in Fiddler by selecting the **Tools -> HOSTS**menu option.
     
   
-3. Check the  **Enable remapping of requests for one host to a different host or IP, overriding DNS**, 
+3. Check the **Enable remapping of requests for one host to a different host or IP, overriding DNS**, 
     
   
-4. Click the  **Import Windows Hosts File**, and then click the  **Save** button.
+4. Click the **Import Windows Hosts File**, and then click the **Save**button.
     
   
 
@@ -328,18 +322,18 @@ Next, configure Fiddler's connection options.
     
     
 
-1. Select the  **Tools -> Fiddler Options** menu option.
+1. Select the **Tools -> Fiddler Options**menu option.
     
   
-2. Click the  **Connections** tab.
+2. Click the **Connections**tab.
     
   
-3. Clear the  **Chain to upstream gateway proxy** selection.
+3. Clear the **Chain to upstream gateway proxy**selection.
     
   
-4. Select the  **Act as system proxy on startup** and **Monitor all connections** options, as shown in the following figure.
+4. Select the **Act as system proxy on startup**and**Monitor all connections**options, as shown in the following figure.
     
-    **Figure 6. Fiddler connection options.**
+   **Figure 6. Fiddler connection options.**
 
   
 
@@ -349,25 +343,25 @@ Next, configure Fiddler's connection options.
   
 
   
-5. Select the  **HTTPS** tab in the **Fiddler Options** dialog.
+5. Select the **HTTPS**tab in the**Fiddler Options**dialog.
     
   
-6. Check the  **Capture HTTPS CONNECTs**. 
+6. Check the **Capture HTTPS CONNECTs**. 
     
   
-7. Select  **Decrypt HTTPS Traffic**. 
+7. Select **Decrypt HTTPS Traffic**. 
     
   
-8. Select  **… from all processes**. 
+8. Select **… from all processes**. 
     
   
-9. Check  **Ignore server certificate errors**. 
+9. Check **Ignore server certificate errors**. 
     
   
-10. Click the  **Export Root Certificate to Desktop** button.
+10. Click the **Export Root Certificate to Desktop**button.
     
   
-11. When prompted with a warning, click  **Yes** to **Trust the Fiddler Root certificate**. 
+11. When prompted with a warning, click **Yes**to**Trust the Fiddler Root certificate**. 
     
   
 This process will configure Windows to trust the certificate, although SharePoint does not trust it yet. 
@@ -388,7 +382,7 @@ This process will configure Windows to trust the certificate, although SharePoin
   
     
     
- **Note**: If a security WRning appears with a message instructing not to trust the Fiddler certificate, click **Yes** to continue installing the certificate.
+**Note**: If a security WRning appears with a message instructing not to trust the Fiddler certificate, click**Yes**to continue installing the certificate.
   
     
     
@@ -441,24 +435,24 @@ This walkthrough has the following prerequisites:
 - SharePoint Server 2013 and Workflow Manager 1.0 are installed on the same server. 
     
   
-- The Windows identity  **CONTOSO\\SP_Content** is configured for the application pool identity that hosts the web application serving the SharePoint site that starts the workflow.
+- The Windows identity **CONTOSO\\SP_Content**is configured for the application pool identity that hosts the web application serving the SharePoint site that starts the workflow.
     
   
-- The SharePoint Server 2013 site used to start the workflow is  **http://intranet.contoso.com**
+- The SharePoint Server 2013 site used to start the workflow is **http://intranet.contoso.com**
     
   
-- The Workflow Manager 1.0 farm endpoint is  **w15sp.contoso.com**.
+- The Workflow Manager 1.0 farm endpoint is **w15sp.contoso.com**.
     
   
 - SharePoint Server 2013 and Workflow Manager 1.0 are configured to allow OAuth over HTTP. 
     
-    > [!Caution]  
+    > [!CAUTION]  
 > This should never be done on the production server, but only for testing and debugging. 
 
 1. Log on to the server where Workflow Manager and SharePoint 2013 are installed with the Windows identity configured as the Workflow Manager 1.0 farm account and SharePoint 2013 application pool identity. 
     
   
-2. Start Fiddler. While Fiddler will now intercept traffic from the current user, if there are any existing connections or processes running, Fiddler may miss those as it was not running when the connections were initially established. To force both Workflow Manager and SharePoint Server to recycle and have their traffic to each other get intercepted by Fiddler, recycle SharePoint by running an IISRESET and recycle Workflow Manager by stopping and starting the Windows service  **Workflow Manager Backend**. This can be done with the following two commands at an administrative command prompt. 
+2. Start Fiddler. While Fiddler will now intercept traffic from the current user, if there are any existing connections or processes running, Fiddler may miss those as it was not running when the connections were initially established. To force both Workflow Manager and SharePoint Server to recycle and have their traffic to each other get intercepted by Fiddler, recycle SharePoint by running an IISRESET and recycle Workflow Manager by stopping and starting the Windows service **Workflow Manager Backend**. This can be done with the following two commands at an administrative command prompt. 
     
   ```
   
@@ -525,7 +519,7 @@ Session #40 is where Workflow Manager is retrieving the list item ID and GUID fr
   
     
     
-Session #43 is where Workflow Manager is updating the list item in SharePoint with a new value for the announcement item's  **Body** field by passing a JavaScript Object Notation (JSON) object (indicated as [A] in the figure) along as the payload. SharePoint responds with an HTTP status of 204, which indicates that it successfully processed the request, but there is no message in the response.
+Session #43 is where Workflow Manager is updating the list item in SharePoint with a new value for the announcement item's **Body**field by passing a JavaScript Object Notation (JSON) object (indicated as [A] in the figure) along as the payload. SharePoint responds with an HTTP status of 204, which indicates that it successfully processed the request, but there is no message in the response.
   
     
     
@@ -558,7 +552,7 @@ The workflow story in the SharePoint Server 2013 release introduced a new layer 
   
     
     
-One task you need to perform when creating custom applications and business processes in workflows is debugging your work. The new workflow architecture of SharePoint Server 2013 offers the same debugging options that existed in previous versions of SharePoint. However, the new architecture offers two new options when creating custom workflows using the new architecture. This article explained the legacy debugging options as well as the new options using the  **WriteLine** activity and using Fiddler for intercepting and inspecting traffic between SharePoint Server 2013 and Workflow Manager 1.0.
+One task you need to perform when creating custom applications and business processes in workflows is debugging your work. The new workflow architecture of SharePoint Server 2013 offers the same debugging options that existed in previous versions of SharePoint. However, the new architecture offers two new options when creating custom workflows using the new architecture. This article explained the legacy debugging options as well as the new options using the **WriteLine**activity and using Fiddler for intercepting and inspecting traffic between SharePoint Server 2013 and Workflow Manager 1.0.
   
     
     

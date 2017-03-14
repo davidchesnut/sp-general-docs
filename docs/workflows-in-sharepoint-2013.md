@@ -7,12 +7,6 @@ ms.assetid: e0602371-ae22-44be-8a7e-9e47e9f046d6
 
 # Workflows in SharePoint 2013
 Learn about the Workflow Manager Client 1.0 authoring framework and workflow scenarios for SharePoint 2013.
- **Last modified:** March 29, 2016
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 SharePoint 2013 marks the introduction of Workflow Manager Client 1.0 as the new foundation for SharePoint workflows. Built on Windows Workflow Foundation 4, SharePoint workflows offer a new range of capabilities and enhancements. For an overview of the new flavor of workflows for SharePoint 2013, see  [What's new in workflows for SharePoint 2013](what-s-new-in-workflows-for-sharepoint-2013.md).
   
     

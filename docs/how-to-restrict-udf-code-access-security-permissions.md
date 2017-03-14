@@ -1,31 +1,31 @@
 ---
-title: How to: Restrict UDF Code Access Security Permissions
+title: How to Restrict UDF Code Access Security Permissions
 keywords: cas,how to,howdoi,howto,UDF list
 f1_keywords:
 - cas,how to,howdoi,howto,UDF list
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: 4f022e0d-1fe3-4fab-b41f-82a0d628f77c
 ---
 
 
 # How to: Restrict UDF Code Access Security Permissions
 
- **Last modified:** July 20, 2011
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 If you do not want a particular user-defined function (UDF) assembly to run with full trust, you must explicitly restrict code access security permissions for it. You can configure code groups and restrict permissions by using the .NET Framework 2.0 Configuration tool. 
   
     
     
 
-For example, imagine a scenario where you have a UDF assembly that contains multiple methods. One of the UDF methods performs a custom calculation, and another UDF method in the same assembly calls a Web service to obtain stock quotes. Because your users only use Excel workbooks that call the first (calculation) method, you might want to disable the assembly from having Web access, for increased security. You have the UDF assembly installed in a folder on the server at C:\\UdfAssemblies\\CalcAndWebAccessUdf.dll. Because the assembly is on the same computer as Microsoft SharePoint Server 2010, when Excel Calculation Services loads the UDF assembly, it is loaded in the MyComputer zone. By default, the MyComputer zone is fully trusted. This means that the UDF assembly is granted full trust permission. To lock down the UDF assembly so that it cannot have Web access, you must explicitly restrict the permission set that it is granted by following these steps: 
+For example, imagine a scenario where you have a UDF assembly that contains multiple methods. One of the UDF methods performs a custom calculation, and another UDF method in the same assembly calls a Web service to obtain stock quotes. Because your users only use Excel workbooks that call the first (calculation) method, you might want to disable the assembly from having Web access, for increased security. 
+You have the UDF assembly installed in a folder on the server at C:\\UdfAssemblies\\CalcAndWebAccessUdf.dll. Because the assembly is on the same computer as Microsoft SharePoint Server 2010, when Excel Calculation Services loads the UDF assembly, it is loaded in the MyComputer zone. By default, the MyComputer zone is fully trusted. This means that the UDF assembly is granted full trust permission. 
+  
+    
+    
+
+To lock down the UDF assembly so that it cannot have Web access, you must explicitly restrict the permission set that it is granted by following these steps: 
 1. Create a new URL-based code group under My_Computer_Zone at the Machine level. Scope the code group to that specific assembly and create a custom permission set. 
     
   
-2. Configure the custom code group properties so that your policy level has only the permissions from the permission set that is associated with the custom code group. When Excel Calculation Services loads a UDF assembly that resides on the same computer, the assembly is loaded in the MyComputer zone. This means that by default, the UDF assembly is granted full trust. When the custom permission set intersects with the full trust permission set, the result is full trust. To make it so that the a policy has only the permission from the permission set that is associated with your custom code group, you must enable the  **This policy level will only have the permissions from the permission set associated with this code group** property.
+2. Configure the custom code group properties so that your policy level has only the permissions from the permission set that is associated with the custom code group. When Excel Calculation Services loads a UDF assembly that resides on the same computer, the assembly is loaded in the MyComputer zone. This means that by default, the UDF assembly is granted full trust. When the custom permission set intersects with the full trust permission set, the result is full trust. To make it so that the a policy has only the permission from the permission set that is associated with your custom code group, you must enable the **This policy level will only have the permissions from the permission set associated with this code group**property.
     
   
 For more information about configuring code groups, see the following articles on MSDN: 
@@ -39,91 +39,91 @@ For more information about configuring code groups, see the following articles o
 ### To create a new code group
 
 
-1. Click  **Start**, point to  **All Programs**, point to  **Administrative Tools**, and then click  **Microsoft .NET Framework 2.0 Configuration**. 
+1. Click **Start**, point to **All Programs**, point to **Administrative Tools**, and then click **Microsoft .NET Framework 2.0 Configuration**. 
     
-    This starts the  **.NET 2.0 Framework Configuration** tool.
-    
-  
-2. In the left pane, expand the  **My Computer** node, and then expand the **Runtime Security Policy** node.
+    This starts the **.NET 2.0 Framework Configuration**tool.
     
   
-3. Expand the  **Machine** node.
+2. In the left pane, expand the **My Computer**node, and then expand the**Runtime Security Policy**node.
     
   
-4. Expand the  **Code Groups** node.
+3. Expand the **Machine**node.
     
   
-5. Expand the  **All_Code** node.
+4. Expand the **Code Groups**node.
     
   
-6. Expand the  **My_Computer_Zone** node.Right-click **My_Computer_Zone** and then select **New** to display the **Identify the new Code Group** dialog box.
+5. Expand the **All_Code**node.
     
   
-7. Select  **Create a new code group**. 
+6. Expand the **My_Computer_Zone**node.Right-click**My_Computer_Zone**and then select**New**to display the**Identify the new Code Group**dialog box.
     
   
-8. In the  **Name** field, type a name for the new code group, for example,RestrictWebAccessUdf. 
+7. Select **Create a new code group**. 
     
   
-9. Click  **Next**. 
+8. In the **Name**field, type a name for the new code group, for example,RestrictWebAccessUdf. 
     
   
-10. To scope the code group to your specific UDF assembly, select  **URL** from the **Choose the condition type for this code group**. 
-    
-    This displays the  **URL** field.
+9. Click **Next**. 
     
   
-11. In the  **URL** field, type the path to the UDF assembly for which you want to restrict access to the Web, for example,C:\\UdfAssemblies\\CalcAndWebAccessUdf.dll. 
+10. To scope the code group to your specific UDF assembly, select **URL**from the**Choose the condition type for this code group**. 
+    
+    This displays the **URL**field.
     
   
-12. Click  **Next**. 
+11. In the **URL**field, type the path to the UDF assembly for which you want to restrict access to the Web, for example,C:\\UdfAssemblies\\CalcAndWebAccessUdf.dll. 
     
   
-13. Select  **Create a new permission set**, and then click  **Next**. 
+12. Click **Next**. 
     
   
-14. In the  **Name** field, type a name for your permission set, for example,AssemblyExecutionCustomPermissionSet. 
+13. Select **Create a new permission set**, and then click **Next**. 
     
   
-15. Click  **Next**. 
+14. In the **Name**field, type a name for your permission set, for example,AssemblyExecutionCustomPermissionSet. 
     
   
-16. To give your UDF assembly "assembly execution" permission, select  **Security** from the **Assembly Permissions** list, and then click **Add**. 
-    
-    This displays the  **Permission Settings** dialog box.
+15. Click **Next**. 
     
   
-17. Select  ** assemblies the following security permissions**. 
+16. To give your UDF assembly "assembly execution" permission, select **Security**from the**Assembly Permissions**list, and then click**Add**. 
+    
+    This displays the **Permission Settings**dialog box.
     
   
-18. Select  **Enable assembly execution**. 
+17. Select **assemblies the following security permissions**. 
     
   
-19. Click  **OK**, and then click  **Next**. 
+18. Select **Enable assembly execution**. 
     
   
-20. Click  **Finish**. 
+19. Click **OK**, and then click **Next**. 
     
-    You should see your new custom code group under the  **My_Computer_Zone** node (in this example, **RestrictWebAccessUdf**). 
+  
+20. Click **Finish**. 
+    
+    You should see your new custom code group under the **My_Computer_Zone**node (in this example,**RestrictWebAccessUdf**). 
     
   
 
 ### To make sure that the permission sets are executed
 
 
-1. Under the  **My_Computer_Zone** node, right-click the new custom code group (in this example, **RestrictWebAccessUdf**), and then select  **Properties**. 
+1. Under the **My_Computer_Zone**node, right-click the new custom code group (in this example,**RestrictWebAccessUdf**), and then select **Properties**. 
     
   
-2. On the  **General** tab, select the **This policy level will only have the permissions from the permission set associated with this code group** check box.
+2. On the **General**tab, select the**This policy level will only have the permissions from the permission set associated with this code group**check box.
     
   
-3. Click  **Apply**, and then click  **OK**. 
+3. Click **Apply**, and then click **OK**. 
     
-    > [!Note]  
-> If the UDF method throws an exception because it cannot make the Web service call, you should receive a  **#VALUE!** error in the Excel formula that called the UDF.
+    > [!NOTE]  
+> If the UDF method throws an exception because it cannot make the Web service call, you should receive a **#VALUE!**error in the Excel formula that called the UDF.
 
-    > [!Note]  
->  If you want to enable Web access for your UDF assembly for testing, you must add the appropriate permission to your custom permission set. To do this, in Step 11 of the "To create a new code group" procedure, select **Web Access**. 
+    > [!NOTE]  
+>  If you want to enable Web access for your UDF assembly for testing, you must add the appropriate permission to your custom permission set. To do this, in Step 11 of the "To create a new code group" procedure, select**Web Access**. 
 
 ## See also
 

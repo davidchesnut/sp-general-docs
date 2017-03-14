@@ -1,25 +1,19 @@
 ---
 title: Getting Ranges Using Atom Feed and HTML Fragment
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: 45d4ef08-02d6-48dd-b0ef-a748db1a0c6a
 ---
 
 
 # Getting Ranges Using Atom Feed and HTML Fragment
 
- **Last modified:** August 11, 2016
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 This topic describes two ways to access ranges—Atom feed and HTML fragment, by using the REST API in Excel Services. 
   
     
     
 
 
-> [!Note]  
+> [!NOTE]  
 > The Excel Services REST API applies to SharePoint 2013 and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
 ) endpoint.
   
@@ -45,7 +39,7 @@ As described in the  [Discovery in Excel Services REST API](discovery-in-excel-s
 http://<ServerName>/_vti_bin/ExcelRest.aspx/<DocumentLibrary>/<FileName>/model
 ```
 
-Therefore, for a workbook with the file name  **sampleWorkbook.xlsx** that is saved to `http://` _<ServerName>_ `/Docs/Documents/sampleWorkbook.xlsx`, following is the URI to the model page: 
+Therefore, for a workbook with the file name **sampleWorkbook.xlsx**that is saved to `http://` _<ServerName>_ `/Docs/Documents/sampleWorkbook.xlsx`, following is the URI to the model page: 
   
     
     
@@ -56,19 +50,19 @@ Therefore, for a workbook with the file name  **sampleWorkbook.xlsx** that is sa
 http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model
 ```
 
-Using the discovery mechanism described in  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api.md), if you click on the  **Ranges** Atom feed on the model page on the server, ( `http://` _<ServerName>_ `/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model`), it displays a page that shows all the named ranges in the workbook. The sampleWorkbook.xlsx contains one named range,  **SampleNamedRange**, as shown in the following screen shot: 
+Using the discovery mechanism described in  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api.md), if you click on the **Ranges**Atom feed on the model page on the server, ( `http://` _<ServerName>_ `/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model`), it displays a page that shows all the named ranges in the workbook. The sampleWorkbook.xlsx contains one named range, **SampleNamedRange**, as shown in the following screen shot: 
   
     
     
 
-> [!Important]  
+> [!IMPORTANT]  
 > You can also specify arbitrary ranges, and not just the ranges returned by discovery. Colon ":" must be replaced with "|". For example use "A1|G5" instead of "A1:G5". 
   
     
     
 
 
-> [!Note]  
+> [!NOTE]  
 > Characters like "?" and "#" are unsupported. To correctly reference sheet names that contain special characters, the basic guideline is "see what the Excel client does" when referencing a formula to a sheet with special characters and follow that example. 
   
     
@@ -91,7 +85,7 @@ Using the discovery mechanism described in  [Discovery in Excel Services REST AP
 
 ### Accessing Ranges by Using an Atom Feed
 
-If you click  **SampleNamedRange** in the range discovery page, you navigate to the following URL:
+If you click **SampleNamedRange**in the range discovery page, you navigate to the following URL:
   
     
     
@@ -196,19 +190,19 @@ The feed item contains XML that represents the data inside the range. Following 
     
     
 
--  **<range>** The range element. Represents the container of the returned range.
+- **<range>**The range element. Represents the container of the returned range.
     
   
--  **<row>** The row element. Represents each row in the range.
+- **<row>**The row element. Represents each row in the range.
     
   
--  **<c>** The cell element. Represents each cell in a row.
+- **<c>**The cell element. Represents each cell in a row.
     
   
--  **<fv>** The formatted value element. Represents the value as it is formatted by Excel. If the value is of type string in the workbook, the formatted value element is the only element under **<c>**. 
+- **<fv>**The formatted value element. Represents the value as it is formatted by Excel. If the value is of type string in the workbook, the formatted value element is the only element under**<c>**. 
     
   
--  **<v>** The value element. Represents a number value. If the value in the cell is a number instead of a string, the value element contains that information.
+- **<v>**The value element. Represents a number value. If the value in the cell is a number instead of a string, the value element contains that information.
     
   
 Using XML gives you an easier way to get data out of an Excel range so that you can use it in your application. 
@@ -233,8 +227,8 @@ In Internet Explorer, the page looks similar to the following figure.
     
     
 
-> [!Note]  
-> This HTML can be directly consumed in an  **IFRAME**, or it can be used in JavaScript to create a more seamless experience. 
+> [!NOTE]  
+> This HTML can be directly consumed in an **IFRAME**, or it can be used in JavaScript to create a more seamless experience. 
   
     
     

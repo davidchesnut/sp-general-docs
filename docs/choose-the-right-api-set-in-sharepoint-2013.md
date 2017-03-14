@@ -8,12 +8,6 @@ ms.assetid: f36645da-77c5-47f1-a2ca-13d4b62b320d
 
 # Choose the right API set in SharePoint 2013
 Learn about the several sets of APIs that are provided in SharePoint 2013, including the server object model and the various client object models, and the REST/OData web service. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 **Watch the video: SharePoint 2013 strategy for SharePoint client object model (CSOM) and REST**
 
   
@@ -44,10 +38,10 @@ You can choose from several sets of APIs to access the SharePoint 2013 platform.
     
     
 
--  **The type of application.** The possibilities include, but are not limited to, the following, which are not mutually exclusive categories: an SharePoint Add-in, a Web Part on a SharePoint page, a Silverlight application running on either a client computer or a client mobile device, an ASP.NET application exposed in SharePoint by an IFrame, JavaScript running in a SharePoint site page, a SharePoint application page, a Microsoft .NET Framework application running on a client computer, a Windows PowerShell script, and a timer job running on a SharePoint server.
+- **The type of application.**The possibilities include, but are not limited to, the following, which are not mutually exclusive categories: an SharePoint Add-in, a Web Part on a SharePoint page, a Silverlight application running on either a client computer or a client mobile device, an ASP.NET application exposed in SharePoint by an IFrame, JavaScript running in a SharePoint site page, a SharePoint application page, a Microsoft .NET Framework application running on a client computer, a Windows PowerShell script, and a timer job running on a SharePoint server.
     
   
--  **Your existing skills.** To a surprising degree, you can create applications in SharePoint 2013 without needing to learn a lot about SharePoint programming. You can jump right into SharePoint development if you already have experience in any of the following programming models:
+- **Your existing skills.**To a surprising degree, you can create applications in SharePoint 2013 without needing to learn a lot about SharePoint programming. You can jump right into SharePoint development if you already have experience in any of the following programming models:
     
   - JavaScript 
     
@@ -70,7 +64,7 @@ You can choose from several sets of APIs to access the SharePoint 2013 platform.
   - Windows PowerShell 
     
   
--  **The device on which the code runs.** The possibilities include a server in the SharePoint farm, an external server such as a server in the cloud, a client computer, and a mobile device.
+- **The device on which the code runs.**The possibilities include a server in the SharePoint farm, an external server such as a server in the cloud, a client computer, and a mobile device.
     
   
 This topic provides an overview of the various API sets that are provided by SharePoint 2013. Figure 1 shows which sets of APIs can be used to develop each of 13 common SharePoint-related applications. For many applications, you can choose from more than one API. 
@@ -101,7 +95,7 @@ The following table provides guidance on which set of APIs to use for a selected
     
 
 
-|**If you want to do this ... **|**... use these APIs **|
+|**If you want to do this ...**|**... use these APIs**|
 |:-----|:-----|
 |Create an ASP.NET web application that performs create/read/update/deleted (CRUD) operations across a firewall on SharePoint data or external data that is surfaced in SharePoint by a Microsoft Business Connectivity Services (BCS) external content type |JavaScript client object model |
 |Create an ASP.NET web application that performs CRUD operations on SharePoint data or external data that is surfaced in SharePoint by a BCS external content type, but does not have to call SharePoint across a firewall |.NET Framework client object model, Silverlight client object model, or REST/OData endpoints |
@@ -117,7 +111,7 @@ The following table provides guidance on which set of APIs to use for a selected
 |Create a timer job |Server object model |
 |Create an extension of Central Administration |Server object model |
 |Create consistent branding across an entire SharePoint farm |Server object model |
-|Create a custom Web Part, application page, or ASP.NET user control |Server object model > [!Important]  > If the functionality you want to offer customers is not oriented to SharePoint administration at a scope broader than site collection, we recommend that, instead of using the server object model, you create an SharePoint Add-in that includes a remote ASP.NET web application with custom Web Parts and user controls as needed. See the top two rows of this table.           |
+|Create a custom Web Part, application page, or ASP.NET user control |Server object model > [!IMPORTANT]  > If the functionality you want to offer customers is not oriented to SharePoint administration at a scope broader than site collection, we recommend that, instead of using the server object model, you create an SharePoint Add-in that includes a remote ASP.NET web application with custom Web Parts and user controls as needed. See the top two rows of this table.           |
    
 
 ## Server object model
@@ -131,7 +125,7 @@ At the level of SharePoint Server 2013, many more classes are added to enable pr
   
     
     
-You can use  [LINQ to Objects](http://msdn.microsoft.com/en-us/library/bb397919.aspx) to query any **IEnumerable** collection in memory, but a [LINQ to SharePoint provider](http://msdn.microsoft.com/library/3fa2dc5f-d308-4337-aefd-191a5df8dbbe%28Office.15%29.aspx) enables direct querying of the lists in the SharePoint content databases. Strictly speaking, this provider is not available with any other set of APIs discussed in this topic; however, there are ways to use LINQ syntax in most of the others.
+You can use  [LINQ to Objects](http://msdn.microsoft.com/en-us/library/bb397919.aspx) to query any**IEnumerable**collection in memory, but a [LINQ to SharePoint provider](http://msdn.microsoft.com/library/3fa2dc5f-d308-4337-aefd-191a5df8dbbe%28Office.15%29.aspx) enables direct querying of the lists in the SharePoint content databases. Strictly speaking, this provider is not available with any other set of APIs discussed in this topic; however, there are ways to use LINQ syntax in most of the others.
   
     
     
@@ -140,7 +134,7 @@ The assemblies that define the built-in server-side classes are installed to the
     
     
 
-> [!Note]  
+> [!NOTE]  
 > Developing new sandboxed solutions against SharePoint 2013 is deprecated in favor of developing SharePoint Add-ins, but sandboxed solutions can still be installed to site collections on SharePoint 2013. The assemblies of these solutions remain in the package except when they are actually in use, at which time they are temporarily installed to a folder on the server. For more information, see  [Where are Assemblies in Sandboxed Solutions Deployed?](http://msdn.microsoft.com/library/dadbb20b-1bf7-442c-9eeb-bd9f01dbda45%28Office.15%29.aspx). 
   
     
@@ -186,7 +180,7 @@ To improve performance, lines of code written against in the .NET Framework clie
   
     
     
-You can use LINQ query syntax in your client code to query any  **IEnumerable** object, including SharePoint 2013 objects that implement **IEnumerable**. However, when you do this, you are using  [LINQ to Objects](http://msdn.microsoft.com/en-us/library/bb397919.aspx), not the  [LINQ to SharePoint provider](http://msdn.microsoft.com/library/3fa2dc5f-d308-4337-aefd-191a5df8dbbe%28Office.15%29.aspx), so documentation of the latter is not relevant to client-side code. 
+You can use LINQ query syntax in your client code to query any **IEnumerable**object, including SharePoint 2013 objects that implement**IEnumerable**. However, when you do this, you are using  [LINQ to Objects](http://msdn.microsoft.com/en-us/library/bb397919.aspx), not the  [LINQ to SharePoint provider](http://msdn.microsoft.com/library/3fa2dc5f-d308-4337-aefd-191a5df8dbbe%28Office.15%29.aspx), so documentation of the latter is not relevant to client-side code. 
   
     
     
@@ -199,7 +193,7 @@ For examples of using the .NET Framework object model, see  [Complete basic oper
     
     
 
-> [!Note]  
+> [!NOTE]  
 > You can also use the SharePoint REST/OData endpoints in a .NET Framework application. For a comparison of the .NET Framework client object model with the SharePoint REST/OData endpoints, see the section  [REST/OData endpoints](#RESTOData) later in this article.
   
     
@@ -221,7 +215,7 @@ Silverlight .xap files can be included in SharePoint Add-ins, including SharePoi
     
     
 
-> [!Note]  
+> [!NOTE]  
 > You can also use the SharePoint REST/OData endpoints in a Silverlight application. For a comparison of the Silverlight client object model with the SharePoint REST/OData endpoints, see the section  [REST/OData endpoints](#RESTOData) later in this article.
   
     
@@ -259,7 +253,7 @@ For examples of using the .NET Framework object model, see  [Complete basic oper
     
     
 
-> [!Note]  
+> [!NOTE]  
 > You can also use the SharePoint REST/OData endpoints in a JavaScript application. For a comparison of the JavaScript client object model with SharePoint's REST/OData endpoints, see the following section,  [REST/OData endpoints](#RESTOData). 
   
     
@@ -286,7 +280,7 @@ In some situations, it might be preferable to use the REST endpoints even in app
     
 
 
-|**Feature **|**.NET Framework or Silverlight object models **|**JavaScript object model **|**REST/OData endpoints called from a Windows platform or JavaScript **|
+|**Feature**|**.NET Framework or Silverlight object models**|**JavaScript object model**|**REST/OData endpoints called from a Windows platform or JavaScript**|
 |:-----|:-----|:-----|:-----|
 |Object-oriented programming |Yes |Yes |No |
 |Batch processing |Yes |Yes |Yes |

@@ -1,29 +1,23 @@
 ---
-title: How to: Use the SubCode Property to Capture Error Codes
+title: How to Use the SubCode Property to Capture Error Codes
 keywords: how to,howdoi,howto,subcode
 f1_keywords:
 - how to,howdoi,howto,subcode
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: 8ce4d5b2-111b-49e7-9d07-8c2c586221ec
 ---
 
 
 # How to: Use the SubCode Property to Capture Error Codes
 
- **Last modified:** July 20, 2011
+Excel Services generates errors in the SOAP exception based on errors that occur in Excel Services. To make it easier for the developer to catch specific error conditions, an Excel Calculation Services alert has an associated error code. The Excel Web Services then returns the error using properties from the **SoapException**class.
   
     
     
 
- * **Applies to:** SharePoint Server 2013* 
-Excel Services generates errors in the SOAP exception based on errors that occur in Excel Services. To make it easier for the developer to catch specific error conditions, an Excel Calculation Services alert has an associated error code. The Excel Web Services then returns the error using properties from the  **SoapException** class.
-  
-    
-    
-
-The following examples show how to capture the error codes using the  [SubCode](http://msdn.microsoft.com/library/frlrfSystemWebServicesProtocolsSoapExceptionClassSubCodeTopic.aspx) property (http://msdn.microsoft.com/en-us/library/system.web.services.protocols.soapexception.subcode.aspx) of the **SoapException** class.
-> [!Note]  
-> To be able to use the  **SubCode** property, you must use Microsoft Visual Studio 2005. The **SubCode** property does not exist in earlier versions of Visual Studio.
+The following examples show how to capture the error codes using the  [SubCode](http://msdn.microsoft.com/library/frlrfSystemWebServicesProtocolsSoapExceptionClassSubCodeTopic.aspx) property (http://msdn.microsoft.com/en-us/library/system.web.services.protocols.soapexception.subcode.aspx) of the**SoapException**class.
+> [!NOTE]  
+> To be able to use the **SubCode**property, you must use Microsoft Visual Studio 2005. The**SubCode**property does not exist in earlier versions of Visual Studio.
   
     
     
@@ -32,7 +26,7 @@ For a list of error codes, see  [Excel Services Error Codes](excel-services-erro
 ### To capture error codes when using SOAP
 
 
-1. After adding a Web reference to the Excel Web Services, add the following using directive so that you can use the  **SoapException** class without having to qualify it with a full namespace:
+1. After adding a Web reference to the Excel Web Services, add the following using directive so that you can use the **SoapException**class without having to qualify it with a full namespace:
     
   ```cs
   
@@ -44,7 +38,7 @@ using System.Web.Services.Protocols;
   Imports System.Web.Services.Protocols
   ```
 
-2. To capture the Excel Services error codes using the  **SubCode** property, you must use the SOAP12 protocol version. After instantiating the Excel Web Services proxy class, set the SOAP protocol version as follows:
+2. To capture the Excel Services error codes using the **SubCode**property, you must use the SOAP12 protocol version. After instantiating the Excel Web Services proxy class, set the SOAP protocol version as follows:
     
   ```cs
   // Instantiate the Web service.
@@ -64,7 +58,7 @@ xlservice.SoapVersion = SoapProtocolVersion.Soap12;
 xlservice.SoapVersion = SoapProtocolVersion.Soap12
   ```
 
-3. To catch the error codes using the  **SubCode** property, add a SOAP exception catch block to your code, for example:
+3. To catch the error codes using the **SubCode**property, add a SOAP exception catch block to your code, for example:
     
   ```cs
   
@@ -89,10 +83,10 @@ End Try
 ### To capture error codes when using direct linking
 
 
-1. In the direct linking scenario, you won't need to add a Web reference to the Excel Web Services. However, you will need to add a reference to  **System.Web.Services** namespace.
+1. In the direct linking scenario, you won't need to add a Web reference to the Excel Web Services. However, you will need to add a reference to **System.Web.Services**namespace.
     
   
-2. After you add a reference, add the following  **using** directive to your code so that you can use the **SoapException** class without having to qualify it with a full namespace:
+2. After you add a reference, add the following **using**directive to your code so that you can use the**SoapException**class without having to qualify it with a full namespace:
     
   ```cs
   
@@ -107,7 +101,7 @@ using System.Web.Services.Protocols;
 3. Unlike using SOAP over HTTP, in the direct linking scenario, you won't need to set the SOAP protocol version. 
     
   
-4. To catch the error codes using the  **SubCode** property, add a SOAP exception catch block to your code, for example:
+4. To catch the error codes using the **SubCode**property, add a SOAP exception catch block to your code, for example:
     
   ```cs
   catch (SoapException e)
@@ -130,7 +124,7 @@ End Try
 
 ## Example
 
-The following program (a console application) uses the  **SubCode** property to capture the error codes. The program takes different actions based on the error code that is caught. You can, for example, intentionally pass in a nonexistent sheet name to trigger a SOAP exception. In this case, the following SOAP exception message is returned:
+The following program (a console application) uses the **SubCode**property to capture the error codes. The program takes different actions based on the error code that is caught. You can, for example, intentionally pass in a nonexistent sheet name to trigger a SOAP exception. In this case, the following SOAP exception message is returned:
   
     
     

@@ -24,12 +24,6 @@ ms.assetid: 364fb8d7-87d9-4be7-affd-90caba3cd0c0
     
     
 Contains reference information for constructing Representational State Transfer (REST) URLs to access and manipulate external data sources using Business Connectivity Services (BCS) in SharePoint 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## Using RESTful APIs to access external data in SharePoint 2013
 <a name="bkmk_Overview"> </a>
 
@@ -42,13 +36,13 @@ You can access external data by constructing URLs just as you would to access st
     
     
 
-> [!Note]  
+> [!NOTE]  
 > Access to entities through the BDC directly is not provided. To work with external data, you must create an external list and use the REST URLs to access the list items contained in the external list. 
   
     
     
 
-The supported HTTP verbs for working with external lists are  **GET**,  **PUT**,  **POST**, and  **DELETE**. 
+The supported HTTP verbs for working with external lists are **GET**, **PUT**, **POST**, and **DELETE**. 
   
     
     
@@ -64,7 +58,7 @@ The information in Table 1 shows how to construct RESTful URLs and the correspon
 **Table 1. RESTful URL formats for accessing external data**
 
 
-|**URL **|**Description **|**HTTP method **|
+|**URL**|**Description**|**HTTP method**|
 |:-----|:-----|:-----|
 | `http://[sharepointsite]/_api`|The base of any REST request. The _api virtual directory is mapped to call into client.svc, where the client object model can be used. |GET |
 | `http://[sharepointsite]/_api/web/title`|Retrieves the title of the current web. |GET |
@@ -85,14 +79,14 @@ In order to limit the amount of data returned, or make it more relevant to the u
 **Table 2. Operators for filtering data**
 
 
-|**Operator **||
+|**Operator**||
 |:-----|:-----|
-|EQ |Equals > [!Note]  > When you use  **EQ** to filter, the filter criteria are passed to the external system where the filtering happens on the server.          |
-|GT |Greater Than > [!Note]  > When you use the  **GT** operator, only client-side filtering is executed.> For example:  `web/lists/getByTitle('ListName')/Items?$select=Title&amp;$filter=AverageRating gt 3` returns all titles with an average rating over 3.          |
+|EQ |Equals > [!NOTE]  > When you use **EQ**to filter, the filter criteria are passed to the external system where the filtering happens on the server.          |
+|GT |Greater Than > [!NOTE]  > When you use the **GT**operator, only client-side filtering is executed.> For example:  `web/lists/getByTitle('ListName')/Items?$select=Title&amp;$filter=AverageRating gt 3` returns all titles with an average rating over 3.          |
    
 
-> [!Note]  
-> To retrieve columns that are part of an association, you must explicitly include the column in the URL using  **$select** in the query string.
+> [!NOTE]  
+> To retrieve columns that are part of an association, you must explicitly include the column in the URL using **$select**in the query string.
   
     
     

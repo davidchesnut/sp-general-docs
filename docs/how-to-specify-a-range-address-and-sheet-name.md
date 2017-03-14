@@ -1,5 +1,5 @@
 ---
-title: How to: Specify a Range Address and Sheet Name
+title: How to Specify a Range Address and Sheet Name
 keywords: how to,howdoi,howto,set range
 f1_keywords:
 - how to,howdoi,howto,set range
@@ -10,18 +10,18 @@ ms.assetid: 8bfefc48-1fbc-4b65-8156-1b7d0a8453ee
 
 # How to: Specify a Range Address and Sheet Name
 
- **Last modified:** July 20, 2011
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 This example shows how to specify range addresses by using range coordinates, named ranges, rows, and columns. It also shows how to specify a sheet name and the relationship between a sheet name and a range address. 
   
     
     
 
-Range coordinates are the four integer coordinates used to select a contiguous range. Range coordinates enable you to specify Excel ranges by using direct integer indexing as an alternative to "A1" expressions. The coordinates you can specify are the top row, left column, height, and width. It is easier to use range coordinates when you have code that iterates through a set of cells in a loop, or when the range coordinates are calculated dynamically as part of the algorithm. A range specification must contain a sheet name; Excel Web Services does not recognize the "current sheet." There are a few ways to specify the sheet name: 
+Range coordinates are the four integer coordinates used to select a contiguous range. Range coordinates enable you to specify Excel ranges by using direct integer indexing as an alternative to "A1" expressions. The coordinates you can specify are the top row, left column, height, and width. It is easier to use range coordinates when you have code that iterates through a set of cells in a loop, or when the range coordinates are calculated dynamically as part of the algorithm. 
+A range specification must contain a sheet name; Excel Web Services does not recognize the "current sheet." There are a few ways to specify the sheet name: 
+  
+    
+    
+
+
 - As part of the range address—for example, "Sheet3!B12:D18"—in which case the sheet name argument can be empty: 
     
   ```cs
@@ -74,7 +74,7 @@ If you specify a sheet name, the ranges you reference must exist on the sheet yo
 ## Example
 
 
-> [!Note]  
+> [!NOTE]  
 > It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information about this, see  [How to: Trust a Location](how-to-trust-a-location.md) and [How to: Trust Workbook Locations Using Script](http://msdn.microsoft.com/library/79ab6ced-7a0c-4275-b852-bb246fc6be57%28Office.15%29.aspx). 
   
     

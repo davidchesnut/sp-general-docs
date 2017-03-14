@@ -7,12 +7,6 @@ ms.assetid: e7d8c919-7aa6-466a-acb0-27366129061c
 
 # Configuration, administration, and resources in SharePoint 2013
 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 For information about planning, administration, configuration, deployment, migration, upgrades, setting up claims, or security in general, see the IT and administrators documentation and guidelines on  [Microsoft TechNet](http://technet.microsoft.com/en-us/sharepoint/ee263910.aspx). 
   
     
@@ -71,7 +65,7 @@ The following are links to some of the documentation and guidelines on TechNet:
     
   
 
-> [!Note]  
+> [!NOTE]  
 > For information about Windows Identity Foundation (WIF), see the  [Windows Identity Foundation SDK](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=C148B2DF-C7AF-46BB-9162-2C9422208504&amp;amp;displaylang=en). 
   
     
@@ -81,7 +75,7 @@ The following tables list blogs, forums, and additional resources about claims-b
 **Table 1. Blogs**
 
 
-|** **Blog Name****|** **Links****|
+|****Blog Name****|****Links****|
 |:-----|:-----|
 |Share-n-dipity | [Blog home page](http://blogs.technet.com/speschka/)|
 |Microsoft SharePoint Developer Team Blog | [Blog home page](http://blogs.msdn.com/b/sharepointdev/)|
@@ -91,7 +85,7 @@ The following tables list blogs, forums, and additional resources about claims-b
 **Table 2. Forums**
 
 
-|** **Forum Name****|** **Links****|
+|****Forum Name****|****Links****|
 |:-----|:-----|
 |SharePoint Products and Technologies Forums | [Forum home page](http://social.msdn.microsoft.com/Forums/en-US/category/sharepoint)|
    
@@ -99,7 +93,7 @@ The following tables list blogs, forums, and additional resources about claims-b
 **Table 3. Additional resources**
 
 
-|** **Additional Resources****|** **Links****|
+|****Additional Resources****|****Links****|
 |:-----|:-----|
 |Claims and Security: Technical Articles Node | [Claims and security: Technical articles and code samples on MSDN](http://msdn.microsoft.com/en-us/library/gg430136.aspx)|
 |||

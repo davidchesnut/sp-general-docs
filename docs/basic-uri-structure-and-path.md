@@ -7,19 +7,13 @@ ms.assetid: d73cf6c2-0677-4726-8a3e-2ad130e1a12c
 
 # Basic URI Structure and Path
 
- **Last modified:** August 11, 2016
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 This topic explains how to construct the URI structure and path for REST service commands in Excel Services. 
   
     
     
 
 
-> [!Note]  
+> [!NOTE]  
 > The Excel Services REST API applies to SharePoint 2013 and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
 ) endpoint.
   
@@ -34,13 +28,13 @@ The REST API in Excel Services gives you the ability to access resources like ch
     
     
 
-1.  **REST aspx Page URI** The entry point to an .aspx page
+1. **REST aspx Page URI**The entry point to an .aspx page
     
   
-2.  **Workbook Location** The path to the workbook
+2. **Workbook Location**The path to the workbook
     
   
-3.  **Resource Location** The path to the requested resource inside the workbook
+3. **Resource Location**The path to the requested resource inside the workbook
     
   
 Following is the construct for the REST URL to a specific element in a workbook: 
@@ -75,13 +69,13 @@ The three parts of the REST URL are:
     
     
 
-1.  **REST aspx Page URI**: `http://` _<ServerName>_ `/_vti_bin/ExcelRest.aspx`
+1. **REST aspx Page URI**: `http://` _<ServerName>_ `/_vti_bin/ExcelRest.aspx`
     
   
-2.  **Workbook Location**: `/Docs/Documents/sampleWorkbook.xlsx`
+2. **Workbook Location**: `/Docs/Documents/sampleWorkbook.xlsx`
     
   
-3.  **Resource Location**: `/model/Ranges('nameOfTheNamedRange')`
+3. **Resource Location**: `/model/Ranges('nameOfTheNamedRange')`
     
   
 

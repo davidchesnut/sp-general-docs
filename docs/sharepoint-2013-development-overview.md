@@ -7,12 +7,6 @@ ms.assetid: f86e2695-4d7a-4fc5-bc23-689de96c4b06
 
 # SharePoint 2013 development overview
 SharePoint 2013 is a development platform for SharePoint Add-ins and farm solutions. Get acquainted with the capabilities and features of SharePoint 2013 to start your development. 
- **Last modified:** August 25, 2016
-  
-    
-    
-
- * **Applies to:** Office 365 | SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Introducing the SharePoint 2013 development platform
 <a name="bk_introduction"> </a>
 
@@ -28,7 +22,7 @@ Developers familiar with SharePoint know they can build server-side farm solutio
   
     
     
- **For SharePoint Add-ins development**
+**For SharePoint Add-ins development**
   
     
     
@@ -40,7 +34,7 @@ The following article can help you get acquainted with SharePoint Add-ins and de
 -  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions.md)
     
   
- **For SharePoint solutions and add-ins for mobility features development**
+**For SharePoint solutions and add-ins for mobility features development**
   
     
     
@@ -74,7 +68,7 @@ The following sections provide information about SharePoint 2013 features that a
 ## Set up your development environment and start developing
 <a name="bk_getstarted"> </a>
 
- **For SharePoint solutions and add-ins for mobility features development**
+**For SharePoint solutions and add-ins for mobility features development**
   
     
     
@@ -90,7 +84,7 @@ Table 1 shows the resources for setting up a development environment and beginni
 **Table 1. Resources to help you get started with SharePoint farm solutions development**
 
 
-|**Topic **|**Description **|
+|**Topic**|**Description**|
 |:-----|:-----|
 | [Set up a general development environment for SharePoint 2013](set-up-a-general-development-environment-for-sharepoint-2013.md)|Contains step-by-step instructions on how to install the components of a SharePoint 2013 development environment. |
 | [Choose the right API set in SharePoint 2013](choose-the-right-api-set-in-sharepoint-2013.md)|Describes the several sets of APIs that are provided in SharePoint 2013, including the server object model and the various client-side object models, and the REST/OData web service. |
@@ -98,7 +92,7 @@ Table 1 shows the resources for setting up a development environment and beginni
 | [Programming models in SharePoint 2013](programming-models-in-sharepoint-2013.md)|Provides a quick overview of the different kinds of SharePoint development projects that you can create with SharePoint 2013. |
 | [Add SharePoint 2013 capabilities](add-sharepoint-2013-capabilities.md)|Provides a gateway to detailed information about using the capabilities of SharePoint 2013 in your solutions. |
    
- **For SharePoint Add-ins development**
+**For SharePoint Add-ins development**
   
     
     
@@ -114,7 +108,7 @@ When you know the kinds of SharePoint Add-in that you want to create, we provide
 **Table 2. Resources to help you get started with SharePoint Add-ins development**
 
 
-|**Topic **|**Description **|
+|**Topic**|**Description**|
 |:-----|:-----|
 |||
 | [Set up a development environment for SharePoint Add-ins on Office 365](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx)|Explains how to sign up for and use an Office 365 Developer Site for developing SharePoint Add-ins. |

@@ -1,5 +1,5 @@
 ---
-title: How to: Create a master page preview file in SharePoint 2013
+title: How to Create a master page preview file in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 6825518d-eeb2-40b0-8a5b-897025f13796
 ---
@@ -7,13 +7,7 @@ ms.assetid: 6825518d-eeb2-40b0-8a5b-897025f13796
 
 # How to: Create a master page preview file in SharePoint 2013
 Learn how to create master page preview files that are used in the SharePoint theming experience to display a preview of selected theme components. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** Office 365 | SharePoint Foundation 2013 | SharePoint Server 2013* 
-The  **Change the look** wizard is the entry point to the SharePoint theming experience. The design gallery is the first page in the **Change the look** wizard and shows a thumbnail view of available designs. Users select a design for their site and then continue to the next page where they can customize the design. Users can then preview the site before applying the design to their site. The master page preview file is used to generate the thumbnail and preview images. If a master page does not have a corresponding preview file, it cannot be used in the theming experience.
+The **Change the look**wizard is the entry point to the SharePoint theming experience. The design gallery is the first page in the**Change the look**wizard and shows a thumbnail view of available designs. Users select a design for their site and then continue to the next page where they can customize the design. Users can then preview the site before applying the design to their site. The master page preview file is used to generate the thumbnail and preview images. If a master page does not have a corresponding preview file, it cannot be used in the theming experience.
   
     
     
@@ -30,10 +24,10 @@ Table 1 lists articles that can help you understand the core concepts for workin
 **Table 1. Core concepts for working with master page preview files**
 
 
-|**Article Title **|**Description **|
+|**Article Title**|**Description**|
 |:-----|:-----|
 | [Themes overview for SharePoint 2013](themes-overview-for-sharepoint-2013.md)|Learn about the theming experience in SharePoint 2013. |
-| [Choose a theme for your publishing site](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx)|Learn how to change the look and feel of a SharePoint site by using the  **Change the look** wizard.|
+| [Choose a theme for your publishing site](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx)|Learn how to change the look and feel of a SharePoint site by using the **Change the look**wizard.|
    
 
 ## What is a master page preview file?
@@ -65,10 +59,10 @@ In the master page preview file:
     
     
 
--  _Default color palette_ is the .spcolor file in the Theme Gallery (http:// _SiteColltionName_/_catalogs/theme/15/) that you want to use as the default. The default color palette corresponds to the colors that are used in the master page in its default state. That is, before a user has selected a color palette in the  **Change the look** wizard.
+-  _Default color palette_ is the .spcolor file in the Theme Gallery (http:// _SiteColltionName_/_catalogs/theme/15/) that you want to use as the default. The default color palette corresponds to the colors that are used in the master page in its default state. That is, before a user has selected a color palette in the **Change the look**wizard.
     
   
--  _Default font scheme_ is the .spfont file in the Theme Gallery (http:// _SiteCollectionName_/_catalogs/theme/15/) that you want to use as the default. The default font scheme corresponds to the fonts that are used in the master page in its default state. That is, before a user has selected a font scheme in the  **Change the look** wizard.
+-  _Default font scheme_ is the .spfont file in the Theme Gallery (http:// _SiteCollectionName_/_catalogs/theme/15/) that you want to use as the default. The default font scheme corresponds to the fonts that are used in the master page in its default state. That is, before a user has selected a font scheme in the **Change the look**wizard.
     
   
 -  _CSS_ is the section that contains cascading style sheets (CSS). All CSS classes must be prefixed with[ID]. The following example shows a portion of the CSS section in a master page preview file. 
@@ -91,7 +85,7 @@ In the master page preview file:
     
   
 
-> [!Note]  
+> [!NOTE]  
 > All dimension values should be specified as relative units in the master page preview file. For example, dimension values can be specified as a percent or as an em measurement. For more information about em measurements, see section  [5.1.1. Font-relative lengths: the 'em', 'ex', 'ch', 'rem' units](http://www.w3.org/TR/2012/WD-css3-values-20120308/#font-relative-lengths) in the W3C CSS Values and Units Module Level 3 Working Draft.
   
     
@@ -112,7 +106,7 @@ The miscellaneous tokens are replaced with specified height and width values in 
 **Table 2. Miscellaneous tokens**
 
 
-|**Token Name **|**Description **|
+|**Token Name**|**Description**|
 |:-----|:-----|
 |[T_HEIGHT] |The height of the preview. |
 |[T_WIDTH] |The width of the preview. |
@@ -131,7 +125,7 @@ Color tokens are replaced with color values in the preview image. Table 3 descri
 **Table 3. Color tokens**
 
 
-|**Token Name **|**Description **|
+|**Token Name**|**Description**|
 |:-----|:-----|
 |[T_THEME_COLOR_ _ColorSlot_] |Use this format if you want the color value of the color slot. |
 |[T_THEME_COLOR_ _ColorSlot__AA] |Use this format if you want the 8-digit hexadecimal value of the color slot. This format is useful for filter values to enable opacity and gradients in Internet Explorer. |
@@ -162,7 +156,7 @@ The tokens listed in Table 4 are used in the HTML section of the master page pre
 **Table 4. Text content tokens**
 
 
-|**Token Name **|**Description **|
+|**Token Name**|**Description**|
 |:-----|:-----|
 |[BRANDSTRING] |The brand text that appears on the page. In the preinstalled themes, it appears on the top-left corner "Brand". |
 |[SUITELINK1] [SUITELINK2] [SUITELINK3] |The suite links that appear in the suite bar. See "First Item", "Second Item", "Third Item" in Figure 1. |
@@ -222,15 +216,15 @@ To create a master page preview file, use an existing master page preview as a s
   
 3. Use an HTML editor to edit the master page preview file. Update the file to reflect the layout and appearance of your master page. 
     
-    > [!Tip]  
+    > [!TIP]  
 > Dimension values are specified as percentages in the master page preview file. The following example shows one method for converting an absolute measurement (pixels) into a relative measurement (percentage). Assume you have a browser size of 1024x768. If the master page has an element height of 32 pixels and the parent element is the body of the page, you calculate the percentage by dividing the element height by the browser height. The relative measurement is 4%(32/768). 
 4. Upload the master page preview file to the Master Page Gallery. 
     
   
-5. Use the  **Change the look** wizard to test the master page preview with your site content.
+5. Use the **Change the look**wizard to test the master page preview with your site content.
     
-    > [!Note]  
-> You can also create a design that uses the new master page by adding an item to the Composed Looks list. The design will be available in the design gallery (the first page of the  **Change the look** wizard). For more information, see the [Deploy a theme by using the user interface](how-to-deploy-a-custom-theme-in-sharepoint-2013.md#section2) procedure in [How to: Deploy a custom theme in SharePoint 2013](how-to-deploy-a-custom-theme-in-sharepoint-2013.md). 
+    > [!NOTE]  
+> You can also create a design that uses the new master page by adding an item to the Composed Looks list. The design will be available in the design gallery (the first page of the **Change the look**wizard). For more information, see the [Deploy a theme by using the user interface](how-to-deploy-a-custom-theme-in-sharepoint-2013.md#section2) procedure in [How to: Deploy a custom theme in SharePoint 2013](how-to-deploy-a-custom-theme-in-sharepoint-2013.md). 
 6. Repeat steps 3 to 5, as necessary. 
     
   

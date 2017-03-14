@@ -7,12 +7,6 @@ ms.assetid: 46b5a79c-962f-4a07-8316-d5005eabd0e0
 
 # Publish SharePoint 2013 sites
 
- **Last modified:** August 16, 2016
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 After you design or develop site components and content, you can deploy them to the current site collection and other site collections—even to site collections that cross the intranet/Internet boundary.
   
     
@@ -53,7 +47,7 @@ Different markets have different tastes. The variations feature helps accommodat
   
 - If you work with display templates that are used with multiple languages, create language files and place them under folders that are named with the locale that they apply to. You can then reference the language files with the  `$includeLanguageScript` function and the `{Locale}` token.
     
-    If the Content Search Web Part relies on the  **Language** property to find the appropriate CustomStrings.js file to include and one doesn't exist, and code in the template requests a string to display that cannot be found by using the `$resource()` or `Srch.U.loadResource()` functions, the Content Search Web Part displays an error message.
+    If the Content Search Web Part relies on the **Language**property to find the appropriate CustomStrings.js file to include and one doesn't exist, and code in the template requests a string to display that cannot be found by using the `$resource()` or `Srch.U.loadResource()` functions, the Content Search Web Part displays an error message.
     
   
 

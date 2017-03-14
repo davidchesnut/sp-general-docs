@@ -8,12 +8,6 @@ ms.assetid: ed8c5d12-e17d-4ceb-b195-601c26824370
 
 # Visio Services in SharePoint 2013
 Visio Services in Microsoft SharePoint Server 2013 enables you to load, display, and interact programmatically with Visio .vsdx, .vsdm files and Visio Web Drawings (.vdw) on Microsoft SharePoint Server 2013 and Microsoft SharePoint Online. 
- **Last modified:** December 07, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## What's new in Visio Services in SharePoint Server 2013
 <a name="visserv15_WhatsNew"> </a>
 
@@ -28,7 +22,7 @@ Visio Services in Microsoft SharePoint Server 2013 and in Microsoft SharePoint O
 
 |||
 |:-----|:-----|
-|![In the cloud behavior note](images/mod_icon_incloud.gif)          ![On-premises behavior note](images/mod_icon_onpremises.gif)|Visio 2013 introduces a new file format (.vsdx), based on the Open Packaging Conventions (OPC) standard (ISO 29500, Part 2) and the XML elements from the previous Visio XML file format (.vdx). It is a zipped, XML-based file format similar to the file formats used in other applications. With the new file format, you can save a Visio 2013 drawing directly to a SharePoint Server or SharePoint Online library, without having to publish the file as a Visio Web Drawing (.vdw). Even so, Visio Services can still read and display Visio Web Drawing files. Visio Services retains the ability to display the Visio Web Drawing (.vdw) format in the browser. It now also renders the new Visio drawing (.vsdx) and Visio macro-enabled drawing (.vsdm) formats. The Visio ServicesECMAScript (JavaScript, JScript) object model contains a new API to support the new file format: the  [Vwa.VwaControl.getDiagramFileType Method](http://msdn.microsoft.com/library/fd8ca95f-a3be-4000-bce8-3aaf1f48148c%28Office.15%29.aspx). The methods returns a value from the  [Vwa.DiagramFileType Enumeration](http://msdn.microsoft.com/library/dd2f8a5d-a54b-44bd-a458-02efdcba0201%28Office.15%29.aspx) that indicates whether the file displayed in the Visio Web Access Web Part is a Visio drawing (.vsdx) or a Visio Web Drawing (.vdw).For more information about the new file format in Visio 2013, see  [Introduction to the Visio file format (.vsdx)](http://msdn.microsoft.com/library/69736f40-8f67-46c2-abf6-82dffecb2274%28Office.15%29.aspx). > [!Note]  > The new Visio files (.vsdx and .vsdm) are only displayed in raster format on Visio Services. Visio Web Drawings (.vdw) can still be displayed using Silverlight.           |
+|![In the cloud behavior note](images/mod_icon_incloud.gif)          ![On-premises behavior note](images/mod_icon_onpremises.gif)|Visio 2013 introduces a new file format (.vsdx), based on the Open Packaging Conventions (OPC) standard (ISO 29500, Part 2) and the XML elements from the previous Visio XML file format (.vdx). It is a zipped, XML-based file format similar to the file formats used in other applications. With the new file format, you can save a Visio 2013 drawing directly to a SharePoint Server or SharePoint Online library, without having to publish the file as a Visio Web Drawing (.vdw). Even so, Visio Services can still read and display Visio Web Drawing files. Visio Services retains the ability to display the Visio Web Drawing (.vdw) format in the browser. It now also renders the new Visio drawing (.vsdx) and Visio macro-enabled drawing (.vsdm) formats. The Visio ServicesECMAScript (JavaScript, JScript) object model contains a new API to support the new file format: the  [Vwa.VwaControl.getDiagramFileType Method](http://msdn.microsoft.com/library/fd8ca95f-a3be-4000-bce8-3aaf1f48148c%28Office.15%29.aspx). The methods returns a value from the  [Vwa.DiagramFileType Enumeration](http://msdn.microsoft.com/library/dd2f8a5d-a54b-44bd-a458-02efdcba0201%28Office.15%29.aspx) that indicates whether the file displayed in the Visio Web Access Web Part is a Visio drawing (.vsdx) or a Visio Web Drawing (.vdw).For more information about the new file format in Visio 2013, see  [Introduction to the Visio file format (.vsdx)](http://msdn.microsoft.com/library/69736f40-8f67-46c2-abf6-82dffecb2274%28Office.15%29.aspx). > [!NOTE]  > The new Visio files (.vsdx and .vsdm) are only displayed in raster format on Visio Services. Visio Web Drawings (.vdw) can still be displayed using Silverlight.           |
    
 
 ### Support for Business Connectivity Services (BCS) data
@@ -37,7 +31,7 @@ Visio Services in Microsoft SharePoint Server 2013 and in Microsoft SharePoint O
 
 |||
 |:-----|:-----|
-|![In the cloud behavior note](images/mod_icon_incloud.gif)          ![On-premises behavior note](images/mod_icon_onpremises.gif)|Visio 2013 diagrams can now be connected to external lists created using Microsoft Business Connectivity Services (BCS) on SharePoint Server 2013 servers and in SharePoint Online. Visio Services supports the ability to refresh the Visio diagrams as the data updates. > [!Note]  > Visio Services does not support SQL, SQL Azure, OLEDC, ODBC, and custom data providers as data sources in SharePoint Online.           |
+|![In the cloud behavior note](images/mod_icon_incloud.gif)          ![On-premises behavior note](images/mod_icon_onpremises.gif)|Visio 2013 diagrams can now be connected to external lists created using Microsoft Business Connectivity Services (BCS) on SharePoint Server 2013 servers and in SharePoint Online. Visio Services supports the ability to refresh the Visio diagrams as the data updates. > [!NOTE]  > Visio Services does not support SQL, SQL Azure, OLEDC, ODBC, and custom data providers as data sources in SharePoint Online.           |
    
 
 ### Commenting

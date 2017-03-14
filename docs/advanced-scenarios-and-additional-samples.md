@@ -1,25 +1,19 @@
 ---
 title: Advanced Scenarios and Additional Samples
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: 110bcc88-2b55-4d80-ab5c-dc3b9658e48d
 ---
 
 
 # Advanced Scenarios and Additional Samples
 
- **Last modified:** August 12, 2016
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 This topic describes some advanced REST scenarios and additional samples. It provides links to Web pages where you can get more detailed information. 
   
     
     
 
 
-> [!Note]  
+> [!NOTE]  
 > The Excel Services REST API applies to SharePoint 2013 and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
 ) endpoint.
   

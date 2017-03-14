@@ -1,5 +1,5 @@
 ---
-title: How to: Configure item-level security in SharePoint 2013
+title: How to Configure item-level security in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: ffd730f2-e7b7-4707-b677-d073da7df7d7
 ---
@@ -7,12 +7,6 @@ ms.assetid: ffd730f2-e7b7-4707-b677-d073da7df7d7
 
 # How to: Configure item-level security in SharePoint 2013
 Learn how to configure item level security when crawling external data with BCS indexing connectors in SharePoint 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## External systems with NTLM authentication
 <a name="ItemLevelSecurity_NTLMAuth"> </a>
 
@@ -24,7 +18,7 @@ For external systems that support NTLM authentication, the security descriptor c
 ### External content type field
 <a name="ItemLevelSecurity_ExtTypeField"> </a>
 
-Microsoft SharePoint 2013 stores the security descriptor if the field of the external content type that contains the descriptor is marked by using the  **WindowsSecurityDescriptorField** property, as shown in the following example.
+Microsoft SharePoint 2013 stores the security descriptor if the field of the external content type that contains the descriptor is marked by using the **WindowsSecurityDescriptorField**property, as shown in the following example.
   
     
     
@@ -80,7 +74,7 @@ DefaultDisplayName="ReadSecurity">
 ```
 
 
-> [!Note]  
+> [!NOTE]  
 > If you return the security descriptor as a field of the external content type, you cannot use client caching. This is because cached items are limited to a specific size, which access control lists (ACL) can easily exceed. Therefore, the Search connector framework ignores requests to cache items if they contain a security descriptor field. 
   
     
@@ -90,7 +84,7 @@ DefaultDisplayName="ReadSecurity">
 ### External content type method
 <a name="ItemLevelSecurity_ExtTypeMethod"> </a>
 
-If you have a method defined in the metadata model that returns the security descriptor for an item based on its identifier, you can use the  **BinarySecurityDescriptorAccessor** method stereotype, as shown in the following example.
+If you have a method defined in the metadata model that returns the security descriptor for an item based on its identifier, you can use the **BinarySecurityDescriptorAccessor**method stereotype, as shown in the following example.
   
     
     

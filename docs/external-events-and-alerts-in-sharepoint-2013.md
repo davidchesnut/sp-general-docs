@@ -7,12 +7,6 @@ ms.assetid: e48e4812-a185-43c5-b243-04b1d79b88ee
 
 # External events and alerts in SharePoint 2013
 Learn the concepts behind creating remote event receivers in SharePoint 2013 that can be attached to external lists and execute when the external data that the list represents is updated. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## What are event receivers?
 <a name="Externalevents_overview"> </a>
 
@@ -60,12 +54,12 @@ Business Connectivity Services (BCS) uses remote event receivers attached to ext
   
     
     
-To accommodate this, two stereotypes have been added to the schema of the BDC model:  **EventSubscriber** and **EventUnsubscriber**. 
+To accommodate this, two stereotypes have been added to the schema of the BDC model: **EventSubscriber**and**EventUnsubscriber**. 
   
     
     
 
-> [!Note]  
+> [!NOTE]  
 > Event receivers are not supported in sandboxed solutions. 
   
     
@@ -80,13 +74,13 @@ By using and extending the SharePoint 2013 event receiver features, BCS is able 
     
     
 
--  **Alerts:** Alerts have been an integral part of SharePoint for several versions, but until SharePoint 2013, they would not work with external lists. Now a user can create alerts on an external list that have the same behavior as alerts on a standard SharePoint list.
+- **Alerts:**Alerts have been an integral part of SharePoint for several versions, but until SharePoint 2013, they would not work with external lists. Now a user can create alerts on an external list that have the same behavior as alerts on a standard SharePoint list.
     
   
--  **External list event receivers:** Event receivers can now be attached to external lists just like they can for standard lists. This provides an extensibility mechanism that lets you write code that is executed at specific times.
+- **External list event receivers:**Event receivers can now be attached to external lists just like they can for standard lists. This provides an extensibility mechanism that lets you write code that is executed at specific times.
     
   
--  **Entity event receivers:** Entity event receivers provide flexibility by letting you write more robust code that allows other operations like providing user context for filtering data. This can allow better personalization and customized security.
+- **Entity event receivers:**Entity event receivers provide flexibility by letting you write more robust code that allows other operations like providing user context for filtering data. This can allow better personalization and customized security.
     
   
 Remote eventing in SharePoint 2013 makes several interesting scenarios possible. For example, you might have a "Sales Lead Tracking" application that lets a sales team be notified when new sales leads are entered into an external lead application. When a new sales lead is entered, SharePoint is notified through the notification system that is part of the lead application. SharePoint receives the notification and then creates new tasks for the specified salespeople to follow up on each new lead. By configuring the sales lead entry application on the external system to send a notification to SharePoint on the creation of each new lead, SharePoint is kept completely up to date. 
@@ -125,13 +119,13 @@ You have to configure the external system so that it can do the following:
     
     
 
--  **Determine when underlying data changes.** For the external system to know when changes have been made, you have to create a mechanism for polling for specific changes. You can do this by using a timed service that polls the data source at specific intervals.
+- **Determine when underlying data changes.**For the external system to know when changes have been made, you have to create a mechanism for polling for specific changes. You can do this by using a timed service that polls the data source at specific intervals.
     
   
--  **Receive and record requests for subscriptions to change notifications.** The external system has to implement a subscription store so that it can store who should receive change notifications. The simplest solution is probably a database table. The table (or whatever mechanism you choose) should record SubscriptionID, Delivery Address, Event Type, and Entity Name.
+- **Receive and record requests for subscriptions to change notifications.**The external system has to implement a subscription store so that it can store who should receive change notifications. The simplest solution is probably a database table. The table (or whatever mechanism you choose) should record SubscriptionID, Delivery Address, Event Type, and Entity Name.
     
   
--  **Post notifications to Representational State Transfer (REST) endpoints.** To let SharePoint subscribers know that a change has occurred, the external system application needs to send an HTTP WebRequest to the delivery address recorded in the subscription store. This delivery address is a RESTful endpoint generated by SharePoint during the subscription process.
+- **Post notifications to Representational State Transfer (REST) endpoints.**To let SharePoint subscribers know that a change has occurred, the external system application needs to send an HTTP WebRequest to the delivery address recorded in the subscription store. This delivery address is a RESTful endpoint generated by SharePoint during the subscription process.
     
   
 
@@ -143,7 +137,7 @@ To allow communication with the external system, SharePoint must be configured w
     
     
 
-- A BDC model with  **EventSubscriber** and **EventUnsubscriber** stereotypes configured
+- A BDC model with **EventSubscriber**and**EventUnsubscriber**stereotypes configured
     
   
 - Event receivers 
@@ -152,7 +146,7 @@ To allow communication with the external system, SharePoint must be configured w
 
 ### How is external eventing enabled?
 
-You can enable external eventing in SharePoint 2013 through  **Site Settings** or by adding the following custom feature id to your project
+You can enable external eventing in SharePoint 2013 through **Site Settings**or by adding the following custom feature id to your project
   
     
     
@@ -200,7 +194,7 @@ In Figure 1, notice that there are three distinct steps involved when using exte
 ## EventSubscriber: subscribe to notifications
 <a name="bkmk_eventsubscriber"> </a>
 
-For a user (SharePoint object) to receive notifications when the underlying data has changed, the user must subscribe to the notifications for an entity. To allow this, the BDC Model schema has been extended to include the  **Subscribe** stereotype. The **Subscribe** stereotype is used by SharePoint to let the external system know that the sender is requesting to be notified of changes to the underlying data.
+For a user (SharePoint object) to receive notifications when the underlying data has changed, the user must subscribe to the notifications for an entity. To allow this, the BDC Model schema has been extended to include the **Subscribe**stereotype. The**Subscribe**stereotype is used by SharePoint to let the external system know that the sender is requesting to be notified of changes to the underlying data.
   
     
     
@@ -231,27 +225,27 @@ The following describes the general flow of the subscription process:
     
     
 
-1.  **User requests a subscription for notifications.** Using a custom user interface (a button on a page or a ribbon), SharePoint initiates a request to the external system app for notifications.
+1. **User requests a subscription for notifications.**Using a custom user interface (a button on a page or a ribbon), SharePoint initiates a request to the external system app for notifications.
     
   
-2.  **SharePoint generates a delivery address.** As part of the Subscribe process, SharePoint creates a REST endpoint where notifications will be delivered.
+2. **SharePoint generates a delivery address.**As part of the Subscribe process, SharePoint creates a REST endpoint where notifications will be delivered.
     
   
-3.  **Subscription request is sent to the external system.** SharePoint then encapsulates the requestor information along with the dynamically generated REST URL, and sends a web request to the external system.
+3. **Subscription request is sent to the external system.**SharePoint then encapsulates the requestor information along with the dynamically generated REST URL, and sends a web request to the external system.
     
   
-4.  **External system receives request.** There are different possibilities for implementing a subscription store. In this example, you will use a SQL Server database table.
+4. **External system receives request.**There are different possibilities for implementing a subscription store. In this example, you will use a SQL Server database table.
     
   
-5.  **External system generates a subscriptionId.** A new **subscriptionId** is generated using code in the line-of-business (LOB) application. The **subscriptionId** should be a GUID.
+5. **External system generates a subscriptionId.**A new**subscriptionId**is generated using code in the line-of-business (LOB) application. The**subscriptionId**should be a GUID.
     
   
-6.  **External system records the subscription.** The external system application records the **subscriptionId**, delivery address, event type, and other information sent from SharePoint into the subscription store. 
+6. **External system records the subscription.**The external system application records the**subscriptionId**, delivery address, event type, and other information sent from SharePoint into the subscription store. 
     
   
-7.  **External system sends the subscriptionId back to SharePoint.** For SharePoint to correctly route the updates that are sent by the external system, the **subscriptionId** is sent back to SharePoint and SharePoint records that information in its database.
+7. **External system sends the subscriptionId back to SharePoint.**For SharePoint to correctly route the updates that are sent by the external system, the**subscriptionId**is sent back to SharePoint and SharePoint records that information in its database.
     
-    The BDC model is working against a  **Subscribe** function import. The metadata for function import is shown in this example.
+    The BDC model is working against a **Subscribe**function import. The metadata for function import is shown in this example.
     
 
 
@@ -284,7 +278,7 @@ The following describes the general flow of the subscription process:
 
 ### Code example: BDC model with Subscribe
 
-The following is an example of a BDC model with the  **Subscribe** method added.
+The following is an example of a BDC model with the **Subscribe**method added.
   
     
     
@@ -374,7 +368,7 @@ The following is an example of a BDC model with the  **Subscribe** method added.
 </Method>
 ```
 
-Table 1 lists the important attributes of the BDC model that are needed to make the  **Subscribe** stereotype work.
+Table 1 lists the important attributes of the BDC model that are needed to make the **Subscribe**stereotype work.
   
     
     
@@ -382,11 +376,11 @@ Table 1 lists the important attributes of the BDC model that are needed to make 
 **Table 1. BDC model attributes**
 
 
-|**Attribute **|**Description **|
+|**Attribute**|**Description**|
 |:-----|:-----|
-|**IsDeliveryAddress**|A  **Boolean** flag used on a **TypeDescriptor** to indicate whether the delivery address provided is to be used to deliver notifications.|
-|**IsEventType**|A  **Boolean** flag used on a **TypeDescriptor** to indicate whether the event type provided is to be used as the event type. Valid event types are **ItemAdded**,  **ItemUpdated**,  **ItemDeleted**, and so on. |
-|**SubscriptionIdName**|A string used on a  **TypeDescriptor** that represents the name of a **subscriptionId** part.|
+|**IsDeliveryAddress**|A **Boolean**flag used on a**TypeDescriptor**to indicate whether the delivery address provided is to be used to deliver notifications.|
+|**IsEventType**|A **Boolean**flag used on a**TypeDescriptor**to indicate whether the event type provided is to be used as the event type. Valid event types are**ItemAdded**, **ItemUpdated**, **ItemDeleted**, and so on. |
+|**SubscriptionIdName**|A string used on a **TypeDescriptor**that represents the name of a**subscriptionId**part.|
    
 
 ## Notifications
@@ -423,13 +417,13 @@ Figure 3 shows the communication flow between the external system and SharePoint
     
     
 
-1.  **New record is added to external system.** In this example, a new record is added to the external system using the application user interface or directly into the database.
+1. **New record is added to external system.**In this example, a new record is added to the external system using the application user interface or directly into the database.
     
   
-2.  **External system application is notified of the change.** The external system application has to be made aware of the changes that are happening to the underlying data. There are a number of ways to do this. You can use SQL triggers that fire when data changes on specific tables, or you can create a polling mechanism to query the data store for changes. There are other ways to accomplish this, but each will have to be evaluated with performance in mind.
+2. **External system application is notified of the change.**The external system application has to be made aware of the changes that are happening to the underlying data. There are a number of ways to do this. You can use SQL triggers that fire when data changes on specific tables, or you can create a polling mechanism to query the data store for changes. There are other ways to accomplish this, but each will have to be evaluated with performance in mind.
     
   
-3.  **External system sends notification request to SharePoint through delivery address.** To communicate the changes, an Atom-formatted request has to be sent to the delivery address that is stored in the LOB application's subscription store.
+3. **External system sends notification request to SharePoint through delivery address.**To communicate the changes, an Atom-formatted request has to be sent to the delivery address that is stored in the LOB application's subscription store.
     
   
 
@@ -440,14 +434,14 @@ In constructing the notification, the LOB system has to create an HTTP payload t
     
     
 
--  **Identity:** When the payload is sent as an identity, the payload is expected to have only information about the identity of the changed item. For example, for a customer in a Customers entity, the payload would only contain the ID of the customer that has changed.
+- **Identity:**When the payload is sent as an identity, the payload is expected to have only information about the identity of the changed item. For example, for a customer in a Customers entity, the payload would only contain the ID of the customer that has changed.
     
   
--  **Full item:** In this case, the payload is an entire record that has changed in the external system. In the customer example, the entire changed customer record is included.
+- **Full item:**In this case, the payload is an entire record that has changed in the external system. In the customer example, the entire changed customer record is included.
     
   
 
-> [!Note]  
+> [!NOTE]  
 > The full item is only supported when you use the OData connector. 
   
     
@@ -487,11 +481,11 @@ The subscription process initiated from SharePoint results in a virtual address 
 ## EventUnsubscriber: remove subscription from the notifications list
 <a name="bkmk_eventunsubscriber"> </a>
 
-The  **Unsubscribe** operation removes a subscription from the notifications list.
+The **Unsubscribe**operation removes a subscription from the notifications list.
   
     
     
- Figure 4 shows that the **UnSubscribe** method is much simpler. Because the subscription ID was sent back to SharePoint, and SharePoint recorded it, all that is needed is to send the UnSubscribe request with the correct subscription ID.
+ Figure 4 shows that the**UnSubscribe**method is much simpler. Because the subscription ID was sent back to SharePoint, and SharePoint recorded it, all that is needed is to send the UnSubscribe request with the correct subscription ID.
   
     
     
@@ -649,7 +643,7 @@ For more information about external events and alerts, see the following.
 **Table 2. Advanced concepts for working with external event receivers**
 
 
-|**Article **|**Description **|
+|**Article**|**Description**|
 |:-----|:-----|
 | [How to: Create an OData data service for use as a BCS external system](how-to-create-an-odata-data-service-for-use-as-a-bcs-external-system.md)|Learn how to create an Internet-addressable Windows Communication Foundation (WCF) service that uses OData to send notifications to SharePoint 2013 when the underlying data changes. These notifications are used to trigger events that are attached to external lists. |
    

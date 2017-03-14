@@ -7,19 +7,13 @@ ms.assetid: 02613912-36f6-4edc-a915-165d12e60bc8
 
 # Accessing a Schema
 
- **Last modified:** August 11, 2016
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 This topic shows one example of how you can access and look at a schema for the REST service in Excel Services. This topic assumes that you have read  [Sample URI For Excel Services REST API](sample-uri-for-excel-services-rest-api.md).d 
   
     
     
 
 
-> [!Note]  
+> [!NOTE]  
 > The Excel Services REST API applies to SharePoint 2013 and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
 ) endpoint.
   
@@ -39,7 +33,7 @@ This topic shows one example of how you can access and look at a schema for the 
 http://myserver/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model/Ranges('Sheet1!A1|H3')?$format=atom
 ```
 
-Right-click the Web page, and then click  **View Source**. 
+Right-click the Web page, and then click **View Source**. 
   
     
     

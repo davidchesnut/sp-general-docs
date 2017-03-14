@@ -1,5 +1,5 @@
 ---
-title: How to: Set the Bing Maps key at the web and farm level in SharePoint 2013
+title: How to Set the Bing Maps key at the web and farm level in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 507ed9de-c349-44b5-b182-e838795dd862
 ---
@@ -23,12 +23,6 @@ ms.assetid: 507ed9de-c349-44b5-b182-e838795dd862
     
     
 Learn how to set the Bing Maps key programmatically at the web and farm level by using the SharePoint 2013 client object model and Windows PowerShell, to enable the Bing Maps functionality in SharePoint lists and location-based web and mobile apps. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 
   
     
@@ -48,7 +42,7 @@ To follow the steps in this example, you should have the following:
   
 - A valid Bing Maps key, which you can obtain from the  [Bing Maps Account Center](https://www.bingmapsportal.com/). 
     
-    > [!Important]  
+    > [!IMPORTANT]  
 > Please note that you are responsible for compliance with terms and conditions applicable to your use of the Bing Maps key, and any necessary disclosures to users of your application regarding data passed to the Bing Maps service. 
 
 ## Code example: Set the Bing Maps key at the farm or web level
@@ -59,7 +53,7 @@ The Bing Maps key can be set at the farm or web level. To set the Bing Maps key 
     
     
 
-> [!Tip]  
+> [!TIP]  
 > The Bing Maps key set at web level has higher precedence order than the Bing Maps key set at farm level. 
   
     
@@ -78,7 +72,7 @@ The Bing Maps key can be set at the farm or web level. To set the Bing Maps key 
     
     The Bing Maps key is now set at the farm level in SharePoint Server 2013. 
     
-    > [!Note]  
+    > [!NOTE]  
 > When you use Windows PowerShell, the Bing Maps key can be set only at the farm level. If you want to set the Bing Maps key at the web level, you can set the key programmatically, as shown in the following section. 
 
 ### To set the Bing Maps key at the farm or web level using the client object model
@@ -87,16 +81,16 @@ The Bing Maps key can be set at the farm or web level. To set the Bing Maps key 
 1. Start Visual Studio. 
     
   
-2. On the menu bar, choose  **File**,  **New Project**. The  **New Project** dialog box opens.
+2. On the menu bar, choose **File**, **New Project**. The **New Project**dialog box opens.
     
   
-3. In the  **New Project** dialog box, choose **C#** in the **Installed Templates** box, and then choose the **Console Application** template.
+3. In the **New Project**dialog box, choose**C#**in the**Installed Templates**box, and then choose the**Console Application**template.
     
   
-4. Give the project a name, and then choose the  **OK** button.
+4. Give the project a name, and then choose the **OK**button.
     
   
-5. Visual Studio creates the project. Add a reference to the following assemblies, and choose  **OK**. 
+5. Visual Studio creates the project. Add a reference to the following assemblies, and choose **OK**. 
     
   - Microsoft.SharePoint.Client.dll 
     
@@ -104,7 +98,7 @@ The Bing Maps key can be set at the farm or web level. To set the Bing Maps key 
   - Microsoft.SharePoint.Client.Runtime.dll 
     
   
-6. In the default .cs file, add a  **using** directive as follows.
+6. In the default .cs file, add a **using**directive as follows.
     
      `using Microsoft.SharePoint.Client;`
     

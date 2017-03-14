@@ -10,12 +10,6 @@ ms.assetid: c0b137cd-126d-4c74-a3f7-eb9debe3c35f
 
 # Excel Services Blogs, Forums, and Resources
 
- **Last modified:** December 07, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 The following are links to blogs, forums, and additional resources related to Excel Services and SharePoint: 
   
     
@@ -23,7 +17,7 @@ The following are links to blogs, forums, and additional resources related to Ex
 
 
 
-|** **Blog Name****|** **Links****|
+|****Blog Name****|****Links****|
 |:-----|:-----|
 |Cum Grano Salis | [Home page](http://blogs.msdn.com/cumgranosalis/) [Excel Services page](http://blogs.msdn.com/cumgranosalis/archive/category/12700.aspx)|
 |Microsoft Excel 2010: The official blog of the Microsoft Excel product team | [Home page](http://blogs.msdn.com/excel) [Excel Online page](http://blogs.msdn.com/excel/archive/2010/01/21/collaborative-editing-using-excel-web-app.aspx)|
@@ -31,14 +25,14 @@ The following are links to blogs, forums, and additional resources related to Ex
    
 
 
-|** **Forum Name****|** **Links****|
+|****Forum Name****|****Links****|
 |:-----|:-----|
 |SharePoint - Excel Services | [Excel Services forum home page](http://social.msdn.microsoft.com/Forums/en-US/sharepointexcel/threads)|
 |SharePoint Products and Technologies | [List of SharePoint Products and Technologies forums](http://social.msdn.microsoft.com/forums/en-US/category/sharepoint)|
    
 
 
-|** **Additional Resources****|** **Links****|
+|****Additional Resources****|****Links****|
 |:-----|:-----|
 |Excel Services Resource Center | [Excel Services Resource Center on MSDN](http://msdn.microsoft.com/en-us/office/bb203828.aspx)|
 |IT Pro \\ Administration Documentation | [TechNet](http://technet.microsoft.com/en-us/library/ee424401%28office.14%29.aspx)|

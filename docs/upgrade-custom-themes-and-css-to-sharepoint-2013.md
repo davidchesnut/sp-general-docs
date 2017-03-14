@@ -7,12 +7,6 @@ ms.assetid: 8d1a4e3a-ae6f-41a5-bd80-3398ba541207
 
 # Upgrade custom themes and CSS to SharePoint 2013
 Learn about upgrade issues with themes customizations, such as custom CSS and custom master pages, and how to update customizations to work in SharePoint 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** Office 365 | SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Introduction to themes customizations and upgraded SharePoint 2013 sites
 <a name="Intro"> </a>
 
@@ -25,7 +19,7 @@ This article describes the issues that may occur when you try to use custom Shar
     
     
 
-> [!Note]  
+> [!NOTE]  
 > SharePoint 2010 themes can be used on site collections that are running in 2010 mode. For more information about site collection modes, see  [Plan for site collection upgrades in SharePoint 2013](http://technet.microsoft.com/en-us/library/ff191199.aspx) or [Plan for upgrade to SharePoint 2013](https://technet.microsoft.com/en-us/library/cc303429.aspx). 
   
     
@@ -52,7 +46,7 @@ For more information about creating themes customizations, see  [How to: Deploy 
     
     
 
-> [!Tip]  
+> [!TIP]  
 > You can open a THMX file in PowerPoint to see how the colors are defined in the custom theme and then use the color palette tool to re-create the colors as a color palette file (an .spcolor file). A color palette is the combination of colors that are used in a SharePoint site. 
   
     
@@ -66,7 +60,7 @@ You can also decide to use one of the preinstalled SharePoint 2013 themes. For m
 ## Upgrading customized master pages
 <a name="MasterPages"> </a>
 
-When you upgrade a SharePoint 2010 site to SharePoint 2013, the site is configured to use the default master page for SharePoint 2013. If you had a custom master page for your SharePoint 2010 site, it still resides in the site and you can apply it to the SharePoint 2013 site. You can use the SharePoint user interface or the  **SPWeb** class to apply the custom master page to the upgraded site. For more information about how to change the master page, see [How to: Apply a master page to a site in SharePoint 2013](how-to-apply-a-master-page-to-a-site-in-sharepoint-2013.md). 
+When you upgrade a SharePoint 2010 site to SharePoint 2013, the site is configured to use the default master page for SharePoint 2013. If you had a custom master page for your SharePoint 2010 site, it still resides in the site and you can apply it to the SharePoint 2013 site. You can use the SharePoint user interface or the **SPWeb**class to apply the custom master page to the upgraded site. For more information about how to change the master page, see [How to: Apply a master page to a site in SharePoint 2013](how-to-apply-a-master-page-to-a-site-in-sharepoint-2013.md). 
   
     
     
@@ -75,12 +69,12 @@ Consider the following before you decide whether to apply the SharePoint 2010 cu
     
     
 
--  **If the custom master page depends on custom CSS files:** Applying the custom master page to the upgraded site should return the site to its original 2010 experience. But, you will be unable to apply a SharePoint 2013 theme to the site.
+- **If the custom master page depends on custom CSS files:**Applying the custom master page to the upgraded site should return the site to its original 2010 experience. But, you will be unable to apply a SharePoint 2013 theme to the site.
     
     If you want to use the custom master page and custom CSS files together with the SharePoint 2013 theming experience, you must update the CSS files to use the new SharePoint 2013 color slots. If you want to access the custom master page from the themes user interface, you also have to create a master page preview file. For more information, see  [How to: Create a master page preview file in SharePoint 2013](how-to-create-a-master-page-preview-file-in-sharepoint-2013.md). 
     
   
--  **If the custom master page depends on SharePoint 2010 CSS files:** CSS files have changed significantly from SharePoint 2010 to SharePoint 2013. In many cases, you will have to rework the master page so that it can work with new classes before you can successfully apply it to the upgraded site. For more information about CSS classes, see the **Using the host web CSS in apps for SharePoint** section in [SharePoint Add-ins UX design guidelines](http://msdn.microsoft.com/library/a4a8f53c-27d7-43dc-b6db-aa7b1f1c7d45%28Office.15%29.aspx). 
+- **If the custom master page depends on SharePoint 2010 CSS files:**CSS files have changed significantly from SharePoint 2010 to SharePoint 2013. In many cases, you will have to rework the master page so that it can work with new classes before you can successfully apply it to the upgraded site. For more information about CSS classes, see the**Using the host web CSS in apps for SharePoint**section in [SharePoint Add-ins UX design guidelines](http://msdn.microsoft.com/library/a4a8f53c-27d7-43dc-b6db-aa7b1f1c7d45%28Office.15%29.aspx). 
     
   
 
@@ -92,16 +86,16 @@ Unmodified SharePoint 2010 CSS files and custom CSS files cannot be used on Shar
     
     
 
--  **Color slots**. The number of available color slots has increased significantly in SharePoint 2013. You must update the color slots in SharePoint 2010 CSS files before they can be used in the new theming experience. For more information, see the  [Color slot mapping](color-palettes-and-fonts-in-sharepoint-2013.md#colorSlots) section in [Color palettes and fonts in SharePoint 2013](color-palettes-and-fonts-in-sharepoint-2013.md). 
+- **Color slots**. The number of available color slots has increased significantly in SharePoint 2013. You must update the color slots in SharePoint 2010 CSS files before they can be used in the new theming experience. For more information, see the  [Color slot mapping](color-palettes-and-fonts-in-sharepoint-2013.md#colorSlots) section in [Color palettes and fonts in SharePoint 2013](color-palettes-and-fonts-in-sharepoint-2013.md). 
     
   
--  **Font slots**. You should review the list of available font slots and verify that the CSS files you want to use in SharePoint 2013 are using the correct font slots. For more information, see the  [Font slots](color-palettes-and-fonts-in-sharepoint-2013.md#fontSlot) section in [Color palettes and fonts in SharePoint 2013](color-palettes-and-fonts-in-sharepoint-2013.md). 
+- **Font slots**. You should review the list of available font slots and verify that the CSS files you want to use in SharePoint 2013 are using the correct font slots. For more information, see the  [Font slots](color-palettes-and-fonts-in-sharepoint-2013.md#fontSlot) section in [Color palettes and fonts in SharePoint 2013](color-palettes-and-fonts-in-sharepoint-2013.md). 
     
   
--  **New annotation**. SharePoint 2013 has a new annotation that lets you replace the background image. For more information, see  [How to: Make custom CSS files themable in SharePoint 2013](how-to-make-custom-css-files-themable-in-sharepoint-2013.md). 
+- **New annotation**. SharePoint 2013 has a new annotation that lets you replace the background image. For more information, see  [How to: Make custom CSS files themable in SharePoint 2013](how-to-make-custom-css-files-themable-in-sharepoint-2013.md). 
     
   
--  **New classes**. You may have to update CSS files to work with the new classes in SharePoint 2013. For more information about CSS classes (also referred to as CSS styles), see the  **Using the host web CSS in apps for SharePoint** section in [SharePoint Add-ins UX design guidelines](http://msdn.microsoft.com/library/a4a8f53c-27d7-43dc-b6db-aa7b1f1c7d45%28Office.15%29.aspx). 
+- **New classes**. You may have to update CSS files to work with the new classes in SharePoint 2013. For more information about CSS classes (also referred to as CSS styles), see the **Using the host web CSS in apps for SharePoint**section in [SharePoint Add-ins UX design guidelines](http://msdn.microsoft.com/library/a4a8f53c-27d7-43dc-b6db-aa7b1f1c7d45%28Office.15%29.aspx). 
     
   
 

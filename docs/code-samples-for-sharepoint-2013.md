@@ -7,17 +7,11 @@ ms.assetid: e6b52c6c-32f8-4689-8c1a-7b50039dcbe8
 
 # Code samples for SharePoint 2013
 Find and download code samples for SharePoint 2013, including samples that demonstrate SharePoint Add-ins, user experience design, metadata management, workflows, mobile application development, REST, and other areas of SharePoint development. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** apps for SharePoint | Office 365 | SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Code samples for SharePoint 2013 and SharePoint Add-ins
 
 
 
-|**Title **|**Summary **|**Subject **|
+|**Title**|**Summary**|**Subject**|
 |:-----|:-----|:-----|
 | [SharePoint 2013: Creating an OData source With BCS notifications](http://code.msdn.microsoft.com/SharePoint-2013-Creating-f47c3890)|Learn how to create a Windows Communication Foundation (WCF) data service that exposes data from the Northwind database using the OData protocol to provide data, as well as notifications of changes to that data found in the external system. |BCS, OData, WCF |
 | [SharePoint 2013: MyFileConnector custom BCS indexing connector sample](http://code.msdn.microsoft.com/SharePoint-2013-MyFileConne-79d2ea26)|Learn how to create a custom BCS indexing connector for Search in SharePoint 2013. |BCS |
@@ -64,8 +58,8 @@ Find and download code samples for SharePoint 2013, including samples that demon
 | [SharePoint 2013: Use multiple SharePoint lists in a Windows Phone app (sample 2)](http://code.msdn.microsoft.com/SharePoint-2013-Use-d5389658)|Create Windows Phone apps that use data from multiple SharePoint lists. |Mobile development |
 | [SharePoint 2013: Create push notifications in SharePoint for Windows Phone apps](http://code.msdn.microsoft.com/SharePoint-2013-Using-push-a1530b51)|Create a solution in SharePoint Server 2013 for sending push notifications that can be received by Windows Phone apps. |Mobile development |
 | [SharePoint 2013: Implementing business logic and data validation](http://code.msdn.microsoft.com/SharePoint-2013-Implementin-ffdabd8e)|Implement data validation in a Windows Phone app created by using the Windows Phone SharePoint List Application template. |Mobile development |
-| [SharePoint 2013: Make app-only policy type calls in a remote app (CSOM)](http://code.msdn.microsoft.com/SharePoint-2013-Make-app-6e3d1ee9)|Uses the  **AllowAppOnlyPolicy** attribute and makes app-only policy type calls. It uses OAuth to call back into SharePoint Server. Sample uses CSOM.|OAuth, CSOM |
-| [SharePoint 2013: Make app-only policy type calls in a remote app (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Make-app-28141ce6)|Uses the  **AllowAppOnlyPolicy** attribute and makes app-only policy type calls. It uses OAuth to call back into SharePoint Server 2013. Sample uses REST.|OAuth, REST |
+| [SharePoint 2013: Make app-only policy type calls in a remote app (CSOM)](http://code.msdn.microsoft.com/SharePoint-2013-Make-app-6e3d1ee9)|Uses the **AllowAppOnlyPolicy**attribute and makes app-only policy type calls. It uses OAuth to call back into SharePoint Server. Sample uses CSOM.|OAuth, CSOM |
+| [SharePoint 2013: Make app-only policy type calls in a remote app (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Make-app-28141ce6)|Uses the **AllowAppOnlyPolicy**attribute and makes app-only policy type calls. It uses OAuth to call back into SharePoint Server 2013. Sample uses REST.|OAuth, REST |
 | [SharePoint 2013: Use HTTPS in a remote app](http://code.msdn.microsoft.com/SharePoint-2013-Use-HTTPs-dc7227a7)|Contains a remote app that uses HTTPs protocol. It uses OAuth to call back into SharePoint Server 2013. |OAuth |
 | [SharePoint 2013: Perform basic data operations on files and folders using REST](http://code.msdn.microsoft.com/SharePoint-2013-Perform-ab9c4ae5)|Learn how to use Representational State Transfer (REST) and the SharePoint JavaScript cross-domain library to perform basic operations on document libraries and files. |REST, data access |
 | [SharePoint 2013: Get the host web title using the cross-domain library (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Get-the-0ec36bb6)|Learn how to use the cross-domain library in SharePoint Add-ins to read the host web's title by using the Representational State Transfer (REST) service. |REST, SharePoint Add-ins |
@@ -87,8 +81,8 @@ Find and download code samples for SharePoint 2013, including samples that demon
 | [SharePoint 2013: Use the chrome control and the cross-domain library (CSOM)](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-97c30a2e)|Includes a remote webpage that hosts the chrome control and retrieves information from the host web using the cross domain library and the CSOM in SharePoint 2013. |UI design, user experience, CSOM, SharePoint Add-ins |
 | [SharePoint 2013: Use the chrome control and the cross-domain library (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-a759e9f8)|Includes a remote webpage that hosts the chrome control and retrieves information from the host web using the cross domain library and Representational State Transfer (REST) in SharePoint 2013. |UI design, user experience, REST, SharePoint Add-ins |
 | [SharePoint 2013: Open a remote app webpage using an ECB custom action](http://code.msdn.microsoft.com/SharePoint-2013-Open-a-36d1598d)|Includes an ECB (Edit Control Block) custom action that passes the SharePoint website URL, List ID, and Item ID from where it is invoked to a remote webpage. |UI design, user experience, SharePoint Add-ins |
-| [SharePoint 2013 workflow: Call an external web service](http://code.msdn.microsoft.com/SharePoint-2013-workflow-48ea87d4)|Find out how to use Visual Studio 2012 to create a SharePoint 2013 workflow that calls an external web service. When calling the web service, the workflow also uses the new  **DynamicValue** data type.|Workflows |
-| [SharePoint 2013 workflow: Create a custom action](http://code.msdn.microsoft.com/SharePoint-2013-workflow-41e5c0f9)|Learn how to use Visual Studio 2012 to create a SharePoint 2013 workflow that uses a custom action and calls an external web service. When calling the web service, the workflow uses the new  **DynamicValue** data type.|Workflows |
+| [SharePoint 2013 workflow: Call an external web service](http://code.msdn.microsoft.com/SharePoint-2013-workflow-48ea87d4)|Find out how to use Visual Studio 2012 to create a SharePoint 2013 workflow that calls an external web service. When calling the web service, the workflow also uses the new **DynamicValue**data type.|Workflows |
+| [SharePoint 2013 workflow: Create a custom action](http://code.msdn.microsoft.com/SharePoint-2013-workflow-41e5c0f9)|Learn how to use Visual Studio 2012 to create a SharePoint 2013 workflow that uses a custom action and calls an external web service. When calling the web service, the workflow uses the new **DynamicValue**data type.|Workflows |
 | [SharePoint 2013 workflow: Integrate with Netflix](http://code.msdn.microsoft.com/SharePoint-2013-workflow-e610ce71)|Learn about using Visual Studio 2012 and Workflow Manager Client 1.0 to create a workflow that uses a web service workflow activity with an OData query to access the Netflix service. |Workflows, OData |
 | [SharePoint 2013 workflow: Sales tax calculator](http://code.msdn.microsoft.com/SharePoint-2013-workflow-f7a1a8ba)|Learn about using Visual Studio 2012 and Workflow Manager Client 1.0 to create a workflow that calls a web service to obtain the sales tax rate for a given location. It then calculates the sales tax based on the base price in a product catalog. |Workflows |
 | [SharePoint 2013 workflow: Using task action](http://code.msdn.microsoft.com/SharePoint-2013-workflow-942a5441)|Illustrates how to use the new Task Actions feature that was added to SharePoint Designer 2013 for enhanced workflow design and development. |Workflows |

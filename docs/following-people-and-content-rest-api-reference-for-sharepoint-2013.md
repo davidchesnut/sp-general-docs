@@ -7,26 +7,20 @@ ms.assetid: c05755df-846d-4a39-941d-950d066cc6d4
 
 
 # Following people and content REST API reference for SharePoint 2013
-Find SharePoint REST endpoints for following people and content by using the  **SocialRestFollowingManager** resource and the **PeopleManager** resource.
- **Last modified:** September 17, 2015
+Find SharePoint REST endpoints for following people and content by using the **SocialRestFollowingManager**resource and the**PeopleManager**resource.
+You can use the SharePoint 2013 Representational State Transfer (REST) service to do the same tasks you can do when you use the .NET client object models and the JavaScript object model. To use the REST service, you build and send HTTP **GET**and**POST**requests to the resource endpoints that represent the tasks you want to do. These resource endpoints correspond to SharePoint objects, properties, and methods.
   
     
     
 
- * **Applies to:** REST | SharePoint* 
-You can use the SharePoint 2013 Representational State Transfer (REST) service to do the same tasks you can do when you use the .NET client object models and the JavaScript object model. To use the REST service, you build and send HTTP  **GET** and **POST** requests to the resource endpoints that represent the tasks you want to do. These resource endpoints correspond to SharePoint objects, properties, and methods.
-  
-    
-    
-
-The endpoint URI for most Following tasks begins with the  **SocialRestFollowingManager** resource ( `social.following`) and ends with the resource that performs the specific task. For example, you use the URI  `http://www.contoso.com/_api/social.following/follow` to make the current user start following people or content, and the URI `https://www.contoso.com/sites/devSite/_api/social.following/followed` to get the people or content the current user is following.
-> [!Note]  
+The endpoint URI for most Following tasks begins with the **SocialRestFollowingManager**resource ( `social.following`) and ends with the resource that performs the specific task. For example, you use the URI  `http://www.contoso.com/_api/social.following/follow` to make the current user start following people or content, and the URI `https://www.contoso.com/sites/devSite/_api/social.following/followed` to get the people or content the current user is following.
+> [!NOTE]  
 > This article shows the endpoint URI and parameter components of HTTP requests. For examples of complete requests, see  [How to: Follow documents, sites, and tags by using the REST service in SharePoint 2013](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md). 
   
     
     
 
-We recommend that you use the  **SocialRestFollowingManager** API for Following People and Following Content tasks, but you can use the **PeopleManager** resource for some Following People tasks that **SocialRestFollowingManager** doesn't support. For example, you can find out whether someone is following the current user or get another user's followers. For these tasks, you send HTTP **GET** requests to endpoint URIs that begin with the **PeopleManager** resource ( `sp.userprofiles.peoplemanager`) and end with the resource that performs the specific task. If the endpoint takes a parameter, the parameter metadata is sent in the URI or in the request body in XML or JavaScript Object Notation (JSON) format. You can make HTTP requests in any language, including JavaScript and C#. By default, the REST service returns responses that are formatted by using the Atom protocol, but you can request the JSON format by using HTTP  **Accept** headers. See [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx). 
+We recommend that you use the **SocialRestFollowingManager**API for Following People and Following Content tasks, but you can use the**PeopleManager**resource for some Following People tasks that**SocialRestFollowingManager**doesn't support. For example, you can find out whether someone is following the current user or get another user's followers. For these tasks, you send HTTP**GET**requests to endpoint URIs that begin with the**PeopleManager**resource ( `sp.userprofiles.peoplemanager`) and end with the resource that performs the specific task. If the endpoint takes a parameter, the parameter metadata is sent in the URI or in the request body in XML or JavaScript Object Notation (JSON) format. You can make HTTP requests in any language, including JavaScript and C#. By default, the REST service returns responses that are formatted by using the Atom protocol, but you can request the JSON format by using HTTP **Accept**headers. See [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx). 
 ## Resource endpoints for Following People and Following Content tasks
 <a name="bk_Overview"> </a>
 
@@ -46,7 +40,7 @@ Makes the current user start following a user, document, site, or tag.
 
 ### Endpoint URI structure
 
- **POST** `http://<siteCollection>/<site>/_api/social.following/follow`
+**POST**`http://<siteCollection>/<site>/_api/social.following/follow`
   
     
     
@@ -57,7 +51,7 @@ Makes the current user start following a user, document, site, or tag.
   
     
     
-Type:  **SP.Social.SocialActorInfo**
+Type: **SP.Social.SocialActorInfo**
   
     
     
@@ -65,7 +59,7 @@ The actor to start following.
   
     
     
- **User  _actor_ in the URI**
+**User  _actor_ in the URI**
   
     
     
@@ -77,7 +71,7 @@ The actor to start following.
 http://<siteCollection>/<site>/_api/social.following/follow(ActorType=0,AccountName=@v,Id=null)?@v='domain\\user'
 ```
 
- **User  _actor_ in the request body**
+**User  _actor_ in the request body**
   
     
     
@@ -97,7 +91,7 @@ If you're using a claims-based identity model, you can pass the account name by 
   
     
     
- **Document  _actor_ in the URI**
+**Document  _actor_ in the URI**
   
     
     
@@ -109,7 +103,7 @@ If you're using a claims-based identity model, you can pass the account name by 
 http://<siteCollection>/<site>/_api/social.following/follow(ActorType=1,ContentUri=@v,Id=null)?@v='http://server/Shared%20Documents/fileName.docx'
 ```
 
- **Document  _actor_ in the request body**
+**Document  _actor_ in the request body**
   
     
     
@@ -125,7 +119,7 @@ http://<siteCollection>/<site>/_api/social.following/follow(ActorType=1,ContentU
 }
 ```
 
- **Site  _actor_ in the URI**
+**Site  _actor_ in the URI**
   
     
     
@@ -137,7 +131,7 @@ http://<siteCollection>/<site>/_api/social.following/follow(ActorType=1,ContentU
 http://<siteCollection>/<site>/_api/social.following/follow(ActorType=2,ContentUri=@v,Id=null)?@v='http://server/site'
 ```
 
- **Site  _actor_ in the request body**
+**Site  _actor_ in the request body**
   
     
     
@@ -153,7 +147,7 @@ http://<siteCollection>/<site>/_api/social.following/follow(ActorType=2,ContentU
 }
 ```
 
- **Tag  _actor_ in the URI**
+**Tag  _actor_ in the URI**
   
     
     
@@ -165,7 +159,7 @@ http://<siteCollection>/<site>/_api/social.following/follow(ActorType=2,ContentU
 http://<siteCollection>/<site>/_api/social.following/follow(ActorType=3,TagGuid='19a4a484-c1dc-4bc5-8c93-bb96245ce928',Id=null)
 ```
 
- **Tag  _actor_ in the request body**
+**Tag  _actor_ in the request body**
   
     
     
@@ -188,11 +182,11 @@ You need the tag GUID to start following a tag. You can't get the GUID by using 
 
 ### Response
 
- **Follow**
+**Follow**
   
     
     
-Type:  **SP.Social.SocialFollowResult**
+Type: **SP.Social.SocialFollowResult**
   
     
     
@@ -223,7 +217,7 @@ Makes the current user stop following a user, document, site, or tag.
 
 ### Endpoint URI structure
 
- **POST** `http://<siteCollection>/<site>/_api/social.following/stopfollowing`
+**POST**`http://<siteCollection>/<site>/_api/social.following/stopfollowing`
   
     
     
@@ -234,7 +228,7 @@ Makes the current user stop following a user, document, site, or tag.
   
     
     
-Type:  **SP.Social.SocialActorInfo**
+Type: **SP.Social.SocialActorInfo**
   
     
     
@@ -242,7 +236,7 @@ The actor to stop following.
   
     
     
- **User  _actor_ in the URI**
+**User  _actor_ in the URI**
   
     
     
@@ -253,7 +247,7 @@ The actor to stop following.
 http://<siteCollection>/<site>/_api/social.following/stopfollowing(ActorType=0,AccountName=@v,Id=null)?@v='domain\\user'
 ```
 
- **User  _actor_ in the request body**
+**User  _actor_ in the request body**
   
     
     
@@ -273,7 +267,7 @@ If you're using a claims-based identity model, you can pass the account name by 
   
     
     
- **Document  _actor_ in the URI**
+**Document  _actor_ in the URI**
   
     
     
@@ -285,7 +279,7 @@ If you're using a claims-based identity model, you can pass the account name by 
 http://<siteCollection>/<site>/_api/social.following/stopfollowing(ActorType=1,ContentUri=@v,Id=null)?@v='http://server/Shared%20Documents/fileName.docx'
 ```
 
- **Document  _actor_ in the request body**
+**Document  _actor_ in the request body**
   
     
     
@@ -301,7 +295,7 @@ http://<siteCollection>/<site>/_api/social.following/stopfollowing(ActorType=1,C
 }
 ```
 
- **Site  _actor_ in the URI**
+**Site  _actor_ in the URI**
   
     
     
@@ -313,7 +307,7 @@ http://<siteCollection>/<site>/_api/social.following/stopfollowing(ActorType=1,C
 http://<siteCollection>/<site>/_api/social.following/stopfollowing(ActorType=2,ContentUri=@v,Id=null)?@v='http://server/site'
 ```
 
- **Site  _actor_ in the request body**
+**Site  _actor_ in the request body**
   
     
     
@@ -329,7 +323,7 @@ http://<siteCollection>/<site>/_api/social.following/stopfollowing(ActorType=2,C
 }
 ```
 
- **Tag  _actor_ in the URI**
+**Tag  _actor_ in the URI**
   
     
     
@@ -341,7 +335,7 @@ http://<siteCollection>/<site>/_api/social.following/stopfollowing(ActorType=2,C
 http://<siteCollection>/<site>/_api/social.following/stopfollowing(ActorType=3,TagGuid='19a4a484-c1dc-4bc5-8c93-bb96245ce928',Id=null)
 ```
 
- **Tag  _actor_ in the request body**
+**Tag  _actor_ in the request body**
   
     
     
@@ -385,7 +379,7 @@ Indicates whether the current user is following a specified user, document, site
 
 ### Endpoint URI structure
 
- **POST** `http://<siteCollection>/<site>/_api/social.following/isfollowed`
+**POST**`http://<siteCollection>/<site>/_api/social.following/isfollowed`
   
     
     
@@ -396,7 +390,7 @@ Indicates whether the current user is following a specified user, document, site
   
     
     
-Type:  **SP.Social.SocialActorInfo**
+Type: **SP.Social.SocialActorInfo**
   
     
     
@@ -404,7 +398,7 @@ The actor to find the following status for.
   
     
     
- **User  _actor_ in the URI**
+**User  _actor_ in the URI**
   
     
     
@@ -415,7 +409,7 @@ The actor to find the following status for.
 http://<siteCollection>/<site>/_api/social.following/isfollowed(ActorType=0,AccountName=@v,Id=null)?@v='domain\\user'
 ```
 
- **User  _actor_ in the request body**
+**User  _actor_ in the request body**
   
     
     
@@ -435,7 +429,7 @@ If you're using a claims-based identity model, you can pass the account name by 
   
     
     
- **Document  _actor_ in the URI**
+**Document  _actor_ in the URI**
   
     
     
@@ -447,7 +441,7 @@ If you're using a claims-based identity model, you can pass the account name by 
 http://<siteCollection>/<site>/_api/social.following/isfollowed(ActorType=1,ContentUri=@v,Id=null)?@v='https://domain.sharepoint.com/Shared%20Documents/fileName.docx'
 ```
 
- **Document  _actor_ in the request body**
+**Document  _actor_ in the request body**
   
     
     
@@ -463,7 +457,7 @@ http://<siteCollection>/<site>/_api/social.following/isfollowed(ActorType=1,Cont
 }
 ```
 
- **Site  _actor_ in the URI**
+**Site  _actor_ in the URI**
   
     
     
@@ -475,7 +469,7 @@ http://<siteCollection>/<site>/_api/social.following/isfollowed(ActorType=1,Cont
 http://<siteCollection>/<site>/_api/social.following/isfollowed(ActorType=2,ContentUri=@v,Id=null)?@v='http://domain.sharepoint.com'
 ```
 
- **Site  _actor_ in the request body**
+**Site  _actor_ in the request body**
   
     
     
@@ -491,7 +485,7 @@ http://<siteCollection>/<site>/_api/social.following/isfollowed(ActorType=2,Cont
 }
 ```
 
- **Tag  _actor_ in the URI**
+**Tag  _actor_ in the URI**
   
     
     
@@ -503,7 +497,7 @@ http://<siteCollection>/<site>/_api/social.following/isfollowed(ActorType=2,Cont
 http://<siteCollection>/<site>/_api/social.following/isfollowed(ActorType=3,TagGuid='19a4a484-c1dc-4bc5-8c93-bb96245ce928',Id=null)
 ```
 
- **Tag  _actor_ in the request body**
+**Tag  _actor_ in the request body**
   
     
     
@@ -526,15 +520,15 @@ You need the tag GUID to start following a tag. You can't get the GUID by using 
 
 ### Response
 
- **IsFollowed**
+**IsFollowed**
   
     
     
-Type:  **bool**
+Type: **bool**
   
     
     
- **true** if the current user is following the actor; otherwise **false**. 
+**true**if the current user is following the actor; otherwise**false**. 
   
     
     
@@ -554,14 +548,14 @@ The following response indicates that the user is not following the specified ac
 ## My
 <a name="bk_My"> </a>
 
-Gets information about the  **SocialRestFollowingManager** instance and information about the current user.
+Gets information about the **SocialRestFollowingManager**instance and information about the current user.
   
     
     
 
 ### Endpoint URI structure
 
- **GET** `http://<siteCollection>/<site>/_api/social.following/my`
+**GET**`http://<siteCollection>/<site>/_api/social.following/my`
   
     
     
@@ -575,15 +569,15 @@ None.
 
 ### Response
 
-Type:  **SP.Social.SocialRestFollowingManager**
+Type: **SP.Social.SocialRestFollowingManager**
   
     
     
-Information about the  **SocialRestFollowingManager** instance, and the **MyFollowedDocumentsUri**,  **MyFollowedSitesUri**, and  **SocialActor** properties for the current user.
+Information about the **SocialRestFollowingManager**instance, and the**MyFollowedDocumentsUri**, **MyFollowedSitesUri**, and **SocialActor**properties for the current user.
   
     
     
-The following response represents the  **SocialRestFollowingManager** instance for the current user.
+The following response represents the **SocialRestFollowingManager**instance for the current user.
   
     
     
@@ -626,14 +620,14 @@ The following response represents the  **SocialRestFollowingManager** instance f
 ## My/FollowedDocumentsUri
 <a name="bk_MyFollowedDocumentsUri"> </a>
 
-Gets the URI to the  **Docs I'm following** page for the current user.
+Gets the URI to the **Docs I'm following**page for the current user.
   
     
     
 
 ### Endpoint URI structure
 
- **GET** `http://<siteCollection>/<site>/_api/social.following/my/followeddocumentsuri`
+**GET**`http://<siteCollection>/<site>/_api/social.following/my/followeddocumentsuri`
   
     
     
@@ -647,19 +641,19 @@ None.
 
 ### Response
 
- **FollowedDocumentsUri**
+**FollowedDocumentsUri**
   
     
     
-Type:  **String**
+Type: **String**
   
     
     
-The URI to the  **Docs I'm following** page for the current user.
+The URI to the **Docs I'm following**page for the current user.
   
     
     
-The following response represents the  **FollowedDocumentsUri** for the current user.
+The following response represents the **FollowedDocumentsUri**for the current user.
   
     
     
@@ -675,14 +669,14 @@ The following response represents the  **FollowedDocumentsUri** for the current 
 ## My/FollowedSitesUri
 <a name="bk_MyFollowedSitesUri"> </a>
 
-Gets the URI to the  **Sites I'm following** page for the current user.
+Gets the URI to the **Sites I'm following**page for the current user.
   
     
     
 
 ### Endpoint URI structure
 
- **GET** `http://<siteCollection>/<site>/_api/social.following/my/followedsitesuri`
+**GET**`http://<siteCollection>/<site>/_api/social.following/my/followedsitesuri`
   
     
     
@@ -696,19 +690,19 @@ None.
 
 ### Response
 
- **FollowedSitesUri**
+**FollowedSitesUri**
   
     
     
-Type:  **String**
+Type: **String**
   
     
     
-The URI to the  **Sites I'm following** page for the current user.
+The URI to the **Sites I'm following**page for the current user.
   
     
     
-The following response represents the  **FollowedSitesUri** for the current user.
+The following response represents the **FollowedSitesUri**for the current user.
   
     
     
@@ -730,7 +724,7 @@ Gets users, documents, sites, and tags that the current user is following.
 
 ### Endpoint URI structure
 
- **GET** `http://<siteCollection>/<site>/_api/social.following/my/followed(types=15)`
+**GET**`http://<siteCollection>/<site>/_api/social.following/my/followed(types=15)`
   
     
     
@@ -741,7 +735,7 @@ Gets users, documents, sites, and tags that the current user is following.
   
     
     
-Type:  **Int32**
+Type: **Int32**
   
     
     
@@ -752,11 +746,11 @@ The actor types to include. Users = 1, Documents = 2, Sites = 4, Tags = 8. Bitwi
 
 ### Response
 
- **Followed**
+**Followed**
   
     
     
-Type: Array of  **SP.Social.SocialActor**
+Type: Array of **SP.Social.SocialActor**
   
     
     
@@ -842,7 +836,7 @@ Gets the count of users, documents, sites, and tags that the current user is fol
 
 ### Endpoint URI structure
 
- **GET** `http://<siteCollection>/<site>/_api/social.following/my/followedcount(types=15)`
+**GET**`http://<siteCollection>/<site>/_api/social.following/my/followedcount(types=15)`
   
     
     
@@ -853,7 +847,7 @@ Gets the count of users, documents, sites, and tags that the current user is fol
   
     
     
-Type:  **Int32**
+Type: **Int32**
   
     
     
@@ -864,11 +858,11 @@ The types of actors to include. Users = 1, Documents = 2, Sites = 4, Tags = 8. B
 
 ### Response
 
- **FollowedCount**
+**FollowedCount**
   
     
     
-Type:  **Int32**
+Type: **Int32**
   
     
     
@@ -899,7 +893,7 @@ Gets the users who are following the current user.
 
 ### Endpoint URI structure
 
- **GET** `http://<siteCollection>/<site>/_api/social.following/my/followers`
+**GET**`http://<siteCollection>/<site>/_api/social.following/my/followers`
   
     
     
@@ -913,11 +907,11 @@ None.
 
 ### Response
 
- **Followers**
+**Followers**
   
     
     
-Type: Array of  **SP.Social.SocialActor**
+Type: Array of **SP.Social.SocialActor**
   
     
     
@@ -964,7 +958,7 @@ Gets users who the current user might want to follow.
     
     
 
-> [!Note]  
+> [!NOTE]  
 > People Suggestions functionality depends on users' following activities, search crawls, and search analytics. See  [How People Suggestions works on SharePoint Online](follow-people-in-sharepoint-2013.md#bk_PeopleSuggestions). 
   
     
@@ -973,7 +967,7 @@ Gets users who the current user might want to follow.
 
 ### Endpoint URI structure
 
- **GET** `http://<siteCollection>/<site>/_api/social.following/my/suggestions`
+**GET**`http://<siteCollection>/<site>/_api/social.following/my/suggestions`
   
     
     
@@ -987,11 +981,11 @@ None.
 
 ### Response
 
- **Suggestions**
+**Suggestions**
   
     
     
-Type: Array of  **SP.Social.SocialActor**
+Type: Array of **SP.Social.SocialActor**
   
     
     
@@ -1008,7 +1002,7 @@ Gets users who the current user might want to follow.
     
     
 
-> [!Note]  
+> [!NOTE]  
 > People Suggestions functionality depends on users' following activities, search crawls, and search analytics. See  [How People Suggestions works on SharePoint Online](follow-people-in-sharepoint-2013.md#bk_PeopleSuggestions). 
   
     
@@ -1017,7 +1011,7 @@ Gets users who the current user might want to follow.
 
 ### Endpoint URI structure
 
- **GET** `http://<siteCollection>/<site>/_api/sp.userprofiles.peoplemanager/getmysuggestions`
+**GET**`http://<siteCollection>/<site>/_api/sp.userprofiles.peoplemanager/getmysuggestions`
   
     
     
@@ -1031,11 +1025,11 @@ None.
 
 ### Response
 
- **Suggestions**
+**Suggestions**
   
     
     
-Type: List of  **SP.UserProfiles.PersonProperties**
+Type: List of **SP.UserProfiles.PersonProperties**
   
     
     
@@ -1047,14 +1041,14 @@ Users who the current user might want to follow.
 ## IsMyPeopleListPublic
 <a name="bk_IsMyPeopleListPublic"> </a>
 
-Finds out whether the  **People I'm Following** list for the current user is public.
+Finds out whether the **People I'm Following**list for the current user is public.
   
     
     
 
 ### Endpoint URI structure
 
- **GET** `http://<siteCollection>/<site>/_api/sp.userprofiles.peoplemanager/ismypeoplelistpublic`
+**GET**`http://<siteCollection>/<site>/_api/sp.userprofiles.peoplemanager/ismypeoplelistpublic`
   
     
     
@@ -1068,15 +1062,15 @@ None.
 
 ### Response
 
- **IsMyPeopleListPublic**
+**IsMyPeopleListPublic**
   
     
     
-Type:  **bool**
+Type: **bool**
   
     
     
- **true** if the current user's people list is public; otherwise **false**. 
+**true**if the current user's people list is public; otherwise**false**. 
   
     
     
@@ -1103,11 +1097,11 @@ Finds out whether a specified user is following the current user.
 
 ### Endpoint URI structure
 
- **GET** `http://<siteCollection>/<site>/_api/sp.userprofiles.peoplemanager/amifollowedby(accountName=@v)?@v='domain\\user'`
+**GET**`http://<siteCollection>/<site>/_api/sp.userprofiles.peoplemanager/amifollowedby(accountName=@v)?@v='domain\\user'`
   
     
     
- **GET** `http://<siteCollection>/<site>/_api/sp.userprofiles.peoplemanager/amifollowedby(accountName=@v)?@v='i:0"%23".f|membership|user@domain.com'`
+**GET**`http://<siteCollection>/<site>/_api/sp.userprofiles.peoplemanager/amifollowedby(accountName=@v)?@v='i:0"%23".f|membership|user@domain.com'`
   
     
     
@@ -1118,7 +1112,7 @@ Finds out whether a specified user is following the current user.
   
     
     
-Type:  **String**
+Type: **String**
   
     
     
@@ -1129,15 +1123,15 @@ The account name of the target user.
 
 ### Response
 
- **AmIFollowedBy**
+**AmIFollowedBy**
   
     
     
-Type:  **bool**
+Type: **bool**
   
     
     
- **true** if the specified user is following the current user; otherwise **false**. 
+**true**if the specified user is following the current user; otherwise**false**. 
   
     
     
@@ -1163,11 +1157,11 @@ Gets the users followed by a specified user.
 
 ### Endpoint URI structure
 
- **GET** `http://<siteCollection>/<site>/_api/sp.userprofiles.peoplemanager/getpeoplefollowedby(accountName=@v)?@v='domain\\user'`
+**GET**`http://<siteCollection>/<site>/_api/sp.userprofiles.peoplemanager/getpeoplefollowedby(accountName=@v)?@v='domain\\user'`
   
     
     
- **GET** `http://<siteCollection>/<site>/_api/sp.userprofiles.peoplemanager/getpeoplefollowedby(accountName=@v)?@v='i:0"%23".f|membership|user@domain.com'`
+**GET**`http://<siteCollection>/<site>/_api/sp.userprofiles.peoplemanager/getpeoplefollowedby(accountName=@v)?@v='i:0"%23".f|membership|user@domain.com'`
   
     
     
@@ -1178,7 +1172,7 @@ Gets the users followed by a specified user.
   
     
     
-Type:  **String**
+Type: **String**
   
     
     
@@ -1189,11 +1183,11 @@ The account name of the target user.
 
 ### Response
 
- **GetPeopleFollowedBy**
+**GetPeopleFollowedBy**
   
     
     
-Type: List of  **SP.UserProfiles.PersonProperties**
+Type: List of **SP.UserProfiles.PersonProperties**
   
     
     
@@ -1392,11 +1386,11 @@ Gets the users who are following a specified user.
 
 ### Endpoint URI structure
 
- **GET** `http://<siteCollection>/<site>/_api/sp.userprofiles.peoplemanager/getfollowersfor(accountName=@v)?@v='domain\\user'`
+**GET**`http://<siteCollection>/<site>/_api/sp.userprofiles.peoplemanager/getfollowersfor(accountName=@v)?@v='domain\\user'`
   
     
     
- **GET** `http://<siteCollection>/<site>/_api/sp.userprofiles.peoplemanager/getfollowersfor(accountName=@v)?@v='i:0"%23".f|membership|user@domain.com'`
+**GET**`http://<siteCollection>/<site>/_api/sp.userprofiles.peoplemanager/getfollowersfor(accountName=@v)?@v='i:0"%23".f|membership|user@domain.com'`
   
     
     
@@ -1407,7 +1401,7 @@ Gets the users who are following a specified user.
   
     
     
-Type:  **String**
+Type: **String**
   
     
     
@@ -1418,11 +1412,11 @@ The account name of the target user.
 
 ### Response
 
- **GetFollowersFor**
+**GetFollowersFor**
   
     
     
-Type: List of  **SP.UserProfiles.PersonProperties**
+Type: List of **SP.UserProfiles.PersonProperties**
   
     
     

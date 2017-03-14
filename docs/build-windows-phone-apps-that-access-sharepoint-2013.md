@@ -7,12 +7,6 @@ ms.assetid: 36681335-f772-4499-8445-f94481bc18e7
 
 # Build Windows Phone apps that access SharePoint 2013
 Learn how to create SharePoint Add-ins that integrate SharePoint 2013 and mobile devices such as Windows Phone 8 and Windows Phone 7.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Introduction to building mobile apps with SharePoint 2013
 <a name="SP15mobileapp_intro"> </a>
 
@@ -89,11 +83,11 @@ SharePoint 2013 adds several new classes to both the server and client object mo
   
     
     
-To enable location-aware apps, there is a new native field type class,  **SPFieldGeoLocation**, along with several associated classes for structuring the value of location fields and rendering them. These classes are also callable in the SharePoint 2013 client object model for Silverlight. The new field type also has a definition added to the standard SharePoint fldtypes.xml file and new user controls for rendering the field on the Display, Edit, and New forms. For an overview, see  [Integrating location and map functionality in SharePoint 2013](integrating-location-and-map-functionality-in-sharepoint-2013.md). 
+To enable location-aware apps, there is a new native field type class, **SPFieldGeoLocation**, along with several associated classes for structuring the value of location fields and rendering them. These classes are also callable in the SharePoint 2013 client object model for Silverlight. The new field type also has a definition added to the standard SharePoint fldtypes.xml file and new user controls for rendering the field on the Display, Edit, and New forms. For an overview, see  [Integrating location and map functionality in SharePoint 2013](integrating-location-and-map-functionality-in-sharepoint-2013.md). 
   
     
     
-To enable SharePoint 2013 authentication for Windows Phone users, the client object model includes a new  **Authenticator** class and several associated classes. For an overview, see [Overview of the SharePoint 2013 mobile client authentication object model](overview-of-the-sharepoint-2013-mobile-client-authentication-object-model.md).
+To enable SharePoint 2013 authentication for Windows Phone users, the client object model includes a new **Authenticator**class and several associated classes. For an overview, see [Overview of the SharePoint 2013 mobile client authentication object model](overview-of-the-sharepoint-2013-mobile-client-authentication-object-model.md).
   
     
     

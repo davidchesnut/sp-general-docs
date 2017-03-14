@@ -1,28 +1,22 @@
 ---
-title: Step 4: Building and Testing the Application
-ms.prod: OFFICE365
+title: Step 4 Building and Testing the Application
+ms.prod: SHAREPOINT
 ms.assetid: f2feeecb-1b4c-4049-be4e-11d414f13d9f
 ---
 
 
 # Step 4: Building and Testing the Application
 
- **Last modified:** January 13, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 In this step, you will build and test your application. Visual Studio offers several methods to build and run a console application from the IDE, such as: 
   
     
     
 
 
-- Start Without Debugging ( **CTRL + F5**) 
+- Start Without Debugging (**CTRL + F5**) 
     
   
-- Start ( **F5**) 
+- Start (**F5**) 
     
   
 
@@ -32,12 +26,12 @@ In this step, you will build and test your application. Visual Studio offers sev
 ### To build and run the application
 
 
-1. On the  **Debug** menu, click **Start Without Debugging** or press **CTRL + F5**. This ensures that the console window remains open after the program has finished executing. 
+1. On the **Debug**menu, click**Start Without Debugging**or press**CTRL + F5**. This ensures that the console window remains open after the program has finished executing. 
     
   
 2. The application prints the following output to the console. 
     
-    > [!Note]  
+    > [!NOTE]  
 > These values vary depending on the values you have in your workbook, session ID, and so on. 
 
   ```
@@ -84,7 +78,7 @@ SOAP Exception Message: The file you selected could not be found. Check the spel
 ### Index Out Of Range Exception
 
 
-1. If you try to get a value from outside the range, you will get a  **System.IndexOutOfRangeException** exception. The application prints the following output to the console:
+1. If you try to get a value from outside the range, you will get a **System.IndexOutOfRangeException**exception. The application prints the following output to the console:
     
   ```
   
@@ -103,7 +97,7 @@ An unhandled exception of type 'System.IndexOutOfRangeException' occurred in Sam
 Additional information: Index was outside the bounds of the array.
   ```
 
-3. You can handle the above unhandled exception by adding another  **catch** block to catch the exception after the SOAP exception **catch** block as shown here:
+3. You can handle the above unhandled exception by adding another **catch**block to catch the exception after the SOAP exception**catch**block as shown here:
     
   ```cs
   
@@ -125,7 +119,7 @@ End Try
 ### To run the application using F5
 
 
-1. You can run your application by clicking  **Start** on the **Debug** menu, or by pressing **F5**. To ensure that the console window remains open after the program has finished executing, you could add the following line of code at the end of your code (after the  **catch** block):
+1. You can run your application by clicking **Start**on the**Debug**menu, or by pressing**F5**. To ensure that the console window remains open after the program has finished executing, you could add the following line of code at the end of your code (after the **catch**block):
     
   ```cs
   

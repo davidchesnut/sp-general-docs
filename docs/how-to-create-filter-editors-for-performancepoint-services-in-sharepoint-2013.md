@@ -1,5 +1,5 @@
 ---
-title: How to: Create filter editors for PerformancePoint Services in SharePoint 2013
+title: How to Create filter editors for PerformancePoint Services in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 51354c88-4330-40f0-bffa-1ce73f9ff298
 ---
@@ -7,12 +7,6 @@ ms.assetid: 51354c88-4330-40f0-bffa-1ce73f9ff298
 
 # How to: Create filter editors for PerformancePoint Services in SharePoint 2013
 Learn how to create the editor component of a custom filter extension for PerformancePoint Services. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013 Enterprise* 
 ## What are custom filter editors for PerformancePoint Services?
 <a name="bk_intro"> </a>
 
@@ -20,7 +14,7 @@ In PerformancePoint Services, custom filter editors enable users to set properti
   
     
     
-The following procedures and examples are based on the  **SampleFilterEditor** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the filter's name and description and to select the underlying data source. For the complete code for the class, see  [Code example: Create, retrieve, and update custom PerformancePoint Services filters in SharePoint Server 2013](#bk_example). 
+The following procedures and examples are based on the **SampleFilterEditor**class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the filter's name and description and to select the underlying data source. For the complete code for the class, see  [Code example: Create, retrieve, and update custom PerformancePoint Services filters in SharePoint Server 2013](#bk_example). 
   
     
     
@@ -80,19 +74,19 @@ We recommend that you use the sample editor as a template. The sample shows how 
   - IDataSourceConsumer.cs 
     
   
-5. In your editor class, add  **using** directives for the following PerformancePoint Services namespaces:
+5. In your editor class, add **using**directives for the following PerformancePoint Services namespaces:
     
-  -  **Microsoft.PerformancePoint.Scorecards**
-    
-  
-  -  **Microsoft.PerformancePoint.Scorecards.ServerCommon**
+  - **Microsoft.PerformancePoint.Scorecards**
     
   
-  -  **Microsoft.PerformancePoint.Scorecards.ServerRendering**
+  - **Microsoft.PerformancePoint.Scorecards.ServerCommon**
+    
+  
+  - **Microsoft.PerformancePoint.Scorecards.ServerRendering**
     
   
 
-    Depending on your extension's functionality, other  **using** directives may be required.
+    Depending on your extension's functionality, other **using**directives may be required.
     
   
 6. Inherit from the base class that supports your editor implementation. Because the sample filter editor is a web application, it inherits from the  [Page](https://msdn.microsoft.com/library/System.Web.UI.Page.aspx) class. Other implementations can derive from base classes such as the [UserControl](https://msdn.microsoft.com/library/System.Windows.Forms.UserControl.aspx) class or [WebPart](https://msdn.microsoft.com/library/System.Web.UI.WebControls.WebParts.WebPart.aspx) class.
@@ -100,13 +94,13 @@ We recommend that you use the sample editor as a template. The sample shows how 
   
 7. Define controls that expose the properties that you want users to view or modify. The sample filter editor first declares variables for the web server controls that are defined in the user interface component, which is an ASPX page. The sample editor also defines a button control that enables users to submit changes. Then, the editor calls the  [CreateChildControls()](https://msdn.microsoft.com/library/System.Web.UI.Control.CreateChildControls.aspx) method to make the controls available on the page.
     
-    > [!Note]  
+    > [!NOTE]  
 > The editor defines programming logic separately from the user interface. Instructions for creating the user interface component of the editor are beyond the scope of this documentation. 
 
-    The sample filter editor performs steps 8 through 12 in the  **Page_Load** method. **Page_Load** is also used to initialize and validate variables and controls, populate controls, and save state information for the custom filter and helper objects.
+    The sample filter editor performs steps 8 through 12 in the **Page_Load**method.**Page_Load**is also used to initialize and validate variables and controls, populate controls, and save state information for the custom filter and helper objects.
     
   
-8. Set the  [AllowUnsafeUpdates](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.ServerCommon.ServerUtils.AllowUnsafeUpdates.aspx) property to **true**. This enables the filter editor to write data to the repository without using form POST operations. 
+8. Set the  [AllowUnsafeUpdates](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.ServerCommon.ServerUtils.AllowUnsafeUpdates.aspx) property to**true**. This enables the filter editor to write data to the repository without using form POST operations. 
     
   
 9. Retrieve the parameters from the query string and set them as values for local variables, as shown in the following code example. 
@@ -140,7 +134,7 @@ Dim action As String = Request.QueryString(ClickOnceLaunchKeys.LaunchOperation)
     For information about query string parameters, see  [Editors for Custom PerformancePoint Services Objects](http://msdn.microsoft.com/library/7c5924f1-91f3-436a-9d94-2e0dc454c8cc%28Office.15%29.aspx). 
     
   
-10. Retrieve the  **FilterRepositoryHelper** object, which is used to make calls to the repository, as shown in the following code example.
+10. Retrieve the **FilterRepositoryHelper**object, which is used to make calls to the repository, as shown in the following code example.
     
   ```cs
   
@@ -165,10 +159,10 @@ filterRepositoryHelper = new FilterRepositoryHelper();
 
 12. Retrieve the operation to perform ( _OpenItem_ or _CreateItem_) from the query string, and then retrieve or create the custom filter. 
     
-  - To retrieve the custom filter, use the  **FilterRepositoryHelper.Get** method.
+  - To retrieve the custom filter, use the **FilterRepositoryHelper.Get**method.
     
   
-  - To create the custom filter, use the  **Filter()** constructor and define the filter's [Name](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Name.aspx) , [RendererClassName](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Filter.RendererClassName.aspx) , and [SubTypeId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Filter.SubTypeId.aspx) properties. [SubTypeId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Filter.SubTypeId.aspx) is the unique identifier for the filter, and it must match the **subType** attribute that you specify for your custom filter in the PerformancePoint Services web.config file. [RendererClassName](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Filter.RendererClassName.aspx) is the fully qualified name of the class that defines the renderer web server control. If it is not defined in the editor, this value defaults to the renderer class that is specified in the web.config file.
+  - To create the custom filter, use the **Filter()**constructor and define the filter's [Name](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Name.aspx) , [RendererClassName](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Filter.RendererClassName.aspx) , and [SubTypeId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Filter.SubTypeId.aspx) properties. [SubTypeId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Filter.SubTypeId.aspx) is the unique identifier for the filter, and it must match the**subType**attribute that you specify for your custom filter in the PerformancePoint Services web.config file. [RendererClassName](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Filter.RendererClassName.aspx) is the fully qualified name of the class that defines the renderer web server control. If it is not defined in the editor, this value defaults to the renderer class that is specified in the web.config file.
     
   
 
@@ -212,9 +206,9 @@ End If
   ```
 
 
-    > [!Note]  
+    > [!NOTE]  
 > By default, users can create custom objects from PerformancePoint Dashboard Designer only. To enable users to create a custom object outside of Dashboard Designer, you must add a menu item that sends a  _CreateItem_ request to your editor from the content type in the repository. For more information, see [Editors for Custom PerformancePoint Services Objects](http://msdn.microsoft.com/library/7c5924f1-91f3-436a-9d94-2e0dc454c8cc%28Office.15%29.aspx). 
-13. Retrieve the filter's underlying data source from the repository. The sample filter editor uses the  **FilterRepositoryHelper.DataSourceHelper** property to call the **DataSourceConsumerHelper.GetDataSource** method, which is used to retrieve the data source by its location in the repository. This is shown in the following code example.
+13. Retrieve the filter's underlying data source from the repository. The sample filter editor uses the **FilterRepositoryHelper.DataSourceHelper**property to call the**DataSourceConsumerHelper.GetDataSource**method, which is used to retrieve the data source by its location in the repository. This is shown in the following code example.
     
   ```cs
   
@@ -236,7 +230,7 @@ If Not String.IsNullOrEmpty(filter.DataSourceLocation.ItemUrl) Then
 End If
   ```
 
-14. To enable users to select a data source for the filter, populate the selection control with PerformancePoint Services data sources. The  **PopulateDataSourceDropDown** method in the sample filter editor calls the **DataSourceConsumerHelper.GetDataSourcesBySourceNames** method to retrieve the data sources. This is shown in the following code example.
+14. To enable users to select a data source for the filter, populate the selection control with PerformancePoint Services data sources. The **PopulateDataSourceDropDown**method in the sample filter editor calls the**DataSourceConsumerHelper.GetDataSourcesBySourceNames**method to retrieve the data sources. This is shown in the following code example.
     
   ```cs
   
@@ -258,7 +252,7 @@ Dim dataSourceCollection As ICollection = filterRepositoryHelper.DataSourceHelpe
   ```
 
 
-    The sample filter editor retrieves only two types of data source, but you can modify this method to support other data source types or to prompt the user for the type of data source to retrieve. To reference a native data source of a particular type, use the  [SourceName](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.SourceName.aspx) property, which returns a field from the [DataSourceNames](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceNames.aspx) class. To reference a custom data source, use the [SubTypeId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.SubTypeId.aspx) property of the data source, which is the same value as the **subType** attribute that is registered in the PerformancePoint Services web.config file for the data source extension.
+    The sample filter editor retrieves only two types of data source, but you can modify this method to support other data source types or to prompt the user for the type of data source to retrieve. To reference a native data source of a particular type, use the  [SourceName](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.SourceName.aspx) property, which returns a field from the [DataSourceNames](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceNames.aspx) class. To reference a custom data source, use the [SubTypeId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.SubTypeId.aspx) property of the data source, which is the same value as the**subType**attribute that is registered in the PerformancePoint Services web.config file for the data source extension.
     
     If you modify this method, you must make the corresponding change in the  [GetDisplayDataInternal](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Server.Extensions.CustomParameterDataProvider.GetDisplayDataInternal.aspx) method in the sample filter's data provider.
     
@@ -278,7 +272,7 @@ Dim dataSourceCollection As ICollection = filterRepositoryHelper.DataSourceHelpe
     
   
 
-    > [!Note]  
+    > [!NOTE]  
 > The display data table is returned by the  [DisplayValues](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.ParameterDefinition.DisplayValues.aspx) property, and it is initialized when the filter data provider calls the [GetDisplayDataInternal](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Server.Extensions.CustomParameterDataProvider.GetDisplayDataInternal.aspx) method. If the data table contains other columns, you can define other column mappings to provide additional functionality.
 
   ```cs
@@ -334,17 +328,17 @@ End If
   ```
 
 
-    The sample editor defines its beginpoint in the  **VerifyFilter** method. It also uses **VerifyFilter** to verify that required properties are set and to define the selection mode, which is an optional property.
+    The sample editor defines its beginpoint in the **VerifyFilter**method. It also uses**VerifyFilter**to verify that required properties are set and to define the selection mode, which is an optional property.
     
   
-16. Initialize the filter by running the filter's query and retrieving data from the data source. The  **buttonOK_Click** method in the sample filter editor calls the **FilterRepositoryHelper.GetParameterDisplayData** method to initialize the filter.
+16. Initialize the filter by running the filter's query and retrieving data from the data source. The **buttonOK_Click**method in the sample filter editor calls the**FilterRepositoryHelper.GetParameterDisplayData**method to initialize the filter.
     
-    > [!Note]  
-> The editor must call  **FilterRepositoryHelper.GetParameterDisplayData** at least once before updating the filter object.
-17. Update the filter with user-defined changes. The  **buttonOK_Click** method in the sample filter editor calls the **FilterRepositoryHelper.Update** method to update the filter's [Name](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Name.aspx) , [Description](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Description.aspx) , and [DataSourceLocation](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Filter.DataSourceLocation.aspx) properties in the repository. In addition, **buttonOK_Click** is used to validate the contents of the controls and retrieve state information for the custom filter and the helper object.
+    > [!NOTE]  
+> The editor must call **FilterRepositoryHelper.GetParameterDisplayData**at least once before updating the filter object.
+17. Update the filter with user-defined changes. The **buttonOK_Click**method in the sample filter editor calls the**FilterRepositoryHelper.Update**method to update the filter's [Name](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Name.aspx) , [Description](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Description.aspx) , and [DataSourceLocation](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Filter.DataSourceLocation.aspx) properties in the repository. In addition,**buttonOK_Click**is used to validate the contents of the controls and retrieve state information for the custom filter and the helper object.
     
-    > [!Note]  
-> Users can set a custom object's  [Name](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Name.aspx) , [Description](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Description.aspx) , and [Owner](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Owner.aspx) ( **Person Responsible**) properties and delete custom objects directly from Dashboard Designer and the PerformancePoint Services repository. 
+    > [!NOTE]  
+> Users can set a custom object's  [Name](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Name.aspx) , [Description](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Description.aspx) , and [Owner](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Owner.aspx) (**Person Responsible**) properties and delete custom objects directly from Dashboard Designer and the PerformancePoint Services repository. 
 
 ## Code example: Create, retrieve, and update custom PerformancePoint Services filters in SharePoint Server 2013
 <a name="bk_example"> </a>

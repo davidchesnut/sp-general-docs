@@ -7,12 +7,6 @@ ms.assetid: 4b515860-69ae-4af8-8013-cd071c0ddca6
 
 # Upgrade site customizations for SharePoint 2013
 Learn about potential issues and get recommendations for upgrading your SharePoint 2010 site customizations to SharePoint 2013. 
- **Last modified:** December 07, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013* 
 SharePoint 2013 introduces significant changes to the user interface (UI) that let you customize sites using faster, more agile components. But when you upgrade from SharePoint 2010, you might encounter some issues with the new components that have been built into SharePoint 2013 to handle the improvements to the UI. 
   
     
@@ -36,7 +30,7 @@ Table 1 lists the possible after-upgrade problems for custom components and info
 **Table 1. Custom components affected by upgrading to SharePoint 2013**
 
 
-|**If you have customized **|**You might encounter **|
+|**If you have customized**|**You might encounter**|
 |:-----|:-----|
 |CSS styles |During upgrade, your site will revert to the CSS files referred to in the default.master page. As a result, any customizations you have made to the appearance of your pages will change, and pages will render with the default styles found in a default installation. |
 |Themes |For SharePoint 2010, you may have created custom themes that define a corporate branding for an entire site. You create these as .thmx files that can be uploaded to the site collection and applied by the administrator. In SharePoint 2013, the theming engine has been completely redesigned to be more flexible and powerful and to provide for easier future upgrades. As a result of this redesign, upgrading from SharePoint 2010 to SharePoint 2013 themes is not supported and will require you to re-create them for SharePoint 2013. |

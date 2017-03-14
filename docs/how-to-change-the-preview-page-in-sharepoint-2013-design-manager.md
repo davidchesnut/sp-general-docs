@@ -1,5 +1,5 @@
 ---
-title: How to: Change the preview page in SharePoint 2013 Design Manager
+title: How to Change the preview page in SharePoint 2013 Design Manager
 ms.prod: SHAREPOINT
 ms.assetid: e5dfd8df-65de-44fc-aa97-23b4685d33ee
 ---
@@ -7,18 +7,12 @@ ms.assetid: e5dfd8df-65de-44fc-aa97-23b4685d33ee
 
 # How to: Change the preview page in SharePoint 2013 Design Manager
 Learn how to set, create, and change the preview page in Design Manager in SharePoint 2013.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** Office 365 | SharePoint Server 2013* 
 The preview page is the page of your site that you use to see how your design looks. You can set the preview page to be either a specific page within your site or a generic preview. If you choose the generic preview, you'll see your master page with only a placeholder for content. You'll also see a message in the banner that you're currently previewing the master page without any content. If you choose a specific page, you'll see the page content rendered with the master page and the appropriate page layout.
   
     
     
 
-As you interact with the page, you might do something that causes SharePoint to move away from the preview. For example, if you select  **Save** on the ribbon, SharePoint saves the page and then displays the live version of the page. (The live version of the page uses the live master page, not the master page that you are designing.) You can return to the preview page by choosing **Reset the preview**.
+As you interact with the page, you might do something that causes SharePoint to move away from the preview. For example, if you select **Save**on the ribbon, SharePoint saves the page and then displays the live version of the page. (The live version of the page uses the live master page, not the master page that you are designing.) You can return to the preview page by choosing**Reset the preview**.
   
     
     
@@ -46,19 +40,19 @@ Use this procedure to set the preview page.
 ### To set the preview page
 
 
-1. In the banner at the top of the web browser, choose  **Change Preview Page**.
+1. In the banner at the top of the web browser, choose **Change Preview Page**.
     
   
-2. Choose  **Select Existing**.
+2. Choose **Select Existing**.
     
   
-3. To use a generic preview page, select  **Generic Preview**.
+3. To use a generic preview page, select **Generic Preview**.
     
   
-4. To use a specific page as the preview page, select  **URL** and enter the URL of the page.
+4. To use a specific page as the preview page, select **URL**and enter the URL of the page.
     
   
-5. Choose  **OK**.
+5. Choose **OK**.
     
   
 
@@ -73,13 +67,13 @@ Use this procedure to create a page and set it as the preview page.
 ### To create a new preview page
 
 
-1. In the banner at the top of the web browser, choose  **Change Preview Page**.
+1. In the banner at the top of the web browser, choose **Change Preview Page**.
     
   
-2. Choose  **Create New**.
+2. Choose **Create New**.
     
   
-3. Type a name for the page and then choose  **Create**.
+3. Type a name for the page and then choose **Create**.
     
     The page is created, and you are taken to a view from which you can add content to the new page.
     
@@ -96,7 +90,7 @@ Use this procedure to return to the preview page.
 ### To return to the preview page
 
 
-- In the information message at the top of the web browser, select  **Reset the preview**.
+- In the information message at the top of the web browser, select **Reset the preview**.
     
   
 

@@ -1,5 +1,5 @@
 ---
-title: How to: Create a UDF That Calls a Web Service
+title: How to Create a UDF That Calls a Web Service
 keywords: how to,howdoi,howto,UDF
 f1_keywords:
 - how to,howdoi,howto,UDF
@@ -10,19 +10,19 @@ ms.assetid: 360c5766-4b5d-4a48-9f23-8955036924ce
 
 # How to: Create a UDF That Calls a Web Service
 
- **Last modified:** July 20, 2011
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 This example shows how to call an external Web service from a user-defined function (UDF). The Web service used in this example is: 
   
     
     
 
- `http://webservices.imacination.com/distance/Distance.jws?wsdl`You must use Microsoft Visual Studio 2005 or a similar Microsoft .NET Framework 2.0-compatible development tool to create this sample. 
-> [!Note]  
+ `http://webservices.imacination.com/distance/Distance.jws?wsdl`
+You must use Microsoft Visual Studio 2005 or a similar Microsoft .NET Framework 2.0-compatible development tool to create this sample. 
+  
+    
+    
+
+
+> [!NOTE]  
 > Before testing the code, make sure that the Web service you are calling is available. The Web service server could be down or the Web service discontinued. If the Web service is unavailable, the calls you make to the Web service from your code will fail. 
 > You can check if a Web service is available by visiting its site. In this example, the URL is: 
 >  `http://webservices.imacination.com/distance/Distance.jws?wsdl`

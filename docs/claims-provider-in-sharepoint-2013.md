@@ -7,12 +7,6 @@ ms.assetid: 5918d5b6-5fd6-4f41-9473-a15b1491d056
 
 # Claims provider in SharePoint 2013
 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Claims providers
 
 A claims provider in SharePoint Server issues claims and packages claims into security tokens, that is, into the user's token. When a user signs in to SharePoint Server, the user's token is validated and then used to sign in to SharePoint. 
@@ -24,7 +18,7 @@ A claims provider in SharePoint has two roles: augmentation and picking.
     
     
 
-> [!Note]  
+> [!NOTE]  
 > For information about how to create a claims provider, see  [How to: Create a claims provider in SharePoint 2013](how-to-create-a-claims-provider-in-sharepoint-2013.md). 
   
     
@@ -74,7 +68,7 @@ In SharePoint Server, there are some specific built-in claims providers that ena
     
     
 
-> [!Note]  
+> [!NOTE]  
 > An authentication provider can be a Windows Active Directory, forms-based authentication, or a trusted SAML token issuer (that is, an STS). 
   
     

@@ -1,5 +1,5 @@
 ---
-title: How to: Create a mobile app in SharePoint 2013 that contains data from an external data source
+title: How to Create a mobile app in SharePoint 2013 that contains data from an external data source
 ms.prod: SHAREPOINT
 ms.assetid: f1d62256-aca0-4a59-8145-0add9e68a449
 ---
@@ -7,19 +7,13 @@ ms.assetid: f1d62256-aca0-4a59-8145-0add9e68a449
 
 # How to: Create a mobile app in SharePoint 2013 that contains data from an external data source
 Learn how to create a simple mobile app in SharePoint 2013 that contains data from external data source by using Business Connectivity Services and connecting to an external list. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** Office 365 | SharePoint Foundation 2013 | SharePoint Server 2013* 
 SharePoint 2013 enables you to build mobile applications that can access external data from databases, enterprise applications, and Web 2.0 services using Business Connectivity Services. You can also provide complete interaction with the external data including write-back capabilities from your mobile device. You do this by creating apps that connect to external lists, which are a special type of lists in SharePoint that are based on external content types and contain data from an external system. The new Windows Phone SharePoint List template in Visual Studio 2010 Express enables you to quickly and easily create apps for the Windows Phone that connects to external lists. For example, you can build a Windows phone app that brings the product catalog for an inventory list in SharePoint to the phone for the sales people. This topic shows how to create a Windows Phone app that displays external data from the Northwind sample database by connecting to an external list in SharePoint. Notice that in this example, the external list connects to the Northwind database using a custom OData service; however, it's possible to connect to databases directly as well as any external system that is supported by Business Connectivity Services, using external lists. With the new SharePoint List template in Visual Studio, you can create a mobile app that can access an external list on a SharePoint site. This article provides a step-by-step procedure that begins with uploading an external Business Data Connectivity (BDC) service model and ends with testing your new mobile app. 
   
     
     
 
 
-> [!Important]  
+> [!IMPORTANT]  
 > If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. 
 > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md). 
   
@@ -47,7 +41,7 @@ SharePoint 2013 enables you to build mobile applications that can access externa
 ## Step 1: Upload a BDC metadata model
 <a name="HowToCreateSimpleExternalListBasedPhoneApp_Step1"> </a>
 
-A BDC model is the core of Business Connectivity Services. It's an XML file that uses data structures such as  **Entity** (external content type) and **Method** to abstract out complex details about the external system. It's auto-generated when you create an external content type using SharePoint Designer and for some data source types such .NET and OData sources, you need to create the BDC model manually or by using Visual Studio. When you upload a BDC model to the BDC metadata store using SharePoint Central Administration, the external content types defined in the model can be used to create external lists in SharePoint which are lists that display data from the underlying external system. In this step, you'll upload the Northwind sample BDC model to the Metadata Store using SharePoint Central Administration.
+A BDC model is the core of Business Connectivity Services. It's an XML file that uses data structures such as **Entity**(external content type) and**Method**to abstract out complex details about the external system. It's auto-generated when you create an external content type using SharePoint Designer and for some data source types such .NET and OData sources, you need to create the BDC model manually or by using Visual Studio. When you upload a BDC model to the BDC metadata store using SharePoint Central Administration, the external content types defined in the model can be used to create external lists in SharePoint which are lists that display data from the underlying external system. In this step, you'll upload the Northwind sample BDC model to the Metadata Store using SharePoint Central Administration.
   
     
     
@@ -55,28 +49,28 @@ A BDC model is the core of Business Connectivity Services. It's an XML file that
 1. Navigate to Central Administration. 
     
   
-2. Choose  **Application Management**, and then choose  **Manage Service Applications**. 
+2. Choose **Application Management**, and then choose **Manage Service Applications**. 
     
   
-3. On the Service Application page, choose ** Business Data Connectivity Service**. 
+3. On the Service Application page, choose**Business Data Connectivity Service**. 
     
   
-4. On the ribbon in the BDC Service application, choose  **Import**. 
+4. On the ribbon in the BDC Service application, choose **Import**. 
     
   
-5. On the Import BDC Model page, choose  **Business Data Connectivity Service**. 
+5. On the Import BDC Model page, choose **Business Data Connectivity Service**. 
     
   
-6. On the ribbon in the BDC Service application, choose  **Import**. 
+6. On the ribbon in the BDC Service application, choose **Import**. 
     
   
-7. On the Import BDC Model page, choose  **Browse**. 
+7. On the Import BDC Model page, choose **Browse**. 
     
   
-8. In the  **Choose a File to upload** dialog box, browse to the Northwind_oData.bdcm file, and then choose **Open**. 
+8. In the **Choose a File to upload**dialog box, browse to the Northwind_oData.bdcm file, and then choose**Open**. 
     
   
-9. After the file is imported, choose the  **OK** button.
+9. After the file is imported, choose the **OK**button.
     
   
 
@@ -91,18 +85,18 @@ Next you need to set permissions on the BDC model to specify who can execute the
 1. Navigate to Central Administration. 
     
   
-2. Choose  **Application Management**, and then choose  **Manage Service Applications**. 
+2. Choose **Application Management**, and then choose **Manage Service Applications**. 
     
   
-3. On the Service Application page, choose  **Business Data Connectivity Service**. 
+3. On the Service Application page, choose **Business Data Connectivity Service**. 
     
   
-4. In the ribbon, choose  **BDC Models** from the drop-down list in the **View** group.
+4. In the ribbon, choose **BDC Models**from the drop-down list in the**View**group.
     
   
-5. In the list of BDC models, hover over Northwind_oData.bdcm and choose  **Set Permissions**, as shown in Figure 1. 
+5. In the list of BDC models, hover over Northwind_oData.bdcm and choose **Set Permissions**, as shown in Figure 1. 
     
-    **Figure 1. Choosing permissions for BDC model**
+   **Figure 1. Choosing permissions for BDC model**
 
   
 
@@ -112,15 +106,15 @@ Next you need to set permissions on the BDC model to specify who can execute the
   
 
   
-6. In the  **Set Object Permissions** dialog box, choose the **Browse** button.
+6. In the **Set Object Permissions**dialog box, choose the**Browse**button.
     
   
-7. In the  **Select People and Groups** dialog box, search for your account and choose the **OK** button.
+7. In the **Select People and Groups**dialog box, search for your account and choose the**OK**button.
     
   
-8. Select the permissions for  **Edit**,  **Execute**,  **Selectable In Clients**, and  **Set Permissions**, as shown in Figure 2. 
+8. Select the permissions for **Edit**, **Execute**, **Selectable In Clients**, and **Set Permissions**, as shown in Figure 2. 
     
-    **Figure 2. Setting object permissions**
+   **Figure 2. Setting object permissions**
 
   
 
@@ -130,25 +124,25 @@ Next you need to set permissions on the BDC model to specify who can execute the
   
 
   
-9. Choose the  **OK** button.
+9. Choose the **OK**button.
     
   
-10. In the ribbon, select  **External Content Types** from the drop-down list in the **View** group.
+10. In the ribbon, select **External Content Types**from the drop-down list in the**View**group.
     
   
-11. In the list of external content types, hover over  **Customer**, and then choose  **Set Permissions**. 
+11. In the list of external content types, hover over **Customer**, and then choose **Set Permissions**. 
     
   
-12. In the  **Set Object Permissions** dialog box, choose the **Browse** button and search for your account.
+12. In the **Set Object Permissions**dialog box, choose the**Browse**button and search for your account.
     
   
-13. In the  **Set Object Permissions** dialog box, choose **Add** and select the permissions for **Edit**,  **Execute**,  **Selectable In Clients**, and  **Set Permissions**. 
+13. In the **Set Object Permissions**dialog box, choose**Add**and select the permissions for**Edit**, **Execute**, **Selectable In Clients**, and **Set Permissions**. 
     
   
-14. Ensure that the  **Propagate Permissions** box is selected.
+14. Ensure that the **Propagate Permissions**box is selected.
     
   
-15. Choose the  **OK** button.
+15. Choose the **OK**button.
     
   
 
@@ -163,25 +157,25 @@ Now that you've uploaded the BDC model and set permissions, you can create an ex
 1. Navigate to the SharePoint site where you want the new list. 
     
   
-2. On the home page of the site, choose  **More**. 
+2. On the home page of the site, choose **More**. 
     
   
-3. On the Apps page, choose  **Add an App**. 
+3. On the Apps page, choose **Add an App**. 
     
   
-4. On the Add an App page, hover over  **External List** and choose **Add it**. 
+4. On the Add an App page, hover over **External List**and choose**Add it**. 
     
   
-5. In the  **Adding an External List** dialog box, enter a name such asCustomers in the **Name** field.
+5. In the **Adding an External List**dialog box, enter a name such asCustomers in the**Name**field.
     
   
-6. In the  ** External Content Type** box, specify the external data source that you uploaded in step 1.
+6. In the **External Content Type**box, specify the external data source that you uploaded in step 1.
     
   
-7. Choose the  **OK** button.
+7. Choose the **OK**button.
     
   
-8. On the Apps page, choose  **Customers List** to view the list.
+8. On the Apps page, choose **Customers List**to view the list.
     
   
 
@@ -196,15 +190,15 @@ Your external list is ready and you can now create a Windows Phone 7 app that co
 1. Start Visual Studio 2010 Express. 
     
   
-2. On the menu bar, choose  **File**,  **New Project**. The  **New Project** dialog box opens.
+2. On the menu bar, choose **File**, **New Project**. The **New Project**dialog box opens.
     
   
-3. In the  **New Project** dialog box, choose **Visual C#**, choose  **Silverlight for Windows Phone**, and then choose  **Windows Phone SharePoint List Application**. 
+3. In the **New Project**dialog box, choose**Visual C#**, choose **Silverlight for Windows Phone**, and then choose **Windows Phone SharePoint List Application**. 
     
   
 4. Specify a name for the project. We use CustomerApp in this example, as shown in Figure 3.
     
-    **Figure 3. Selecting the Windows Phone SharePoint List Application template in Visual Studio**
+   **Figure 3. Selecting the Windows Phone SharePoint List Application template in Visual Studio**
 
   
 
@@ -214,25 +208,25 @@ Your external list is ready and you can now create a Windows Phone 7 app that co
   
 
   
-5. Choose the  **OK** button.
+5. Choose the **OK**button.
     
   
-6. In the  **SharePoint Phone Application Wizard**, enter the URL of the SharePoint site in which you created the external list. 
+6. In the **SharePoint Phone Application Wizard**, enter the URL of the SharePoint site in which you created the external list. 
     
   
-7. Choose the  **Customers** list, and choose **Next**. 
+7. Choose the **Customers**list, and choose**Next**. 
     
   
-8. On the  **Choose Views** screen, select **Customer Read List** and choose **Next**. 
+8. On the **Choose Views**screen, select**Customer Read List**and choose**Next**. 
     
   
-9. On the  **Choose Operations** screen, choose **Display**, and then choose  **Next**. 
+9. On the **Choose Operations**screen, choose**Display**, and then choose **Next**. 
     
   
-10. On the  **Choose Fields** screen, select the fields you want to use or display in your mobile app, and then choose **Next**. 
+10. On the **Choose Fields**screen, select the fields you want to use or display in your mobile app, and then choose**Next**. 
     
   
-11. On the  **Order Fields** screen, reorder the fields if needed, and then choose **Finish**. 
+11. On the **Order Fields**screen, reorder the fields if needed, and then choose**Finish**. 
     
   
 12. You've now successfully created the app that connects to the external list. 
@@ -247,7 +241,7 @@ Now that the app is ready to run, you can test it using phone emulator.
     
     
 
-1. In Visual Studio, choose  **Debug**, and then choose  **Start Debugging**, or press F5. 
+1. In Visual Studio, choose **Debug**, and then choose **Start Debugging**, or press F5. 
     
   
 2. When prompted, log in by using the same username and password that you used to log in to the SharePoint site. Ensure that you have admin rights. 
@@ -255,7 +249,7 @@ Now that the app is ready to run, you can test it using phone emulator.
   
 3. Scroll through the resulting Customers list, as shown in Figure 4. 
     
-    **Figure 4. Mobile app displaying SharePoint external list**
+   **Figure 4. Mobile app displaying SharePoint external list**
 
   
 
@@ -266,7 +260,7 @@ Now that the app is ready to run, you can test it using phone emulator.
 
   
 
-> [!Note]  
+> [!NOTE]  
 > When you use the SharePoint List Template wizard to create a mobile app for an external list that has read-only fields, the code that is generated by the wizard does not allow users to create or edit items. 
   
     

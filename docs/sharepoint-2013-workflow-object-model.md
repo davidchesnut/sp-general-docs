@@ -7,12 +7,6 @@ ms.assetid: be615a89-3201-4cd8-bbc7-15f3abf9f668
 
 # SharePoint 2013 workflow object model
 Get a brief introduction to the workflow object model in SharePoint 2013.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## SharePoint 2013 workflow object model
 <a name="bk_SPwfom"> </a>
 
@@ -25,16 +19,16 @@ One way to think of the SharePoint workflow object model is as a set of workflow
     
     
 
--  **Instance management service:** Manages workflow instances and their execution.
+- **Instance management service:**Manages workflow instances and their execution.
     
   
--  **Deployment service:** Manages the deployment of workflow definitions.
+- **Deployment service:**Manages the deployment of workflow definitions.
     
   
--  **Interop service:** Manages the interop bridge for supporting legacy workflows.
+- **Interop service:**Manages the interop bridge for supporting legacy workflows.
     
   
--  **Messaging service:** Manages message queuing and transport.
+- **Messaging service:**Manages message queuing and transport.
     
   
 
@@ -44,7 +38,7 @@ The SharePoint workflow object model, on the other hand, is contained in ten nam
   
     
     
- **Microsoft.SharePoint** namespaces:
+**Microsoft.SharePoint**namespaces:
   
     
     
@@ -67,7 +61,7 @@ The SharePoint workflow object model, on the other hand, is contained in ten nam
 -  [Microsoft.SharePoint.WorkflowServices.Activities](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.Activities.aspx)
     
   
- **Microsoft.Office** namespaces:
+**Microsoft.Office**namespaces:
   
     
     

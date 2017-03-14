@@ -8,12 +8,6 @@ ms.assetid: 59220f81-0e5e-4945-8056-cf0a116446cb
 
 # Search in SharePoint 2013
 Understand the extensibility building blocks in Search in SharePoint 2013 and how you can use these building blocks to suit your use cases. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 Search in SharePoint 2013 enables users to find relevant information more quickly and easily than ever before and makes it easy for Search administrators to customize the search experience. It also provides several API sets for more advanced customizations and solutions. 
   
     
@@ -85,7 +79,7 @@ The crawl and content processing architecture consists of the following:
   
     
     
- **Crawl component**
+**Crawl component**
   
     
     
@@ -93,7 +87,7 @@ The crawl and content processing architecture consists of the following:
   
     
     
- **Crawl database**
+**Crawl database**
   
     
     
@@ -101,7 +95,7 @@ Contains information about crawled items, such as last crawl time, the last craw
   
     
     
- **Content processing component**
+**Content processing component**
   
     
     
@@ -133,7 +127,7 @@ Search administration is composed of the search administration component and its
   
     
     
- **Search administration component**
+**Search administration component**
   
     
     
@@ -141,7 +135,7 @@ Runs the system processes for search, and adds and initializes new instances of 
   
     
     
- **Search administration database**
+**Search administration database**
   
     
     
@@ -157,7 +151,7 @@ The analytics architecture consists of the analytics processing component, analy
   
     
     
- **Analytics processing component**
+**Analytics processing component**
   
     
     
@@ -165,7 +159,7 @@ Performs search analytics and usage analytics.
   
     
     
- **Link database**
+**Link database**
   
     
     
@@ -173,7 +167,7 @@ Stores information extracted by the content processing component and search clic
   
     
     
- **Analytics reporting database**
+**Analytics reporting database**
   
     
     
@@ -181,7 +175,7 @@ Stores the results of usage analytics.
   
     
     
- **Event store**
+**Event store**
   
     
     
@@ -225,7 +219,7 @@ Table 1 shows the APIs that you can use to program Search in SharePoint 2013 and
 **Table 1. Search APIs**
 
 
-|**API name **|**Class library or schema and path **|
+|**API name**|**Class library or schema and path**|
 |:-----|:-----|
 |.NET client object model (CSOM) |Microsoft.SharePoint.Client.Search.dll          %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ISAPI |
 |Silverlight CSOM |Microsoft.SharePoint.Client.Search.Silverlight.dll          %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\LAYOUTS\\ClientBin |
@@ -258,7 +252,7 @@ Search in SharePoint Server 2013 performs security trimming of search results th
   
     
     
-The pre-trimmer interface ( **ISecurityTrimmerPre**) carries out pre-query evaluation, where the search query is rewritten to add security information before the search query is matched to the search index. In contrast, the post-trimmer interface ( **ISecurityTrimmerPost**) carries out post-query evaluation, where the search results are pruned before they are returned to the user. For more information about the two interfaces, see  [Custom security trimming for Search in SharePoint Server 2013](custom-security-trimming-for-search-in-sharepoint-server-2013.md). For step-by-step information on how to implement a security trimmer interface, see  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md). 
+The pre-trimmer interface (**ISecurityTrimmerPre**) carries out pre-query evaluation, where the search query is rewritten to add security information before the search query is matched to the search index. In contrast, the post-trimmer interface (**ISecurityTrimmerPost**) carries out post-query evaluation, where the search results are pruned before they are returned to the user. For more information about the two interfaces, see  [Custom security trimming for Search in SharePoint Server 2013](custom-security-trimming-for-search-in-sharepoint-server-2013.md). For step-by-step information on how to implement a security trimmer interface, see  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md). 
   
     
     

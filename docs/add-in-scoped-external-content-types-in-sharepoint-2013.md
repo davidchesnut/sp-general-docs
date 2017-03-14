@@ -7,12 +7,6 @@ ms.assetid: a34cbbba-dc38-4d3d-b796-d54b5848bdfb
 
 # Add-in-scoped external content types in SharePoint 2013
 Learn about external content types that are installed or scoped at the add-in level in SharePoint 2013 and enable you to create data-rich SharePoint Add-ins using external data sources. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** apps for SharePoint | SharePoint Server 2013* 
 ## Overview of add-in-scoped external content types in SharePoint 2013
 <a name="Appscopedect_overview"> </a>
 
@@ -71,7 +65,7 @@ Table 1 contains some core concepts that you should be familiar with when workin
 **Table 1. Core concepts for understanding add-in-scoped external content types**
 
 
-|**Article **|**Description **|
+|**Article**|**Description**|
 |:-----|:-----|
 | [External content types in SharePoint 2013](external-content-types-in-sharepoint-2013.md)|Learn how to create BCS external content types. |
 | [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)|Learn about the new add-in model in SharePoint 2013 that enables you to create add-ins, which are small, easy-to-use solutions for end users. |
@@ -100,23 +94,23 @@ The concept of a file-based metadata catalog was introduced in SharePoint 2010. 
   
     
     
-In SharePoint 2013,  **SPListDataSource** has been modified to add a property that indicates the scope of the application.
+In SharePoint 2013, **SPListDataSource**has been modified to add a property that indicates the scope of the application.
   
     
     
-This class serves as the bridge between  **SPList** and an external list. Use the associated **SPList** to retrieve entity fields and data. Retrieve an instance of **SPListDataSource** from the **HasExternalDataSource** property. When **HasExternalDataSource** is not null, the **SPList** object's data is external to SharePoint 2013.
+This class serves as the bridge between **SPList**and an external list. Use the associated**SPList**to retrieve entity fields and data. Retrieve an instance of**SPListDataSource**from the**HasExternalDataSource**property. When**HasExternalDataSource**is not null, the**SPList**object's data is external to SharePoint 2013.
   
     
     
-When you want to add an add-in-scoped external content type, this property is set to  **Add-in**. 
+When you want to add an add-in-scoped external content type, this property is set to **Add-in**. 
   
     
     
-The  **MetadataCatalogFileName** property is used to define the BDC model file that contains the external content type definition. This property can be defined declaratively or programmatically, but not in the SharePoint user interface (UI).
+The **MetadataCatalogFileName**property is used to define the BDC model file that contains the external content type definition. This property can be defined declaratively or programmatically, but not in the SharePoint user interface (UI).
   
     
     
-The following example shows how to set the  **MetadataCatalogFileName** property declaratively.
+The following example shows how to set the **MetadataCatalogFileName**property declaratively.
   
     
     
@@ -135,7 +129,7 @@ The following example shows how to set the  **MetadataCatalogFileName** property
 ```
 
 
-> [!Note]  
+> [!NOTE]  
 > Site administrators can install add-ins that use App-Scoped-ECTs, but only SiteCollection administrators can grant permissions for Apps to Use BCS Connections. 
   
     
@@ -160,14 +154,14 @@ You can include a BDC model in a WSP file for deployment. The following example 
 ```
 
 
-> [!Important]  
-> Only one BDC model file can be included per add-in. While the file name in this example is BDCMetadata.bdcm, the model file can actually be any name you choose as long as the file name matches that is in the  **Path** attribute of the BDC model file.
+> [!IMPORTANT]  
+> Only one BDC model file can be included per add-in. While the file name in this example is BDCMetadata.bdcm, the model file can actually be any name you choose as long as the file name matches that is in the **Path**attribute of the BDC model file.
   
     
     
 
 
-> [!Note]  
+> [!NOTE]  
 > Only Open Data protocol (OData) connections are allowed for add-in-scoped external content types. 
   
     

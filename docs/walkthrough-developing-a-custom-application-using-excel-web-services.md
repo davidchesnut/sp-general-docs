@@ -1,5 +1,5 @@
 ---
-title: Walkthrough: Developing a Custom Application Using Excel Web Services
+title: Walkthrough Developing a Custom Application Using Excel Web Services
 ms.prod: SHAREPOINT
 ms.assetid: 2f9bf243-281a-4d70-917e-9eaf0b867631
 ---
@@ -7,12 +7,6 @@ ms.assetid: 2f9bf243-281a-4d70-917e-9eaf0b867631
 
 # Walkthrough: Developing a Custom Application Using Excel Web Services
 
- **Last modified:** January 13, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 The walkthrough in this section describes the process for accessing Excel Web Services from an application created with Microsoft Visual C#. 
   
     
@@ -47,14 +41,14 @@ In order to complete this walkthrough, you will need:
   
 - Sufficient permissions (at the very least, "view" permissions) to be able to access Excel Web Services on the computer where SharePoint Server 2010 is located. 
     
-    > [!Note]  
+    > [!NOTE]  
 > For more information about workbook permissions, see the following section, "Workbook Permissions." 
 - A sample workbook installed on a local drive or local SharePoint document library. 
     
   
 - A trusted location to store the workbooks that you want to access using Excel Web Services. If the workbooks are not stored in a trusted location, the Excel Web Services calls to open the workbook will fail. This walkthrough assumes the workbook is present on the local computer. 
     
-    > [!Note]  
+    > [!NOTE]  
 > For information about how to trust a location, see  [How to: Trust a Location](how-to-trust-a-location.md) and [How to: Trust Workbook Locations Using Script](http://msdn.microsoft.com/library/79ab6ced-7a0c-4275-b852-bb246fc6be57%28Office.15%29.aspx). 
 - To create the workbook using Excel. 
     
@@ -70,15 +64,15 @@ The workbook used in this example has a worksheet named "Sheet1". The worksheet 
 ## Workbook Permissions
 
 
-- To get the entire workbook (for example, by calling the  **GetWorkbook** method), the caller needs "open" permission fr the workbook.
+- To get the entire workbook (for example, by calling the **GetWorkbook**method), the caller needs "open" permission fr the workbook.
     
   
-- To call the  **GetApiVersion** method, no permission is necessary.
+- To call the **GetApiVersion**method, no permission is necessary.
     
   
 - For the rest of the Excel Web Services methods, the caller needs "view" permission (in Microsoft SharePoint Foundation) or "read" permission (on a file share) for the workbook. 
     
-    > [!Note]  
+    > [!NOTE]  
 > For more information about setting permissions, see the SharePoint Foundation documentation. 
 
 ## See also

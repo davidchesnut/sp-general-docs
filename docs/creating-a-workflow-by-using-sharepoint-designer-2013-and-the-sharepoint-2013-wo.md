@@ -1,18 +1,12 @@
 ---
 title: Creating a workflow by using SharePoint Designer 2013 and the SharePoint 2013 Workflow platform
-ms.prod: SHAREPOINTDESIGNER
+ms.prod: SHAREPOINT
 ms.assetid: c05e0127-c6f5-48b8-b8f2-cbcc30149c8b
 ---
 
 
 # Creating a workflow by using SharePoint Designer 2013 and the SharePoint 2013 Workflow platform
 Learn how to install, open, and create a workflow by using SharePoint Designer 2013 and the SharePoint 2013 Workflow platform. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Designer 2013* 
 ||
 |:-----|
 ||
@@ -41,7 +35,7 @@ SharePoint Designer 2013 is a free download. To download and install SharePoint 
 4. Read the overview, system requirements, and installation instructions. Make sure your system is compatible. 
     
   
-5. Select your platform type: 64-bit ( **x64**) or 32-bit ( **x86**) as shown in the figure. 
+5. Select your platform type: 64-bit (**x64**) or 32-bit (**x86**) as shown in the figure. 
     
   
 6. Follow the instructions to install SharePoint Designer 2013. 
@@ -81,16 +75,16 @@ SharePoint Designer 2013 installs as an Office 2013 application. To open SharePo
 ### To open SharePoint Designer 2013 and connect to a SharePoint 2013 site
 
 
-1. Open SharePoint Designer 2013 by selecting it on the  **Start** menu. Click **Start** icon, click **All Programs**, click  **Microsoft Office 2013**, and then click  **SharePoint Designer 2013**. 
+1. Open SharePoint Designer 2013 by selecting it on the **Start**menu. Click**Start**icon, click**All Programs**, click **Microsoft Office 2013**, and then click **SharePoint Designer 2013**. 
     
   
-2. Click  **Open Site** on the SharePoint Designer 2013 start page.
+2. Click **Open Site**on the SharePoint Designer 2013 start page.
     
   
 3. Enter the SharePoint 2013 site that you want to connect to. For example, http://www.contoso.com/sites/a-sharepoint-site. 
     
   
-4. Click  **Open** to open the site.
+4. Click **Open**to open the site.
     
   
 5. Enter your credentials, if prompted. (If security is not integrated with the computer you signed in on then you are prompted to enter your credentials.) Make sure to use credentials that have access to the SharePoint 2013 site. 
@@ -111,17 +105,17 @@ SharePoint Designer 2013 can be used for many important tasks. The navigational 
 1. Click the Workflows node in the Navigation pane. 
     
   
-2. Click the  **List Workflow** drop-down in the **New** section of the ribbon, as shown in the figure.
+2. Click the **List Workflow**drop-down in the**New**section of the ribbon, as shown in the figure.
     
   
 3. Select the list that you want to associate with the new workflow. 
     
   
-4. On the  **Create List Workflow** dialog box, enter a name and description for the workflow and then make sure that the **Platform Type** is set to **SharePoint 2013 Workflow**, as shown in the figure. 
+4. On the **Create List Workflow**dialog box, enter a name and description for the workflow and then make sure that the**Platform Type**is set to**SharePoint 2013 Workflow**, as shown in the figure. 
     
-    > [!Note]  
+    > [!NOTE]  
 > If you do not see SharePoint 2013 Workflow as an available platform type then Workflow Manager is not configured to work with the SharePoint Server 2013 farm. 
-5. Click  **OK** to create the workflow.
+5. Click **OK**to create the workflow.
     
   
 
@@ -188,8 +182,8 @@ Now that the workflow is created, you can add Actions, Conditions, Stages, Steps
     
 
     
-> [!Note]  
-> The above procedure is used to create a List workflow. A Reusable workflow or Site workflow can be created using the same procedure with the following modification. Instead of selecting the List Workflow button in the ribbon select the  **Reusable Workflow** or **Site Workflow** button when creating the workflow.
+> [!NOTE]  
+> The above procedure is used to create a List workflow. A Reusable workflow or Site workflow can be created using the same procedure with the following modification. Instead of selecting the List Workflow button in the ribbon select the **Reusable Workflow**or**Site Workflow**button when creating the workflow.
   
     
     

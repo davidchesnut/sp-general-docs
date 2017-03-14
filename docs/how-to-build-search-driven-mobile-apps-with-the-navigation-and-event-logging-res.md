@@ -1,5 +1,5 @@
 ---
-title: How to: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces
+title: How to Build search-driven mobile apps with the Navigation and Event Logging REST interfaces
 ms.prod: SHAREPOINT
 ms.assetid: 5b313130-500c-4ccf-80ea-b102f30e5afb
 ---
@@ -7,12 +7,6 @@ ms.assetid: 5b313130-500c-4ccf-80ea-b102f30e5afb
 
 # How to: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces
 SharePoint Server 2013 introduces the Navigation and Event Logging REST interfaces, enabling you to create a search-driven mobile app for mobile devices such as phones and tablets that run on operating systems other than Windows—for example, Android and iOS. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## How apps work with the product catalog
 <a name="mobile_app_and_product_catalog"> </a>
 
@@ -39,7 +33,7 @@ Suppose you have a mobile app with three types of pages: a home page, category p
 
 ### Home page for a search-driven mobile app
 
-Typically the  **Home** page is displayed when the app starts up. The **Home** page contains the product catalog menu, some text, and a static image, as shown in Figure 1.
+Typically the **Home**page is displayed when the app starts up. The**Home**page contains the product catalog menu, some text, and a static image, as shown in Figure 1.
   
     
     
@@ -81,7 +75,7 @@ A matching response is shown in  [Example response for a Navigation REST call fo
 
 ### Category page for a search-driven mobile app
 
-The  **Category** page displays many items in a selected category. Each item listed in a category can typically be represented by some relevant item data, such as title, an image, and price. This data is collected from the product catalog by using a search query through the SharePoint Search REST service as shown in Figure 2.
+The **Category**page displays many items in a selected category. Each item listed in a category can typically be represented by some relevant item data, such as title, an image, and price. This data is collected from the product catalog by using a search query through the SharePoint Search REST service as shown in Figure 2.
   
     
     
@@ -99,7 +93,7 @@ The  **Category** page displays many items in a selected category. Each item lis
   
     
     
-If you choose one of the categories in the previous diagram, for example,  **TV**, a **Category** page appears.
+If you choose one of the categories in the previous diagram, for example, **TV**, a**Category**page appears.
   
     
     
@@ -120,14 +114,14 @@ A matching response is shown in  [Example response for a Search REST query for a
   
     
     
-The query processing component in SharePoint Server 2013 returns search results that contain data for a particular category, and the app presents the data in the  **Category** page. If there is a Best Bet associated with the selected category, the query processing component detects this association and extracts the Best Bet data from the Best Bet database, labeled **BB** in the diagram. The search results are then mixed with results from the Best Bet database and sent back to the app in a result table. The app is responsible for extracting the different parts of the results from the table and displaying the Best Bet in a dedicated location.
+The query processing component in SharePoint Server 2013 returns search results that contain data for a particular category, and the app presents the data in the **Category**page. If there is a Best Bet associated with the selected category, the query processing component detects this association and extracts the Best Bet data from the Best Bet database, labeled**BB**in the diagram. The search results are then mixed with results from the Best Bet database and sent back to the app in a result table. The app is responsible for extracting the different parts of the results from the table and displaying the Best Bet in a dedicated location.
   
     
     
 
 ### Item detail pages for a search-driven mobile app
 
-If you select an item in a category, the  **Item details** page appears. On this page, an item is described in detail with data such as title, product images, technical description, price, and delivery information. More recommendations or ratings, if available, are also displayed. To construct the **Item details** page, the app sends two queries: one query to retrieve item data and another query to receive recommendations related to that item, as shown in Figure 3.
+If you select an item in a category, the **Item details**page appears. On this page, an item is described in detail with data such as title, product images, technical description, price, and delivery information. More recommendations or ratings, if available, are also displayed. To construct the**Item details**page, the app sends two queries: one query to retrieve item data and another query to receive recommendations related to that item, as shown in Figure 3.
   
     
     
@@ -161,7 +155,7 @@ Recommendations are calculated in SharePoint, not in the app itself. To create r
   
     
     
-The following example shows a typical  **POST** call for event logging.
+The following example shows a typical **POST**call for event logging.
   
     
     

@@ -7,12 +7,6 @@ ms.assetid: c9106d47-c523-49c1-b9f1-cdd7420abd5e
 
 # Accessibility in SharePoint 2013
 Learn about the features, products, and services that make SharePoint 2013 accessible for people with disabilities, and find developer resources that can help you design and build apps and websites that support key accessibility scenarios. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** apps for SharePoint | SharePoint Foundation 2013 | SharePoint Server 2013* 
 Accessible technology enables users to interact with computers and applications in different ways to help meet their visual, hearing, speech, dexterity, and cognitive needs. Accessible technology includes features, options, and utilities that are built into the Windows operating system and other Microsoft products, in addition to third-party hardware and software add-ons (also known asassistive technology). 
   
     
@@ -94,7 +88,7 @@ SharePoint administrators and users depend on the accessibility features that we
 **Table 1. Accessibility features in typical web browsers**
 
 
-|**Browser **|**For more information **|
+|**Browser**|**For more information**|
 |:-----|:-----|
 |Internet Explorer | [Accessibility in Internet Explorer 9](http://www.microsoft.com/enable/products/ie9/default.aspx)|
 |Firefox | [Accessibility features in Firefox](http://go.microsoft.com/fwlink/p/?LinkId=275209)|

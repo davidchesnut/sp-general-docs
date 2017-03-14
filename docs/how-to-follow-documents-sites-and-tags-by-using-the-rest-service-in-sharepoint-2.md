@@ -1,5 +1,5 @@
 ---
-title: How to: Follow documents, sites, and tags by using the REST service in SharePoint 2013
+title: How to Follow documents, sites, and tags by using the REST service in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 989a5873-49f9-49e4-8d0f-439dde891cc2
 ---
@@ -7,12 +7,6 @@ ms.assetid: 989a5873-49f9-49e4-8d0f-439dde891cc2
 
 # How to: Follow documents, sites, and tags by using the REST service in SharePoint 2013
 Create SharePoint-hosted apps that use the REST service to follow content (documents, sites, and tags) and to get followed content. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## How do I use the SharePoint Server 2013 REST service to follow content?
 <a name="bk_intro"> </a>
 
@@ -25,41 +19,41 @@ The following REST resources are the primary API for Following Content tasks:
     
     
 
--  **SocialRestFollowingManager** provides methods for managing a user's list of followed actors.
+- **SocialRestFollowingManager**provides methods for managing a user's list of followed actors.
     
   
--  **SocialActor** represents a document, site, or tag that the server returns in response to a client-side request.
+- **SocialActor**represents a document, site, or tag that the server returns in response to a client-side request.
     
   
--  **SocialActorInfo** specifies a document, site, or tag in client-side requests to the server.
+- **SocialActorInfo**specifies a document, site, or tag in client-side requests to the server.
     
   
--  **SocialActorType** and **SocialActorTypes** specify content types in client-side requests to the server.
+- **SocialActorType**and**SocialActorTypes**specify content types in client-side requests to the server.
     
   
-To perform Following Content tasks by using the REST API, you send HTTP  **GET** and HTTP **POST** requests to the REST service. REST endpoint URIs for Following Content tasks begin with the **SocialRestFollowingManager** resource ( `<siteUri>/_api/social.following`) and end with one of the following resources: 
+To perform Following Content tasks by using the REST API, you send HTTP **GET**and HTTP**POST**requests to the REST service. REST endpoint URIs for Following Content tasks begin with the**SocialRestFollowingManager**resource ( `<siteUri>/_api/social.following`) and end with one of the following resources: 
   
     
     
 
--  **follow** to start following a document, site, or tag
+- **follow**to start following a document, site, or tag
     
   
--  **stopfollowing** to stop following a document, site, or tag
+- **stopfollowing**to stop following a document, site, or tag
     
   
--  **isfollowed** to find out whether the user is following a specific document, site, or tag
+- **isfollowed**to find out whether the user is following a specific document, site, or tag
     
   
--  **my/followed** to get followed documents, sites, and tags
+- **my/followed**to get followed documents, sites, and tags
     
   
--  **my/followedcount** to get the count of followed documents, sites, and tags
+- **my/followedcount**to get the count of followed documents, sites, and tags
     
   
 
-> [!Note]  
-> You also use these endpoints for Following People tasks, but the  **followers** and **suggestions** resources available from **SocialRestFollowingManager** only support following people, not content. For more information about how you can use **SocialRestFollowingManager**, see  [Follow content in SharePoint 2013](follow-content-in-sharepoint-2013.md) and [Follow people in SharePoint 2013](follow-people-in-sharepoint-2013.md). 
+> [!NOTE]  
+> You also use these endpoints for Following People tasks, but the **followers**and**suggestions**resources available from**SocialRestFollowingManager**only support following people, not content. For more information about how you can use**SocialRestFollowingManager**, see  [Follow content in SharePoint 2013](follow-content-in-sharepoint-2013.md) and [Follow people in SharePoint 2013](follow-people-in-sharepoint-2013.md). 
   
     
     
@@ -73,7 +67,7 @@ This article assumes that you create the SharePoint Add-in by using Napa on an O
     
     
 
-> [!Note]  
+> [!NOTE]  
 > Go to  [Set up a development environment for SharePoint Add-ins on Office 365](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx) to sign up for a Developer Site and start using Napa.
   
     
@@ -105,7 +99,7 @@ If you're not using Napa on an Office 365 Developer Site, you'll need to meet th
     
   
 
-> [!Note]  
+> [!NOTE]  
 > See  [Set up an on-premises development environment for SharePoint Add-ins](http://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx) for guidance about on-premises setup (including how to disable the loopback check, if necessary).
   
     
@@ -120,30 +114,30 @@ If you're not using Napa on an Office 365 Developer Site, you'll need to meet th
 <a name="bkmk_CreateApp"> </a>
 
 
-1. On your Developer Site, open Napa, and then choose  **Add New Project**. 
+1. On your Developer Site, open Napa, and then choose **Add New Project**. 
     
   
-2. Choose the  **App for SharePoint** template, name the project, and then choose the **Create** button.
+2. Choose the **App for SharePoint**template, name the project, and then choose the**Create**button.
     
   
 3. Set the permissions for your app: 
     
-1. Choose the  **Properties** button at the bottom of the page.
+1. Choose the **Properties**button at the bottom of the page.
     
   
-2. In the  **Properties** window, choose **Permissions**. 
+2. In the **Properties**window, choose**Permissions**. 
     
   
-3. In the  **Content** category, set **Write** permissions for the **Tenant** scope.
+3. In the **Content**category, set**Write**permissions for the**Tenant**scope.
     
   
-4. In the  **Social** category, set **Read** permissions for the **User Profiles** scope.
+4. In the **Social**category, set**Read**permissions for the**User Profiles**scope.
     
   
-5. Close the  **Properties** window.
+5. Close the **Properties**window.
     
   
-4. Expand the  **Scripts** node, choose the App.js file and replace its contents with the code from one of the following scenarios:
+4. Expand the **Scripts**node, choose the App.js file and replace its contents with the code from one of the following scenarios:
     
   -  [Start following and stop following a document](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md#bkmk_FollowDocs)
     
@@ -157,10 +151,10 @@ If you're not using Napa on an Office 365 Developer Site, you'll need to meet th
   -  [Get followed content](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md#bkmk_GetFollowed)
     
   
-5. To run the app, choose the  **Run Project** button at the bottom of the page.
+5. To run the app, choose the **Run Project**button at the bottom of the page.
     
   
-6. In the  **Do you trust** page that opens, choose the **Trust It** button. The app page opens and runs the code. To debug the page, choose the **F12** key and then choose App.js on the **Script** tab.
+6. In the **Do you trust**page that opens, choose the**Trust It**button. The app page opens and runs the code. To debug the page, choose the**F12**key and then choose App.js on the**Script**tab.
     
   
 
@@ -175,19 +169,19 @@ The following code example represents the contents of the App.js file and shows 
 - Get the app web URI from the query string and construct the  `<siteUri>/_api/social.following` endpoint URI.
     
   
-- Build and send a  **POST** request to the `isfollowed` endpoint to find out whether the current user is already following a specified document.
+- Build and send a **POST**request to the `isfollowed` endpoint to find out whether the current user is already following a specified document.
     
   
-- Build and send a  **POST** request to the `follow` endpoint to start following the document.
+- Build and send a **POST**request to the `follow` endpoint to start following the document.
     
   
-- Build and send a  **POST** request to the `stopfollowing` endpoint to stop following the document.
+- Build and send a **POST**request to the `stopfollowing` endpoint to stop following the document.
     
   
 - Read the JSON response returned by the  `isfollowed` request and the `follow` request. (The `stopfollowing` request doesn't return anything in the response.) See [Example JSON responses](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md#bk_exampleResponses). 
     
   
-Before you run the code, you'll need to upload a document and change the placeholder value for the  **documentUrl** variable to the document's URL.
+Before you run the code, you'll need to upload a document and change the placeholder value for the **documentUrl**variable to the document's URL.
   
     
     
@@ -337,19 +331,19 @@ The following code example represents the contents of the App.js file and shows 
 - Get the app web URI from the query string and construct the  `<siteUri>/_api/social.following` endpoint URI.
     
   
-- Build and send a  **POST** request to the `isfollowed` endpoint to find out whether the current user is already following a specified site.
+- Build and send a **POST**request to the `isfollowed` endpoint to find out whether the current user is already following a specified site.
     
   
-- Build and send a  **POST** request to the `follow` endpoint to start following the site.
+- Build and send a **POST**request to the `follow` endpoint to start following the site.
     
   
-- Build and send a  **POST** request to the `stopfollowing` endpoint to stop following the site.
+- Build and send a **POST**request to the `stopfollowing` endpoint to stop following the site.
     
   
 - Read the JSON response returned by the  `isfollowed` request and the `follow` request. (The `stopfollowing` request doesn't return anything in the response.) See [Example JSON responses](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md#bk_exampleResponses). 
     
   
-Before you run the code, change the placeholder value for the  **siteUrl** variable to match the site that you want to follow. Use the format **http://server/siteCollection/site** for a site in a site collection. You can follow a site from any page or library in that site. If the site uses a template that doesn't support following (like the My Site host or a personal site), you'll get an **UnsupportedSite** error (error code 10).
+Before you run the code, change the placeholder value for the **siteUrl**variable to match the site that you want to follow. Use the format**http://server/siteCollection/site**for a site in a site collection. You can follow a site from any page or library in that site. If the site uses a template that doesn't support following (like the My Site host or a personal site), you'll get an**UnsupportedSite**error (error code 10).
   
     
     
@@ -499,19 +493,19 @@ The following code example represents the contents of the App.js file and shows 
 - Get the app web URI from the query string and construct the  `<siteUri>/_api/social.following` endpoint URI.
     
   
-- Build and send a  **POST** request to the `isfollowed` endpoint to find out whether the current user is already following a specified tag.
+- Build and send a **POST**request to the `isfollowed` endpoint to find out whether the current user is already following a specified tag.
     
   
-- Build and send a  **POST** request to the `follow` endpoint to start following the tag.
+- Build and send a **POST**request to the `follow` endpoint to start following the tag.
     
   
-- Build and send a  **POST** request to the `stopfollowing` endpoint to stop following the tag.
+- Build and send a **POST**request to the `stopfollowing` endpoint to stop following the tag.
     
   
 - Read the JSON response returned by the  `isfollowed` request and the `follow` request. (The `stopfollowing` request doesn't return anything in the response.) For more information, see [Example JSON responses](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md#bk_exampleResponses). 
     
   
-Before you run the code, change the placeholder value for the  **tagGuid** variable to the GUID of an existing tag. The taxonomy API that you use to retrieve a tag from the **HashTagsTermSet** doesn't have a REST interface, so you have to use the .NET client object model or the JavaScript object model. See [How to get a tag's GUID based on the tag's name by using the JavaScript object model](follow-content-in-sharepoint-2013.md#bk_getTagGuid) for an example.
+Before you run the code, change the placeholder value for the **tagGuid**variable to the GUID of an existing tag. The taxonomy API that you use to retrieve a tag from the**HashTagsTermSet**doesn't have a REST interface, so you have to use the .NET client object model or the JavaScript object model. See [How to get a tag's GUID based on the tag's name by using the JavaScript object model](follow-content-in-sharepoint-2013.md#bk_getTagGuid) for an example.
   
     
     
@@ -661,10 +655,10 @@ The following code example represents the contents of the App.js file and shows 
 - Get the app web URI from the query string and construct the  `<siteUri>/_api/social.following` endpoint URI.
     
   
-- Build and send a  **GET** request to the `my/followedcount` endpoint to get the count of content that the current user is following.
+- Build and send a **GET**request to the `my/followedcount` endpoint to get the count of content that the current user is following.
     
   
-- Build and send a  **GET** request to the `my/followed` endpoint to get the content that the current user is following.
+- Build and send a **GET**request to the `my/followed` endpoint to get the content that the current user is following.
     
   
 - Read the JSON response returned by the requests. See  [Example JSON responses](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md#bk_exampleResponses). 
@@ -749,22 +743,22 @@ function requestFailed(xhr, ajaxOptions, thrownError) {
 ## Example JSON responses for Following Content requests
 <a name="bk_exampleResponses"> </a>
 
-By default, the REST service returns responses that are formatted by using the Atom protocol, but you can request the JSON format by using an HTTP  **Accept** header (for example: `"accept":"application/json;odata=verbose"`). The response data is returned as a string, and you can use the  **JSON.stringify** function and **JSON.parse** function to convert the string into an object, as shown in the previous code examples.
+By default, the REST service returns responses that are formatted by using the Atom protocol, but you can request the JSON format by using an HTTP **Accept**header (for example: `"accept":"application/json;odata=verbose"`). The response data is returned as a string, and you can use the **JSON.stringify**function and**JSON.parse**function to convert the string into an object, as shown in the previous code examples.
   
     
     
-To troubleshoot an error returned by the REST service, in debug mode, look at the  **responseText** property, as shown in the **requestFailed** callback functions in the previous examples. You can also get the correlation ID for the ULS server log from a network sniffer or HTTP debugger, such as Fiddler. The correlation ID is the same as the request ID in the HTTP response.
+To troubleshoot an error returned by the REST service, in debug mode, look at the **responseText**property, as shown in the**requestFailed**callback functions in the previous examples. You can also get the correlation ID for the ULS server log from a network sniffer or HTTP debugger, such as Fiddler. The correlation ID is the same as the request ID in the HTTP response.
   
     
     
 
 ### Example response for the Follow endpoint
 
-In response to client-side requests to the  `follow` endpoint, the REST service returns a **SocialFollowResult** value that represents whether the **Follow** request succeeded.
+In response to client-side requests to the  `follow` endpoint, the REST service returns a**SocialFollowResult**value that represents whether the**Follow**request succeeded.
   
     
     
-The following response represents the  **AlreadyFollowing** status.
+The following response represents the **AlreadyFollowing**status.
   
     
     
@@ -776,7 +770,7 @@ The following response represents the  **AlreadyFollowing** status.
 {"d":{"Follow":1}}
 ```
 
-Table 1 shows  **SocialFollowResult** status codes and their values.
+Table 1 shows **SocialFollowResult**status codes and their values.
   
     
     
@@ -791,8 +785,8 @@ Table 1 shows  **SocialFollowResult** status codes and their values.
 |3 |**InternalError**. The request failed due to an internal error. |
    
 
-> [!Note]  
-> The REST service doesn't return a response for the  **StopFollowing** request. It returns `{"d":{"StopFollowing":null}}`. 
+> [!NOTE]  
+> The REST service doesn't return a response for the **StopFollowing**request. It returns `{"d":{"StopFollowing":null}}`. 
   
     
     
@@ -800,7 +794,7 @@ Table 1 shows  **SocialFollowResult** status codes and their values.
 
 ### Example response for the IsFollowed endpoint
 
-In response to client-side requests to the  `isfollowed` endpoint, the REST service returns a **bool** value that represents whether the current user is following the specified actor.
+In response to client-side requests to the  `isfollowed` endpoint, the REST service returns a**bool**value that represents whether the current user is following the specified actor.
   
     
     
@@ -818,7 +812,7 @@ The following response indicates that the current user is not following the spec
 
 ### Example response for the My/Followed endpoint
 
-In response to client-side requests to the  `my/followed` endpoint, the REST service returns an array of **SP.Social.SocialActor** objects that represent documents, sites, and tags that the current user is following.
+In response to client-side requests to the  `my/followed` endpoint, the REST service returns an array of**SP.Social.SocialActor**objects that represent documents, sites, and tags that the current user is following.
   
     
     
@@ -898,7 +892,7 @@ The following response represents a followed document, site, and tag. The reques
 
 ### Example response for the My/FollowedCount endpoint
 
-In response to client-side requests to the  `my/followedcount` endpoint, the REST service returns an **Int32** value that represents the total count of specified actor types that the current user is following.
+In response to client-side requests to the  `my/followedcount` endpoint, the REST service returns an**Int32**value that represents the total count of specified actor types that the current user is following.
   
     
     

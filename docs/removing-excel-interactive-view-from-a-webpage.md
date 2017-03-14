@@ -7,12 +7,6 @@ ms.assetid: 407b3aa3-7286-462b-905f-811a3b7f3f1c
 
 # Removing Excel Interactive View from a webpage
 
- **Last modified:** January 22, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 The Excel Interactive View feature has been disabled. If you have inserted an Excel Interactive View into your web page, you can remove it by removing the  `<script>` tag and the placeholder `<a>` tags for the button from the HTML of your web page.
   
     

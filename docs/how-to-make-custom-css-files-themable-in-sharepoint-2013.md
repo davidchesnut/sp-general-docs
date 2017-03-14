@@ -1,5 +1,5 @@
 ---
-title: How to: Make custom CSS files themable in SharePoint 2013
+title: How to Make custom CSS files themable in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: b8c82c77-c836-47f9-a11e-6c9c656d436b
 ---
@@ -7,12 +7,6 @@ ms.assetid: b8c82c77-c836-47f9-a11e-6c9c656d436b
 
 # How to: Make custom CSS files themable in SharePoint 2013
 Learn how to add comment-style markup to a CSS file so that it can be used in the SharePoint 2013 theming engine. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** Office 365 | SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Introduction to annotations
 <a name="Intro"> </a>
 
@@ -40,11 +34,11 @@ Annotations tell the SharePoint theming engine how to theme properties in a CSS 
 ### ReplaceColor annotation
 <a name="replaceColor"> </a>
 
-The  **ReplaceColor** annotation replaces the color value with the specified theme color. It can be used with CSS properties that define a color value, such as **color**, **background-color**, **border**, and so on.
+The **ReplaceColor**annotation replaces the color value with the specified theme color. It can be used with CSS properties that define a color value, such as**color**,**background-color**,**border**, and so on.
   
     
     
-The following shows the format for the  **ReplaceColor** annotation.
+The following shows the format for the **ReplaceColor**annotation.
   
     
     
@@ -61,19 +55,19 @@ Replace  _ColorSlot_ with the annotation name of the color slot to use. To see a
   
     
     
-Use the optional  **themeShade** parameter if you want to darken the theme color. Replace _ShadeValue_ with a numeric value from 0.0 (no change) to 1.0 (darkest).
+Use the optional **themeShade**parameter if you want to darken the theme color. Replace _ShadeValue_ with a numeric value from 0.0 (no change) to 1.0 (darkest).
   
     
     
-Use the optional  **themeTint** parameter if you want to lighten the theme color. Replace _TintValue_ with a numeric value from 0.0 (no change) to 1.0 (lightest).
+Use the optional **themeTint**parameter if you want to lighten the theme color. Replace _TintValue_ with a numeric value from 0.0 (no change) to 1.0 (lightest).
   
     
     
-Use the optional  **opacity** parameter if you want to specify the opacity of the theme color. Replace _OpacityValue_ with a numeric value that specifies the opacity setting. The opacity setting ranges from 0.0 (fully transparent) to 1.0 (fully opaque).
+Use the optional **opacity**parameter if you want to specify the opacity of the theme color. Replace _OpacityValue_ with a numeric value that specifies the opacity setting. The opacity setting ranges from 0.0 (fully transparent) to 1.0 (fully opaque).
   
     
     
-The following shows examples of the  **ReplaceColor** annotation being used in a CSS file.
+The following shows examples of the **ReplaceColor**annotation being used in a CSS file.
   
     
     
@@ -91,11 +85,11 @@ The following shows examples of the  **ReplaceColor** annotation being used in a
 ### ReplaceFont annotation
 <a name="replaceFont"> </a>
 
-The  **ReplaceFont** annotation adds the specified theme font to the list of available fonts. It can be used with the **font** and **font-family** CSS properties.
+The **ReplaceFont**annotation adds the specified theme font to the list of available fonts. It can be used with the**font**and**font-family**CSS properties.
   
     
     
-The following shows the format for the  **ReplaceFont** annotation.
+The following shows the format for the **ReplaceFont**annotation.
   
     
     
@@ -111,7 +105,7 @@ Replace  _FontSlot_ with the name of the font slot to use. To see a list of avai
   
     
     
-The following shows an example of the  **ReplaceFont** annotation. In this example, if the **body** font slot is defined as Courier in the theme, Courier will be added as the first item in the list of available fonts in the **Choose the Look** wizard.
+The following shows an example of the **ReplaceFont**annotation. In this example, if the**body**font slot is defined as Courier in the theme, Courier will be added as the first item in the list of available fonts in the**Choose the Look**wizard.
   
     
     
@@ -123,11 +117,11 @@ The following shows an example of the  **ReplaceFont** annotation. In this examp
 ### ReplaceBGImage annotation
 <a name="replaceBGimage"> </a>
 
-The  **ReplaceBGImage** annotation replaces the background image in the CSS file with the theme background image. It can be used with the **background** and **background-image** CSS properties.
+The **ReplaceBGImage**annotation replaces the background image in the CSS file with the theme background image. It can be used with the**background**and**background-image**CSS properties.
   
     
     
-The following shows the format for the  **ReplaceBGImage** annotation. The **ReplaceBGImage** annotation can also be used with the **AlphaImageLoader** filter to support earlier versions of Internet Explorer.
+The following shows the format for the **ReplaceBGImage**annotation. The**ReplaceBGImage**annotation can also be used with the**AlphaImageLoader**filter to support earlier versions of Internet Explorer.
   
     
     
@@ -142,11 +136,11 @@ The following shows the format for the  **ReplaceBGImage** annotation. The **Rep
 ### RecolorImage annotation
 <a name="replaceBGimage"> </a>
 
-The  **RecolorImage** annotation recolors the image specified.
+The **RecolorImage**annotation recolors the image specified.
   
     
     
-The following describes the format of the  **RecolorImage** annotation.
+The following describes the format of the **RecolorImage**annotation.
   
     
     
@@ -162,15 +156,15 @@ Replace  _ColorSlot_ with the annotation name of the color slot. To see a list o
   
     
     
-Use the optional  **method** parameter if you want to specify the recoloring method.
+Use the optional **method**parameter if you want to specify the recoloring method.
   
     
     
-Use the optional  **includeRectangle** parameter if you want to recolor only a specific region of an image. Replace _x-Setting_,  _y-Setting_,  _RegionWidth_, and  _RegionHeight_ with the x-coordinate, y-coordinate, width, and height of the region that you want to recolor.
+Use the optional **includeRectangle**parameter if you want to recolor only a specific region of an image. Replace _x-Setting_,  _y-Setting_,  _RegionWidth_, and  _RegionHeight_ with the x-coordinate, y-coordinate, width, and height of the region that you want to recolor.
   
     
     
-The following shows examples of the  **RecolorImage** annotation being used in a CSS file.
+The following shows examples of the **RecolorImage**annotation being used in a CSS file.
   
     
     
@@ -190,7 +184,7 @@ Place the custom CSS files in the Themable folder in the Style library (not the 
     
     
 
-> [!Note]  
+> [!NOTE]  
 > The name of the  _language_ folder must be in the 4-digit format _ll-cc_ to identify the language and culture, respectively. For example, en-us or ar-sa. For more information, see [Language identifiers and OptionState Id values in Office 2013](http://technet.microsoft.com/en-us/library/cc179219.aspx). 
   
     
@@ -204,7 +198,7 @@ CSS files must be checked in and published. If CSS files are changed, you must r
 ## Register the CSS file
 <a name="registerCSS"> </a>
 
-You must register the CSS file with a master page before the CSS file can be used by the theming engine. This directs the master page to the CSS file when you apply a theme to a site. To register a CSS file, you add a  **<SharePoint:CssRegistration>** element to the **<head>** element of the master page. The following shows the format of the **<SharePoint:CssRegistration>** element.
+You must register the CSS file with a master page before the CSS file can be used by the theming engine. This directs the master page to the CSS file when you apply a theme to a site. To register a CSS file, you add a **<SharePoint:CssRegistration>**element to the**<head>**element of the master page. The following shows the format of the**<SharePoint:CssRegistration>**element.
   
     
     
@@ -218,7 +212,7 @@ Replace  _CSSFileLocation_ with the location of the CSS file.
   
     
     
-The following is an example of an  **<SharePoint:CssRegistration>** element.
+The following is an example of an **<SharePoint:CssRegistration>**element.
   
     
     
@@ -233,8 +227,8 @@ The following is an example of an  **<SharePoint:CssRegistration>** element.
 ```
 
 
-> [!Note]  
-> The  **%$SPUrl** token cannot be used on SharePoint Foundation 2013. You must use a URL to specify the location of the CSS file.
+> [!NOTE]  
+> The **%$SPUrl**token cannot be used on SharePoint Foundation 2013. You must use a URL to specify the location of the CSS file.
   
     
     

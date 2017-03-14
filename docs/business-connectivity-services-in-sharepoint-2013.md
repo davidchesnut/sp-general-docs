@@ -7,12 +7,6 @@ ms.assetid: 64b7d032-4b83-4e9e-bc08-f0a161af5457
 
 # Business Connectivity Services in SharePoint 2013
 Learn what Business Connectivity Services (BCS) is, what you can do with it, and the information you need to get started developing BCS applications in SharePoint 2013.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 You can use SharePoint 2013 as a hub for creating rich productivity and collaboration solutions that can work with a variety of external systems. Business Connectivity Services (BCS) provides the infrastructure that enables SharePoint 2013 to bring data from those external systems into a central system. By providing a flexible and extensible means to describe the external system data source and how to interact with it, BCS makes a compelling argument for using SharePoint 2013 as the central interface for working with legacy business systems in addition to new SharePoint Add-ins.
   
     

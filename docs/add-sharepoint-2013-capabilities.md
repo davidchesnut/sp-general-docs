@@ -7,12 +7,6 @@ ms.assetid: 11ecb65e-6dc5-4cf1-80ca-3c16418697b6
 
 # Add SharePoint 2013 capabilities
 Find overview and how-to information about adding SharePoint 2013 features and capabilities to custom apps. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## What are SharePoint capabilities in SharePoint 2013?
 <a name="bkmk_whatIs"> </a>
 
@@ -36,7 +30,7 @@ The following table shows SharePoint capabilities that you can add to your app, 
 **Table 1. SharePoint capabilities that you can add to apps in SharePoint 2013**
 
 
-|**Capability **|**Article title **|
+|**Capability**|**Article title**|
 |:-----|:-----|
 |Model and automate business processes | [Workflows in SharePoint 2013](workflows-in-sharepoint-2013.md)|
 |Communicate and collaborate with people and track content | [Social and collaboration features in SharePoint 2013](social-and-collaboration-features-in-sharepoint-2013.md)|

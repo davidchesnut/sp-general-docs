@@ -7,12 +7,6 @@ ms.assetid: fee38837-1985-4319-ba4e-b99c6ec66336
 
 # JavaScript user-defined functions overview
 JavaScript user-defined functions (UDFs) are new in Excel Services in SharePoint Server 2013. This article provides a high-level look at JavaScript UDFs, including basic information on how they work in Excel Services. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## What are UDFs?
 <a name="xlsWhatAreUdfs"> </a>
 

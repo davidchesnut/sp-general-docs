@@ -23,12 +23,6 @@ ms.assetid: b66d4ec1-a2ef-49cc-8ca5-a6b516bff02e
     
     
 Learn about enterprise managed metadata (EMM) and navigation features in SharePoint 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## Managed metadata feature enhancements in SharePoint 2013 for developers
 <a name="SP15_ManagedMetadataAndNav_ManagedMetadataFeatureEnhancements"> </a>
 
@@ -58,7 +52,7 @@ When you want to create a new CSOM project in Visual Studio that uses taxonomy f
 - Microsoft.SharePoint.Client.Taxonomy.dll 
     
   
-Developing customizations with CSOM is very similar to developing .NET server taxonomy solutions: get a reference to the  **TaxonomySession** object and the **TermStore** object, **Group** objects, **TermSet** objects, and **Term** objects required for the session.
+Developing customizations with CSOM is very similar to developing .NET server taxonomy solutions: get a reference to the **TaxonomySession**object and the**TermStore**object,**Group**objects,**TermSet**objects, and**Term**objects required for the session.
   
     
     
@@ -66,7 +60,7 @@ Developing customizations with CSOM is very similar to developing .NET server ta
 ### Code Examples: Basic operations with the Taxonomy CSOM
 <a name="SP15_ManagedMetadataAndNav_ExampleBasicOperations"> </a>
 
-You can use the following code examples to complete basic operations with the taxonomy CSOM. The first example creates a  **Group** object, a **TermSet** object, and **Term** objects. The second example iterates on a **Group** object and writes its contents.
+You can use the following code examples to complete basic operations with the taxonomy CSOM. The first example creates a **Group**object, a**TermSet**object, and**Term**objects. The second example iterates on a**Group**object and writes its contents.
   
     
     
@@ -211,7 +205,7 @@ A term store manager can enhance and expand term usage models based on more flex
     
     
 
-- Link to another site collection and view others' terms. If you want to make your term set available to other site collections connected to the managed metadata service, create a  **global term set**. If you want to create a private term set that is available only to a specific site collection when it is stored in the managed metadata service, create a  **local term set**. 
+- Link to another site collection and view others' terms. If you want to make your term set available to other site collections connected to the managed metadata service, create a **global term set**. If you want to create a private term set that is available only to a specific site collection when it is stored in the managed metadata service, create a **local term set**. 
     
   
 - Block users from using keywords outside of a specific term set. 

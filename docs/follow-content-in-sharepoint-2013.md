@@ -8,16 +8,10 @@ ms.assetid: 30e68cd6-6e55-4cf9-afd6-7139b0a97288
 
 # Follow content in SharePoint 2013
 Learn about common programming tasks for following content (documents, sites, and tags) in SharePoint Server 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## APIs for following content in SharePoint Server 2013
 <a name="bkmk_APIversions"> </a>
 
-When users follow documents, sites, or tags, status updates from documents, conversations on sites, and notifications of tag use show up in their newsfeed. The features related to following content can be seen on the  **Newsfeed** and the **Following** content pages.
+When users follow documents, sites, or tags, status updates from documents, conversations on sites, and notifications of tag use show up in their newsfeed. The features related to following content can be seen on the **Newsfeed**and the**Following**content pages.
   
     
     
@@ -55,7 +49,7 @@ Each API includes a manager object that you use to perform core tasks for follow
     
     
 
-> [!Note]  
+> [!NOTE]  
 > The same APIs are used to follow people. See  [Follow people in SharePoint 2013](follow-people-in-sharepoint-2013.md) for an overview of Following People tasks.
   
     
@@ -66,7 +60,7 @@ Table 1 shows the manager and other key objects (or REST resources) in the APIs 
     
     
 
-> [!Note]  
+> [!NOTE]  
 > The Silverlight and mobile client object models are not included in Table 1 or Table 2 because they provide the same core functionality as the .NET client object model and use the same signatures. The Silverlight client object model is defined in Microsoft.SharePoint.Client.UserProfiles.Silverlight.dll, and the mobile client object model is defined in Microsoft.SharePoint.Client.UserProfiles.Phone.dll. 
   
     
@@ -79,7 +73,7 @@ Table 1 shows the manager and other key objects (or REST resources) in the APIs 
 |:-----|:-----|
 |.NET client object model See:  [How to: Follow documents and sites by using the .NET client object model in SharePoint 2013](how-to-follow-documents-and-sites-by-using-the-net-client-object-model-in-sharep.md)|Manager object:            [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx)Primary namespace:            [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx)Other key objects:            [SocialActor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActor.aspx) , [SocialActorInfo](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorInfo.aspx) , [SocialActorType](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorType.aspx) , [SocialActorTypes](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorTypes.aspx)Class library:           Microsoft.SharePoint.Client.UserProfiles.dll |
 |JavaScript object model |Manager object:            [SocialFollowingManager](http://msdn.microsoft.com/library/9ee1c0c0-b864-f0c3-f0cb-4dd4f1870dfa%28Office.15%29.aspx)Primary namespace:            [SP.Social](http://msdn.microsoft.com/library/43d47f01-c085-0e77-bd01-48bcb7d5bb35%28Office.15%29.aspx)Other key objects:            [SocialActor](http://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx),  [SocialActorInfo](http://msdn.microsoft.com/library/d940db32-1561-c868-bb66-0612e2031f17%28Office.15%29.aspx),  [SocialActorType](http://msdn.microsoft.com/library/fbde74da-f292-dc87-0b7e-81bc5b7a880c%28Office.15%29.aspx),  [SocialActorTypes](http://msdn.microsoft.com/library/a460c3e6-ed88-117d-6755-4c5803a154a0%28Office.15%29.aspx)Class library:           SP.UserProfiles.js |
-|REST service See  [How to: Follow documents, sites, and tags by using the REST service in SharePoint 2013](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md)|Manager resource:            [social.following](following-people-and-content-rest-api-reference-for-sharepoint-2013.md)Primary namespace (OData):            **sp.social.SocialRestFollowingManager**Other key resources:            **SocialActor**,  **SocialActorInfo**,  **SocialActorType**,  **SocialActorTypes**Access point:            `<siteUri>/_api/social.following`|
+|REST service See  [How to: Follow documents, sites, and tags by using the REST service in SharePoint 2013](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md)|Manager resource:            [social.following](following-people-and-content-rest-api-reference-for-sharepoint-2013.md)Primary namespace (OData):           **sp.social.SocialRestFollowingManager**Other key resources:           **SocialActor**, **SocialActorInfo**, **SocialActorType**, **SocialActorTypes**Access point:            `<siteUri>/_api/social.following`|
 |Server object model |Manager object:            [SPSocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.aspx)Primary namespace:            [Microsoft.Office.Server.Social](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.aspx)Other key objects:            [SPSocialActor](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialActor.aspx) , [SPSocialActorInfo](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialActorInfo.aspx) , [SPSocialActorType](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialActorType.aspx) , [SPSocialActorTypes](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialActorTypes.aspx)Class library:           Microsoft.Office.Server.UserProfiles.dll |
    
 
@@ -91,7 +85,7 @@ Table 2 shows common programming tasks for following content and the members tha
     
     
 
-> [!Note]  
+> [!NOTE]  
 > The same APIs are used to follow people. See  [Follow people in SharePoint 2013](follow-people-in-sharepoint-2013.md) for an overview of Following People tasks.
   
     
@@ -101,19 +95,19 @@ Table 2 shows common programming tasks for following content and the members tha
 **Table 2. API for common tasks for following content in SharePoint Server 2013**
 
 
-|**Task **|**Members **|
+|**Task**|**Members**|
 |:-----|:-----|
 |Create an instance of a manager object in the context of the current user |CSOM:  [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.#ctor.aspx)JSOM:  [SocialFollowingManager](http://msdn.microsoft.com/library/9ee1c0c0-b864-f0c3-f0cb-4dd4f1870dfa%28Office.15%29.aspx)REST:  `<siteUri>/_api/social.following`SSOM:  [SPSocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.#ctor.aspx)|
 |Create an instance of a manager object in the context of a specified user |CSOM: not implemented JSOM: not implemented REST: not implemented SSOM:  [SPSocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.#ctor.aspx) (overloaded)|
-|Have the current user start following (stop following) an item |CSOM:  [Follow](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.Follow.aspx) ( [StopFollowing](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.StopFollowing.aspx) )JSOM:  [follow](http://msdn.microsoft.com/library/40d14320-27ba-2941-b0e2-be3b5a407c89%28Office.15%29.aspx) ( [stopFollowing](http://msdn.microsoft.com/library/65b0e9be-dc5e-09fb-c57f-7a933de09a4c%28Office.15%29.aspx)) REST:  **POST** [<siteUri>/_api/social.following/Follow](following-people-and-content-rest-api-reference-for-sharepoint-2013.md#bk_Follow) ( [<siteUri>/_api/social.following/StopFollowing](following-people-and-content-rest-api-reference-for-sharepoint-2013.md#bk_StopFollowing))           and pass the _actor_ parameter in the request bodySSOM:  [Follow](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.Follow.aspx) ( [StopFollowing](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.StopFollowing.aspx) )|
-|Find out whether the current user is following a particular item |CSOM:  [IsFollowed](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.IsFollowed.aspx)JSOM:  [isFollowed](http://msdn.microsoft.com/library/2c1f62e6-fb75-ad4d-c081-36408b418c21%28Office.15%29.aspx)REST:  **POST** [<siteUri>/_api/social.following/IsFollowed](following-people-and-content-rest-api-reference-for-sharepoint-2013.md#bk_IsFollowed) and pass the _actor_ parameter in the request bodySSOM:  [IsFollowed](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.IsFollowed.aspx)|
-|Get the documents, sites, and/or tags that the current user is following |CSOM:  [GetFollowed](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.GetFollowed.aspx)JSOM:  [getFollowed](http://msdn.microsoft.com/library/432a7cec-6add-fdb1-a79f-a93414ee8cd3%28Office.15%29.aspx)REST:  **GET** [<siteUri>/_api/social.following/my/Followed(types=2)](following-people-and-content-rest-api-reference-for-sharepoint-2013.md#bk_Followed) (documents = **2**, sites =  **4**, tags =  **8**) SSOM:  [GetFollowed](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.GetFollowed.aspx)|
-|Get the count of documents, sites, and/or tags that the user is following |CSOM:  [GetFollowedCount](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.GetFollowedCount.aspx)JSOM:  [getFollowedCount](http://msdn.microsoft.com/library/97b53b4f-481a-cf41-1854-8f3ff860b2bb%28Office.15%29.aspx)REST:  **GET** [<siteUri>/_api/social.following/my/FollowedCount(types=2)](following-people-and-content-rest-api-reference-for-sharepoint-2013.md#bk_FollowedCount) (documents = **2**, sites =  **4**, tags =  **8**) SSOM:  [GetFollowedCount](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.GetFollowedCount.aspx)|
-|Get the URI of the site that lists the current user's followed documents |CSOM:  [FollowedDocumentsUri](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.FollowedDocumentsUri.aspx)JSOM:  [followedDocumentsUri](http://msdn.microsoft.com/library/3a70b9c7-abd7-94ff-d730-70298673d6ec%28Office.15%29.aspx)REST:  **GET** [<siteUri>/_api/social.following/my/FollowedDocumentsUri](following-people-and-content-rest-api-reference-for-sharepoint-2013.md#bk_MyFollowedDocumentsUri)SSOM:  [FollowedDocumentsUri](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.FollowedDocumentsUri.aspx)|
-|Get the URI of the site that lists the current user's followed sites |CSOM:  [FollowedSitesUri](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.FollowedSitesUri.aspx)JSOM:  [followedSitesUri](http://msdn.microsoft.com/library/829404bc-1b3a-7545-5e95-0922df330084%28Office.15%29.aspx)REST:  **GET** [<siteUri>/_api/social.following/my/FollowedSitesUri](following-people-and-content-rest-api-reference-for-sharepoint-2013.md#bk_MyFollowedSitesUri)SSOM:  [FollowedSitesUri](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.FollowedSitesUri.aspx)|
+|Have the current user start following (stop following) an item |CSOM:  [Follow](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.Follow.aspx) ( [StopFollowing](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.StopFollowing.aspx) )JSOM:  [follow](http://msdn.microsoft.com/library/40d14320-27ba-2941-b0e2-be3b5a407c89%28Office.15%29.aspx) ( [stopFollowing](http://msdn.microsoft.com/library/65b0e9be-dc5e-09fb-c57f-7a933de09a4c%28Office.15%29.aspx)) REST: **POST**[<siteUri>/_api/social.following/Follow](following-people-and-content-rest-api-reference-for-sharepoint-2013.md#bk_Follow) ( [<siteUri>/_api/social.following/StopFollowing](following-people-and-content-rest-api-reference-for-sharepoint-2013.md#bk_StopFollowing))           and pass the _actor_ parameter in the request bodySSOM:  [Follow](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.Follow.aspx) ( [StopFollowing](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.StopFollowing.aspx) )|
+|Find out whether the current user is following a particular item |CSOM:  [IsFollowed](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.IsFollowed.aspx)JSOM:  [isFollowed](http://msdn.microsoft.com/library/2c1f62e6-fb75-ad4d-c081-36408b418c21%28Office.15%29.aspx)REST: **POST**[<siteUri>/_api/social.following/IsFollowed](following-people-and-content-rest-api-reference-for-sharepoint-2013.md#bk_IsFollowed) and pass the _actor_ parameter in the request bodySSOM:  [IsFollowed](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.IsFollowed.aspx)|
+|Get the documents, sites, and/or tags that the current user is following |CSOM:  [GetFollowed](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.GetFollowed.aspx)JSOM:  [getFollowed](http://msdn.microsoft.com/library/432a7cec-6add-fdb1-a79f-a93414ee8cd3%28Office.15%29.aspx)REST: **GET**[<siteUri>/_api/social.following/my/Followed(types=2)](following-people-and-content-rest-api-reference-for-sharepoint-2013.md#bk_Followed) (documents =**2**, sites = **4**, tags = **8**) SSOM:  [GetFollowed](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.GetFollowed.aspx)|
+|Get the count of documents, sites, and/or tags that the user is following |CSOM:  [GetFollowedCount](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.GetFollowedCount.aspx)JSOM:  [getFollowedCount](http://msdn.microsoft.com/library/97b53b4f-481a-cf41-1854-8f3ff860b2bb%28Office.15%29.aspx)REST: **GET**[<siteUri>/_api/social.following/my/FollowedCount(types=2)](following-people-and-content-rest-api-reference-for-sharepoint-2013.md#bk_FollowedCount) (documents =**2**, sites = **4**, tags = **8**) SSOM:  [GetFollowedCount](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.GetFollowedCount.aspx)|
+|Get the URI of the site that lists the current user's followed documents |CSOM:  [FollowedDocumentsUri](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.FollowedDocumentsUri.aspx)JSOM:  [followedDocumentsUri](http://msdn.microsoft.com/library/3a70b9c7-abd7-94ff-d730-70298673d6ec%28Office.15%29.aspx)REST: **GET**[<siteUri>/_api/social.following/my/FollowedDocumentsUri](following-people-and-content-rest-api-reference-for-sharepoint-2013.md#bk_MyFollowedDocumentsUri)SSOM:  [FollowedDocumentsUri](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.FollowedDocumentsUri.aspx)|
+|Get the URI of the site that lists the current user's followed sites |CSOM:  [FollowedSitesUri](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.FollowedSitesUri.aspx)JSOM:  [followedSitesUri](http://msdn.microsoft.com/library/829404bc-1b3a-7545-5e95-0922df330084%28Office.15%29.aspx)REST: **GET**[<siteUri>/_api/social.following/my/FollowedSitesUri](following-people-and-content-rest-api-reference-for-sharepoint-2013.md#bk_MyFollowedSitesUri)SSOM:  [FollowedSitesUri](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.FollowedSitesUri.aspx)|
    
 
-> [!Note]  
+> [!NOTE]  
 > For examples that show how to use the REST service to follow content, see  [How to: Follow documents, sites, and tags by using the REST service in SharePoint 2013](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md). 
   
     
@@ -127,7 +121,7 @@ To start and stop following a tag or to find out whether the current user is fol
   
     
     
-Before you run the code, you need to add a reference to  **sp.taxonomy.js** and change the placeholder tag name with the name of an existing tag.
+Before you run the code, you need to add a reference to **sp.taxonomy.js**and change the placeholder tag name with the name of an existing tag.
   
     
     

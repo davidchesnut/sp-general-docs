@@ -7,12 +7,6 @@ ms.assetid: 63d9c867-0c5e-4f89-bc61-eeefb0320844
 
 # SharePoint workflow development best practices
 Provides a collection of best practices for developers using Visual Studio to create workflows in SharePoint 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## Workflow development best practices
 
 To develop error-free workflows for SharePoint, it is best to follow some general guidelines, or "best practices." This is the case whether you are using SharePoint Designer 2013 or Visual Studio 2012 for workflow development. 
@@ -54,7 +48,7 @@ To develop error-free workflows for SharePoint, it is best to follow some genera
 ### Apps for SharePoint that contain integrated workflows must edit a tag in the workflowmanifest.xml file
 <a name="bkm_00"> </a>
 
-SharePoint Add-ins that contain integrated workflows (which can be associated with lists on the parent web) are differentiated from normal workflow apps by changing the following tag to  **true** in the `workflowmanifest.xml` file in the app package:
+SharePoint Add-ins that contain integrated workflows (which can be associated with lists on the parent web) are differentiated from normal workflow apps by changing the following tag to **true**in the `workflowmanifest.xml` file in the app package:
   
     
     
@@ -71,7 +65,7 @@ SharePoint Add-ins that contain integrated workflows (which can be associated wi
 ### When you use the Log To History List action, more information is better
 <a name="bkm_01"> </a>
 
-The  **Log To History List** action (or [LogToHistoryListActivity](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowActions.LogToHistoryListActivity.aspx) class if you are using Visual Studio) lets you record information about what a workflow has done at a given point in the workflow's lifecycle. This makes it one of the most important troubleshooting tools you have. The more information you provide at important points in the workflow, the easier it is to troubleshoot unexpected events.
+The **Log To History List**action (or [LogToHistoryListActivity](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowActions.LogToHistoryListActivity.aspx) class if you are using Visual Studio) lets you record information about what a workflow has done at a given point in the workflow's lifecycle. This makes it one of the most important troubleshooting tools you have. The more information you provide at important points in the workflow, the easier it is to troubleshoot unexpected events.
   
     
     
@@ -96,7 +90,7 @@ For more information, see the following:
 ### Write the value of every string and variable that you construct to the history list
 <a name="bkm_02"> </a>
 
-Debugging workflows that were created using SharePoint Designer is much easier if you write strings and variables to the history list by using the  **Log to History List** action.
+Debugging workflows that were created using SharePoint Designer is much easier if you write strings and variables to the history list by using the **Log to History List**action.
   
     
     
@@ -180,7 +174,7 @@ Where possible, it is much better to model a business process in a single workfl
 ### Workflow design: Using the Approval action effectively
 <a name="bkm_09"> </a>
 
-Where possible, instead of creating multiple  **Approval** actions, it is more effective to use the **Stages** feature within an **Approval** action.
+Where possible, instead of creating multiple **Approval**actions, it is more effective to use the**Stages**feature within an**Approval**action.
   
     
     

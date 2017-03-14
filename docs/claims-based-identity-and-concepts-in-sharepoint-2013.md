@@ -7,12 +7,6 @@ ms.assetid: d96c7cf4-2e48-4223-a3c0-42368d079b74
 
 # Claims-based identity and concepts in SharePoint 2013
 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Claims-based identity model
 
 When you build claims-aware applications, the user presents an identity to your application as a set of claims. One claim could be the user's name, another might be an email address. The idea here is that an external identity system is configured to give your application all the information it needs about the user with each request, along with cryptographic assurance that the identity data received by your application comes from a trusted source. 
@@ -140,7 +134,7 @@ Suppose that you have a web farm that consists of a server that runs an ASP.NET 
     
     
 
-> [!Note]  
+> [!NOTE]  
 > To allow an application to access resources on a different server, a domain administrator must configure the Active Directory directory service to enable constrained delegation. For information about how to enable constrained delegation, see  [How to: Use protocol transition and constrained eelegation in ASP.NET 2.0](http://msdn.microsoft.com/en-us/library/ms998355.aspx). 
   
     

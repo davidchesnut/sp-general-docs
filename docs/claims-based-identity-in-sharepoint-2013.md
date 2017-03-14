@@ -7,12 +7,6 @@ ms.assetid: 32b6af2a-72f3-4302-a6af-5f00143cbf67
 
 # Claims-based identity in SharePoint 2013
 Learn about the fundamentals of claims-based identity architecture in SharePoint 2013.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Claims-based authentication
 
 Claims-based authentication enables systems and applications to authenticate a user without requiring the user to disclose more personal information (such as social security number and date of birth) than necessary. An example of claims-based authentication is someone claiming to be over 18 years old or someone claiming to be in a company's marketing group. An external system (relying party) needs only to trust the authentication authority that can validate those claims to allow the user to be authenticated for specific functions.

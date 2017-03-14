@@ -1,5 +1,5 @@
 ---
-title: How to: Use SAP Reporting with Duet Enterprise 2.0
+title: How to Use SAP Reporting with Duet Enterprise 2.0
 ms.prod: SHAREPOINT
 ms.assetid: a54c6cd2-2283-440d-af55-e98e3212caa1
 ---
@@ -7,12 +7,6 @@ ms.assetid: a54c6cd2-2283-440d-af55-e98e3212caa1
 
 # How to: Use SAP Reporting with Duet Enterprise 2.0
 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Online* 
 ## Introduction
 <a name="bkmk_Introduction"> </a>
 
@@ -36,28 +30,28 @@ To enable the Duet reporting features, the sequence of activation must be carefu
 ### To create a feature to add the app-scoped external content type:
 
 
-1. Inside your Duet reporting app, in the  **Solution Explorer**, right click the project name. Choose  **Add**,  **Content Types for an External Data Source**. Click  **Next**. 
+1. Inside your Duet reporting app, in the **Solution Explorer**, right click the project name. Choose **Add**, **Content Types for an External Data Source**. Click **Next**. 
     
   
 2. Enter the URL for the SAP Reporting endpoint as the OData Source. 
     
   
-3. Select the Entities, and choose  **Finish**. 
+3. Select the Entities, and choose **Finish**. 
     
   
-4. Open the newly created external content type to view the LSI properties. You will notice that they are the same as for the farm-scoped external content type except for the  **ODataconnectionSettingsId**. 
+4. Open the newly created external content type to view the LSI properties. You will notice that they are the same as for the farm-scoped external content type except for the **ODataconnectionSettingsId**. 
     
   
 
 ### To create a feature to enable the hidden Duet features:
 
 
-1. Add another new feature to your project. Name the title  **AddDuetReporting**. 
+1. Add another new feature to your project. Name the title **AddDuetReporting**. 
     
-    This feature will have a dependency on the  **AddReportingModel** and the **DuetReportingForApps** features.
+    This feature will have a dependency on the **AddReportingModel**and the**DuetReportingForApps**features.
     
   
-2. Add the following code to the  **Elements** file.
+2. Add the following code to the **Elements**file.
     
   ```
   
@@ -71,11 +65,11 @@ To enable the Duet reporting features, the sequence of activation must be carefu
 
   ```
 
-Please note that the sequence in activation dependency is important. First, you must create the external content type and then activate the  **SAPReportingForApps** feature. Also, note that the second feature (ID: **9b60ccba-ebfd-4e38-87c8-3dea9cc2680a**) is shipped with Duet Enterprise 2.0, but it is marked as hidden. With this approach, a developer can make use of this feature and can bring in Duet Reporting capabilities to an app. 
+Please note that the sequence in activation dependency is important. First, you must create the external content type and then activate the **SAPReportingForApps**feature. Also, note that the second feature (ID:**9b60ccba-ebfd-4e38-87c8-3dea9cc2680a**) is shipped with Duet Enterprise 2.0, but it is marked as hidden. With this approach, a developer can make use of this feature and can bring in Duet Reporting capabilities to an app. 
   
     
     
-Once the  **DuetReportingForApps** feature is activated, it will bring all the artifacts (Report List, Lib, forms, etc.) and customization on the apps site but as the app site template does not have standard navigation links, the app developer needs to add custom page elements to bring out the Duet features (e.g. Report Settings, library list view, and forms). The developer should consult standard Duet documentation for Reporting feature to learn more about the feature and its UI elements. A developer may choose to build up a custom UI for feature entry points which may suit better with the general theme of the app.
+Once the **DuetReportingForApps**feature is activated, it will bring all the artifacts (Report List, Lib, forms, etc.) and customization on the apps site but as the app site template does not have standard navigation links, the app developer needs to add custom page elements to bring out the Duet features (e.g. Report Settings, library list view, and forms). The developer should consult standard Duet documentation for Reporting feature to learn more about the feature and its UI elements. A developer may choose to build up a custom UI for feature entry points which may suit better with the general theme of the app.
   
     
     
@@ -83,11 +77,11 @@ Once the  **DuetReportingForApps** feature is activated, it will bring all the a
 ## Viewing the results
 <a name="bkmk_ViewingTheResults"> </a>
 
-To see the default report settings page, navigate to:  **~/Lists/ReportSetting/AllReportTemplate.aspx**. 
+To see the default report settings page, navigate to: **~/Lists/ReportSetting/AllReportTemplate.aspx**. 
   
     
     
-To see the default view for the report document library, navigate to:  **~/ReportsLib/Forms/AllItems.aspx**. 
+To see the default view for the report document library, navigate to: **~/ReportsLib/Forms/AllItems.aspx**. 
   
     
     

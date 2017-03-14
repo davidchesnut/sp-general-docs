@@ -1,5 +1,5 @@
 ---
-title: How to: Create an external content type from an OData source in SharePoint 2013
+title: How to Create an external content type from an OData source in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: bc60ea49-c44e-4531-af62-06b8cf77d35d
 ---
@@ -7,12 +7,6 @@ ms.assetid: bc60ea49-c44e-4531-af62-06b8cf77d35d
 
 # How to: Create an external content type from an OData source in SharePoint 2013
 Learn how to use Visual Studio 2012 to discover a published OData source and create a reusable external content type for use in Business Connectivity Services (BCS) in SharePoint 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## Prerequisites for creating OData-based external content types
 <a name="bkmk_Prerequisites"> </a>
 
@@ -38,7 +32,7 @@ For information about how to set up your SharePoint development environment, see
     
     
 
-> [!Note]  
+> [!NOTE]  
 > SharePoint Designer 2013 can't be used to autogenerate BDC models from an OData source. You can use Visual Studio 2012 instead. 
   
     
@@ -55,7 +49,7 @@ The following articles provide background information about OData and the OData 
 **Table 1. Core concepts for OData external content types**
 
 
-|**Article title **|**Description **|
+|**Article title**|**Description**|
 |:-----|:-----|
 | [Using OData sources with Business Connectivity Services in SharePoint 2013](using-odata-sources-with-business-connectivity-services-in-sharepoint-2013.md)|Get started with creating external content types based on OData sources, and learn how to use that data in SharePoint or Office components. |
 | [External content types in SharePoint 2013](external-content-types-in-sharepoint-2013.md)|Learn about BCS external content types and what you need to start creating them in SharePoint 2013. |
@@ -72,16 +66,16 @@ The following steps show how to use Visual Studio 2012 to create an external con
 ### To create a new SharePoint Add-in
 
 
-1. In Visual Studio 2012, create a new  **App for SharePoint 2013** project, which is located under the **SharePoint 2013 template** node.
+1. In Visual Studio 2012, create a new **App for SharePoint 2013**project, which is located under the**SharePoint 2013 template**node.
     
   
-2. Name your project, and choose  **OK**. 
+2. Name your project, and choose **OK**. 
     
   
 3. To specify the SharePoint settings, enter a name for your app, and the URL of the SharePoint 2013 server you will be debugging against. 
     
   
-4. Choose  **Finish**. 
+4. Choose **Finish**. 
     
   
 After the project is created, you use the new autogeneration tooling for OData sources and add a BDC model for the OData source to your app. 
@@ -92,26 +86,26 @@ After the project is created, you use the new autogeneration tooling for OData s
 ### To add a new BDC model
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the project, and choose  **Add**,  **Content types for External Data source**. 
+1. In **Solution Explorer**, open the shortcut menu for the project, and choose **Add**, **Content types for External Data source**. 
     
     This starts a wizard that will help you discover the selected data source and create the BDC model. 
     
   
-2. The first page of the wizard is used to collect the URL of the data service. On the  **Specify OData Source** page, enter the URL of the OData service that you want to connect to. The URL should resemble the following: `http://services.odata.org/Northwind/Northwind.svc/`. 
+2. The first page of the wizard is used to collect the URL of the data service. On the **Specify OData Source**page, enter the URL of the OData service that you want to connect to. The URL should resemble the following: `http://services.odata.org/Northwind/Northwind.svc/`. 
     
-    > [!Note]  
+    > [!NOTE]  
 > You will show the Northwind service that is available from the producers list found on the  [Open Data Protocol website](http://www.odata.org/ecosystem#liveservices). 
-3. Choose a name for your OData source, and then choose  **Next**. 
+3. Choose a name for your OData source, and then choose **Next**. 
     
   
-4. A list of data entities that are being exposed by the OData Service appears. Select one or more of the entities, and choose  **Finish**. 
+4. A list of data entities that are being exposed by the OData Service appears. Select one or more of the entities, and choose **Finish**. 
     
   
 
 ### To view the structure of the entities
 
 
-- Notice that Visual Studio created a new folder named External Content Types. Inside that folder, you will find a subfolder with the name of your new data source. If you further expand this, you will see an item that represents the entity you selected. To view a graphical list of the entities and their types, open the  **ect** file that you want to view.
+- Notice that Visual Studio created a new folder named External Content Types. Inside that folder, you will find a subfolder with the name of your new data source. If you further expand this, you will see an item that represents the entity you selected. To view a graphical list of the entities and their types, open the **ect**file that you want to view.
     
     You can also view the XML of the entities by opening the ect files in an XML editor. 
     

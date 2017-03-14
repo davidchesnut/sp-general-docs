@@ -23,12 +23,6 @@ ms.assetid: cfc9bdf8-ddf3-40e1-83d9-dbd304cebd57
     
     
 Find reference information to help you create solutions using Business Connectivity Services (BCS) in SharePoint 2013.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 This section provides information for working with BCS programmatically using a number of advanced programming APIs and technologies.
   
     

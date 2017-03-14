@@ -1,5 +1,5 @@
 ---
-title: Step 1: Creating a ECMAScript Text File
+title: Step 1 Creating a ECMAScript Text File
 ms.prod: OFFICE365
 ms.assetid: f1c2b359-5b0d-467d-a863-6732e23863b9
 ---
@@ -7,12 +7,6 @@ ms.assetid: f1c2b359-5b0d-467d-a863-6732e23863b9
 
 # Step 1: Creating a ECMAScript Text File
 
- **Last modified:** January 13, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 For this walkthrough, you will create an ECMAScript (JavaScript, JScript) text file. This walkthrough assumes that you are familiar with coding in JavaScript. 
   
     
@@ -27,7 +21,7 @@ For this walkthrough, you will create an ECMAScript (JavaScript, JScript) text f
   
 2. Add the following script to the JSOM_FeedToContentEditor.txt file. 
     
-     **Sample code provided by:** Vidya Joshi, Microsoft Corporation.
+    **Sample code provided by:**Vidya Joshi, Microsoft Corporation.
     
 
 

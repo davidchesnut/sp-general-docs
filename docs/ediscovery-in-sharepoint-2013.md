@@ -7,12 +7,6 @@ ms.assetid: 45cb324a-75f5-444d-a0fa-5c223df19016
 
 # eDiscovery in SharePoint 2013
 Learn about eDiscovery features in SharePoint 2013. You can use eDiscovery to provide litigators the ability to discover content in electronic format. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## Introduction to eDiscovery in SharePoint 2013
 <a name="SP15_eDiscoveryInSP_IntroductionToeDiscovery"> </a>
 
@@ -29,16 +23,16 @@ eDiscovery in SharePoint 2013 and includes new ways to reduce the cost and compl
     
     
 
--  **The eDiscovery Center**, a central SharePoint site used to manage preservation, search, and export of content stored in Exchange and SharePoint across SharePoint farms and Exchange servers. 
+- **The eDiscovery Center**, a central SharePoint site used to manage preservation, search, and export of content stored in Exchange and SharePoint across SharePoint farms and Exchange servers. 
     
   
--  **SharePoint In-Place Hold**, which preserves entire SharePoint sites. In-Place Hold protects all documents, pages, and list items within the site but allows users to continue to edit and delete preserved content. 
+- **SharePoint In-Place Hold**, which preserves entire SharePoint sites. In-Place Hold protects all documents, pages, and list items within the site but allows users to continue to edit and delete preserved content. 
     
   
--  **Exchange In-Place Hold**, which preserves Exchange mailboxes. In-Place Hold protects all mailbox content through the same UI and APIs used to preserve SharePoint sites. 
+- **Exchange In-Place Hold**, which preserves Exchange mailboxes. In-Place Hold protects all mailbox content through the same UI and APIs used to preserve SharePoint sites. 
     
   
--  **Query-based preservation** allows users to apply query filters to one or more Exchange mailboxes and SharePoint sites and restrict the content that is held.
+- **Query-based preservation**allows users to apply query filters to one or more Exchange mailboxes and SharePoint sites and restrict the content that is held.
     
   
 
@@ -89,7 +83,7 @@ If multiple holds are placed on a site, the next edit of a document is copied ag
 ## eDiscovery programming model
 <a name="SP15_eDiscoveryInSP_eDiscoveryProgrammingModel"> </a>
 
-SharePoint 2013 provides a Microsoft .NET server programming model that you can use to build custom solutions and apps that include eDiscovery functionality. Table 1 lists the types in the  **Microsoft.Office.Server.Discovery** namespace.
+SharePoint 2013 provides a Microsoft .NET server programming model that you can use to build custom solutions and apps that include eDiscovery functionality. Table 1 lists the types in the **Microsoft.Office.Server.Discovery**namespace.
   
     
     
@@ -97,22 +91,22 @@ SharePoint 2013 provides a Microsoft .NET server programming model that you can 
 **Table 1. eDiscovery types**
 
 
-|**Type **|**Description **|
+|**Type**|**Description**|
 |:-----|:-----|
-| [Case](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.Case.aspx)|Represents an eDiscovery case. Associated with a specified  [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) object, a case can be closed by a specified date or as a specific action. Cases can contain source groups, locations, mailboxes, custodians, saved searches, exports, export configurations for specified IDs, queries, and lists of all of the source groups, custodians, and locations in this **Case** object.|
+| [Case](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.Case.aspx)|Represents an eDiscovery case. Associated with a specified  [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) object, a case can be closed by a specified date or as a specific action. Cases can contain source groups, locations, mailboxes, custodians, saved searches, exports, export configurations for specified IDs, queries, and lists of all of the source groups, custodians, and locations in this**Case**object.|
 | [Custodian](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.Custodian.aspx)|Represents the person who is responsible for keeping records for an eDiscovery case. |
-| [CustodianCollection](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.CustodianCollection.aspx)|Represents a collection of  **Custodian** objects.|
-| [DiscoveryDuplicateSourceCollection](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.DiscoveryDuplicateSourceCollection.aspx)|An exception that is thrown when the value of a  **Source** object is not unique.|
+| [CustodianCollection](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.CustodianCollection.aspx)|Represents a collection of **Custodian**objects.|
+| [DiscoveryDuplicateSourceCollection](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.DiscoveryDuplicateSourceCollection.aspx)|An exception that is thrown when the value of a **Source**object is not unique.|
 | [DiscoveryException](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.DiscoveryException.aspx)|An exception specific to the eDiscovery API that takes a message and also can take an inner exception. |
-| [Export](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.Export.aspx)|Represents an export that is associated with a specific  **Case** object. The **Export** object can be constructed from a **T:Microsoft.SharePoint.SPListItem** object. You can add a **SavedSearch** object to an **Export** object and optionally rights-manage and download the **Export** object.|
-| [ExportCollection](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.ExportCollection.aspx)|Represents a collection of  **Export** objects.|
+| [Export](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.Export.aspx)|Represents an export that is associated with a specific **Case**object. The**Export**object can be constructed from a**T:Microsoft.SharePoint.SPListItem**object. You can add a**SavedSearch**object to an**Export**object and optionally rights-manage and download the**Export**object.|
+| [ExportCollection](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.ExportCollection.aspx)|Represents a collection of **Export**objects.|
 | [ExportStatus](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.ExportStatus.aspx)|Represents the status of an export, which indicates whether the export has started, not started, finished, or finished with failures. |
-| [SavedSearch](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.SavedSearch.aspx)|Represents a saved eDiscovery search.  **SavedSearch** objects can be copied, deleted, or updated. Statistics that are associated with a saved search can be updated. Search refinements, Exchange 2013 refinements, source IDs, source group IDs, queries, and filters can be associated with a **SavedSearch** object.|
-| [SavedSearchCollection](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.SavedSearchCollection.aspx)|Represents a collection of  **SavedSearch** objects.|
-| [Source](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.Source.aspx)|Represents the type of data source that is used in eDiscovery operations. A  **Source** object takes a specific **Case** object, a type of data source, and a filter (that is, a partial or complete specification of the container that identifies the source) as parameters. Information about the source can be returned, such as its preservation status, the location of the source as indexed by SharePoint, and whether the source is a mailbox.|
-| [SourceCollection](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.SourceCollection.aspx)|Represents a collection of  **Source** objects.|
-| [SourceGroup](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.SourceGroup.aspx)|Represents a group of  **Source** objects.|
-| [SourceGroupCollection](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.SourceGroupCollection.aspx)|Represents a collection of  **SourceGroup** objects.|
+| [SavedSearch](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.SavedSearch.aspx)|Represents a saved eDiscovery search. **SavedSearch**objects can be copied, deleted, or updated. Statistics that are associated with a saved search can be updated. Search refinements, Exchange 2013 refinements, source IDs, source group IDs, queries, and filters can be associated with a**SavedSearch**object.|
+| [SavedSearchCollection](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.SavedSearchCollection.aspx)|Represents a collection of **SavedSearch**objects.|
+| [Source](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.Source.aspx)|Represents the type of data source that is used in eDiscovery operations. A **Source**object takes a specific**Case**object, a type of data source, and a filter (that is, a partial or complete specification of the container that identifies the source) as parameters. Information about the source can be returned, such as its preservation status, the location of the source as indexed by SharePoint, and whether the source is a mailbox.|
+| [SourceCollection](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.SourceCollection.aspx)|Represents a collection of **Source**objects.|
+| [SourceGroup](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.SourceGroup.aspx)|Represents a group of **Source**objects.|
+| [SourceGroupCollection](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.SourceGroupCollection.aspx)|Represents a collection of **SourceGroup**objects.|
 | [SourceManagementType](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.SourceManagementType.aspx)|Represents the scale at which sources are managed. Options include the source, the source group, and all content. |
 | [SourceType](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.SourceType.aspx)|Represents the type of source. Source types include Exchange 2013, both current and older versions of SharePoint Server, and file shares. |
 | [SourceValidation](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.SourceValidation.aspx)|Indicates whether the source is valid. |

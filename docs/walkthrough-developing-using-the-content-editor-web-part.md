@@ -1,18 +1,12 @@
 ---
-title: Walkthrough: Developing Using the Content Editor Web Part
-ms.prod: SHAREPOINT
+title: Walkthrough Developing Using the Content Editor Web Part
+ms.prod: OFFICE365
 ms.assetid: 0b5e74b7-405c-43c5-b2dd-1dff77280856
 ---
 
 
 # Walkthrough: Developing Using the Content Editor Web Part
 
- **Last modified:** January 13, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 The walkthrough in this section describes the process for interacting with the ECMAScript (JavaScript, JScript) object model in Excel Services by using the Content Editor Web Part. 
   
     
@@ -29,7 +23,7 @@ During this walkthrough, you will learn how to:
     
   
 
-> [!Note]  
+> [!NOTE]  
 > For information about how to trust a location, see  [How to: Trust a Location](how-to-trust-a-location.md). 
   
     

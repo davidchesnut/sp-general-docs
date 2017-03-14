@@ -7,12 +7,6 @@ ms.assetid: 00d2cf8d-93b0-4aab-8e76-31a6bb2f0dcb
 
 # What's new in Word Automation Services for developers
 This topic provides a high-level overview of the additions and enhancements for developers in Word Automation Services. In Microsoft SharePoint 2013 the primary addition to Word Automation Services is support for "on demand" file conversion requests. The most significant enhancement to Word Automation Services is added support for using streams as input to and output from conversion jobs.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013 | Word Automation Services* 
 ## Create an on demand file conversion
 <a name="was15CreateOnDemandConversion"> </a>
 

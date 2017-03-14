@@ -7,19 +7,13 @@ ms.assetid: e3a8e057-f803-446d-81c9-4eb8ef3691e1
 
 # Discovery in Excel Services REST API
 
- **Last modified:** August 11, 2016
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 This topic discusses the discovery mechanisms built into the Excel Services REST API. 
   
     
     
 
 
-> [!Note]  
+> [!NOTE]  
 > The Excel Services REST API applies to SharePoint 2013 and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
 ) endpoint.
   
@@ -45,7 +39,7 @@ Following is the construct of the REST URL to a specific element in a workbook:
 http://<ServerName>/_vti_bin/ExcelRest.aspx/<DocumentLibrary>/<FileName>/<ResourceLocation>
 ```
 
-As described in the  [Basic URI Structure and Path](basic-uri-structure-and-path.md) topic, following is the REST URL to access a workbook named **sampleWorkbook.xlsx** and further view the chart called **SampleChart**: 
+As described in the  [Basic URI Structure and Path](basic-uri-structure-and-path.md) topic, following is the REST URL to access a workbook named**sampleWorkbook.xlsx**and further view the chart called**SampleChart**: 
   
     
     
@@ -96,7 +90,7 @@ Following is a screen shot of the model page.
   
     
     
-The URL to the model page is where you start the discovery. The model page displays four resource collections that the Excel Services REST API currently supports. The resource collections are ranges, charts, tables, or PivotTables. You can explore those resources in a particular workbook by clicking  **Ranges**,  **Charts**,  **Tables**, or  **PivotTables** on the model page.
+The URL to the model page is where you start the discovery. The model page displays four resource collections that the Excel Services REST API currently supports. The resource collections are ranges, charts, tables, or PivotTables. You can explore those resources in a particular workbook by clicking **Ranges**, **Charts**, **Tables**, or **PivotTables**on the model page.
   
     
     
@@ -109,9 +103,9 @@ For example, to access the chart in the workbook by using discovery, do the foll
     
     
 
-1. On the model page, click  **Charts**. Clicking the  **Charts** link brings another Atom feed—this resulting feed lists all the charts that are available in the sampleWorkbook.xlsx workbook. The sampleWorkbook.xlsx workbook contains three charts named **Chart 1**,  **Chart 3**, and  **SampleChart**. Therefore, three chart names are listed, as seen in the following screen shot. 
+1. On the model page, click **Charts**. Clicking the **Charts**link brings another Atom feed—this resulting feed lists all the charts that are available in the sampleWorkbook.xlsx workbook. The sampleWorkbook.xlsx workbook contains three charts named**Chart 1**, **Chart 3**, and **SampleChart**. Therefore, three chart names are listed, as seen in the following screen shot. 
     
-    **Excel Services REST discovery chart list**
+   **Excel Services REST discovery chart list**
 
   
 
@@ -121,9 +115,9 @@ For example, to access the chart in the workbook by using discovery, do the foll
   
 
   
-2. On the model page, click  **SampleChart**. This displays the chart named  **SampleChart** that resides in **sampleWorkbook.xlsx**, as shown in the following screen shot. 
+2. On the model page, click **SampleChart**. This displays the chart named **SampleChart**that resides in**sampleWorkbook.xlsx**, as shown in the following screen shot. 
     
-    **Viewing chart using REST**
+   **Viewing chart using REST**
 
   
 
@@ -133,7 +127,7 @@ For example, to access the chart in the workbook by using discovery, do the foll
   
 
   
-3. Similarly, clicking  **Chart 1** or **Chart 3** displays the chart with the corresponding name. Clicking **SampleChart** navigates to the actual chart URL. Following is the URL to the **SampleChart** image (as can be seen in the screen shot):
+3. Similarly, clicking **Chart 1**or**Chart 3**displays the chart with the corresponding name. Clicking**SampleChart**navigates to the actual chart URL. Following is the URL to the**SampleChart**image (as can be seen in the screen shot):
     
   ```
   http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model/Charts('SampleChart%20')?$format=image
@@ -142,7 +136,7 @@ For example, to access the chart in the workbook by using discovery, do the foll
 
 ## Atom Feed
 
-Using the  [Atom](http://tools.ietf.org/html/rfc4287) feed provided by the REST API gives you an easier way of getting to the data that you are interested in. If you view the source of the Web page, you get the XML. An example from the charts in **sampleWorkbook.xlsx** is shown below.
+Using the  [Atom](http://tools.ietf.org/html/rfc4287) feed provided by the REST API gives you an easier way of getting to the data that you are interested in. If you view the source of the Web page, you get the XML. An example from the charts in**sampleWorkbook.xlsx**is shown below.
   
     
     

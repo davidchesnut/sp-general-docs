@@ -7,12 +7,6 @@ ms.assetid: 2f81acbb-1263-4f9d-8865-36eb7a3f907b
 
 # SharePoint 2013 Design Manager branding and design capabilities
 Find links to information about using Design Manager branding and design capabilities in SharePoint 2013.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** Office 365 | SharePoint Server 2013* 
 Design Manager in SharePoint 2013 provides a new approach for designing websites. Several new branding and design-based capabilities available in Design Manager enable you to create a compelling look, feel, and behavior for your SharePoint 2013 site. Design Manager also supports importing and exporting a visual design, and can help you ensure a consistent visual experience across all device platforms in your organization.
   
     

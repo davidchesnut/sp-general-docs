@@ -7,12 +7,6 @@ ms.assetid: d83c8a43-49dd-47eb-94d4-23aa2cf71a9a
 
 # Setting up a development environment for BCS in SharePoint 2013
 Learn about setting up a development environment for developing SharePoint 2013 solutions and SharePoint Add-ins using Business Connectivity Services (BCS).
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 You can create SharePoint 2013 solutions and SharePoint Add-ins by using BCS on a client computer or on a server computer, depending on the type of solution you are building.
   
     

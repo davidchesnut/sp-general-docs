@@ -7,12 +7,6 @@ ms.assetid: 3b372a63-7cdf-462a-abb4-750e611e967d
 
 # Build sites for SharePoint
 Learn about the new site authoring and publishing model for websites in SharePoint 2013.
- **Last modified:** April 11, 2016
-  
-    
-    
-
- * **Applies to:** Office 365 | SharePoint Server 2013* 
 ## Introduction to site publishing for designers and developers in SharePoint
 <a name="SP15_BuildSitesForSP2013_IntroToSitePublishing"> </a>
 
@@ -25,19 +19,19 @@ You can use the SharePoint 2013 site publishing capabilities to build, customize
     
     
 
--  **Authoring** and reusing site content.
+- **Authoring**and reusing site content.
     
   
--  **Branding** and designing your site's look, feel, and behavior.
+- **Branding**and designing your site's look, feel, and behavior.
     
   
--  **Managing metadata**—you can build a taxonomy-driven site navigation system.
+- **Managing metadata**—you can build a taxonomy-driven site navigation system.
     
   
--  **Publishing** content smoothly to the current site collection, or publishing content across site collections—even spanning the intranet and Internet site boundary.
+- **Publishing**content smoothly to the current site collection, or publishing content across site collections—even spanning the intranet and Internet site boundary.
     
   
--  **Accessibility**—you can use to improve the accessibility of your published sites.
+- **Accessibility**—you can use to improve the accessibility of your published sites.
     
   
 If you want to see a summary of what's new for designers and developers of publishing websites in SharePoint 2013, see  [What's new with SharePoint 2013 site development](what-s-new-with-sharepoint-2013-site-development.md). 

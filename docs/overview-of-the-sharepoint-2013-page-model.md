@@ -7,12 +7,6 @@ ms.assetid: 808b1af3-89ab-4f02-89cc-ea86cb1f9a6e
 
 # Overview of the SharePoint 2013 page model
 Learn about the revised page model—including master pages and page layouts—redesigned for SharePoint 2013.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** Office 365 | SharePoint Server 2013* 
 ## Introduction to the page model
 <a name="bk_Introduction"> </a>
 
@@ -73,7 +67,7 @@ A master page defines the chrome (the shared framing elements) of your site. The
   
     
     
-A master page also defines regions called content placeholders that are filled in by content from matching regions on page layouts. Most commonly, the body of a master page contains just a single content placeholder (named  **PlaceHolderMain**, which is created automatically), and all of the content from a page layout appears inside this one content placeholder (the  **PlaceHolderMain** content placeholder is outlined in red in Figure 3).
+A master page also defines regions called content placeholders that are filled in by content from matching regions on page layouts. Most commonly, the body of a master page contains just a single content placeholder (named **PlaceHolderMain**, which is created automatically), and all of the content from a page layout appears inside this one content placeholder (the **PlaceHolderMain**content placeholder is outlined in red in Figure 3).
   
     
     
@@ -91,7 +85,7 @@ A master page also defines regions called content placeholders that are filled i
   
     
     
-When you preview a master page in Design Manager, you see the following message. This  **<div>** resides inside the main content placeholder. Put simply, the master page defines the chrome of a page, and the page layout defines the body contained in the main content placeholder.
+When you preview a master page in Design Manager, you see the following message. This **<div>**resides inside the main content placeholder. Put simply, the master page defines the chrome of a page, and the page layout defines the body contained in the main content placeholder.
   
     
     

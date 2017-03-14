@@ -3,19 +3,13 @@ title: Excel Services Development Roadmap
 keywords: roadmap
 f1_keywords:
 - roadmap
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: 5c789f58-9cdb-4601-9047-9c6f83f2fbba
 ---
 
 
 # Excel Services Development Roadmap
 
- **Last modified:** July 20, 2011
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 An important aspect of Excel Services is that solution developers can use its power programmatically from their applications. These applications can be line-of-business (LOB) products or custom enterprise solutions that an organization develops internally. 
   
     
@@ -52,17 +46,17 @@ Following are the main scenarios for Excel Web Services:
     
     
 
--  **Server-side Excel calculation**
+- **Server-side Excel calculation**
     
     This scenario is application-centric. In this scenario, you use models defined in Excel workbooks and calculated on the server as part of application logic. 
     
   
--  **Automating workbook updates on the server**
+- **Automating workbook updates on the server**
     
     This scenario is file-centric. In this scenario, Excel Web Services processes a workbook, and saves copies of the workbook or snapshots. 
     
   
--  **Opening workbooks in edit sessions**
+- **Opening workbooks in edit sessions**
     
     Excel Web Services supports opening workbooks in edit sessions in SharePoint Server 2010. In this scenario, you can use code to edit a workbook. 
     
@@ -124,9 +118,9 @@ The custom application retrieves the live version of the workbook or snapshot an
     
     
 
-> [!Note]  
-> When you make changes to a workbook—for example, by setting values to a range by using Excel Web Services—the changes to the workbook are preserved only for that particular session. The changes are not saved or persisted back to the original workbook. When the current workbook session ends (for example, when you call the  **CloseWorkbook** method, or when the session times out), changes that you made are lost.
-> If you want to save changes that you make to a workbook, you can use the  **GetWorkbook** method and then save the workbook by using the **SaveWorkbook** method or the **SaveWorkbookCopy** method. For more information about the Excel Web Services API, see [Microsoft.Office.Excel.Server.WebServices](https://msdn.microsoft.com/library/Microsoft.Office.Excel.Server.WebServices.aspx) .
+> [!NOTE]  
+> When you make changes to a workbook—for example, by setting values to a range by using Excel Web Services—the changes to the workbook are preserved only for that particular session. The changes are not saved or persisted back to the original workbook. When the current workbook session ends (for example, when you call the **CloseWorkbook**method, or when the session times out), changes that you made are lost.
+> If you want to save changes that you make to a workbook, you can use the **GetWorkbook**method and then save the workbook by using the**SaveWorkbook**method or the**SaveWorkbookCopy**method. For more information about the Excel Web Services API, see [Microsoft.Office.Excel.Server.WebServices](https://msdn.microsoft.com/library/Microsoft.Office.Excel.Server.WebServices.aspx) .
   
     
     
@@ -142,10 +136,10 @@ You can use Excel Web Services as:
 - A regular Web service, by calling the Web methods through SOAP over HTTP. 
     
   
-- A local assembly, by linking directly to  **Microsoft.Office.Excel.Server.Webservices.dll**. 
+- A local assembly, by linking directly to **Microsoft.Office.Excel.Server.Webservices.dll**. 
     
   
-For more information about when you should link directly to  **Microsoft.Office.Excel.Server.Webservices.dll**, see  [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking.md). 
+For more information about when you should link directly to **Microsoft.Office.Excel.Server.Webservices.dll**, see  [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking.md). 
   
     
     

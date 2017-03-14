@@ -10,19 +10,13 @@ ms.assetid: a4e7030b-05c2-484e-b21f-46cba937b803
 
 # Excel Services Alerts
 
- **Last modified:** July 20, 2011
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 Excel Web Services exposes alerts for errors that occur within the Web service and errors that are returned by Excel Calculation Services.
   
     
     
 
 Errors are exposed in the following ways:
-- Excel calculation errors are returned similarly to how they are shown in Excel—that is, as cell error values, such as #VALUE!. When you call the  **GetCell** or **GetRange** methods and request formatted values, you will get the # style error string. If you request unformatted values, you will get an enumerated error code. For more information, see the [Error Codes](#excel-services-alerts_errorcodes) section later in this topic.
+- Excel calculation errors are returned similarly to how they are shown in Excel—that is, as cell error values, such as #VALUE!. When you call the **GetCell**or**GetRange**methods and request formatted values, you will get the # style error string. If you request unformatted values, you will get an enumerated error code. For more information, see the [Error Codes](#excel-services-alerts_errorcodes) section later in this topic.
     
   
 - When an error occurs during the processing of one of the Web service methods, preventing the method from finishing successfully, the error is exposed as a Simple Object Access Protocol (SOAP) exception. You can and should catch this error in your code. These types of errors are also known as "stop" alerts.
@@ -48,7 +42,7 @@ The "stop" alert causes the current operation to stop. This means the workbook w
 
 ### "continue" alerts
 
-The "continue" alert is typically a warning or non-critical error. When Excel Calculation Services throws a "continue" alert, the operation continues. These alerts are returned as out arguments—a struct with the various alert fields. For more information, see the  **Status** class reference topics in the **Microsoft.Office.Excel.Server.WebServices** namespace.
+The "continue" alert is typically a warning or non-critical error. When Excel Calculation Services throws a "continue" alert, the operation continues. These alerts are returned as out arguments—a struct with the various alert fields. For more information, see the **Status**class reference topics in the**Microsoft.Office.Excel.Server.WebServices**namespace.
   
     
     
@@ -67,7 +61,7 @@ You should catch the SOAP exceptions (that is, "stop" alerts) in your code. For 
 ## Error Codes
 <a name="excel-services-alerts_errorcodes"> </a>
 
-To enable catching specific error conditions, an Excel Calculation Services alert has an associated error code. The web service then returns the error using properties from the  **SoapException** class.
+To enable catching specific error conditions, an Excel Calculation Services alert has an associated error code. The web service then returns the error using properties from the **SoapException**class.
   
     
     

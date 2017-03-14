@@ -1,5 +1,5 @@
 ---
-title: How to: Create an OData data service for use as a BCS external system
+title: How to Create an OData data service for use as a BCS external system
 ms.prod: SHAREPOINT
 ms.assetid: 7d7b3aa6-85b7-400d-8ea5-50bebac56a1d
 ---
@@ -7,12 +7,6 @@ ms.assetid: 7d7b3aa6-85b7-400d-8ea5-50bebac56a1d
 
 # How to: Create an OData data service for use as a BCS external system
 Learn how to create an Internet-addressable WCF service that uses OData to send notifications to SharePoint 2013 when the underlying data changes. These notifications are used to trigger events that are attached to external lists. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 This article describes how to create an ASP.NET Windows Communication Foundation (WCF) Data Service to expose the AdventureWorks 2012 LT sample database. This enables you to access the data through the Open Data protocol (OData). When access is established through OData, you can configure a Business Connectivity Services (BCS) external content type that will enable SharePoint 2013 to consume the data from the external database. To further enhance this OData source, you can add service contracts to the WCF service that will enable BCS to subscribe to notifications that indicate that the external data has changed. 
   
     
@@ -63,7 +57,7 @@ Table 1 lists articles that will help you understand the core concepts of buildi
 **Table 1. Core concepts for creating an OData service**
 
 
-|**Resource **|**Description **|
+|**Resource**|**Description**|
 |:-----|:-----|
 | [Using OData sources with Business Connectivity Services in SharePoint 2013](using-odata-sources-with-business-connectivity-services-in-sharepoint-2013.md)|Provides information to help you start creating external content types based on OData sources and using that data in SharePoint 2013 or Office 2013 components. |
 | [How to: Create an external content type from an OData source in SharePoint 2013](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint-2013.md)|Learn how to use Visual Studio 2012 to discover a published OData source and create a reusable external content type to use in BCS in SharePoint 2013. |
@@ -122,40 +116,40 @@ However, for SharePoint 2013 to enable BCS to receive notifications from remote 
 ### To create a new WCF project
 
 
-1. In Visual Studio, on the  **File** menu, choose **New**,  **Project**. 
+1. In Visual Studio, on the **File**menu, choose**New**, **Project**. 
     
   
-2. In the  **New Project** dialog box, choose the **Web** template, and then choose **ASP.NET Web Application**. 
+2. In the **New Project**dialog box, choose the**Web**template, and then choose**ASP.NET Web Application**. 
     
   
-3. Enter  **AdventureWorksService** for the project name, and choose **OK**. 
+3. Enter **AdventureWorksService**for the project name, and choose**OK**. 
     
   
-4. In  **Solution Explorer**, open the shortcut menu for the ASP.NET project that you just created, and choose  **Properties**. 
+4. In **Solution Explorer**, open the shortcut menu for the ASP.NET project that you just created, and choose **Properties**. 
     
   
-5. Select the  **Web** tab, and set the value of the **Specific port** text box to8008. 
+5. Select the **Web**tab, and set the value of the**Specific port**text box to8008. 
     
   
 
 ### To define the data model
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the ASP.NET project, and choose  **Add New Item**. 
+1. In **Solution Explorer**, open the shortcut menu for the ASP.NET project, and choose **Add New Item**. 
     
   
-2. In the  **Add New Item** dialog box, choose the Data template, and then choose **ADO.NET Entity Data Model**. 
+2. In the **Add New Item**dialog box, choose the Data template, and then choose**ADO.NET Entity Data Model**. 
     
   
-3. For the name of the data model, enter  **AdventureWorks.edmx**. 
+3. For the name of the data model, enter **AdventureWorks.edmx**. 
     
   
-4. In the  **Entity Data Model Wizard**, choose  **Generate from Database**, and then choose  **Next**. 
+4. In the **Entity Data Model Wizard**, choose **Generate from Database**, and then choose **Next**. 
     
   
-5. Connect the data model to the database by doing one of the following steps, and then choose  **Next**. 
+5. Connect the data model to the database by doing one of the following steps, and then choose **Next**. 
     
-  - If you do not have a database connection already configured, choose  **New Connection**, and create a new connection. 
+  - If you do not have a database connection already configured, choose **New Connection**, and create a new connection. 
     
   
   - If you have a database connection already configured to connect to the Northwind database, choose that connection in the list of connections. 
@@ -164,25 +158,25 @@ However, for SharePoint 2013 to enable BCS to receive notifications from remote 
   - On the final page of the wizard, select the check boxes for all tables in the database, and clear the check boxes for views and stored procedures. 
     
   
-6. Choose  **Finish** to close the wizard.
+6. Choose **Finish**to close the wizard.
     
   
 
 ### To create the data service
 
 
-1. In  **Solution Explorer**, open the shortcut menu for your ASP.NET project, and then choose  **Add New Item**. 
+1. In **Solution Explorer**, open the shortcut menu for your ASP.NET project, and then choose **Add New Item**. 
     
   
-2. In the  **Add New Item** dialog box, choose **WCF Data Service**. 
+2. In the **Add New Item**dialog box, choose**WCF Data Service**. 
     
   
-3. For the name of the service, enter  **AdventureWorks**. 
+3. For the name of the service, enter **AdventureWorks**. 
     
-    Visual Studio creates the XML markup and code files for the new service. By default, the code-editor window opens. In  **Solution Explorer**, the service will have the name,  **AdventureWorks**, with the extension .svc.cs or .svc.vb. 
+    Visual Studio creates the XML markup and code files for the new service. By default, the code-editor window opens. In **Solution Explorer**, the service will have the name, **AdventureWorks**, with the extension .svc.cs or .svc.vb. 
     
   
-4. Replace the comment  `/* TODO: put your data source class name here */` in the definition of the class that defines the data service with the type that is the entity container of the data model, which in this case is **AdventureWorksEntities**. The class definition should look like the following: 
+4. Replace the comment  `/* TODO: put your data source class name here */` in the definition of the class that defines the data service with the type that is the entity container of the data model, which in this case is**AdventureWorksEntities**. The class definition should look like the following: 
     
   ```cs
   
@@ -197,7 +191,7 @@ By default, when a WCF service is created, it cannot be accessed due to its secu
 ### To enable access to data service resources
 
 
-- In the code for the data service, replace the placeholder code in the  **InitializeService** function with the following.
+- In the code for the data service, replace the placeholder code in the **InitializeService**function with the following.
     
   ```cs
   
@@ -208,13 +202,13 @@ By default, when a WCF service is created, it cannot be accessed due to its secu
 
     This enables authorized clients to have read and write access to resources for the specified entity sets. 
     
-    > [!Note]  
+    > [!NOTE]  
 > Any client that can access the ASP.NET application can also access the resources that are exposed by the data service. In a production data service, to prevent unauthorized access to resources, you should also secure the application itself. For more information, see  [Securing WCF Data Services](http://msdn.microsoft.com/en-us/library/dd728284.aspx). 
 For BCS to receive notifications, there must be a mechanism on the back-end data source that will accept a request to be added and removed from notification subscriptions. 
   
     
     
-The last step in creating the service is to add service operations for the  **Subscribe** and **Unsubscribe** stereotypes that are defined in the BDC model.
+The last step in creating the service is to add service operations for the **Subscribe**and**Unsubscribe**stereotypes that are defined in the BDC model.
   
     
     
@@ -230,11 +224,11 @@ public string subscriptionStorePath = @"\\\\[SHARE_NAME]\\SubscriptionStore\\Sub
   ```
 
 
-    > [!Note]  
+    > [!NOTE]  
 > This file is an XML file that is updated with the new subscriptions. Access to this file will be made by the server process, so make sure you have granted sufficient rights for this file access. 
 > You might also want to create a database solution for storing subscription information. 
 
-    Then add the following two  **WebGet** methods to handle the subscriptions.
+    Then add the following two **WebGet**methods to handle the subscriptions.
     
 
 

@@ -7,18 +7,18 @@ ms.assetid: 21682e45-dd78-4f3c-8f1e-cdd48de3bde2
 
 # Search add-ins in SharePoint 2013
 Learn about search SharePoint Add-ins and how you can create your own search add-ins. The add-ins you create can be added to the SharePoint add-ins catalog so that they can be used in both on-premises deployment and Office 365. Search add-ins only work with data that is stored in the search index and not with the original source documents. 
- **Last modified:** February 11, 2016
-  
-    
-    
-
- * **Applies to:** apps for SharePoint | Office 365 | SharePoint Foundation 2013 | SharePoint Server 2013* 
 SharePoint Add-ins are self-contained pieces of functionality that extend the capabilities of a SharePoint website. These add-ins solve specific business and end-user needs by integrating the best of the web and SharePoint. An add-in can contain various SharePoint elements like Lists, Remote Event Receivers, Content Types, Workflows, Workflow Custom Activities, Site Columns, Modules, Menu Item Custom Actions, Client Web Parts, and Search Configurations. For more information, see  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx). 
   
     
     
 
-A search add-in is an SharePoint Add-in that uses search functionality. In a search add-in, you can use the SharePoint 2013 Search API to locate content. Depending on the type of permissions set up in your [add-in manifest](http://msdn.microsoft.com/library/7cd5850f-cbf3-48d2-bcb7-59b8f4ed0e63%28Office.15%29.aspx), you can search either inside or outside the contents of the add-in. In addition, you can also use a search add-in to distribute search configurations from one SharePoint installation to another. The core design of a search add-in depends on the deployment method that you choose. The following section summarizes the available options and their benefits. For more information, see  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx)
+A search add-in is an SharePoint Add-in that uses search functionality. In a search add-in, you can use the SharePoint 2013 Search API to locate content. Depending on the type of permissions set up in your [add-in manifest](http://msdn.microsoft.com/library/7cd5850f-cbf3-48d2-bcb7-59b8f4ed0e63%28Office.15%29.aspx), you can search either inside or outside the contents of the add-in. In addition, you can also use a search add-in to distribute search configurations from one SharePoint installation to another. 
+The core design of a search add-in depends on the deployment method that you choose. The following section summarizes the available options and their benefits. For more information, see  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx)
+  
+    
+    
+
+
 ## Deploy your search add-ins
 <a name="SP15_Deploy_search_apps"> </a>
 
@@ -64,7 +64,7 @@ You can use the wide range of search-related APIs that SharePoint offers for sea
 **SharePoint APIs for Search add-ins**
 
 
-|**API name **|**Class library **|
+|**API name**|**Class library**|
 |:-----|:-----|
 |.NET client object model (CSOM) |Microsoft.SharePoint.Client.Search.dll |
 |Silverlight CSOM |Microsoft.SharePoint.Client.Search.Silverlight.dll |
@@ -78,7 +78,7 @@ Here are some code examples using the different APIs. Each code example sends a 
   
     
     
- **Client-side Object Model (CSOM)**
+**Client-side Object Model (CSOM)**
   
     
     
@@ -102,7 +102,7 @@ using (ClientContext clientContext = new ClientContext("http://localhost"))
 }
 ```
 
- **JavaScript Object Model (JSOM)**
+**JavaScript Object Model (JSOM)**
   
     
     
@@ -123,7 +123,7 @@ results = searchExecutor.executeQuery(keywordQuery);
 context.executeQueryAsync(onQuerySuccess, onQueryFail);
 ```
 
- **REST**
+**REST**
   
     
     
@@ -201,7 +201,7 @@ Search add-ins send query requests to the Search service application (SSA), and 
   
     
     
-An SharePoint Add-in has its own identity and is associated with a security principal, called an add-in principal. Like users and groups, an add-in principal has certain permissions and rights. The add-in principal has full control rights to the add-in web, so it only needs to request permissions to SharePoint resources in the host web or other locations outside the add-in web, such as site collections. Unlike other SharePoint Add-ins, a search add-in requires only user-level permissions, known as  **QueryAsUserIgnoreAppPrincipal**. This permission lets you query the search add-in based on the user's permissions. This means that search results will be returned based on the user's ACLs. 
+An SharePoint Add-in has its own identity and is associated with a security principal, called an add-in principal. Like users and groups, an add-in principal has certain permissions and rights. The add-in principal has full control rights to the add-in web, so it only needs to request permissions to SharePoint resources in the host web or other locations outside the add-in web, such as site collections. Unlike other SharePoint Add-ins, a search add-in requires only user-level permissions, known as **QueryAsUserIgnoreAppPrincipal**. This permission lets you query the search add-in based on the user's permissions. This means that search results will be returned based on the user's ACLs. 
   
     
     

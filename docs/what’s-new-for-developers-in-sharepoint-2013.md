@@ -7,12 +7,6 @@ ms.assetid: 068d0b99-1762-42de-b6c9-acb1cffc6e31
 
 # What's new for developers in SharePoint 2013
 Learn about new features and functionality in SharePoint 2013, including the new Cloud Add-in Model, development tools, platform enhancements, mobile add-ins, and more.
- **Last modified:** November 11, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Cloud Add-in Model
 <a name="bmSpApps"> </a>
 

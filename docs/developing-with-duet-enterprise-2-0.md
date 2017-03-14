@@ -7,12 +7,6 @@ ms.assetid: c3ef38aa-559e-4832-95c7-75e222c77624
 
 # Developing with Duet Enterprise 2.0
 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Online* 
 ## Overview
 <a name="Overview"> </a>
 
@@ -74,10 +68,10 @@ Follow these steps to create an external content type:
 ### Creating an external content type from an SAP OData endpoint
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the project, and choose  **Add**,  **Content types for External Data source**. 
+1. In **Solution Explorer**, open the shortcut menu for the project, and choose **Add**, **Content types for External Data source**. 
     
   
-2. On the  **Specify OData Source** page, enter the URL of the Duet Enterprise Workflow Service.
+2. On the **Specify OData Source**page, enter the URL of the Duet Enterprise Workflow Service.
     
   
 3. Choose a name for your OData source. 
@@ -86,7 +80,7 @@ Follow these steps to create an external content type:
 4. Select the entities that are needed. 
     
   
-5. Choose  **Finish**. 
+5. Choose **Finish**. 
     
   
 Visual Studio will create a new folder named External Content Types where you will find the newly created BDC model. 
@@ -97,7 +91,7 @@ Visual Studio will create a new folder named External Content Types where you wi
 ## Configuring the BDC model
 <a name="ConfiguringProject"> </a>
 
-The most important thing to make the project work, is to add the  **ODataExtensionProvider** property to the BDC model. This property defines the extension provider that provides BCS with the SAP extensions needed for creating app code.
+The most important thing to make the project work, is to add the **ODataExtensionProvider**property to the BDC model. This property defines the extension provider that provides BCS with the SAP extensions needed for creating app code.
   
     
     

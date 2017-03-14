@@ -1,5 +1,5 @@
 ---
-title: How to: Access an External Data Source from a UDF
+title: How to Access an External Data Source from a UDF
 keywords: how to,howdoi,howto,UDF
 f1_keywords:
 - how to,howdoi,howto,UDF
@@ -10,12 +10,6 @@ ms.assetid: 7a1876da-aeb5-4017-8eb6-3fed47912f70
 
 # How to: Access an External Data Source from a UDF
 
- **Last modified:** July 20, 2011
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 This example shows how to access an external database from a user-defined function (UDF). 
   
     

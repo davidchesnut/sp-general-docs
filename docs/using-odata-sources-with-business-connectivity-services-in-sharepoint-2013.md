@@ -7,12 +7,6 @@ ms.assetid: 7a87e5bf-4428-4055-b113-7665a93e7326
 
 # Using OData sources with Business Connectivity Services in SharePoint 2013
 Learn how to get started creating external content types based on OData sources and using that data in SharePoint 2013 or Office 2013 components.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## OData and the OData connector
 <a name="SP15getstartedOdata_whatisodata"> </a>
 

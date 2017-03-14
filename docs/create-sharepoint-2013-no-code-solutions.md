@@ -7,12 +7,6 @@ ms.assetid: 9511846c-d2c6-4f23-b5de-24be4749598a
 
 # Create SharePoint 2013 no-code solutions
 Learn about SharePoint Composites, a no-code, do-it-yourself business solution that you can create quickly by assembling, connecting, and configuring the basic building blocks of functionality available in SharePoint 2013 and Office 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** Office 2013 | Office 365 | SharePoint Server 2013* 
 ## What is a SharePoint Composite?
 <a name="bk_whatiscomposite"> </a>
 
@@ -34,7 +28,7 @@ The following articles describe how to create no-code solutions and provide link
     
 
 
-|**Article **|**Description **|
+|**Article**|**Description**|
 |:-----|:-----|
 | [SharePoint Composites Handbook](sharepoint-composites-handbook.md)|Provides in-depth guidance to help you learn how to create a no-code solution. |
 | [No-code solutions using SharePoint 2013 Composites](http://technet.microsoft.com/en-us/sharepoint/dn594430)|Provides links to many practical articles, walkthroughs, demos, virtual labs, and other formats that show how to create no-code solutions. |

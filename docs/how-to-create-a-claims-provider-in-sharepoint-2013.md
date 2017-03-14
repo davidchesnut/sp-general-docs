@@ -1,5 +1,5 @@
 ---
-title: How to: Create a claims provider in SharePoint 2013
+title: How to Create a claims provider in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 8f3228ca-57fd-4253-a07d-abeb63298c58
 ---
@@ -7,27 +7,27 @@ ms.assetid: 8f3228ca-57fd-4253-a07d-abeb63298c58
 
 # How to: Create a claims provider in SharePoint 2013
 Learn how to create and implement a SharePoint 2013 claims provider that fulfills the requirements for claims augmentation and claims picking. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 A claims provider issues claims and packages claims into security tokens. A claims provider has two roles: augmentation and picking. 
   
     
     
 
-Claims augmentation enables an application to augment additional claims into the user's token. For example, with Windows-based log-in, the Active Directory directory service can augment all of a user's security groups into the user's Windows token. With claims-based log-in, a customer relationship management (CRM) application can augment roles from a CRM database. By having these claims in the user's token, resources can be authorized against these claims. That is, these claims are used to determine whether a particular user has access to specific resources. Claims can be displayed in the people picker control through claims picking. Claims picking enables an application to surface claims in the people picker, for example, when configuring the security of a SharePoint site or SharePoint service. This functionality enables you to provide search, resolve, and friendly display of claims. 
-> [!Note]  
+Claims augmentation enables an application to augment additional claims into the user's token. For example, with Windows-based log-in, the Active Directory directory service can augment all of a user's security groups into the user's Windows token. With claims-based log-in, a customer relationship management (CRM) application can augment roles from a CRM database. By having these claims in the user's token, resources can be authorized against these claims. That is, these claims are used to determine whether a particular user has access to specific resources. 
+Claims can be displayed in the people picker control through claims picking. Claims picking enables an application to surface claims in the people picker, for example, when configuring the security of a SharePoint site or SharePoint service. This functionality enables you to provide search, resolve, and friendly display of claims. 
+  
+    
+    
+
+
+> [!NOTE]  
 > A people picker with claims picking functionality is sometimes referred to as a claims picker. For more information, see  [People picker and claims provider planning](http://technet.microsoft.com/en-us/library/gg602063.aspx). 
   
     
     
 
-To write a claims provider, your first step is to create a class that derives from the  **SPClaimProvider** class.
-> [!Tip]  
-> For a code example and more information about the  **SPClaimProvider** class and its members, see [SPClaimProvider](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.Claims.SPClaimProvider.aspx) . For walkthroughs, tips, and code samples, see [Claims and Security: Technical articles and code samples on MSDN](http://msdn.microsoft.com/library/f773fd4a-53ec-4656-bd08-e6c435e6f103%28Office.15%29.aspx). 
+To write a claims provider, your first step is to create a class that derives from the **SPClaimProvider**class.
+> [!TIP]  
+> For a code example and more information about the **SPClaimProvider**class and its members, see [SPClaimProvider](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.Claims.SPClaimProvider.aspx) . For walkthroughs, tips, and code samples, see [Claims and Security: Technical articles and code samples on MSDN](http://msdn.microsoft.com/library/f773fd4a-53ec-4656-bd08-e6c435e6f103%28Office.15%29.aspx). 
   
     
     

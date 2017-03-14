@@ -7,12 +7,6 @@ ms.assetid: d50536f6-d02e-4060-9286-634dfd06206c
 
 # Trigger expressions syntax in SharePoint 2013
 Learn about trigger expressions you can use to create trigger conditions to configure the web service callout in SharePoint Server 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## Elements used in the syntax of trigger expressions
 <a name="SP15triggerex_elements"> </a>
 
@@ -37,8 +31,8 @@ Elements that can be used in a trigger expression are:
     
   
 
-> [!Note]  
-> The string " **Null**" is reserved for the value  **Null**. 
+> [!NOTE]  
+> The string "**Null**" is reserved for the value **Null**. 
   
     
     
@@ -55,7 +49,7 @@ Table 1 describes the operators supported by the trigger expression language, wi
 **Table 1. Supported operators for trigger expression syntax**
 
 
-|**Category **|**Expression **|**Description **|
+|**Category**|**Expression**|**Description**|
 |:-----|:-----|:-----|
 |Unary |- !, NOT |Arithmetic negation Logical negation |
 |Multiplicative |* / %, mod |Multiplication Division Remainder |
@@ -76,7 +70,7 @@ Managed properties in the crawled items are referenced by their name; the name i
 ## Literals in trigger expressions
 <a name="SP15triggerex_literals"> </a>
 
-The following data types can be expressed as literals:  **String**,  **Int32**,  **Double**, and  **Boolean**. 
+The following data types can be expressed as literals: **String**, **Int32**, **Double**, and **Boolean**. 
   
     
     
@@ -234,7 +228,7 @@ A wide collection of functions ranging from mathematical functions such as  `Flo
 ## Constants in trigger expressions
 <a name="SP15triggerex_constants"> </a>
 
-There are two sets of constants that can be used with specific functions:  **DatePartConstant** and **RegexOptionConstant**. Table 2 lists the two examples of these constants and where you can use them. 
+There are two sets of constants that can be used with specific functions: **DatePartConstant**and**RegexOptionConstant**. Table 2 lists the two examples of these constants and where you can use them. 
   
     
     
@@ -242,10 +236,10 @@ There are two sets of constants that can be used with specific functions:  **Dat
 **Table 2. Trigger expression constants and usage in SharePoint 2013**
 
 
-|**Group of constants **|**Examples **|**Usage **|
+|**Group of constants**|**Examples**|**Usage**|
 |:-----|:-----|:-----|
-|**DatePartConstant**|**Day**,  **Month**,  **Year**,  **Hour**,  **Minute**,  **Second**. |With the  **GetDatePart** function|
-|**RegexOptionConstant**|**IgnoreCase**|With the  **IsMatch**,  **Match**,  **ReplaceRegex**, and  **IndexOfRegex** functions.|
+|**DatePartConstant**|**Day**, **Month**, **Year**, **Hour**, **Minute**, **Second**. |With the **GetDatePart**function|
+|**RegexOptionConstant**|**IgnoreCase**|With the **IsMatch**, **Match**, **ReplaceRegex**, and **IndexOfRegex**functions.|
    
 
 ## Additional resources

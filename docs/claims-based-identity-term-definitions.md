@@ -7,12 +7,6 @@ ms.assetid: 0f3decb5-dcd8-432f-9bb8-533f2d01bef7
 
 # Claims-based identity term definitions
 
- **Last modified:** December 07, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 Table 1 contains definitions of key terms related to claims-based identity. 
   
     
@@ -22,19 +16,19 @@ Table 1 contains definitions of key terms related to claims-based identity.
 **Table 1. Definitions of terms related to claims-based identity**
 
 
-|** **Term****|** **Definition****|
+|****Term****|****Definition****|
 |:-----|:-----|
 |Claim |A statement that one subject makes about itself or another subject. For example, the statement can be about a name, identity, key, group, privilege, or capability. Claims are issued by a provider, and they are given one or more values and then packaged in security tokens that are issued by a security token service (STS). They are also defined by a claim value type and, possibly, associated metadata. |
 |Claim name |A user-friendly name for the claim type. |
 |Claim type |The type of statement in the claim. Examples of claim types include first name, role, and email address. The claim type provides context for the claim value, and it is usually expressed as a Uniform Resource Identifier (URI). For example, the email address claim type is represented as  `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`. |
-|Claim value |The value of the statement in the claim. For example, if the claim type is  **role**, a value might be  **contributor**. If the claim type is  **first name**, a value might be  **Matt**. |
-|Claim value type |The type of value in the claim. For example, if the claim value is  **Contributor**, the claim type value is  **String**. |
+|Claim value |The value of the statement in the claim. For example, if the claim type is **role**, a value might be **contributor**. If the claim type is **first name**, a value might be **Matt**. |
+|Claim value type |The type of value in the claim. For example, if the claim value is **Contributor**, the claim type value is **String**. |
 |Claims-aware application |A relying-party software application that uses claims to manage identity and access for users. |
 |Claims-based identity |A unique identifier that represents a specific user, application, computer, or other entity. It enables that entity to gain access to multiple resources, such as applications and network resources, without entering credentials multiple times. It also enables resources to validate requests from an entity. |
 |Claims provider |A software component or service that can be used to issue one or more claims during sign-in operations. It is also used to display, resolve, and provide search capabilities for claims in a card selector (for example, in the people picker control in SharePoint). For more information, see  [Claims provider in SharePoint 2013](claims-provider-in-sharepoint-2013.md). |
 |Claims provider schema |A schema that specifies the fields that must be returned as metadata for a claim that is issued by a specific claims provider. |
 |Claims provider - security token service |A software component or service that is used by a claims provider that issues claims and packages them in security tokens. |
-|Delegate |A rich client that is authorized to impersonate another client. For example, consider a situation in which a user-facing website,  **Web1**, calls an infrastructure data service,  **Data2**. It might be advantageous for  **Web1** to impersonate its users when it accesses **Data2**.  **Web1** contacts a federation server to obtain claims that represent one of its users. When it is contacted, the federation server can determine whether **Web1** is an authorized delegate and, if so, it can allow the impersonation. If it is authorized, **Web1** accesses **Data2** while acting as the user.|
+|Delegate |A rich client that is authorized to impersonate another client. For example, consider a situation in which a user-facing website, **Web1**, calls an infrastructure data service, **Data2**. It might be advantageous for **Web1**to impersonate its users when it accesses**Data2**. **Web1**contacts a federation server to obtain claims that represent one of its users. When it is contacted, the federation server can determine whether**Web1**is an authorized delegate and, if so, it can allow the impersonation. If it is authorized,**Web1**accesses**Data2**while acting as the user.|
 |Identity provider |An identity provider is a type of claims provider that provides single sign-on functionality between an organization and other claims providers and relying parties. |
 |Identity provider security token service or relying-party security token service |A software component or service that is used by an identity provider to accept tokens from a federation partner, and then generate claims and security tokens on the contents of the incoming security token into a format consumable by the relying party. A security token service (STS) receives security tokens from a trusted federation partner or claims provider STS. Then, the relying party STS issues new security tokens to be consumed by a local relying-party application. |
 |Relying party |An application that relies on and uses claims in security tokens that a claims provider issues. For example, an online auction website organization might receive a security token with claims that determine whether a subject can access all or part of a relying party's application. |

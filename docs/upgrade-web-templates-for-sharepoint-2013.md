@@ -7,12 +7,6 @@ ms.assetid: 69048e4c-6d6d-4e4e-b74c-7c72ae444354
 
 # Upgrade web templates for SharePoint 2013
 Learn about updating customized SharePoint 2010 web templates for use in SharePoint 2013 after a self-service upgrade. 
- **Last modified:** December 07, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013* 
 SharePoint 2013 has significantly changed the underlying components it uses to render the appearance of SharePoint sites. For customizations made to default components in SharePoint 2010, these new changes include styles, page layouts, master pages and themes. 
   
     
@@ -52,7 +46,7 @@ The following sections detail what you need to update in the web template.
 
 ### Update master page references
 
-After an upgrade to SharePoint 2013, any custom master page references that your web template contains will be set to the default master page named  **seattle.master**. If you customized the default master page in SharePoint 2010, you will need to change the reference to that custom page in order for your customizations to appear. 
+After an upgrade to SharePoint 2013, any custom master page references that your web template contains will be set to the default master page named **seattle.master**. If you customized the default master page in SharePoint 2010, you will need to change the reference to that custom page in order for your customizations to appear. 
   
     
     
@@ -74,18 +68,18 @@ To add the default functionality back to the template, you must modify the Onet.
 1. Open the Visual Studio project that contains the web template you want to update. 
     
   
-2. In  **Solution Explorer**, find the Onet.xml file in your project. 
+2. In **Solution Explorer**, find the Onet.xml file in your project. 
     
   
 3. Open Onet.xml in an XML editor. 
     
   
-4. Make sure that each of the features in Table 1 are contained in the  **WebFeatures** section.
+4. Make sure that each of the features in Table 1 are contained in the **WebFeatures**section.
     
-    **Table 1. Default web template features**
+   **Table 1. Default web template features**
 
 
-|**DisplayName **|**Feature ID **|
+|**DisplayName**|**Feature ID**|
 |:-----|:-----|
 |AccSvcAddAccessApp |d2b9ec23-526b-42c5-87b6-852bd83e0364 |
 |AnnouncementsList |00bfea71-d1ce-42de-9c63-a44004ce0104 |
@@ -136,7 +130,7 @@ To add the default functionality back to the template, you must modify the Onet.
     
   
 
-> [!Note]  
+> [!NOTE]  
 > You may also need to activate these features in the Central Administration utility. 
   
     

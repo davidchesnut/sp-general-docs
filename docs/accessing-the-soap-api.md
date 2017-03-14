@@ -10,12 +10,6 @@ ms.assetid: 36e8e3d5-83ac-4bd3-b556-1af132add3eb
 
 # Accessing the SOAP API
 
- **Last modified:** March 09, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 Excel Web Services uses Simple Object Access Protocol (SOAP) over HTTP and acts as a communications interface between client programs and Excel Services. The Web service consists of methods and a set of complex type objects that you can use to access the complete functionality of Excel Web Services. To call the service, you must reference the Excel Web Services Web Services Description Language (WSDL). 
   
     
@@ -58,7 +52,7 @@ The following table describes each element in the URL.
     
 
 
-|** **URL element****|** **Description****|
+|****URL element****|****Description****|
 |:-----|:-----|
 | _server_|The name of the server on which Microsoft SharePoint Server 2010 is deployed. |
 | _customsite_|A custom SharePoint Server 2010 site that the server administrator creates. |

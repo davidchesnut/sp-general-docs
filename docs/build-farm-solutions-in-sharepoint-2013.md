@@ -7,12 +7,6 @@ ms.assetid: 96c32f08-ad93-49af-b8d0-9d194a48cc79
 
 # Build farm solutions in SharePoint 2013
 Get an overview of our documentation about developing, packaging, and deploying administrative extensions to SharePoint 2013 using farm solutions.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## What are farm solutions?
 <a name="WhatAreFarmSolutions"> </a>
 

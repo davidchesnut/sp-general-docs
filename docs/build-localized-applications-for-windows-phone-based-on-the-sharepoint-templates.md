@@ -7,19 +7,13 @@ ms.assetid: c12d7fd4-8c6b-446b-970b-1eb0e5d0a9b2
 
 # Build localized applications for Windows Phone based on the SharePoint templates
 Learn how building a localizable Windows Phone app using the new SharePoint templates is different from building one using other Windows Phone templates. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint* 
 The SharePoint SDK for Windows Phone 7.1 installs Windows Phone project templates, which you can use to build Windows Phone 7.1 applications against SharePoint 2013 or SharePoint 2010. For more information, see  [Overview of Windows Phone SharePoint 2013 application templates in Visual Studio](overview-of-windows-phone-sharepoint-2013-application-templates-in-visual-studio.md). 
   
     
     
 
 Visual Studio uses language-specific resource files to create assemblies that allow your mobile application to support many languages. For more information about this process, see  [Packaging and Deploying Resources in Desktop Apps](http://msdn.microsoft.com/library/b224d7c0-35f8-4e82-a705-dd76795e8d16%28Office.15%29.aspx). 
-> [!Important]  
+> [!IMPORTANT]  
 > If you plan to localize your application for East Asian languages, be sure to read the "Fonts and Your Application" section of  [Font Support for Windows Phone](http://msdn.microsoft.com/library/b0d855ad-3fd2-4872-9a88-7f5d0a270ff9%28Office.15%29.aspx)
   
     
@@ -28,7 +22,7 @@ Visual Studio uses language-specific resource files to create assemblies that al
 
 ## Differences when building localized applications for Windows Phone using the SharePoint templates
 
-Building a localizable Windows Phone app using the new SharePoint templates is slightly different from building one using other Windows Phone templates. When you use the SharePoint templates, the  **SupportedCultures** element requires a slightly different format. For example, in a standard Windows Phone app that uses English (United States) for its default culture but also supports German (Germany) and Spanish (Spain), the **SupportedCultures** element appears as follows:
+Building a localizable Windows Phone app using the new SharePoint templates is slightly different from building one using other Windows Phone templates. When you use the SharePoint templates, the **SupportedCultures**element requires a slightly different format. For example, in a standard Windows Phone app that uses English (United States) for its default culture but also supports German (Germany) and Spanish (Spain), the**SupportedCultures**element appears as follows:
   
     
     
@@ -36,11 +30,11 @@ Building a localizable Windows Phone app using the new SharePoint templates is s
   
     
     
-This format does not work when you build a localized Windows Phone app that is based on the SharePoint templates. Instead, locate the  **SupportedCultures** element in the .csproj file and add the names of each culture (language) that your application needs to support (other than the default culture). Separate the names using semicolons. You should have an entry for each .resx file that is in the project.
+This format does not work when you build a localized Windows Phone app that is based on the SharePoint templates. Instead, locate the **SupportedCultures**element in the .csproj file and add the names of each culture (language) that your application needs to support (other than the default culture). Separate the names using semicolons. You should have an entry for each .resx file that is in the project.
   
     
     
-For the previous example, the  **SupportedCultures** element should appear as follows:
+For the previous example, the **SupportedCultures**element should appear as follows:
   
     
     

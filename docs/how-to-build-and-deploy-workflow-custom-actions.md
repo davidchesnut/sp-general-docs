@@ -1,5 +1,5 @@
 ---
-title: How to: Build and deploy workflow custom actions
+title: How to Build and deploy workflow custom actions
 ms.prod: SHAREPOINT
 ms.assetid: 9d2fa681-30c2-4549-9df2-ea9ed757fda9
 ---
@@ -7,19 +7,13 @@ ms.assetid: 9d2fa681-30c2-4549-9df2-ea9ed757fda9
 
 # How to: Build and deploy workflow custom actions
 Learn how to model business processes whose requirements are not met by the existing library of workflow actions in SharePoint Designer by creating custom workflow actions in SharePoint 2013. 
- **Last modified:** October 30, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 SharePoint Designer provides a collection of workflow actions that are available through the Workflow Designer user interface (UI). Although the range of workflow actions that are included in SharePoint Designer) is extensive, it is nevertheless finite. In some cases, you may need to model a business process whose requirements are not met by the existing library of workflow actions that are available in SharePoint Designer. 
   
     
     
 
 Recognizing that business processes often have specialized requirements, SharePoint 2013 lets you create custom workflow actions. You can develop these custom actions by using Visual Studio, and then package and deploy them to SharePoint. At that point, the custom action becomes available to workflow authors in SharePoint Designer, exactly as if it were among the library of existing actions. This capability lets you customize the functionality in your workflow authoring environment to match any of your specialized business processes. 
-> [!Note]  
+> [!NOTE]  
 > A sample is provided that illustrates creating a custom action. The sample, along with a readme file, is available here:  [SharePoint 2013 workflow: Create a custom action](http://code.msdn.microsoft.com/SharePoint-2013-workflow-41e5c0f9) (http://code.msdn.microsoft.com/SharePoint-2013-workflow-41e5c0f9).
   
     
@@ -40,13 +34,13 @@ The core scenario for custom workflow actions is captured in the following narra
 2. No workflow action that is included in SharePoint Designer 2013 supports dispatching a document to an external printer. Therefore, the company managers decide to invest in providing this custom action (they call it the "Send Files to Printer" action) for the company's information workers. 
     
   
-3. Vendors expose printing web services. To capitalize, a developer creates a custom  **Send Files to Printer** action, named **SendFilesToPrinter**. What the developer creates is a declarative workflow activity. The developer also, then, creates the workflow action to provide the drag-and-drop UI for the action in SharePoint Designer. 
+3. Vendors expose printing web services. To capitalize, a developer creates a custom **Send Files to Printer**action, named**SendFilesToPrinter**. What the developer creates is a declarative workflow activity. The developer also, then, creates the workflow action to provide the drag-and-drop UI for the action in SharePoint Designer. 
     
   
-4. The developer packages both the  **SendFilesToPrinter** activity and the **Send Files to Printer** action in a SharePoint solution package (.wsp) file and deploys it as a site collection feature to the SharePoint farm.
+4. The developer packages both the **SendFilesToPrinter**activity and the**Send Files to Printer**action in a SharePoint solution package (.wsp) file and deploys it as a site collection feature to the SharePoint farm.
     
   
-5. After the feature is deployed and activated, the information worker sees the new custom action,  **Send Files to Printer**, in the SharePoint Designer UI along with all of the normally included actions and can use it just like all the others.
+5. After the feature is deployed and activated, the information worker sees the new custom action, **Send Files to Printer**, in the SharePoint Designer UI along with all of the normally included actions and can use it just like all the others.
     
   
 
@@ -57,7 +51,7 @@ An action is a wrapper that abstracts the functionality of its underlying activi
   
     
     
-Like all actions, custom actions are "web scoped"—that is, they are activated at the level of the SharePoint website, or  **SharePoint.SPWeb** instance.
+Like all actions, custom actions are "web scoped"—that is, they are activated at the level of the SharePoint website, or **SharePoint.SPWeb**instance.
   
     
     
@@ -81,9 +75,9 @@ Visual Studio 2012 now provides a "workflow custom activity" item type within Sh
 ### To create a workflow custom activity
 
 
-1. Begin by opening Visual Studio 2012 and creating a new Visual C# project of type  **SharePoint 2013 Project**, as shown in Figure 1. 
+1. Begin by opening Visual Studio 2012 and creating a new Visual C# project of type **SharePoint 2013 Project**, as shown in Figure 1. 
     
-    **Figure 1. New Project dialog box**
+   **Figure 1. New Project dialog box**
 
   
 
@@ -93,9 +87,9 @@ Visual Studio 2012 now provides a "workflow custom activity" item type within Sh
   
 
   
-2. In  **Solution Explorer**, right-click the project name node, and choose  **Add**,  **New Item**. This opens the  **Add New Item** dialog box, as shown in Figure 2.
+2. In **Solution Explorer**, right-click the project name node, and choose **Add**, **New Item**. This opens the **Add New Item**dialog box, as shown in Figure 2.
     
-    **Figure 2. Add New Item dialog box**
+   **Figure 2. Add New Item dialog box**
 
   
 
@@ -105,12 +99,12 @@ Visual Studio 2012 now provides a "workflow custom activity" item type within Sh
     
     
   
-3. In the  **Add New Item** dialog box, choose the **Workflow Custom Activity** item type and give it a meaningful name. In the illustration, the name is "WorkflowActionsModule1". Then choose **Add**. The new item is created, and you are presented with the activity design surface. 
+3. In the **Add New Item**dialog box, choose the**Workflow Custom Activity**item type and give it a meaningful name. In the illustration, the name is "WorkflowActionsModule1". Then choose**Add**. The new item is created, and you are presented with the activity design surface. 
     
   
-4. If the  **Toolbox** tab is not already showing, click it to expose the toolbox nodes. Click the **SharePoint 2013 Workflow** node to show the workflow development objects. There is a partial view of objects in the workflow toolbox in Figure 3.
+4. If the **Toolbox**tab is not already showing, click it to expose the toolbox nodes. Click the**SharePoint 2013 Workflow**node to show the workflow development objects. There is a partial view of objects in the workflow toolbox in Figure 3.
     
-    **Figure 3. Partial view of SharePoint workflow toolbox**
+   **Figure 3. Partial view of SharePoint workflow toolbox**
 
   
 
@@ -120,7 +114,7 @@ Visual Studio 2012 now provides a "workflow custom activity" item type within Sh
     
     
   
-5. Add new action (.actions4) and activity (.xaml) files to your workflow module, as needed. To add these files, right-click the actions module icon in  **Solution Explorer**, choose  **Add**, and then choose either  **Add Action** (to add a new action4 file) or **New Activity** (to add a new activity), as appropriate.
+5. Add new action (.actions4) and activity (.xaml) files to your workflow module, as needed. To add these files, right-click the actions module icon in **Solution Explorer**, choose **Add**, and then choose either **Add Action**(to add a new action4 file) or**New Activity**(to add a new activity), as appropriate.
     
   
 After you create your actions module and add your action and activity files, your project should look something like that depicted in Figure 5. You will see one .actions4 file for each action that you added, and one .xaml file for each activity. Additionally, you will have an Elements.xml file and the module's .xaml file. 
@@ -164,7 +158,7 @@ After your custom action is deployed, you can update or remove it very easily. A
 
 ### Feature activation
 
-Activating a custom action feature on a site collection (that is, on an  **SPWeb** instance) succeeds only if the Azure/ Workflow Manager Client 1.0 (the multitenant workflow engine) is correctly configured. Two troubleshooting hints that may help ensure a correct configuration include:
+Activating a custom action feature on a site collection (that is, on an **SPWeb**instance) succeeds only if the Azure/ Workflow Manager Client 1.0 (the multitenant workflow engine) is correctly configured. Two troubleshooting hints that may help ensure a correct configuration include:
   
     
     

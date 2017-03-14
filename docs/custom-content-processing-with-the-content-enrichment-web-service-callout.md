@@ -7,12 +7,6 @@ ms.assetid: bdda92c8-9c8d-416e-9a6b-4a9373686fa0
 
 # Custom content processing with the Content Enrichment web service callout
 Learn about the content enrichment web service callout in SharePoint 2013 that enables developers to create an external web service to modify managed properties for crawled items during content processing. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 Search in SharePoint 2013 enables users to modify the managed properties of crawled items before they are indexed by calling out to an external content enrichment web service. The ability to modify managed properties for items during content processing is helpful when performing tasks such as data cleansing, entity extraction, classification, and tagging. 
   
     
@@ -34,7 +28,7 @@ Search in SharePoint 2013 enables users to modify the managed properties of craw
     
 Figure 1 shows a part of the process that takes place in the content processing component. The content enrichment web service is a SOAP-based service that you can create to receive a callout from the web service client inside the content processing component. Based on Figure 1, the web service client refers to the Content Enrichment operator inside the content processing component; theweb service refers to the SOAP web service that you implement.The web service receives a configurable payload from the content processing component. Then, the resulting response from the web service is merged into the crawled item before it is added to the search index. The web service client works with managed properties that you can configure as input properties or as output properties. Input properties are sent to the web service; output properties are returned by the web service. Certain managed properties are hidden or are read-only and can't be sent to the web service or received from the web service. See  [How to list all read-only managed properties for the Content Enrichment web service](#SP15contentprocess_read-only_managed_properties) for information about how to verify which managed properties are read-only.
     
-> [!Important]  
+> [!IMPORTANT]  
 > The content enrichment callout step can only be configured with a single web service endpoint. Any kind of fault tolerance, or routing capabilities to support multiple implementations must be handled by the developer implementing the web service. In addition, the developer may have various web service implementations hosted at different endpoints; however, at any given time, only one of these endpoints can be used in the configuration. 
   
     
@@ -93,17 +87,17 @@ Table 1 lists the properties you can configure through the Windows PowerShell cm
 **Table 1. Properties that are configurable for the client by using Windows PowerShell cmdlets**
 
 
-|**Configuration property **|**Description **|**Default value **|
+|**Configuration property**|**Description**|**Default value**|
 |:-----|:-----|:-----|
 |**Endpoint**|Specifies the URL of the external web service. |Empty. |
 |**InputProperties**|The managed properties that the external web service receives. |Empty. |
 |**OutputProperties**|The managed properties that the external web service returns. |Empty. |
-|**Timeout**|The amount of time until the web service times out in milliseconds. Depending on  **FailureMode**, the item fails to be processed or a warning is written to the ULS log.|5000 milliseconds; Valid range [100, 30000]. |
+|**Timeout**|The amount of time until the web service times out in milliseconds. Depending on **FailureMode**, the item fails to be processed or a warning is written to the ULS log.|5000 milliseconds; Valid range [100, 30000]. |
 |**SendRawData**|Enables or disables sending raw data to the web service. |False. |
-|**MaxRawDataSize**|The maximum size of raw data sent to the web service in kilobytes (KB). If the binary data of an item exceeds this limit, the item is not sent. This does not prevent the  **InputProperties** from being sent, and the **OutputProperties** from being received.|5120 kilobytes. |
-|**FailureMode**|Controls the behavior of the web service client when errors occur. When  **FailureMode** is set to **ERROR**, any problems that occur during content enrichment processing send a failed callback for that particular item. When  **FailureMode** is set to **WARNING**, the item is indexed, without any modifications by the web service and a warning is written to the ULS log. |Error. |
-|**DebugMode**|A mode that when set to  **true** enables the content enrichment client to send all managed properties to the client without expecting any properties in return. Any configured **Trigger** property, **InputProperties** property, and **OutputProperties** property are ignored.|False. |
-|**Trigger**|A  **Boolean** predicate that is executed on every crawled item. If the predicate evaluates to **true**, the record is sent to the web service. Otherwise, the item is passed through to the search index.|Empty. |
+|**MaxRawDataSize**|The maximum size of raw data sent to the web service in kilobytes (KB). If the binary data of an item exceeds this limit, the item is not sent. This does not prevent the **InputProperties**from being sent, and the**OutputProperties**from being received.|5120 kilobytes. |
+|**FailureMode**|Controls the behavior of the web service client when errors occur. When **FailureMode**is set to**ERROR**, any problems that occur during content enrichment processing send a failed callback for that particular item. When **FailureMode**is set to**WARNING**, the item is indexed, without any modifications by the web service and a warning is written to the ULS log. |Error. |
+|**DebugMode**|A mode that when set to **true**enables the content enrichment client to send all managed properties to the client without expecting any properties in return. Any configured**Trigger**property,**InputProperties**property, and**OutputProperties**property are ignored.|False. |
+|**Trigger**|A **Boolean**predicate that is executed on every crawled item. If the predicate evaluates to**true**, the record is sent to the web service. Otherwise, the item is passed through to the search index.|Empty. |
    
 
 ### How to list all read-only managed properties for the Content Enrichment web service
@@ -125,7 +119,7 @@ Get-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $ssa  | ?{$_.Is
 ## About trigger conditions for configuring the web service callout
 <a name="SP15contentprocess_trigger"> </a>
 
-A trigger condition is an expression that is used to configure the web service callout. If a trigger condition evaluates to  **true**, the web service client performs a callout for that record. If a trigger condition evaluates to **false**, the web service client does not perform a callout and passes the crawled item to the search index. Alternatively, if no trigger condition is configured; all items are sent to the web service.
+A trigger condition is an expression that is used to configure the web service callout. If a trigger condition evaluates to **true**, the web service client performs a callout for that record. If a trigger condition evaluates to**false**, the web service client does not perform a callout and passes the crawled item to the search index. Alternatively, if no trigger condition is configured; all items are sent to the web service.
   
     
     
@@ -141,12 +135,12 @@ Table 2 lists examples of trigger conditions.
 **Table 2. Trigger condition examples for configuring the Content Enrichment web service callout**
 
 
-|**Expression **|**Description **|**Requirements **|
+|**Expression**|**Description**|**Requirements**|
 |:-----|:-----|:-----|
-|MP1 > 2 |Returns  **true** if the value of the managed property named MP1 is greater than 2.|MP1 must have a numeric type. |
-|IsNull(MP2) |Returns  **true** if the managed property named MP2 is not present for the crawled item or is empty/null.|MP2 can be of any type. |
-|StartsWith(MP1, "sample") AND MP2 != 18 |Returns  **true** if the value in the managed property MP1 starts with "sample" and the value of managed property MP2 is not 18.|MP1 must be of type  **string** and MP2 must be a numeric type.|
-|IsDay(MP1, 2009, 12, 24) |Checks whether the managed property MP1 contains a  **DateTime** that falls on December 24, 2009.|MP1 must be of type  **DateTime**. |
+|MP1 > 2 |Returns **true**if the value of the managed property named MP1 is greater than 2.|MP1 must have a numeric type. |
+|IsNull(MP2) |Returns **true**if the managed property named MP2 is not present for the crawled item or is empty/null.|MP2 can be of any type. |
+|StartsWith(MP1, "sample") AND MP2 != 18 |Returns **true**if the value in the managed property MP1 starts with "sample" and the value of managed property MP2 is not 18.|MP1 must be of type **string**and MP2 must be a numeric type.|
+|IsDay(MP1, 2009, 12, 24) |Checks whether the managed property MP1 contains a **DateTime**that falls on December 24, 2009.|MP1 must be of type **DateTime**. |
    
 See  [Trigger expressions syntax in SharePoint 2013](trigger-expressions-syntax-in-sharepoint-2013.md) for the elements that can be used in a trigger expression and a list of supported functions.
   
@@ -161,10 +155,10 @@ For a basic implementation, do the following:
     
     
 
-1. Include the  **Microsoft.Office.Server.Search.ContentProcessingEnrichment.dll** located in `C:\\Program Files\\Microsoft Office Servers\\15.0\\Search\\Applications\\External` in your project as a reference.
+1. Include the **Microsoft.Office.Server.Search.ContentProcessingEnrichment.dll**located in `C:\\Program Files\\Microsoft Office Servers\\15.0\\Search\\Applications\\External` in your project as a reference.
     
   
-2. Implement  **IContentProcessingEnrichmentService** as a web service.
+2. Implement **IContentProcessingEnrichmentService**as a web service.
     
   
 

@@ -3,19 +3,13 @@ title: Excel Services Architecture
 keywords: excel services design
 f1_keywords:
 - excel services design
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: e0349b4a-2d52-46c4-a167-801e9c24eaca
 ---
 
 
 # Excel Services Architecture
 
- **Last modified:** December 07, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 Excel Services is part of Microsoft SharePoint Server 2010. Excel Services is built on ASP.NET and SharePoint Foundation technologies. Following are the core components in Excel Services: 
   
     
@@ -41,7 +35,7 @@ Excel Services is part of Microsoft SharePoint Server 2010. Excel Services is bu
     
   
 
-> [!Note]  
+> [!NOTE]  
 > Microsoft Excel Online, part of Office Online, also supports Excel workbooks in the browser. For more information about Excel Online, see  [documentation about Office Web Apps](https://technet.microsoft.com/en-us/library/ee855124.aspx). 
   
     
@@ -103,9 +97,9 @@ Excel Web Services is the Excel Services component that provides programmatic ac
     
     
 
-> [!Note]  
-> When you make changes to a workbook—for example, by setting values to a range by using Excel Web Services—the changes to the workbook are preserved only for that session. The changes are not saved or persisted back to the original workbook. When the current workbook session ends (for example, when you call the  **CloseWorkbook** method, or when the session times out), the changes that you made are lost.
-> If you want to save changes that you make to a workbook, you can use the  **GetWorkbook** method, and then save the workbook. For more information, see [Microsoft.Office.Excel.Server.WebServices](https://msdn.microsoft.com/library/Microsoft.Office.Excel.Server.WebServices.aspx) . You can also open the workbook in edit mode and save the changes.
+> [!NOTE]  
+> When you make changes to a workbook—for example, by setting values to a range by using Excel Web Services—the changes to the workbook are preserved only for that session. The changes are not saved or persisted back to the original workbook. When the current workbook session ends (for example, when you call the **CloseWorkbook**method, or when the session times out), the changes that you made are lost.
+> If you want to save changes that you make to a workbook, you can use the **GetWorkbook**method, and then save the workbook. For more information, see [Microsoft.Office.Excel.Server.WebServices](https://msdn.microsoft.com/library/Microsoft.Office.Excel.Server.WebServices.aspx) . You can also open the workbook in edit mode and save the changes.
   
     
     
@@ -124,7 +118,7 @@ Excel Services UDFs enable you to use formulas in a cell to call custom function
 
 ## ECMAScript (JavaScript, JScript)
 
-The JavaScript object model in Excel Services enables developers to customize, automate, and drive the Excel Web Access Web Part control on a page. By using the JavaScript object model, you can build mashups and other integrated solutions that interact with one or more Excel Web Access Web Part controls on a page or an  **iframe** with script on the page. It also enables you to add more capabilities to your workbooks and code around them.
+The JavaScript object model in Excel Services enables developers to customize, automate, and drive the Excel Web Access Web Part control on a page. By using the JavaScript object model, you can build mashups and other integrated solutions that interact with one or more Excel Web Access Web Part controls on a page or an **iframe**with script on the page. It also enables you to add more capabilities to your workbooks and code around them.
   
     
     

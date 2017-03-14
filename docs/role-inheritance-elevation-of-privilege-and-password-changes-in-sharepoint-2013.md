@@ -7,12 +7,6 @@ ms.assetid: a72c6cad-9e3d-4d57-bf26-24cd1ad7f020
 
 # Role, inheritance, elevation of privilege, and password changes in SharePoint 2013
 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Roles, role definitions, and role assignments
 <a name="SP15_RoleInheritance_Role"> </a>
 
@@ -20,7 +14,7 @@ A role consists of two parts: a role definition and a role assignment.
   
     
     
-The role definition, or permission level, is the list of rights associated with the role. A right is a uniquely controllable action within a SharePoint website. For example, a user with the  **Read** role can browse pages in the website and view items in lists. User permissions are never managed directly by using rights. All user and group permissions are managed through roles. A role definition is a collection of rights bound to a specific object. Role definitions (for example, **Full Control**,  **Read**,  **Contribute**,  **Design**, or  **Limited Access**) are scoped to the website and mean the same thing everywhere within the website, but their meanings can differ between sites within the same site collection. Role definitions can also be inherited from the parent website, just as permissions can be inherited. 
+The role definition, or permission level, is the list of rights associated with the role. A right is a uniquely controllable action within a SharePoint website. For example, a user with the **Read**role can browse pages in the website and view items in lists. User permissions are never managed directly by using rights. All user and group permissions are managed through roles. A role definition is a collection of rights bound to a specific object. Role definitions (for example,**Full Control**, **Read**, **Contribute**, **Design**, or **Limited Access**) are scoped to the website and mean the same thing everywhere within the website, but their meanings can differ between sites within the same site collection. Role definitions can also be inherited from the parent website, just as permissions can be inherited. 
   
     
     
@@ -73,15 +67,15 @@ SharePoint fetches user token information from the SharePoint database. If the u
   
     
     
-If the user account is an NT account, SharePoint uses the  **AuthZ** interface to query the Active Directory directory service for the **TokenGroups** property. This may fail if SharePoint is running in an extranet mode, and does not have permission to query Active Directory for this property.
+If the user account is an NT account, SharePoint uses the **AuthZ**interface to query the Active Directory directory service for the**TokenGroups**property. This may fail if SharePoint is running in an extranet mode, and does not have permission to query Active Directory for this property.
   
     
     
-If the user account is a membership user, SharePoint queries the ASP.NET  **RoleManager** for all the roles that the user belongs to. This may fail if there is not a proper .config file for the current executable file.
+If the user account is a membership user, SharePoint queries the ASP.NET **RoleManager**for all the roles that the user belongs to. This may fail if there is not a proper .config file for the current executable file.
   
     
     
-If SharePoint can't obtain the user's group memberships from Active Directory or  **<roleManager>**, the newly generated token contains only the user's unique security ID (SID). No exception is thrown, but an entry is written into the ULS server log. The new token is also written into the SharePoint database so that it will not be regenerated within 24 hours. 
+If SharePoint can't obtain the user's group memberships from Active Directory or **<roleManager>**, the newly generated token contains only the user's unique security ID (SID). No exception is thrown, but an entry is written into the ULS server log. The new token is also written into the SharePoint database so that it will not be regenerated within 24 hours. 
   
     
     
@@ -105,7 +99,7 @@ Elevation of privilege, a feature that was added in Windows SharePoint Services 
   
     
     
-The following is a standard use of  **RunWithElevatedPrivileges**. 
+The following is a standard use of **RunWithElevatedPrivileges**. 
   
     
     
@@ -143,7 +137,7 @@ Although elevation of privilege provides a powerful technique for managing secur
     
     
 
-> [!Important]  
+> [!IMPORTANT]  
 > If the method passed to  [RunWithElevatedPrivileges](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPSecurity.RunWithElevatedPrivileges.aspx) includes any write operations, the call to [RunWithElevatedPrivileges](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPSecurity.RunWithElevatedPrivileges.aspx) should be preceded by a call to either [SPUtility.ValidateFormDigest()](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPUtility.ValidateFormDigest.aspx) or [SPWeb.ValidateFormDigest()](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.ValidateFormDigest.aspx) .
   
     

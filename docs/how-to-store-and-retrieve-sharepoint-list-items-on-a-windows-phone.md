@@ -1,5 +1,5 @@
 ---
-title: How to: Store and retrieve SharePoint list items on a Windows Phone
+title: How to Store and retrieve SharePoint list items on a Windows Phone
 ms.prod: SHAREPOINT
 ms.assetid: 14ca37a2-5b45-430d-9004-ff3016f89834
 ---
@@ -7,19 +7,13 @@ ms.assetid: 14ca37a2-5b45-430d-9004-ff3016f89834
 
 # How to: Store and retrieve SharePoint list items on a Windows Phone
 Learn about the Windows Phone application life cycle and storing network data locally. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 One of the most important considerations in the development of Windows Phone apps is the management of state information, both for the overall application and for individual pages or data items within the application. If you're developing Windows Phone apps, you must take into account that users of your apps might lose connectivity to network resources (such as SharePoint lists). The development infrastructure for Windows Phone apps provides mechanisms for handling state information at various stages in the life cycle of an app. 
   
     
     
 
 
-> [!Important]  
+> [!IMPORTANT]  
 > If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. 
 > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md). 
   
@@ -30,11 +24,11 @@ One of the most important considerations in the development of Windows Phone app
 ## Store SharePoint list data locally on a Windows Phone
 <a name="BKMK_StoringDataLocally"> </a>
 
-On a Windows Phone, only one app runs at a time, and when a user switches to another app on the phone (by pressing the  **Start** button on the phone, for example), the app currently running is deactivated, or, in the terms of Windows Phone development,tombstoned. If the user switches back to the deactivated app (by pressing the  **Back** button), the app can be reactivated, but unless you provide logic to handle application state information over the course of the app life cycle, that state information is not preserved by default in the transition from activation to deactivation and back again. (For more information about the application life cycle for Windows Phone apps, see [Execution Model Overview for Windows Phone](http://msdn.microsoft.com/en-us/library/ff817008%28v=VS.92%29.aspx).) 
+On a Windows Phone, only one app runs at a time, and when a user switches to another app on the phone (by pressing the **Start**button on the phone, for example), the app currently running is deactivated, or, in the terms of Windows Phone development,tombstoned. If the user switches back to the deactivated app (by pressing the **Back**button), the app can be reactivated, but unless you provide logic to handle application state information over the course of the app life cycle, that state information is not preserved by default in the transition from activation to deactivation and back again. (For more information about the application life cycle for Windows Phone apps, see [Execution Model Overview for Windows Phone](http://msdn.microsoft.com/en-us/library/ff817008%28v=VS.92%29.aspx).) 
   
     
     
-For Windows Phone apps, the  **PhoneApplicationService** class exposes standard life-cycle events that can be used to manage application state. In projects created from the Windows Phone SharePoint List Application template (as with projects created from all **Silverlight for Windows Phone** templates), these standard Windows Phone application life-cycle events are declared in the App.xaml file and associated with event handlers in the code-behind file, App.xaml.cs. The declarations in the App.xaml file for your SharePoint list apps should look like the following markup.
+For Windows Phone apps, the **PhoneApplicationService**class exposes standard life-cycle events that can be used to manage application state. In projects created from the Windows Phone SharePoint List Application template (as with projects created from all**Silverlight for Windows Phone**templates), these standard Windows Phone application life-cycle events are declared in the App.xaml file and associated with event handlers in the code-behind file, App.xaml.cs. The declarations in the App.xaml file for your SharePoint list apps should look like the following markup.
   
     
     
@@ -50,20 +44,20 @@ For Windows Phone apps, the  **PhoneApplicationService** class exposes standard 
 </Application.ApplicationLifetimeObjects>
 ```
 
-The  **Application_Activated** and **Application_Deactivated** event handlers declared in the App.xaml file are implemented in the App.xaml.cs code-behind file with default logic that caches application state information for use in the phone app as long as the app is not terminated. The implementation of the handlers for these events uses the **State** property (which provides access to a **Dictionary** object) of the **PhoneApplicationService** class to store data. Data stored in this **State** property is transient. That is, it is preserved when the app is deactivated or tombstoned, but not when the app is terminated. It is important to keep in mind as you handle application life-cycle events in your projects that if a Windows app is deactivated when a user switches to another app, that deactivated app is subject to termination by the Windows Phone operating system, depending on circumstances. Any data on the phone that isn't saved to persistent storage is lost, even if that data was saved to transient storage by using the **State** property of the **PhoneApplicationService**. 
+The **Application_Activated**and**Application_Deactivated**event handlers declared in the App.xaml file are implemented in the App.xaml.cs code-behind file with default logic that caches application state information for use in the phone app as long as the app is not terminated. The implementation of the handlers for these events uses the**State**property (which provides access to a**Dictionary**object) of the**PhoneApplicationService**class to store data. Data stored in this**State**property is transient. That is, it is preserved when the app is deactivated or tombstoned, but not when the app is terminated. It is important to keep in mind as you handle application life-cycle events in your projects that if a Windows app is deactivated when a user switches to another app, that deactivated app is subject to termination by the Windows Phone operating system, depending on circumstances. Any data on the phone that isn't saved to persistent storage is lost, even if that data was saved to transient storage by using the**State**property of the**PhoneApplicationService**. 
   
     
     
-In a Windows Phone app that gets data from a SharePoint list, the data used on the phone from session to session can of course be retrieved from the server running SharePoint Server, if the server is available. But continuous connectivity to a SharePoint Server may not be available for a Windows Phone device, owing to variations in service coverage by location and other factors. To provide users of your app with access to data in the event of lost connectivity with the server running SharePoint Server, or simply to save data to persistent storage between sessions of the app regardless of server availability, you can take advantage of the  **Closing** and **Launching** events of the **PhoneApplicationService** class.
+In a Windows Phone app that gets data from a SharePoint list, the data used on the phone from session to session can of course be retrieved from the server running SharePoint Server, if the server is available. But continuous connectivity to a SharePoint Server may not be available for a Windows Phone device, owing to variations in service coverage by location and other factors. To provide users of your app with access to data in the event of lost connectivity with the server running SharePoint Server, or simply to save data to persistent storage between sessions of the app regardless of server availability, you can take advantage of the **Closing**and**Launching**events of the**PhoneApplicationService**class.
   
     
     
-The  **Application_Launching** and **Application_Closing** handlers for these events are declared in App.xaml and defined in the App.xaml.cs file, but they are not implemented. To handle storing and retrieving application state information in the context of app termination, you can provide an implementation for the **Application_Closing** event handler to store data in the isolated storage designated for the app so that the data persists between sessions of the app, and you can provide an implementation for the **Application_Launching** event handler to retrieve data from isolated storage when a new session of the app is started (when the app is launched), even if connectivity to the server running SharePoint Server that is the original source of the data is not available.
+The **Application_Launching**and**Application_Closing**handlers for these events are declared in App.xaml and defined in the App.xaml.cs file, but they are not implemented. To handle storing and retrieving application state information in the context of app termination, you can provide an implementation for the**Application_Closing**event handler to store data in the isolated storage designated for the app so that the data persists between sessions of the app, and you can provide an implementation for the**Application_Launching**event handler to retrieve data from isolated storage when a new session of the app is started (when the app is launched), even if connectivity to the server running SharePoint Server that is the original source of the data is not available.
   
     
     
 
-> [!Tip]  
+> [!TIP]  
 > Data should be encrypted before you save it to a local device. For more information about how to encrypt the data, see  [How to: Encrypt Data in a Windows Phone Application](http://msdn.microsoft.com/en-us/library/hh487164%28v=vs.92%29.aspx)
   
     
@@ -76,13 +70,13 @@ The  **Application_Launching** and **Application_Closing** handlers for these ev
 1. Create a Windows Phone app by using the Windows Phone SharePoint List Application template in Visual Studio by following the steps in  [How to: Create a Windows Phone SharePoint 2013 list app](how-to-create-a-windows-phone-sharepoint-2013-list-app.md). 
     
   
-2. In  **Solution Explorer**, choose the App.xaml file. 
+2. In **Solution Explorer**, choose the App.xaml file. 
     
   
 3. Press F7 to open the code-behind file, App.xaml.cs, for editing. 
     
   
-4. Locate the (empty) implementation of the  **Application_Launching** event handler and replace the event handler with the following code.
+4. Locate the (empty) implementation of the **Application_Launching**event handler and replace the event handler with the following code.
     
   ```cs
   
@@ -97,7 +91,7 @@ private void Application_Launching(object sender, LaunchingEventArgs e)
 }
   ```
 
-5. Locate the (empty) implementation of the  **Application_Closing** event handler and replace that event handler with the following code.
+5. Locate the (empty) implementation of the **Application_Closing**event handler and replace that event handler with the following code.
     
   ```cs
   
@@ -118,7 +112,7 @@ private void Application_Closing(object sender, ClosingEventArgs e)
 6. Save the file. 
     
   
-With these implementations in place, run your app to initialize the main ViewModel in the app with data from the server running SharePoint Server. Exit the app on the phone (by pressing the  **Back** button to navigate past the first page of the app) to trigger the **Application_Closing** event. If you then run your app without connectivity to the server, the ViewModel that was saved to the **IsolatedStorageSettings** **Dictionary** object (in the **Application_Closing** event) is retrieved and initialized. The SharePoint list items that were saved to isolated storage in a previous session of the app are displayed in the List form (List.xaml) of the app.
+With these implementations in place, run your app to initialize the main ViewModel in the app with data from the server running SharePoint Server. Exit the app on the phone (by pressing the **Back**button to navigate past the first page of the app) to trigger the**Application_Closing**event. If you then run your app without connectivity to the server, the ViewModel that was saved to the**IsolatedStorageSettings****Dictionary**object (in the**Application_Closing**event) is retrieved and initialized. The SharePoint list items that were saved to isolated storage in a previous session of the app are displayed in the List form (List.xaml) of the app.
   
     
     
@@ -126,7 +120,7 @@ With these implementations in place, run your app to initialize the main ViewMod
 ## Implement a mechanism for editing list items offline
 <a name="BKMK_ImplementingOfflineEditing"> </a>
 
-If you follow the procedure in the previous section to implement handlers for the  **Closing** and **Launching** events in your app, SharePoint list data that was retrieved from the server when connectivity was available can be displayed in your app even if connectivity to the server is lost in a subsequent session of the app, because the list items are retrieved from local persistent storage on the phone. Based on the implementation in the previous section, however, the list items made available in this way for display while offline can't be edited and saved back to the server unless connectivity is restored. In the following procedure, you'll add a mechanism to your app to provide for storing edited versions of list items locally when connectivity is unavailable. When connectivity to the server is available again, you can retrieve these edited list items and save your changes back to the server.
+If you follow the procedure in the previous section to implement handlers for the **Closing**and**Launching**events in your app, SharePoint list data that was retrieved from the server when connectivity was available can be displayed in your app even if connectivity to the server is lost in a subsequent session of the app, because the list items are retrieved from local persistent storage on the phone. Based on the implementation in the previous section, however, the list items made available in this way for display while offline can't be edited and saved back to the server unless connectivity is restored. In the following procedure, you'll add a mechanism to your app to provide for storing edited versions of list items locally when connectivity is unavailable. When connectivity to the server is available again, you can retrieve these edited list items and save your changes back to the server.
   
     
     
@@ -138,7 +132,7 @@ For the procedures in this section, we assume you're working in the context of a
 **Table 1. Sample Product Orders list**
 
 
-|**Column **|**Type **|**Required **|
+|**Column**|**Type**|**Required**|
 |:-----|:-----|:-----|
 |Product (for example, Title) |Single line of text (Text) |Yes |
 |Description |Single line of text (Text) |No |
@@ -151,15 +145,15 @@ For the procedures in this section, we assume you're working in the context of a
 ### To implement a class to support editing items while offline
 
 
-1. Starting with a Visual Studio project that was created based on the Product Orders list represented by Table 1, in  **Solution Explorer**, choose the node that represents the project (for example, SPListAppLocalStorage). 
+1. Starting with a Visual Studio project that was created based on the Product Orders list represented by Table 1, in **Solution Explorer**, choose the node that represents the project (for example, SPListAppLocalStorage). 
     
   
-2. On the  **Project** menu, choose **Add Class**. 
+2. On the **Project**menu, choose**Add Class**. 
     
-    The  **Add New Item** dialog box appears with the C# **Class** template selected.
+    The **Add New Item**dialog box appears with the C#**Class**template selected.
     
   
-3. Name the class file DraftItemStore.cs, and then choose  **Add**.
+3. Name the class file DraftItemStore.cs, and then choose **Add**.
     
     The class file is added to the project and opened for editing. 
     
@@ -251,11 +245,11 @@ namespace SPListAppLocalStorage // Based on project name by default.
 5. Save the file. 
     
   
-A specific instance of the  **EditItemViewModel** class represents a SharePoint list item that is being edited on the phone. You can consider a list item that was edited as a "draft item" before changes to the item are saved to the server. In the code in this class, the **AddDraftItem** method adds a specific instance of the **EditItemViewModel** class (that is, a draft item) as a value to a **Dictionary** object, associating the **EditItemViewModel** in the **Dictionary** with a key based on the identifier for the given list item. (An identifier is assigned by SharePoint Server to each item in a list. In a project based on the Windows Phone SharePoint List Application template, that identifier is stored in the **ID** property of the given **ViewModel** class, such as **EditItemViewModel** or **DisplayItemViewModel**, which represents the list item.) The  **RemoveDraftItem** method removes an **EditItemViewModel** from the **Dictionary** object based on a specified identifier. Both of these methods use the **GetDraftItemCollection** method to retrieve the **Dictionary** object containing the **EditItemViewModel** objects from isolated storage and both methods use the **SaveDrafts** method to save the modified **Dictionary** object (with a draft item either added to it or removed from it) back to isolated storage. The **GetDraftItemCollection** method first determines whether a "Drafts" **Dictionary** object has been saved to isolated storage. If so, the method returns that **Dictionary** object; otherwise, the method initializes and returns a new **Dictionary** object. The **Drafts** property of the class provides access to the **Dictionary** of draft items by returning a list (that is, an object based on the **List<T>** generic) of draft items as **EditItemViewModel** objects. The **GetDraftItemById** method returns a given draft item from the **Dictionary** object based on a specified identifier value.
+A specific instance of the **EditItemViewModel**class represents a SharePoint list item that is being edited on the phone. You can consider a list item that was edited as a "draft item" before changes to the item are saved to the server. In the code in this class, the**AddDraftItem**method adds a specific instance of the**EditItemViewModel**class (that is, a draft item) as a value to a**Dictionary**object, associating the**EditItemViewModel**in the**Dictionary**with a key based on the identifier for the given list item. (An identifier is assigned by SharePoint Server to each item in a list. In a project based on the Windows Phone SharePoint List Application template, that identifier is stored in the**ID**property of the given**ViewModel**class, such as**EditItemViewModel**or**DisplayItemViewModel**, which represents the list item.) The **RemoveDraftItem**method removes an**EditItemViewModel**from the**Dictionary**object based on a specified identifier. Both of these methods use the**GetDraftItemCollection**method to retrieve the**Dictionary**object containing the**EditItemViewModel**objects from isolated storage and both methods use the**SaveDrafts**method to save the modified**Dictionary**object (with a draft item either added to it or removed from it) back to isolated storage. The**GetDraftItemCollection**method first determines whether a "Drafts"**Dictionary**object has been saved to isolated storage. If so, the method returns that**Dictionary**object; otherwise, the method initializes and returns a new**Dictionary**object. The**Drafts**property of the class provides access to the**Dictionary**of draft items by returning a list (that is, an object based on the**List<T>**generic) of draft items as**EditItemViewModel**objects. The**GetDraftItemById**method returns a given draft item from the**Dictionary**object based on a specified identifier value.
   
     
     
-Now you can add elements to the user interface of the phone app and configure them to use the  **DraftItemStore** class for editing list items offline. In the following procedures, you will:
+Now you can add elements to the user interface of the phone app and configure them to use the **DraftItemStore**class for editing list items offline. In the following procedures, you will:
   
     
     
@@ -263,39 +257,39 @@ Now you can add elements to the user interface of the phone app and configure th
 - Add and configure a Windows Phone page to display all list items that were saved as draft items to isolated storage on the phone. 
     
   
-- Add and configure another page, bound to an  **EditItemViewModel**, for editing an individual draft item, analogous to the Edit form (EditForm.xaml) for list items. 
+- Add and configure another page, bound to an **EditItemViewModel**, for editing an individual draft item, analogous to the Edit form (EditForm.xaml) for list items. 
     
   
-- Add a method,  **SaveAsDraft**, to the  **EditItemViewModel** class that executes the **AddDraftItem** method of the **DraftItemStore** class implemented in the previous procedure.
+- Add a method, **SaveAsDraft**, to the **EditItemViewModel**class that executes the**AddDraftItem**method of the**DraftItemStore**class implemented in the previous procedure.
     
   
-- Add an  **ApplicationBar** button to the EditForm.xaml file to call the **SaveAsDraft** method.
+- Add an **ApplicationBar**button to the EditForm.xaml file to call the**SaveAsDraft**method.
     
   
-- Add an  **ApplicationBar** button to the List.xaml file to navigate to the page that displays all list items saved as drafts.
+- Add an **ApplicationBar**button to the List.xaml file to navigate to the page that displays all list items saved as drafts.
     
   
 
 ### To add a page for displaying all draft items saved on the phone
 
 
-1. In  **Solution Explorer**, choose the  **Views** folder.
+1. In **Solution Explorer**, choose the **Views**folder.
     
   
-2. On the  **Project** menu, choose **Add New Item**. 
+2. On the **Project**menu, choose**Add New Item**. 
     
-    The  **Add New Item** dialog box opens.
-    
-  
-3. In the  **Add New Item** dialog box, under the **Visual C#** node, choose the **Silverlight for Windows Phone** node.
+    The **Add New Item**dialog box opens.
     
   
-4. In the  **Templates** pane, choose the **Windows Phone Portrait Page** template.
+3. In the **Add New Item**dialog box, under the**Visual C#**node, choose the**Silverlight for Windows Phone**node.
     
   
-5. Name the file Drafts.xaml, and then choose  **Add**. 
+4. In the **Templates**pane, choose the**Windows Phone Portrait Page**template.
     
-    The file is added to the project under the  **Views** node and opened for editing.
+  
+5. Name the file Drafts.xaml, and then choose **Add**. 
+    
+    The file is added to the project under the **Views**node and opened for editing.
     
   
 6. In the XAML pane of the designer, replace the contents of the file with the following XAML. 
@@ -366,7 +360,7 @@ Now you can add elements to the user interface of the phone app and configure th
     The value of the namespace designation  `<x:Class>` in this code ("SPListAppLocalStorage.Views.Drafts") will vary depending on the name of your project.
     
   
-7. With the Drafts.xaml file selected in  **Solution Explorer**, press F7 to open the associated code-behind file, Drafts.xaml.cs, for editing. 
+7. With the Drafts.xaml file selected in **Solution Explorer**, press F7 to open the associated code-behind file, Drafts.xaml.cs, for editing. 
     
   
 8. Replace the contents of the file with the following code. 
@@ -430,23 +424,23 @@ namespace SPListAppLocalStorage.Views
 ### To add a page for editing individual draft items
 
 
-1. In  **Solution Explorer**, choose the  **Views** folder.
+1. In **Solution Explorer**, choose the **Views**folder.
     
   
-2. On the  **Project** menu, choose **Add New Item**. 
+2. On the **Project**menu, choose**Add New Item**. 
     
-    The  **Add New Item** dialog box opens.
-    
-  
-3. In the  **Add New Item** dialog box, under the **Visual C#** node, choose the **Silverlight for Windows Phone** node.
+    The **Add New Item**dialog box opens.
     
   
-4. In the  **Templates** pane, choose the **Windows Phone Portrait Page** template.
+3. In the **Add New Item**dialog box, under the**Visual C#**node, choose the**Silverlight for Windows Phone**node.
     
   
-5. Name the file DraftItemEditForm.xaml, and then choose  **Add**. 
+4. In the **Templates**pane, choose the**Windows Phone Portrait Page**template.
     
-    The file is added to the project under the  **Views** node and opened for editing.
+  
+5. Name the file DraftItemEditForm.xaml, and then choose **Add**. 
+    
+    The file is added to the project under the **Views**node and opened for editing.
     
   
 6. In the XAML pane of the designer, replace the contents of the file with the following XAML. 
@@ -595,7 +589,7 @@ namespace SPListAppLocalStorage.Views
     The XAML for defining this page is similar to that of the EditForm.xaml file. You can copy the EditForm.xaml file to use as a basis for DraftItemEditForm.xaml, making the modifications to the file as indicated in this markup. 
     
   
-7. With the DraftItemEditForm.xaml file chosen in  **Solution Explorer**, press F7 to open the associated code-behind file, DraftItemEditForm.xaml.cs, for editing. 
+7. With the DraftItemEditForm.xaml file chosen in **Solution Explorer**, press F7 to open the associated code-behind file, DraftItemEditForm.xaml.cs, for editing. 
     
   
 8. Replace the contents of the file with the following code. 
@@ -709,20 +703,20 @@ namespace SPListAppLocalStorage
     As you can see, the namespace used in this file is based on the name of the project (SPListAppLocalStorage). 
     
   
-9. Add the appbar.back.rest.png image to your project for the  **ApplicationBar** button (btnBack) declared in the DraftItemEditForm.xaml file. In **Solution Explorer**, choose the  **Images** folder node in the project.
+9. Add the appbar.back.rest.png image to your project for the **ApplicationBar**button (btnBack) declared in the DraftItemEditForm.xaml file. In**Solution Explorer**, choose the **Images**folder node in the project.
     
   
-10. On the  **Project** menu, choose **Add Existing Item**. 
+10. On the **Project**menu, choose**Add Existing Item**. 
     
   
 11. In the browser that opens, navigate to the folder in which the standard Windows Phone icon images were installed by the Windows Phone SDK 7.1. 
     
-    > [!Note]  
+    > [!NOTE]  
 > The images with a light foreground and a dark background are in  `%PROGRAMFILES%(x86)\\Microsoft SDKs\\Windows Phone\\v7.1\\Icons\\dark` in a standard installation of the SDK.
-12. Choose the image file named appbar.back.rest.png, and choose  **Add**. The image is added to the project under the  **Images** node.
+12. Choose the image file named appbar.back.rest.png, and choose **Add**. The image is added to the project under the **Images**node.
     
   
-13. In  **Solution Explorer**, choose the image file you just added, and in the  **Properties Window** for the file, set the **Build Action** property for the image file to **Content**, and set the  **Copy to Output Directory** property to **Copy if newer**. 
+13. In **Solution Explorer**, choose the image file you just added, and in the **Properties Window**for the file, set the**Build Action**property for the image file to**Content**, and set the **Copy to Output Directory**property to**Copy if newer**. 
     
   
 14. Save the files. 
@@ -732,10 +726,10 @@ namespace SPListAppLocalStorage
 ### To add an ApplicationBar button to the Edit Form for saving an item as a draft
 
 
-1. In  **Solution Explorer**, choose the EditItemViewModel.cs file under the  **ViewModels** node in the project. Press F7 to open the file for editing.
+1. In **Solution Explorer**, choose the EditItemViewModel.cs file under the **ViewModels**node in the project. Press F7 to open the file for editing.
     
   
-2. Within the code block (demarcated by opening and closing braces) that implements the  **EditItemViewModel** class, add the following public method to the file.
+2. Within the code block (demarcated by opening and closing braces) that implements the **EditItemViewModel**class, add the following public method to the file.
     
   ```cs
   
@@ -745,12 +739,12 @@ public void SaveAsDraft()
 }
   ```
 
-3. In  **Solution Explorer**, under the  **Views** node in the project, double-click the EditForm.xaml file.
+3. In **Solution Explorer**, under the **Views**node in the project, double-click the EditForm.xaml file.
     
     The file is opened for editing in the designer. 
     
   
-4. In the XAML pane of the designer, add another button to the  `<shell:ApplicationBar>` tag (in addition to the existing **Submit** and **Cancel** buttons), as shown in the following XAML.
+4. In the XAML pane of the designer, add another button to the  `<shell:ApplicationBar>` tag (in addition to the existing**Submit**and**Cancel**buttons), as shown in the following XAML.
     
   ```
   
@@ -767,10 +761,10 @@ public void SaveAsDraft()
 </phone:PhoneApplicationPage.ApplicationBar>
   ```
 
-5. With the EditForm.xaml file chosen in  **Solution Explorer**, press F7 to open the associated code-behind file, EditForm.xaml.cs, for editing. 
+5. With the EditForm.xaml file chosen in **Solution Explorer**, press F7 to open the associated code-behind file, EditForm.xaml.cs, for editing. 
     
   
-6. Within the code block (demarcated by opening and closing braces) that implements the  **EditForm** partial class, add the following event handler to the file.
+6. Within the code block (demarcated by opening and closing braces) that implements the **EditForm**partial class, add the following event handler to the file.
     
   ```cs
   
@@ -787,12 +781,12 @@ private void OnSaveDraftButtonClick(object sender, EventArgs e)
 ### To add an ApplicationBar button to the List View Form to display all draft items
 
 
-1. In  **Solution Explorer**, under the  **Views** node, double-click the List.xaml file.
+1. In **Solution Explorer**, under the **Views**node, double-click the List.xaml file.
     
     The file is opened for editing in the designer. 
     
   
-2. In the XAML pane of the designer, add another button to the  **<shell:ApplicationBar>** tag (in addition to the existing **New** and **Refresh** buttons), as shown in the following XAML markup.
+2. In the XAML pane of the designer, add another button to the **<shell:ApplicationBar>**tag (in addition to the existing**New**and**Refresh**buttons), as shown in the following XAML markup.
     
   ```
   
@@ -809,28 +803,28 @@ private void OnSaveDraftButtonClick(object sender, EventArgs e)
 </phone:PhoneApplicationPage.ApplicationBar>
   ```
 
-3. Add an icon image to your project for the  **Drafts** button. In **Solution Explorer**, choose the  **Images** folder node in the project.
+3. Add an icon image to your project for the **Drafts**button. In**Solution Explorer**, choose the **Images**folder node in the project.
     
   
-4. On the  **Project** menu, choose **Add Existing Item**. 
+4. On the **Project**menu, choose**Add Existing Item**. 
     
   
 5. In the browser that opens, navigate to the folder in which the standard Windows Phone icon images were installed by the Windows Phone SDK 7.1. 
     
-    > [!Note]  
+    > [!NOTE]  
 > The images with a light foreground and a dark background are in  `%PROGRAMFILES%(x86)\\Microsoft SDKs\\Windows Phone\\v7.1\\Icons\\dark` in a standard installation of the SDK.
-6. Choose the image file named appbar.folder.rest.png, and then choose  **Add**. 
+6. Choose the image file named appbar.folder.rest.png, and then choose **Add**. 
     
-    The image is added is added to the project under the  **Images** node.
-    
-  
-7. In  **Solution Explorer**, choose the image file you just added and in the  **Properties Window**, set the  **Build Action** property for the image file to **Content** and set the **Copy to Output Directory** property to **Copy if newer**. 
+    The image is added is added to the project under the **Images**node.
     
   
-8. In  **Solution Explorer**, choose the List.xaml file under the  **Views** node and press F7. The associated code-behind file, List.xaml.cs, is opened for editing.
+7. In **Solution Explorer**, choose the image file you just added and in the **Properties Window**, set the **Build Action**property for the image file to**Content**and set the**Copy to Output Directory**property to**Copy if newer**. 
     
   
-9. Add the following event handler to the file, within the code block (demarcated by opening and closing braces) that implements the  **ListForm** partial class.
+8. In **Solution Explorer**, choose the List.xaml file under the **Views**node and press F7. The associated code-behind file, List.xaml.cs, is opened for editing.
+    
+  
+9. Add the following event handler to the file, within the code block (demarcated by opening and closing braces) that implements the **ListForm**partial class.
     
   ```cs
   
@@ -843,7 +837,7 @@ private void OnDraftsButtonClick(object sender, EventArgs e)
 10. Save all the files in the solution and press F6 to compile the solution. 
     
   
-If you start the project and deploy it to a Windows Phone Emulator, you see a  **View Drafts** button on the **ApplicationBar** of the List form (Figure 1), which brings up all list items stored as drafts.
+If you start the project and deploy it to a Windows Phone Emulator, you see a **View Drafts**button on the**ApplicationBar**of the List form (Figure 1), which brings up all list items stored as drafts.
   
     
     
@@ -861,7 +855,7 @@ If you start the project and deploy it to a Windows Phone Emulator, you see a  *
   
     
     
-At first, because no drafts are saved, the page to display drafts will be empty. Choose an item from the List form (to show the Display form (DisplayForm.xaml) for an item), and then choose the  **Edit** button to display the Edit form. If you should lose connectivity with the SharePoint Server, you can then choose the **Save Draft** button on the Edit Form (Figure 2) to save any changes you've made to the list item to isolated storage.
+At first, because no drafts are saved, the page to display drafts will be empty. Choose an item from the List form (to show the Display form (DisplayForm.xaml) for an item), and then choose the **Edit**button to display the Edit form. If you should lose connectivity with the SharePoint Server, you can then choose the**Save Draft**button on the Edit Form (Figure 2) to save any changes you've made to the list item to isolated storage.
   
     
     
@@ -879,7 +873,7 @@ At first, because no drafts are saved, the page to display drafts will be empty.
   
     
     
-When the server becomes available again, you can choose the  **View Drafts** button on the List form to display the Drafts page (Figure 3).
+When the server becomes available again, you can choose the **View Drafts**button on the List form to display the Drafts page (Figure 3).
   
     
     
@@ -897,7 +891,7 @@ When the server becomes available again, you can choose the  **View Drafts** but
   
     
     
-If you choose an item on the Drafts page, the Draft Item Edit form (DraftItemEditForm.xaml) is displayed (Figure 4) and you can make any additional changes, and then click the  **Submit** button to save the edited item to the server. At that point, the item is removed from isolated storage because it's no longer treated as a draft item after it's saved with its changes to the server.
+If you choose an item on the Drafts page, the Draft Item Edit form (DraftItemEditForm.xaml) is displayed (Figure 4) and you can make any additional changes, and then click the **Submit**button to save the edited item to the server. At that point, the item is removed from isolated storage because it's no longer treated as a draft item after it's saved with its changes to the server.
   
     
     

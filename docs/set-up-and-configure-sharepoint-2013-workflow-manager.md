@@ -7,12 +7,6 @@ ms.assetid: 4cd68a3e-9c3b-4fb9-bb66-e96cf0faec69
 
 # Set up and configure SharePoint 2013 Workflow Manager
 Find instructions for setting up and configuring Workflow Manager Client 1.0 and pairing it to function properly with SharePoint 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 Instructions for installing and configuring SharePoint 2013 workflow components are maintained on Microsoft TechNet:
   
     

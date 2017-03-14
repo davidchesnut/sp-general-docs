@@ -1,5 +1,5 @@
 ---
-title: How to: Create external event receivers
+title: How to Create external event receivers
 ms.prod: SHAREPOINT
 ms.assetid: c6d5f486-6247-47f9-9876-fab12f13342f
 ---
@@ -7,18 +7,18 @@ ms.assetid: c6d5f486-6247-47f9-9876-fab12f13342f
 
 # How to: Create external event receivers
 Learn the steps for creating external event receivers for on-premises installations of Business Connectivity Services (BCS) external lists. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 External event receivers are classes that enable SharePoint Add-ins to respond to events that occur to SharePoint items, such as lists or list items. For example, you can respond to list events, such as adding or removing a field; list item events, such as adding or removing a list item or attachment to a list item; or web events, such as adding or deleting a site or site collection. You can add a remote event receiver to an existing Visual Studio solution that contains an SharePoint Add-in. 
   
     
     
 
-This article accompanies the code sample  [SharePoint 2013: Create a remote event receiver for external data](http://code.msdn.microsoft.com/SharePoint-2013-Create-a-095c594c). It shows how to create all the components needed to configure and use external system event notifications. In this example, you will do the following: 
+This article accompanies the code sample  [SharePoint 2013: Create a remote event receiver for external data](http://code.msdn.microsoft.com/SharePoint-2013-Create-a-095c594c). It shows how to create all the components needed to configure and use external system event notifications. 
+In this example, you will do the following: 
+  
+    
+    
+
+
 1. Create an external system based on the Northwind sample database 
     
   
@@ -67,16 +67,16 @@ The biggest part of the configuration actually happens on the external system. F
     
     
 
--  **Subscription store:** A table that contains information about the subscribers that want to be notified of changes to the external data.
+- **Subscription store:**A table that contains information about the subscribers that want to be notified of changes to the external data.
     
   
--  **Changes store:** A table that is used to store the changes to the data items. It functions as temporary storage only because the polling service deletes the item in the table when notifications are sent back to subscribers in SharePoint.
+- **Changes store:**A table that is used to store the changes to the data items. It functions as temporary storage only because the polling service deletes the item in the table when notifications are sent back to subscribers in SharePoint.
     
   
--  **Polling service:** Required in this scenario as a means of checking when data has been changed and submitted to the change table. The polling service queries the change table and assembles a notification package that is sent to the SharePoint delivery address (REST endpoint) stored in the subscription store.
+- **Polling service:**Required in this scenario as a means of checking when data has been changed and submitted to the change table. The polling service queries the change table and assembles a notification package that is sent to the SharePoint delivery address (REST endpoint) stored in the subscription store.
     
   
--  **OData WCF Data Service:** To expose the data from the external system's database, you have to create a WCF service. This service, running on Internet Information Services (IIS), provides the RESTful interface and OData feed that is needed for this scenario.
+- **OData WCF Data Service:**To expose the data from the external system's database, you have to create a WCF service. This service, running on Internet Information Services (IIS), provides the RESTful interface and OData feed that is needed for this scenario.
     
   
 
@@ -252,7 +252,7 @@ GO
 ```
 
 
-> [!Note]  
+> [!NOTE]  
 > If you are using your own custom stored procedures as defined in your BDC model, you might also want to create the delete and update triggers. The additional triggers are not be covered as part of this scenario. 
   
     
@@ -288,7 +288,7 @@ GO
 
 ```
 
-The  **SubscribeEntity** stored procedure will create a record in the subscription store.
+The **SubscribeEntity**stored procedure will create a record in the subscription store.
   
     
     
@@ -335,7 +335,7 @@ GO
 ## Create the OData Service
 <a name="bkmk_CreatingTheODataService"> </a>
 
-The OData feed is hosted inside a  **WCF Data Service**. This WCF service is then hosted by IIS in a web application. 
+The OData feed is hosted inside a **WCF Data Service**. This WCF service is then hosted by IIS in a web application. 
   
     
     
@@ -347,13 +347,13 @@ The following steps create a new ASP.NET WCF data service.
 ### To create the WCF Data Service application
 
 
-1. In Visual Studio 2012, on the  **File** menu, choose **New**,  **Project**. 
+1. In Visual Studio 2012, on the **File**menu, choose**New**, **Project**. 
     
   
-2. In the  **New Project** dialog box, under the Visual C# node, choose the **Web** template, and then choose **ASP.NET Web Application**. 
+2. In the **New Project**dialog box, under the Visual C# node, choose the**Web**template, and then choose**ASP.NET Web Application**. 
     
   
-3. Enter NorthwindService as the name of the project, and then choose **OK**. 
+3. Enter NorthwindService as the name of the project, and then choose**OK**. 
     
   
 Next, using the Visual Studio wizard, you discover the schema of the data source and use it to create an ADO.NET entity data model. 
@@ -364,32 +364,32 @@ Next, using the Visual Studio wizard, you discover the schema of the data source
 ### To define the data model
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the ASP.NET project, and choose  **Add New Item**. 
+1. In **Solution Explorer**, open the shortcut menu for the ASP.NET project, and choose **Add New Item**. 
     
   
-2. In the  **Add New Item** dialog box, choose the **Data** template, and then choose **ADO.NET Entity Data Model**. 
+2. In the **Add New Item**dialog box, choose the**Data**template, and then choose**ADO.NET Entity Data Model**. 
     
   
 3. For the name of the data model, enter Northwind.edmx. 
     
   
-4. In the Entity Data Model Wizard, choose  **Generate from Database**, and then choose  **Next**. 
+4. In the Entity Data Model Wizard, choose **Generate from Database**, and then choose **Next**. 
     
   
 5. Connect the data model to the database by doing one of the following steps: 
     
-1. If you do not have a database connection already configured, choose  **New Connection** and create a new connection. For more information, see [How to: Create Connections to SQL Server Databases](http://msdn.microsoft.com/library/360c340d-e5a6-4a7e-a569-e95d500be43d%28Office.15%29.aspx). This SQL Server instance must have the Northwind sample database attached. Choose  **Next**. 
+1. If you do not have a database connection already configured, choose **New Connection**and create a new connection. For more information, see [How to: Create Connections to SQL Server Databases](http://msdn.microsoft.com/library/360c340d-e5a6-4a7e-a569-e95d500be43d%28Office.15%29.aspx). This SQL Server instance must have the Northwind sample database attached. Choose **Next**. 
     
     -or- 
     
   
-2. If you have a database connection already configured to connect to the Northwind database, choose that connection from the list of connections, and then choose  **Next**. 
+2. If you have a database connection already configured to connect to the Northwind database, choose that connection from the list of connections, and then choose **Next**. 
     
   
 6. On the final page of the wizard, select the check boxes for all tables in the database, and clear the check boxes for views and stored procedures. 
     
   
-7. Choose the  **Finish** button to close the wizard.
+7. Choose the **Finish**button to close the wizard.
     
   
 In the next step, you create the actual service that is hosted by IIS that will provide the means to access external data through Representational State Transfer (REST). 
@@ -400,10 +400,10 @@ In the next step, you create the actual service that is hosted by IIS that will 
 ### To create the WCF Data Service
 
 
-1. In  **Solution Explorer**, open the shortcut menu for your ASP.NET project, and choose  **Add New Item**. 
+1. In **Solution Explorer**, open the shortcut menu for your ASP.NET project, and choose **Add New Item**. 
     
   
-2. In the  **Add New Item** dialog box, choose **WCF Data Service**. 
+2. In the **Add New Item**dialog box, choose**WCF Data Service**. 
     
   
 3. For the name of the service, enter Northwind. 
@@ -436,7 +436,7 @@ The WCF service can also be coded with a means to handle the Subscribe and Unsub
   
     
     
- **Subscribe**: The Subscribe operation takes the request sent by SharePoint and retrieves the delivery address the event type and the entity. It also has to generate a  **subscriptionId** and then record all of these into the database table.
+**Subscribe**: The Subscribe operation takes the request sent by SharePoint and retrieves the delivery address the event type and the entity. It also has to generate a **subscriptionId**and then record all of these into the database table.
   
     
     
@@ -486,7 +486,7 @@ public string Subscribe(string deliveryUrl, string eventType)
 ```
 
 
-> [!Note]  
+> [!NOTE]  
 > If SQL Server is set up for Windows authentication, it will try to authenticate the request with the App Pool identity. Make sure that the account configured in the App Pool has rights to read and write in the database. 
   
     
@@ -511,7 +511,7 @@ Next, you create a new Windows Service project that will be registered on the WC
 1. Open Visual Studio 2012. 
     
   
-2. Create a new project using the Windows Service template, name the project PollingService, and choose the  **OK** button.
+2. Create a new project using the Windows Service template, name the project PollingService, and choose the **OK**button.
     
   
 3. When the project is created, open the PollingService.cs file in code view. 
@@ -632,7 +632,7 @@ The next step is to build an executable file that can be added to the running se
 1. Press F5 to build your project. 
     
   
-2. Open the  **Command Prompt for VS2012**. 
+2. Open the **Command Prompt for VS2012**. 
     
   
 3. At the prompt, navigate to your project output location. 
@@ -656,17 +656,17 @@ To complete the whole system, the following components are required on the serve
     
     
 
--  **External content type:** The external content type is basically an XML definition of the external data source. For this scenario, you will use the new autogeneration tools in Visual Studio 2012 to discover the data source and create the external content type automatically.
+- **External content type:**The external content type is basically an XML definition of the external data source. For this scenario, you will use the new autogeneration tools in Visual Studio 2012 to discover the data source and create the external content type automatically.
     
   
--  **External event receiver:** The remote or external event receiver is the thing that makes actions on external data changes possible in SharePoint 2013. You can create event receivers for external lists and for entities.
+- **External event receiver:**The remote or external event receiver is the thing that makes actions on external data changes possible in SharePoint 2013. You can create event receivers for external lists and for entities.
     
     An event receiver that is created for an external list is similar to other event receivers for SharePoint lists. You create the code and attach it to the list. When an action is performed on the data that is represented by the list, the event receiver executes. 
     
     An event receiver for entities is executed just like a list-based event receiver, except it doesn't need to be attached to a list. It receives notifications the same way, but it doesn't need the interface that is associated with the list-based example. The benefit of this is that you can intercept the notifications programmatically and create code to perform some action. In this scenario, that action is to create a new record in the notifications list 
     
   
--  **Notifications list:** The notifications list is a simple SharePoint list that is used to record notifications received from the external system. For each new record added to the external system, a record is created in the notifications list.
+- **Notifications list:**The notifications list is a simple SharePoint list that is used to record notifications received from the external system. For each new record added to the external system, a record is created in the notifications list.
     
   
 
@@ -681,7 +681,7 @@ Now that you have the external system set up, it's time to move on to creating t
 ### To create a new Visual Studio 2012 project
 
 
-1. In Visual Studio 2012, choose  **New Project**. 
+1. In Visual Studio 2012, choose **New Project**. 
     
   
 2. Choose the SharePoint app project template. 
@@ -695,9 +695,9 @@ Office Developer Tools for Visual Studio 2013 added an autogeneration wizard tha
 ### To add a new external content type
 
 
-- In  **Solution Explorer**, open the shortcut menu for the project, and choose  **Add**,  **Content Types for an External Data Source**. 
+- In **Solution Explorer**, open the shortcut menu for the project, and choose **Add**, **Content Types for an External Data Source**. 
     
-    This starts the  **SharePoint Customization Wizard**, which is used to build the external content type automatically. 
+    This starts the **SharePoint Customization Wizard**, which is used to build the external content type automatically. 
     
     For more information about how to create external content types, see  [How to: Create an external content type from an OData source in SharePoint 2013](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint-2013.md). 
     
@@ -710,10 +710,10 @@ You will now modify the XML that was generated in the previous step to add a met
 ### To add the Subscribe method to the external content type XML
 
 
-1. In  **Solution Explorer**, find the new node named  **External Content Types**. 
+1. In **Solution Explorer**, find the new node named **External Content Types**. 
     
   
-2. Find the  **Customers.ect** file, and open it with an XML editor.
+2. Find the **Customers.ect**file, and open it with an XML editor.
     
   
 3. Scroll down to the bottom of the page, and paste the following method into the  `<Methods>` section.
@@ -810,7 +810,7 @@ You will now add client code to allow your list to subscribe to event notificati
 ### To add code to the App.js file to initiate the subscription
 
 
-- In the Scripts folder of your SharePoint Add-in project, open the  **App.js** file. Paste the following method into the file.
+- In the Scripts folder of your SharePoint Add-in project, open the **App.js**file. Paste the following method into the file.
     
   ```
   
@@ -826,7 +826,7 @@ function SubscribeEntity()
 }
   ```
 
-To register the event receiver with this script, you have to create a button on the Default.aspx page in your project and call the  **SubscribeEntity()** from the **onclick()** method.
+To register the event receiver with this script, you have to create a button on the Default.aspx page in your project and call the **SubscribeEntity()**from the**onclick()**method.
   
     
     
@@ -872,11 +872,11 @@ function EnableEventing_Clicked()
 }
 ```
 
-Just like with  **Subscribe**, you will add a button to the page that will turn on the feature. 
+Just like with **Subscribe**, you will add a button to the page that will turn on the feature. 
   
     
     
-Add the following HTML to the Default.aspx page, right below the  **Subscribe** button.
+Add the following HTML to the Default.aspx page, right below the **Subscribe**button.
   
     
     
@@ -896,13 +896,13 @@ Next, for this scenario you must add a notifications list that will show the not
 ### To add the notifications list
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the project name, and choose  **Add**. 
+1. In **Solution Explorer**, open the shortcut menu for the project name, and choose **Add**. 
     
   
-2. Choose the  **List** template, and name the listNotificationList. 
+2. Choose the **List**template, and name the listNotificationList. 
     
   
-To mimic an event receiver that is registered with SharePoint in the global assembly cache, the sample provides a console application that will start listening for changes. When it receives a notification, it adds a list item to the  **NotificationList**. 
+To mimic an event receiver that is registered with SharePoint in the global assembly cache, the sample provides a console application that will start listening for changes. When it receives a notification, it adds a list item to the **NotificationList**. 
   
     
     
@@ -910,13 +910,13 @@ To mimic an event receiver that is registered with SharePoint in the global asse
 ### To start the command-line event receiver
 
 
-1. Open the  **RemoteEventReceiverConsoleApp**. 
+1. Open the **RemoteEventReceiverConsoleApp**. 
     
   
-2. Open the  **Program.cs** file, and change the name of your local computer (or the computer where the event receiver will be running).
+2. Open the **Program.cs**file, and change the name of your local computer (or the computer where the event receiver will be running).
     
   
-3. Click the  **Start** button in Visual Studio to run the console application.
+3. Click the **Start**button in Visual Studio to run the console application.
     
     A command window opens, which indicates that the application has compiled correctly, and it is listening for change notifications from the external system. Leave this window open during this test. 
     
@@ -940,7 +940,7 @@ Now you can see the app in action.
 1. Browse around the app to see the different lists that represent the data in the external system. 
     
   
-2. Click the  **Customers** list.
+2. Click the **Customers**list.
     
   
 3. Add a new customer. 

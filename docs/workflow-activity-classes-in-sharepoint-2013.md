@@ -7,19 +7,13 @@ ms.assetid: 70d5ca8d-520d-40a9-b24e-52bb31bd6c22
 
 # Workflow activity classes in SharePoint 2013
 Provides a summary of the SharePoint workflow activity classes that are available in SharePoint 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 The palette of activity classes has been revised for SharePoint 2013. Table 1 lists the current catalog of 49 available activities grouped by their respective activity categories. 
   
     
     
 
 
-> [!Note]  
+> [!NOTE]  
 > In future releases, the activities listed in this table will provide links to the API reference documentation for their respective managed classes. 
   
     
@@ -51,15 +45,15 @@ The palette of activity classes has been revised for SharePoint 2013. Table 1 li
 |DeleteListItem |List |Deletes a list item. |
 |LookupSPList |List |Returns information about the list that corresponds to the specified list ID. |
 |LookupSPListItem |List |Returns properties of the specified list item. |
-|LookupSPListItemBooleanProperty |List |Returns value of specified list item property as  **Boolean**. |
-|LookupSPListItemDateTimeProperty |List |Returns value of specified list item property as  **DateTime**. |
-|LookupSPListItemDoubleProperty |List |Returns value of specified list item property as  **Double**. |
-|LookupSPListItemDynamicValueProperty |List |Returns value of specified list item property as  **DynamicValue**. |
+|LookupSPListItemBooleanProperty |List |Returns value of specified list item property as **Boolean**. |
+|LookupSPListItemDateTimeProperty |List |Returns value of specified list item property as **DateTime**. |
+|LookupSPListItemDoubleProperty |List |Returns value of specified list item property as **Double**. |
+|LookupSPListItemDynamicValueProperty |List |Returns value of specified list item property as **DynamicValue**. |
 |LookupSPListItemGuid |List |Returns GUID property of the first list item that matches specified filter criteria of property name and property value. |
-|LookupSPListItemInt32Property |List |Returns value of specified list item property as  **Int32**. |
-|LookupSPListItemProperty |List |Returns value of specified list item property as  **Object**. |
-|LookupSPListItemStringProperty |List |Returns value of specified list item property as  **String**. |
-|LookupSPListProperty |List |Returns list properties as  **DynamicValue**. |
+|LookupSPListItemInt32Property |List |Returns value of specified list item property as **Int32**. |
+|LookupSPListItemProperty |List |Returns value of specified list item property as **Object**. |
+|LookupSPListItemStringProperty |List |Returns value of specified list item property as **String**. |
+|LookupSPListProperty |List |Returns list properties as **DynamicValue**. |
 |UndoCheckOutItem |List |Undoes checkout of the specified list item. |
 |UpdateListItem |List |Updates a list item. |
 |CompositeTask |Task |Runs a task process - assigns multiple tasks to multiple people in series or parallel, waits for tasks to complete, and calculates aggregate outcome. |

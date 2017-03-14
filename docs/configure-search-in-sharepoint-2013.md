@@ -7,12 +7,6 @@ ms.assetid: e447127c-2b11-4d65-b46e-01a18cdcdee5
 
 # Configure search in SharePoint 2013
 Learn about the two types of customization in SharePoint Server 2013 search: adding a custom word breaker and adding a custom step to modify managed properties for crawled items during content processing. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 |||
 |:-----|:-----|
 |||

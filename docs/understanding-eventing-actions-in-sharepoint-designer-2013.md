@@ -1,18 +1,12 @@
 ---
 title: Understanding Eventing Actions in SharePoint Designer 2013
-ms.prod: SHAREPOINTDESIGNER
+ms.prod: SHAREPOINT
 ms.assetid: fe4ad8cf-2c6f-488d-8b33-6bf4357018ac
 ---
 
 
 # Understanding Eventing Actions in SharePoint Designer 2013
 Learn to use Eventing Actions in SharePoint Designer 2013. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Designer 2013* 
 ## Overview of Eventing Actions in SharePoint Designer 2013
 <a name="section1"> </a>
 
@@ -21,22 +15,22 @@ A SharePoint workflow can subscribe to be notified when an item is added or chan
     
     
 
--  **Wait for Event in List Item:** Used to wait for a new item to be created or an item to be changed.
+- **Wait for Event in List Item:**Used to wait for a new item to be created or an item to be changed.
     
   
--  **Wait for Project Event:** Used to wait for a project to be checked in, committed, or submitted.
+- **Wait for Project Event:**Used to wait for a project to be checked in, committed, or submitted.
     
   
--  **Wait for Field Change in Current Item:** Used to wait for a field to be changed in the current item.
+- **Wait for Field Change in Current Item:**Used to wait for a field to be changed in the current item.
     
   
-The Eventing actions are accessed in the  **Action** drop-down menu of the SharePoint Designer 2013 ribbon as shown in the figures.
+The Eventing actions are accessed in the **Action**drop-down menu of the SharePoint Designer 2013 ribbon as shown in the figures.
   
     
     
 
-> [!Note]  
-> The  **Project Web App Actions** are only available when working with a Project Web App site.
+> [!NOTE]  
+> The **Project Web App Actions**are only available when working with a Project Web App site.
   
     
     
@@ -106,7 +100,7 @@ The Eventing actions are located on the Actions drop-down menu in the SharePoint
 
 ### Wait for Event in List Item
 
-The  **Wait for Event in List Item** action contains two editable regions, as shown in the figure.
+The **Wait for Event in List Item**action contains two editable regions, as shown in the figure.
   
     
     
@@ -137,13 +131,13 @@ The two editable regions are:
     
     
 
--  **This item event:** The list and event that will be monitored.
+- **This item event:**The list and event that will be monitored.
     
   
--  **Output variable:** A variable in which to save the GUID of the item from which the event originated. Items have both an ID and a GUID field. The ID is unique to the list and a GUID is globally unique. For example, the ID of the first item in the list will be the number 1 and the ID of the second item will be the number 2. The GUID is globally unique and in the format of a 128-bit value consisting of 8 hexadecimal digits, followed by three groups of 4 hexadecimal digits each, followed by one group of 12 hexadecimal digits. An example of a GUID is: 6B29FC40-CA47-1067-B31D-00DD010662DA. The **Wait for Event in List Item** action retrieves the GUID.
+- **Output variable:**A variable in which to save the GUID of the item from which the event originated. Items have both an ID and a GUID field. The ID is unique to the list and a GUID is globally unique. For example, the ID of the first item in the list will be the number 1 and the ID of the second item will be the number 2. The GUID is globally unique and in the format of a 128-bit value consisting of 8 hexadecimal digits, followed by three groups of 4 hexadecimal digits each, followed by one group of 12 hexadecimal digits. An example of a GUID is: 6B29FC40-CA47-1067-B31D-00DD010662DA. The**Wait for Event in List Item**action retrieves the GUID.
     
   
-Clicking the  **this item event** link opens the **Choose List Item Event** dialog box, as shown in the figure.
+Clicking the **this item event**link opens the**Choose List Item Event**dialog box, as shown in the figure.
   
     
     
@@ -169,14 +163,14 @@ Clicking the  **this item event** link opens the **Choose List Item Event** dial
   
     
     
-The  **Event** drop-down list corresponds to the type of event. The options are to wait for an item to be added to a list or to wait for an item to be changed in a list. The **List** drop-down corresponds to the list that is monitored.
+The **Event**drop-down list corresponds to the type of event. The options are to wait for an item to be added to a list or to wait for an item to be changed in a list. The**List**drop-down corresponds to the list that is monitored.
   
     
     
 
 ### Wait for Project Event
 
-The  **Wait for Project Event** action contains one editable region, as shown in the figure.
+The **Wait for Project Event**action contains one editable region, as shown in the figure.
   
     
     
@@ -207,10 +201,10 @@ The editable region is:
     
     
 
--  **This project event:** The project event that the workflow should wait for.
+- **This project event:**The project event that the workflow should wait for.
     
   
-The  **This project event** drop-down includes three project events to choose from. These include waiting for the project to be checked in, committed, or submitted.
+The **This project event**drop-down includes three project events to choose from. These include waiting for the project to be checked in, committed, or submitted.
   
     
     
@@ -221,7 +215,7 @@ Once an event has occurred the workflow will continue to process.
 
 ### Wait for Field Change in Current Item
 
-The  **Wait for Field Change in Current Item** action contains two editable regions, as shown in the figure.
+The **Wait for Field Change in Current Item**action contains two editable regions, as shown in the figure.
   
     
     
@@ -252,10 +246,10 @@ The editable regions are:
     
     
 
--  **Field:** The field in the item that should be monitored for change.
+- **Field:**The field in the item that should be monitored for change.
     
   
--  **Value:** The value that the field should equal in order for the workflow to proceed.
+- **Value:**The value that the field should equal in order for the workflow to proceed.
     
   
 Once a field has changed the workflow continues. 

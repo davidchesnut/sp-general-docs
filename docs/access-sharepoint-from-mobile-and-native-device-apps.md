@@ -7,20 +7,14 @@ ms.assetid: 42014171-5ee5-421d-9cde-413efc3aecef
 
 # Access SharePoint from mobile and native device apps
 Learn how to access SharePoint from mobile apps and other native device apps, and from external web applications. 
- **Last modified:** April 25, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Online | SharePoint Server 2013* 
 SharePoint Add-ins, farm solutions, and "no code" sandboxed solutions are all run from within SharePoint, but apps on other platforms can also access SharePoint client APIs. 
   
     
     
 
 
-> [!Important]  
-> To test and debug on any platform, you need a  **developer account on Office 365**. More info: [Set up a development environment for SharePoint Add-ins on Office 365](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx) or [Create a developer site on an existing Office 365 subscription](http://msdn.microsoft.com/library/2ec857d5-dc6f-4cf6-ba45-adc845ef2a25%28Office.15%29.aspx). 
+> [!IMPORTANT]  
+> To test and debug on any platform, you need a **developer account on Office 365**. More info: [Set up a development environment for SharePoint Add-ins on Office 365](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx) or [Create a developer site on an existing Office 365 subscription](http://msdn.microsoft.com/library/2ec857d5-dc6f-4cf6-ba45-adc845ef2a25%28Office.15%29.aspx). 
   
     
     
@@ -28,7 +22,7 @@ SharePoint Add-ins, farm solutions, and "no code" sandboxed solutions are all ru
 
 ## Non-Microsoft mobile and native device apps
 
-Non-Microsoft device apps, including mobile apps,  **use SharePoint REST/OData APIs for CRUD operations on SharePoint data**.
+Non-Microsoft device apps, including mobile apps, **use SharePoint REST/OData APIs for CRUD operations on SharePoint data**.
   
     
     
@@ -74,11 +68,11 @@ Web applications that don't start from SharePoint are not strictly "SharePoint A
   
     
     
-You can build these apps on the ASP.NET platform or a non-Microsoft stack. If you build your web application on a non-Microsoft stack, it does CRUD operations with the REST/OData APIs, just as a non-Microsoft device app. If you build it on ASP.NET it  **can use the SharePoint CSOM or the REST/OData APIs**.
+You can build these apps on the ASP.NET platform or a non-Microsoft stack. If you build your web application on a non-Microsoft stack, it does CRUD operations with the REST/OData APIs, just as a non-Microsoft device app. If you build it on ASP.NET it **can use the SharePoint CSOM or the REST/OData APIs**.
   
     
     
-These apps  **gain authorized access to SharePoint data by using access tokens** that are issued by the Azure Control Service (ACS) in compliance with the OAuth Authentication Code flow. For more, see [Authorization Code OAuth flow for SharePoint Add-ins](http://msdn.microsoft.com/library/e89e91c7-ea39-49b9-af5a-7f047a7e2ab7%28Office.15%29.aspx). 
+These apps **gain authorized access to SharePoint data by using access tokens**that are issued by the Azure Control Service (ACS) in compliance with the OAuth Authentication Code flow. For more, see [Authorization Code OAuth flow for SharePoint Add-ins](http://msdn.microsoft.com/library/e89e91c7-ea39-49b9-af5a-7f047a7e2ab7%28Office.15%29.aspx). 
   
     
     

@@ -1,27 +1,19 @@
 ---
-title: How to: Refresh Data
+title: How to Refresh Data
 keywords: how to,howdoi,howto
 f1_keywords:
 - how to,howdoi,howto
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: 6cfd89ff-846e-486b-8f73-a109016813ab
 ---
 
 
 # How to: Refresh Data
 
- **Last modified:** July 20, 2011
+This example shows how to retrieve updated data from external data sources for the open workbook by using the **Refresh**method. The Excel Web Services signature for the**Refresh**method is as follows:
   
     
     
-
- * **Applies to:** SharePoint Server 2013* 
-This example shows how to retrieve updated data from external data sources for the open workbook by using the  **Refresh** method. The Excel Web Services signature for the **Refresh** method is as follows:
-  
-    
-    
-
-
 
 
 ```cs
@@ -30,14 +22,12 @@ public Status[] Refresh (string sessionId, string connectionName)
 ```
 
 
-
-
 ```VB.net
 Public Function Refresh(ByVal sessionId As String, ByVal connectionName As String) As Status()
 End Function
 ```
 
-If you link directly to Microsoft.Office.Excel.Server.WebServices.dll, the signature for the  **Refresh** method is:
+If you link directly to Microsoft.Office.Excel.Server.WebServices.dll, the signature for the **Refresh**method is:
 
 
 ```cs
@@ -55,10 +45,10 @@ Public Sub Refresh(ByVal sessionId As String, ByVal connectionName As String, <S
 End Sub
 ```
 
-The  `connectionName` argument refers to the connection name in a Microsoft Office Excel 2007 workbook.You can use the  **Refresh** method to refresh a single data connection in the workbook, or to refresh all connections. This is useful particularly when the connections are created without refresh-on-open functionality.When you refresh a connection, the data and all objects using the connection will be refreshed. To refresh all available connections in the workbook, you pass in an empty connection string or  **null** for the connection name argument.The refresh operations will be attempted regardless of the type of authentication used, without any further confirmation or prompt. For more information about the  **Refresh** method, see the Excel Web Services reference documentation.
+The  `connectionName` argument refers to the connection name in a Microsoft Office Excel 2007 workbook.You can use the **Refresh**method to refresh a single data connection in the workbook, or to refresh all connections. This is useful particularly when the connections are created without refresh-on-open functionality.When you refresh a connection, the data and all objects using the connection will be refreshed. To refresh all available connections in the workbook, you pass in an empty connection string or **null**for the connection name argument.The refresh operations will be attempted regardless of the type of authentication used, without any further confirmation or prompt. For more information about the **Refresh**method, see the Excel Web Services reference documentation.
 ## Example
 
-The following code sample shows how to call the  **Refresh** method using Excel Web Services. The connection name in this example is "MyInventoryConnection":
+The following code sample shows how to call the **Refresh**method using Excel Web Services. The connection name in this example is "MyInventoryConnection":
   
     
     

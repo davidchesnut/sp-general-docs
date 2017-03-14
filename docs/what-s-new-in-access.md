@@ -7,12 +7,6 @@ ms.assetid: 625bc1d0-55db-4420-a02e-aee04028b215
 
 # What's new in Access
 Learn about the features in Access 2013 makes it easy to create, deploy, and manage collaborative web-based applications on premise or in the cloud.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** Access 2013 | SharePoint Server 2013* 
 ## Introduction
 <a name="SP15_access15overview_Introduction"> </a>
 

@@ -1,5 +1,5 @@
 ---
-title: How to: Follow people by using the JavaScript object model in SharePoint 2013
+title: How to Follow people by using the JavaScript object model in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 2643c286-47c9-4a7a-9273-7474394477d6
 ---
@@ -7,12 +7,6 @@ ms.assetid: 2643c286-47c9-4a7a-9273-7474394477d6
 
 # How to: Follow people by using the JavaScript object model in SharePoint 2013
 Learn how to work with Following People features by using the SharePoint Server 2013 JavaScript object model. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## Why use Following People features in SharePoint Server 2013?
 <a name="bk_FollowingPeopleFeatures"> </a>
 
@@ -21,7 +15,7 @@ In SharePoint Server 2013, Following People features help users to stay connecte
     
     
 
-> [!Note]  
+> [!NOTE]  
 >  [SocialFollowingManager](http://msdn.microsoft.com/library/9ee1c0c0-b864-f0c3-f0cb-4dd4f1870dfa%28Office.15%29.aspx) is the recommended API to use for following people and content. However, the [PeopleManager](http://msdn.microsoft.com/library/985fd2df-0e31-6ece-b846-ba2ccb156d00%28Office.15%29.aspx) object contains additional functionality for following people, such as the [amIFollowedBy](http://msdn.microsoft.com/library/3641c469-0063-054d-355d-e56697cb08ae%28Office.15%29.aspx) method and methods that obtain the following status of other users.
   
     
@@ -45,7 +39,7 @@ To create the farm solution that uses the JavaScript object model to work with F
 - Office Developer Tools for Visual Studio 2012 
     
   
--  **Full Control** access permissions to the User Profile service application for the logged-on user
+- **Full Control**access permissions to the User Profile service application for the logged-on user
     
   
 - Local administrator permissions for the logged-on user 
@@ -56,32 +50,32 @@ To create the farm solution that uses the JavaScript object model to work with F
 <a name="bk_CreateSolution"> </a>
 
 
-1. Run Visual Studio as administrator, and choose  **File**,  **New**,  **Project**. 
+1. Run Visual Studio as administrator, and choose **File**, **New**, **Project**. 
     
   
-2. In the  **New Project** dialog box, choose **.NET Framework 4.5** from the drop-down list at the top of the dialog box.
+2. In the **New Project**dialog box, choose**.NET Framework 4.5**from the drop-down list at the top of the dialog box.
     
   
-3. In the  **Templates** list, expand **Office/SharePoint**, choose  **SharePoint Solutions**, and then choose the  **SharePoint 2013 - Empty Project** template.
+3. In the **Templates**list, expand**Office/SharePoint**, choose **SharePoint Solutions**, and then choose the **SharePoint 2013 - Empty Project**template.
     
   
-4. Name the project FollowPeopleJSOM, and then choose the  **OK** button.
+4. Name the project FollowPeopleJSOM, and then choose the **OK**button.
     
   
-5. In the  **SharePoint Customization Wizard** dialog box, choose **Deploy as a farm solution**, and then choose the  **Finish** button.
+5. In the **SharePoint Customization Wizard**dialog box, choose**Deploy as a farm solution**, and then choose the **Finish**button.
     
   
-6. In  **Solution Explorer**, open the shortcut menu for the  **FollowPeopleJSOM** project, and then add a SharePoint "Layouts" mapped folder.
+6. In **Solution Explorer**, open the shortcut menu for the **FollowPeopleJSOM**project, and then add a SharePoint "Layouts" mapped folder.
     
   
-7. In the  **Layouts** folder, open the shortcut menu for the **FollowPeopleJSOM** folder, and then add a new SharePoint application page namedFollowPeople.aspx. 
+7. In the **Layouts**folder, open the shortcut menu for the**FollowPeopleJSOM**folder, and then add a new SharePoint application page namedFollowPeople.aspx. 
     
-    > [!Note]  
+    > [!NOTE]  
 > The code examples in this article define custom code in the page markup but do not use the code-behind class that Visual Studio creates for the page. 
-8. Open the shortcut menu for the FollowPeople.aspx page, and then choose  **Set as Startup Item**. 
+8. Open the shortcut menu for the FollowPeople.aspx page, and then choose **Set as Startup Item**. 
     
   
-9. In the markup of the FollowPeople.aspx file, paste the following code between the "Main"  **asp:Content** tags. This code defines controls and script references.
+9. In the markup of the FollowPeople.aspx file, paste the following code between the "Main" **asp:Content**tags. This code defines controls and script references.
     
   ```HTML
   
@@ -102,9 +96,9 @@ To create the farm solution that uses the JavaScript object model to work with F
   ```
 
 
-    > [!Note]  
+    > [!NOTE]  
 > The "Get followers and followed people" example doesn't use the button control or the form digest control, which is only required for operations that update server content. A form digest generates a message digest used for security validation. 
-10. Replace the comment between the  **script** tags with the code example from one of the following scenarios:
+10. Replace the comment between the **script**tags with the code example from one of the following scenarios:
     
   -  [Start or stop following people](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint-2013.md#bk_FollowPeople)
     
@@ -112,7 +106,7 @@ To create the farm solution that uses the JavaScript object model to work with F
   -  [Get followers and followed people](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint-2013.md#bk_GetFollowers)
     
   
-11. To test the solution, on the menu bar, choose  **Debug**,  **Start Debugging**. 
+11. To test the solution, on the menu bar, choose **Debug**, **Start Debugging**. 
     
   
 
@@ -137,8 +131,8 @@ The following code example makes the current user start following or stop follow
     
   
 
-> [!Note]  
-> Paste the following code between the  **script** tags that you added in the [Create a farm solution and application page](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint-2013.md#bk_CreateSolution) procedure. Then, change the placeholder value for the **targetUser** variable before you run the code.
+> [!NOTE]  
+> Paste the following code between the **script**tags that you added in the [Create a farm solution and application page](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint-2013.md#bk_CreateSolution) procedure. Then, change the placeholder value for the**targetUser**variable before you run the code.
   
     
     
@@ -226,15 +220,15 @@ The following code example gets the people who the current user is following and
 - Get the people who the current user is following by using the  [getFollowed](http://msdn.microsoft.com/library/432a7cec-6add-fdb1-a79f-a93414ee8cd3%28Office.15%29.aspx) method.
     
   
-- Get the people who are following the current user by using the  [getFollowers](http://msdn.microsoft.com/library/ae4a944b-c043-05fb-c74b-101d2ce4a813%28Office.15%29.aspx) method and passing **1** to represent **User** actor types.
+- Get the people who are following the current user by using the  [getFollowers](http://msdn.microsoft.com/library/ae4a944b-c043-05fb-c74b-101d2ce4a813%28Office.15%29.aspx) method and passing**1**to represent**User**actor types.
     
   
 - Iterate through the groups of people and get each person's display name, personal site URI, and picture URI. 
     
   
 
-> [!Note]  
-> Paste the following code between the  **script** tags that you added in the [Create a farm solution and application page](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint-2013.md#bk_CreateSolution) procedure.
+> [!NOTE]  
+> Paste the following code between the **script**tags that you added in the [Create a farm solution and application page](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint-2013.md#bk_CreateSolution) procedure.
   
     
     

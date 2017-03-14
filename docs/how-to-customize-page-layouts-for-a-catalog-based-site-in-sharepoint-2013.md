@@ -1,5 +1,5 @@
 ---
-title: How to: Customize page layouts for a catalog-based site in SharePoint 2013
+title: How to Customize page layouts for a catalog-based site in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 21d8db99-73b3-4429-b6cb-04e375af9f55
 ---
@@ -7,12 +7,6 @@ ms.assetid: 21d8db99-73b3-4429-b6cb-04e375af9f55
 
 # How to: Customize page layouts for a catalog-based site in SharePoint 2013
 Learn how to create and customize category page and catalog-item page layouts for a SharePoint Server 2013 cross-site publishing site. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Online | SharePoint Server 2013* 
 ## Prerequisites for creating and customizing page layouts for a catalog-based site
 <a name="bk_prereqs"> </a>
 
@@ -42,7 +36,7 @@ Table 1 lists useful articles that can help you understand the concepts and step
 **Table 1. Core concepts for creating and customizing page layouts for a catalog-based site**
 
 
-|**Article title **|**Description **|
+|**Article title**|**Description**|
 |:-----|:-----|
 | [Overview of cross-site publishing in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj635883.aspx)|Learn about how to use cross-site publishing and Search Web Parts to create adaptive SharePoint Internet, intranet, and extranet sites. |
 | [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint-2013.md)|Learn about how to create page layouts in SharePoint Server 2013. |
@@ -65,7 +59,7 @@ By default, category page layouts and catalog item page layouts are created auto
 ## Create a category page layout
 <a name="bk_createCategoryPage"> </a>
 
-Before you can create or customize a category page layout, we recommend that you create a mapped network drive that points to the  **Master Page Gallery**. For more information, see  [How to: Map a network drive to the SharePoint 2013 Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-2013-master-page-gallery.md). 
+Before you can create or customize a category page layout, we recommend that you create a mapped network drive that points to the **Master Page Gallery**. For more information, see  [How to: Map a network drive to the SharePoint 2013 Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-2013-master-page-gallery.md). 
   
     
     
@@ -83,9 +77,9 @@ The simplest way to create a category page layout is to let SharePoint create th
 2. To customize a category page layout, edit the HTML file that resides directly on the server by using an HTML editor to open and edit the HTML file in the mapped drive. Each time that you save the HTML file, any changes are synched to the associated .aspx file. 
     
   
-3. Replace the markup inside the content placeholder that has  **id="PlaceHolderMain"** with the markup that you want to use in the page layout.
+3. Replace the markup inside the content placeholder that has **id="PlaceHolderMain"**with the markup that you want to use in the page layout.
     
-    > [!Important]  
+    > [!IMPORTANT]  
 > You must keep the Content Search Snippet markup so that the category page can display search results. 
 4. To configure and copy the HTML for any snippets you want to add to the page, follow step 1 through step 11 in the "Insert a snippet from the Snippet Gallery" section of  [SharePoint 2013 Design Manager snippets](sharepoint-2013-design-manager-snippets.md). 
     
@@ -103,19 +97,19 @@ The simplest way to create a category page layout is to let SharePoint create th
 1. Follow step 1 through step 6 in the "Create a page layout" section of  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint-2013.md). 
     
   
-2. In step 7, choose the  **Article Page** content type.
+2. In step 7, choose the **Article Page**content type.
     
   
-3. Choose  **OK**. 
+3. Choose **OK**. 
     
     At this point, SharePoint creates an HTML file and an .aspx file that has the same name. 
     
-    In Design Manager, your HTML file now appears with a  **Status** column that shows one of two statuses:
+    In Design Manager, your HTML file now appears with a **Status**column that shows one of two statuses:
     
-  -  **Warnings and Errors**
+  - **Warnings and Errors**
     
   
-  -  **Conversion successful**
+  - **Conversion successful**
     
   
 4. Using Windows Explorer, open the mapped network drive to the Master Page Gallery. 
@@ -124,7 +118,7 @@ The simplest way to create a category page layout is to let SharePoint create th
 5. To customize the category page layout, edit the HTML file that resides directly on the server by using an HTML editor to open and edit the HTML file in the mapped drive. Each time that you save the HTML file, any changes are synched to the associated .aspx file. 
     
   
-6. In the  **<head>** tag, replace the content placeholder that has **id="PlaceHolderPageTitle"** with:
+6. In the **<head>**tag, replace the content placeholder that has**id="PlaceHolderPageTitle"**with:
     
   ```HTML
   
@@ -136,7 +130,7 @@ The simplest way to create a category page layout is to let SharePoint create th
 <!--ME:</asp:ContentPlaceHolder>-->
   ```
 
-7. Find the content placeholder that has the  **id="PlaceHolderPageTitleInTitleArea"** and replace it with:
+7. Find the content placeholder that has the **id="PlaceHolderPageTitleInTitleArea"**and replace it with:
     
   ```HTML
   
@@ -145,12 +139,12 @@ The simplest way to create a category page layout is to let SharePoint create th
 <!--ME:</asp:ContentPlaceHolder>-->
   ```
 
-8. Replace the markup inside the content placeholder that has  **id="PlaceHolderMain"** with the markup that you want to use in the page layout.
+8. Replace the markup inside the content placeholder that has **id="PlaceHolderMain"**with the markup that you want to use in the page layout.
     
   
 9. To configure and copy the HTML for the Content Search Snippet and any other snippets you want to add to the page, follow step 1 through step 11 in the "Insert a snippet from the Snippet Gallery" section of  [SharePoint 2013 Design Manager snippets](sharepoint-2013-design-manager-snippets.md). 
     
-    > [!Note]  
+    > [!NOTE]  
 > When you add the Content Search Snippet to the page layout, be sure to change the query to use the result source that was created when you connected the publishing site to a catalog. For more information, see  [Configure result sources for web content management in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj715262.aspx). 
 10. Make any other required changes to the markup, and then save the file. 
     
@@ -169,7 +163,7 @@ When you create a page layout, an .aspx file is created that SharePoint uses, an
 
 ### Browser window page title
 
-The component that appears inside the content placeholder with  **id="PlaceHolderPageTitle"** contains markup that tells SharePoint to use a term property as the page title in the browser window, instead of using the standard page field value. The following code shows the markup for the browser window page title.
+The component that appears inside the content placeholder with **id="PlaceHolderPageTitle"**contains markup that tells SharePoint to use a term property as the page title in the browser window, instead of using the standard page field value. The following code shows the markup for the browser window page title.
   
     
     
@@ -186,7 +180,7 @@ PublicKeyToken=71e9bce111e9429c" %>-->
 
 ### Page title
 
-The component that appears inside the content placeholder with  **id="PlaceHolderPageTitleInTitleArea"** contains markup that tells SharePoint to use a term property as the page title on the page, instead of using the **SPTitleBreadcrumb** snippet and the standard page title field value. The following code shows the markup for the page title.
+The component that appears inside the content placeholder with **id="PlaceHolderPageTitleInTitleArea"**contains markup that tells SharePoint to use a term property as the page title on the page, instead of using the**SPTitleBreadcrumb**snippet and the standard page title field value. The following code shows the markup for the page title.
   
     
     
@@ -199,13 +193,13 @@ The component that appears inside the content placeholder with  **id="PlaceHolde
 
 ### Content Search Snippet
 
-The components that appear after the page content snippet, inside the content placeholder with  **id="PlaceHolderMain"**, contain markup for a Web Part Zone Snippet that contains four Web Part zones. The first Web Part zone contains a Content Search Snippet that displays a Content Search Web Part on the page. This snippet also contains information that helps the Content Search Web Part query a result source and show the results on the page. The last three Web Part zones are empty. If you choose to create your own category page layout, you must include the markup for the Content Search Snippet in the HTML file for your page layout. The following code shows the markup for the Content Search snippet. Replace  _ResultSourceID_ with the GUID of the result source, and replace _CatalogURL_ with the URL of the catalog.
+The components that appear after the page content snippet, inside the content placeholder with **id="PlaceHolderMain"**, contain markup for a Web Part Zone Snippet that contains four Web Part zones. The first Web Part zone contains a Content Search Snippet that displays a Content Search Web Part on the page. This snippet also contains information that helps the Content Search Web Part query a result source and show the results on the page. The last three Web Part zones are empty. If you choose to create your own category page layout, you must include the markup for the Content Search Snippet in the HTML file for your page layout. The following code shows the markup for the Content Search snippet. Replace  _ResultSourceID_ with the GUID of the result source, and replace _CatalogURL_ with the URL of the catalog.
   
     
     
 
-> [!Note]  
-> The GUIDs for  **ID** and **__WebPartId** are randomly generated by SharePoint when the snippets are added to the page layout.
+> [!NOTE]  
+> The GUIDs for **ID**and**__WebPartId**are randomly generated by SharePoint when the snippets are added to the page layout.
   
     
     
@@ -257,12 +251,12 @@ As with the category page layout, the simplest way to create a catalog item page
 2. To customize a catalog item page layout, edit the HTML file that resides directly on the server by using an HTML editor to open and edit the HTML file in the mapped drive. Each time that you save the HTML file, any changes are synched to the associated .aspx file. 
     
   
-3. Inside the content placeholder that has  **id="PlaceHolderMain"**, add the markup that you want to use in the page layout. 
+3. Inside the content placeholder that has **id="PlaceHolderMain"**, add the markup that you want to use in the page layout. 
     
   
 4. Delete any snippets that you do not want to use in the page layout, and move the remaining snippets to places in the markup where you want the property values to appear. 
     
-    > [!Caution]  
+    > [!CAUTION]  
 > By default, a Web Part Zone Snippet that contains a Catalog-Item Reuse Snippet is added to the page layout. This snippet contains the data provider that returns query results that are used by all other snippets on the page. We recommend that you keep the Catalog-Item Reuse Snippet in this default Web Part Zone Snippet. (You can move the Catalog-Item Reuse Snippet outside the Web Part Zone, and you can change the property that it displays. But, you must keep the Catalog-Item Reuse Snippet in the page layout.) For more information, see  [Page fields](how-to-customize-page-layouts-for-a-catalog-based-site-in-sharepoint-2013.md#bk_pagefields), later in this article. 
 5. To configure and copy the HTML snippet for any snippets you want to use in the page, follow step 1 through step 11 in the "Insert a snippet from the Snippet Gallery" section of  [SharePoint 2013 Design Manager snippets](sharepoint-2013-design-manager-snippets.md). 
     
@@ -280,19 +274,19 @@ As with the category page layout, the simplest way to create a catalog item page
 1. Follow step 1 through step 6 in the "Create a page layout" section of  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint-2013.md). 
     
   
-2. In step 7, choose  **Remote Catalog**, and then choose the catalog that contains the data to appear on the page. 
+2. In step 7, choose **Remote Catalog**, and then choose the catalog that contains the data to appear on the page. 
     
   
-3. Choose  **OK**. 
+3. Choose **OK**. 
     
     At this point, SharePoint creates an HTML file and an .aspx file that has the same name. 
     
-    In Design Manager, your HTML file now appears with a  **Status** column that shows one of two statuses:
+    In Design Manager, your HTML file now appears with a **Status**column that shows one of two statuses:
     
-  -  **Warnings and Errors**
+  - **Warnings and Errors**
     
   
-  -  **Conversion successful**
+  - **Conversion successful**
     
   
 4. Using Windows Explorer, open the mapped network drive to the Master Page Gallery. 
@@ -301,12 +295,12 @@ As with the category page layout, the simplest way to create a catalog item page
 5. To customize the catalog item page layout, edit the HTML file that resides directly on the server by using an HTML editor to open and edit the HTML file in the mapped drive. Each time that you save the HTML file, any changes are synched to the associated .aspx file. 
     
   
-6. Inside the content placeholder that has  **id="PlaceHolderMain"**, add the markup that you want to use in the page layout. 
+6. Inside the content placeholder that has **id="PlaceHolderMain"**, add the markup that you want to use in the page layout. 
     
   
 7. Delete any snippets that you do not want to use in the page layout, and move the remaining snippets to places in the markup where you want the property values to appear. 
     
-    > [!Caution]  
+    > [!CAUTION]  
 > By default, a Web Part Zone Snippet that contains a Catalog-Item Reuse Snippet is added to the page layout. This snippet contains the data provider that returns query results that are used by all other snippets on the page. We recommend that you keep the Catalog-Item Reuse Snippet in this default Web Part Zone Snippet. (You can move the Catalog-Item Reuse Snippet outside the Web Part Zone, and you can change the property that it displays. But, you must keep the Catalog-Item Reuse Snippet in the page layout.) For more information, see  [Page fields](how-to-customize-page-layouts-for-a-catalog-based-site-in-sharepoint-2013.md#bk_pagefields), later in this article. 
 8. To configure and copy the HTML snippet for any snippets you want to use in the page, follow step 1 through step 11 in the "Insert a snippet from the Snippet Gallery" section of  [SharePoint 2013 Design Manager snippets](sharepoint-2013-design-manager-snippets.md). 
     
@@ -328,13 +322,13 @@ When you create a page layout, an .aspx file is created that SharePoint uses, an
 
 ### Browser window page title
 
-The component that appears inside the content placeholder with  **id="PlaceHolderPageTitle"** contains a Catalog-Item Reuse Snippet that tells SharePoint to use the name of the catalog item as the page title in the browser window, instead of using the standard page title field value. The following code shows the markup for the browser window page title.
+The component that appears inside the content placeholder with **id="PlaceHolderPageTitle"**contains a Catalog-Item Reuse Snippet that tells SharePoint to use the name of the catalog item as the page title in the browser window, instead of using the standard page title field value. The following code shows the markup for the browser window page title.
   
     
     
 
-> [!Note]  
-> The GUIDs for  **ID** and **__WebPartId** are randomly generated by SharePoint when the snippets are added to the page layout.
+> [!NOTE]  
+> The GUIDs for **ID**and**__WebPartId**are randomly generated by SharePoint when the snippets are added to the page layout.
   
     
     
@@ -358,7 +352,7 @@ MissingAssembly="Cannot import this Web Part." ID="g_863912c1_c849_46dc_8781_292
 ### Page fields
 <a name="bk_pagefields"> </a>
 
-The components that appear inside the content placeholder with  **id="PlaceHolderMain"** contain snippets for the **Title**,  **Page Content**, and  **Catalog-Item URL** fields. You may delete any of these snippets from the page layout. The following code shows the markup for these page fields.
+The components that appear inside the content placeholder with **id="PlaceHolderMain"**contain snippets for the**Title**, **Page Content**, and **Catalog-Item URL**fields. You may delete any of these snippets from the page layout. The following code shows the markup for these page fields.
   
     
     
@@ -417,12 +411,12 @@ runat="server">-->
 
 ```
 
-If the catalog item page layout was created automatically when the publishing site was connected to a catalog, or was created by selecting a remote catalog during page layout creation, the page layout also contains a Web Part Zone Snippet that contains a Catalog-Item Reuse Snippet that registers a data provider for the page. The Catalog-Item Reuse Snippet contains a  **UseSharedDataProvider** property, which is set to **False**. The Web Part Zone Snippet can be deleted from the page layout. But, the Catalog-Item Reuse Snippet must be kept in the page layout markup for the page to display catalog items. When you create a page that uses this page layout, you can configure the Web Part so that it is hidden when a user views the page. 
+If the catalog item page layout was created automatically when the publishing site was connected to a catalog, or was created by selecting a remote catalog during page layout creation, the page layout also contains a Web Part Zone Snippet that contains a Catalog-Item Reuse Snippet that registers a data provider for the page. The Catalog-Item Reuse Snippet contains a **UseSharedDataProvider**property, which is set to**False**. The Web Part Zone Snippet can be deleted from the page layout. But, the Catalog-Item Reuse Snippet must be kept in the page layout markup for the page to display catalog items. When you create a page that uses this page layout, you can configure the Web Part so that it is hidden when a user views the page. 
   
     
     
 
-> [!Important]  
+> [!IMPORTANT]  
 > If you create a new catalog item page layout, and you choose a content type instead of a remote catalog, you must include a Catalog-Item Reuse Snippet in the page layout. The following code shows the markup for the Catalog-Item Reuse Snippet as it appears inside the Web Part Zone Snippet. Replace  _ManagedPropertyName_ with the name of the managed property to display, replace _ResultSourceID_ with the GUID of the result source, and replace _CatalogURL_ with the URL of the catalog.
   
     
@@ -461,8 +455,8 @@ If the catalog item page layout was created automatically when the publishing si
     
     
 
-> [!Note]  
-> Some managed properties are included only if the catalog is a Pages library. The  **Used by** column in Table 2 indicates which managed properties are used by both a Pages library and a list, and which from a Pages library only.
+> [!NOTE]  
+> Some managed properties are included only if the catalog is a Pages library. The **Used by**column in Table 2 indicates which managed properties are used by both a Pages library and a list, and which from a Pages library only.
   
     
     
@@ -471,7 +465,7 @@ If the catalog item page layout was created automatically when the publishing si
 **Table 2. Default managed properties Catalog-Item Reuse Snippets**
 
 
-|**Managed property **|**Description **|**Used by **|
+|**Managed property**|**Description**|**Used by**|
 |:-----|:-----|:-----|
 |**AuthorOWSUSER**|The name of the user who created the page. |Pages library only |
 |**CreatedOWSDATE**|The date the page or list item was created. |Pages library and list |
@@ -489,8 +483,8 @@ The managed properties for custom columns that you add to the Pages library or l
     
     
 
-> [!Important]  
-> The  **Page Image** site column in a Pages library is mapped to the **PublishingImage** managed property. But, the **PublishingImage** managed property is not automatically included in the category-item page layout. To include the image in your page layout, you must add a Catalog-Item Reuse Snippet for the **PublishingImage** managed property. Use the following HTML to add a Catalog-Item Reuse Snippet to display the value of the **PublishingImage** managed property in your page layout. Replace _UniqueID_ with a GUID that is unique to each instance of the snippet.
+> [!IMPORTANT]  
+> The **Page Image**site column in a Pages library is mapped to the**PublishingImage**managed property. But, the**PublishingImage**managed property is not automatically included in the category-item page layout. To include the image in your page layout, you must add a Catalog-Item Reuse Snippet for the**PublishingImage**managed property. Use the following HTML to add a Catalog-Item Reuse Snippet to display the value of the**PublishingImage**managed property in your page layout. Replace _UniqueID_ with a GUID that is unique to each instance of the snippet.
   
     
     
@@ -519,13 +513,13 @@ MissingAssembly="Cannot import this Web Part." ID="g_UniqueID" __WebPartId="{Uni
 
 ```
 
-If you create a new catalog item page layout by using Design Manager, and you choose a content type instead of a remote catalog, you can add Catalog-Item Reuse Snippets to the page by using the Snippet Gallery. The following code shows the markup for the Catalog-Item Reuse Snippets for the  **Title**,  **PublishingPageContentOWSHTML**,  **CreatedOWSDATE**, and  **owstaxIdPageCategory** managed properties.
+If you create a new catalog item page layout by using Design Manager, and you choose a content type instead of a remote catalog, you can add Catalog-Item Reuse Snippets to the page by using the Snippet Gallery. The following code shows the markup for the Catalog-Item Reuse Snippets for the **Title**, **PublishingPageContentOWSHTML**, **CreatedOWSDATE**, and **owstaxIdPageCategory**managed properties.
   
     
     
 
-> [!Note]  
-> The GUIDs for  **ID** and **__WebPartId** are randomly generated by SharePoint when the snippets are added to the page layout.
+> [!NOTE]  
+> The GUIDs for **ID**and**__WebPartId**are randomly generated by SharePoint when the snippets are added to the page layout.
   
     
     

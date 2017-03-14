@@ -10,12 +10,6 @@ ms.assetid: 3d94d040-eecf-4f8e-a316-6d1cca95e7eb
 
 # Frequently Asked Questions About Excel Services UDFs
 
- **Last modified:** July 20, 2011
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 Here are some frequently asked questions about Excel Services user-defined functions (UDFs). 
   
     
@@ -43,13 +37,13 @@ A UDF method cannot have:
     
     
 
--  **ref** or **out** parameters
+- **ref**or**out**parameters
     
   
--  **retval** attributes
+- **retval**attributes
     
   
--  **Optional** arguments
+- **Optional**arguments
     
   
 - unsupported data types 

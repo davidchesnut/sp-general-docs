@@ -1,5 +1,5 @@
 ---
-title: How to: Add a Security Trim snippet in SharePoint 2013
+title: How to Add a Security Trim snippet in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 4beaab08-760b-408a-b768-906312779379
 ---
@@ -7,12 +7,6 @@ ms.assetid: 4beaab08-760b-408a-b768-906312779379
 
 # How to: Add a Security Trim snippet in SharePoint 2013
 You can use a Security Trim snippet to display content only to specific users, based on a specific permission that those users must have and whether the users are authenticated or anonymous. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** Office 365 | SharePoint Server 2013* 
 ## Introduction to the Security Trim snippet
 <a name="Introduction"> </a>
 
@@ -36,19 +30,19 @@ For example, you can use a Security Trim panel to display the following content 
   
 - A sign-in link separate from the ribbon, for non-authenticated users or users who have yet to be authenticated. 
     
-    > [!Note]  
+    > [!NOTE]  
 > This sign-in link is inserted automatically into a master page that is created by using Design Manager, but you can delete it if it's not needed. 
 A Security Trim panel has two important property settings, one for authentication and one for permissions (or authorization). For example, you can use a Security Trim panel to display the following content to specific users: 
   
     
     
 
--  **AuthenticationRestrictions** With this property, you can restrict the panel to either authenticated or anonymous users, or choose all users (all users is the default setting).
+- **AuthenticationRestrictions**With this property, you can restrict the panel to either authenticated or anonymous users, or choose all users (all users is the default setting).
     
   
--  **Permissions** With this property, you can select a specific permission that users must have to view the content in the panel.
+- **Permissions**With this property, you can select a specific permission that users must have to view the content in the panel.
     
-    > [!Note]  
+    > [!NOTE]  
 > You are selecting an individual permission, not a permission level. (A permission level is a set of granted permissions.) 
 Of course, if you restrict the authentication to only anonymous users, it's typically not necessary to specify a specific permission because anonymous users have usually not been given any SharePoint 2013 permissions. It makes sense to use permissions only with all users or with all authenticated users. 
   
@@ -59,13 +53,13 @@ The Security Trim panel has three options on the ribbon, listed in the left colu
     
     
 
-> [!Note]  
+> [!NOTE]  
 > These are the default settings, which can be changed for any given scope, such as a site collection, site, list, or item. 
   
     
     
 
-For example, if you set a Security Trim panel to  **Show to authors**, by default content inside that panel is visible to users in the Members group and the Owners group. 
+For example, if you set a Security Trim panel to **Show to authors**, by default content inside that panel is visible to users in the Members group and the Owners group. 
   
     
     
@@ -73,7 +67,7 @@ For example, if you set a Security Trim panel to  **Show to authors**, by defaul
 **Table 1. Mapping of panel options to default permission levels and groups**
 
 
-|**Security Trim panel option **|**Permissions property **|**Permission **|**Permission level **|**Group **|
+|**Security Trim panel option**|**Permissions property**|**Permission**|**Permission level**|**Group**|
 |:-----|:-----|:-----|:-----|:-----|
 |Show to authors |**AddAndCustomizePages**|Add and Customize Pages |Contribute (or higher) |Members |
 |Show to Authenticated Users |**ViewPages**|View Pages |Read (or higher) |Visitors |
@@ -94,30 +88,30 @@ Like all snippets, you add the Security Trim snippet from the Snippet Gallery. T
 1. Browse to your publishing site. 
     
   
-2. In the upper-right corner of the page, choose the Settings gear, and then choose  **Design Manager**. 
+2. In the upper-right corner of the page, choose the Settings gear, and then choose **Design Manager**. 
     
   
-3. In Design Manager, in the left navigation pane, choose  **Edit Master Pages** or **Edit Page Layouts**, depending on what type of file you're editing. 
+3. In Design Manager, in the left navigation pane, choose **Edit Master Pages**or**Edit Page Layouts**, depending on what type of file you're editing. 
     
   
 4. Select the name of the master page or page layout that you want to add the snippet to. 
     
   
-5. To open the Snippet Gallery, choose  **Snippets** in the upper-right corner of the server-side preview.
+5. To open the Snippet Gallery, choose **Snippets**in the upper-right corner of the server-side preview.
     
   
-6. On the ribbon, on the  **Design** tab, choose **Security Trim**. 
+6. On the ribbon, on the **Design**tab, choose**Security Trim**. 
     
-    Optionally, in the drop-down list on the  **Security Trim** button, you can select the users to whom the panel content will be visible, or you can see more options by configuring the important property values for the panel.
-    
-  
-7. On the right side of the Snippet Gallery, under  **About this Component**, click or select section headers to expand or collapse groups of properties, and then configure any custom settings that you want. 
+    Optionally, in the drop-down list on the **Security Trim**button, you can select the users to whom the panel content will be visible, or you can see more options by configuring the important property values for the panel.
     
   
-8. After you configure any properties, choose  **Update**. This updates the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose  **Reset** to return all properties to their default settings.
+7. On the right side of the Snippet Gallery, under **About this Component**, click or select section headers to expand or collapse groups of properties, and then configure any custom settings that you want. 
     
   
-9. On the left side of the Snippet Gallery, under  **HTML Snippet**, choose  **Copy to Clipboard**. 
+8. After you configure any properties, choose **Update**. This updates the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose **Reset**to return all properties to their default settings.
+    
+  
+9. On the left side of the Snippet Gallery, under **HTML Snippet**, choose **Copy to Clipboard**. 
     
   
 10. In your HTML editor, open the mapped network drive on your computer, and then open the HTML file for the master page or page layout that you're adding the snippet to. 
@@ -125,10 +119,10 @@ Like all snippets, you add the Security Trim snippet from the Snippet Gallery. T
   
 11. In the HTML file, paste the snippet where you want the markup to appear. 
     
-    If you are adding the snippet to a page layout, make sure to paste the snippet inside  **PlaceHolderMain**. 
+    If you are adding the snippet to a page layout, make sure to paste the snippet inside **PlaceHolderMain**. 
     
   
-12. Replace the  **<div>** where `class="DefaultContentBlock"` with your own specific content.
+12. Replace the **<div>**where `class="DefaultContentBlock"` with your own specific content.
     
   
 13. Save the page, and then refresh the server-side preview in Design Manager to make sure the Security Trim panel appears as expected. 
@@ -138,11 +132,11 @@ Like all snippets, you add the Security Trim snippet from the Snippet Gallery. T
 ## Understanding the snippet markup
 <a name="UnderstandMarkup"> </a>
 
-The most important parts of a Security Trim snippet are the  **AuthenticationRestrictions** property and the **Permissions** property, and the **<div>** in bold below. **AuthenticationRestrictions** appears in the markup only when changed from **AllUsers**, which is the default. If you choose  **Reset** for the snippet in the Snippet Gallery, **AuthenticationRestrictions** is removed from the markup, which means the snippet uses the default value, **AllUsers**. 
+The most important parts of a Security Trim snippet are the **AuthenticationRestrictions**property and the**Permissions**property, and the**<div>**in bold below.**AuthenticationRestrictions**appears in the markup only when changed from**AllUsers**, which is the default. If you choose **Reset**for the snippet in the Snippet Gallery,**AuthenticationRestrictions**is removed from the markup, which means the snippet uses the default value,**AllUsers**. 
   
     
     
-The  **<div>** where `class="DefaultContentBlock"` is what you replace with your own content, which can include other snippets and controls.
+The **<div>**where `class="DefaultContentBlock"` is what you replace with your own content, which can include other snippets and controls.
   
     
     

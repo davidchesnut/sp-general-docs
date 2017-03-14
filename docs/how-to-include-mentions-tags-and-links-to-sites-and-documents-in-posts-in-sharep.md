@@ -1,5 +1,5 @@
 ---
-title: How to: Include mentions, tags, and links to sites and documents in posts in SharePoint Server 2013
+title: How to Include mentions, tags, and links to sites and documents in posts in SharePoint Server 2013
 ms.prod: SHAREPOINT
 ms.assetid: 975da333-372b-4bf6-a3f4-7452db369f04
 ---
@@ -7,25 +7,25 @@ ms.assetid: 975da333-372b-4bf6-a3f4-7452db369f04
 
 # How to: Include mentions, tags, and links to sites and documents in posts in SharePoint Server 2013
 Learn how to add  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) objects to microblog posts, which render as mentions, tags, or links in SharePoint Server 2013 social feeds.
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 In a social feed, the simplest form of post content contains only text, but you can also add links that render as mentions, tags, or links to websites, SharePoint sites, and documents. To do this, you add  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) objects to the [ContentItems](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.ContentItems.aspx) property of the [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) object that defines the post. Posts can contain multiple links.
   
     
     
 
 
-> [!Note]  
+> [!NOTE]  
 > To add embedded pictures, videos, or documents to a post's content, you add a  [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) object to the [SocialPostCreationData.Attachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.Attachment.aspx) property. For more information, see [How to: Embed images, videos, and documents in posts in SharePoint Server 2013](how-to-embed-images-videos-and-documents-in-posts-in-sharepoint-server-2013.md). 
   
     
     
 
+
 The API described in this article is from the .NET client object model. However, if you're using another API, such as the JavaScript object model, the object names or corresponding API might be different. See  [Additional resources](#bk_addresources) for links to documentation for related APIs.
+  
+    
+    
+
+
 ## Prerequisites for using the code examples to add links to a post in SharePoint Server 2013
 <a name="bk_preReqs"> </a>
 
@@ -66,7 +66,7 @@ The following code example publishes a post that contains links to a website, a 
     
   
 
-> [!Note]  
+> [!NOTE]  
 > Currently, SharePoint Server 2013 handles links to websites, SharePoint sites, and documents in the same way, but as a best practice, choose the  [Site](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.Site.aspx) type and the [Document](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.Document.aspx) type for SharePoint sites and documents.
   
     
@@ -77,7 +77,7 @@ In the social feed, clicking a link to a website, SharePoint site, or document o
     
     
 
-> [!Note]  
+> [!NOTE]  
 > Change the placeholder values for the URL variables before you run the code. 
   
     
@@ -186,13 +186,13 @@ The following code example publishes a post that mentions a user. It shows how t
 - Add the  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) to the [ContentItems](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.ContentItems.aspx) property of the [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) object that's used to create the post.
     
   
-In the social feed, clicking a mention redirects to the mentioned person's  **About** page.
+In the social feed, clicking a mention redirects to the mentioned person's **About**page.
   
     
     
 
-> [!Note]  
-> Change the placeholder values for the  **serverURL** and **accountName** variables before you run the code.
+> [!NOTE]  
+> Change the placeholder values for the **serverURL**and**accountName**variables before you run the code.
   
     
     
@@ -269,7 +269,7 @@ The following code example publishes a post that includes a tag. It shows how to
     
     
 
-- Create a  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) object to represent the tag. The [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) specifies the [SocialDataItemType.Tag](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.Tag.aspx) field and the tag name, which must include a **#** character.
+- Create a  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) object to represent the tag. The [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) specifies the [SocialDataItemType.Tag](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.Tag.aspx) field and the tag name, which must include a**#**character.
     
   
 - Add a placeholder to the post text to indicate where the tag should appear. 
@@ -278,13 +278,13 @@ The following code example publishes a post that includes a tag. It shows how to
 - Add the  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) to the [ContentItems](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.ContentItems.aspx) property of the [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) object that's used to create the post.
     
   
-In the social feed, clicking a tag redirects to the tag's  **About** page. If the tag doesn't already exist, the server creates it.
+In the social feed, clicking a tag redirects to the tag's **About**page. If the tag doesn't already exist, the server creates it.
   
     
     
 
-> [!Note]  
-> Change the placeholder values for the  **serverURL** and **tagName** variables before you run the code.
+> [!NOTE]  
+> Change the placeholder values for the **serverURL**and**tagName**variables before you run the code.
   
     
     

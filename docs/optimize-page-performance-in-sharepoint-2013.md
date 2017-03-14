@@ -8,13 +8,7 @@ ms.assetid: 262caeef-64fd-4e02-b947-d772faf01159
 
 # Optimize page performance in SharePoint 2013
 Learn about features to improve performance in pages in SharePoint 2013. These features can be used to enhance the experience in geographically distributed implementations. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
- * **Provided by: ***  David Crawford, Microsoft Corporation
+ ***Provided by:*** David Crawford, Microsoft Corporation
   
     
     
@@ -35,11 +29,11 @@ The following table shows some benefits of using MDS.
 **Table 1. Benefits of using MDS**
 
 
-|**Performance **|**Visuals **|
+|**Performance**|**Visuals**|
 |:-----|:-----|
 |Fewer amounts of data downloaded per page request. |No browser flashing caused by full page reload. |
 |Browser needs to update only the regions of the page that changed since the last request. |Easy to identify animations. |
-|Small amount of processing required on the client. > [!Note]  > Half of client Page-Load-Time 1 (PLT1) is due to chrome cascading style sheet (CSS) rendering and JavaScript parsing and execution.           |Changes in the page attract user's attention. |
+|Small amount of processing required on the client. > [!NOTE]  > Half of client Page-Load-Time 1 (PLT1) is due to chrome cascading style sheet (CSS) rendering and JavaScript parsing and execution.           |Changes in the page attract user's attention. |
    
 Both AJAX and MDS are technologies that request only sections of the page to minimize data download and improve page responsiveness. The following figure shows the MDS architecture. 
   
@@ -89,13 +83,13 @@ The following table shows some examples of URLs formatted in MDS mode.
 **Table 2. URLs formatted in MDS mode**
 
 
-|**Non-MDS URL **|**MDS URL **|
+|**Non-MDS URL**|**MDS URL**|
 |:-----|:-----|
 |http://server/SitePages/ |http://server/_layouts/15/start.aspx#/SitePages/ |
 |http://server/subsite/SitePages/home.aspx |http://server/subsite/_layouts/15/start.aspx#/SitePages/home.aspx |
 |http://server/_layouts/15/viewlsts.aspx?BaseType=0 |http://server/_layouts/15/start.aspx#/_layouts/viewlsts.aspx?BaseType=0 |
    
-The object used for the AJAX navigation is  **AjaxNavigate**. By default, there is an instance of  **AjaxNavigate** available for you to use named **ajaxNavigate**. To use the  **ajaxNavigate** instance:
+The object used for the AJAX navigation is **AjaxNavigate**. By default, there is an instance of **AjaxNavigate**available for you to use named**ajaxNavigate**. To use the **ajaxNavigate**instance:
   
     
     
@@ -107,7 +101,7 @@ The object used for the AJAX navigation is  **AjaxNavigate**. By default, there 
 ajaxNavigate.update(serverRelativeURL, null);
 ```
 
-If you want a control or Web Part to listen to the navigation events, you can use the  **add_navigate** handler. When the handler is called, your callback function receives a reference to the navigation object and the parsed hash values in a dictionary. The control or Web Part can retrieve the value for the parameter of interest from the dictionary, compare it to the current value, and decide what action it needs to take. A common action is to send an AJAX request to the server to retrieve some data or reorder the items in the view. When a control has finished listening to navigation events, it can use the **remove_navigate** handler.
+If you want a control or Web Part to listen to the navigation events, you can use the **add_navigate**handler. When the handler is called, your callback function receives a reference to the navigation object and the parsed hash values in a dictionary. The control or Web Part can retrieve the value for the parameter of interest from the dictionary, compare it to the current value, and decide what action it needs to take. A common action is to send an AJAX request to the server to retrieve some data or reorder the items in the view. When a control has finished listening to navigation events, it can use the**remove_navigate**handler.
   
     
     
@@ -152,7 +146,7 @@ A particular element in the page must make sure that the critical resources need
 
 ### Master pages
 
-The main change in the master page is to surround the regions of HTML markup that will be sent to the client with a special control named  **SharePoint:AjaxDelta**. The most common parts that need to be surrounded by a **SharePoint:AjaxDelta** control are the controls embedded in the master page chrome and the content place holders. If a control is the same on all pages within a site, it should not be wrapped by a **SharePoint:AjaxDelta** control. The following markup shows a visible content placeholder surrounded by a **SharePoint:AjaxDelta** control.
+The main change in the master page is to surround the regions of HTML markup that will be sent to the client with a special control named **SharePoint:AjaxDelta**. The most common parts that need to be surrounded by a**SharePoint:AjaxDelta**control are the controls embedded in the master page chrome and the content place holders. If a control is the same on all pages within a site, it should not be wrapped by a**SharePoint:AjaxDelta**control. The following markup shows a visible content placeholder surrounded by a**SharePoint:AjaxDelta**control.
   
     
     
@@ -164,7 +158,7 @@ The main change in the master page is to surround the regions of HTML markup tha
 </SharePoint:AjaxDelta>
 ```
 
-Controls that have content dependent on the current URL must be wrapped in a  **SharePoint:AjaxDelta** control. The following markup shows a menu surrounded by a **SharePoint:AjaxDelta** control.
+Controls that have content dependent on the current URL must be wrapped in a **SharePoint:AjaxDelta**control. The following markup shows a menu surrounded by a**SharePoint:AjaxDelta**control.
   
     
     
@@ -192,13 +186,13 @@ Controls that have content dependent on the current URL must be wrapped in a  **
 ```
 
 
-> [!Note]  
-> The  **SharePoint:AjaxDelta** control should not be nested within itself. Specify this control at the highest required level.
+> [!NOTE]  
+> The **SharePoint:AjaxDelta**control should not be nested within itself. Specify this control at the highest required level.
   
     
     
 
-If you need to include a cascading style sheet (CSS) file, you need to use the  **SharePoint:CssLink** and **SharePoint:CssRegistration** controls. These controls have been updated to work in both MDS and non-MDS mode. The following markup shows how to use the **SharePoint:CssLink** and **SharePoint:CssRegistration** controls.
+If you need to include a cascading style sheet (CSS) file, you need to use the **SharePoint:CssLink**and**SharePoint:CssRegistration**controls. These controls have been updated to work in both MDS and non-MDS mode. The following markup shows how to use the**SharePoint:CssLink**and**SharePoint:CssRegistration**controls.
   
     
     
@@ -212,13 +206,13 @@ If you need to include a cascading style sheet (CSS) file, you need to use the  
 ```
 
 
-> [!Caution]  
-> You can have only one  **SharePoint:CssLink** control per page. In MDS mode, you get an error if you have more than one **SharePoint:CssLink** control in a page. Including a CSS file using an HTML style element is not supported in MDS mode, because the server logic cannot identify the file as a required resource when the response is rendered.
+> [!CAUTION]  
+> You can have only one **SharePoint:CssLink**control per page. In MDS mode, you get an error if you have more than one**SharePoint:CssLink**control in a page. Including a CSS file using an HTML style element is not supported in MDS mode, because the server logic cannot identify the file as a required resource when the response is rendered.
   
     
     
 
-To include a JavaScript file, use the  **SharePoint:ScriptLink** control. The following markup shows how to use the **SharePoint:ScriptLink** control.
+To include a JavaScript file, use the **SharePoint:ScriptLink**control. The following markup shows how to use the**SharePoint:ScriptLink**control.
   
     
     
@@ -231,13 +225,13 @@ To include a JavaScript file, use the  **SharePoint:ScriptLink** control. The fo
 ```
 
 
-> [!Caution]  
+> [!CAUTION]  
 > Including a JavaScript file using the HTML script tag is not supported in MDS mode, because the server logic cannot identify the file as a required resource when the response is rendered. 
   
     
     
 
-To render the title element inside the head element in the page, we use a special pattern using the  **SharePoint:PageTitle** control. The following markup shows how to use the **SharePoint:PageTitle** control.
+To render the title element inside the head element in the page, we use a special pattern using the **SharePoint:PageTitle**control. The following markup shows how to use the**SharePoint:PageTitle**control.
   
     
     
@@ -252,8 +246,8 @@ To render the title element inside the head element in the page, we use a specia
 ```
 
 
-> [!Note]  
-> Each individual page must override the title by providing a replacement for the  **asp:ContentPlaceHolder** control inside the **SharePoint:PageTitle** control.
+> [!NOTE]  
+> Each individual page must override the title by providing a replacement for the **asp:ContentPlaceHolder**control inside the**SharePoint:PageTitle**control.
   
     
     
@@ -261,11 +255,11 @@ To render the title element inside the head element in the page, we use a specia
 
 ### ASP.NET pages
 
-To include a JavaScript or CSS file, use the same  **SharePoint:ScriptLink** and **SharePoint:CssLink** controls described in the previous section.
+To include a JavaScript or CSS file, use the same **SharePoint:ScriptLink**and**SharePoint:CssLink**controls described in the previous section.
   
     
     
-In previous versions of SharePoint, some pages write content by using the  **Response.Output** property. If you are using MDS, this is no longer allowed. You have to change the calls to **Response.Output** to use a new API. The following table shows APIs that are commonly used in SharePoint pages and the new MDS-complaint API.
+In previous versions of SharePoint, some pages write content by using the **Response.Output**property. If you are using MDS, this is no longer allowed. You have to change the calls to**Response.Output**to use a new API. The following table shows APIs that are commonly used in SharePoint pages and the new MDS-complaint API.
   
     
     
@@ -273,7 +267,7 @@ In previous versions of SharePoint, some pages write content by using the  **Res
 **Table 3. Commonly used APIs and their MDS-compliant alternatives**
 
 
-|**Commonly used API **|**MDS-compliant alternative **|
+|**Commonly used API**|**MDS-compliant alternative**|
 |:-----|:-----|
 | [NoEncode()](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPHttpUtility.NoEncode.aspx)| [WriteNoEncode()](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPHttpUtility.WriteNoEncode.aspx)|
 | [HtmlEncode()](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPHttpUtility.HtmlEncode.aspx)| [WriteHtmlEncode()](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPHttpUtility.WriteHtmlEncode.aspx)|
@@ -283,11 +277,11 @@ In previous versions of SharePoint, some pages write content by using the  **Res
 | [UrlKeyValueEncode()](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPHttpUtility.UrlKeyValueEncode.aspx)| [WriteUrlKeyValueEncode()](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPHttpUtility.WriteUrlKeyValueEncode.aspx)|
 | [UrlPathEncode()](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPHttpUtility.UrlPathEncode.aspx)| [WriteUrlPathEncode()](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPHttpUtility.WriteUrlPathEncode.aspx)|
    
-If a page, control, or Web Part directs its output to the  **Response.Output** property, it causes MDS to fail back. When MDS fails back, it performs a full navigation to the requested page. You can find the offending control by using the **DeltaPage ._shipRender** property while debugging the server component.
+If a page, control, or Web Part directs its output to the **Response.Output**property, it causes MDS to fail back. When MDS fails back, it performs a full navigation to the requested page. You can find the offending control by using the**DeltaPage ._shipRender**property while debugging the server component.
   
     
     
-You should replace HTML inline script elements with  **SharePoint:ScriptBlock** controls. The following table shows an HTML inline script element and a **SharePoint:ScriptBlock** control.
+You should replace HTML inline script elements with **SharePoint:ScriptBlock**controls. The following table shows an HTML inline script element and a**SharePoint:ScriptBlock**control.
   
     
     
@@ -295,7 +289,7 @@ You should replace HTML inline script elements with  **SharePoint:ScriptBlock** 
 **Table 4. HTML inline script element and its MDS-compliant alternative**
 
 
-|**HTML inline script element **|**MDS-compliant alternative **|
+|**HTML inline script element**|**MDS-compliant alternative**|
 |:-----|:-----|
 |
 ```
@@ -315,18 +309,18 @@ You should replace HTML inline script elements with  **SharePoint:ScriptBlock** 
 
 |
    
-The introduction of the  **SharePoint:ScriptBlock** in the page can change the scope of variables in page. Sometimes it is necessary to move the declaration of variables from `<% %>` to `<script runat="server"> <script>`. To test this, load the page in the browser after you perform updates. 
+The introduction of the **SharePoint:ScriptBlock**in the page can change the scope of variables in page. Sometimes it is necessary to move the declaration of variables from `<% %>` to `<script runat="server"> <script>`. To test this, load the page in the browser after you perform updates. 
   
     
     
 
-> [!Note]  
+> [!NOTE]  
 > The MDS infrastructure does not support VBScript, because it cannot be registered as a script in ASP.NET. Scripts have to be converted to JavaScript. 
   
     
     
 
-HyperLinks in ASP.NET pages must be updated to use  **SPUpdatePage** type. Table 5 shows hyperlinks in ASP.NET pages and the same links updated by using **SPUpdatePage** type.
+HyperLinks in ASP.NET pages must be updated to use **SPUpdatePage**type. Table 5 shows hyperlinks in ASP.NET pages and the same links updated by using**SPUpdatePage**type.
   
     
     
@@ -334,7 +328,7 @@ HyperLinks in ASP.NET pages must be updated to use  **SPUpdatePage** type. Table
 **Table 5. Hyperlink in ASP.NET and its MDS-compliant alternative**
 
 
-|**Hyperlink in ASP.NET **|**MDS-compliant alternative **|
+|**Hyperlink in ASP.NET**|**MDS-compliant alternative**|
 |:-----|:-----|
 |
 ```cs
@@ -361,18 +355,18 @@ HyperLinks in ASP.NET pages must be updated to use  **SPUpdatePage** type. Table
 
 ### Custom master pages for errors
 
-You can display error messages in MDS mode, even when you are using a custom master page for errors. To use a custom master page for errors in MDS mode, you must define an  **AjaxDelta** in the error master page that has the **id** property set to the string **"DeltaPlaceHolderMain"**. The content of the error message must be rendered into the **AjaxDelta**. When the error page is returned to the browser from the server, the browser identifies this as the main content to display and shows it to the user.
+You can display error messages in MDS mode, even when you are using a custom master page for errors. To use a custom master page for errors in MDS mode, you must define an **AjaxDelta**in the error master page that has the**id**property set to the string**"DeltaPlaceHolderMain"**. The content of the error message must be rendered into the**AjaxDelta**. When the error page is returned to the browser from the server, the browser identifies this as the main content to display and shows it to the user.
   
     
     
-Although the master page for the error page and the master page for  **start.aspx** are not an explicit match, the browser can detect that an error has occurred. The browser allows MDS to use the relevant error message content within the existing master page in order to maintain a consistent and smooth user experience.
+Although the master page for the error page and the master page for **start.aspx**are not an explicit match, the browser can detect that an error has occurred. The browser allows MDS to use the relevant error message content within the existing master page in order to maintain a consistent and smooth user experience.
   
     
     
 
 ### JavaScript files
 
-JavaScript files should include only function declarations. Nonetheless, there are many legacy scripts that contain global variable initializations. Global variables need to be reinitialized when a new page is rendered in MDS mode. You can use the  **ExecuteAndRegisterBeginEndFunctions** to initialize global variables. The following code example shows how to use the **ExecuteAndRegisterBeginEndFunctions**. 
+JavaScript files should include only function declarations. Nonetheless, there are many legacy scripts that contain global variable initializations. Global variables need to be reinitialized when a new page is rendered in MDS mode. You can use the **ExecuteAndRegisterBeginEndFunctions**to initialize global variables. The following code example shows how to use the**ExecuteAndRegisterBeginEndFunctions**. 
   
     
     
@@ -383,7 +377,7 @@ function ExecuteAndRegisterBeginEndFunctions(tag, beginFunc, endFunc, loadFunc)
 
 ```
 
-The  **ExecuteAndRegisterBeginEndFunctions** has the following parameters:
+The **ExecuteAndRegisterBeginEndFunctions**has the following parameters:
   
     
     
@@ -403,7 +397,7 @@ The  **ExecuteAndRegisterBeginEndFunctions** has the following parameters:
 
 ### Controls and Web Parts
 
-To use MDS, controls and Web Parts have to register page resources by using the  **SPPageContentManager** object. The most frequently registered resources using **SPPageContentManager** are JavaScript snippets (functions or JSON variables) and hidden fields. The following table shows common patterns for inserting hidden fields and JavaScript snippets, and how to do the same by using the **SPPageContentManager** object.
+To use MDS, controls and Web Parts have to register page resources by using the **SPPageContentManager**object. The most frequently registered resources using**SPPageContentManager**are JavaScript snippets (functions or JSON variables) and hidden fields. The following table shows common patterns for inserting hidden fields and JavaScript snippets, and how to do the same by using the**SPPageContentManager**object.
   
     
     
@@ -411,7 +405,7 @@ To use MDS, controls and Web Parts have to register page resources by using the 
 **Table 6. Common practices for rendering content and their MDS-compliant alternatives**
 
 
-|**Common practice for rendering content **|**MDS-compliant alternative **|
+|**Common practice for rendering content**|**MDS-compliant alternative**|
 |:-----|:-----|
 |
 ```cs
@@ -445,8 +439,8 @@ SPPageContentManager.RegisterClientScriptBlock(this, typeof(MyType), "MyKey", "v
 |
    
 
-> [!Note]  
-> The  **RegisterHiddenField** and **RegisterClientScriptBlock** functions in the **SPPageContentManager** object expect an object of type **Control** or **Page** in the first parameter.
+> [!NOTE]  
+> The **RegisterHiddenField**and**RegisterClientScriptBlock**functions in the**SPPageContentManager**object expect an object of type**Control**or**Page**in the first parameter.
   
     
     
@@ -456,10 +450,10 @@ The MDS engine uses the first parameter to filter the scripts. Here are the rule
     
     
 
-- If the first argument is of type  **Page**, the scripts will execute in the browser.
+- If the first argument is of type **Page**, the scripts will execute in the browser.
     
   
-- If the first argument is not of type  **Page** and the control falls under a **SharePoint:AsyncDelta**, the scripts will execute in the browser.
+- If the first argument is not of type **Page**and the control falls under a**SharePoint:AsyncDelta**, the scripts will execute in the browser.
     
   
 - If the first argument is a Web Part, the scripts will execute in the browser. 
@@ -469,11 +463,11 @@ Many APIs in previous versions of SharePoint did not provide the current control
   
     
     
-You can navigate between two pages by using a new function named  **SPUpdatePage**. When a control or Web Part is rendered in MDS delta mode, the  **HyperLink** controls must add the **onclick** handler and call **SPUpdatePage**. 
+You can navigate between two pages by using a new function named **SPUpdatePage**. When a control or Web Part is rendered in MDS delta mode, the **HyperLink**controls must add the**onclick**handler and call**SPUpdatePage**. 
   
     
     
-You must update the XSLT used by Web Parts because all the resources must be added by using the  **SPPageContentManager** object to make them MDS-compliant. You can add JavaScript snippets to the XSLT by using the **RegisterScriptLink** and **RegisterScriptBlock** methods of the **SPPageContentManager** object.
+You must update the XSLT used by Web Parts because all the resources must be added by using the **SPPageContentManager**object to make them MDS-compliant. You can add JavaScript snippets to the XSLT by using the**RegisterScriptLink**and**RegisterScriptBlock**methods of the**SPPageContentManager**object.
   
     
     
@@ -499,7 +493,7 @@ Table 7 shows example loading times that illustrate the difference between the f
 |Subsequent page loads |1 second |
    
 
-> [!Note]  
+> [!NOTE]  
 > Loading times might be different in your particular scenario. Loading times are affected by many variables, including, but not limited to, page size, latency, and server load. 
   
     
@@ -613,7 +607,7 @@ The first version of the CSS is 783 characters long, and the second is 140 chara
 ## Entity tags
 <a name="OptimizingPagePerformance_Crunch"> </a>
 
-Entity tags (ETags) can cause the client to unnecessarily reload files. ETags are meant to uniquely identify files by using a number that the server generates. In clusters of servers, each server will create a different number. For example, a browser is sending a  **Get** method with an **If-Modified** header field for a file that it found in its cache. If there is only one server, the file will probably match, and a **304 Not-Modified** http status will be sent. But, if the user is accessing a large server farm, it will probably hit a different server with a different entity tag, causing that server to send the file to the browser.
+Entity tags (ETags) can cause the client to unnecessarily reload files. ETags are meant to uniquely identify files by using a number that the server generates. In clusters of servers, each server will create a different number. For example, a browser is sending a **Get**method with an**If-Modified**header field for a file that it found in its cache. If there is only one server, the file will probably match, and a**304 Not-Modified**http status will be sent. But, if the user is accessing a large server farm, it will probably hit a different server with a different entity tag, causing that server to send the file to the browser.
   
     
     
@@ -632,13 +626,13 @@ Use Fiddler or a similar tool to verify whether the cache is serving requests. S
 - The query string constantly changes. 
     
   
-- The sum of  **max-age** cache-control directive plus **last-modified** header results in a date previous to today.
+- The sum of **max-age**cache-control directive plus**last-modified**header results in a date previous to today.
     
   
-- The proxy servers do not support the  **max-age** property.
+- The proxy servers do not support the **max-age**property.
     
   
-- The  **cache-control** header has a value of **no-cache**. A value of **private** caches the resource only for the user that issues the request.
+- The **cache-control**header has a value of**no-cache**. A value of**private**caches the resource only for the user that issues the request.
     
   
 
@@ -681,7 +675,7 @@ Figure 4 shows how the image file is subsequently changed to display as individu
   
     
     
-Manipulation of the images was done entirely through style sheet classes. There were two primary classes used in  **div** and **img** elements in each table cell. Those classes are as follows.
+Manipulation of the images was done entirely through style sheet classes. There were two primary classes used in **div**and**img**elements in each table cell. Those classes are as follows.
   
     
     
@@ -773,11 +767,11 @@ The following table describes customizations that reduce the time that is requir
 **Table 8. Customizations that reduce the time required for the view to render**
 
 
-|**Item **|**Description **|
+|**Item**|**Description**|
 |:-----|:-----|
 |View type |Create a view as a datasheet view instead of a standard view. |
 |View: Item limit |Anything over 1,000 will likely render slowly. Over a slow connection, it is important to experiment to find the right balance between the quantity of data shown at a time and the number of round trips necessary to view all the data. The more rows that display at a time, the fewer round trips, but larger pages. |
-|View: Filter |Use  **[Today]** and **[Me]** keywords to filter items by freshness or assignment. Use Status fields to show only active items in default views.|
+|View: Filter |Use **[Today]**and**[Me]**keywords to filter items by freshness or assignment. Use Status fields to show only active items in default views.|
 |View: Columns |Include the smallest number of columns. Create a default view with few columns that allows high-level browsing after which people can drill down. |
    
 The following table describes customizations that will increase the time that is required for a view to render. Each additional column increases rendering time by a slight amount: up to a half-second per column over a fast network connection for a list of 1,000 items. Some columns increase rendering time more than others, as noted in the table. 
@@ -788,7 +782,7 @@ The following table describes customizations that will increase the time that is
 **Table 9. Customizations that increase the time required for the view to render**
 
 
-|**Item **|**Description **|
+|**Item**|**Description**|
 |:-----|:-----|
 |Group By |Grouping adds HTML and JScript, which slows down rendering for large lists. Making all groups collapsed by default actually increases rendering time further because of additional operations on the browser object model. |
 |Column - title linked to item with edit menu |The option "linked to item with edit menu" takes the longest; the similar option "linked to item" does not increase rendering time noticeably. |

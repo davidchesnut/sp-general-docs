@@ -8,12 +8,6 @@ ms.assetid: ae9d73ed-1140-430b-9287-01dbbe8ae7d1
 
 # Using the SharePoint 2013 search Query APIs
 Learn about the query APIs available in SharePoint 2013 that enable you to add search functionality to custom solutions and applications. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** apps for SharePoint | SharePoint Server 2013* 
 ## SharePoint 2013 Query APIs
 <a name="bk_QueryAPIs"> </a>
 
@@ -43,7 +37,7 @@ Table 1 shows the APIs that you can use to program search queries and the path t
 **Table 1. Search APIs**
 
 
-|**API name **|**Class library or schema and path **|
+|**API name**|**Class library or schema and path**|
 |:-----|:-----|
 |.NET CSOM |Microsoft.SharePoint.Client.Search.dll          %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ISAPI |
 |Silverlight CSOM |Microsoft.SharePoint.Client.Search.Silverlight.dll          %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\LAYOUTS\\ClientBin |
@@ -63,7 +57,7 @@ Search in SharePoint 2013 includes a client object model that enables access to 
   
     
     
-For the .NET managed CSOM, get a  **ClientContext** instance (located in the [Microsoft.SharePoint.Client](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.aspx) namespace in the Microsoft.SharePoint.Client.dll). Then use the object model in the [Microsoft.SharePoint.Search.Client.Query](https://msdn.microsoft.com/library/Microsoft.SharePoint.Search.Client.Query.aspx) namespace in the Microsoft.SharePoint.Search.Client.dll.
+For the .NET managed CSOM, get a **ClientContext**instance (located in the [Microsoft.SharePoint.Client](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.aspx) namespace in the Microsoft.SharePoint.Client.dll). Then use the object model in the [Microsoft.SharePoint.Search.Client.Query](https://msdn.microsoft.com/library/Microsoft.SharePoint.Search.Client.Query.aspx) namespace in the Microsoft.SharePoint.Search.Client.dll.
   
     
     
@@ -124,7 +118,7 @@ To download an example, see the following code sample posted by SharePoint MVP  
 ### Query using the REST service
 <a name="bk_QueryREST"> </a>
 
-SharePoint 2013 includes a REST service that enables you to remotely execute queries against the SharePoint 2013 Search service from client applications by using any technology that supports REST web requests. The Search REST service exposes two endpoints,  **query** and **suggest**, and will support both  **GET** and **POST** operations. Results are returned in either XML or JavaScript Object Notation (JSON) format.
+SharePoint 2013 includes a REST service that enables you to remotely execute queries against the SharePoint 2013 Search service from client applications by using any technology that supports REST web requests. The Search REST service exposes two endpoints, **query**and**suggest**, and will support both **GET**and**POST**operations. Results are returned in either XML or JavaScript Object Notation (JSON) format.
   
     
     
@@ -144,7 +138,7 @@ Applications that use the server object model must run directly on a server that
   
     
     
-As in SharePoint Server 2010, you use the  [KeywordQuery](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.KeywordQuery.aspx) class to define the query, and then called the [Execute()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.Query.Execute.aspx) method to submit the query. In SharePoint 2013, the **Execute** method is obsolete, and while it will still work, you should use the [SearchExecutor](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.SearchExecutor.aspx) class instead. To submit the query, call the [ExecuteQuery()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.SearchExecutor.ExecuteQuery.aspx) method, passing the instance of the **KeywordQuery** class in the call.
+As in SharePoint Server 2010, you use the  [KeywordQuery](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.KeywordQuery.aspx) class to define the query, and then called the [Execute()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.Query.Execute.aspx) method to submit the query. In SharePoint 2013, the**Execute**method is obsolete, and while it will still work, you should use the [SearchExecutor](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.SearchExecutor.aspx) class instead. To submit the query, call the [ExecuteQuery()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.SearchExecutor.ExecuteQuery.aspx) method, passing the instance of the**KeywordQuery**class in the call.
   
     
     

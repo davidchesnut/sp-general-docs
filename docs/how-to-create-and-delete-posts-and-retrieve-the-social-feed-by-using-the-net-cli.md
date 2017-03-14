@@ -1,5 +1,5 @@
 ---
-title: How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint 2013
+title: How to Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: c8d68632-1b55-454c-961a-f3ddad731bf6
 ---
@@ -7,12 +7,6 @@ ms.assetid: c8d68632-1b55-454c-961a-f3ddad731bf6
 
 # How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint 2013
 Learn how to create and delete microblog posts and retrieve social feeds by using the SharePoint 2013 .NET client object model. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## What are social feeds in SharePoint Server 2013?
 <a name="bk_intro"> </a>
 
@@ -39,11 +33,11 @@ To create a console application that uses the .NET client object model to work w
 - Visual Studio 2012 
     
   
--  **Full Control** access permissions to the User Profile service application for the logged-on user
+- **Full Control**access permissions to the User Profile service application for the logged-on user
     
   
 
-> [!Note]  
+> [!NOTE]  
 > If you are not developing on the computer that is running SharePoint Server 2013, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint 2013 client assemblies.
   
     
@@ -54,30 +48,30 @@ To create a console application that uses the .NET client object model to work w
 <a name="bk_createconsole"> </a>
 
 
-1. Open Visual Studio and choose  **File**,  **New**,  **Project**. 
+1. Open Visual Studio and choose **File**, **New**, **Project**. 
     
   
-2. In the  **New Project** dialog box, choose **.NET Framework 4.5** from the drop-down list at the top of the dialog box.
+2. In the **New Project**dialog box, choose**.NET Framework 4.5**from the drop-down list at the top of the dialog box.
     
   
-3. In the  **Templates** list, choose **Windows**, and then choose the  **Console Application** template.
+3. In the **Templates**list, choose**Windows**, and then choose the **Console Application**template.
     
   
-4. Name the project SocialFeedCSOM, and then choose the  **OK** button.
+4. Name the project SocialFeedCSOM, and then choose the **OK**button.
     
   
 5. Add references to the following assemblies: 
     
-  -  **Microsoft.SharePoint.Client**
+  - **Microsoft.SharePoint.Client**
     
   
-  -  **Microsoft.SharePoint.ClientRuntime**
+  - **Microsoft.SharePoint.ClientRuntime**
     
   
-  -  **Microsoft.SharePoint.Client.UserProfiles**
+  - **Microsoft.SharePoint.Client.UserProfiles**
     
   
-6. Replace the contents of the  **Program** class with the code example from one of the following scenarios:
+6. Replace the contents of the **Program**class with the code example from one of the following scenarios:
     
   -  [Publish posts and replies to the social feed](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md#bkmk_PubPosts)
     
@@ -88,7 +82,7 @@ To create a console application that uses the .NET client object model to work w
   -  [Delete posts and replies from the social feed](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md#bkmk_DeletePosts)
     
   
-7. To test the console application, on the menu bar, choose  **Debug**,  **Start Debugging**. 
+7. To test the console application, on the menu bar, choose **Debug**, **Start Debugging**. 
     
   
 
@@ -103,7 +97,7 @@ The following code example publishes a post and a reply from the current user. I
 - Define post content. This example includes a link in the post. 
     
   
-- Publish a post to the current user's feed by using the  [CreatePost](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.CreatePost.aspx) method and passing **null** as the _targetId_ parameter.
+- Publish a post to the current user's feed by using the  [CreatePost](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.CreatePost.aspx) method and passing**null**as the _targetId_ parameter.
     
   
 - Get the  [News](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedType.News.aspx) feed type for the current user by using the [GetFeed](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.GetFeed.aspx) method.
@@ -116,8 +110,8 @@ The following code example publishes a post and a reply from the current user. I
     
   
 
-> [!Note]  
-> Change the placeholder value for the  **serverUrl** variable before you run the code.
+> [!NOTE]  
+> Change the placeholder value for the **serverUrl**variable before you run the code.
   
     
     
@@ -244,8 +238,8 @@ For more information about feed types, see  [Overview of feed types](work-with-s
     
     
 
-> [!Note]  
-> Change the placeholder values for the  **serverUrl** and **targetUser** variables before you run the code.
+> [!NOTE]  
+> Change the placeholder values for the **serverUrl**and**targetUser**variables before you run the code.
   
     
     
@@ -368,8 +362,8 @@ The following code example deletes a post or a reply from the current user's per
     
   
 
-> [!Note]  
-> Change the placeholder value for the  **serverUrl** variable before you run the code.
+> [!NOTE]  
+> Change the placeholder value for the **serverUrl**variable before you run the code.
   
     
     

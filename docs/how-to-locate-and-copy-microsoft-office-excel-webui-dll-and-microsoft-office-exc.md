@@ -1,5 +1,5 @@
 ---
-title: How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll
+title: How to Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll
 keywords: how to,howdoi,howto,WebUI DLL
 f1_keywords:
 - how to,howdoi,howto,WebUI DLL
@@ -10,12 +10,6 @@ ms.assetid: 09ad5d5e-1678-45e4-8159-23ef56f84215
 
 # How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll
 
- **Last modified:** July 20, 2011
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 If you want to programmatically add an Excel Web Access Web Part to a SharePoint page and programmatically change the Excel Web Access Web Part, you must add a reference to the required SharePoint DLLs. For example: 
   
     
@@ -31,7 +25,13 @@ If you want to programmatically add an Excel Web Access Web Part to a SharePoint
 - Microsoft.SharePoint.dll 
     
   
-On the computer running Microsoft SharePoint Server 2010, you can find a copy of Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll in the global assembly cache. Before you can add a reference to Microsoft.Office.Excel.WebUI.dll by using the  **Add Reference** dialog box in Microsoft Visual Studio, you must first copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll from the global assembly cache to a folder. Then, you can use the **Browse** tab in the **Add Reference** dialog box to browse to the folder that contains the copy of Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll.The following steps show how to: 
+
+On the computer running Microsoft SharePoint Server 2010, you can find a copy of Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll in the global assembly cache. Before you can add a reference to Microsoft.Office.Excel.WebUI.dll by using the **Add Reference**dialog box in Microsoft Visual Studio, you must first copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll from the global assembly cache to a folder. Then, you can use the**Browse**tab in the**Add Reference**dialog box to browse to the folder that contains the copy of Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll.
+  
+    
+    
+
+The following steps show how to: 
 - Locate Microsoft.Office.Excel.WebUI.dll. 
     
   
@@ -39,7 +39,7 @@ On the computer running Microsoft SharePoint Server 2010, you can find a copy of
     
   
 
-> [!Note]  
+> [!NOTE]  
 > Repeat the steps to copy Microsoft.Office.Excel.WebUI.Internal.dll from the global assembly cache to a folder. 
   
     
@@ -49,17 +49,17 @@ On the computer running Microsoft SharePoint Server 2010, you can find a copy of
 ### To locate Microsoft.Office.Excel.WebUI.dll
 
 
-1. To start the command-prompt console, click  **Start**, and then click  **Run**. 
+1. To start the command-prompt console, click **Start**, and then click **Run**. 
     
   
-2. In the  **Open** field text box, typecmd. 
+2. In the **Open**field text box, typecmd. 
     
     The command-prompt console appears. 
     
   
-3. Use the  **cd** command to navigate to the "C:\\Windows\\assembly" directory:
+3. Use the **cd**command to navigate to the "C:\\Windows\\assembly" directory:
     
-    > [!Note]  
+    > [!NOTE]  
 > The directory structure on your computer might be slightly different. This example uses a computer that has Windows Server 2008 installed. 
 
   ```
@@ -67,7 +67,7 @@ On the computer running Microsoft SharePoint Server 2010, you can find a copy of
 cd C:\\Windows\\assembly
   ```
 
-4. Use the  **dir** command to display the contents of the "C:\\Windows\\assembly" directory:
+4. Use the **dir**command to display the contents of the "C:\\Windows\\assembly" directory:
     
   ```
   C:\\Windows\\assembly>dir
@@ -97,14 +97,14 @@ cd C:\\Windows\\assembly
               10 Dir(s)  104,032,665,600 bytes free
   ```
 
-5. Use the  **cd** command again to change the directory and navigate to the gac_msil directory:
+5. Use the **cd**command again to change the directory and navigate to the gac_msil directory:
     
   ```
   
 C:\\Windows\\assembly>cd gac_msil
   ```
 
-6. Use the  **dir** command to display the content of the "C:\\Windows\\assembly\\GAC_MSIL" directory:
+6. Use the **dir**command to display the content of the "C:\\Windows\\assembly\\GAC_MSIL" directory:
     
   ```
   C:\\Windows\\assembly\\GAC_MSIL>dir
@@ -138,14 +138,14 @@ Directory of C:\\Windows\\assembly\\GAC_MSIL
 ### To copy Microsoft.Office.Excel.WebUI.dll
 
 
-1. Use the  **cd** command again to change the directory to "Microsoft.Office.Excel.WebUI":
+1. Use the **cd**command again to change the directory to "Microsoft.Office.Excel.WebUI":
     
   ```
   
 C:\\Windows\\assembly\\GAC_MSIL>cd Microsoft.Office.Excel.WebUI 
   ```
 
-2. Use the  **dir** command to display the contents:
+2. Use the **dir**command to display the contents:
     
   ```
   C:\\Windows\\assembly\\GAC_MSIL\\Microsoft.Office.Excel.WebUI>dir
@@ -167,14 +167,14 @@ Directory of C:\\Windows\\assembly\\GAC_MSIL\Microsoft.Office.Excel.WebUI
                3 Dir(s)  104,006,115,328 bytes free
   ```
 
-3. Use the  **cd** command again to change the directory:
+3. Use the **cd**command again to change the directory:
     
   ```
   
 C:\\Windows\\assembly\\GAC_MSIL\\Microsoft.Office.Excel.WebUI>cd 14.0.0.0__71e9bce111e9429c
   ```
 
-4. Use the  **copy** command to copy Microsoft.Office.Excel.WebUI.dll to a folder of your choice.
+4. Use the **copy**command to copy Microsoft.Office.Excel.WebUI.dll to a folder of your choice.
     
     In the following example, Microsoft.Office.Excel.WebUI.dll is copied to "C:\\WebUIAssembly", where "C:\\WebUIAssembly" is a folder that you created previously: 
     

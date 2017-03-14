@@ -7,16 +7,10 @@ ms.assetid: 72319846-d02d-49e7-b830-48eb8f5715cb
 
 # Overview of the SharePoint 2013 mobile object model
 Learn about the new public classes in the SharePoint 2013 server object model and Silverlight client object model that are used to develop integrated solutions for SharePoint 2013 and Windows Phone 7.5. 
- **Last modified:** January 06, 2016
-  
-    
-    
-
- * **Applies to:** SharePoint Foundation 2013 | SharePoint Server 2013* 
 ## Client object model for mobile Silverlight
 <a name="SP15OM_ClientOM"> </a>
 
-All classes in this section are in the  **Microsoft.SharePoint.Client** namespace. In addition to the APIs in this section, most of the classes and members in the section Server Object Model for SharePoint Mobility are also callable in the client object model. For classes that begin with "SP", the client object model name has the "SP" removed. In other cases, the client object model name is specified. Member names are the same in the client object model except where specified otherwise.
+All classes in this section are in the **Microsoft.SharePoint.Client**namespace. In addition to the APIs in this section, most of the classes and members in the section Server Object Model for SharePoint Mobility are also callable in the client object model. For classes that begin with "SP", the client object model name has the "SP" removed. In other cases, the client object model name is specified. Member names are the same in the client object model except where specified otherwise.
   
     
     
@@ -36,7 +30,7 @@ public class AlternateUrl
 
 #### Properties
 
- **Uri** (read-only)
+**Uri**(read-only)
   
     
     
@@ -51,7 +45,7 @@ Gets the URI of the alternate URL.
 public String Uri
 ```
 
- **UrlZone** (read-only)
+**UrlZone**(read-only)
   
     
     
@@ -73,7 +67,7 @@ The UrlZone class is the client object model version of the SPUrlZone class in t
 
 ### AuthenticationCompletedEventArgs class
 
-Provides data about an  **AuthenticationCompleted** event.
+Provides data about an **AuthenticationCompleted**event.
   
     
     
@@ -96,7 +90,7 @@ Initializes a new instance of the AuthenticationCompletedEventArgs class.
 public AuthenticationCompletedEventArgs(Exception error, bool canceled, HttpStatusCode userState)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -113,7 +107,7 @@ public AuthenticationCompletedEventArgs(Exception error, bool canceled, HttpStat
 
 #### Properties
 
- **HttpStatusCode** (read-only)
+**HttpStatusCode**(read-only)
   
     
     
@@ -136,16 +130,16 @@ Specifies the current state of an authentication attempt.
     
     
 
--  **NotStarted**
+- **NotStarted**
     
   
--  **InProgress**
+- **InProgress**
     
   
--  **CompletedSuccess**
+- **CompletedSuccess**
     
   
--  **CompletedException**
+- **CompletedException**
     
   
 
@@ -174,7 +168,7 @@ public Authenticator()
 public Authenticator(Uri uagServerUrl)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -190,7 +184,7 @@ public Authenticator(Uri uagServerUrl)
 public Authenticator(string userName, string password)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -209,7 +203,7 @@ public Authenticator(string userName, string password)
 public Authenticator(string userName, string password, string domain)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -232,7 +226,7 @@ public Authenticator(string userName, string password, string domain)
 public Authenticator(string userName, string password, Uri uagServerUrl)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -255,7 +249,7 @@ public Authenticator(string userName, string password, Uri uagServerUrl)
 public Authenticator(string userName, string password, string domain, Uri uagServerUrl)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -278,7 +272,7 @@ public Authenticator(string userName, string password, string domain, Uri uagSer
 
 #### Methods
 
- **ClearAllApplicationSettings**
+**ClearAllApplicationSettings**
   
     
     
@@ -293,11 +287,11 @@ Clears all cookies, credentials, and UAG settings from the cache.
 public static void ClearAllApplicationSettings
 ```
 
- **ClearAllCookies**
+**ClearAllCookies**
   
     
     
-Clears all stored cookies and sets the  **Status** property of all **Authenticator** objects to **NotStarted**. 
+Clears all stored cookies and sets the **Status**property of all**Authenticator**objects to**NotStarted**. 
   
     
     
@@ -308,11 +302,11 @@ Clears all stored cookies and sets the  **Status** property of all **Authenticat
 public static void ClearAllCookies()
 ```
 
- **ClearAllCredentials**
+**ClearAllCredentials**
   
     
     
-Clears all credentials from the cache and sets the  **Status** property of all **Authenticator** objects to **NotStarted**. 
+Clears all credentials from the cache and sets the **Status**property of all**Authenticator**objects to**NotStarted**. 
   
     
     
@@ -323,7 +317,7 @@ Clears all credentials from the cache and sets the  **Status** property of all *
 public static void ClearAllCredentials()
 ```
 
- **GetCredential**
+**GetCredential**
   
     
     
@@ -338,7 +332,7 @@ Gets a credential object for the specified uri and authentication type.
 public NetworkCredential GetCredential(Uri uri, string authType)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -349,11 +343,11 @@ public NetworkCredential GetCredential(Uri uri, string authType)
 -  _authType_ is the type of authentication requested.
     
   
-This method is only used for anonymous authentication. If  _authType_ is not "Basic", an empty object is returned. For more information about the **NetworkCredential** class, see [NetworkCredential Class](http://msdn.microsoft.com/en-us/library/system.net.networkcredential.aspx). 
+This method is only used for anonymous authentication. If  _authType_ is not "Basic", an empty object is returned. For more information about the**NetworkCredential**class, see [NetworkCredential Class](http://msdn.microsoft.com/en-us/library/system.net.networkcredential.aspx). 
   
     
     
- **IsRequestUnauthorized**
+**IsRequestUnauthorized**
   
     
     
@@ -371,7 +365,7 @@ public static bool IsRequestUnauthorized(ClientRequestFailedEventArgs failedEven
 
 #### Properties
 
- **AllowSmartRouting**
+**AllowSmartRouting**
   
     
     
@@ -386,11 +380,11 @@ Gets or sets an indicator of whether smart routing is enabled.
 public bool AllowSmartRouting
 ```
 
-When smart routing is enabled, the  **Authenticator** object tries to connect to the server that is running SharePoint and the UAG server and uses whichever responds first as its communication channel. If there is no UAG server, this property is ignored. The default is **true**. If set to  **false**, the UAG server is always used. 
+When smart routing is enabled, the **Authenticator**object tries to connect to the server that is running SharePoint and the UAG server and uses whichever responds first as its communication channel. If there is no UAG server, this property is ignored. The default is**true**. If set to **false**, the UAG server is always used. 
   
     
     
- **AuthenticatorMode**
+**AuthenticatorMode**
   
     
     
@@ -405,11 +399,11 @@ Gets or sets the authentication mode.
 public ClientAuthenticationMode AuthenticationMode
 ```
 
-For more information about the  **ClientAuthenticationMode** enum, see later in this document.
+For more information about the **ClientAuthenticationMode**enum, see later in this document.
   
     
     
- **CookieCachingEnabled**
+**CookieCachingEnabled**
   
     
     
@@ -424,7 +418,7 @@ Gets or sets an indicator of whether cookies are cached.
 public bool CookieCachingEnabled
 ```
 
-If you enable caching of cookies, consider that the cookies expire at some point. If they are expired when  **ExecuteQueryAsync** is called, then it fails and the callback for failure runs. Accordingly, if you set this property to true, you must add code to the callback for failure that clears the cache if this happens. Here is an example, where `execQueryArgs` is of the type **ClientRequestFailedEventArgs** passed in the failure callback of **ExecuteQueryAsync**. 
+If you enable caching of cookies, consider that the cookies expire at some point. If they are expired when **ExecuteQueryAsync**is called, then it fails and the callback for failure runs. Accordingly, if you set this property to true, you must add code to the callback for failure that clears the cache if this happens. Here is an example, where `execQueryArgs` is of the type**ClientRequestFailedEventArgs**passed in the failure callback of**ExecuteQueryAsync**. 
   
     
     
@@ -438,7 +432,7 @@ if (Authenticator.IsRequestUnauthorized(execQueryArgs))
 }
 ```
 
- **CredentialCachingEnabled**
+**CredentialCachingEnabled**
   
     
     
@@ -454,7 +448,7 @@ Gets or sets an indicator of whether credentials are cached.
 public bool CredentialCachingEnabled
 ```
 
- **Domain**
+**Domain**
   
     
     
@@ -469,11 +463,11 @@ Gets or sets the domain or computer for the credential, usually this is the doma
 public string Domain
 ```
 
-When this property is set to a new value, the  **Status** property is set to NotStarted.
+When this property is set to a new value, the **Status**property is set to NotStarted.
   
     
     
- **NavigateBackAfterAuthentication**
+**NavigateBackAfterAuthentication**
   
     
     
@@ -488,7 +482,7 @@ Gets or sets a indicator of whether the user should be navigated back to the pre
 public bool NavigateBackAfterAuthentication
 ```
 
- **Password**
+**Password**
   
     
     
@@ -503,11 +497,11 @@ Gets or sets the password for the credential.
 public string Password
 ```
 
-When this property is set to a new value, the  **Status** property is set to **NotStarted**. 
+When this property is set to a new value, the **Status**property is set to**NotStarted**. 
   
     
     
- **PromptOnFailure**
+**PromptOnFailure**
   
     
     
@@ -522,7 +516,7 @@ Gets or sets an indicator of whether the user should be prompted to enter a name
 public bool PromptOnFailure
 ```
 
- **Status** (read-only)
+**Status**(read-only)
   
     
     
@@ -537,11 +531,11 @@ Gets the status of the attempt to authenticate.
 public AuthenticationStatus Status
 ```
 
-See earlier in this document for information about the  **AuthenticationStatus** class.
+See earlier in this document for information about the **AuthenticationStatus**class.
   
     
     
- **UagServerUrl**
+**UagServerUrl**
   
     
     
@@ -556,7 +550,7 @@ Gets or sets the URL of the UAG server.
 public Uri UagServerUrl
 ```
 
- **UserName**
+**UserName**
   
     
     
@@ -571,14 +565,14 @@ Gets or sets the user name for the credential.
 public string UserName
 ```
 
-When this property is set to a new value, the  **Status** property is set to **NotStarted**. 
+When this property is set to a new value, the **Status**property is set to**NotStarted**. 
   
     
     
 
 #### Events
 
- **AuthenticationCompleted**
+**AuthenticationCompleted**
   
     
     
@@ -596,13 +590,13 @@ public event EventHandler<AuthenticationCompletedEventArgs> AuthenticationComple
 
 ### ClientAuthenticationMode enum
 
-Specifies an authentication mode for an  **Authenticator** object. This is an existing enum to which a new value, **BrowserBasedAuthentication** has been added.
+Specifies an authentication mode for an **Authenticator**object. This is an existing enum to which a new value,**BrowserBasedAuthentication**has been added.
   
     
     
 
 
-|**Default **||
+|**Default**||
 |:-----|:-----|
 |**FormsAuthentication**|Represents forms-based authentication mode |
 |**Anonymous**|Represents anonymous access mode |
@@ -630,7 +624,7 @@ The constructors are identical to the parent class constructors. For more inform
 
 #### Methods
 
- **Authenticate**
+**Authenticate**
   
     
     
@@ -652,7 +646,7 @@ The  `new` keyword is used because the parent class has an internal method of th
 
 #### Properties
 
- **CookieContainer** (read-only)
+**CookieContainer**(read-only)
   
     
     
@@ -671,11 +665,11 @@ The  `new` keyword is used because the parent class has an internal method of th
   
     
     
- **ResolvedUrl** (read-only)
+**ResolvedUrl**(read-only)
   
     
     
-Gets the URL that is used for communication to the server that is running SharePoint when an  **ODataAuthenticator** is being used. This may be the URL published on the UAG server or, if the **AllowSmartRouting** property is true, this may be the SharePoint intranet URL if it is reached first when the **Authenticate** method is called.
+Gets the URL that is used for communication to the server that is running SharePoint when an **ODataAuthenticator**is being used. This may be the URL published on the UAG server or, if the**AllowSmartRouting**property is true, this may be the SharePoint intranet URL if it is reached first when the**Authenticate**method is called.
   
     
     
@@ -701,7 +695,7 @@ public static class ServerSettings
 
 #### Methods
 
- **GetAlternateUrls**
+**GetAlternateUrls**
   
     
     
@@ -716,7 +710,7 @@ Gets the alternate URLs of the specified website.
 public static ClientObjectList<AlternateUrl> GetAlternateUrls(ClientRuntimeContext context)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -724,7 +718,7 @@ public static ClientObjectList<AlternateUrl> GetAlternateUrls(ClientRuntimeConte
   
     
     
-See earlier in this document for information about the  **AlternateUrl** class.
+See earlier in this document for information about the **AlternateUrl**class.
   
     
     
@@ -732,7 +726,7 @@ See earlier in this document for information about the  **AlternateUrl** class.
 ## Server object model for SharePoint mobility
 <a name="SP15OM_ServerOM"> </a>
 
-All classes in this section are in the  **Microsoft.SharePoint** namespace. Except where specified, these are all available also in the client object model. For classes that begin with "SP", the client object model name has the "SP" removed. In other cases, the client object model name is specified. Member names are the same in the client object model except where specified otherwise.
+All classes in this section are in the **Microsoft.SharePoint**namespace. Except where specified, these are all available also in the client object model. For classes that begin with "SP", the client object model name has the "SP" removed. In other cases, the client object model name is specified. Member names are the same in the client object model except where specified otherwise.
   
     
     
@@ -743,7 +737,7 @@ All classes in this section are in the  **Microsoft.SharePoint** namespace. Exce
   
     
     
-Governs the rendering of  **SPFieldGeolocation** fields. An object of this type is used as the value of the **FieldRenderingControl** property of a **SPFieldGeolocation** object.
+Governs the rendering of **SPFieldGeolocation**fields. An object of this type is used as the value of the**FieldRenderingControl**property of a**SPFieldGeolocation**object.
   
     
     
@@ -782,12 +776,12 @@ No non-derived public properties are introduced with this class. There are stand
     
 
 
-|**Method **|**This override… **|
+|**Method**|**This override…**|
 |:-----|:-----|
 |CreateChildControls |Creates the child controls including a JavaScript map control for Display mode. |
 |Focus |Gives focus to the longitude textbox child control. |
 |OnPreRender |Calls the base method. |
-|Validate |Validates the latitude and longitude values that appear in the user interface (UI). This does not validate the  **Longitude** and **Latitude** properties of the underlying **SPFieldGeolocatonValue** object, which will differ if the user has changed one or more of these values in the UI and not yet saved the changes.|
+|Validate |Validates the latitude and longitude values that appear in the user interface (UI). This does not validate the **Longitude**and**Latitude**properties of the underlying**SPFieldGeolocatonValue**object, which will differ if the user has changed one or more of these values in the UI and not yet saved the changes.|
    
 
 #### Properties
@@ -798,12 +792,12 @@ No non-derived public properties are introduced with this class. There are stand
     
 
 
-|**Property **|**This override... **|
+|**Property**|**This override...**|
 |:-----|:-----|
 |CssClass |Behaves just like the parent implementation. |
 |DefaultTemplateName |Returns "GeolocationField" |
 |DisplayTemplateName |Returns "GeolocationDisplayField" |
-|Value |Gets or sets the value that is rendered by using a  **SPFieldGeolocationValue** object.|
+|Value |Gets or sets the value that is rendered by using a **SPFieldGeolocationValue**object.|
    
 
 ### SPFieldGeolocation class
@@ -818,14 +812,14 @@ Represents a field (column) that holds a location on the globe defined by longit
 public class SPFieldGeolocation : SPField
 ```
 
-In connection with this class, the  **Geolocation** field type is defined in % _SHAREPOINTROOT%_\\TEMPLATE\\XML\\fldtypes.xml. 
+In connection with this class, the **Geolocation**field type is defined in % _SHAREPOINTROOT%_\\TEMPLATE\\XML\\fldtypes.xml. 
   
     
     
 
 #### Constructors (overloaded)
 
-Initializes a new instance of the  **SPFieldGeolocation** class.
+Initializes a new instance of the **SPFieldGeolocation**class.
   
     
     
@@ -835,7 +829,7 @@ public SPFieldGeolocation(SPFieldCollection fields, string fieldName)
 public SPFieldGeolocation(SPFieldCollection fields, string fieldName, string displayName)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -852,7 +846,7 @@ public SPFieldGeolocation(SPFieldCollection fields, string fieldName, string dis
 
 #### Methods
 
- **GetFieldValueForClientRender**
+**GetFieldValueForClientRender**
   
     
     
@@ -879,7 +873,7 @@ Parameters
 -  _mode_ is the current rendering mode such as New, Edit, or Display.
     
   
- **GetJsonClientFormFieldSchema**
+**GetJsonClientFormFieldSchema**
   
     
     
@@ -894,7 +888,7 @@ Gets the field schema as JavaScript Object Notation (JSON).
 public override Dictionary<string, object> GetJsonClientFormFieldSchema(SPControlMode mode)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -902,11 +896,11 @@ public override Dictionary<string, object> GetJsonClientFormFieldSchema(SPContro
   
     
     
- **ValidateAndParseValue**
+**ValidateAndParseValue**
   
     
     
-Verifies that the specified list item is not null and then verifies that the string is structured in compliance with Open Geospatial Consortium (OGC) standards and returns it as an object that is castable to the  **SPFieldGeolocationValue** type.
+Verifies that the specified list item is not null and then verifies that the string is structured in compliance with Open Geospatial Consortium (OGC) standards and returns it as an object that is castable to the **SPFieldGeolocationValue**type.
   
     
     
@@ -917,7 +911,7 @@ Verifies that the specified list item is not null and then verifies that the str
 public override object ValidateAndParseValue(SPListItem item, string value)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -934,7 +928,7 @@ The following methods are standard overrides of inherited methods that were in S
     
 
 
-|**Method **|**This override... **|
+|**Method**|**This override...**|
 |:-----|:-----|
 |GetFieldValue(String s) |Returns the specified value as an Object that is castable to SPFieldGeolocationValue. |
 |GetFieldValueAsText(Object o) |Wraps GetValidatedString. |
@@ -943,16 +937,16 @@ The following methods are standard overrides of inherited methods that were in S
 
 #### Properties
 
- **JSLink**
+**JSLink**
   
     
     
-Gets or sets the name of the JavaScript file that renders the fields of the  **SPFieldGeolocation** type.
+Gets or sets the name of the JavaScript file that renders the fields of the **SPFieldGeolocation**type.
   
     
     
 
-> [!Note]  
+> [!NOTE]  
 > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
   
     
@@ -969,11 +963,11 @@ The default value is "clienttemplates.js|Geolocationfieldtemplate.js|sp.map.js".
   
     
     
- **FieldRenderingMobileWebControl**
+**FieldRenderingMobileWebControl**
   
     
     
-Gets the  **SPMobileGeolocationField** object that renders the field.
+Gets the **SPMobileGeolocationField**object that renders the field.
   
     
     
@@ -984,7 +978,7 @@ Gets the  **SPMobileGeolocationField** object that renders the field.
 public override SPMobileBaseFieldControl FieldRenderingMobileControl
 ```
 
-This property replaces the obsolete  **FieldRenderingMobileControl**. 
+This property replaces the obsolete **FieldRenderingMobileControl**. 
   
     
     
@@ -994,13 +988,13 @@ The other properties are standard overrides of inherited properties that were in
     
 
 
-|**Property **|**The override... **|
+|**Property**|**The override...**|
 |:-----|:-----|
-|FieldValueType |Returns  **typeof(SPFieldGeolocationValue)**. |
-|FieldRenderingControl |Returns a  **GeolocationFieldControl** object.|
-|Filterable |Returns  **false**. |
-|Sortable |Returns  **false**. |
-|[Obsolete] FieldRenderingMobileControl |Returns a  **SPMobileGeolocationField** object.|
+|FieldValueType |Returns **typeof(SPFieldGeolocationValue)**. |
+|FieldRenderingControl |Returns a **GeolocationFieldControl**object.|
+|Filterable |Returns **false**. |
+|Sortable |Returns **false**. |
+|[Obsolete] FieldRenderingMobileControl |Returns a **SPMobileGeolocationField**object.|
    
 
 ### SPFieldGeolocationValue class
@@ -1017,7 +1011,7 @@ public class SPFieldGeolocationValue : SPFieldGeographyValue
 
 #### Constructors (overloaded)
 
-Initializes a new instance of the  **SPFieldGeolocationValue** class.
+Initializes a new instance of the **SPFieldGeolocationValue**class.
   
     
     
@@ -1030,7 +1024,7 @@ public SPFieldGeolocationValue(double latitude, double longitude, double altitud
 
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -1052,17 +1046,17 @@ public SPFieldGeolocationValue(double latitude, double longitude, double altitud
 -  _altitude_ is the altitude.
     
   
--  _measure_ is an alternate designation of the point. See the **Measure** property later in this section for more information.
+-  _measure_ is an alternate designation of the point. See the**Measure**property later in this section for more information.
     
   
 
 #### Methods
 
- **ToString**
+**ToString**
   
     
     
-This override returns one of the following, depending on whether the  **Altitude** or **Measure** properties have been assigned a non-null value.
+This override returns one of the following, depending on whether the **Altitude**or**Measure**properties have been assigned a non-null value.
   
     
     
@@ -1072,9 +1066,9 @@ This override returns one of the following, depending on whether the  **Altitude
     "Point( _longitude_ _latitude_)", where  _longitude_ and _latitude_ are strings of one or more numerals, optionally including one period (which is interpreted as a decimal point) and optionally beginning with a hyphen (which is interpreted as a negative sign).
     
   
-- Otherwise (at least one of  **Altitude** or **Measure** have been assigned a non-null value):
+- Otherwise (at least one of **Altitude**or**Measure**have been assigned a non-null value):
     
-    "Point(longitude latitude altitude measure)", where  _longitude_,  _latitude_,  _altitude_, and  _measure_ are strings of one or more numerals, optionally including one period (which is interpreted as a decimal point) and optionally beginning with a hyphen (which is interpreted as a negative sign). If either **Altitude** or **Measure** has not been assigned a non-null value, it is reported as "0" in the value of the **WellKnownText** property. The converse does not hold: if either **Altitude** or **Measure** is reported as 0, that might be because it was never assigned a non-null value, but it might be because it was assigned 0.
+    "Point(longitude latitude altitude measure)", where  _longitude_,  _latitude_,  _altitude_, and  _measure_ are strings of one or more numerals, optionally including one period (which is interpreted as a decimal point) and optionally beginning with a hyphen (which is interpreted as a negative sign). If either**Altitude**or**Measure**has not been assigned a non-null value, it is reported as "0" in the value of the**WellKnownText**property. The converse does not hold: if either**Altitude**or**Measure**is reported as 0, that might be because it was never assigned a non-null value, but it might be because it was assigned 0.
     
   
 
@@ -1085,11 +1079,11 @@ This override returns one of the following, depending on whether the  **Altitude
 public override string ToString()
 ```
 
- **ToWellKnownText**
+**ToWellKnownText**
   
     
     
-Wraps  **ToString**. 
+Wraps **ToString**. 
   
     
     
@@ -1103,7 +1097,7 @@ public string ToWellKnownText()
 
 #### Properties
 
- **Altitude**
+**Altitude**
   
     
     
@@ -1118,7 +1112,7 @@ Gets or sets the altitude of the location. Use of this property is optional and 
 public double Altitude
 ```
 
- **Latitude**
+**Latitude**
   
     
     
@@ -1137,7 +1131,7 @@ The value must be between -90.0 and 90.0.
   
     
     
- **Longitude**
+**Longitude**
   
     
     
@@ -1156,7 +1150,7 @@ The value must be between -180.0 and 180.0..
   
     
     
- **Measure**
+**Measure**
   
     
     
@@ -1186,7 +1180,7 @@ Geolocation
 
 ### SPPhoneNotificationContent class
 
-A base class for classes that represent the content of a phone notification. Derived classes must declare one or more fields or properties to hold the content and must implement the  **PreparePayload** method to transform the content into a byte array.
+A base class for classes that represent the content of a phone notification. Derived classes must declare one or more fields or properties to hold the content and must implement the **PreparePayload**method to transform the content into a byte array.
   
     
     
@@ -1198,7 +1192,7 @@ public abstract class SPPhoneNotificationContent
 
 #### Methods
 
- **PreparePayload**
+**PreparePayload**
   
     
     
@@ -1216,7 +1210,7 @@ protected internal abstract byte[] PreparePayload();
 
 #### Properties
 
- **NotificationType** (read-only)
+**NotificationType**(read-only)
   
     
     
@@ -1232,11 +1226,11 @@ public SPPhoneNotificationType NotificationType
 
 ```
 
-For information about the  **SPPhoneNotificationType**, see later in this document. 
+For information about the **SPPhoneNotificationType**, see later in this document. 
   
     
     
- **SubscriberType** (read-only)
+**SubscriberType**(read-only)
   
     
     
@@ -1252,7 +1246,7 @@ Gets the type of the subscriber's device, for example, a Windows Phone.
 public SPPhoneNotificationSubscriberType SubscriberType
 ```
 
-For information about the  **SPPhoneNotificationSubscriberType**, see later in this document. 
+For information about the **SPPhoneNotificationSubscriberType**, see later in this document. 
   
     
     
@@ -1271,11 +1265,11 @@ public class SPPhoneNotificationResponse
 
 #### Methods
 
- **Create**
+**Create**
   
     
     
-Creates an  **SPPhoneNotificationResponse** object.
+Creates an **SPPhoneNotificationResponse**object.
   
     
     
@@ -1288,7 +1282,7 @@ Create(SPPhoneNotificationSubscriberType subscriberType,
 SPPhoneNotificationType notificationType, HttpWebResponse response)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -1302,14 +1296,14 @@ SPPhoneNotificationType notificationType, HttpWebResponse response)
 -  _response_ is the HTTP response object that was generated by the server.
     
   
-For more information about  **SPPhoneNotificationSubscriberType** and **SPPhoneNotificationType**, see later in this document. 
+For more information about **SPPhoneNotificationSubscriberType**and**SPPhoneNotificationType**, see later in this document. 
   
     
     
 
 #### Properties
 
- **NotificationType** (read-only)
+**NotificationType**(read-only)
   
     
     
@@ -1329,7 +1323,7 @@ For information about the SPPhoneNotificationType, see later in this document.
   
     
     
- **ServiceToken** (read-only)
+**ServiceToken**(read-only)
   
     
     
@@ -1344,11 +1338,11 @@ Gets the token of the notification service that was used in the notification.
 public string ServiceToken
 ```
 
- **StatusCode** (read-only)
+**StatusCode**(read-only)
   
     
     
-Gets the HTTP status code. A string version of a  **HttpStatusCode** value.
+Gets the HTTP status code. A string version of a **HttpStatusCode**value.
   
     
     
@@ -1359,7 +1353,7 @@ Gets the HTTP status code. A string version of a  **HttpStatusCode** value.
 public string StatusCode
 ```
 
- **SubscriberType**
+**SubscriberType**
   
     
     
@@ -1374,11 +1368,11 @@ Gets or sets the type of device to which the notification was sent.
 public SPPhoneNotificationSubscriberType SubscriberType
 ```
 
-For information about the  **SPPhoneNotificationSubscriberType**, see later in this document. 
+For information about the **SPPhoneNotificationSubscriberType**, see later in this document. 
   
     
     
- **TimeStamp** (read-only)
+**TimeStamp**(read-only)
   
     
     
@@ -1423,7 +1417,7 @@ Sends the specified notification content to the subscriber with error checking.
 public SPPhoneNotificationResponse Notify(SPPhoneNotificationContent notificationContent)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -1431,15 +1425,15 @@ public SPPhoneNotificationResponse Notify(SPPhoneNotificationContent notificatio
   
     
     
-This method cannot be overridden. It wraps the abstract  **NotifyInternal** method and ensures that certain error checking is done when **NotifyInternal** is called.
+This method cannot be overridden. It wraps the abstract **NotifyInternal**method and ensures that certain error checking is done when**NotifyInternal**is called.
   
     
     
-For more information about the  **SPPhoneNotificationContent** and **SPPhoneNotificationResponse** classes, see earlier in this document.
+For more information about the **SPPhoneNotificationContent**and**SPPhoneNotificationResponse**classes, see earlier in this document.
   
     
     
- **NotifyInternal**
+**NotifyInternal**
   
     
     
@@ -1454,7 +1448,7 @@ When overridden in a derived class, sends the specified notification content to 
 protected abstract SPPhoneNotificationResponse NotifyInternal(SPPhoneNotificationContent notificationContent);
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -1462,11 +1456,11 @@ protected abstract SPPhoneNotificationResponse NotifyInternal(SPPhoneNotificatio
   
     
     
-For more information about the  **SPPhoneNotificationContent** and **SPPhoneNotificationResponse** classes, see earlier in this document.
+For more information about the **SPPhoneNotificationContent**and**SPPhoneNotificationResponse**classes, see earlier in this document.
   
     
     
- **ToString**
+**ToString**
   
     
     
@@ -1481,7 +1475,7 @@ Returns selected properties of the object as a string.
 public override string ToString()
 ```
 
-The default implementation includes the  **ParentWeb**,  **ApplicationTag**, and  **DeviceAppInstanceId** properties.
+The default implementation includes the **ParentWeb**, **ApplicationTag**, and **DeviceAppInstanceId**properties.
   
     
     
@@ -1489,7 +1483,7 @@ Update
   
     
     
-Saves a (possibly changed)  **SPPhoneNotificationSubscriber** object to the website's Subscriber Store.
+Saves a (possibly changed) **SPPhoneNotificationSubscriber**object to the website's Subscriber Store.
   
     
     
@@ -1500,7 +1494,7 @@ Saves a (possibly changed)  **SPPhoneNotificationSubscriber** object to the webs
 public void Update()
 ```
 
- **ValidateSubscriberProperties**
+**ValidateSubscriberProperties**
   
     
     
@@ -1518,7 +1512,7 @@ protected abstract void ValidateSubscriberProperties();
 
 #### Properties
 
- **CustomArgs**
+**CustomArgs**
   
     
     
@@ -1533,7 +1527,7 @@ Gets or sets a custom arguments string which represents the state of the notific
 public string CustomArgs
 ```
 
- **DeviceAppInstanceId** (read-only)
+**DeviceAppInstanceId**(read-only)
   
     
     
@@ -1548,7 +1542,7 @@ Gets an ID for the specific instance of the application on the phone or other mo
 public Guid DeviceAppInstanceId
 ```
 
- **LastModifiedTimeStamp** (read-only)
+**LastModifiedTimeStamp**(read-only)
   
     
     
@@ -1563,7 +1557,7 @@ Gets the date and time when the subscriber was last modified.
 public DateTime LastModifiedTimeStamp
 ```
 
- **RegistrationTimeStamp** (read-only)
+**RegistrationTimeStamp**(read-only)
   
     
     
@@ -1578,7 +1572,7 @@ Gets the date and time when the subscriber registered for notifications.
 public DateTime RegistrationTimeStamp
 ```
 
- **ServiceToken**
+**ServiceToken**
   
     
     
@@ -1593,7 +1587,7 @@ Gets or sets delivery channel information that is needed by a notification servi
 public string ServiceToken
 ```
 
- **SubscriberType** (read-only)
+**SubscriberType**(read-only)
   
     
     
@@ -1608,11 +1602,11 @@ Gets the type of the device, such as Windows Phone 7.
 public SPPhoneNotificationSubscriberType SubscriberType
 ```
 
-For information about the  **SPPhoneNotificationSubscriberType** class, see later in this document.
+For information about the **SPPhoneNotificationSubscriberType**class, see later in this document.
   
     
     
- **User** (read-only)
+**User**(read-only)
   
     
     
@@ -1630,7 +1624,7 @@ public SPUser User
 
 ### SPPhoneNotificationSubscriberCollection class
 
-A collection of notification subscribers. The collection object takes  **Int32** indexers.
+A collection of notification subscribers. The collection object takes **Int32**indexers.
   
     
     
@@ -1642,7 +1636,7 @@ public sealed class SPPhoneNotificationSubscriberCollection : SPBaseCollection
 
 #### Properties
 
- **Count**
+**Count**
   
     
     
@@ -1666,7 +1660,7 @@ Specifies a type of device that can receive notifications.
     
 
 
-|**Notification **|**Device **|
+|**Notification**|**Device**|
 |:-----|:-----|
 |||
 |**WP7**|Windows Phone 7.5 |
@@ -1698,7 +1692,7 @@ The following members have been added to this class.
 
 #### Methods
 
- **DoesPhoneNotificationSubscriberExist**
+**DoesPhoneNotificationSubscriberExist**
   
     
     
@@ -1713,7 +1707,7 @@ Gets a value that indicates whether the current user is a subscriber for the spe
 public bool DoesPhoneNotificationSubscriberExist(Guid deviceAppInstanceId)
 ```
 
- **GetPhoneNotificationSubscriber**
+**GetPhoneNotificationSubscriber**
   
     
     
@@ -1728,7 +1722,7 @@ Gets a notification subscriber with the specified application and phone IDs from
 public SPPhoneNotificationSubscriber GetPhoneNotificationSubscriber(Guid deviceAppInstanceId)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -1736,11 +1730,11 @@ public SPPhoneNotificationSubscriber GetPhoneNotificationSubscriber(Guid deviceA
   
     
     
-For information about the  **SPPhoneNotificationSubscriber** class see earlier in this document.
+For information about the **SPPhoneNotificationSubscriber**class see earlier in this document.
   
     
     
- **GetPhoneNotificationSubscribers** (overloaded)
+**GetPhoneNotificationSubscribers**(overloaded)
   
     
     
@@ -1756,8 +1750,8 @@ public SPPhoneNotificationSubscriberCollection GetPhoneNotificationSubscribers(s
 ```
 
 
-> [!Note]  
-> Client object model name is  **GetPhoneNotificationSubscribersByArgs**. 
+> [!NOTE]  
+> Client object model name is **GetPhoneNotificationSubscribersByArgs**. 
   
     
     
@@ -1771,13 +1765,13 @@ public SPPhoneNotificationSubscriberCollection GetPhoneNotificationSubscribers(s
 ```
 
 
-> [!Note]  
-> Client object model name is  **GetPhoneNotificationSubscribersByUser**. 
+> [!NOTE]  
+> Client object model name is **GetPhoneNotificationSubscribersByUser**. 
   
     
     
 
- **Parameters**
+**Parameters**
   
     
     
@@ -1788,11 +1782,11 @@ public SPPhoneNotificationSubscriberCollection GetPhoneNotificationSubscribers(s
 -  _user_ is the user who registered for the notifications.
     
   
-For information about the  **SPPhoneNotificationSubscriberCollection** class see earlier in this document.
+For information about the **SPPhoneNotificationSubscriberCollection**class see earlier in this document.
   
     
     
- **RegisterPhoneNotificationSubscriber**
+**RegisterPhoneNotificationSubscriber**
   
     
     
@@ -1808,7 +1802,7 @@ Registers a phone app on a phone to receive notifications.
 public SPPhoneNotificationSubscriber RegisterPhoneNotificationSubscriber(SPPhoneNotificationSubscriberType subscriberType, Guid deviceAppInstanceId, string serviceToken)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -1822,11 +1816,11 @@ public SPPhoneNotificationSubscriber RegisterPhoneNotificationSubscriber(SPPhone
 -  _serviceToken_ is the token that is used by the notification service that sends notifications to the subscriber.
     
   
-For information about  **SPPhoneNotificationSubscriberType**, see earlier in this document. 
+For information about **SPPhoneNotificationSubscriberType**, see earlier in this document. 
   
     
     
- **UnregisterPhoneNotificationSubscriber**
+**UnregisterPhoneNotificationSubscriber**
   
     
     
@@ -1841,7 +1835,7 @@ Unregisters a phone app on a phone from receiving notifications.
 public void UnregisterPhoneNotificationSubscriber(Guid deviceAppInstanceId)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -1852,7 +1846,7 @@ public void UnregisterPhoneNotificationSubscriber(Guid deviceAppInstanceId)
 
 #### Properties
 
- **PhoneNotificationSubscribers** (read-only)
+**PhoneNotificationSubscribers**(read-only)
   
     
     
@@ -1867,7 +1861,7 @@ Gets a collection of all the phone notification subscribers in the website's Sub
 public SPPhoneNotificationSubscriberCollection PhoneNotificationSubscribers
 ```
 
-For information about the  **SPPhoneNotificationSubscriberCollection** class, see earlier in this document.
+For information about the **SPPhoneNotificationSubscriberCollection**class, see earlier in this document.
   
     
     
@@ -1898,11 +1892,11 @@ public WP7NotificationTileContent()
 
 #### Methods
 
- **PreparePayload**
+**PreparePayload**
   
     
     
-Transforms the content into a  **Byte** array that is sent over the wire to the notification service.
+Transforms the content into a **Byte**array that is sent over the wire to the notification service.
   
     
     
@@ -1916,7 +1910,7 @@ protected internal override byte[] PreparePayload();
 
 #### Properties
 
- **Count**
+**Count**
   
     
     
@@ -1935,7 +1929,7 @@ Setting the property to -1 will not change the count over the tile.
   
     
     
- **Title**
+**Title**
   
     
     
@@ -1950,7 +1944,7 @@ Gets or sets the title of the tile notification.
 public string Title
 ```
 
- **BackgroundImagePath**
+**BackgroundImagePath**
   
     
     
@@ -1965,7 +1959,7 @@ Gets or sets the path to the tile's background image.
 public string BackgroundImagePath
 ```
 
- **BackBackgroundImagePath**
+**BackBackgroundImagePath**
   
     
     
@@ -1980,7 +1974,7 @@ Gets or sets the background image of the back side of a flipping tile.
 public string BackBackgroundImagePath
 ```
 
- **BackContent**
+**BackContent**
   
     
     
@@ -1995,7 +1989,7 @@ Gets or sets the content of the back side of a flipping tile.
 public string BackContent
 ```
 
- **BackTitle**
+**BackTitle**
   
     
     
@@ -2010,7 +2004,7 @@ Gets or sets of the title that appears on the back side of a flipping tile.
 public string BackTitle
 ```
 
- **TileId**
+**TileId**
   
     
     
@@ -2052,11 +2046,11 @@ public WP7NotificationToastContent()
 
 #### Methods
 
- **PreparePayload**
+**PreparePayload**
   
     
     
-Transforms the content into a  **Byte** array that is sent over the wire to the notification service.
+Transforms the content into a **Byte**array that is sent over the wire to the notification service.
   
     
     
@@ -2070,7 +2064,7 @@ protected internal override byte[] PreparePayload();
 
 #### Properties
 
- **Message**
+**Message**
   
     
     
@@ -2085,7 +2079,7 @@ Gets or sets the message of the toast notification.
 public string Message
 ```
 
- **Title**
+**Title**
   
     
     
@@ -2100,7 +2094,7 @@ Gets or sets the title of the toast notification.
 public string Title
 ```
 
- **Param**
+**Param**
   
     
     
@@ -2146,7 +2140,7 @@ public WP7NotificationRawContent()
 
 #### Methods
 
- **PreparePayload**
+**PreparePayload**
   
     
     
@@ -2164,7 +2158,7 @@ protected internal override byte[] PreparePayload();
 
 #### Properties
 
- **Message**
+**Message**
   
     
     
@@ -2191,7 +2185,7 @@ Represents the outcome of an attempt to send a notification to a Windows Phone 7
 public WP7PhoneNotificationResponse(SPPhoneNotificationType notificationType, HttpWebResponse response)
 ```
 
- **Parameters**
+**Parameters**
   
     
     
@@ -2202,14 +2196,14 @@ public WP7PhoneNotificationResponse(SPPhoneNotificationType notificationType, Ht
 -  _response_ is the HTTP response object that was generated by the server.
     
   
-For more information about  **SPPhoneNotificationType**, see earlier in this document. 
+For more information about **SPPhoneNotificationType**, see earlier in this document. 
   
     
     
 
 #### Properties
 
- **NotificationStatus** (read-only)
+**NotificationStatus**(read-only)
   
     
     
@@ -2224,7 +2218,7 @@ Gets the notification status, for example, success or failure.
 public string NotificationStatus
 ```
 
- **DeviceConnectionStatus** (read-only)
+**DeviceConnectionStatus**(read-only)
   
     
     
@@ -2239,7 +2233,7 @@ Gets the status of the device at the time of the notification.
 public string DeviceConnectionStatus
 ```
 
- **SubscriptionStatus** (read-only)
+**SubscriptionStatus**(read-only)
   
     
     
@@ -2254,7 +2248,7 @@ The subscription status of the device at the time of the notification.
 public string SubscriptionStatus
 ```
 
- **MessageId** (read-only)
+**MessageId**(read-only)
   
     
     

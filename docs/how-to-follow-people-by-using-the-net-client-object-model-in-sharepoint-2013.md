@@ -1,5 +1,5 @@
 ---
-title: How to: Follow people by using the .NET client object model in SharePoint 2013
+title: How to Follow people by using the .NET client object model in SharePoint 2013
 ms.prod: SHAREPOINT
 ms.assetid: 0fdb7ca5-d408-4256-b52b-886c4bc3b5b8
 ---
@@ -7,12 +7,6 @@ ms.assetid: 0fdb7ca5-d408-4256-b52b-886c4bc3b5b8
 
 # How to: Follow people by using the .NET client object model in SharePoint 2013
 Learn how to work with Following People features by using the SharePoint Server 2013 .NET client object model. 
- **Last modified:** September 17, 2015
-  
-    
-    
-
- * **Applies to:** SharePoint Server 2013* 
 ## Why use Following People features in SharePoint Server 2013?
 
 In SharePoint Server 2013, when a user follows people, the posts and activities of the followed people show up in the user's newsfeed. By using Following People features to focus on the people who users care about, you can improve the relevance of your app or solution. In the .NET client object model, people that you follow are represented by  [SocialActor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActor.aspx) objects. To perform core Following People tasks in the .NET client object model, you use the [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) object. This article shows how to use the .NET client object model to work with Following People features.
@@ -20,7 +14,7 @@ In SharePoint Server 2013, when a user follows people, the posts and activities 
     
     
 
-> [!Note]  
+> [!NOTE]  
 > We focus on  [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) because it consolidates the core functionality for following people and content. However, the [PeopleManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PeopleManager.aspx) object contains additional functionality for following people, such as the [AmIFollowedBy(String)](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.AmIFollowedBy.aspx) method and methods that obtain the following status of other users.
   
     
@@ -40,11 +34,11 @@ To create a console application that uses the .NET client object model to work w
 - Visual Studio 2012 
     
   
--  **Full Control** access permissions to the User Profile service application for the logged-on user
+- **Full Control**access permissions to the User Profile service application for the logged-on user
     
   
 
-> [!Note]  
+> [!NOTE]  
 > If you're not developing on the computer that is running SharePoint Server 2013, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint 2013 client assemblies.
   
     
@@ -55,30 +49,30 @@ To create a console application that uses the .NET client object model to work w
 <a name="bkmk_CreateConsoleApp"> </a>
 
 
-1. Open Visual Studio, and choose  **File**,  **New**,  **Project**. 
+1. Open Visual Studio, and choose **File**, **New**, **Project**. 
     
   
-2. In the  **New Project** dialog box, choose **.NET Framework 4.5** from the drop-down list at the top of the dialog box.
+2. In the **New Project**dialog box, choose**.NET Framework 4.5**from the drop-down list at the top of the dialog box.
     
   
-3. In the  **Templates** list, choose **Windows**, and then choose the  **Console Application** template.
+3. In the **Templates**list, choose**Windows**, and then choose the **Console Application**template.
     
   
-4. Name the project FollowPeopleCSOM, and then choose the  **OK** button.
+4. Name the project FollowPeopleCSOM, and then choose the **OK**button.
     
   
 5. Add references to the following assemblies: 
     
-  -  **Microsoft.SharePoint.Client**
+  - **Microsoft.SharePoint.Client**
     
   
-  -  **Microsoft.SharePoint.ClientRuntime**
+  - **Microsoft.SharePoint.ClientRuntime**
     
   
-  -  **Microsoft.SharePoint.Client.UserProfiles**
+  - **Microsoft.SharePoint.Client.UserProfiles**
     
   
-6. Replace the contents of the  **Program** class with the code example from one of the following scenarios:
+6. Replace the contents of the **Program**class with the code example from one of the following scenarios:
     
   -  [Start and stop following people](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint-2013.md#bkmk_FollowPeople)
     
@@ -86,7 +80,7 @@ To create a console application that uses the .NET client object model to work w
   -  [Get followers and followed people](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint-2013.md#bkmk_GetFollowednFollowers)
     
   
-7. To test the console application, on the menu bar, choose  **Debug**,  **Start Debugging**. 
+7. To test the console application, on the menu bar, choose **Debug**, **Start Debugging**. 
     
   
 
@@ -115,8 +109,8 @@ This code example uses the  [SocialFollowResult](https://msdn.microsoft.com/libr
     
     
 
-> [!Note]  
-> Change the placeholder values for the  **serverUrl** and **targetUser** variables before you run the code.
+> [!NOTE]  
+> Change the placeholder values for the **serverUrl**and**targetUser**variables before you run the code.
   
     
     
@@ -232,8 +226,8 @@ The following code example gets the people who the current user is following, ge
     
   
 
-> [!Note]  
-> Change the placeholder values for the  **serverUrl** and **targetUser** variables before you run the code.
+> [!NOTE]  
+> Change the placeholder values for the **serverUrl**and**targetUser**variables before you run the code.
   
     
     
