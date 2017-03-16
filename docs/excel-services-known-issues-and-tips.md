@@ -1,6 +1,6 @@
 ---
 title: Excel Services Known Issues and Tips
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: b4a41437-4f00-4f88-8510-627fa0252004
 ---
 

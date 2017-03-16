@@ -3,7 +3,7 @@ title: Excel Services Best Practices
 keywords: guidelines
 f1_keywords:
 - guidelines
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: 56fa3913-c156-49da-bed0-a6a106fc129f
 ---
 

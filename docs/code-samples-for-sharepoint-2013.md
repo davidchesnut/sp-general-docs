@@ -1,6 +1,6 @@
 ---
 title: Code samples for SharePoint 2013
-ms.prod: SHAREPOINTDESIGNER
+ms.prod: SHAREPOINT
 ms.assetid: e6b52c6c-32f8-4689-8c1a-7b50039dcbe8
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Step 1 Creating a Project and Adding a UDF Reference
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: 4c6f1279-28df-45af-8488-42a6573d526d
 ---
 

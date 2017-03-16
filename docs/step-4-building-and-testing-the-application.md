@@ -1,6 +1,6 @@
 ---
 title: Step 4 Building and Testing the Application
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: f2feeecb-1b4c-4049-be4e-11d414f13d9f
 ---
 

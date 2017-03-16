@@ -1,6 +1,6 @@
 ---
 title: Supported and Unsupported Features
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: 6e4acad6-7665-493c-94cc-d38684b2842f
 ---
 

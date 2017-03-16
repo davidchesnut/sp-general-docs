@@ -3,7 +3,7 @@ title: Excel Services Alerts
 keywords: errors
 f1_keywords:
 - errors
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: a4e7030b-05c2-484e-b21f-46cba937b803
 ---
 

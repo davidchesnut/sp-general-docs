@@ -3,7 +3,7 @@ title: How to Save from Excel Client to the Server
 keywords: how to,howdoi,howto
 f1_keywords:
 - how to,howdoi,howto
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: 28716ba5-0774-44df-833b-0034d2c63319
 ---
 

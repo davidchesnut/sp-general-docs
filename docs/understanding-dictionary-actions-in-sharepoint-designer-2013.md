@@ -1,6 +1,6 @@
 ---
 title: Understanding Dictionary actions in SharePoint Designer 2013
-ms.prod: SHAREPOINT
+ms.prod: SHAREPOINTDESIGNER
 ms.assetid: 73df233e-bad8-4ea1-b05d-61ecab597924
 ---
 

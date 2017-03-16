@@ -1,6 +1,6 @@
 ---
 title: Understanding how to package and deploy workflow in SharePoint 2013
-ms.prod: SHAREPOINTDESIGNER
+ms.prod: SHAREPOINT
 ms.assetid: 545b4930-ac05-4c9d-9980-5818cb800cf1
 ---
 

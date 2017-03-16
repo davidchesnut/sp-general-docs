@@ -3,7 +3,7 @@ title: How to Get an Entire Workbook or a Snapshot
 keywords: how to,howdoi,howto
 f1_keywords:
 - how to,howdoi,howto
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: 39115503-8352-4589-87f4-cfa9c07260b6
 ---
 

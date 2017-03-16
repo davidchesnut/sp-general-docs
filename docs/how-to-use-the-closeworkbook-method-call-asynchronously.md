@@ -3,7 +3,7 @@ title: How to Use the CloseWorkbook Method Call Asynchronously
 keywords: async,how to,howdoi,howto
 f1_keywords:
 - async,how to,howdoi,howto
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: 6febe7dc-a552-4c79-aa3e-203d882286e3
 ---
 

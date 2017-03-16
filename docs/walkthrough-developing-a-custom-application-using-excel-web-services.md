@@ -1,6 +1,6 @@
 ---
 title: Walkthrough Developing a Custom Application Using Excel Web Services
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: 2f9bf243-281a-4d70-917e-9eaf0b867631
 ---
 

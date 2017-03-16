@@ -1,6 +1,6 @@
 ---
 title: Getting familiar with Visual Designer for workflow in SharePoint Designer 2013
-ms.prod: SHAREPOINTDESIGNER
+ms.prod: SHAREPOINT
 ms.assetid: ff9b0314-eea1-47e4-87c7-53ed4de98c30
 ---
 

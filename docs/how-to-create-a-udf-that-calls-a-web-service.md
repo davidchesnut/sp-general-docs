@@ -3,7 +3,7 @@ title: How to Create a UDF That Calls a Web Service
 keywords: how to,howdoi,howto,UDF
 f1_keywords:
 - how to,howdoi,howto,UDF
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: 360c5766-4b5d-4a48-9f23-8955036924ce
 ---
 

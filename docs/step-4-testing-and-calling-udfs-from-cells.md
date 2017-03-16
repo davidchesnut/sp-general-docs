@@ -1,6 +1,6 @@
 ---
 title: Step 4 Testing and Calling UDFs from Cells
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: d3e6aa72-2eb8-4b4b-a0eb-273486890d00
 ---
 

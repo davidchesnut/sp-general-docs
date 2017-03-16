@@ -1,6 +1,6 @@
 ---
 title: Step 1 Creating a ECMAScript Text File
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: f1c2b359-5b0d-467d-a863-6732e23863b9
 ---
 

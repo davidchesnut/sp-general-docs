@@ -1,6 +1,6 @@
 ---
 title: Step 3 Deploying and Enabling UDFs
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: 1e5e2a0a-041a-481c-a18b-578562a60e24
 ---
 

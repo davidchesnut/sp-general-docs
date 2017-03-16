@@ -1,6 +1,6 @@
 ---
 title: How to Avoid getting throttled or blocked in SharePoint Online
-ms.prod: SHAREPOINT
+ms.prod: MULTIPLEPRODUCTS
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ---
 

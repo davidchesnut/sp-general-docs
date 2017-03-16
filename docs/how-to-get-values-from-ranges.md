@@ -3,7 +3,7 @@ title: How to Get Values from Ranges
 keywords: get range,how to,howdoi,howto
 f1_keywords:
 - get range,how to,howdoi,howto
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: ab2c0f60-b7df-46a1-9105-eb85ce817431
 ---
 

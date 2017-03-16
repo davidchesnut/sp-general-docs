@@ -3,7 +3,7 @@ title: Step 2 Creating a Managed-Code UDF
 keywords: soap
 f1_keywords:
 - soap
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: 3c9edf82-ee2d-41f0-9d66-e88e8dc0cc69
 ---
 

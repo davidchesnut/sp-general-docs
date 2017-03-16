@@ -3,7 +3,7 @@ title: How to Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Off
 keywords: how to,howdoi,howto,WebUI DLL
 f1_keywords:
 - how to,howdoi,howto,WebUI DLL
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: 09ad5d5e-1678-45e4-8159-23ef56f84215
 ---
 

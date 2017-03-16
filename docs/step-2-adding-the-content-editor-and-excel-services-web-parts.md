@@ -1,6 +1,6 @@
 ---
 title: Step 2 Adding the Content Editor and Excel Services Web Parts
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: c9c66843-fd77-4a0d-a512-d936d15d4429
 ---
 

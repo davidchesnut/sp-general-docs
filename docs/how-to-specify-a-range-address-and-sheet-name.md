@@ -3,7 +3,7 @@ title: How to Specify a Range Address and Sheet Name
 keywords: how to,howdoi,howto,set range
 f1_keywords:
 - how to,howdoi,howto,set range
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: 8bfefc48-1fbc-4b65-8156-1b7d0a8453ee
 ---
 

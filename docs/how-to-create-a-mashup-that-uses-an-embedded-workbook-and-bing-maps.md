@@ -1,6 +1,6 @@
 ---
 title: How to Create a mashup that uses an embedded workbook and Bing Maps
-ms.prod: EXCEL
+ms.prod: SHAREPOINT
 ms.assetid: 3cfeb8d7-84b8-4673-bc92-b176cba4ac3e
 ---
 
