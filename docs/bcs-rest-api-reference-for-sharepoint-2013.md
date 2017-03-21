@@ -81,12 +81,12 @@ In order to limit the amount of data returned, or make it more relevant to the u
 
 |**Operator**||
 |:-----|:-----|
-|EQ |Equals > [!NOTE]  > When you use **EQ**to filter, the filter criteria are passed to the external system where the filtering happens on the server.          |
-|GT |Greater Than > [!NOTE]  > When you use the **GT**operator, only client-side filtering is executed.> For example:  `web/lists/getByTitle('ListName')/Items?$select=Title&amp;$filter=AverageRating gt 3` returns all titles with an average rating over 3.          |
+|EQ |Equals > [!NOTE]  > When you use **EQ** to filter, the filter criteria are passed to the external system where the filtering happens on the server.          |
+|GT |Greater Than > [!NOTE]  > When you use the **GT** operator, only client-side filtering is executed.> For example:  `web/lists/getByTitle('ListName')/Items?$select=Title&amp;$filter=AverageRating gt 3` returns all titles with an average rating over 3.          |
    
 
 > [!NOTE]  
-> To retrieve columns that are part of an association, you must explicitly include the column in the URL using **$select**in the query string.
+> To retrieve columns that are part of an association, you must explicitly include the column in the URL using **$select** in the query string.
   
     
     

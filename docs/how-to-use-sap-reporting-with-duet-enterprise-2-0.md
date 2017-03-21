@@ -48,10 +48,10 @@ To enable the Duet reporting features, the sequence of activation must be carefu
 
 1. Add another new feature to your project. Name the title **AddDuetReporting**. 
     
-    This feature will have a dependency on the **AddReportingModel**and the**DuetReportingForApps**features.
+    This feature will have a dependency on the **AddReportingModel** and the **DuetReportingForApps** features.
     
   
-2. Add the following code to the **Elements**file.
+2. Add the following code to the **Elements** file.
     
   ```
   
@@ -65,11 +65,11 @@ To enable the Duet reporting features, the sequence of activation must be carefu
 
   ```
 
-Please note that the sequence in activation dependency is important. First, you must create the external content type and then activate the **SAPReportingForApps**feature. Also, note that the second feature (ID:**9b60ccba-ebfd-4e38-87c8-3dea9cc2680a**) is shipped with Duet Enterprise 2.0, but it is marked as hidden. With this approach, a developer can make use of this feature and can bring in Duet Reporting capabilities to an app. 
+Please note that the sequence in activation dependency is important. First, you must create the external content type and then activate the **SAPReportingForApps** feature. Also, note that the second feature (ID: **9b60ccba-ebfd-4e38-87c8-3dea9cc2680a**) is shipped with Duet Enterprise 2.0, but it is marked as hidden. With this approach, a developer can make use of this feature and can bring in Duet Reporting capabilities to an app. 
   
     
     
-Once the **DuetReportingForApps**feature is activated, it will bring all the artifacts (Report List, Lib, forms, etc.) and customization on the apps site but as the app site template does not have standard navigation links, the app developer needs to add custom page elements to bring out the Duet features (e.g. Report Settings, library list view, and forms). The developer should consult standard Duet documentation for Reporting feature to learn more about the feature and its UI elements. A developer may choose to build up a custom UI for feature entry points which may suit better with the general theme of the app.
+Once the **DuetReportingForApps** feature is activated, it will bring all the artifacts (Report List, Lib, forms, etc.) and customization on the apps site but as the app site template does not have standard navigation links, the app developer needs to add custom page elements to bring out the Duet features (e.g. Report Settings, library list view, and forms). The developer should consult standard Duet documentation for Reporting feature to learn more about the feature and its UI elements. A developer may choose to build up a custom UI for feature entry points which may suit better with the general theme of the app.
   
     
     

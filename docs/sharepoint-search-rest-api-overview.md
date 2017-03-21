@@ -14,14 +14,14 @@ Search in SharePoint 2013 includes a Search REST service you can use to add sear
   
     
     
-The Search REST service supports both HTTP **POST**and HTTP**GET**requests.
+The Search REST service supports both HTTP **POST** and HTTP **GET** requests.
   
     
     
 
 ### GET requests
 
-Construct the URI for query **GET**requests to the Search REST service as follows:
+Construct the URI for query **GET** requests to the Search REST service as follows:
   
     
     
@@ -29,7 +29,7 @@ Construct the URI for query **GET**requests to the Search REST service as follow
   
     
     
-For **GET**requests, you specify the query parameters in the URL. You can construct the**GET**request URL in two ways:
+For **GET** requests, you specify the query parameters in the URL. You can construct the **GET** request URL in two ways:
   
     
     
@@ -51,7 +51,7 @@ For **GET**requests, you specify the query parameters in the URL. You can constr
 
 ### POST requests
 
-You construct the URI for query **POST**requests to the Search REST service as follows:
+You construct the URI for query **POST** requests to the Search REST service as follows:
   
     
     
@@ -59,11 +59,11 @@ You construct the URI for query **POST**requests to the Search REST service as f
   
     
     
-For **POST**requests, you pass the query parameters in the request in JavaScript Object Notation (JSON) format.
+For **POST** requests, you pass the query parameters in the request in JavaScript Object Notation (JSON) format.
   
     
     
-The HTTP **POST**version of the Search REST service supports all parameters supported by the HTTP**GET**version. However, some of the parameters have different data types, as described in Table 1.
+The HTTP **POST** version of the Search REST service supports all parameters supported by the HTTP **GET** version. However, some of the parameters have different data types, as described in Table 1.
   
     
     
@@ -79,25 +79,25 @@ The HTTP **POST**version of the Search REST service supports all parameters supp
 | [HithighlightedProperties](#bk_HithighlightedProperties)|​string[] |
 | [Properties](#bk_Properties)| [Microsoft.SharePoint.Client.Search.Query.KeywordQueryProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Search.Query.KeywordQueryProperties.aspx)|
    
-Use **POST**requests in the following scenarios:
+Use **POST** requests in the following scenarios:
   
     
     
 
-- When you'll exceed the URL length restriction with a **GET**request.
+- When you'll exceed the URL length restriction with a **GET** request.
     
   
-- When you can't specify the query parameters in a simple URL. For example, if you have to pass parameter values that contain a complex type array, or comma-separated strings, you have more flexibility when constructing the **POST**request.
+- When you can't specify the query parameters in a simple URL. For example, if you have to pass parameter values that contain a complex type array, or comma-separated strings, you have more flexibility when constructing the **POST** request.
     
   
-- When you use the  [ReorderingRules](#bk_ReorderingRules) parameter because it is supported only with**POST**requests.
+- When you use the  [ReorderingRules](#bk_ReorderingRules) parameter because it is supported only with **POST** requests.
     
   
 
 ## Using query parameters with the Search REST service
 <a name="bk_UsingQueryParams"> </a>
 
-When you make a call to the Search REST service, you specify query parameters with the request. Search in SharePoint 2013 uses these query parameters to construct the search query. With a **GET**request, you specify the query parameters in the URL. For**POST**requests, you pass the query parameters in the body in JavaScript Object Notation (JSON) format.
+When you make a call to the Search REST service, you specify query parameters with the request. Search in SharePoint 2013 uses these query parameters to construct the search query. With a **GET** request, you specify the query parameters in the URL. For **POST** requests, you pass the query parameters in the body in JavaScript Object Notation (JSON) format.
   
     
     
@@ -112,7 +112,7 @@ A string that contains the text for the search query.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -120,7 +120,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -143,7 +143,7 @@ A string that contains the text that replaces the query text, as part of a query
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -151,7 +151,7 @@ http://server/_api/search/query?querytext='sharepoint'&amp;querytemplate='{searc
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -175,7 +175,7 @@ A Boolean value that specifies whether the result tables that are returned for t
   
     
     
-**true**to mix the ResultTables; otherwise,**false**. The default value is **true**. 
+ **true** to mix the ResultTables; otherwise, **false**. The default value is **true**. 
   
     
     
@@ -183,7 +183,7 @@ Change this value only if you want to provide your own interleaving implementati
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -191,7 +191,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;enableinterleaving
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -215,7 +215,7 @@ The result source ID to use for executing the search query.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -223,7 +223,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;sourceid='8413cd39
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -247,7 +247,7 @@ The ID of the ranking model to use for the query.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -255,7 +255,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;rankingmodelid​=
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -279,7 +279,7 @@ The first row that is included in the search results that are returned. You use 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -287,7 +287,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;startrow=10
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -311,7 +311,7 @@ The maximum number of rows overall that are returned in the search results. Comp
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -319,7 +319,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;rowlimit=30
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -343,7 +343,7 @@ The maximum number of rows to return per page. Compared to  _RowLimit_,  _RowsPe
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -351,7 +351,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;rowsperpage=10
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -371,15 +371,15 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;rowsperpage=10
 ### SelectProperties
 <a name="bk_SelectProperties"> </a>
 
-The managed properties to return in the search results. To return a managed property, set the property's retrievable flag to **true**in the search schema.
+The managed properties to return in the search results. To return a managed property, set the property's retrievable flag to **true** in the search schema.
   
     
     
-For **GET**requests, you specify the _SelectProperties_ parameter in a string containing a comma-separated list of properties. For**POST**requests, you specify the _SelectProperties_ parameter as a string array.
+For **GET** requests, you specify the _SelectProperties_ parameter in a string containing a comma-separated list of properties. For **POST** requests, you specify the _SelectProperties_ parameter as a string array.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -387,7 +387,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;selectproperties='
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -416,7 +416,7 @@ The locale ID (LCID) for the query (see  [Locale IDs Assigned by Microsoft](http
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -424,7 +424,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;culture=1044
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -444,11 +444,11 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;culture=1044
 ### RefinementFilters
 <a name="bk_RefinementFilters"> </a>
 
-The set of refinement filters used when issuing a refinement query. For **GET**requests, the _RefinementFilters_ parameter is specified as an FQL filter. For**POST**requests, the _RefinementFilters_ parameter is specified as an array of FQL filters.
+The set of refinement filters used when issuing a refinement query. For **GET** requests, the _RefinementFilters_ parameter is specified as an FQL filter. For **POST** requests, the _RefinementFilters_ parameter is specified as an array of FQL filters.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -456,7 +456,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;refinementfilters=
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -482,7 +482,7 @@ The set of refiners to return in a search result.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -490,7 +490,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;refiners='author,s
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -516,7 +516,7 @@ The additional query terms to append to the query.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -524,7 +524,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;hiddenconstraints=
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -548,7 +548,7 @@ The list of properties by which the search results are ordered.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -556,7 +556,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;sortlist='rank:des
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -592,11 +592,11 @@ A Boolean value that specifies whether stemming is enabled.
   
     
     
-**true**if the stemming is enabled; otherwise,**false**. The default value is **true**. 
+ **true** if the stemming is enabled; otherwise, **false**. The default value is **true**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -604,7 +604,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablestemming=fal
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -628,11 +628,11 @@ A Boolean value that specifies whether duplicate items are removed from the resu
   
     
     
-**true**to remove the duplicate items; otherwise,**false**. The default value is **true**. 
+ **true** to remove the duplicate items; otherwise, **false**. The default value is **true**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -640,7 +640,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;trimduplicates=fal
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -664,7 +664,7 @@ The amount of time in milliseconds before the query request times out. The defau
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -672,7 +672,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;timeout=60000
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -696,11 +696,11 @@ A Boolean value that specifies whether the exact terms in the search query are u
   
     
     
-**true**if nicknames are used; otherwise,**false**. The default value is **false**. 
+ **true** if nicknames are used; otherwise, **false**. The default value is **false**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -708,7 +708,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablenicknames=tr
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -732,11 +732,11 @@ A Boolean value that specifies whether the phonetic forms of the query terms are
   
     
     
-**true**if phonetic forms are used; otherwise,**false**. The default value is **false**. 
+ **true** if phonetic forms are used; otherwise, **false**. The default value is **false**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -744,7 +744,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablephonetic=tru
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -768,11 +768,11 @@ A Boolean value that specifies whether the query uses the FAST Query Language (F
   
     
     
-**true**if the query is an FQL query; otherwise,**false**. The default value is **false**. 
+ **true** if the query is an FQL query; otherwise, **false**. The default value is **false**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -780,7 +780,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablefql=true
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -800,11 +800,11 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablefql=true
 ### HithighlightedProperties
 <a name="bk_HithighlightedProperties"> </a>
 
-The properties to highlight in the search result summary when the property value matches the search terms entered by the user. For **GET**requests, Specify in a string containing a comma-separated list of properties. For**POST**requests, specify as an array of strings.
+The properties to highlight in the search result summary when the property value matches the search terms entered by the user. For **GET** requests, Specify in a string containing a comma-separated list of properties. For **POST** requests, specify as an array of strings.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -812,7 +812,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;hithighlightedprop
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -840,11 +840,11 @@ A Boolean value that specifies whether to perform result type processing for the
   
     
     
-**true**to perform result type processing; otherwise,**false**. The default value is **false**. 
+ **true** to perform result type processing; otherwise, **false**. The default value is **false**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -852,7 +852,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;bypassresulttypes=
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -876,11 +876,11 @@ A Boolean value that specifies whether to return best bet results for the query.
   
     
     
-**true**to return best bets; otherwise,**false**. This parameter is used only when **EnableQueryRules**is set to**true**, otherwise it is ignored. The default value is **false**. 
+ **true** to return best bets; otherwise, **false**. This parameter is used only when **EnableQueryRules** is set to **true**, otherwise it is ignored. The default value is **false**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -888,7 +888,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;processbestbets=tr
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -913,7 +913,7 @@ The type of the client that issued the query.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -921,7 +921,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;clienttype='custom
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -945,7 +945,7 @@ The GUID for the user who submitted the search query.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -953,7 +953,7 @@ http:// _<server>_/_api/search/query?querytext='sharepoint'&amp;personalizationd
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -977,7 +977,7 @@ The URL for the search results page.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -985,7 +985,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;resultsurl='http:/
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -1009,7 +1009,7 @@ Custom tags that identify the query. You can specify multiple query tags, separa
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -1017,7 +1017,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -1036,11 +1036,11 @@ http:// _server_/_api/search/query?querytext='sharepoint'
 ### Properties
 <a name="bk_Properties"> </a>
 
-Additional properties for the query. **GET**requests support only string values.**POST**requests support values of any type.
+Additional properties for the query. **GET** requests support only string values. **POST** requests support values of any type.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -1048,7 +1048,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;properties='termid
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -1098,11 +1098,11 @@ A Boolean value that specifies whether to enable query rules for the query.
   
     
     
-**true**to enable query rules; otherwise,**false**. The default value is **true**. 
+ **true** to enable query rules; otherwise, **false**. The default value is **true**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -1110,7 +1110,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablequeryrules=f
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -1130,7 +1130,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablequeryrules=f
 ### ReorderingRules
 <a name="bk_ReorderingRules"> </a>
 
-Special rules for reordering search results. These rules can specify that documents matching certain conditions are ranked higher or lower in the results. This property applies only when search results are sorted based on rank. You must use a **POST**request for this property; it does not work in a**GET**request.
+Special rules for reordering search results. These rules can specify that documents matching certain conditions are ranked higher or lower in the results. This property applies only when search results are sorted based on rank. You must use a **POST** request for this property; it does not work in a **GET** request.
   
     
     
@@ -1138,7 +1138,7 @@ In the following example,  _MatchType_ refers to [ReorderingRuleMatchType](https
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -1170,11 +1170,11 @@ A Boolean value that specifies whether to return personal favorites with the sea
   
     
     
-**true**to return personal favorites; otherwise**false**. 
+ **true** to return personal favorites; otherwise **false**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -1182,7 +1182,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;processpersonalfav
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -1206,7 +1206,7 @@ The location of the queryparametertemplate.xml file. This file is used to enable
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -1214,7 +1214,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;querytemplateprope
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -1238,7 +1238,7 @@ The number of properties to show hit highlighting for in the search results.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -1246,7 +1246,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;hithighlightedmult
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -1270,11 +1270,11 @@ A Boolean value that specifies whether the hit highlighted properties can be ord
   
     
     
-**true**to enable ordering rules; otherwise**false**. 
+ **true** to enable ordering rules; otherwise **false**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -1282,7 +1282,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;enableorderinghith
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -1306,7 +1306,7 @@ The managed properties that are used to determine how to collapse individual sea
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -1314,7 +1314,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;collapsespecificat
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -1338,11 +1338,11 @@ A Boolean value that specifies whether to sort search results.
   
     
     
-I**true**to sort search results using _SortList_, or by rank if  _SortList_ is empty.**false**to leave results unsorted.
+I **true** to sort search results using _SortList_, or by rank if  _SortList_ is empty. **false** to leave results unsorted.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -1350,7 +1350,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablesorting=fals
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -1370,15 +1370,15 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablesorting=fals
 ### GenerateBlockRankLog
 <a name="bk_ProcessPersonalFavorites"> </a>
 
-A Boolean value that specifies whether to return block rank log information in the **BlockRankLog**property of the interleaved result table. A block rank log contains the textual information on the block score and the documents that were de-duplicated.
+A Boolean value that specifies whether to return block rank log information in the **BlockRankLog** property of the interleaved result table. A block rank log contains the textual information on the block score and the documents that were de-duplicated.
   
     
     
-**true**to return block rank log information; otherwise,**false**. 
+ **true** to return block rank log information; otherwise, **false**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -1386,7 +1386,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;generateblockrankl
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -1410,7 +1410,7 @@ The locale identifier (LCID) of the user interface (see  [Locale IDs Assigned by
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -1418,7 +1418,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;uilanguage=1044
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -1442,7 +1442,7 @@ The preferred number of characters to display in the hit-highlighted summary gen
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -1450,7 +1450,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;desiredsnippetleng
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -1474,7 +1474,7 @@ The maximum number of characters to display in the hit-highlighted summary gener
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -1482,7 +1482,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;maxsnippetlength=1
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -1506,7 +1506,7 @@ The number of characters to display in the result summary for a search result.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -1514,7 +1514,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;summarylength=150
   
     
     
-**Sample POST request**
+ **Sample POST request**
   
     
     
@@ -1628,21 +1628,21 @@ The primary elements in the queryparametertemplate.xml file are:
     
     
 
-- **QueryProperties**element
+- **QueryProperties** element
   
     
     
 Contains a serialized  [QueryProperties](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.QueryProperties.aspx) object.
     
   
-- **WhiteList**element
+- **WhiteList** element
   
     
     
 Contains the list of query properties that the anonymous user is allowed to set. 
     
   
-When an anonymous Search REST query is submitted, the query object is constructed using what's specified in the **QueryProperties**element. Then, all the properties that are listed in the whitelist are copied from the incoming query to the newly constructed query object.
+When an anonymous Search REST query is submitted, the query object is constructed using what's specified in the **QueryProperties** element. Then, all the properties that are listed in the whitelist are copied from the incoming query to the newly constructed query object.
   
     
     

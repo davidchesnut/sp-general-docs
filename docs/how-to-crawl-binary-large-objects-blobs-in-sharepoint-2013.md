@@ -10,7 +10,7 @@ Learn how to modify the BDC model file for a database BCS indexing connector to 
 ## Crawling BLOB data
 <a name="HowToCrawlBlobs_CrawlingBlobData"> </a>
 
-The Business Data Connectivity (BDC) service supports reading BLOB data types, which is useful for streaming BLOB data from external systems. For this to work, you need to ensure that the database table containing the external data is set up to support this. You then add a **StreamAccessor**method to the BDC model file for the external content source's BCS indexing connector.
+The Business Data Connectivity (BDC) service supports reading BLOB data types, which is useful for streaming BLOB data from external systems. For this to work, you need to ensure that the database table containing the external data is set up to support this. You then add a **StreamAccessor** method to the BDC model file for the external content source's BCS indexing connector.
   
     
     
@@ -60,13 +60,13 @@ After you create the BLOB external content type, you are ready to modify the BDC
 ### To export the BDC model file for the BLOB external content type
 
 
-1. In SharePoint Designer, click **External Content Types**in the left navigation to display the external content types that are defined in that site's service application's BDC metadata store.
+1. In SharePoint Designer, click **External Content Types** in the left navigation to display the external content types that are defined in that site's service application's BDC metadata store.
     
   
-2. In the **External Content Types**list, select the BLOB external content type. Then, click**Export BDC Model**on the Server ribbon.
+2. In the **External Content Types** list, select the BLOB external content type. Then, click **Export BDC Model** on the Server ribbon.
     
   
-3. Type a name in the **BDC Model Name**text box, and then click**OK**. 
+3. Type a name in the **BDC Model Name** text box, and then click **OK**. 
     
   
 4. Select the location where you want to save the BDC model (.bdcm) file, and then click **Save**. 
@@ -79,7 +79,7 @@ After you create the BLOB external content type, you are ready to modify the BDC
 1. In an XML editor, open the BDC model file you created in the previous section. 
     
   
-2. Create a new method that returns the BLOB field. You should define a **StreamAccessor**type method instance for this method, as shown in the following example.
+2. Create a new method that returns the BLOB field. You should define a **StreamAccessor** type method instance for this method, as shown in the following example.
     
     > [!NOTE]  
 > The table name in this example is Attachment. 

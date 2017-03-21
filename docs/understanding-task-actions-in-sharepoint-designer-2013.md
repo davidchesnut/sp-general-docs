@@ -1,6 +1,6 @@
 ---
 title: Understanding Task Actions in SharePoint Designer 2013
-ms.prod: SHAREPOINT
+ms.prod: SHAREPOINTDESIGNER
 ms.assetid: 6fd69e94-ebe1-4d5d-98db-b2f3ce16f098
 ---
 
@@ -24,13 +24,13 @@ These actions are:
     
     
 
-- **Assign a task**is used to create a SharePoint 2013 task and assign it to a single participant.
+- **Assign a task** is used to create a SharePoint 2013 task and assign it to a single participant.
     
   
-- **Start a task process**is used to assign a task to multiple participants.
+- **Start a task process** is used to assign a task to multiple participants.
     
   
-The Task Actions are accessed in the **Action**drop-down menu of the SharePoint Designer 2013 ribbon, as shown in the figure.
+The Task Actions are accessed in the **Action** drop-down menu of the SharePoint Designer 2013 ribbon, as shown in the figure.
   
     
     
@@ -64,14 +64,14 @@ A business process often consists of tasks that must be performed by people. A w
   
     
     
-The **Assign a task**and**Start a task process**actions are located on the**Actions**drop-down menu in the SharePoint Designer 2013 ribbon. You can add the actions to your workflow and then customize them for your particular circumstance. The**Assign a task**action is used to assign a task to a single participant. The**Start a task process**action is used to assign a task to multiple participants.
+The **Assign a task** and **Start a task process** actions are located on the **Actions** drop-down menu in the SharePoint Designer 2013 ribbon. You can add the actions to your workflow and then customize them for your particular circumstance. The **Assign a task** action is used to assign a task to a single participant. The **Start a task process** action is used to assign a task to multiple participants.
   
     
     
 
 ### Assign a task
 
-The **Assign a task**action is shown in the figure.
+The **Assign a task** action is shown in the figure.
   
     
     
@@ -97,12 +97,12 @@ The **Assign a task**action is shown in the figure.
   
     
     
-The **Assign a task**action takes three inputs: the user to assign a task, the outcome variable, and the task id variable.
+The **Assign a task** action takes three inputs: the user to assign a task, the outcome variable, and the task id variable.
   
     
     
 
-- **this user**: Opens the **Assign a Task**dialog as shown in the figure. Use the dialog to set the participant, task title, description, due date, task options, email options, and outcome options.
+- **this user**: Opens the **Assign a Task** dialog as shown in the figure. Use the dialog to set the participant, task title, description, due date, task options, email options, and outcome options.
     
   
 - **Variable: Outcome**: Assigns the variable that will hold the outcome of the task. 
@@ -136,7 +136,7 @@ The **Assign a task**action takes three inputs: the user to assign a task, the o
 
 ### Start a task process
 
-The **Start a task process**action is shown in the figure.
+The **Start a task process** action is shown in the figure.
   
     
     
@@ -162,12 +162,12 @@ The **Start a task process**action is shown in the figure.
   
     
     
-The **Start a task process**action takes two inputs: the users that will participate in the task and the outcome variable.
+The **Start a task process** action takes two inputs: the users that will participate in the task and the outcome variable.
   
     
     
 
-- **these users**: Opens the **Start a Task Process**dialog box as shown in the figure. Use the dialog box to set the participants, task title, description, due date, task options, email options, and outcome options.
+- **these users**: Opens the **Start a Task Process** dialog box as shown in the figure. Use the dialog box to set the participants, task title, description, due date, task options, email options, and outcome options.
     
   
 - **Variable: Outcome**: Assigns the variable that holds the outcome of the task process. 

@@ -15,8 +15,8 @@ Excel Web Services exposes four methods for getting values from an Excel workboo
     
     
 
-The **GetCell**and**GetCellA1**methods return the value of a single cell. If you try to request more than a single cell—for example, by passing in a range reference such as "B1:E2" or a named range that is larger than a single cell, and so on—your method call will fail. If you want to retrieve values from a range of cells, use the**GetRange**and**GetRangeA1**methods instead.
-Methods that have the A1 suffix (**GetCellA1**and**GetRangeA1**) use a different coordinate system than those that do not (**GetCell**and**GetRange**). If you want to use Excel-style references to cells, such as range references (for example, H8, A3:D5, Sheet2!A12:G18) or named ranges, you should use the methods with the A1 suffix. Those methods allow you to pass in the name of a sheet and the range address you want. In most cases, it is a good idea to use named ranges rather than Excel-style references, for abstraction reasons. 
+The **GetCell** and **GetCellA1** methods return the value of a single cell. If you try to request more than a single cell—for example, by passing in a range reference such as "B1:E2" or a named range that is larger than a single cell, and so on—your method call will fail. If you want to retrieve values from a range of cells, use the **GetRange** and **GetRangeA1** methods instead.
+Methods that have the A1 suffix ( **GetCellA1** and **GetRangeA1**) use a different coordinate system than those that do not ( **GetCell** and **GetRange**). If you want to use Excel-style references to cells, such as range references (for example, H8, A3:D5, Sheet2!A12:G18) or named ranges, you should use the methods with the A1 suffix. Those methods allow you to pass in the name of a sheet and the range address you want. In most cases, it is a good idea to use named ranges rather than Excel-style references, for abstraction reasons. 
   
     
     
@@ -41,11 +41,11 @@ object[] rangeResult2 = xlservice.GetCell(sessionId, sheetName, 0, 0, true, out 
 Dim rangeResult2() As Object = xlservice.GetCell(sessionId, sheetName, 0, 0, True, outStatus)
 ```
 
-If you are getting values from multiple adjacent cells, you may want to consider using the **GetRange**method instead of making multiple calls to the**GetCell**method. This results in a single roundtrip to the server instead of multiple roundtrips. Therefore, in some cases, you may gain a noticeable performance improvement by using the**GetRange**method instead of the**GetCell**method.When getting a range of cells using the **GetRange**and**GetRangeA1**methods, you get back an object array (**object[]**in C# and**Object ()**in Visual Basic .NET). The object array is actually a jagged array. Each entry in the array you get back will be another array of objects representing the cells. For more information about jagged arrays, see [Jagged Arrays (C# Programming Guide)](http://msdn.microsoft.com/en-us/library/2s05feca.aspx) (http://msdn.microsoft.com/en-us/library/2s05feca.aspx).
+If you are getting values from multiple adjacent cells, you may want to consider using the **GetRange** method instead of making multiple calls to the **GetCell** method. This results in a single roundtrip to the server instead of multiple roundtrips. Therefore, in some cases, you may gain a noticeable performance improvement by using the **GetRange** method instead of the **GetCell** method.When getting a range of cells using the **GetRange** and **GetRangeA1** methods, you get back an object array ( **object[]** in C# and **Object ()** in Visual Basic .NET). The object array is actually a jagged array. Each entry in the array you get back will be another array of objects representing the cells. For more information about jagged arrays, see [Jagged Arrays (C# Programming Guide)](http://msdn.microsoft.com/en-us/library/2s05feca.aspx) (http://msdn.microsoft.com/en-us/library/2s05feca.aspx).
 ### To get values using the GetCell and GetRange methods
 
 
-1. Use the **GetCell**method to get a value from a cell in the open workbook by using numeric range coordinates; for example:
+1. Use the **GetCell** method to get a value from a cell in the open workbook by using numeric range coordinates; for example:
     
   ```cs
   
@@ -94,7 +94,7 @@ Dim sessionId As String = xlservice.OpenWorkbook(targetWorkbookPath, "en-US", "e
 Dim rangeResult2() As Object = xlservice.GetCell(sessionId, sheetName, 0, 8, False, outStatus)
   ```
 
-2. Use the **GetRange**method to get values from a range in the open workbook by using numeric range coordinates.
+2. Use the **GetRange** method to get values from a range in the open workbook by using numeric range coordinates.
     
   ```cs
   
@@ -153,7 +153,7 @@ Next x
 ### To get values using the GetCellA1 and GetRangeA1 methods
 
 
-1. Use the **GetCellA1**method to get a value from a cell in the open workbook, using the Excel "A1" range specification; for example:
+1. Use the **GetCellA1** method to get a value from a cell in the open workbook, using the Excel "A1" range specification; for example:
     
   ```cs
   
@@ -176,7 +176,7 @@ Dim sheetName As String = "Sheet2"
 Dim rangeResult() As Object = xlservice.GetCellA1(sessionId, sheetName, "MonthlyPayment", True, outStatus)
   ```
 
-2. Use the **GetRangeA1**method to get a value from a range in the open workbook, using the Excel "A1" range specification. The following code example asks for a 2x3 range, that is, two rows by three columns. The code then loops through each row that is returned and retrieves the three cells each row contains. That is, in the first iteration:
+2. Use the **GetRangeA1** method to get a value from a range in the open workbook, using the Excel "A1" range specification. The following code example asks for a 2x3 range, that is, two rows by three columns. The code then loops through each row that is returned and retrieves the three cells each row contains. That is, in the first iteration:
     
   - rangeResult [0] returns the value in cell B2 
     

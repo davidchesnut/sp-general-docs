@@ -33,18 +33,18 @@ Here are the preview errors and warnings that you might encounter, and help for 
 
 ### Message
 
-**Your Master Page has one or more HTML <FORM> tags. For your master page to work, remove the tags (but you can leave the content in them).**
+ **Your Master Page has one or more HTML <FORM> tags. For your master page to work, remove the tags (but you can leave the content in them).**
   
     
     
 
 ### Resolution
 
-SharePoint 2013 pages are already wrapped in a **<form>**tag so that ASP.NET can do post-backs (specifically, a SharePoint 2013.master page contains the**<SharePoint:SharePointForm>**tag that creates an actual**<form>**tag when an associated content page is rendered). So, including a**<form>**tag on your master page or page layout means that there would be nested**<form>**tags on the final rendering of the page, which is not valid in HTML. In your HTML editor, delete any**<form>**tags, save the page, and then refresh the preview.
+SharePoint 2013 pages are already wrapped in a **<form>** tag so that ASP.NET can do post-backs (specifically, a SharePoint 2013.master page contains the **<SharePoint:SharePointForm>** tag that creates an actual **<form>** tag when an associated content page is rendered). So, including a **<form>** tag on your master page or page layout means that there would be nested **<form>** tags on the final rendering of the page, which is not valid in HTML. In your HTML editor, delete any **<form>** tags, save the page, and then refresh the preview.
   
     
     
-If you want an HTML **<form>**tag in the page layout, you should put the form within a content placeholder with the ID**PlaceHolderUtilityContent**by adding this code to your HTML page layout:
+If you want an HTML **<form>** tag in the page layout, you should put the form within a content placeholder with the ID **PlaceHolderUtilityContent** by adding this code to your HTML page layout:
   
     
     
@@ -71,7 +71,7 @@ You can also add the HTML Form Web Part or the InfoPath Form Web Part to your pa
 
 ### Message
 
-**SharePoint requires HTML files to be XML-compliant. Your file isn't XML-compliant, likely because of tag properties without quotes, missing closing tags, or invalid properties in tags. {Type of error, location of error}. Occurred at: {Time}.**
+ **SharePoint requires HTML files to be XML-compliant. Your file isn't XML-compliant, likely because of tag properties without quotes, missing closing tags, or invalid properties in tags. {Type of error, location of error}. Occurred at: {Time}.**
   
     
     
@@ -100,7 +100,7 @@ For an HTML file to be converted into the corresponding ASP.NET file, the HTML f
 
 ### Message
 
-**SharePoint can't parse this file, most likely because of an incorrectly formatted SharePoint snippet. The markup at the following location is causing problems. Edit the markup manually to fix it, or replace it with a new snippet from the Snippet Gallery. {Type of error, location of error}. Occurred at: {Time}.**
+ **SharePoint can't parse this file, most likely because of an incorrectly formatted SharePoint snippet. The markup at the following location is causing problems. Edit the markup manually to fix it, or replace it with a new snippet from the Snippet Gallery. {Type of error, location of error}. Occurred at: {Time}.**
   
     
     
@@ -118,7 +118,7 @@ You see this error when there is a problem with a SharePoint snippet in your HTM
 
 ### Message
 
-**This page layout's master page has changed, which will cause inconsistencies across your site. Click here to update the sections of your page layout that represent master page regions.**
+ **This page layout's master page has changed, which will cause inconsistencies across your site. Click here to update the sections of your page layout that represent master page regions.**
   
     
     
@@ -136,14 +136,14 @@ For a page layout to work with a given master page, the two must have the same s
 
 ### Message
 
-**Your master page (page layout) doesn't have any warnings or errors. Reset the preview to its original state.**
+ **Your master page (page layout) doesn't have any warnings or errors. Reset the preview to its original state.**
   
     
     
 
 ### Explanation
 
-This message simply confirms that the conversion process worked with no errors or issues. However, when you preview a page, you may navigate away from that specific page or change the preview in some other way. If this happens, you can always choose **Reset the preview**in the message area. Doing so refreshes the preview so that it uses the specific master page or page layout that you're working on, and whatever page you've selected in the**Change Preview Page**option in the upper-left corner.
+This message simply confirms that the conversion process worked with no errors or issues. However, when you preview a page, you may navigate away from that specific page or change the preview in some other way. If this happens, you can always choose **Reset the preview** in the message area. Doing so refreshes the preview so that it uses the specific master page or page layout that you're working on, and whatever page you've selected in the **Change Preview Page** option in the upper-left corner.
   
     
     
@@ -154,14 +154,14 @@ This message simply confirms that the conversion process worked with no errors o
 
 ### Message
 
-**You're currently previewing your master page (page layout) without any content. You can change the page you're previewing from the menu above.**
+ **You're currently previewing your master page (page layout) without any content. You can change the page you're previewing from the menu above.**
   
     
     
 
 ### Explanation
 
-You see this message when you aren't using a live SharePoint 2013 page with which to preview your master page or page layout. For example, if you're previewing a page layout, you can choose **Change Preview Page**in the upper-left corner, and then select a specific content page to preview with your page layout. This way, you can preview the page layout with actual page content in the page fields. If you want the preview to show just the positions of**ContentPlaceHolderMain**or page fields, you can always use**Change Preview Page**to switch back to a generic preview.
+You see this message when you aren't using a live SharePoint 2013 page with which to preview your master page or page layout. For example, if you're previewing a page layout, you can choose **Change Preview Page** in the upper-left corner, and then select a specific content page to preview with your page layout. This way, you can preview the page layout with actual page content in the page fields. If you want the preview to show just the positions of **ContentPlaceHolderMain** or page fields, you can always use **Change Preview Page** to switch back to a generic preview.
   
     
     

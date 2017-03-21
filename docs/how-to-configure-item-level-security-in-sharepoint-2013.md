@@ -18,7 +18,7 @@ For external systems that support NTLM authentication, the security descriptor c
 ### External content type field
 <a name="ItemLevelSecurity_ExtTypeField"> </a>
 
-Microsoft SharePoint 2013 stores the security descriptor if the field of the external content type that contains the descriptor is marked by using the **WindowsSecurityDescriptorField**property, as shown in the following example.
+Microsoft SharePoint 2013 stores the security descriptor if the field of the external content type that contains the descriptor is marked by using the **WindowsSecurityDescriptorField** property, as shown in the following example.
   
     
     
@@ -84,7 +84,7 @@ DefaultDisplayName="ReadSecurity">
 ### External content type method
 <a name="ItemLevelSecurity_ExtTypeMethod"> </a>
 
-If you have a method defined in the metadata model that returns the security descriptor for an item based on its identifier, you can use the **BinarySecurityDescriptorAccessor**method stereotype, as shown in the following example.
+If you have a method defined in the metadata model that returns the security descriptor for an item based on its identifier, you can use the **BinarySecurityDescriptorAccessor** method stereotype, as shown in the following example.
   
     
     

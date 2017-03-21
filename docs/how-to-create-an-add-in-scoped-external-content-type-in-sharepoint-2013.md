@@ -46,13 +46,13 @@ The following steps show how to create an external content type based on an Open
 1. Open Visual Studio 2012. 
     
   
-2. Create an **Add-in for SharePoint 2013**project.
+2. Create an **Add-in for SharePoint 2013** project.
     
   
 3. Specify the add-in settings, including add-in name, the site URL for debugging the add-in, and how you would like to host the add-in (Autohosted, Provider-hosted, or SharePoint-hosted). For more information, see  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx). 
     
   
-4. Choose **Finish**to create the app.
+4. Choose **Finish** to create the app.
     
   
 For complete steps for creating SharePoint Add-ins, see the following: 
@@ -78,7 +78,7 @@ For complete steps for creating SharePoint Add-ins, see the following:
     This starts a wizard that helps you find the selected data source and create the BDC model. 
     
   
-2. On the **Set OData Source**page, enter the URL of the OData service that you want to connect to. The URL should look something like this: `http://services.odata.org/Northwind/Northwind.svc/`. 
+2. On the **Set OData Source** page, enter the URL of the OData service that you want to connect to. The URL should look something like this: `http://services.odata.org/Northwind/Northwind.svc/`. 
     
     Specify a name for your OData source. 
     

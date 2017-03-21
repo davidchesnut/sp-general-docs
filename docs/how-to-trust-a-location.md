@@ -3,7 +3,7 @@ title: How to Trust a Location
 keywords: how to,howdoi,howto,trusted location
 f1_keywords:
 - how to,howdoi,howto,trusted location
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: 0f396c0b-f578-4d1a-9e6b-a75f352265ab
 ---
 
@@ -26,7 +26,7 @@ You can also trust a location by using Windows PowerShell. For more information,
 ### To trust a location
 
 
-1. On the **Start**menu, click**All Programs**. 
+1. On the **Start** menu, click **All Programs**. 
     
   
 2. Point to **Microsoft SharePoint 2010 Products**, and then click **SharePoint 2010 Central Administration**. 
@@ -44,13 +44,13 @@ You can also trust a location by using Windows PowerShell. For more information,
 6. On the Excel Services Application Trusted File Locations page, click **Add Trusted File Location**. 
     
   
-7. On the Excel Services Application Add Trusted File Location page, in the **Address**text box, type the location to save your workbook—for example,http:// _MyServer002_/Shared%20Documents. 
+7. On the Excel Services Application Add Trusted File Location page, in the **Address** text box, type the location to save your workbook—for example,http:// _MyServer002_/Shared%20Documents. 
     
   
 8. Under **Location type**, click the appropriate location type. In this example, select **SharePoint Foundation**. 
     
   
-9. Under **Trust Children**, select **Children trusted**if you want to trust child libraries or directories.
+9. Under **Trust Children**, select **Children trusted** if you want to trust child libraries or directories.
     
   
 10. Click **OK**. 

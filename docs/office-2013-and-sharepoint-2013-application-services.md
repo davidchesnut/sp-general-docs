@@ -15,16 +15,16 @@ Office and SharePoint services run on individual application servers in the farm
     
     
 
-- **Business intelligence (BI) and Insights**enable people to find, analyze, and share information about their work or business.
+- **Business intelligence (BI) and Insights** enable people to find, analyze, and share information about their work or business.
     
   
-- **Simple apps**let users create basic apps that contain a reliable backing store.
+- **Simple apps** let users create basic apps that contain a reliable backing store.
     
   
-- **File conversion**converts Word and PowerPoint files and streams to other formats.
+- **File conversion** converts Word and PowerPoint files and streams to other formats.
     
   
-- **Translation**translates sites, documents, and streams for multilingual support.
+- **Translation** translates sites, documents, and streams for multilingual support.
     
   
 The following table shows high-level scenarios that apply to the services described in this section. 

@@ -22,7 +22,7 @@ Visual Studio uses language-specific resource files to create assemblies that al
 
 ## Differences when building localized applications for Windows Phone using the SharePoint templates
 
-Building a localizable Windows Phone app using the new SharePoint templates is slightly different from building one using other Windows Phone templates. When you use the SharePoint templates, the **SupportedCultures**element requires a slightly different format. For example, in a standard Windows Phone app that uses English (United States) for its default culture but also supports German (Germany) and Spanish (Spain), the**SupportedCultures**element appears as follows:
+Building a localizable Windows Phone app using the new SharePoint templates is slightly different from building one using other Windows Phone templates. When you use the SharePoint templates, the **SupportedCultures** element requires a slightly different format. For example, in a standard Windows Phone app that uses English (United States) for its default culture but also supports German (Germany) and Spanish (Spain), the **SupportedCultures** element appears as follows:
   
     
     
@@ -30,11 +30,11 @@ Building a localizable Windows Phone app using the new SharePoint templates is s
   
     
     
-This format does not work when you build a localized Windows Phone app that is based on the SharePoint templates. Instead, locate the **SupportedCultures**element in the .csproj file and add the names of each culture (language) that your application needs to support (other than the default culture). Separate the names using semicolons. You should have an entry for each .resx file that is in the project.
+This format does not work when you build a localized Windows Phone app that is based on the SharePoint templates. Instead, locate the **SupportedCultures** element in the .csproj file and add the names of each culture (language) that your application needs to support (other than the default culture). Separate the names using semicolons. You should have an entry for each .resx file that is in the project.
   
     
     
-For the previous example, the **SupportedCultures**element should appear as follows:
+For the previous example, the **SupportedCultures** element should appear as follows:
   
     
     

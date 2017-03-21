@@ -6,7 +6,7 @@ ms.assetid: cab5ba90-bd23-4cec-82d7-529e3f86ba88
 
 
 # How to: Back up and restore SharePoint 2013 using a VSS requestor
-**Summary:**Learn how to back and restore using a Volume Shadow Copy Service (VSS) requestor for Microsoft SharePoint 2013.
+ **Summary:** Learn how to back and restore using a Volume Shadow Copy Service (VSS) requestor for Microsoft SharePoint 2013.
 ## Backing up and restoring with the requestor
 
 Use the following procedure to back up and restore Microsoft SharePoint Foundation data using your VSS requestor.
@@ -17,7 +17,7 @@ Use the following procedure to back up and restore Microsoft SharePoint Foundati
 ### To back up and restore data by using your requestor
 
 
-1. Manually start the SharePoint Foundation VSS Writer service. Open **Administrative Tools**, navigate to and open **Services**and start the services called**Volume Shadow Copy**and**SharePoint 2010 VSS Writer**.
+1. Manually start the SharePoint Foundation VSS Writer service. Open **Administrative Tools**, navigate to and open **Services** and start the services called **Volume Shadow Copy** and **SharePoint 2010 VSS Writer**.
     
   
 2. Register the writer in the Windows registry by running the  `STSADM -o registerwsswriter` command from a system console. The executable is located in the %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\BIN directory.
@@ -40,7 +40,7 @@ VSS has special requirements for the accounts running the writers on all targete
 - The running account must have permission to call into VSS. By default, VSS requires a VSS writer to be a member of the Administrator or Backup Operators group on the targeted server instance. You can configure a registry key to allow other accounts to have access to VSS.
     
   
-- The account must have permission to issue **BACKUP DATABASE**and**RESTORE DATABASE**commands against the database servers.
+- The account must have permission to issue **BACKUP DATABASE** and **RESTORE DATABASE** commands against the database servers.
     
   
 - The account must have permission to open up VDI against SQL Server, which requires the client to be a member of the SQL Server sysadmin group.
@@ -53,7 +53,7 @@ Also, to be hosted by the SharePoint Foundation Timer service (owstimer.exe), th
   
     
     
-**Note**It is very unlikely that this account will be a local machine admin account, which differs from the requirement for VSS where the processing account must be running as local system.
+ **Note** It is very unlikely that this account will be a local machine admin account, which differs from the requirement for VSS where the processing account must be running as local system.
   
     
     

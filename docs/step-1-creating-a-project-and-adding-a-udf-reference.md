@@ -33,19 +33,19 @@ The following project uses Microsoft Visual Studio 2005.
 1. Start Visual Studio. 
     
   
-2. On the **File**menu, point to**New**, and then click **Project**. The **New Project**dialog box appears.
+2. On the **File** menu, point to **New**, and then click **Project**. The **New Project** dialog box appears.
     
   
-3. In the **Project Type**pane, select**Visual C# Projects**. 
+3. In the **Project Type** pane, select **Visual C# Projects**. 
     
   
-4. In the **Templates**pane, click**Class Library**. 
+4. In the **Templates** pane, click **Class Library**. 
     
   
-5. In the **Name**box, type**SampleUdf**. 
+5. In the **Name** box, type **SampleUdf**. 
     
   
-6. In the **Location**box, type the path where you want to save your project, or click**Browse**to navigate to the folder.
+6. In the **Location** box, type the path where you want to save your project, or click **Browse** to navigate to the folder.
     
   
 7. Click **OK**. Your new project appears in **Solution Explorer**. You also will see that a file with the default name of Class1.cs has been added to your project. 
@@ -91,13 +91,13 @@ The following steps show how to locate Microsoft.Office.Excel.Server.Udf.dll and
 ### To add a reference
 
 
-1. On the **Project**menu, click**Add Reference**. 
+1. On the **Project** menu, click **Add Reference**. 
     
   
-2. In the **Add Reference**dialog box, on the**.NET**tab, select**Excel Services UDF Framework**. 
+2. In the **Add Reference** dialog box, on the **.NET** tab, select **Excel Services UDF Framework**. 
     
     > [!NOTE]  
-> You can also open the **Add Reference**dialog box in**Solution Explorer**by right-clicking**References**and selecting**Add Reference**. 
+> You can also open the **Add Reference** dialog box in **Solution Explorer** by right-clicking **References** and selecting **Add Reference**. 
 3. Click **OK**. 
     
     > [!NOTE]  

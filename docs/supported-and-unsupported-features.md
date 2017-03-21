@@ -32,7 +32,7 @@ Most of the new features in Microsoft Excel 2010 work in some way in Excel Servi
   
     
     
-**Following are new features that can be viewed:**
+ **Following are new features that can be viewed:**
   
     
     
@@ -49,7 +49,7 @@ Most of the new features in Microsoft Excel 2010 work in some way in Excel Servi
 -  [PivotTable improvements](http://blogs.msdn.com/excel/archive/2009/10/15/a-few-more-pivottable-improvements-in-excel-2010.aspx)
     
   
-**Following are new features that can be viewed and interacted with:**
+ **Following are new features that can be viewed and interacted with:**
   
     
     
@@ -120,7 +120,7 @@ This notification is the first indication that the file is rendering differently
   
     
     
-In the following figure, clicking **Learn more about unsupported features**provides information about which unsupported features are in the file.
+In the following figure, clicking **Learn more about unsupported features** provides information about which unsupported features are in the file.
   
     
     

@@ -87,7 +87,7 @@ To enable location-aware apps, there is a new native field type class, **SPField
   
     
     
-To enable SharePoint 2013 authentication for Windows Phone users, the client object model includes a new **Authenticator**class and several associated classes. For an overview, see [Overview of the SharePoint 2013 mobile client authentication object model](overview-of-the-sharepoint-2013-mobile-client-authentication-object-model.md).
+To enable SharePoint 2013 authentication for Windows Phone users, the client object model includes a new **Authenticator** class and several associated classes. For an overview, see [Overview of the SharePoint 2013 mobile client authentication object model](overview-of-the-sharepoint-2013-mobile-client-authentication-object-model.md).
   
     
     

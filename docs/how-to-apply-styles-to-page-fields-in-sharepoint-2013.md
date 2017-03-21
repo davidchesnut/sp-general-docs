@@ -19,15 +19,15 @@ When you apply styles to page fields, there are two basic categories of field ty
     
     
 
-- **Field types other than RichHtmlField**The page fields that make up a page layout conform to the content type for that page layout. A page field can be of many types, such as a Single Line of Text (TextField) or Multiple Lines of Text (NoteField). As a designer, you can apply styles to all of these page fields in the same way, by applying styles to the page field directly on the page layout.
+- **Field types other than RichHtmlField** The page fields that make up a page layout conform to the content type for that page layout. A page field can be of many types, such as a Single Line of Text (TextField) or Multiple Lines of Text (NoteField). As a designer, you can apply styles to all of these page fields in the same way, by applying styles to the page field directly on the page layout.
     
   
-- **RichHtmlField**The rich HTML field control (also known as a Publishing HTML field) is one of the most powerful and frequently used controls in page layouts. By default, in a rich HTML field, content authors use the ribbon to format and apply styles to content, and to insert tables, media such as images and video, and Web Parts. This field type is useful when you want to give content authors the freedom to add and style content within parameters that you can control. You can control a RichHtmlField in two ways:
+- **RichHtmlField** The rich HTML field control (also known as a Publishing HTML field) is one of the most powerful and frequently used controls in page layouts. By default, in a rich HTML field, content authors use the ribbon to format and apply styles to content, and to insert tables, media such as images and video, and Web Parts. This field type is useful when you want to give content authors the freedom to add and style content within parameters that you can control. You can control a RichHtmlField in two ways:
     
-  - **Create a custom style sheet**By default, the styles available on the ribbon of a RichHtmlField come from a style sheet named HtmlEditorStyles.css. You can configure the**PrefixStyleSheet**property for this snippet so that your own custom styles appear on the ribbon for content authors to use.
+  - **Create a custom style sheet** By default, the styles available on the ribbon of a RichHtmlField come from a style sheet named HtmlEditorStyles.css. You can configure the **PrefixStyleSheet** property for this snippet so that your own custom styles appear on the ribbon for content authors to use.
     
   
-  - **Configure the Allow properties**A snippet for a RichHtmlField has 28 available properties that start with**Allow**, and you can use these properties to make specific commands or groups of commands on the ribbon unavailable to content authors. For example, if you set the **AllowFontsMenu**property to**False**, authors cannot use the Font menu on the ribbon to change what font is applied to text; instead, they can use only the CSS styles that you specify. 
+  - **Configure the Allow properties** A snippet for a RichHtmlField has 28 available properties that start with **Allow**, and you can use these properties to make specific commands or groups of commands on the ribbon unavailable to content authors. For example, if you set the **AllowFontsMenu** property to **False**, authors cannot use the Font menu on the ribbon to change what font is applied to text; instead, they can use only the CSS styles that you specify. 
     
   
 For all types of page fields, including the RichHtmlField, the designer determines how the content is styled. You can use the RichHtmlField to give content authors the freedom to insert rich content and apply styles; you still have ultimate control over what content can be added and what styles can be applied. 
@@ -42,7 +42,7 @@ With a page field control, you can define the styles used by the content. Author
   
     
     
-In the HTML page layout, each page field is wrapped in a **<div>**tag. To apply a style to a page field, you can simply add a style to the**<div>**—for example,  `<div style="font-weight:bold"`. But the more common and useful scenario is that you add an **id**attribute to the**<div>**for each page field in the page layout, and then use the**id**as a selector for styles that reside in an external style sheet. This way, if you have multiple device channels, and each channel has its own style sheet, you can apply different styles to each page field for each channel. For example, the following page field of the type TextField (also called Multiple Lines of Text) might have only an**id**attribute on the**<div>**tag.
+In the HTML page layout, each page field is wrapped in a **<div>** tag. To apply a style to a page field, you can simply add a style to the **<div>**—for example,  `<div style="font-weight:bold"`. But the more common and useful scenario is that you add an **id** attribute to the **<div>** for each page field in the page layout, and then use the **id** as a selector for styles that reside in an external style sheet. This way, if you have multiple device channels, and each channel has its own style sheet, you can apply different styles to each page field for each channel. For example, the following page field of the type TextField (also called Multiple Lines of Text) might have only an **id** attribute on the **<div>** tag.
   
     
     
@@ -73,7 +73,7 @@ When content authors create or edit a page and then add content to a RichHtmlFie
   
     
     
-In the Snippet Gallery, you can configure the properties of a page field of the type RichHtmlField, so that specific commands or groups of commands on the ribbon are made unavailable to authors. For example, by setting the **AllowFontSizesMenu**property to**False**, you can disable the **Font Size**menu on the ribbon. By setting the**AllowFonts**property to**False**, you can disable the entire **Font**group on the ribbon.
+In the Snippet Gallery, you can configure the properties of a page field of the type RichHtmlField, so that specific commands or groups of commands on the ribbon are made unavailable to authors. For example, by setting the **AllowFontSizesMenu** property to **False**, you can disable the **Font Size** menu on the ribbon. By setting the **AllowFonts** property to **False**, you can disable the entire **Font** group on the ribbon.
   
     
     
@@ -99,12 +99,12 @@ After you configure these properties in the Snippet Gallery and then update the 
 
 
 > [!NOTE]  
-> If you set **AllowFonts**to**False**, content authors can still use keyboard shortcuts such as CTRL+B (strong) to format text. To prevent authors from adding any styles to text, you can set **AllowTextMarkup**to**False**. With this setting, when content authors attempt to save content that contains styles applied to text, the HTML editor in the browser returns an error and prompts the author to remove the markup that is not valid. 
+> If you set **AllowFonts** to **False**, content authors can still use keyboard shortcuts such as CTRL+B (strong) to format text. To prevent authors from adding any styles to text, you can set **AllowTextMarkup** to **False**. With this setting, when content authors attempt to save content that contains styles applied to text, the HTML editor in the browser returns an error and prompts the author to remove the markup that is not valid. 
   
     
     
 
-A RichHtmlField page field contains 28 different **Allow**properties. For more information about what specific properties control, see [RichHtmlField properties](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.webcontrols.richhtmlfield_properties) For more information about adding and configuring snippets, see [SharePoint 2013 Design Manager snippets](sharepoint-2013-design-manager-snippets.md). 
+A RichHtmlField page field contains 28 different **Allow** properties. For more information about what specific properties control, see [RichHtmlField properties](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.webcontrols.richhtmlfield_properties) For more information about adding and configuring snippets, see [SharePoint 2013 Design Manager snippets](sharepoint-2013-design-manager-snippets.md). 
   
     
     
@@ -127,7 +127,7 @@ Because the RichHtmlField in the browser uses CSS to implement its styles, you c
   
     
     
-To implement custom styles, you can also build a style sheet from scratch by changing the **PrefixStyleSheet**property for the RichHtmlField snippet. By default, this property is set to**ms-rte**, and the styles in the default style sheet HtmlEditorStyles.css each begin with this prefix—for example: 
+To implement custom styles, you can also build a style sheet from scratch by changing the **PrefixStyleSheet** property for the RichHtmlField snippet. By default, this property is set to **ms-rte**, and the styles in the default style sheet HtmlEditorStyles.css each begin with this prefix—for example: 
   
     
     
@@ -143,13 +143,13 @@ H1. ms-rteElement-H1
 }
 ```
 
-When you change the value of the **PrefixStyleSheet**property, none of the existing**ms-rte**styles are available in the rich HTML editor, and only styles that you create that use the new prefix are available to content authors. This means if you want to use some of the default styles, they must be copied to your style sheet and modified so that they use the new prefix.
+When you change the value of the **PrefixStyleSheet** property, none of the existing **ms-rte** styles are available in the rich HTML editor, and only styles that you create that use the new prefix are available to content authors. This means if you want to use some of the default styles, they must be copied to your style sheet and modified so that they use the new prefix.
   
     
     
 
 > [!NOTE]  
-> The **PrefixStyleSheet**property is defined per each RichHtmlField page field, but multiple page fields can use the same value for this property. So, if multiple page layouts reference the same style sheet, it's possible for multiple RichHtmlFields on those page layouts to have the same style prefix and reference the same styles.
+> The **PrefixStyleSheet** property is defined per each RichHtmlField page field, but multiple page fields can use the same value for this property. So, if multiple page layouts reference the same style sheet, it's possible for multiple RichHtmlFields on those page layouts to have the same style prefix and reference the same styles.
   
     
     
@@ -176,7 +176,7 @@ When you change the value of the **PrefixStyleSheet**property, none of the exist
 6. On the ribbon, choose **Page Fields**, and then choose a page field of the type **RichHtmlField**. 
     
   
-7. In the property grid, expand the **Misc**section, and then change the**PrefixStyleSheet**property to a value other than**ms-rte**—for example, change the value to be **customstyle**. 
+7. In the property grid, expand the **Misc** section, and then change the **PrefixStyleSheet** property to a value other than **ms-rte**—for example, change the value to be **customstyle**. 
     
     > [!IMPORTANT]  
 > This property value must be all lowercase. 
@@ -202,13 +202,13 @@ When you change the value of the **PrefixStyleSheet**property, none of the exist
     
     C:\\Program Files\\Common Files\\Microsoft Shared\\Web Server Extensions\\15\\TEMPLATE\\LAYOUTS\\1033\\STYLES 
     
-    It's useful to view the default styles, understand how they're written, and possibly reuse some of them by copying them to your style sheet and then modifying them. If you do this, replace the default **ms-rte**prefix with your own prefix.
+    It's useful to view the default styles, understand how they're written, and possibly reuse some of them by copying them to your style sheet and then modifying them. If you do this, replace the default **ms-rte** prefix with your own prefix.
     
     > [!IMPORTANT]  
 > Do not modify the default style sheet, HtmlEditorStyles.css. This style sheet provides styles for every RichHtmlField in the farm. Also, service updates or an upgrade may overwrite this file, causing you to lose any changes. 
 14. In your style sheet, create a list of new styles that start with the new prefix. 
     
-    For example, if **customstyle**is the new prefix, your style sheet might contain the following style.
+    For example, if **customstyle** is the new prefix, your style sheet might contain the following style.
     
 
 
@@ -229,7 +229,7 @@ font-size: 16pt;
   ```
 
 
-    For clarity, the class name and the name of the style as it appears on the ribbon are defined separately from the style properties. In this example, **H2**is the element selector for the style, and**customstyleElement-H2**is the class name of the style. The class name has two parts:**customstyle**is the prefix that you specified for this page field, and**Element**specifies that this style will appear in the**Page Elements**section of the**Styles**gallery on the ribbon of the HTML editor. The**-ms-name**property sets the display name that appears to content authors in the Styles gallery.
+    For clarity, the class name and the name of the style as it appears on the ribbon are defined separately from the style properties. In this example, **H2** is the element selector for the style, and **customstyleElement-H2** is the class name of the style. The class name has two parts: **customstyle** is the prefix that you specified for this page field, and **Element** specifies that this style will appear in the **Page Elements** section of the **Styles** gallery on the ribbon of the HTML editor. The **-ms-name** property sets the display name that appears to content authors in the Styles gallery.
     
     SharePoint maps a style to a menu or command on the ribbon by parsing the class name immediately after the prefix and looking for one of these strings: 
     

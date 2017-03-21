@@ -12,7 +12,7 @@ The preview page is the page of your site that you use to see how your design lo
     
     
 
-As you interact with the page, you might do something that causes SharePoint to move away from the preview. For example, if you select **Save**on the ribbon, SharePoint saves the page and then displays the live version of the page. (The live version of the page uses the live master page, not the master page that you are designing.) You can return to the preview page by choosing**Reset the preview**.
+As you interact with the page, you might do something that causes SharePoint to move away from the preview. For example, if you select **Save** on the ribbon, SharePoint saves the page and then displays the live version of the page. (The live version of the page uses the live master page, not the master page that you are designing.) You can return to the preview page by choosing **Reset the preview**.
   
     
     
@@ -49,7 +49,7 @@ Use this procedure to set the preview page.
 3. To use a generic preview page, select **Generic Preview**.
     
   
-4. To use a specific page as the preview page, select **URL**and enter the URL of the page.
+4. To use a specific page as the preview page, select **URL** and enter the URL of the page.
     
   
 5. Choose **OK**.

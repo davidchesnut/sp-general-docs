@@ -51,10 +51,10 @@ Most of the objects in a site are included and supported by the template. Howeve
     
     
 
-- **Supported**Lists, libraries, external lists, data source connections, list views and data views, custom forms, workflows, content types, custom actions, navigation, site pages, master pages, modules, and web templates.
+- **Supported** Lists, libraries, external lists, data source connections, list views and data views, custom forms, workflows, content types, custom actions, navigation, site pages, master pages, modules, and web templates.
     
   
-- **Unsupported**Customized permissions, running workflow instances, list item version history, workflow tasks associated with running workflows, people or group field values, taxonomy field values, publishing pages and publishing sites, My Sites, stapled features, SharePoint Add-ins, and remote event receivers.
+- **Unsupported** Customized permissions, running workflow instances, list item version history, workflow tasks associated with running workflows, people or group field values, taxonomy field values, publishing pages and publishing sites, My Sites, stapled features, SharePoint Add-ins, and remote event receivers.
     
     > [!NOTE]  
 > For publishing sites, you can use site definition templates. For more information, see  [Additional resources](save-download-and-upload-a-sharepoint-2013-site-as-a-template.md#bkmk_additionalresources) at the end of this topic.
@@ -66,13 +66,13 @@ Saving a site as a template is a powerful feature because it offers so many uses
     
     
 
-- **Deploy solutions immediately**Save and activate the template in the solutions gallery and let other employees create new sites from this template. You can select it, and then create a new site from it, which will inherit the components of the site, its structure, workflows, and more. You don't need Visual Studio to create your solution, and you have to access the server directly and run server administrator commands. Just save the site as a template, activate it, and off you go.
+- **Deploy solutions immediately** Save and activate the template in the solutions gallery and let other employees create new sites from this template. You can select it, and then create a new site from it, which will inherit the components of the site, its structure, workflows, and more. You don't need Visual Studio to create your solution, and you have to access the server directly and run server administrator commands. Just save the site as a template, activate it, and off you go.
     
   
-- **Portability**In addition to deploying a custom solution in your environment, you can download the .wsp file, take it on the road, and deploy it in another SharePoint environment. All of your site customization is conveniently stored in one file.
+- **Portability** In addition to deploying a custom solution in your environment, you can download the .wsp file, take it on the road, and deploy it in another SharePoint environment. All of your site customization is conveniently stored in one file.
     
   
-- **Extensibility**As a Web Solution Package, you can open your customized site in Visual Studio, perform additional development customization to the template, and then deploy it to SharePoint. SharePoint site development, as a result, can go through a solution life cycle (develop, stage, and put into production) that includes SharePoint Designer 2013, Visual Studio, and the browser.
+- **Extensibility** As a Web Solution Package, you can open your customized site in Visual Studio, perform additional development customization to the template, and then deploy it to SharePoint. SharePoint site development, as a result, can go through a solution life cycle (develop, stage, and put into production) that includes SharePoint Designer 2013, Visual Studio, and the browser.
     
   
 As you begin to create custom sites in SharePoint, you'll discover even more benefits to turning your site into a solution that can be made portable across the organization. The basic steps to working with site templates are as follows: 
@@ -89,7 +89,7 @@ As you begin to create custom sites in SharePoint, you'll discover even more ben
 - Upload the .wsp file to the solutions gallery. 
     
   
-After you add a site template to the solutions gallery and the template is activated, the next time that you create a site or subsite, the template is available for selection in the **Custom**tab of the**Template Selection**section on the**New SharePoint Site**page.
+After you add a site template to the solutions gallery and the template is activated, the next time that you create a site or subsite, the template is available for selection in the **Custom** tab of the **Template Selection** section on the **New SharePoint Site** page.
   
     
     
@@ -104,21 +104,21 @@ After you add a site template to the solutions gallery and the template is activ
 2. Click **Settings**, and then click **Site Settings**. 
     
   
-3. In the **Site Actions**section, click**Save site as a template**. 
+3. In the **Site Actions** section, click **Save site as a template**. 
     
   
-4. Specify a name to use for the template file in the **File name**box.
+4. Specify a name to use for the template file in the **File name** box.
     
   
-5. Specify a name and description for the template in the **Template name**and**Template description**boxes.
+5. Specify a name and description for the template in the **Template name** and **Template description** boxes.
     
   
-6. To include the content of the site in the site template, select the **Include Content**box.
+6. To include the content of the site in the site template, select the **Include Content** box.
     
     > [!NOTE]  
 > Including the content of the site can increase the size of the template significantly. The default size limit for a site template is 50 MB but might be less in your organization. You can always exclude the content, and then copy what you need later into the new site. Or, you can increase the size limit. For example, to increase the limit to the maximum allowed, use the following Stsadm command syntax. 
 >  `stsadm -o setproperty -pn max-template-document-size -pv 524288000`
-7. Click **OK**to save the template.
+7. Click **OK** to save the template.
     
     If all of the components on the site are valid, the template is created, and you see a message that states "Operation Completed Successfully." 
     
@@ -142,13 +142,13 @@ After you add a site template to the solutions gallery and the template is activ
 2. Click **Settings**, and then click **Site Settings**. 
     
   
-3. In the **Web Designer Galleries**section, click**Solutions**. 
+3. In the **Web Designer Galleries** section, click **Solutions**. 
     
   
-4. If it's necessary to activate the solution, select it, and in the **Commands**group, click**Activate**. Then, on the **Activate Solution Confirmation**screen, in the**Commands**group, click**Activate**. 
+4. If it's necessary to activate the solution, select it, and in the **Commands** group, click **Activate**. Then, on the **Activate Solution Confirmation** screen, in the **Commands** group, click **Activate**. 
     
   
-5. To download the solution, click its name in the solutions gallery, and click **Save**. Then, in the **Save As**dialog box, browse to the location where you want to save the solution, click**Save**, and then click **Close**. 
+5. To download the solution, click its name in the solutions gallery, and click **Save**. Then, in the **Save As** dialog box, browse to the location where you want to save the solution, click **Save**, and then click **Close**. 
     
   
 
@@ -162,13 +162,13 @@ After you add a site template to the solutions gallery and the template is activ
 2. Click **Settings**, and then click **Site Settings**. 
     
   
-3. In the **Web Designer Galleries**section, click**Solutions**. 
+3. In the **Web Designer Galleries** section, click **Solutions**. 
     
   
-4. To upload the solution, in the **Commands**group, click**Upload**, and then in the **Add a Document**dialog box, click**Browse**. Then, in the **Choose File to Upload**dialog box, locate the file, select it, click**Open**, and then click **OK**. 
+4. To upload the solution, in the **Commands** group, click **Upload**, and then in the **Add a Document** dialog box, click **Browse**. Then, in the **Choose File to Upload** dialog box, locate the file, select it, click **Open**, and then click **OK**. 
     
   
-5. To activate the solution, on the activate solution confirmation screen, in the **Commands**group, click**Activate**. 
+5. To activate the solution, on the activate solution confirmation screen, in the **Commands** group, click **Activate**. 
     
   
 

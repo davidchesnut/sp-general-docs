@@ -16,11 +16,11 @@ Query suggestions, also known as search suggestions, are phrases that users have
 ## Suggest endpoint in the Search REST service
 <a name="bk_SuggestEndpoint"> </a>
 
-The Search REST service includes a **Suggest**endpoint you can use in any technology that supports REST web requests to retrieve query suggestions that the search system generates for a query from client or mobile applications.
+The Search REST service includes a **Suggest** endpoint you can use in any technology that supports REST web requests to retrieve query suggestions that the search system generates for a query from client or mobile applications.
   
     
     
-The URI for **GET**requests to the Search REST service's**Suggest**endpoint is:
+The URI for **GET** requests to the Search REST service's **Suggest** endpoint is:
   
     
     
@@ -49,7 +49,7 @@ The query suggestion parameters are specified in the URL. You can construct the 
   
 
 > [!NOTE]  
-> The Search REST service doesn't support anonymous requests to the **Suggest**endpoint.
+> The Search REST service doesn't support anonymous requests to the **Suggest** endpoint.
   
     
     
@@ -58,7 +58,7 @@ The query suggestion parameters are specified in the URL. You can construct the 
 ## Query suggestion parameters
 <a name="bk_SuggestParameters"> </a>
 
-The following sections describe the parameters you can use for the **Suggest**endpoint.
+The following sections describe the parameters you can use for the **Suggest** endpoint.
   
     
     
@@ -69,7 +69,7 @@ A string that contains the text for the search query.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -84,7 +84,7 @@ The number of query suggestions to retrieve. Must be greater than zero (0). The 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -99,7 +99,7 @@ The number of personal results to retrieve. Must be greater than zero (0). The d
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -110,11 +110,11 @@ http:// _server_/_api/search/suggest?querytext='sharepoint'&amp;inumberofresults
 
 ### fPreQuerySuggestions
 
-A Boolean value that specifies whether to retrieve pre-query or post-query suggestions. **true**to return pre-query suggestions; otherwise,**false**. The default value is **false**. 
+A Boolean value that specifies whether to retrieve pre-query or post-query suggestions. **true** to return pre-query suggestions; otherwise, **false**. The default value is **false**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -125,11 +125,11 @@ http:// _server_/_api/search/suggest?querytext='sharepoint'&amp;fprequerysuggest
 
 ### fHitHighlighting
 
-A Boolean value that specifies whether to hit-highlight or format in bold the query suggestions. **true**to format in bold the terms in the returned query suggestions that match terms in the specified query; otherwise,**false**. The default value is **true**. 
+A Boolean value that specifies whether to hit-highlight or format in bold the query suggestions. **true** to format in bold the terms in the returned query suggestions that match terms in the specified query; otherwise, **false**. The default value is **true**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -140,11 +140,11 @@ http:// _server_/_api/search/suggest?querytext='sharepoint'&amp;fhithighlighting
 
 ### fCapitalizeFirstLetters
 
-A Boolean value that specifies whether to capitalize the first letter in each term in the returned query suggestions. **true**to capitalize the first letter in each term; otherwise,**false**. The default value is **false**. 
+A Boolean value that specifies whether to capitalize the first letter in each term in the returned query suggestions. **true** to capitalize the first letter in each term; otherwise, **false**. The default value is **false**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -159,7 +159,7 @@ The locale ID (LCID) for the query (see  [Locale IDs Assigned by Microsoft](http
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -170,11 +170,11 @@ http:// _server_/_api/search/suggest?querytext='sharepoint'&amp;culture=1044
 
 ### EnableStemming
 
-A Boolean value that specifies whether stemming is enabled. **true**to enable stemming; otherwise,**false**. The default value is **true**. 
+A Boolean value that specifies whether stemming is enabled. **true** to enable stemming; otherwise, **false**. The default value is **true**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -185,11 +185,11 @@ http:// _server_/_api/search/suggest?querytext='sharepoint'&amp;enablestemming=f
 
 ### ShowPeopleNameSuggestions
 
-A Boolean value that specifies whether to include people names in the returned query suggestions. **true**to include people names in the returned query suggestions; otherwise,**false**. The default value is **true**. 
+A Boolean value that specifies whether to include people names in the returned query suggestions. **true** to include people names in the returned query suggestions; otherwise, **false**. The default value is **true**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -200,11 +200,11 @@ http:// _server_/_api/search/suggest?querytext='sharepoint'&amp;showpeoplenamesu
 
 ### EnableQueryRules
 
-A Boolean value that specifies whether to turn on query rules for this query. **true**to turn on query rules; otherwise,**false**. The default value is **true**. 
+A Boolean value that specifies whether to turn on query rules for this query. **true** to turn on query rules; otherwise, **false**. The default value is **true**. 
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     
@@ -215,11 +215,11 @@ http:// _server_/_api/search/suggest?querytext='sharepoint'&amp;enablequeryrules
 
 ### fPrefixMatchAllTerms
 
-A Boolean value that specifies whether to return query suggestions for prefix matches. **true**to return query suggestions based on prefix matches, otherwise,**false**when query suggestions should match the full query word.
+A Boolean value that specifies whether to return query suggestions for prefix matches. **true** to return query suggestions based on prefix matches, otherwise, **false** when query suggestions should match the full query word.
   
     
     
-**Sample GET request**
+ **Sample GET request**
   
     
     

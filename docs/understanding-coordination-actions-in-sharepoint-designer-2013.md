@@ -1,6 +1,6 @@
 ---
 title: Understanding Coordination actions in SharePoint Designer 2013
-ms.prod: SHAREPOINTDESIGNER
+ms.prod: SHAREPOINT
 ms.assetid: 33fbcf91-0a5d-47ab-85a9-9d2d556a204d
 ---
 
@@ -26,7 +26,7 @@ There are two Coordination Actions available in SharePoint Designer 2013. Both a
 - Start a Site Workflow: Used to start a workflow developed for the site. 
     
   
-Coordination Actions appear in the **Actions**drop-down menu when you build a workflow based on the SharePoint 2013 Workflow platform, as shown in the figure.
+Coordination Actions appear in the **Actions** drop-down menu when you build a workflow based on the SharePoint 2013 Workflow platform, as shown in the figure.
   
     
     
@@ -87,13 +87,13 @@ The three editable regions are:
     
     
 
-- **SharePoint 2010 list workflow**Select the 2010 workflow to start.
+- **SharePoint 2010 list workflow** Select the 2010 workflow to start.
     
   
-- **parameters**Parameters to send to the 2010 workflow.
+- **parameters** Parameters to send to the 2010 workflow.
     
   
-- **this item**The item which the 2010 workflow should be run on.
+- **this item** The item which the 2010 workflow should be run on.
     
   
 Click an editable link to enter information. For example, to select the 2010 workflow to start, click the link **SharePoint 2010 list workflow**. A dialog box appears that can be used to select the workflow, as shown in the figure. 

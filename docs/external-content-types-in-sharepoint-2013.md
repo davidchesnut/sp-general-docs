@@ -23,25 +23,25 @@ The following are some of the benefits of using external content types:
     
     
 
-- **Provide reusability:**An external content type is a reusable data definition of a business entity. After you create it, you can use it with any of the presentation features in BCS to provide a rich user experience to interact with external data.
+- **Provide reusability:** An external content type is a reusable data definition of a business entity. After you create it, you can use it with any of the presentation features in BCS to provide a rich user experience to interact with external data.
     
   
-- **Encapsulate complexities of external systems:**External content types enable information workers to assemble business solutions without having to handle the complexities of the external systems, such as connectivity information and code interfaces. After someone creates an external content type, it is available to users for use in any way they need (provided they have the permissions to perform that operation and access the external data). However, the user does not need to know anything about the location of the external data or how to connect to it.
+- **Encapsulate complexities of external systems:** External content types enable information workers to assemble business solutions without having to handle the complexities of the external systems, such as connectivity information and code interfaces. After someone creates an external content type, it is available to users for use in any way they need (provided they have the permissions to perform that operation and access the external data). However, the user does not need to know anything about the location of the external data or how to connect to it.
     
   
-- **Provide built-in Office and SharePoint behavior:**External content types provide Office item-type behaviors (such as Contacts, Tasks, Calendars in Outlook, documents in Word, and lists in SharePoint Workspace); SharePoint behaviors (such as lists, Web Parts, and profile pages); and capabilities (such as the ability to search or work offline) to external data and services. So users can work in their familiar work environments without having to hunt for data or learn and interact with different (and proprietary) user interfaces.
+- **Provide built-in Office and SharePoint behavior:** External content types provide Office item-type behaviors (such as Contacts, Tasks, Calendars in Outlook, documents in Word, and lists in SharePoint Workspace); SharePoint behaviors (such as lists, Web Parts, and profile pages); and capabilities (such as the ability to search or work offline) to external data and services. So users can work in their familiar work environments without having to hunt for data or learn and interact with different (and proprietary) user interfaces.
     
   
-- **Help provide more secure access:**External content types adhere to the security put in place by both the external system and SharePoint. You can have full control of who accesses what data by configuring security in SharePoint.
+- **Help provide more secure access:** External content types adhere to the security put in place by both the external system and SharePoint. You can have full control of who accesses what data by configuring security in SharePoint.
     
   
-- **Simplify maintenance:**Because external content types can be created once and used by multiple solutions in various scenarios, you can manage them easily. For example, you can manage their access permissions and connection and data definitions in one central location.
+- **Simplify maintenance:** Because external content types can be created once and used by multiple solutions in various scenarios, you can manage them easily. For example, you can manage their access permissions and connection and data definitions in one central location.
     
   
-- **Enable external data search:**You can use SharePoint Server search from an intranet portal to look up information about a specific external content type, such as a customer. SharePoint Server search retrieves the data directly from the external system. Consequently, users can get the information they need without having to get approval or install a separate application.
+- **Enable external data search:** You can use SharePoint Server search from an intranet portal to look up information about a specific external content type, such as a customer. SharePoint Server search retrieves the data directly from the external system. Consequently, users can get the information they need without having to get approval or install a separate application.
     
   
-- **Enable working offline:**You can take external content types offline in Outlook 2013. Business Connectivity Services (BCS) provides rich cache and offline work features and supports cache-based operations. Users can manipulate external data seamlessly and efficiently, even when they are offline or if the server connectivity is slow, intermittent, or unavailable. The read/write operations performed against cached business entities are synchronized when a connection to the server becomes available.
+- **Enable working offline:** You can take external content types offline in Outlook 2013. Business Connectivity Services (BCS) provides rich cache and offline work features and supports cache-based operations. Users can manipulate external data seamlessly and efficiently, even when they are offline or if the server connectivity is slow, intermittent, or unavailable. The read/write operations performed against cached business entities are synchronized when a connection to the server becomes available.
     
   
 
@@ -86,7 +86,7 @@ When SharePoint is configured to communicate with the external system, you can u
     
     You can also take external lists offline to be used in Outlook 2013. This allows you to work with external data just like native Outlook Item types, such as Contacts, Tasks, and Posts, and use the external data in Office client applications. 
     
-    External lists enable writing back to the external system if the external system allows it, and if it is modeled accordingly by the external content type. This implies that users can edit external data directly from within. Any changes that were made to the items in the list are synchronized automatically with the external system. Also by using the **Refresh data**button in the list, you can synchronize and get updated data from the external system automatically.
+    External lists enable writing back to the external system if the external system allows it, and if it is modeled accordingly by the external content type. This implies that users can edit external data directly from within. Any changes that were made to the items in the list are synchronized automatically with the external system. Also by using the **Refresh data** button in the list, you can synchronize and get updated data from the external system automatically.
     
   
 - **External Data Columns**

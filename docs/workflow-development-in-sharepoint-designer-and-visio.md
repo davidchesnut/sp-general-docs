@@ -149,7 +149,7 @@ To open the SharePoint 2013 Workflow template in Visio 2013, do the following:
 3. Under **Template Categories**, choose **Flowchart**. 
     
   
-4. Under **Choose a Template**, choose **SharePoint 2013 Workflow**and then choose**Create**. 
+4. Under **Choose a Template**, choose **SharePoint 2013 Workflow** and then choose **Create**. 
     
     The template opens and the drawing canvas is prepopulated with Start, and Stage shapes. The Stage shape contains an Enter and an Exit shape, joined by a single connector. 
     
@@ -165,7 +165,7 @@ With the SharePoint 2013 Workflow template open, drag actions, conditions, and o
 >  Do not use any shapes from a stencil other than the SharePoint 2013 Workflow Actions, SharePoint 2013 Workflow Conditions, and SharePoint 2013 Workflow Terminators stencils. Use only the Connector tool provided by the SharePoint 2013 Workflow template to add connections between shapes. All other connector shapes are not valid within a SharePoint 2013 workflow.
 >  Action shapes, steps, and loops must always be contained within a Stage shape. Some conditional shapes can be outside of a stage.
 >  A Stage shape must have exactly one Enter shape and one Exit shape. The workflow sub-process that is contained within the stage must start with the Enter shape and end with the Exit shape.
->  A condition shape must have two connectors leaving the shape, one labeled "Yes" and the other labeled "No." You can right-click a connector to choose**Yes**or**No**. 
+>  A condition shape must have two connectors leaving the shape, one labeled "Yes" and the other labeled "No." You can right-click a connector to choose **Yes** or **No**. 
 >  A workflow must have only one Start shape. The Start shape must be outside of a stage.
 >  You add text to shapes in the workflow, but the shape text will not affect the workflow.
   
@@ -184,13 +184,13 @@ Validating the workflow in Visio 2013 is like validating any other connected dia
 ### To validate a SharePoint 2013 workflow in Visio 2013
 
 
-1. On the **Process**tab, in the**Diagram Validation**group, choose**Check Diagram**. 
+1. On the **Process** tab, in the **Diagram Validation** group, choose **Check Diagram**. 
     
   
-2. If any errors are found in the workflow, the **Issues**pane opens below the diagram. Choose each item in the list to select the shape in the diagram that caused the error.
+2. If any errors are found in the workflow, the **Issues** pane opens below the diagram. Choose each item in the list to select the shape in the diagram that caused the error.
     
   
-3. Resolve each validation error listed in the **Issues**list. Once all of the errors have been addressed, choose**Check Diagram**again. For more information about how to resolve validation issues in Visio 2013, see the article [Troubleshooting SharePoint Server workflow validation errors in Visio](troubleshooting-sharepoint-server-workflow-validation-errors-in-visio.md). 
+3. Resolve each validation error listed in the **Issues** list. Once all of the errors have been addressed, choose **Check Diagram** again. For more information about how to resolve validation issues in Visio 2013, see the article [Troubleshooting SharePoint Server workflow validation errors in Visio](troubleshooting-sharepoint-server-workflow-validation-errors-in-visio.md). 
     
   
 4. If no errors are found in the workflow, Visio displays a message stating that the diagram validation is complete and that no issues were found. 
@@ -214,7 +214,7 @@ Use the following procedure to save a SharePoint 2013 workflow in Visio 2013 as 
 2. Under **Save As**, choose **Save**, and then choose **Browse**. 
     
   
-3. In the **Save As**dialog box, select a location to save the file and type a name for the file ("My SP Workflow"). 
+3. In the **Save As** dialog box, select a location to save the file and type a name for the file ("My SP Workflow"). 
     
   
 4. Choose **Save**. 
@@ -242,7 +242,7 @@ Use the following procedure to open a SharePoint 2013 site in SharePoint Designe
 2. Under **Open SharePoint Site**, choose **Open Site**. 
     
   
-3. In the **Open Site**dialog box, select the site that you want to open.
+3. In the **Open Site** dialog box, select the site that you want to open.
     
   
 4. Choose **Open**. 
@@ -267,7 +267,7 @@ Once the SharePoint 2013 site is open, you can open the Visio 2013 .vsdx diagram
 2. In the left pane under **List Workflow**, type a name for your workflow (My First SP2013 Workflow) and select the list on the site that you want to publish the workflow to. 
     
   
-3. In the **Choose the workflow platform for the new workflow**list, select**SharePoint 2013 Workflow**. 
+3. In the **Choose the workflow platform for the new workflow** list, select **SharePoint 2013 Workflow**. 
     
   
 4. Choose **Create**. 
@@ -281,19 +281,19 @@ Once the SharePoint 2013 site is open, you can open the Visio 2013 .vsdx diagram
 2. In the left pane, under **Site Workflow**, type a name for your workflow (My First SP2013 Workflow). 
     
   
-3. In the **Choose the workflow platform for the new workflow**list, select**SharePoint 2013 Workflow**. 
+3. In the **Choose the workflow platform for the new workflow** list, select **SharePoint 2013 Workflow**. 
     
   
 4. Choose **Create**. 
     
   
-4. On the **Workflow**tab, in the**Manage**group, choose**Workflow Settings**. 
+4. On the **Workflow** tab, in the **Manage** group, choose **Workflow Settings**. 
     
   
-5. On the **Workflow Settings**tab, in the**Manage**group, choose**Import from Visio.**
+5. On the **Workflow Settings** tab, in the **Manage** group, choose **Import from Visio.**
     
   
-6. In the **Import Workflow from Visio Drawing**dialog box, browse to the location where the .vsdx file is located.
+6. In the **Import Workflow from Visio Drawing** dialog box, browse to the location where the .vsdx file is located.
     
   
 7. Select the file that you want to open (My SP Workflow), and then choose **Open**. 
@@ -305,16 +305,16 @@ When you open a .vsdx file in SharePoint Designer 2013, the file is displayed in
     
 
 > [!NOTE]  
-> To switch between the Visual Designer and the Declarative Designer in SharePoint Designer 2013, on the **Workflow**tab, in the**Manage**group, choose**Views**. This process may take a few moments, as SharePoint Designer 2013 validates the workflow and then converts the workflow information from one format to another. During this process, another shape level validation will occur. If any errors are detected with the diagram, the errors will be displayed in an error pane at the bottom of the canvas (just like in Visio). 
+> To switch between the Visual Designer and the Declarative Designer in SharePoint Designer 2013, on the **Workflow** tab, in the **Manage** group, choose **Views**. This process may take a few moments, as SharePoint Designer 2013 validates the workflow and then converts the workflow information from one format to another. During this process, another shape level validation will occur. If any errors are detected with the diagram, the errors will be displayed in an error pane at the bottom of the canvas (just like in Visio). 
   
     
     
 
-The shapes that are displayed in the Visual Designer also have Action Tags (shown by a workflow settings type icon on the bottom left hand side of the shape). When you choose an Action Tag, a drop-down menu displays the attributes for that action or condition in the workflow and**Properties**property. These properties will define the parameter values to be used for that action: which lists to pull items from, what calculation operator to use, or which email address to send a message to. When you choose a property that is displayed in the list, a dialog box appears in which you can customize the settings for that property.
+The shapes that are displayed in the Visual Designer also have Action Tags (shown by a workflow settings type icon on the bottom left hand side of the shape). When you choose an Action Tag, a drop-down menu displays the attributes for that action or condition in the workflow and **Properties** property. These properties will define the parameter values to be used for that action: which lists to pull items from, what calculation operator to use, or which email address to send a message to. When you choose a property that is displayed in the list, a dialog box appears in which you can customize the settings for that property.
   
     
     
-For example, the **Send an email**shape has two properties associated with it:**Create Email**and**Properties**. When you choose **Create Email**, a **Define Email Message**dialog box appears in which you can create the message to be sent by the action. If you choose**Properties**, a **Send an Email Properties**dialog box appears that displays all of the parameters for the action.
+For example, the **Send an email** shape has two properties associated with it: **Create Email** and **Properties**. When you choose **Create Email**, a **Define Email Message** dialog box appears in which you can create the message to be sent by the action. If you choose **Properties**, a **Send an Email Properties** dialog box appears that displays all of the parameters for the action.
   
     
     
@@ -325,7 +325,7 @@ For example, the **Send an email**shape has two properties associated with it:**
     
     
 
-Once you have set the properties within the workflow and are ready to publish, you must first check the workflow for errors in SharePoint Designer 2013. When you choose **Publish**in the**Visual Designer**tab in the ribbon, SharePoint Designer 2013 automatically checks the workflow for errors. If you want, you can also manually initiate the error checking.
+Once you have set the properties within the workflow and are ready to publish, you must first check the workflow for errors in SharePoint Designer 2013. When you choose **Publish** in the **Visual Designer** tab in the ribbon, SharePoint Designer 2013 automatically checks the workflow for errors. If you want, you can also manually initiate the error checking.
   
     
     
@@ -337,19 +337,19 @@ Use the following procedure to check the SharePoint 2013 workflow in SharePoint 
 ### To manually check a workflow for errors in SharePoint Designer 2013
 
 
-1. On the **Visual Designer**tab, in the**Save**group, choose**Check for Errors**. 
+1. On the **Visual Designer** tab, in the **Save** group, choose **Check for Errors**. 
     
   
-2. If any errors are found in the workflow, the **Issues**pane opens below the Visual Designer canvas. Choose each item in the list to select the action, condition, connector, terminator, or container in the workflow that caused the error.
+2. If any errors are found in the workflow, the **Issues** pane opens below the Visual Designer canvas. Choose each item in the list to select the action, condition, connector, terminator, or container in the workflow that caused the error.
     
   
-3. Resolve each validation error listed in the **Issues**list. Once all of the errors have been addressed, choose**Check for Errors**again.
+3. Resolve each validation error listed in the **Issues** list. Once all of the errors have been addressed, choose **Check for Errors** again.
     
   
 4. If no errors are found in the workflow, SharePoint Designer displays a message stating that no issues were found in the workflow. 
     
   
-After the workflow has been checked and no issues have been found, you can publish the workflow to the SharePoint list. To publish the workflow from SharePoint Designer 2013, on the **Visual Designer**tab, in the**Save**group, choose**Publish**. If any errors occur during the publishing process, SharePoint Designer 2013 returns to the Visual Designer and displays the errors in the **Issues**pane.
+After the workflow has been checked and no issues have been found, you can publish the workflow to the SharePoint list. To publish the workflow from SharePoint Designer 2013, on the **Visual Designer** tab, in the **Save** group, choose **Publish**. If any errors occur during the publishing process, SharePoint Designer 2013 returns to the Visual Designer and displays the errors in the **Issues** pane.
   
     
     

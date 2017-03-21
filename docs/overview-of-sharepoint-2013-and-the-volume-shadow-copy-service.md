@@ -6,7 +6,7 @@ ms.assetid: d1cb6653-bfc0-4af2-b221-d7d30cb40d84
 
 
 # Overview of SharePoint 2013 and the Volume Shadow Copy Service
-**Summary:**Learn about the Microsoft SharePoint 2013 interface to the Volume Shadow Copy Service (VSS).
+ **Summary:** Learn about the Microsoft SharePoint 2013 interface to the Volume Shadow Copy Service (VSS).
 For backup vendors, the Volume Shadow Copy Service (VSS) simplifies backing up Microsoft server solutions by using a centralized API. Microsoft SharePoint Foundation includes a referential VSS writer (hereafter, called "the SPF-VSS Writer") that integrates with the Windows VSS backup framework, enabling backup applications to back up and restore SharePoint Foundation data. It supports a catastrophic overwrite scenario for the entire farm (search index included). On recovery, it hooks up databases and synchronizes site mappings. 
   
     

@@ -7,7 +7,7 @@ ms.assetid: 6825518d-eeb2-40b0-8a5b-897025f13796
 
 # How to: Create a master page preview file in SharePoint 2013
 Learn how to create master page preview files that are used in the SharePoint theming experience to display a preview of selected theme components. 
-The **Change the look**wizard is the entry point to the SharePoint theming experience. The design gallery is the first page in the**Change the look**wizard and shows a thumbnail view of available designs. Users select a design for their site and then continue to the next page where they can customize the design. Users can then preview the site before applying the design to their site. The master page preview file is used to generate the thumbnail and preview images. If a master page does not have a corresponding preview file, it cannot be used in the theming experience.
+The **Change the look** wizard is the entry point to the SharePoint theming experience. The design gallery is the first page in the **Change the look** wizard and shows a thumbnail view of available designs. Users select a design for their site and then continue to the next page where they can customize the design. Users can then preview the site before applying the design to their site. The master page preview file is used to generate the thumbnail and preview images. If a master page does not have a corresponding preview file, it cannot be used in the theming experience.
   
     
     
@@ -27,7 +27,7 @@ Table 1 lists articles that can help you understand the core concepts for workin
 |**Article Title**|**Description**|
 |:-----|:-----|
 | [Themes overview for SharePoint 2013](themes-overview-for-sharepoint-2013.md)|Learn about the theming experience in SharePoint 2013. |
-| [Choose a theme for your publishing site](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx)|Learn how to change the look and feel of a SharePoint site by using the **Change the look**wizard.|
+| [Choose a theme for your publishing site](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx)|Learn how to change the look and feel of a SharePoint site by using the **Change the look** wizard.|
    
 
 ## What is a master page preview file?
@@ -59,10 +59,10 @@ In the master page preview file:
     
     
 
--  _Default color palette_ is the .spcolor file in the Theme Gallery (http:// _SiteColltionName_/_catalogs/theme/15/) that you want to use as the default. The default color palette corresponds to the colors that are used in the master page in its default state. That is, before a user has selected a color palette in the **Change the look**wizard.
+-  _Default color palette_ is the .spcolor file in the Theme Gallery (http:// _SiteColltionName_/_catalogs/theme/15/) that you want to use as the default. The default color palette corresponds to the colors that are used in the master page in its default state. That is, before a user has selected a color palette in the **Change the look** wizard.
     
   
--  _Default font scheme_ is the .spfont file in the Theme Gallery (http:// _SiteCollectionName_/_catalogs/theme/15/) that you want to use as the default. The default font scheme corresponds to the fonts that are used in the master page in its default state. That is, before a user has selected a font scheme in the **Change the look**wizard.
+-  _Default font scheme_ is the .spfont file in the Theme Gallery (http:// _SiteCollectionName_/_catalogs/theme/15/) that you want to use as the default. The default font scheme corresponds to the fonts that are used in the master page in its default state. That is, before a user has selected a font scheme in the **Change the look** wizard.
     
   
 -  _CSS_ is the section that contains cascading style sheets (CSS). All CSS classes must be prefixed with[ID]. The following example shows a portion of the CSS section in a master page preview file. 
@@ -221,10 +221,10 @@ To create a master page preview file, use an existing master page preview as a s
 4. Upload the master page preview file to the Master Page Gallery. 
     
   
-5. Use the **Change the look**wizard to test the master page preview with your site content.
+5. Use the **Change the look** wizard to test the master page preview with your site content.
     
     > [!NOTE]  
-> You can also create a design that uses the new master page by adding an item to the Composed Looks list. The design will be available in the design gallery (the first page of the **Change the look**wizard). For more information, see the [Deploy a theme by using the user interface](how-to-deploy-a-custom-theme-in-sharepoint-2013.md#section2) procedure in [How to: Deploy a custom theme in SharePoint 2013](how-to-deploy-a-custom-theme-in-sharepoint-2013.md). 
+> You can also create a design that uses the new master page by adding an item to the Composed Looks list. The design will be available in the design gallery (the first page of the **Change the look** wizard). For more information, see the [Deploy a theme by using the user interface](how-to-deploy-a-custom-theme-in-sharepoint-2013.md#section2) procedure in [How to: Deploy a custom theme in SharePoint 2013](how-to-deploy-a-custom-theme-in-sharepoint-2013.md). 
 6. Repeat steps 3 to 5, as necessary. 
     
   

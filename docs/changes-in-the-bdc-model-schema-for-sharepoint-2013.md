@@ -26,7 +26,7 @@ The following table shows what changes have been made to the top-level elements 
 
 |**Element**|**Description**|
 |:-----|:-----|
-|IndividuallySecurableMetadataObject |Used to designate that the specified **MetadataObject**is able to be secured explicitly and not by association to its parent.|
+|IndividuallySecurableMetadataObject |Used to designate that the specified **MetadataObject** is able to be secured explicitly and not by association to its parent.|
 |MetadataObject |Used to store additional metadata about the connection to the external data source. |
    
 

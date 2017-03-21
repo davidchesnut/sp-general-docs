@@ -1,6 +1,6 @@
 ---
 title: Accessing a Schema
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: 02613912-36f6-4edc-a915-165d12e60bc8
 ---
 

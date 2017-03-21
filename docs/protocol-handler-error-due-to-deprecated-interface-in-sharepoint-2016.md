@@ -7,7 +7,7 @@ ms.assetid: c80cb77c-89db-4c78-b576-f63d39ca330a
 
 # Protocol handler error due to deprecated interface in SharePoint 2016
 
-Protocol handler implementations using the interfaces listed in this article in the **srchprth.h**header file are now deprecated in SharePoint 2016. Specifically, the protocol handler for deprecated interfaces generates the error "The protocol handler cannot be loaded".
+Protocol handler implementations using the interfaces listed in this article in the **srchprth.h** header file are now deprecated in SharePoint 2016. Specifically, the protocol handler for deprecated interfaces generates the error "The protocol handler cannot be loaded".
   
     
     
@@ -28,7 +28,7 @@ The protocol handler <name of custom protocol handler> cannot be loaded. Error d
 
 ### Cause
 
-You are using the **srchprth.h**header file in your protocol handler implementation. This file contains interfaces deprecated in SharePoint 2016.
+You are using the **srchprth.h** header file in your protocol handler implementation. This file contains interfaces deprecated in SharePoint 2016.
   
     
     
@@ -40,10 +40,10 @@ Replace the deprecated interfaces in your protocol handler implementation with t
     
     
 
-- **srchprth.h**(updated)
+- **srchprth.h** (updated)
     
   
-- **urlaccsdk.h**(new)
+- **urlaccsdk.h** (new)
     
   
 
@@ -54,7 +54,7 @@ The deprecated interfaces include the following:
   
     
     
-**interface ISearchProtocol : IUnknown**
+ **interface ISearchProtocol : IUnknown**
   
     
     
@@ -72,7 +72,7 @@ The deprecated interfaces include the following:
                            [in] AUTHENTICATION_INFO *pAuthenticationInfo,
                            [in] INCREMENTAL_ACCESS_INFO *pIncrementalAccessInfo,
                            [in] ITEM_INFO *pItemInfo,
-                           [out] IUrlAccessor**ppAccessor);
+                           [out] IUrlAccessor **ppAccessor);
 
     HRESULT CloseAccessor([in] IUrlAccessor *pAccessor);
     HRESULT ShutDown();
@@ -111,7 +111,7 @@ INCREMENTAL_ACCESS_INFO
 }
 ```
 
-**IProtocolHandler: public IUnknown**
+ **IProtocolHandler: public IUnknown**
   
     
     
@@ -137,7 +137,7 @@ INCREMENTAL_ACCESS_INFO
 
                            HRESULT CreateAccessor(
                                   /* [in] */ AccessorInitParams *pParams,
-                                  /* [out] */ IUrlAccessor**ppAccessor) = 0;
+                                  /* [out] */ IUrlAccessor **ppAccessor) = 0;
 
                            HRESULT CloseAccessor(
                                   /* [in] */ IUrlAccessor *pAccessor) = 0;

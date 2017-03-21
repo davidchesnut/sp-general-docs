@@ -1,6 +1,6 @@
 ---
 title: Understanding Excel Services UDFs
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: a1567278-fac4-4b3b-a814-56f2376c1217
 ---
 
@@ -52,15 +52,15 @@ Microsoft.Office.Excel.Server.Udf.dll has been compiled using Microsoft .NET Fra
 
 ### Required Attributes
 
-To use custom functions in a class as an Excel Services UDF class, you must mark your UDF class with the **Microsoft.Office.Excel.Server.Udf.UdfClass**attribute. Any classes that are not marked with this attribute in the UDF assembly will be ignored by Excel Calculation Services. They are not considered to be Excel Services UDF classes.
+To use custom functions in a class as an Excel Services UDF class, you must mark your UDF class with the **Microsoft.Office.Excel.Server.Udf.UdfClass** attribute. Any classes that are not marked with this attribute in the UDF assembly will be ignored by Excel Calculation Services. They are not considered to be Excel Services UDF classes.
   
     
     
-To use custom functions in a class as Excel Services UDF methods, you must mark your UDF methods with the **Microsoft.Office.Excel.Server.Udf.UdfMethod**attribute. Any methods that are not marked with this attribute in the UDF assembly will be ignored because they are not considered to be Excel Services UDF methods.
+To use custom functions in a class as Excel Services UDF methods, you must mark your UDF methods with the **Microsoft.Office.Excel.Server.Udf.UdfMethod** attribute. Any methods that are not marked with this attribute in the UDF assembly will be ignored because they are not considered to be Excel Services UDF methods.
   
     
     
-The **Microsoft.Office.Excel.Server.Udf.UdfMethod**attribute has an **IsVolatile**property. You use the**IsVolatile**property to specify a UDF method as volatile or nonvolatile. The**IsVolatile**property takes a Boolean value. The default value is**false**, which means that particular UDF method is nonvolatile. 
+The **Microsoft.Office.Excel.Server.Udf.UdfMethod**attribute has an **IsVolatile** property. You use the **IsVolatile** property to specify a UDF method as volatile or nonvolatile. The **IsVolatile** property takes a Boolean value. The default value is **false**, which means that particular UDF method is nonvolatile. 
   
     
     
@@ -113,40 +113,40 @@ UDF assemblies are disabled by default.
   
     
     
-Each Excel Services trusted location has an **AllowUdfs**flag.
+Each Excel Services trusted location has an **AllowUdfs** flag.
   
     
     
 
 > [!NOTE]  
-> The **AllowUdfs**flag is denoted by the**User-defined functions allowed**option on the Excel Services Trusted File Locations page. To learn how to navigate to the Trusted File Locations page, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
+> The **AllowUdfs** flag is denoted by the **User-defined functions allowed** option on the Excel Services Trusted File Locations page. To learn how to navigate to the Trusted File Locations page, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
   
     
     
 
-The default **AllowUdfs**value is**false**. If the **AllowUdfs**value is set to**false**in a particular trusted location, the workbooks in that trusted location are not allowed to call UDFs.
+The default **AllowUdfs** value is **false**. If the **AllowUdfs** value is set to **false** in a particular trusted location, the workbooks in that trusted location are not allowed to call UDFs.
   
     
     
-In order to allow UDFs to be called from a specific trusted location, you set the **AllowUdfs**value to**true**. 
+In order to allow UDFs to be called from a specific trusted location, you set the **AllowUdfs** value to **true**. 
   
     
     
-If the **AllowUdfs**value is**false**when a session is started on a workbook that has UDF calls in this trusted location, the UDF calls will fail. If you change the**AllowUdfs**value to**true**after a session has started, the UDF calls will also fail. This is because changes in the**AllowUdfs**flag take effect on the next session, after the configuration database has been updated.
+If the **AllowUdfs** value is **false** when a session is started on a workbook that has UDF calls in this trusted location, the UDF calls will fail. If you change the **AllowUdfs** value to **true** after a session has started, the UDF calls will also fail. This is because changes in the **AllowUdfs** flag take effect on the next session, after the configuration database has been updated.
   
     
     
 
 ### Allowing UDF Assemblies to Run
 
-If administrators want to allow UDF assemblies to run, they have to register all UDF assemblies, and enable workbooks to call UDFs by setting the **AllowUdfs**flag to**true**in the trusted locations.
+If administrators want to allow UDF assemblies to run, they have to register all UDF assemblies, and enable workbooks to call UDFs by setting the **AllowUdfs** flag to **true** in the trusted locations.
   
     
     
 
 ### Reloading a UDF Assembly
 
-To reload a UDF assembly, you can run **iisreset**or restart the Excel Calculation Services application domain.
+To reload a UDF assembly, you can run **iisreset** or restart the Excel Calculation Services application domain.
   
     
     
@@ -176,11 +176,11 @@ If you do not want a particular UDF assembly to run with full trust, you must ex
   
     
     
-Developers can also use the **RequestMinimum**and**RequestOptional**methods in their code to ensure that their UDF assemblies don't get more permission than they require.
+Developers can also use the **RequestMinimum** and **RequestOptional** methods in their code to ensure that their UDF assemblies don't get more permission than they require.
   
     
     
-For more information about configuring code groups, as well as the **RequestMinimum**and**RequestOptional**methods, see the following articles on MSDN:
+For more information about configuring code groups, as well as the **RequestMinimum** and **RequestOptional** methods, see the following articles on MSDN:
   
     
     

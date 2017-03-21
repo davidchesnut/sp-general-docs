@@ -6,7 +6,7 @@ ms.assetid: 87ee28e6-8170-4dba-8c9d-f04ab9e632dc
 
 
 # How to: Back up and restore a search service application in SharePoint 2013 using VSS
-**Summary:**Learn how to back up and restore a search service application in SharePoint 2013 by using the Volume Shadow Copy Service (VSS).
+ **Summary:** Learn how to back up and restore a search service application in SharePoint 2013 by using the Volume Shadow Copy Service (VSS).
 ## Prerequisites for backing up and restoring SharePoint with the Volume Shadow Copy Service
 
 To program a backup and restore solution for SharePoint 2013, you need to understand how VSS works and the SharePoint interface with it. 
@@ -30,7 +30,7 @@ The following procedures are intended to help developers with creating a backup/
   
     
     
-**Prerequisite:**Download and install [Microsoft Windows SDK for Windows 7 and .NET Framework 4](http://www.microsoft.com/en-us/download/details.aspx?id=8279) to the server with the search service application (SSA) and to every server with a search index component. Among other things, this will install vshadow.exe and betest.exe to `C:\\Program Files\\Microsoft SDKs\\Windows\\v7.1\\Bin\\x64\\vsstools`. 
+ **Prerequisite:** Download and install [Microsoft Windows SDK for Windows 7 and .NET Framework 4](http://www.microsoft.com/en-us/download/details.aspx?id=8279) to the server with the search service application (SSA) and to every server with a search index component. Among other things, this will install vshadow.exe and betest.exe to `C:\\Program Files\\Microsoft SDKs\\Windows\\v7.1\\Bin\\x64\\vsstools`. 
   
     
     
@@ -47,10 +47,10 @@ The following procedures are intended to help developers with creating a backup/
 
 - Register the SharePoint VSS Writer with either of these methods: 
     
-  - Open **Services**in**Administrative Tools**and start the**SharePoint VSS Writer**service.
+  - Open **Services** in **Administrative Tools** and start the **SharePoint VSS Writer** service.
     
   
-  - Open a command console and execute  `stsadm.exe -o registerwsswriter`. The stsadm utility is found in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\BIN. Verify that the service is running in **Services**in**Administrative Tools**. 
+  - Open a command console and execute  `stsadm.exe -o registerwsswriter`. The stsadm utility is found in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\BIN. Verify that the service is running in **Services** in **Administrative Tools**. 
     
   
 
@@ -142,7 +142,7 @@ The following procedures are intended to help developers with creating a backup/
     This is the search index manifest file. For an example of a completed search index manifest file, see  [Example manifest files](#Examples). 
     
   
-4. (Optional) Record the sizes of **IndexComponent**folders on each server that contains an index component. You can use this information later to verify the backup.
+4. (Optional) Record the sizes of **IndexComponent** folders on each server that contains an index component. You can use this information later to verify the backup.
     
   
 5. On any server in the farm, open the SharePoint Management Shell and execute the following lines, where  _name of search service application_ is the SSA that you want to back up. Leave the SharePoint Management Shell window open afterward.
@@ -202,7 +202,7 @@ betest.exe /v /r /d "destination backup folder" /s "backup log file" /x SSA_mani
 3. On the same server, open a SharePoint Management Shell and execute the following lines to restore the SSA, where  _application pool name_ is the name of the new pool, _domain\\user_ is the domain name of the user that the application pool logs in as, _name of the search service application_ is the name of the SSA, and _topology_file_name_ is the path and name of the typology file you created when the SSA was backed up.
     
     > [!TIP]  
-> This code creates a new application pool identity to run the restored SSA, but you can also use an existing account with the **Get-SPServiceApplicationPool**cmdlet.
+> This code creates a new application pool identity to run the restored SSA, but you can also use an existing account with the **Get-SPServiceApplicationPool** cmdlet.
 
   ```
   $applicationPool = New-SPServiceApplicationPool -name "application pool name" -account "domain\\user"
@@ -217,10 +217,10 @@ $ssa = Get-SpenterpriseSearchServiceApplication -Identity "name of search servic
 New-SPEnterpriseSearchServiceApplicationProxy -Name "name of SSA proxy" -SearchApplication $ssa
   ```
 
-5. (Optional) Verify that the SSA and its proxy exist by opening **Central Administration**. Choose **Manage Service Applications**and verify that the SSA and its proxy are listed.
+5. (Optional) Verify that the SSA and its proxy exist by opening **Central Administration**. Choose **Manage Service Applications** and verify that the SSA and its proxy are listed.
     
   
-6. (Optional) Click the SSA on the list of services, and then, on the page that opens, verify that the **Search Application Topology**table matches the typology that you exported in the backup procedure. (You can also verify the topology with the cmdlet**Get-SPEnterpriseSearchStatus**.) 
+6. (Optional) Click the SSA on the list of services, and then, on the page that opens, verify that the **Search Application Topology** table matches the typology that you exported in the backup procedure. (You can also verify the topology with the cmdlet **Get-SPEnterpriseSearchStatus**.) 
     
   
 7. Restore the index files with the following procedure **on all servers with index components**.
@@ -252,7 +252,7 @@ stop-service SPSearchHostController
 2. From the output of the cmdlet, record the last part of each GUID. For example, if one line of the output is  `IndexComponentGroup_e255918b-6ab0-4d7c-8049-720b2744c62f`, record 720b2744c62f. 
     
   
-3. In **File Explorer**(or**Windows Explorer**on Windows Server 2008), navigate to `C:\\Program Files\\Microsoft Office Servers\\15.0\\Data\\Office Server\\Applications\\Search\\Nodes\\24488A\\IndexComponentN\\storage\\data`, where  *N*  is the number of an index component.
+3. In **File Explorer** (or **Windows Explorer** on Windows Server 2008), navigate to `C:\\Program Files\\Microsoft Office Servers\\15.0\\Data\\Office Server\\Applications\\Search\\Nodes\\24488A\\IndexComponentN\\storage\\data`, where  *N*  is the number of an index component.
     
   
 4. Each of these folders has a subfolder whose name begins with "SP" followed by 12 hex digits followed by a version number. For each of these subfolders where the 12 hex digits match one of the GUID endings that you recorded in the earlier step, rename the subfolder to importindex. In the continuing example, you would rename the subfolder  `SP720b2744c62f.1.I.1.0` toimportindex. 
@@ -267,7 +267,7 @@ stop-service SPSearchHostController
 6. Verify that the index data folder names have reverted back to their previous name. (In the continuing example, this would be "'SP720b2744c62f.1.I.1.0".) 
     
   
-8. (Optional) Verify that the sizes of **IndexComponent**folders match the sizes you recorded in the backup procedure.
+8. (Optional) Verify that the sizes of **IndexComponent** folders match the sizes you recorded in the backup procedure.
     
   
 9. Restart the SSA. 
@@ -286,7 +286,7 @@ stop-service SPSearchHostController
 ## Example manifest files
 <a name="Examples"> </a>
 
-**SSA manifest file**
+ **SSA manifest file**
   
     
     
@@ -309,7 +309,7 @@ stop-service SPSearchHostController
 
 ```
 
-**Index manifest file**
+ **Index manifest file**
   
     
     

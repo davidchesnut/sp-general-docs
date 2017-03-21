@@ -68,13 +68,13 @@ The following procedures guide you through setting up an SharePoint Add-in and c
 1. Open Visual Studio 2012. 
     
   
-2. Create an **App for SharePoint 2013**project.
+2. Create an **App for SharePoint 2013** project.
     
   
 3. Specify the app settings, including app name, the site URL for debugging the app, and how you want to host the app (Autohosted, Provider-hosted, SharePoint-hosted). For more information about hosting options, see  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx). 
     
   
-4. Choose **Finish**to create the app.
+4. Choose **Finish** to create the app.
     
   
 
@@ -84,12 +84,12 @@ The following procedures guide you through setting up an SharePoint Add-in and c
 1. In **Solution Explorer**, open the shortcut menu for the project, and choose **Add**, **Content Types for External Data Source**. 
     
   
-2. In the **Specify OData Source**page, enter the URL of the OData service you want to connect to. In this case, use the Northwind OData source published at [http://www.odata.org/ecosystem](http://www.odata.org/ecosystem). Set the URL for the OData service to  `http://services.odata.org/Northwind/Northwind.svc/`, and provide a name for the data source. 
+2. In the **Specify OData Source** page, enter the URL of the OData service you want to connect to. In this case, use the Northwind OData source published at [http://www.odata.org/ecosystem](http://www.odata.org/ecosystem). Set the URL for the OData service to  `http://services.odata.org/Northwind/Northwind.svc/`, and provide a name for the data source. 
     
     Choose **Next**. 
     
   
-3. This displays a list of data entities that are being exposed by the OData Service. Select the **Customers**entity. Ensure that the**Create list instances for the selected data entities (except Service Operations)**check box is selected.
+3. This displays a list of data entities that are being exposed by the OData Service. Select the **Customers** entity. Ensure that the **Create list instances for the selected data entities (except Service Operations)** check box is selected.
     
   
 4. Choose **Finish**. 
@@ -111,10 +111,10 @@ The next objective is to modify the default.aspx page that was created when you 
 ### To add the container to the Default.aspx page
 
 
-1. In **Solution Explorer**, open the Default.aspx page in the **Pages**module.
+1. In **Solution Explorer**, open the Default.aspx page in the **Pages** module.
     
   
-2. Add the following **div**element to the page.
+2. Add the following **div** element to the page.
     
   ```HTML
   

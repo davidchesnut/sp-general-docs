@@ -38,10 +38,10 @@ You can choose from several sets of APIs to access the SharePoint 2013 platform.
     
     
 
-- **The type of application.**The possibilities include, but are not limited to, the following, which are not mutually exclusive categories: an SharePoint Add-in, a Web Part on a SharePoint page, a Silverlight application running on either a client computer or a client mobile device, an ASP.NET application exposed in SharePoint by an IFrame, JavaScript running in a SharePoint site page, a SharePoint application page, a Microsoft .NET Framework application running on a client computer, a Windows PowerShell script, and a timer job running on a SharePoint server.
+- **The type of application.** The possibilities include, but are not limited to, the following, which are not mutually exclusive categories: an SharePoint Add-in, a Web Part on a SharePoint page, a Silverlight application running on either a client computer or a client mobile device, an ASP.NET application exposed in SharePoint by an IFrame, JavaScript running in a SharePoint site page, a SharePoint application page, a Microsoft .NET Framework application running on a client computer, a Windows PowerShell script, and a timer job running on a SharePoint server.
     
   
-- **Your existing skills.**To a surprising degree, you can create applications in SharePoint 2013 without needing to learn a lot about SharePoint programming. You can jump right into SharePoint development if you already have experience in any of the following programming models:
+- **Your existing skills.** To a surprising degree, you can create applications in SharePoint 2013 without needing to learn a lot about SharePoint programming. You can jump right into SharePoint development if you already have experience in any of the following programming models:
     
   - JavaScript 
     
@@ -64,7 +64,7 @@ You can choose from several sets of APIs to access the SharePoint 2013 platform.
   - Windows PowerShell 
     
   
-- **The device on which the code runs.**The possibilities include a server in the SharePoint farm, an external server such as a server in the cloud, a client computer, and a mobile device.
+- **The device on which the code runs.** The possibilities include a server in the SharePoint farm, an external server such as a server in the cloud, a client computer, and a mobile device.
     
   
 This topic provides an overview of the various API sets that are provided by SharePoint 2013. Figure 1 shows which sets of APIs can be used to develop each of 13 common SharePoint-related applications. For many applications, you can choose from more than one API. 
@@ -125,7 +125,7 @@ At the level of SharePoint Server 2013, many more classes are added to enable pr
   
     
     
-You can use  [LINQ to Objects](http://msdn.microsoft.com/en-us/library/bb397919.aspx) to query any**IEnumerable**collection in memory, but a [LINQ to SharePoint provider](http://msdn.microsoft.com/library/3fa2dc5f-d308-4337-aefd-191a5df8dbbe%28Office.15%29.aspx) enables direct querying of the lists in the SharePoint content databases. Strictly speaking, this provider is not available with any other set of APIs discussed in this topic; however, there are ways to use LINQ syntax in most of the others.
+You can use  [LINQ to Objects](http://msdn.microsoft.com/en-us/library/bb397919.aspx) to query any **IEnumerable** collection in memory, but a [LINQ to SharePoint provider](http://msdn.microsoft.com/library/3fa2dc5f-d308-4337-aefd-191a5df8dbbe%28Office.15%29.aspx) enables direct querying of the lists in the SharePoint content databases. Strictly speaking, this provider is not available with any other set of APIs discussed in this topic; however, there are ways to use LINQ syntax in most of the others.
   
     
     
@@ -180,7 +180,7 @@ To improve performance, lines of code written against in the .NET Framework clie
   
     
     
-You can use LINQ query syntax in your client code to query any **IEnumerable**object, including SharePoint 2013 objects that implement**IEnumerable**. However, when you do this, you are using  [LINQ to Objects](http://msdn.microsoft.com/en-us/library/bb397919.aspx), not the  [LINQ to SharePoint provider](http://msdn.microsoft.com/library/3fa2dc5f-d308-4337-aefd-191a5df8dbbe%28Office.15%29.aspx), so documentation of the latter is not relevant to client-side code. 
+You can use LINQ query syntax in your client code to query any **IEnumerable** object, including SharePoint 2013 objects that implement **IEnumerable**. However, when you do this, you are using  [LINQ to Objects](http://msdn.microsoft.com/en-us/library/bb397919.aspx), not the  [LINQ to SharePoint provider](http://msdn.microsoft.com/library/3fa2dc5f-d308-4337-aefd-191a5df8dbbe%28Office.15%29.aspx), so documentation of the latter is not relevant to client-side code. 
   
     
     

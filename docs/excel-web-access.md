@@ -34,7 +34,7 @@ This section describes the Excel Web Access Web Part and explains how to use it.
 ## Reference
 
 
-**[Microsoft.Office.Excel.WebUI]**
+ **[Microsoft.Office.Excel.WebUI]**
   
     
     

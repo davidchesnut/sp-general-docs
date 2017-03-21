@@ -72,7 +72,7 @@ You can build these apps on the ASP.NET platform or a non-Microsoft stack. If yo
   
     
     
-These apps **gain authorized access to SharePoint data by using access tokens**that are issued by the Azure Control Service (ACS) in compliance with the OAuth Authentication Code flow. For more, see [Authorization Code OAuth flow for SharePoint Add-ins](http://msdn.microsoft.com/library/e89e91c7-ea39-49b9-af5a-7f047a7e2ab7%28Office.15%29.aspx). 
+These apps **gain authorized access to SharePoint data by using access tokens** that are issued by the Azure Control Service (ACS) in compliance with the OAuth Authentication Code flow. For more, see [Authorization Code OAuth flow for SharePoint Add-ins](http://msdn.microsoft.com/library/e89e91c7-ea39-49b9-af5a-7f047a7e2ab7%28Office.15%29.aspx). 
   
     
     

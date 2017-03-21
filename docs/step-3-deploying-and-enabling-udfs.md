@@ -45,34 +45,34 @@ In this step, you will:
 ### To trust a location
 
 
-1. On the **Start**menu, click**All Programs**. 
+1. On the **Start** menu, click **All Programs**. 
     
   
-2. Point to **Microsoft SharePoint 2010 Products**and click**SharePoint Central Administration**. 
+2. Point to **Microsoft SharePoint 2010 Products** and click **SharePoint Central Administration**. 
     
   
-3. Under **Application Management**click**Manage service applications**. 
+3. Under **Application Management** click **Manage service applications**. 
     
   
 4. On the Manage Service Applications page, click **Excel Services Application**. 
     
   
-5. On the **Excel Services Application**page, click**Trusted File Locations**. 
+5. On the **Excel Services Application** page, click **Trusted File Locations**. 
     
   
 6. On the Trusted File Locations page, click **Add Trusted File Location**. 
     
   
-7. On the Add Trusted File Location page, in the **Address**box, type the location where you will save your workbook—for example, _http://MyServer002/Shared%20Documents_. 
+7. On the Add Trusted File Location page, in the **Address** box, type the location where you will save your workbook—for example, _http://MyServer002/Shared%20Documents_. 
     
   
 8. Under **Location type**, click the appropriate location type. In this example, select Microsoft SharePoint Foundation. 
     
   
-9. Under **Trust Children**, select **Children trusted**to trust child libraries or directories.
+9. Under **Trust Children**, select **Children trusted** to trust child libraries or directories.
     
   
-10. Under **Allow User-Defined Functions**, select **User-defined functions allowed**to allow UDFs to be called from workbooks stored in this trusted location.
+10. Under **Allow User-Defined Functions**, select **User-defined functions allowed** to allow UDFs to be called from workbooks stored in this trusted location.
     
   
 11. Click **OK**. 
@@ -95,16 +95,16 @@ To do the following steps, you need a computer that has SharePoint Server 2010 i
 2. Under **Excel Services Settings**, click **User-defined function assemblies**. 
     
   
-3. On the Excel Services User-Defined Functions page, click **Add User-Defined Function**to open the Excel****Services Add User-Defined Function Assembly page. 
+3. On the Excel Services User-Defined Functions page, click **Add User-Defined Function** to open the Excel ****Services Add User-Defined Function Assembly page. 
     
   
-4. In the **Assembly**box, type the path to the SampleUdf.dll assembly. In this example, it would be _C:\\UDFs\\SampleUdf.dll_. 
+4. In the **Assembly** box, type the path to the SampleUdf.dll assembly. In this example, it would be _C:\\UDFs\\SampleUdf.dll_. 
     
   
 5. Under **Assembly Location**, click **File path**. 
     
   
-6. Under **Enable Assembly**, the **Assembly enabled**check box should be selected by default.
+6. Under **Enable Assembly**, the **Assembly enabled** check box should be selected by default.
     
   
 7. Click **OK**. 
@@ -113,18 +113,18 @@ To do the following steps, you need a computer that has SharePoint Server 2010 i
 
 ## Robust programming
 
-If the **AllowUdfs**value is**false**when a session is started on a workbook that has UDF calls, the UDF calls will fail.
+If the **AllowUdfs** value is **false** when a session is started on a workbook that has UDF calls, the UDF calls will fail.
   
     
     
 
 > [!NOTE]  
-> The **AllowUdfs**flag is denoted by the**User-defined functions allowed**option (see step 9 in the "Trusting a Location" section).
+> The **AllowUdfs** flag is denoted by the **User-defined functions allowed** option (see step 9 in the "Trusting a Location" section).
   
     
     
 
-If you change the **AllowUdfs**value to**true**after a session has started, the UDF calls will also fail. This is because changes in the**AllowUdfs**flag take effect on the next session. You can get around this by resetting Microsoft Internet Information Services (IIS). Resetting IIS will reload UDFs.
+If you change the **AllowUdfs** value to **true** after a session has started, the UDF calls will also fail. This is because changes in the **AllowUdfs** flag take effect on the next session. You can get around this by resetting Microsoft Internet Information Services (IIS). Resetting IIS will reload UDFs.
   
     
     

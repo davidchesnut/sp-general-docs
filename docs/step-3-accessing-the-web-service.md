@@ -1,6 +1,6 @@
 ---
 title: Step 3 Accessing the Web Service
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: d27f654d-242f-4f34-8385-be857c170532
 ---
 
@@ -25,7 +25,7 @@ You use the calls to open a workbook, get the session ID, pass in the default cr
 ### To add directives
 
 
-1. When you added the Web reference earlier, it created an object named ExcelService in a namespace called <yourProject>.<webReferenceName>. In this example, the object is named SampleApplication.ExcelWebService. This walkthrough also shows how to catch SOAP exceptions. To do so, you use the **System.Web.Services.Protocols**object. The**System.Web.Services.Protocols**namespace consists of the classes that define the protocols used to transmit data across the wire during the communication between XML Web service clients and XML Web services created using ASP.NET.
+1. When you added the Web reference earlier, it created an object named ExcelService in a namespace called <yourProject>.<webReferenceName>. In this example, the object is named SampleApplication.ExcelWebService. This walkthrough also shows how to catch SOAP exceptions. To do so, you use the **System.Web.Services.Protocols** object. The **System.Web.Services.Protocols** namespace consists of the classes that define the protocols used to transmit data across the wire during the communication between XML Web service clients and XML Web services created using ASP.NET.
   
     
     
@@ -108,7 +108,7 @@ string sheetName = "Sheet1";
 > Change the workbook path to match the location of the workbook you are using for this walkthrough. Make sure the workbook exists and that the location where the workbook is saved is a trusted location. Using an HTTP URL to point to the location of a workbook allows you to access it remotely. 
 
     > [!NOTE]  
-> You can get the path to a workbook in Microsoft SharePoint Server 2010 by right-clicking the workbook and selecting **Copy Shortcut**. Alternatively, you can select **Properties**and copy the path to the workbook from there.
+> You can get the path to a workbook in Microsoft SharePoint Server 2010 by right-clicking the workbook and selecting **Copy Shortcut**. Alternatively, you can select **Properties** and copy the path to the workbook from there.
 5. Add the following code to set the credentials for the request. 
     
     > [!NOTE]  
@@ -123,7 +123,7 @@ string sheetName = "Sheet1";
   es.Credentials = System.Net.CredentialCache.DefaultCredentials
   ```
 
-6. Add the following code to open the workbook and point to the trusted location where the workbook is located. Place the code in a **try**block:
+6. Add the following code to open the workbook and point to the trusted location where the workbook is located. Place the code in a **try** block:
     
   ```cs
   try
@@ -139,7 +139,7 @@ Try
 Dim sessionId As String = es.OpenWorkbook(targetWorkbookPath, "en-US", "en-US", outStatus)
   ```
 
-7. Add the following code to prepare an object to define range coordinates, and call the **GetRange**method. The code will also print the total number of rows in the range and the value in a particular range.
+7. Add the following code to prepare an object to define range coordinates, and call the **GetRange** method. The code will also print the total number of rows in the range and the value in a particular range.
     
   ```cs
   
@@ -167,7 +167,7 @@ Console.WriteLine("Total rows in range: " &amp; rangeResult1.Length)
 Console.WriteLine("Value in range is: " &amp; (CType(rangeResult1(5), Object()))(2))
   ```
 
-8. Add code to close the workbook and close the current session. Also add a close bracket to end the **try**block.
+8. Add code to close the workbook and close the current session. Also add a close bracket to end the **try** block.
     
     > [!IMPORTANT]  
 > It is good practice to close the workbook if you are done using the session. This will close the session and free resources. 
@@ -184,7 +184,7 @@ es.CloseWorkbook(sessionId);
 es.CloseWorkbook(sessionId)
   ```
 
-9. Add a **catch**block to catch the SOAP exception and print the exception message:
+9. Add a **catch** block to catch the SOAP exception and print the exception message:
     
   ```cs
   catch (SoapException e)

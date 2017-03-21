@@ -3,7 +3,7 @@ title: Frequently Asked Questions About Excel Services UDFs
 keywords: faqs
 f1_keywords:
 - faqs
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: 3d94d040-eecf-4f8e-a316-6d1cca95e7eb
 ---
 
@@ -37,13 +37,13 @@ A UDF method cannot have:
     
     
 
-- **ref**or**out**parameters
+- **ref** or **out** parameters
     
   
-- **retval**attributes
+- **retval** attributes
     
   
-- **Optional**arguments
+- **Optional** arguments
     
   
 - unsupported data types 

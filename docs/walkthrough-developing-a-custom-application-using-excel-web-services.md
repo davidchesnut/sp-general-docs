@@ -1,6 +1,6 @@
 ---
 title: Walkthrough Developing a Custom Application Using Excel Web Services
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: 2f9bf243-281a-4d70-917e-9eaf0b867631
 ---
 
@@ -64,10 +64,10 @@ The workbook used in this example has a worksheet named "Sheet1". The worksheet 
 ## Workbook Permissions
 
 
-- To get the entire workbook (for example, by calling the **GetWorkbook**method), the caller needs "open" permission fr the workbook.
+- To get the entire workbook (for example, by calling the **GetWorkbook** method), the caller needs "open" permission fr the workbook.
     
   
-- To call the **GetApiVersion**method, no permission is necessary.
+- To call the **GetApiVersion** method, no permission is necessary.
     
   
 - For the rest of the Excel Web Services methods, the caller needs "view" permission (in Microsoft SharePoint Foundation) or "read" permission (on a file share) for the workbook. 

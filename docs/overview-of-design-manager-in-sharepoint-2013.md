@@ -148,7 +148,7 @@ The core feature of Design Manager is that it converts your HTML design into a S
   
     
     
-After the conversion, your HTML file and the SharePoint master page are associated, so that when you edit and save the HTML file in your mapped drive, the master page is updated automatically. In Design Manager, the HTML master page has a property named **Associated File**that determines whether changes to the HTML file are synced to the .master file.
+After the conversion, your HTML file and the SharePoint master page are associated, so that when you edit and save the HTML file in your mapped drive, the master page is updated automatically. In Design Manager, the HTML master page has a property named **Associated File** that determines whether changes to the HTML file are synced to the .master file.
   
     
     
@@ -166,7 +166,7 @@ In addition to converting your master page, Design Manager provides a server-sid
   
     
     
-When you preview a master page, you can use the **Change Preview Page**option in the top-left corner to preview the master page along with any existing page, or create a new page to preview with. Unlike the design-time preview of your HTML master page in an HTML editor, this server-side preview is a fully functional live preview, so you may prefer to edit the HTML file, save it so that the latest changes are synced to the associated .master file, and refresh the live preview and view your latest design changes in the browser.
+When you preview a master page, you can use the **Change Preview Page** option in the top-left corner to preview the master page along with any existing page, or create a new page to preview with. Unlike the design-time preview of your HTML master page in an HTML editor, this server-side preview is a fully functional live preview, so you may prefer to edit the HTML file, save it so that the latest changes are synced to the associated .master file, and refresh the live preview and view your latest design changes in the browser.
   
     
     
@@ -192,7 +192,7 @@ After you convert your master page and successfully preview it, you are ready to
 
 #### Find and configure snippets in the Snippet Gallery
 
-The Snippet Gallery is where you can quickly see which components are available for the type of file you're editing, either master page or page layout. On the ribbon, you select a snippet. In the property grid on the right, you can configure the properties for this instance of a snippet, and then choose **Update**to refresh the HTML snippet on the left.
+The Snippet Gallery is where you can quickly see which components are available for the type of file you're editing, either master page or page layout. On the ribbon, you select a snippet. In the property grid on the right, you can configure the properties for this instance of a snippet, and then choose **Update** to refresh the HTML snippet on the left.
   
     
     

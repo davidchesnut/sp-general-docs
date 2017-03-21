@@ -114,12 +114,12 @@ Here is a summary of changes that require you to update your workflow projects:
     
     
 
-- Activity references to **Item Guid**are replaced by**Item Id**. This change has important consequences: 
+- Activity references to **Item Guid** are replaced by **Item Id**. This change has important consequences: 
     
-  - The  [LookupSPListItemGuid](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.Activities.LookupSPListItemGuid.aspx) and [GetCurrentItemGuid](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.Activities.GetCurrentItemGuid.aspx) activities are removed from the tooling; their replacement activities are**LookupSPListItemId**and**GetCurrentItemId**. 
+  - The  [LookupSPListItemGuid](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.Activities.LookupSPListItemGuid.aspx) and [GetCurrentItemGuid](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.Activities.GetCurrentItemGuid.aspx) activities are removed from the tooling; their replacement activities are **LookupSPListItemId** and **GetCurrentItemId**. 
     
   
-  - For other activities that use **Item Guid**, you will find **Item Id**added and**Item Guid**hidden. Your existing projects that use**Item Guid**will continue to work (except on very large lists with more than 5000 items, which is one of the reasons for the change).
+  - For other activities that use **Item Guid**, you will find **Item Id** added and **Item Guid** hidden. Your existing projects that use **Item Guid** will continue to work (except on very large lists with more than 5000 items, which is one of the reasons for the change).
     
   
 - There is a new packaging format for workflows in apps. 

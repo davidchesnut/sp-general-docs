@@ -46,13 +46,13 @@ Follow these steps to add the Geolocation column to a list using the SharePoint 
 1. Start Visual Studio. 
     
   
-2. On the menu bar, choose **File, New Project**. The **New Project**dialog box opens.
+2. On the menu bar, choose **File, New Project**. The **New Project** dialog box opens.
     
   
-3. In the **New Project**dialog box, choose**C#**in the**Installed Templates**box, and then choose the**Console Application**template.
+3. In the **New Project** dialog box, choose **C#** in the **Installed Templates** box, and then choose the **Console Application** template.
     
   
-4. Give the project a name, and then choose the **OK**button.
+4. Give the project a name, and then choose the **OK** button.
     
   
 5. Visual Studio creates the project. Add a reference to the following assemblies, and choose **OK**. 
@@ -62,12 +62,12 @@ Follow these steps to add the Geolocation column to a list using the SharePoint 
     Microsoft.SharePoint.Client.Runtime.dll 
     
   
-6. In the default .cs file, add a **using**directive as follows.
+6. In the default .cs file, add a **using** directive as follows.
     
      `using Microsoft.SharePoint.Client;`
     
   
-7. Add the following code to the **Main**method in the .cs file.
+7. Add the following code to the **Main** method in the .cs file.
     
   ```cs
   
@@ -96,7 +96,7 @@ class Program
 9.  Set the target framework in Project Properties as .NET Framework 4.0 or 3.5, and run the example.
     
   
-10. Navigate to the list. You should be able to see a column named **Location**of type Geolocation in the list. You can now enter some values and see it in action. Figure 1 shows the default location and map features that you can expect to see in your list.
+10. Navigate to the list. You should be able to see a column named **Location** of type Geolocation in the list. You can now enter some values and see it in action. Figure 1 shows the default location and map features that you can expect to see in your list.
     
    **Figure 1. Summarized view of the default location and map features**
 
@@ -112,7 +112,7 @@ class Program
 ## Add a list item with the Geolocation field value to a SharePoint list programmatically
 <a name="SP15addgeo_addlistitem"> </a>
 
-After the Geolocation field is added to a SharePoint list, the developer can add the list item to the list programmatically. There are two ways to add the list item programmatically: by passing the **FieldGeolocationValue**object to the Geolocation field, and by passing**Raw Value**to the Geolocation field.
+After the Geolocation field is added to a SharePoint list, the developer can add the list item to the list programmatically. There are two ways to add the list item programmatically: by passing the **FieldGeolocationValue** object to the Geolocation field, and by passing **Raw Value** to the Geolocation field.
   
     
     

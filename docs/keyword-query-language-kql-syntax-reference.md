@@ -41,7 +41,7 @@ If the KQL query contains only operators or is empty, it isn't valid. KQL querie
 ## Constructing free-text queries using KQL
 <a name="SP15KQL_constructing_freetext_queries"> </a>
 
-When you construct your KQL query by using free-text expressions, Search in SharePoint 2013 matches results for the terms you chose for the query based on terms stored in the full-text index. This includes managed property values where  [FullTextQueriable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.FullTextQueriable.aspx) is set to**true**. 
+When you construct your KQL query by using free-text expressions, Search in SharePoint 2013 matches results for the terms you chose for the query based on terms stored in the full-text index. This includes managed property values where  [FullTextQueriable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.FullTextQueriable.aspx) is set to **true**. 
   
     
     
@@ -50,13 +50,13 @@ Free text KQL queries are case-insensitive but the operators must be in uppercas
     
     
 
-- A **word**(includes one or more characters without spaces or punctuation)
+- A **word** (includes one or more characters without spaces or punctuation)
     
   
-- A **phrase**(includes two or more words together, separated by spaces; however, the words must be enclosed in double quotation marks)
+- A **phrase** (includes two or more words together, separated by spaces; however, the words must be enclosed in double quotation marks)
     
   
-To construct complex queries, you can combine multiple free-text expressions with KQL query operators. If there are multiple free-text expressions without any operators in between them, the query behavior is the same as using the **AND**operator.
+To construct complex queries, you can combine multiple free-text expressions with KQL query operators. If there are multiple free-text expressions without any operators in between them, the query behavior is the same as using the **AND** operator.
   
     
     
@@ -166,7 +166,7 @@ You must specify a valid managed property name for the property restriction. By 
   
     
     
-To specify a property restriction for a crawled property value, you must first map the crawled property to a managed property. See **Managed and crawled properties**in [Plan the end-user search experience](http://technet.microsoft.com/en-us/library/cc263089.aspx). 
+To specify a property restriction for a crawled property value, you must first map the crawled property to a managed property. See **Managed and crawled properties** in [Plan the end-user search experience](http://technet.microsoft.com/en-us/library/cc263089.aspx). 
   
     
     
@@ -188,7 +188,7 @@ Search in SharePoint 2013 supports several property operators for property restr
 |**Operator**|**Description**|**Supported managed property type**|
 |:-----|:-----|:-----|
 |: |Returns results where the value specified in the property restriction is equal to the property value that is stored in the Property Store database, or matches individual terms in the property value that is stored in the full-text index. | [Text](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Text.aspx) [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.DateTime.aspx) [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Integer.aspx) [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Decimal.aspx) [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Double.aspx) [YesNo](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.YesNo.aspx)|
-|= |Returns search results where the property value is equal to the value specified in the property restriction. > [!NOTE]  > We do not recommend combining the **=**operator together with asterisk (*****) when you do exact matching.           | [Text](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Text.aspx) [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.DateTime.aspx) [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Integer.aspx) [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Decimal.aspx) [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Double.aspx) [YesNo](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.YesNo.aspx)|
+|= |Returns search results where the property value is equal to the value specified in the property restriction. > [!NOTE]  > We do not recommend combining the **=** operator together with asterisk ( *****) when you do exact matching.           | [Text](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Text.aspx) [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.DateTime.aspx) [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Integer.aspx) [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Decimal.aspx) [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Double.aspx) [YesNo](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.YesNo.aspx)|
 |< |Returns results where the property value is less than the value specified in the property restriction. | [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.DateTime.aspx) [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Integer.aspx) [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Decimal.aspx) [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Double.aspx)|
 |> |Returns search results where the property value is greater than the value specified in the property restriction. | [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.DateTime.aspx) [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Integer.aspx) [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Decimal.aspx) [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Double.aspx)|
 |<= |Returns search results where the property value is less than or equal to the value specified in the property restriction. | [DateTime](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.DateTime.aspx) [Integer](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Integer.aspx) [Decimal](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Decimal.aspx) [Double](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType.Double.aspx)|
@@ -226,7 +226,7 @@ For text property values, the matching behavior depends on whether the property 
 
 #### Property values in the full-text index
 
-Property values are stored in the full-text index when the **FullTextQueriable**property is set to**true**for a managed property. You can configure this only for string properties. Property values that are specified in the query are matched against individual terms that are stored in the full-text index. Use the [NoWordBreaker](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.NoWordBreaker.aspx) property to specify whether to match with the whole property value.
+Property values are stored in the full-text index when the **FullTextQueriable** property is set to **true** for a managed property. You can configure this only for string properties. Property values that are specified in the query are matched against individual terms that are stored in the full-text index. Use the [NoWordBreaker](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.NoWordBreaker.aspx) property to specify whether to match with the whole property value.
   
     
     
@@ -281,14 +281,14 @@ The following queries do not return the expected results:
 
 #### Numerical values for properties
 
-For numerical property values, which include the **Integer**, **Double**, and **Decimal**managed types, the property restriction is matched against the entire value of the property.
+For numerical property values, which include the **Integer**, **Double**, and **Decimal** managed types, the property restriction is matched against the entire value of the property.
   
     
     
 
 ### Date or time values for properties
 
-KQL provides the **datetime**data type for date and time.The following ISO 8601-compatible datetime formats are supported in queries:
+KQL provides the **datetime** data type for date and time.The following ISO 8601-compatible datetime formats are supported in queries:
   
     
     
@@ -305,7 +305,7 @@ KQL provides the **datetime**data type for date and time.The following ISO 8601-
 - YYYY-MM-DDThh:mm:ssfrZ 
     
   
-In these **datetime**formats:
+In these **datetime** formats:
   
     
     
@@ -332,7 +332,7 @@ In these **datetime**formats:
 -  _ss_ specifies a two-digit second (00 through 59).
     
   
--  _fr_ specifies an optional fraction of seconds, ss; between 1 to 7 digits that follows the**.**after the seconds. For example, 2012-09-27T11:57:34.1234567.
+-  _fr_ specifies an optional fraction of seconds, ss; between 1 to 7 digits that follows the **.** after the seconds. For example, 2012-09-27T11:57:34.1234567.
     
   
 All date/time values must be specified according to the UTC (Coordinated Universal Time), also known as GMT (Greenwich Mean Time) time zone. The UTC time zone identifier (a trailing "Z" character) is optional. 
@@ -373,7 +373,7 @@ When you use multiple instances of the same property restriction, matches are ba
   
     
     
-This functionally is the same as using the **OR**Boolean operator, as follows:
+This functionally is the same as using the **OR** Boolean operator, as follows:
   
     
     
@@ -389,7 +389,7 @@ When you use different property restrictions, matches are based on an intersecti
   
     
     
-Matches would include Microsoft Word documents authored by John Smith. This is the same as using the **AND**Boolean operator, as follows:
+Matches would include Microsoft Word documents authored by John Smith. This is the same as using the **AND** Boolean operator, as follows:
   
     
     
@@ -418,9 +418,9 @@ You use Boolean operators to broaden or narrow your search. You can use Boolean 
 
 |**Operator**|**Description**|
 |:-----|:-----|
-|**AND**|Returns search results that include all of the free text expressions, or property restrictions specified with the **AND**operator. You must specify a valid free text expression and/or a valid property restriction both preceding and following the**AND**operator. This is the same as using the plus ("+") character.|
-|**NOT**|Returns search results that don't include the specified free text expressions or property restrictions. You must specify a valid free text expression and/or a valid property restriction following the **NOT**operator. This is the same as using the minus ("-") character.|
-|**OR**|Returns search results that include one or more of the specified free text expressions or property restrictions. You must specify a valid free text expression and/or a valid property restriction both preceding and following the **OR**operator.|
+|**AND**|Returns search results that include all of the free text expressions, or property restrictions specified with the **AND** operator. You must specify a valid free text expression and/or a valid property restriction both preceding and following the **AND** operator. This is the same as using the plus ("+") character.|
+|**NOT**|Returns search results that don't include the specified free text expressions or property restrictions. You must specify a valid free text expression and/or a valid property restriction following the **NOT** operator. This is the same as using the minus ("-") character.|
+|**OR**|Returns search results that include one or more of the specified free text expressions or property restrictions. You must specify a valid free text expression and/or a valid property restriction both preceding and following the **OR** operator.|
    
 
   
@@ -429,14 +429,14 @@ You use Boolean operators to broaden or narrow your search. You can use Boolean 
 
 ### Proximity operators
 
-You use proximity operators to match the results where the specified search terms are within close proximity to each other. Proximity operators can be used with free-text expressions only; they are not supported with property restrictions in KQL queries. There are two proximity operators: **NEAR**and**ONEAR**. 
+You use proximity operators to match the results where the specified search terms are within close proximity to each other. Proximity operators can be used with free-text expressions only; they are not supported with property restrictions in KQL queries. There are two proximity operators: **NEAR** and **ONEAR**. 
   
     
     
 
 #### NEAR operator
 
-The **NEAR**operator matches the results where the specified search terms are within close proximity to each other, without preserving the order of the terms. The syntax for**NEAR**is as follows:
+The **NEAR** operator matches the results where the specified search terms are within close proximity to each other, without preserving the order of the terms. The syntax for **NEAR** is as follows:
   
     
     
@@ -444,7 +444,7 @@ The **NEAR**operator matches the results where the specified search terms are wi
   
     
     
-Where  _n_ is an optional parameter that indicates maximum distance between the terms. The value of _n_ is an integer >= 0 with a default of**8**.
+Where  _n_ is an optional parameter that indicates maximum distance between the terms. The value of _n_ is an integer >= 0 with a default of **8**.
   
     
     
@@ -474,7 +474,7 @@ If you need a smaller distance between the terms, you can specify it. The follow
     
 
 > [!NOTE]  
-> In SharePoint 2013 the **NEAR**operator no longer preserves the ordering of tokens. In addition, the**NEAR**operator now receives an optional parameter that indicates maximum token distance. However, the default value is still**8**. If you must use the previous behavior, use**ONEAR**instead.
+> In SharePoint 2013 the **NEAR** operator no longer preserves the ordering of tokens. In addition, the **NEAR** operator now receives an optional parameter that indicates maximum token distance. However, the default value is still **8**. If you must use the previous behavior, use **ONEAR** instead.
   
     
     
@@ -482,7 +482,7 @@ If you need a smaller distance between the terms, you can specify it. The follow
 
 #### ONEAR operator
 
-The **ONEAR**operator matches the results where the specified search terms are within close proximity to each other, while preserving the order of the terms. The syntax for**ONEAR**is as follows, where _n_ is an optional parameter that indicates maximum distance between the terms. The value of _n_ is an integer >= 0 with a default of**8**.
+The **ONEAR** operator matches the results where the specified search terms are within close proximity to each other, while preserving the order of the terms. The syntax for **ONEAR** is as follows, where _n_ is an optional parameter that indicates maximum distance between the terms. The value of _n_ is an integer >= 0 with a default of **8**.
   
     
     
@@ -494,7 +494,7 @@ The parameter  _n_ can be specified as `n=v` where _v_ represents the value, or 
   
     
     
-For example, the following query matches items where the terms "acquisition" and "debt" appear within the same item, where an instance of "acquisition" is followed by up to eight other terms, and then an instance of the term "debt". The order of the terms **must**match for an item to be returned:
+For example, the following query matches items where the terms "acquisition" and "debt" appear within the same item, where an instance of "acquisition" is followed by up to eight other terms, and then an instance of the term "debt". The order of the terms **must** match for an item to be returned:
   
     
     
@@ -502,7 +502,7 @@ For example, the following query matches items where the terms "acquisition" and
   
     
     
-If you require a smaller distance between the terms, you can specify it as follows. This query matches items where the terms "acquisition" and "debt" appear within the same item, where a maximum distance of 3 between the terms. The order of the terms **must**match for an item to be returned:
+If you require a smaller distance between the terms, you can specify it as follows. This query matches items where the terms "acquisition" and "debt" appear within the same item, where a maximum distance of 3 between the terms. The order of the terms **must** match for an item to be returned:
   
     
     
@@ -513,7 +513,7 @@ If you require a smaller distance between the terms, you can specify it as follo
 
 ### Synonym operators
 
-You use the **WORDS**operator to specify that the terms in the query are synonyms, and that results returned should match either of the specified terms. You can use the**WORDS**operator with free text expressions only; it is not supported with property restrictions in KQL queries.
+You use the **WORDS** operator to specify that the terms in the query are synonyms, and that results returned should match either of the specified terms. You can use the **WORDS** operator with free text expressions only; it is not supported with property restrictions in KQL queries.
   
     
     
@@ -529,14 +529,14 @@ The following query example matches results that contain either the term "TV" or
   
     
     
-These queries differ in how the results are ranked. When you use the **WORDS**operator, the terms "TV" and "television" are treated as synonyms instead of separate terms. Therefore, instances of either term are ranked as if they were the same term. For example, a content item that contained one instance of the term "television" and five instances of the term "TV" would be ranked the same as a content item with six instances of the term "TV".
+These queries differ in how the results are ranked. When you use the **WORDS** operator, the terms "TV" and "television" are treated as synonyms instead of separate terms. Therefore, instances of either term are ranked as if they were the same term. For example, a content item that contained one instance of the term "television" and five instances of the term "TV" would be ranked the same as a content item with six instances of the term "TV".
   
     
     
 
 ### Wildcard operator
 
-You use the wildcard operator—the asterisk character ("*****")—to enable prefix matching. You can specify part of a word, from the beginning of the word, followed by the wildcard operator, in your query, as follows. This query would match results that include terms beginning with "serv", followed by zero or more characters, such as serve, server, service, and so on:
+You use the wildcard operator—the asterisk character (" ***** ")—to enable prefix matching. You can specify part of a word, from the beginning of the word, followed by the wildcard operator, in your query, as follows. This query would match results that include terms beginning with "serv", followed by zero or more characters, such as serve, server, service, and so on:
   
     
     
@@ -557,28 +557,28 @@ You can specify whether the results that are returned should include or exclude 
 
 |**Name**|**Operator**|**Behavior**|
 |:-----|:-----|:-----|
-|Inclusion |"**+**"|Includes content with values that match the inclusion. This is the default behavior if no character is specified. This is the same as using the **AND**operator.|
-|Exclusion |"**-**"|Excludes content with values that match the exclusion. This is the same as using the **NOT**operator.|
+|Inclusion |" **+** "|Includes content with values that match the inclusion. This is the default behavior if no character is specified. This is the same as using the **AND** operator.|
+|Exclusion |" **-** "|Excludes content with values that match the exclusion. This is the same as using the **NOT** operator.|
    
 
 ### Dynamic ranking operator
 
-You use the **XRANK**operator to boost the dynamic rank of items based on certain term occurrences within the _match expression_, without changing which items match the query. An **XRANK**expression contains one component that must be matched, the _match expression_, and one or more components that contribute only to dynamic ranking, the  _rank expression_. At least **one**of the parameters, excluding _n_, must be specified for an **XRANK**expression to be valid.
+You use the **XRANK** operator to boost the dynamic rank of items based on certain term occurrences within the _match expression_, without changing which items match the query. An **XRANK** expression contains one component that must be matched, the _match expression_, and one or more components that contribute only to dynamic ranking, the  _rank expression_. At least **one** of the parameters, excluding _n_, must be specified for an **XRANK** expression to be valid.
   
     
     
- _Match expressions_ may be any valid KQL expression, including nested**XRANK**expressions. _Rank expressions_ may be any valid KQL expression without**XRANK**expressions. If your KQL queries have multiple**XRANK**operators, the final dynamic rank value is calculated as a sum of boosts across all**XRANK**operators.
+ _Match expressions_ may be any valid KQL expression, including nested **XRANK** expressions. _Rank expressions_ may be any valid KQL expression without **XRANK** expressions. If your KQL queries have multiple **XRANK** operators, the final dynamic rank value is calculated as a sum of boosts across all **XRANK** operators.
   
     
     
 
 > [!NOTE]  
-> Use parenthesis to explicitly indicate the order of computation for KQL queries that have more than one **XRANK**operator at the same level.
+> Use parenthesis to explicitly indicate the order of computation for KQL queries that have more than one **XRANK** operator at the same level.
   
     
     
 
-You can use the **XRANK**operator in the following syntax:
+You can use the **XRANK** operator in the following syntax:
   
     
     
@@ -586,7 +586,7 @@ You can use the **XRANK**operator in the following syntax:
   
     
     
-The **XRANK**operator's dynamic ranking calculation is based on this formula:
+The **XRANK** operator's dynamic ranking calculation is based on this formula:
   
     
     
@@ -598,7 +598,7 @@ The **XRANK**operator's dynamic ranking calculation is based on this formula:
   
     
     
-Table 7 lists the basic parameters available for the **XRANK**operator.
+Table 7 lists the basic parameters available for the **XRANK** operator.
   
     
     
@@ -634,7 +634,7 @@ The following advanced parameters are also available. However, typically they're
 
 #### Examples
 
-**Example 1.**The following expression matches items for which the default full-text index contains either "cat" or "dog". The expression increases dynamic rank of those items with a constant boost of 100 for items that also contain "thoroughbred".
+ **Example 1.** The following expression matches items for which the default full-text index contains either "cat" or "dog". The expression increases dynamic rank of those items with a constant boost of 100 for items that also contain "thoroughbred".
   
     
     
@@ -642,7 +642,7 @@ The following advanced parameters are also available. However, typically they're
   
     
     
-**Example 2.**The following expression matches items for which the default full-text index contains either "cat" or "dog". The expression increases dynamic rank of those items with a normalized boost of 1.5 for items that also contain "thoroughbred".
+ **Example 2.** The following expression matches items for which the default full-text index contains either "cat" or "dog". The expression increases dynamic rank of those items with a normalized boost of 1.5 for items that also contain "thoroughbred".
   
     
     
@@ -650,7 +650,7 @@ The following advanced parameters are also available. However, typically they're
   
     
     
-**Example 3.**The following expression matches items for which the default full-text index contains either "cat" or "dog". The expression increases dynamic rank of those items with a constant boost of 100 and a normalized boost of 1.5, for items that also contain "thoroughbred".
+ **Example 3.** The following expression matches items for which the default full-text index contains either "cat" or "dog". The expression increases dynamic rank of those items with a constant boost of 100 and a normalized boost of 1.5, for items that also contain "thoroughbred".
   
     
     
@@ -658,7 +658,7 @@ The following advanced parameters are also available. However, typically they're
   
     
     
-**Example 4.**The following expression matches all items containing the term "animals", and boosts dynamic rank as follows:
+ **Example 4.** The following expression matches all items containing the term "animals", and boosts dynamic rank as follows:
   
     
     
@@ -679,7 +679,7 @@ The following advanced parameters are also available. However, typically they're
 
 ### Parenthesis
 
-You can combine different parts of a keyword query by using the opening parenthesis character "**(**" and closing parenthesis character "**)**". Each opening parenthesis "**(**" must have a matching closing parenthesis "**)**". A white space before or after a parenthesis does not affect the query.
+You can combine different parts of a keyword query by using the opening parenthesis character " **(** " and closing parenthesis character " **)** ". Each opening parenthesis " **(** " must have a matching closing parenthesis " **)** ". A white space before or after a parenthesis does not affect the query.
   
     
     

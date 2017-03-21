@@ -19,16 +19,16 @@ You can use the SharePoint 2013 site publishing capabilities to build, customize
     
     
 
-- **Authoring**and reusing site content.
+- **Authoring** and reusing site content.
     
   
-- **Branding**and designing your site's look, feel, and behavior.
+- **Branding** and designing your site's look, feel, and behavior.
     
   
 - **Managing metadata**—you can build a taxonomy-driven site navigation system.
     
   
-- **Publishing**content smoothly to the current site collection, or publishing content across site collections—even spanning the intranet and Internet site boundary.
+- **Publishing** content smoothly to the current site collection, or publishing content across site collections—even spanning the intranet and Internet site boundary.
     
   
 - **Accessibility**—you can use to improve the accessibility of your published sites.

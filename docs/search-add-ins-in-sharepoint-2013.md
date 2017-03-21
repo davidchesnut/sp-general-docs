@@ -78,7 +78,7 @@ Here are some code examples using the different APIs. Each code example sends a 
   
     
     
-**Client-side Object Model (CSOM)**
+ **Client-side Object Model (CSOM)**
   
     
     
@@ -102,7 +102,7 @@ using (ClientContext clientContext = new ClientContext("http://localhost"))
 }
 ```
 
-**JavaScript Object Model (JSOM)**
+ **JavaScript Object Model (JSOM)**
   
     
     
@@ -123,7 +123,7 @@ results = searchExecutor.executeQuery(keywordQuery);
 context.executeQueryAsync(onQuerySuccess, onQueryFail);
 ```
 
-**REST**
+ **REST**
   
     
     

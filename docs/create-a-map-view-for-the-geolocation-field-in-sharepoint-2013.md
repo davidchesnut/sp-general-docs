@@ -6,19 +6,19 @@ ms.assetid: 0cd8ba27-3326-4b60-a2d0-d289a94f11bb
 
 
 # Create a map view for the Geolocation field in SharePoint 2013
-Learn how to display location information by using a map view in SharePoint 2013 lists. You can create a map view manually via the SharePoint user interface (UI) or programmatically by using the new **Geolocation**field type.
-SharePoint 2013 introduces a new field type named **Geolocation**that enables you to annotate SharePoint lists with location information. For example, you can now make lists "location-aware" and display latitude and longitude coordinates through Bing Maps. An entry is typically seen as a pushpin on a map view.
+Learn how to display location information by using a map view in SharePoint 2013 lists. You can create a map view manually via the SharePoint user interface (UI) or programmatically by using the new **Geolocation** field type.
+SharePoint 2013 introduces a new field type named **Geolocation** that enables you to annotate SharePoint lists with location information. For example, you can now make lists "location-aware" and display latitude and longitude coordinates through Bing Maps. An entry is typically seen as a pushpin on a map view.
   
     
     
 
-To display a map view in a SharePoint list, you must use the Bing Maps services. The **Geolocation**field is not available when you create a list by using the UI. Instead, this field must be inserted programmatically. For information about how to render and work with this data type programmatically, see [Integrating location and map functionality in SharePoint 2013](integrating-location-and-map-functionality-in-sharepoint-2013.md). 
-The **Geolocation**field and the map view enable you to give spatial context to any information by integrating data from SharePoint into a mapping experience in web and mobile apps. This article does not explain how to render the**Geolocation**field or provide developer guidance for creating a location-based mobile application; it does provide instruction for creating map views programmatically and from the SharePoint UI by using Bing Maps.
+To display a map view in a SharePoint list, you must use the Bing Maps services. The **Geolocation** field is not available when you create a list by using the UI. Instead, this field must be inserted programmatically. For information about how to render and work with this data type programmatically, see [Integrating location and map functionality in SharePoint 2013](integrating-location-and-map-functionality-in-sharepoint-2013.md). 
+The **Geolocation** field and the map view enable you to give spatial context to any information by integrating data from SharePoint into a mapping experience in web and mobile apps. This article does not explain how to render the **Geolocation** field or provide developer guidance for creating a location-based mobile application; it does provide instruction for creating map views programmatically and from the SharePoint UI by using Bing Maps.
   
     
     
 
-An MSI package named SQLSysClrTypes.msi must be installed on every SharePoint front-end web server to view the **Geolocation**field value or data in a list. This package installs components that implement the new geometry, geography, and hierarchy ID types in SQL Server 2008. By default, this file is installed for SharePoint Online. However, it is not installed for an on-premises deployment of SharePoint Server 2013. You must be a member of the Farm Administrators group to perform this operation. To download SQLSysClrTypes.msi, see [Microsoft SQL Server 2008 R2 SP1 Feature Pack](http://www.microsoft.com/en-us/download/details.aspx?id=26728) for SQL Server 2008, or [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/en-us/download/details.aspx?id=29065) for SQL Server 2012 in the Microsoft Download Center.
+An MSI package named SQLSysClrTypes.msi must be installed on every SharePoint front-end web server to view the **Geolocation** field value or data in a list. This package installs components that implement the new geometry, geography, and hierarchy ID types in SQL Server 2008. By default, this file is installed for SharePoint Online. However, it is not installed for an on-premises deployment of SharePoint Server 2013. You must be a member of the Farm Administrators group to perform this operation. To download SQLSysClrTypes.msi, see [Microsoft SQL Server 2008 R2 SP1 Feature Pack](http://www.microsoft.com/en-us/download/details.aspx?id=26728) for SQL Server 2008, or [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/en-us/download/details.aspx?id=29065) for SQL Server 2012 in the Microsoft Download Center.
 ## Prerequisites for creating a map view
 <a name="SP15CreatingMapViews_Preqs"> </a>
 
@@ -26,7 +26,7 @@ An MSI package named SQLSysClrTypes.msi must be installed on every SharePoint fr
 - Access to a SharePoint 2013 list, with sufficient privileges to create a view. 
     
   
-- A SharePoint 2013 list that contains a **Geolocation**column
+- A SharePoint 2013 list that contains a **Geolocation** column
     
   
 - A valid Bing Maps key set at the farm or web level, which can be obtained from the  [Bing Maps Account Center](http://www.bingmapsportal.com/)
@@ -40,13 +40,13 @@ An MSI package named SQLSysClrTypes.msi must be installed on every SharePoint fr
 ## What is a map view?
 <a name="SP15CreatingMapViews_AMapView"> </a>
 
-A map view is a SharePoint view that displays a map (with data obtained from the Bing Maps service), using longitude and latitude entries from the **Geolocation**field type. When the**Geolocation**field type is available on the SharePoint list, a map view can be created either programmatically or from the SharePoint UI. In the list, SharePoint 2013 displays the location on a map powered by Bing Maps. In addition, a new view type named**Map View**displays the list items as pushpins on a Bing Maps Ajax control V7 with the list items as cards on the left pane.
+A map view is a SharePoint view that displays a map (with data obtained from the Bing Maps service), using longitude and latitude entries from the **Geolocation** field type. When the **Geolocation** field type is available on the SharePoint list, a map view can be created either programmatically or from the SharePoint UI. In the list, SharePoint 2013 displays the location on a map powered by Bing Maps. In addition, a new view type named **Map View** displays the list items as pushpins on a Bing Maps Ajax control V7 with the list items as cards on the left pane.
   
     
     
 
 > [!NOTE]  
-> Any SharePoint 2013 list can have maximum of two **Geolocation**columns in it; you won't be able to add a third**Geolocation**column in the same list. A map view can have only one**Geolocation**column. You can create multiple map views with different**Geolocation**columns.
+> Any SharePoint 2013 list can have maximum of two **Geolocation** columns in it; you won't be able to add a third **Geolocation** column in the same list. A map view can have only one **Geolocation** column. You can create multiple map views with different **Geolocation** columns.
   
     
     
@@ -60,10 +60,10 @@ The following steps demonstrate how to create a map view from the SharePoint 201
     
     
 
-1. Open the SharePoint 2013 list with **Geolocation**column.
+1. Open the SharePoint 2013 list with **Geolocation** column.
     
   
-2. Choose **Create view**from the ECB (Edit Control Block) menu, as shown in Figure 1.
+2. Choose **Create view** from the ECB (Edit Control Block) menu, as shown in Figure 1.
     
    **Figure 1.Creating a view from the ECB menu**
 
@@ -75,7 +75,7 @@ The following steps demonstrate how to create a map view from the SharePoint 201
   
 
   
-3. On the **Choose a view type**page, choose**Map View**, as shown in Figure 2. 
+3. On the **Choose a view type** page, choose **Map View**, as shown in Figure 2. 
     
    **Figure 2. Choosing a view type**
 
@@ -98,8 +98,8 @@ The following steps demonstrate how to create a map view from the SharePoint 201
 
     
     > [!NOTE]  
-> At least one **Geolocation**field is required to create a map view. You cannot select multiple**Geolocation**fields for a map view, although you can create two different map views that use two different**Geolocation**fields.
-5. After you add the required **Geolocation**field and any other field you need, choose**OK**. A map view is created, as shown in Figure 4. 
+> At least one **Geolocation** field is required to create a map view. You cannot select multiple **Geolocation** fields for a map view, although you can create two different map views that use two different **Geolocation** fields.
+5. After you add the required **Geolocation** field and any other field you need, choose **OK**. A map view is created, as shown in Figure 4. 
     
    **Figure 4. Completed map view**
 
@@ -123,13 +123,13 @@ Follow these steps to create a map view for a SharePoint list programmatically.
 1. Start Visual Studio. 
     
   
-2. On the menu bar, choose **File, New Project**. The **New Project**dialog box opens.
+2. On the menu bar, choose **File, New Project**. The **New Project** dialog box opens.
     
   
-3. In the **New Project**dialog box, choose**C#**in the**Installed Templates**box, and then choose the**Console Application**template.
+3. In the **New Project** dialog box, choose **C#** in the **Installed Templates** box, and then choose the **Console Application** template.
     
   
-4. Give the project a name, and then choose the **OK**button.
+4. Give the project a name, and then choose the **OK** button.
     
   
 5. Visual Studio creates the project. Add a reference to the following assemblies, and choose **OK**. 
@@ -140,12 +140,12 @@ Follow these steps to create a map view for a SharePoint list programmatically.
   - Microsoft.SharePoint.Client.Runtime.dll 
     
   
-6. In the default .cs file, add a **using**directive as follows.
+6. In the default .cs file, add a **using** directive as follows.
     
      `using Microsoft.SharePoint.Client;`
     
   
-7. Add the following code to the **Main**method in the .cs file.
+7. Add the following code to the **Main** method in the .cs file.
     
     > [!NOTE]  
 > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
@@ -191,13 +191,13 @@ A map view providesthree colors of pushpins (as shown in Figure 5), each of whic
     
     
 
-- **Orange**Indicates that the**Geolocation**field for the item is mapped with the Bing Maps services.
+- **Orange** Indicates that the **Geolocation** field for the item is mapped with the Bing Maps services.
     
   
-- **Grey**Indicates that the**Geolocation**field for the item is empty. The item cannot be mapped with Bing Maps services, so no pushpin for this item appears on the map.
+- **Grey** Indicates that the **Geolocation** field for the item is empty. The item cannot be mapped with Bing Maps services, so no pushpin for this item appears on the map.
     
   
-- **Blue**When a user hovers over a list item, the pushpin color changes from orange to blue. Both the pushpin in the left pane and the matching pushpin on the map change color
+- **Blue** When a user hovers over a list item, the pushpin color changes from orange to blue. Both the pushpin in the left pane and the matching pushpin on the map change color
     
   
 

@@ -23,13 +23,13 @@ The following steps show you how to create the OData-based external content type
 ### To create a BDC model file from an OData source
 
 
-1. In Visual Studio 2012, create an **Add-in for SharePoint 2013**project.
+1. In Visual Studio 2012, create an **Add-in for SharePoint 2013** project.
     
   
-2. Specify the add-in settings, including add-in name, the site URL for debugging the add-in, and how you want to host the add-in (**Autohosted**, **Provider-hosted**, or **SharePoint-hosted**). For more information, see  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx). 
+2. Specify the add-in settings, including add-in name, the site URL for debugging the add-in, and how you want to host the add-in ( **Autohosted**, **Provider-hosted**, or **SharePoint-hosted**). For more information, see  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx). 
     
   
-3. Choose **Finish**to create the app.
+3. Choose **Finish** to create the app.
     
   
 4. In **Solution Explorer**, open the shortcut menu for the project, and choose **Add**, **Content types for External Data source**. 
@@ -37,7 +37,7 @@ The following steps show you how to create the OData-based external content type
     This starts a wizard that helps you find the selected data source and create the BDC model. 
     
   
-5. On the **Set OData Source**page, enter the URL of the OData service that you want to connect to. The URL should look something like this: `http://services.odata.org/Northwind/Northwind.svc/`. 
+5. On the **Set OData Source** page, enter the URL of the OData service that you want to connect to. The URL should look something like this: `http://services.odata.org/Northwind/Northwind.svc/`. 
     
     Specify a name for your OData source. 
     
@@ -50,7 +50,7 @@ The following steps show you how to create the OData-based external content type
 ### To deploy the add-in-scoped external content type as an add-in package
 
 
-1. In Visual Studio, on the **Build**menu, choose**Publish**. 
+1. In Visual Studio, on the **Build** menu, choose **Publish**. 
     
   
 2. Name the package, specify the save location on your local hard drive, and choose **Finish**. 
@@ -97,10 +97,10 @@ The following steps show you how to create the OData-based external content type
 3. Choose **Business Data Connectivity Service**. 
     
   
-4. Choose the **Import**link on the server ribbon.
+4. Choose the **Import** link on the server ribbon.
     
   
-5. Choose the **Browse**button to specify the location where you extracted the .bdcm file.
+5. Choose the **Browse** button to specify the location where you extracted the .bdcm file.
     
   
 6. Keep the default settings, and then choose **Import**. 

@@ -14,7 +14,7 @@ SharePoint Server 2013 search supports Keyword Query Language (KQL) and FAST Que
   
     
     
-**Keyword Query Language (KQL)**
+ **Keyword Query Language (KQL)**
   
     
     
@@ -22,7 +22,7 @@ KQL is the default query language for building search queries. Using KQL, you sp
   
     
     
-**FAST Query Language (FQL)**
+ **FAST Query Language (FQL)**
   
     
     
@@ -30,7 +30,7 @@ FQL is a structured query language that supports advanced query operators. You c
   
     
     
-To enable FQL, use the **EnableFQL**property. Then, copy the default result source and modify the Query Transformation string `{?{searchTerms} -ContentClass=urn:content-class:SPSPeople}`, at one of these levels -- Search Service Application (SSA), Site Collection, or Site -- and in one of the following ways:
+To enable FQL, use the **EnableFQL** property. Then, copy the default result source and modify the Query Transformation string `{?{searchTerms} -ContentClass=urn:content-class:SPSPeople}`, at one of these levels -- Search Service Application (SSA), Site Collection, or Site -- and in one of the following ways:
   
     
     

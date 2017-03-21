@@ -1,6 +1,6 @@
 ---
 title: How to Set Various Credentials
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: eb819681-5a4f-49ae-b7f4-334366c51112
 ---
 
@@ -45,7 +45,7 @@ The following code uses the current user's logon credentials to make a request t
   
     
     
-**Sample code provided by:**Saif Ullah Baig, Microsoft Corporation.
+ **Sample code provided by:** Saif Ullah Baig, Microsoft Corporation.
   
     
     
@@ -232,11 +232,11 @@ Public Sub VerifyCredentials()
 End Sub
 ```
 
-In this example, **LoginNameTextBox**, **LoginPWDTextBox**, and **LoginDomainTextBox**are the**Name**property values of the logon text boxes.
+In this example, **LoginNameTextBox**, **LoginPWDTextBox**, and **LoginDomainTextBox** are the **Name** property values of the logon text boxes.
   
     
     
-For more information about how to use the **CredentialCache**class and the**NetworkCredential**class, and how to use them securely, see the Microsoft Visual Studio documentation, or [NetworkCredential Class](http://msdn.microsoft.com/library/60b63419-9606-4fdc-a30f-257ded236f16.aspx). 
+For more information about how to use the **CredentialCache** class and the **NetworkCredential** class, and how to use them securely, see the Microsoft Visual Studio documentation, or [NetworkCredential Class](http://msdn.microsoft.com/library/60b63419-9606-4fdc-a30f-257ded236f16.aspx). 
   
     
     

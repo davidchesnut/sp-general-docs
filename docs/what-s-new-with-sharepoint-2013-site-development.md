@@ -67,7 +67,7 @@ With Design Manager, you only have to edit the HTML files—while you can contin
   
     
     
-If you prefer, SharePoint 2013 also includes HTML versions of several master pages and page layouts that you can use as starter templates. If you want to start from these files, create a copy of the HTML file (the associated ASP.NET file will be taken care of for you), and then edit the HTML file as you normally would. You can also start from just a basic template by using the **master page from minimal template**option, which automatically creates the associated .master file.
+If you prefer, SharePoint 2013 also includes HTML versions of several master pages and page layouts that you can use as starter templates. If you want to start from these files, create a copy of the HTML file (the associated ASP.NET file will be taken care of for you), and then edit the HTML file as you normally would. You can also start from just a basic template by using the **master page from minimal template** option, which automatically creates the associated .master file.
   
     
     
@@ -78,7 +78,7 @@ SharePoint 2013 contains many ready-to-use components—like Web Parts and contr
   
     
     
-On the ribbon, in the **Snippet Gallery**group,, you can select a component, configure its properties and update the snippet, copy the HTML snippet that's generated, and paste that HTML snippet into your HTML file. The HTML snippet gives you a high-fidelity preview of that component, both in the server-side preview and in your HTML editor of choice. After you add SharePoint components to your HTML files, you can use CSS to fully brand them. And just like any update to the HTML file, after you add SharePoint components and brand them, the changes are automatically synchronized to the associated master page or page layout. The HTML snippets are automatically converted into SharePoint components.
+On the ribbon, in the **Snippet Gallery** group,, you can select a component, configure its properties and update the snippet, copy the HTML snippet that's generated, and paste that HTML snippet into your HTML file. The HTML snippet gives you a high-fidelity preview of that component, both in the server-side preview and in your HTML editor of choice. After you add SharePoint components to your HTML files, you can use CSS to fully brand them. And just like any update to the HTML file, after you add SharePoint components and brand them, the changes are automatically synchronized to the associated master page or page layout. The HTML snippets are automatically converted into SharePoint components.
   
     
     
@@ -97,7 +97,7 @@ In Design Manager, you create  [device channels](sharepoint-2013-design-manager-
   
     
     
-After you define channels, map a master page to each one. This master page can reference a different CSS file than the master page for the default channel. All page layouts that you create will work with all of the channels that you create; to differentiate page layout designs between channels, use the **Device Channel Panel**control.
+After you define channels, map a master page to each one. This master page can reference a different CSS file than the master page for the default channel. All page layouts that you create will work with all of the channels that you create; to differentiate page layout designs between channels, use the **Device Channel Panel** control.
   
     
     
@@ -136,11 +136,11 @@ To learn more about display templates, see  [SharePoint 2013 Design Manager disp
 ### Image renditions
 <a name="SP15_BuildSitesForSP2013_DisplayTemplates"> </a>
 
-You can use  [image renditions](sharepoint-2013-design-manager-image-renditions.md) to display uploaded images in predefined sizes, widths, and crops. You can create more than one rendition of a source image file, which means that you can set the display characteristics once and apply them to any number of images. For example, a rendition named**Article_image**displays a full-sized image in an article, while the rendition named**Thumbnail_small**displays a smaller version of the image in a context that you define.
+You can use  [image renditions](sharepoint-2013-design-manager-image-renditions.md) to display uploaded images in predefined sizes, widths, and crops. You can create more than one rendition of a source image file, which means that you can set the display characteristics once and apply them to any number of images. For example, a rendition named **Article_image** displays a full-sized image in an article, while the rendition named **Thumbnail_small** displays a smaller version of the image in a context that you define.
   
     
     
-Before you can use image renditions, ensure that the BLOB cache is enabled on the server, which you can do in the Administration tools in Internet Information Services (IIS). Find your **web.config**file there and enable the BLOB cache. Refresh the page, and image renditions will be available.
+Before you can use image renditions, ensure that the BLOB cache is enabled on the server, which you can do in the Administration tools in Internet Information Services (IIS). Find your **web.config** file there and enable the BLOB cache. Refresh the page, and image renditions will be available.
   
     
     
@@ -190,7 +190,7 @@ If you're a professional web designer, you may want to create and test a design 
   
     
     
-In previous versions of SharePoint, if you wanted to reuse a design, you had to use Visual Studio to create a SharePoint Solution Package (.wsp file). Then, in the destination site, you would upload the package to the Solutions Gallery and execute it. Now, in SharePoint 2013, after you finish designing your site, you can choose **Export Package**in Design Manager to export a single .wsp file called a [design package](sharepoint-2013-design-manager-design-packages.md). When you export a design package, SharePoint 2013 automatically packages all of the contents that you have added or changed in the Master Page Gallery, Style Library, Theme Gallery, the Device Channels list, and Page content types into a design package. 
+In previous versions of SharePoint, if you wanted to reuse a design, you had to use Visual Studio to create a SharePoint Solution Package (.wsp file). Then, in the destination site, you would upload the package to the Solutions Gallery and execute it. Now, in SharePoint 2013, after you finish designing your site, you can choose **Export Package** in Design Manager to export a single .wsp file called a [design package](sharepoint-2013-design-manager-design-packages.md). When you export a design package, SharePoint 2013 automatically packages all of the contents that you have added or changed in the Master Page Gallery, Style Library, Theme Gallery, the Device Channels list, and Page content types into a design package. 
   
     
     
@@ -241,7 +241,7 @@ To learn more about cross-site publishing, see  [Scenario: Create SharePoint sit
 
 ### SEO enhancements
 
-Many business site users are referred to Internet business sites from large search engines like Bing and its global competitors. SharePoint 2013 includes features like friendly URLs, home page redirects, XML sitemaps, custom SEO properties that enable you to flexibly define the browser title and **<Meta>**tag descriptions and keywords, and easier-to-understand URLs for multilingual site variations.
+Many business site users are referred to Internet business sites from large search engines like Bing and its global competitors. SharePoint 2013 includes features like friendly URLs, home page redirects, XML sitemaps, custom SEO properties that enable you to flexibly define the browser title and **<Meta>** tag descriptions and keywords, and easier-to-understand URLs for multilingual site variations.
   
     
     
@@ -260,7 +260,7 @@ You can track how people use publishing sites and their components using the Sha
   
     
     
-Analytics makes data anonymous and rolls it up every 15 days. Analytics purges events every 15 days and then monthly after 3 years. Lifetime views are always retained. The least-visited content is trimmed before analytics pushes aggregate data to a reporting database. You can use custom code to export data to Excel from the reporting database, customize the weight of the **View**event, and create custom events—including those submitted by JavaScript.
+Analytics makes data anonymous and rolls it up every 15 days. Analytics purges events every 15 days and then monthly after 3 years. Lifetime views are always retained. The least-visited content is trimmed before analytics pushes aggregate data to a reporting database. You can use custom code to export data to Excel from the reporting database, customize the weight of the **View** event, and create custom events—including those submitted by JavaScript.
   
     
     

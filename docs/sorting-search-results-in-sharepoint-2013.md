@@ -67,7 +67,7 @@ A  [Sort](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Quer
   
     
     
-If you have multiple values in  [SortList](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.KeywordQuery.SortList.aspx) , the sorting is performed based on the sequence in which the values appear. This means that every**Sort**object represents a sort order level. Any succeeding level does not change the ordering of results that were differentiated by previous ones, but it may affect the internal ordering of results that have the same sort values for the previous levels.
+If you have multiple values in  [SortList](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.KeywordQuery.SortList.aspx) , the sorting is performed based on the sequence in which the values appear. This means that every **Sort** object represents a sort order level. Any succeeding level does not change the ordering of results that were differentiated by previous ones, but it may affect the internal ordering of results that have the same sort values for the previous levels.
   
     
     
@@ -88,10 +88,10 @@ You can also influence the rank calculation in the query string, in one of two w
     
     
 
-- By using the **XRANK**operator available in [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md) and [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md). You can use **XRANK**to apply a conditional rank boosting if a specific query condition is met.
+- By using the **XRANK** operator available in [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md) and [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md). You can use **XRANK** to apply a conditional rank boosting if a specific query condition is met.
     
   
-- By choosing a relevance weight for dynamic ranking. When using FQL, you can specify an individual relevance weight for each **STRING**operator.
+- By choosing a relevance weight for dynamic ranking. When using FQL, you can specify an individual relevance weight for each **STRING** operator.
     
   
 
@@ -109,7 +109,7 @@ You can sort based on text and numeric properties. For text properties, the sort
 
 ### Example
 
-The following example shows how to sort search results by using the **Size**managed property.
+The following example shows how to sort search results by using the **Size** managed property.
   
     
     
@@ -136,7 +136,7 @@ using (var context = new ClientContext("http://localhost"))
 }
 ```
 
-Alternatively, you could use the Search REST API to sort search results by using the **Size**property with the following call.
+Alternatively, you could use the Search REST API to sort search results by using the **Size** property with the following call.
   
     
     
@@ -247,7 +247,7 @@ using (var context = new ClientContext("http://localhost"))
 }
 ```
 
-Alternatively, you could use the Search REST API to sort search results by using the **Size**property with the following call.
+Alternatively, you could use the Search REST API to sort search results by using the **Size** property with the following call.
   
     
     
@@ -291,10 +291,10 @@ Table 1 lists the functions you can use in the sort formula expression. The expr
 |**+**|Specifies addition. |
 |**-**|Specifies subtraction. |
 |*|Specifies multiplication. |
-|**/**|Specifies division. > [!NOTE]  > By default, a division by zero results in an exception, and the query returns with an error. By using the **errtolast**operator, you can avoid the query error and instead place the failing items at the end of the result set.          |
+|**/**|Specifies division. > [!NOTE]  > By default, a division by zero results in an exception, and the query returns with an error. By using the **errtolast** operator, you can avoid the query error and instead place the failing items at the end of the result set.          |
 |**rank**|A special keyword that represents the dynamic rank of an item. Example:  `abs(rank-100)` will use the distance from rank value 100 as the sorting criteria.|
 |**[0-9.]+**|Specifies that numbers can be given as integer or double values. Examples: 503, 3.14, 5.4352262 |
-|**[a-z0-9]+]**|Specifies that any character sequence not recognized as a function name is treated as a managed property name. You must enable sorting for the specified managed property in the search schema. Example: You can define a managed property named **height**with sorting enabled. This enables you to use "height" as an expression in the formula. The formula will use the value of the**height**managed property.|
+|**[a-z0-9]+]**|Specifies that any character sequence not recognized as a function name is treated as a managed property name. You must enable sorting for the specified managed property in the search schema. Example: You can define a managed property named **height** with sorting enabled. This enables you to use "height" as an expression in the formula. The formula will use the value of the **height** managed property.|
 |**( and )**|Used to group calculations ensuring correct precedence. Example: 4*(3+2) |
 |**sqrt(n)**|The square root of  _n_. |
 |**exp(n)**|The exponential function that is equivalent to  *pow(2.71828182846,n)* |
@@ -348,7 +348,7 @@ For example, you can use one of the following standard formulas:
   
 
 > [!IMPORTANT]  
-> Use managed properties of type **Decimal**or**Float**to represent the latitude and longitude values.
+> Use managed properties of type **Decimal** or **Float** to represent the latitude and longitude values.
   
     
     
@@ -360,7 +360,7 @@ The following examples show how to specify the sort formula using the Query obje
   
     
     
-**Example 1.**Place the items that have the**height**managed property closest to 20 on top of the result list.
+ **Example 1.** Place the items that have the **height** managed property closest to 20 on top of the result list.
   
     
     
@@ -389,7 +389,7 @@ using (var context = new ClientContext("http://localhost"))
 }
 ```
 
-Alternatively, you could use the Search REST API to place the items that have the **height**managed property closest to 20 on top of the result list, with the following call.
+Alternatively, you could use the Search REST API to place the items that have the **height** managed property closest to 20 on top of the result list, with the following call.
   
     
     
@@ -401,7 +401,7 @@ Alternatively, you could use the Search REST API to place the items that have th
 http://localhost/_api/search/query?querytext='home'&amp;sortlist='[formula:abs(20-height)]:ascending
 ```
 
-**Example 2.**Sort by true 3-D Euclidean distance from a given position (for example, user's position) based on position information that is provided in the managed properties**latitude**, **longitude**and**height**. The following formula provides the 3-D Euclidean distance, given that the base position is 50/100/200 (latitude/longitude/height). 
+ **Example 2.** Sort by true 3-D Euclidean distance from a given position (for example, user's position) based on position information that is provided in the managed properties **latitude**, **longitude** and **height**. The following formula provides the 3-D Euclidean distance, given that the base position is 50/100/200 (latitude/longitude/height). 
   
     
     
@@ -437,7 +437,7 @@ using (var context = new ClientContext("http://localhost"))
 }
 ```
 
-**Example 3.**Round the values of size into buckets, rounding values down to one of the following: 0, 5, 15, 50, 100; sort with largest values first.
+ **Example 3.** Round the values of size into buckets, rounding values down to one of the following: 0, 5, 15, 50, 100; sort with largest values first.
   
     
     
@@ -509,7 +509,7 @@ The following examples show how to specify random sorting by using the Query obj
   
     
     
-**Example 1.**Sort the entire result set in random order.
+ **Example 1.** Sort the entire result set in random order.
   
     
     
@@ -550,7 +550,7 @@ Alternatively, you could use the Search REST API to sort the entire result set i
 http://localhost/_api/search/query?querytext='home'&amp;sortlist='[random:seed=5432]:ascending
 ```
 
-**Example 2.**Sort the entire result set in random order. Preserve the same random sequence for the same query with the same seed, even if an index switch occurs. A custom managed property named**hashvalue**must be available in the search schema, and populated with random or sequential numeric values for all indexed items.
+ **Example 2.** Sort the entire result set in random order. Preserve the same random sequence for the same query with the same seed, even if an index switch occurs. A custom managed property named **hashvalue** must be available in the search schema, and populated with random or sequential numeric values for all indexed items.
   
     
     

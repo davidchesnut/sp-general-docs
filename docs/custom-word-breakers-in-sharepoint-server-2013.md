@@ -37,27 +37,27 @@ Take the following steps to replace the existing word breaker with a custom word
 
 1. Open the Registry Editor, as follows: 
     
-1. Choose **Start**, and then choose**Run**.
+1. Choose **Start**, and then choose **Run**.
     
   
-2. In the **Open**dialog box, type**Regedit**, and then choose**OK**.
+2. In the **Open** dialog box, type **Regedit**, and then choose **OK**.
     
   
 2. In Registry Editor, select the following registry subkey: 
     
-    **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Office Server\\15.0\\Search\\Setup\\ContentIndexCommon\\LanguageResources\\Default\\**_language from the list below_
+    **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Office Server\\15.0\\Search\\Setup\\ContentIndexCommon\\LanguageResources\\Default\\** _language from the list below_
     
   
-3. In the right pane, open the shortcut menu for the **WBDLLPathOverride**registry value, and then choose**Modify**.
+3. In the right pane, open the shortcut menu for the **WBDLLPathOverride** registry value, and then choose **Modify**.
     
   
-4. In the **Edit String**dialog box, in the**Value data**box, type the path to your custom word breaker DLL, and then choose**OK**. The new DLL should be located in the same path as the existing DLL that is being replaced.
+4. In the **Edit String** dialog box, in the **Value data** box, type the path to your custom word breaker DLL, and then choose **OK**. The new DLL should be located in the same path as the existing DLL that is being replaced.
     
   
-5. In the right pane, open the shortcut menu for the **WBreakerClass**registry value, and then choose**Modify**.
+5. In the right pane, open the shortcut menu for the **WBreakerClass** registry value, and then choose **Modify**.
     
   
-6. In the **Edit String**dialog box, in the**Value data**box, type the class ID of your custom word breaker, and then choose**OK**.
+6. In the **Edit String** dialog box, in the **Value data** box, type the class ID of your custom word breaker, and then choose **OK**.
     
   
 7. Restart the SharePoint Search Host Controller and SharePoint Server 2013. 

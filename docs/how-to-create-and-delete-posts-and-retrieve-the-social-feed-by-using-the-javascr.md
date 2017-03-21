@@ -33,7 +33,7 @@ To create an application page that uses the JavaScript object model to work with
 - Visual Studio 2012 or Visual Studio 2013 with Office Developer Tools for Visual Studio 2013 
     
   
-- **Full Control**access permissions to the User Profile service application and permissions to deploy a farm solution for the logged-on user
+- **Full Control** access permissions to the User Profile service application and permissions to deploy a farm solution for the logged-on user
     
   
 - Sufficient permissions for the application pool account to access the content database of the My Sites web application 
@@ -47,29 +47,29 @@ To create an application page that uses the JavaScript object model to work with
 1. Open Visual Studio and choose **File**, **New**, **Project**. 
     
   
-2. In the **New Project**dialog box, choose**.NET Framework 4.5**from the drop-down list at the top of the dialog box.
+2. In the **New Project** dialog box, choose **.NET Framework 4.5** from the drop-down list at the top of the dialog box.
     
   
-3. In the **Templates**list, expand**Office SharePoint**, choose the **SharePoint Solutions**category, and then choose the**SharePoint 2013 Project**template.
+3. In the **Templates** list, expand **Office SharePoint**, choose the **SharePoint Solutions** category, and then choose the **SharePoint 2013 Project** template.
     
   
-4. Name the project SocialFeedJSOM, and then choose the **OK**button.
+4. Name the project SocialFeedJSOM, and then choose the **OK** button.
     
   
-5. In the **SharePoint Customization Wizard**dialog box, choose**Deploy as a farm solution**, and then choose the **Finish**button.
+5. In the **SharePoint Customization Wizard** dialog box, choose **Deploy as a farm solution**, and then choose the **Finish** button.
     
   
 6. In **Solution Explorer**, open the shortcut menu for the SocialFeedJSOM project, and then add a SharePoint "Layouts" mapped folder.
     
   
-7. In the **Layouts**folder, open the shortcut menu for theSocialFeedJSOM folder, and then add a new SharePoint application page namedSocialFeed.aspx. 
+7. In the **Layouts** folder, open the shortcut menu for theSocialFeedJSOM folder, and then add a new SharePoint application page namedSocialFeed.aspx. 
     
     > [!NOTE]  
 > The code examples in this article define custom code in the page markup but do not use the code-behind class that Visual Studio creates for the page. 
 8. Open the shortcut menu for the SocialFeed.aspx page, and then choose **Set as Startup Item**. 
     
   
-9. In the markup for the SocialFeed.aspx page, define controls inside the "Main" **asp:Content**tags, as shown in the following code.
+9. In the markup for the SocialFeed.aspx page, define controls inside the "Main" **asp:Content** tags, as shown in the following code.
     
   ```HTML
   
@@ -80,8 +80,8 @@ To create an application page that uses the JavaScript object model to work with
 
 
     > [!NOTE]  
-> These controls may not be used in every scenario. For example, the "Publish posts and replies" scenario only uses the **span**control.
-10. After the closing **span**tag, add**SharePoint:ScriptLink**controls, a**SharePoint:FormDigest**control, and**script**tags, as shown in the following code. The**SharePoint:ScriptLink**tags reference the class library files that define the JavaScript object model that you can use for My Site Social development. The**SharePoint:FormDigest**tag generates a message digest for security validation when required by operations that update server content.
+> These controls may not be used in every scenario. For example, the "Publish posts and replies" scenario only uses the **span** control.
+10. After the closing **span** tag, add **SharePoint:ScriptLink** controls, a **SharePoint:FormDigest** control, and **script** tags, as shown in the following code. The **SharePoint:ScriptLink** tags reference the class library files that define the JavaScript object model that you can use for My Site Social development. The **SharePoint:FormDigest** tag generates a message digest for security validation when required by operations that update server content.
     
   ```HTML
   
@@ -96,7 +96,7 @@ To create an application page that uses the JavaScript object model to work with
 
   ```
 
-11. To add the logic to work with feeds, replace the comment between the **script**tags with the code example from one of the following scenarios:
+11. To add the logic to work with feeds, replace the comment between the **script** tags with the code example from one of the following scenarios:
     
   -  [Publish posts and replies to the social feed](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bkmk_PubPosts)
     
@@ -107,9 +107,9 @@ To create an application page that uses the JavaScript object model to work with
   -  [Delete posts and replies from the social feed](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bkmk_DeletePosts)
     
   
-12. To test the application page, on the menu bar, choose **Debug**, **Start Debugging**. If you are prompted to modify the web.config file, choose the **OK**button.
+12. To test the application page, on the menu bar, choose **Debug**, **Start Debugging**. If you are prompted to modify the web.config file, choose the **OK** button.
     
-    If the response calls the failure callback method, set a breakpoint in the method and add a watch on the **args**object or check the ULS logs and the event viewer for more information.
+    If the response calls the failure callback method, set a breakpoint in the method and add a watch on the **args** object or check the ULS logs and the event viewer for more information.
     
   
 
@@ -124,15 +124,15 @@ The following code example publishes a post and a reply. It shows how to:
 - Define post content. This example includes a link in the post. 
     
   
-- Publish a post to the current user's feed by using the **createPost**method and passing**null**as the _targetId_ parameter.
+- Publish a post to the current user's feed by using the **createPost** method and passing **null** as the _targetId_ parameter.
     
   
-- Reply to a post by using the **createPost**method and passing the thread identifier as the _targetId_ parameter.
+- Reply to a post by using the **createPost** method and passing the thread identifier as the _targetId_ parameter.
     
   
 
 > [!NOTE]  
-> Paste the following code between the **script**tags that you added in the [Create the application page](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bk_CreateApp) procedure.
+> Paste the following code between the **script** tags that you added in the [Create the application page](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bk_CreateApp) procedure.
   
     
     
@@ -198,10 +198,10 @@ The following code example retrieves feeds for the current user and a target use
     
     
 
-- Get the **Personal**, **News**, and **Timeline**feed types for the current user by using the**getFeed**method.
+- Get the **Personal**, **News**, and **Timeline** feed types for the current user by using the **getFeed** method.
     
   
-- Get the **Personal**feed type for a target user by using the**getFeedFor**method.
+- Get the **Personal** feed type for a target user by using the **getFeedFor** method.
     
   
 - Iterate through the feeds to find all non-reference threads and to get information about threads and posts. Reference threads represent notifications that contain information about another thread. For example, if a user mentions someone in a post, the server generates a **MentionReference**-type thread that contains the link to the original post and other metadata about the post. 
@@ -213,7 +213,7 @@ For more information about feed types, see  [Overview of feed types in the My Si
     
 
 > [!NOTE]  
-> Paste the following code between the **script**tags that you added in the [Create the application page](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bk_CreateApp) procedure. Then, change the placeholder value for the**targetUser**variable before you run the code.
+> Paste the following code between the **script** tags that you added in the [Create the application page](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bk_CreateApp) procedure. Then, change the placeholder value for the **targetUser** variable before you run the code.
   
     
     
@@ -335,18 +335,18 @@ The following code example deletes a post or a reply. It shows how to:
     
     
 
-- Get the **News**feed type for the current user by using the**getFeed**method.
+- Get the **News** feed type for the current user by using the **getFeed** method.
     
   
-- Iterate through the posts and replies in the feed to get the **id**property that you use to delete the post or reply.
+- Iterate through the posts and replies in the feed to get the **id** property that you use to delete the post or reply.
     
   
-- Delete a root post or reply by using the **deletePost**method (deleting a root post deletes the whole thread).
+- Delete a root post or reply by using the **deletePost** method (deleting a root post deletes the whole thread).
     
   
 
 > [!NOTE]  
-> Paste the following code between the **script**tags that you added in the [Create the application page](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bk_CreateApp) procedure. This example assumes that the current user's newsfeed contains at least one post.
+> Paste the following code between the **script** tags that you added in the [Create the application page](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bk_CreateApp) procedure. This example assumes that the current user's newsfeed contains at least one post.
   
     
     

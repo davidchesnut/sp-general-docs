@@ -31,28 +31,28 @@ The following are new methods added to Excel Web Services, in alphabetical order
     
     
 
-- **GetChartImageUrl**Gets a URL value to the chart or PivotChart image file in a workbook.
+- **GetChartImageUrl** Gets a URL value to the chart or PivotChart image file in a workbook.
     
   
-- **GetPublishedItemNames**Gets a list of published items in a workbook.
+- **GetPublishedItemNames** Gets a list of published items in a workbook.
     
   
-- **GetSheetNames**Gets a list of all of the sheet names present in a workbook.
+- **GetSheetNames** Gets a list of all of the sheet names present in a workbook.
     
   
-- **OpenWorkbookForEditing**Opens a workbook for editing.
+- **OpenWorkbookForEditing** Opens a workbook for editing.
     
   
-- **SaveWorkbook**Saves a workbook in the original format (.xlsx, .xlsb, .xlsm).
+- **SaveWorkbook** Saves a workbook in the original format (.xlsx, .xlsb, .xlsm).
     
   
-- **SaveWorkbookCopy**Saves a workbook by using a different file name and/or saves a workbook to a different SharePoint document library.
+- **SaveWorkbookCopy** Saves a workbook by using a different file name and/or saves a workbook to a different SharePoint document library.
     
   
-- **SetCalculationOptions**Changes the calculation mode setting for workbooks.
+- **SetCalculationOptions** Changes the calculation mode setting for workbooks.
     
   
-- **SetParameters**Sets multiple published parameters with a single Web Service call.
+- **SetParameters** Sets multiple published parameters with a single Web Service call.
     
   
 In addition:
@@ -74,19 +74,19 @@ The following are new enumerations added to Excel Web Services, in alphabetical 
     
     
 
-- **ItemType**Indicates the types of the returned items.
+- **ItemType** Indicates the types of the returned items.
     
   
-- **SheetType**Indicates the types of the returned sheets.
+- **SheetType** Indicates the types of the returned sheets.
     
   
-- **SheetVisibility**Indicates whether the returned sheets are visible.
+- **SheetVisibility** Indicates whether the returned sheets are visible.
     
   
-- **SaveOptions**Specifies whether to overwrite an existing, unlocked file.
+- **SaveOptions** Specifies whether to overwrite an existing, unlocked file.
     
   
-- **WorkbookCalculation**Defines the calculation mode setting for a workbook.
+- **WorkbookCalculation** Defines the calculation mode setting for a workbook.
     
   
 
@@ -97,16 +97,16 @@ The following are new types added to Excel Web Services, in alphabetical order:
     
     
 
-- **ParameterInfo**Gets or sets the name and values of a parameter.
+- **ParameterInfo** Gets or sets the name and values of a parameter.
     
   
-- **SheetInfo**Contains information about a sheet in a workbook.
+- **SheetInfo** Contains information about a sheet in a workbook.
     
   
-- **Size**Defines the width and height of the chart image
+- **Size** Defines the width and height of the chart image
     
   
-- **WorkbookItem**Represents named items in the workbook.
+- **WorkbookItem** Represents named items in the workbook.
     
   
 

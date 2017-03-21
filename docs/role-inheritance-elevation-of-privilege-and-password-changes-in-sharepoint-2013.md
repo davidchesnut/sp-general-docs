@@ -14,7 +14,7 @@ A role consists of two parts: a role definition and a role assignment.
   
     
     
-The role definition, or permission level, is the list of rights associated with the role. A right is a uniquely controllable action within a SharePoint website. For example, a user with the **Read**role can browse pages in the website and view items in lists. User permissions are never managed directly by using rights. All user and group permissions are managed through roles. A role definition is a collection of rights bound to a specific object. Role definitions (for example,**Full Control**, **Read**, **Contribute**, **Design**, or **Limited Access**) are scoped to the website and mean the same thing everywhere within the website, but their meanings can differ between sites within the same site collection. Role definitions can also be inherited from the parent website, just as permissions can be inherited. 
+The role definition, or permission level, is the list of rights associated with the role. A right is a uniquely controllable action within a SharePoint website. For example, a user with the **Read** role can browse pages in the website and view items in lists. User permissions are never managed directly by using rights. All user and group permissions are managed through roles. A role definition is a collection of rights bound to a specific object. Role definitions (for example, **Full Control**, **Read**, **Contribute**, **Design**, or **Limited Access**) are scoped to the website and mean the same thing everywhere within the website, but their meanings can differ between sites within the same site collection. Role definitions can also be inherited from the parent website, just as permissions can be inherited. 
   
     
     
@@ -67,11 +67,11 @@ SharePoint fetches user token information from the SharePoint database. If the u
   
     
     
-If the user account is an NT account, SharePoint uses the **AuthZ**interface to query the Active Directory directory service for the**TokenGroups**property. This may fail if SharePoint is running in an extranet mode, and does not have permission to query Active Directory for this property.
+If the user account is an NT account, SharePoint uses the **AuthZ** interface to query the Active Directory directory service for the **TokenGroups** property. This may fail if SharePoint is running in an extranet mode, and does not have permission to query Active Directory for this property.
   
     
     
-If the user account is a membership user, SharePoint queries the ASP.NET **RoleManager**for all the roles that the user belongs to. This may fail if there is not a proper .config file for the current executable file.
+If the user account is a membership user, SharePoint queries the ASP.NET **RoleManager** for all the roles that the user belongs to. This may fail if there is not a proper .config file for the current executable file.
   
     
     

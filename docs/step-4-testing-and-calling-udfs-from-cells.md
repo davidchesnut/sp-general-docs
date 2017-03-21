@@ -33,7 +33,7 @@ In this step, you will test the SampleUdf.dll assembly you created, deployed, an
 1. Start Microsoft Office Excel 2007. 
     
   
-2. In cell A1, type the formula to call the  `MyDouble` function in SampleUdf.dll. The `MyDouble` function takes an argument of type**double**. In this example, you will take the argument from cell B1. In cell A1, type =MyDouble(B1). 
+2. In cell A1, type the formula to call the  `MyDouble` function in SampleUdf.dll. The `MyDouble` function takes an argument of type **double**. In this example, you will take the argument from cell B1. In cell A1, type =MyDouble(B1). 
     
     > [!NOTE]  
 > The formula will evaluate to "#NAME?" in Excel. The formula will be evaluated only when the workbook is displayed in Excel Services. 
@@ -43,7 +43,7 @@ In this step, you will test the SampleUdf.dll assembly you created, deployed, an
 3. In cell B1, type the number 8. 
     
   
-4. Make cell B1 a named range. First click the **Formulas**tab. Then click cell B1 to select it. On the**Formulas**tab, in the**Named Cells**group, click**Name a Range**. In the **New Name**dialog box, in the**Name**box, type**MyDoubleParam**. 
+4. Make cell B1 a named range. First click the **Formulas** tab. Then click cell B1 to select it. On the **Formulas** tab, in the **Named Cells** group, click **Name a Range**. In the **New Name** dialog box, in the **Name** box, type **MyDoubleParam**. 
     
   
 5. In cell A2, type the formula to call the  `ReturnDateTimeToday` function. Type=ReturnDateTimeToday(). 
@@ -52,7 +52,7 @@ In this step, you will test the SampleUdf.dll assembly you created, deployed, an
 6. In cell A3, type the formula to call the  `ReturnDateTimeToday` function. Type=ReturnDateTimeToday(). Next, right-click cell A3 to display the menu. Click **Format Cells**. 
     
   
-7. In the **Format Cells**dialog box, on the**Number**tab, select**Date**. Select a date format type from the **Type**list—for example, *3/4/2001.
+7. In the **Format Cells** dialog box, on the **Number** tab, select **Date**. Select a date format type from the **Type** list—for example, *3/4/2001.
     
   
 8. Click **OK**. 
@@ -68,28 +68,28 @@ In this step, you will test the SampleUdf.dll assembly you created, deployed, an
 1. Click the **Microsoft Office Button**, point to **Save As**, and click **Save for Excel Services**. 
     
   
-2. In the **Save As**dialog box, click**Excel Services Options**. 
+2. In the **Save As** dialog box, click **Excel Services Options**. 
     
   
-3. In the **Excel Services Options**dialog box, on the**Show**tab, make sure that**Entire Workbook**is selected.
+3. In the **Excel Services Options** dialog box, on the **Show** tab, make sure that **Entire Workbook** is selected.
     
   
 4. Click **Parameters**. 
     
   
-5. In the **Add Parameters**list, select the**MyDoubleParam**check box.
+5. In the **Add Parameters** list, select the **MyDoubleParam** check box.
     
   
-6. Click **OK**. You should now see "MyDoubleParam" listed in the **Parameters**list.
+6. Click **OK**. You should now see "MyDoubleParam" listed in the **Parameters** list.
     
   
 7. Click **OK**. 
     
   
-8. In the **Save As**dialog box, make sure that the**Open this workbook in my browser after I save**check box is selected.
+8. In the **Save As** dialog box, make sure that the **Open this workbook in my browser after I save** check box is selected.
     
   
-9. In the **File name**box, type the path to the trusted SharePoint document library where you want to store this workbook. For example, _http://MyServer002/Shared%20Documents/TestSampleUdf.xlsx_. 
+9. In the **File name** box, type the path to the trusted SharePoint document library where you want to store this workbook. For example, _http://MyServer002/Shared%20Documents/TestSampleUdf.xlsx_. 
     
   
 10. Click **Save**. You should see TestSampleUdf.xlsx in Excel Web Access. In cell A1, you should see the number "72" because cell B1 * 9 = 8 * 9, which is 72. In cell A2 you should see a number. In cell A3, you should see the current date. 
@@ -100,10 +100,10 @@ In this step, you will test the SampleUdf.dll assembly you created, deployed, an
 ### To change parameters to test the UDF
 
 
-1. In the **Parameters**pane, you should see the named range for cell B1, that is, "MyDoubleParam".
+1. In the **Parameters** pane, you should see the named range for cell B1, that is, "MyDoubleParam".
     
   
-2. You can change the value in cell B1 by typing a number in the box next to "MyDoubleParam". For example, if you type 3 and then click**Apply**, Excel Services will recalculate the workbook. Cell A1 will contain "27" instead of "72". 
+2. You can change the value in cell B1 by typing a number in the box next to "MyDoubleParam". For example, if you type 3 and then click **Apply**, Excel Services will recalculate the workbook. Cell A1 will contain "27" instead of "72". 
     
   
 

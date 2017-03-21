@@ -10,7 +10,7 @@ Get an overview of development with the authentication APIs of the SharePoint 20
 ## Authentication and client context on a Windows Phone
 <a name="SP15Mobileclientauth_auth"> </a>
 
-The process of authenticating a SharePoint user on a Windows Phone 7.5 is a little different from the same process on a client computer. Client code on a Windows Phone 7.5 first creates an object of the **Authenticator**class or**ODataAuthenticator**class, which were added to the SharePoint 2013client object model for Microsoft Silverlight for Windows Phone. It then uses this object as the user's credentials.
+The process of authenticating a SharePoint user on a Windows Phone 7.5 is a little different from the same process on a client computer. Client code on a Windows Phone 7.5 first creates an object of the **Authenticator** class or **ODataAuthenticator** class, which were added to the SharePoint 2013client object model for Microsoft Silverlight for Windows Phone. It then uses this object as the user's credentials.
   
     
     
@@ -33,11 +33,11 @@ The following are the required steps to get an authenticated client context obje
 1. Obtain a  [ClientContext](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.clientcontext.aspx) object.
     
   
-2. Construct a new **Authenticator**object and initialize its properties.
+2. Construct a new **Authenticator** object and initialize its properties.
     
     > [!NOTE]  
-> One **Authenticator**object can be used with one**ClientContext**object only. You can't share an**Authenticator**object across multiple**ClientContext**objects with different URLs.
-3. The **Authenticator**class implements the [ICredentials](http://msdn.microsoft.com/en-us/library/system.net.icredentials.aspx) interface, so you assign the object to the [Credentials](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.clientruntimecontext.credentials.aspx) property of the**ClientContext**object.
+> One **Authenticator** object can be used with one **ClientContext** object only. You can't share an **Authenticator** object across multiple **ClientContext** objects with different URLs.
+3. The **Authenticator** class implements the [ICredentials](http://msdn.microsoft.com/en-us/library/system.net.icredentials.aspx) interface, so you assign the object to the [Credentials](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.clientruntimecontext.credentials.aspx) property of the **ClientContext** object.
     
   
 You can then add the rest of your client object model code and call **ExecuteQueryAsync**. 
@@ -88,11 +88,11 @@ context.ExecuteQueryAsync(
 
 ```
 
-Optionally, you can specify a Unified Access Gateway (UAG) server by setting the **Authenticator.UagServerUrl**property.
+Optionally, you can specify a Unified Access Gateway (UAG) server by setting the **Authenticator.UagServerUrl** property.
   
     
     
-If the SharePoint URL has basic or forms-based authentication support, the **ExecuteQueryAsync**calls prompt the user for logon information, as shown in Figure 1. Otherwise, the call will fail. Enable basic or forms-based authentication authorization on the SharePoint site to avoid an authentication error.
+If the SharePoint URL has basic or forms-based authentication support, the **ExecuteQueryAsync** calls prompt the user for logon information, as shown in Figure 1. Otherwise, the call will fail. Enable basic or forms-based authentication authorization on the SharePoint site to avoid an authentication error.
   
     
     
@@ -110,7 +110,7 @@ If the SharePoint URL has basic or forms-based authentication support, the **Exe
   
     
     
-The user enters the user name and password and chooses **Log On**, as shown in Figure 1. The user has the option to choose **Remember me**to remember their user name and has the option to choose**Remember my password**to remember their password, as shown in Figure 1. After the user name or password is remembered, the user doesn't have to enter credentials the next time the app is started. The**ExecuteQueryAsync**then uses the logged on credentials to make web requests to the server running SharePoint to fetch data.
+The user enters the user name and password and chooses **Log On**, as shown in Figure 1. The user has the option to choose **Remember me** to remember their user name and has the option to choose **Remember my password** to remember their password, as shown in Figure 1. After the user name or password is remembered, the user doesn't have to enter credentials the next time the app is started. The **ExecuteQueryAsync** then uses the logged on credentials to make web requests to the server running SharePoint to fetch data.
   
     
     
@@ -123,19 +123,19 @@ The following are the required steps to get an authenticated OData context objec
     
     
 
-1. Construct a new **ODataAuthenticator**object and initialize its properties.
+1. Construct a new **ODataAuthenticator** object and initialize its properties.
     
   
-2. Register a handler for the **AuthenticationCompleted**event.
+2. Register a handler for the **AuthenticationCompleted** event.
     
   
-3. Call the **ODataAuthenticator.Authenticate**method, which will raise the**AuthenticationCompleted**event.
+3. Call the **ODataAuthenticator.Authenticate** method, which will raise the **AuthenticationCompleted** event.
     
   
-4. Obtain an OData context object inside the **OnAuthenticationCompleted**handler.
+4. Obtain an OData context object inside the **OnAuthenticationCompleted** handler.
     
   
-You can then add the rest of your OData calls in the **OnAuthenticationCompleted**handler.
+You can then add the rest of your OData calls in the **OnAuthenticationCompleted** handler.
   
     
     
@@ -172,15 +172,15 @@ Your code must also implement two event handlers, as described in the following 
 
 ### Implementing the OnAuthenticationCompleted and OnSendingRequest handlers and getting the ClientContext object
 
-An implementation of the **OnAuthenticationCompleted**handler should first check for any errors in the authentication. If there are any, it should handle them appropriately, such as displaying an error message to the user, and then exit.
+An implementation of the **OnAuthenticationCompleted** handler should first check for any errors in the authentication. If there are any, it should handle them appropriately, such as displaying an error message to the user, and then exit.
   
     
     
-If there are no errors, the handler should create an instance of a new **DataServiceContext**object and then register a handler for the**SendingRequest**event. From that point, your OData calling code is programmed against the**DataServiceContext**object just as it is on a computer.
+If there are no errors, the handler should create an instance of a new **DataServiceContext** object and then register a handler for the **SendingRequest** event. From that point, your OData calling code is programmed against the **DataServiceContext** object just as it is on a computer.
   
     
     
-The following is an example of an implementation of an **OnAuthenticationCompleted**handler.
+The following is an example of an implementation of an **OnAuthenticationCompleted** handler.
   
     
     
@@ -213,7 +213,7 @@ void OnAuthenticationCompleted(object sender, AuthenticationCompletedEventArgs e
 
 ```
 
-All that the **OnSendingRequest**handler needs to do is set the cookie container of the**Request**object to the cookie container of the**ODataAuthenticator**object. The following is an example.
+All that the **OnSendingRequest** handler needs to do is set the cookie container of the **Request** object to the cookie container of the **ODataAuthenticator** object. The following is an example.
   
     
     
@@ -235,7 +235,7 @@ void OnSendingRequest(object sender, SendingRequestEventArgs e)
 <a name="SP15Mobileclientauth_advance"> </a>
 
 
-1. You can choose to construct an **Authenticator**object with a hard-coded user name/password option. The user of the app will not be prompted for a user name and password, and hard-coded credentials will be used for authenticating the user.
+1. You can choose to construct an **Authenticator** object with a hard-coded user name/password option. The user of the app will not be prompted for a user name and password, and hard-coded credentials will be used for authenticating the user.
     
      `public Authenticator(string userName, string password)`
     
@@ -258,7 +258,7 @@ at.AuthenticationMode = ClientAuthenticationMode.MicrosoftOnline;
 
 ### Authenticating against SharePoint Online
 
-To authenticate against a SharePoint Online URL, set the **AuthenticationMode**property of the**Authenticator**object to**MicrosoftOnline**mode. The remaining steps in the procedure are the same as those for an on-premises SharePoint URL.
+To authenticate against a SharePoint Online URL, set the **AuthenticationMode** property of the **Authenticator** object to **MicrosoftOnline** mode. The remaining steps in the procedure are the same as those for an on-premises SharePoint URL.
   
     
     
@@ -272,7 +272,7 @@ To authenticate against a SharePoint Online URL, set the **AuthenticationMode**p
 
 #### Federation Authentication
 
-**FederationAuthURI**property is used to pass**ADFS**authentication scheme preference where,**ADFS**is configured to use multiple authentication handlers.**FederationAuthURI**specifies the type of authentication required by Authentication request when, SharePoint Online authentication is used with Federation. This parameter can override the priority established by the order in which authentication handlers are configured. To know more about Authentication handler, see [Authentication Handler Overview](http://msdn.microsoft.com/en-us/library/ee895365.aspx). 
+ **FederationAuthURI** property is used to pass **ADFS** authentication scheme preference where, **ADFS** is configured to use multiple authentication handlers. **FederationAuthURI** specifies the type of authentication required by Authentication request when, SharePoint Online authentication is used with Federation. This parameter can override the priority established by the order in which authentication handlers are configured. To know more about Authentication handler, see [Authentication Handler Overview](http://msdn.microsoft.com/en-us/library/ee895365.aspx). 
   
     
     
@@ -296,7 +296,7 @@ ClientContext ctx = new ClientContext("SiteUrl");
 
 ```
 
-**ADFS**is an optional property which will be effective only when it is used with Microsoft SharePoint Online. Using**ADFS**authentication with any other authentication scheme will not have any effect. With Microsoft SharePoint online, if**ADFS**is not set then default scheme will be used, i.e. server preference.
+ **ADFS** is an optional property which will be effective only when it is used with Microsoft SharePoint Online. Using **ADFS** authentication with any other authentication scheme will not have any effect. With Microsoft SharePoint online, if **ADFS** is not set then default scheme will be used, i.e. server preference.
   
     
     
@@ -304,7 +304,7 @@ ClientContext ctx = new ClientContext("SiteUrl");
 ## Cookie caching
 <a name="SP15Mobileclientauth_cookie"> </a>
 
-The **Authenticator**class also includes members that you can use to enable and manage caching of cookies or credentials or both. For information about these members of the**Authenticator**class and their uses, see [Overview of the SharePoint 2013 mobile object model](overview-of-the-sharepoint-2013-mobile-object-model.md). 
+The **Authenticator** class also includes members that you can use to enable and manage caching of cookies or credentials or both. For information about these members of the **Authenticator** class and their uses, see [Overview of the SharePoint 2013 mobile object model](overview-of-the-sharepoint-2013-mobile-object-model.md). 
   
     
     

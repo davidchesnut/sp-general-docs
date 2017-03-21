@@ -79,7 +79,7 @@ The crawl and content processing architecture consists of the following:
   
     
     
-**Crawl component**
+ **Crawl component**
   
     
     
@@ -87,7 +87,7 @@ The crawl and content processing architecture consists of the following:
   
     
     
-**Crawl database**
+ **Crawl database**
   
     
     
@@ -95,7 +95,7 @@ Contains information about crawled items, such as last crawl time, the last craw
   
     
     
-**Content processing component**
+ **Content processing component**
   
     
     
@@ -127,7 +127,7 @@ Search administration is composed of the search administration component and its
   
     
     
-**Search administration component**
+ **Search administration component**
   
     
     
@@ -135,7 +135,7 @@ Runs the system processes for search, and adds and initializes new instances of 
   
     
     
-**Search administration database**
+ **Search administration database**
   
     
     
@@ -151,7 +151,7 @@ The analytics architecture consists of the analytics processing component, analy
   
     
     
-**Analytics processing component**
+ **Analytics processing component**
   
     
     
@@ -159,7 +159,7 @@ Performs search analytics and usage analytics.
   
     
     
-**Link database**
+ **Link database**
   
     
     
@@ -167,7 +167,7 @@ Stores information extracted by the content processing component and search clic
   
     
     
-**Analytics reporting database**
+ **Analytics reporting database**
   
     
     
@@ -175,7 +175,7 @@ Stores the results of usage analytics.
   
     
     
-**Event store**
+ **Event store**
   
     
     
@@ -252,7 +252,7 @@ Search in SharePoint Server 2013 performs security trimming of search results th
   
     
     
-The pre-trimmer interface (**ISecurityTrimmerPre**) carries out pre-query evaluation, where the search query is rewritten to add security information before the search query is matched to the search index. In contrast, the post-trimmer interface (**ISecurityTrimmerPost**) carries out post-query evaluation, where the search results are pruned before they are returned to the user. For more information about the two interfaces, see  [Custom security trimming for Search in SharePoint Server 2013](custom-security-trimming-for-search-in-sharepoint-server-2013.md). For step-by-step information on how to implement a security trimmer interface, see  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md). 
+The pre-trimmer interface ( **ISecurityTrimmerPre**) carries out pre-query evaluation, where the search query is rewritten to add security information before the search query is matched to the search index. In contrast, the post-trimmer interface ( **ISecurityTrimmerPost**) carries out post-query evaluation, where the search results are pruned before they are returned to the user. For more information about the two interfaces, see  [Custom security trimming for Search in SharePoint Server 2013](custom-security-trimming-for-search-in-sharepoint-server-2013.md). For step-by-step information on how to implement a security trimmer interface, see  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md). 
   
     
     

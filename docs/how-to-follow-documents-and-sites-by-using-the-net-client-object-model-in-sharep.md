@@ -33,7 +33,7 @@ The following objects are the primary APIs for Following Content tasks:
   
 
 > [!NOTE]  
-> You also use these APIs for Following People tasks, but the **GetSuggestions**and**GetFollowers**methods available from [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) only support following people, not content. For more information about how you can use [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) , see [Follow content in SharePoint 2013](follow-content-in-sharepoint-2013.md) and [Follow people in SharePoint 2013](follow-people-in-sharepoint-2013.md). For code examples that show how to follow people, see  [How to: Follow people by using the .NET client object model in SharePoint 2013](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint-2013.md). 
+> You also use these APIs for Following People tasks, but the **GetSuggestions** and **GetFollowers** methods available from [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) only support following people, not content. For more information about how you can use [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) , see [Follow content in SharePoint 2013](follow-content-in-sharepoint-2013.md) and [Follow people in SharePoint 2013](follow-people-in-sharepoint-2013.md). For code examples that show how to follow people, see  [How to: Follow people by using the .NET client object model in SharePoint 2013](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint-2013.md). 
   
     
     
@@ -53,7 +53,7 @@ To create a console application that uses the .NET client object model to work w
 - Visual Studio 2012 
     
   
-- **Full Control**access permissions to the User Profile service application for the logged-on user
+- **Full Control** access permissions to the User Profile service application for the logged-on user
     
   
 
@@ -71,13 +71,13 @@ To create a console application that uses the .NET client object model to work w
 1. In Visual Studio, choose **File**, **New**, **Project**. 
     
   
-2. In the **New Project**dialog box, choose**.NET Framework 4.5**from the drop-down list at the top of the dialog box.
+2. In the **New Project** dialog box, choose **.NET Framework 4.5** from the drop-down list at the top of the dialog box.
     
   
-3. In the **Templates**list, choose**Windows**, and then choose the **Console Application**template.
+3. In the **Templates** list, choose **Windows**, and then choose the **Console Application** template.
     
   
-4. Name the project FollowContentCSOM, and then choose the **OK**button.
+4. Name the project FollowContentCSOM, and then choose the **OK** button.
     
   
 5. Add references to the following assemblies: 
@@ -91,7 +91,7 @@ To create a console application that uses the .NET client object model to work w
   - **Microsoft.SharePoint.Client.UserProfiles**
     
   
-6. Replace the contents of the **Program**class with the code example from one of the following scenarios:
+6. Replace the contents of the **Program** class with the code example from one of the following scenarios:
     
   -  [Start and stop following content](how-to-follow-documents-and-sites-by-using-the-net-client-object-model-in-sharep.md#bkmk_FollowContent)
     
@@ -129,7 +129,7 @@ This code example uses the  [SocialFollowResult](https://msdn.microsoft.com/libr
     
 
 > [!NOTE]  
-> Change the placeholder values for the **serverUrl**and**contentUrl**variables before you run the code. To use a site instead of a document, use the variables that are commented out.
+> Change the placeholder values for the **serverUrl** and **contentUrl** variables before you run the code. To use a site instead of a document, use the variables that are commented out.
   
     
     
@@ -257,7 +257,7 @@ The following code example gets the documents and sites that the current user is
   
 
 > [!NOTE]  
-> Change the placeholder value for the **serverUrl**, **docContentUrl**, and **siteContentUrl**variables before you run the code.
+> Change the placeholder value for the **serverUrl**, **docContentUrl**, and **siteContentUrl** variables before you run the code.
   
     
     

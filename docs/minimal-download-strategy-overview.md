@@ -26,7 +26,7 @@ Minimal Download Strategy (MDS) is a new technology in SharePoint 2013 that redu
   
     
     
-You can identify a site that has MDS enabled by looking at the URL. An MDS-enabled site has the (3) **_layouts/15/start.aspx**page in the URL followed by a hash mark (**#**) and the relative URL of the requested resource, as shown in Figure 1. For example, the following is the MDS-formatted URL for the page**newpage.aspx**:**https://sp_site/_layouts/15/start.aspx#/SitePages/newpage.aspx**It is equivalent to the following non-MDS-formatted URL: **https://sp_site/SitePages/newpage.aspx**As a developer, you might have created SharePoint components that need some updates before they can work seamlessly with MDS. 
+You can identify a site that has MDS enabled by looking at the URL. An MDS-enabled site has the (3) **_layouts/15/start.aspx** page in the URL followed by a hash mark ( **#** ) and the relative URL of the requested resource, as shown in Figure 1. For example, the following is the MDS-formatted URL for the page **newpage.aspx**: **https://sp_site/_layouts/15/start.aspx#/SitePages/newpage.aspx**It is equivalent to the following non-MDS-formatted URL: **https://sp_site/SitePages/newpage.aspx**As a developer, you might have created SharePoint components that need some updates before they can work seamlessly with MDS. 
 ## Enable MDS
 <a name="SP15MDSOverview_Enable"> </a>
 
@@ -34,7 +34,7 @@ You can enable MDS in your site by using either the site administration pages or
   
     
     
-To enable MDS by activating the feature in the administration pages, choose **Site settings**>**Manage site features**, and activate the **Minimal Download Strategy**feature.
+To enable MDS by activating the feature in the administration pages, choose **Site settings** > **Manage site features**, and activate the **Minimal Download Strategy** feature.
   
     
     
@@ -80,16 +80,16 @@ Using MDS provides several benefits, including:
     
     
 
-- **Speed:**This is the main objective of MDS. When you are using MDS, the browser doesn't have to reprocess the chrome user interface (UI). MDS also reduces the payload compared to a full page load.
+- **Speed:** This is the main objective of MDS. When you are using MDS, the browser doesn't have to reprocess the chrome user interface (UI). MDS also reduces the payload compared to a full page load.
     
   
-- **Smooth transitions:**By updating only the areas that change, you draw the user's eye toward these areas, as opposed to a full page load where the whole page "flashes." When the whole page is updated, the user must parse it in its entirety to detect what is new. Users have an easier time navigating a site that only updates the areas that changed from the previous page.
+- **Smooth transitions:** By updating only the areas that change, you draw the user's eye toward these areas, as opposed to a full page load where the whole page "flashes." When the whole page is updated, the user must parse it in its entirety to detect what is new. Users have an easier time navigating a site that only updates the areas that changed from the previous page.
     
   
-- **Browser navigation controls:**Other AJAX-based systems confuse the**previous**and**next**buttons in browsers. Because MDS updates the URL in the browser window, the previous and next buttons work just as they are supposed to.
+- **Browser navigation controls:** Other AJAX-based systems confuse the **previous** and **next** buttons in browsers. Because MDS updates the URL in the browser window, the previous and next buttons work just as they are supposed to.
     
   
-- **Backward compatibility:**The MDS engine either provides MDS navigation immediately or detects when it isn't possible. In the case where MDS navigation isn't possible, a full page load occurs instead. This process is called**failover**, and it ensures that all pages render properly regardless of whether they contain MDS-compliant components. MDS also works nicely with search engines because the**href**attribute of anchor tags uses the regular, non MDS-formatted URLs. Instead, the MDS engine in the client captures the**onclick**event and uses it to communicate with the server.
+- **Backward compatibility:** The MDS engine either provides MDS navigation immediately or detects when it isn't possible. In the case where MDS navigation isn't possible, a full page load occurs instead. This process is called **failover**, and it ensures that all pages render properly regardless of whether they contain MDS-compliant components. MDS also works nicely with search engines because the **href** attribute of anchor tags uses the regular, non MDS-formatted URLs. Instead, the MDS engine in the client captures the **onclick** event and uses it to communicate with the server.
     
   
 
@@ -135,7 +135,7 @@ The resulting page is exactly as it would have been if the page had been downloa
   
     
     
-The MDS engine in the client includes a download manager. All requests in the page are routed through the download manager. All controls in the page must subscribe to the download manager to learn when a URL has changed. The download manager makes one request for all the new control data. To be able to work with search engines, the MDS engine doesn't directly use the **href**attribute of anchor tags to store MDS-formatted URLs. Instead, the**SPUpdatePage**function handles the**onclick**event and uses it to communicate with the server. The**SPUpdatePage**function is declared in the**_layouts/15/start.js**file.
+The MDS engine in the client includes a download manager. All requests in the page are routed through the download manager. All controls in the page must subscribe to the download manager to learn when a URL has changed. The download manager makes one request for all the new control data. To be able to work with search engines, the MDS engine doesn't directly use the **href** attribute of anchor tags to store MDS-formatted URLs. Instead, the **SPUpdatePage** function handles the **onclick** event and uses it to communicate with the server. The **SPUpdatePage** function is declared in the **_layouts/15/start.js** file.
   
     
     
@@ -143,7 +143,7 @@ The MDS engine in the server sends the information back to the client. This info
   
     
     
-The URL plays an important role in MDS. An MDS URL looks like the following: **https://sp_site/_layouts/15/start.aspx#/SitePages/newpage.aspx**.**Start.aspx**contains minimal shared UI and instructions for loading page changes. MDS considers the part following the hash mark (#) as the target page. The target page starts with a slash (/) followed by a URL relative to the SharePoint website. When the browser receives the URL, it sees that the part to the left of the hash mark hasn't changed, so it fires a local navigation event. The MDS engine in the client captures the local navigation event and uses it to perform an MDS update.
+The URL plays an important role in MDS. An MDS URL looks like the following: **https://sp_site/_layouts/15/start.aspx#/SitePages/newpage.aspx**. **Start.aspx** contains minimal shared UI and instructions for loading page changes. MDS considers the part following the hash mark (#) as the target page. The target page starts with a slash (/) followed by a URL relative to the SharePoint website. When the browser receives the URL, it sees that the part to the left of the hash mark hasn't changed, so it fires a local navigation event. The MDS engine in the client captures the local navigation event and uses it to perform an MDS update.
   
     
     

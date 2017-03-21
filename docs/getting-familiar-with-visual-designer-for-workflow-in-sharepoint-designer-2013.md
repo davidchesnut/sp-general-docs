@@ -1,6 +1,6 @@
 ---
 title: Getting familiar with Visual Designer for workflow in SharePoint Designer 2013
-ms.prod: SHAREPOINT
+ms.prod: SHAREPOINTDESIGNER
 ms.assetid: ff9b0314-eea1-47e4-87c7-53ed4de98c30
 ---
 
@@ -35,18 +35,18 @@ SharePoint Designer 2013 includes a new workflow design surface called Visual De
   
     
     
-The **Shapes**pane on the left contains workflow shapes that you can drag to the design surface in order to create the workflow. Following are the three categories of shapes available for building a workflow.
+The **Shapes** pane on the left contains workflow shapes that you can drag to the design surface in order to create the workflow. Following are the three categories of shapes available for building a workflow.
   
     
     
 
-- **Actions:**Specific actions that can be performed by the workflow. Some examples include calling an HTTP web service, adding a comment, and updating a list.
+- **Actions:** Specific actions that can be performed by the workflow. Some examples include calling an HTTP web service, adding a comment, and updating a list.
     
   
-- **Components:**General components that can be added to provide a structured environment for workflow actions. Some examples include a stage container, a loop with conditions, and a start workflow shape.
+- **Components:** General components that can be added to provide a structured environment for workflow actions. Some examples include a stage container, a loop with conditions, and a start workflow shape.
     
   
-- **Conditions:**Conditional logic shapes that can be used to provide a workflow path based on specific criteria. Some examples include checking if one value equals another value, checking if a person is a valid SharePoint user, and checking if an item is created within a specific date range.
+- **Conditions:** Conditional logic shapes that can be used to provide a workflow path based on specific criteria. Some examples include checking if one value equals another value, checking if a person is a valid SharePoint user, and checking if an item is created within a specific date range.
     
   
 
@@ -87,21 +87,21 @@ The figure shows a workflow in Visual Designer.
 ## Using the Visual Designer in SharePoint 2013
 <a name="section2"> </a>
 
-The Visual Designer in SharePoint Designer 2013 is accessed through the Views drop-down menu of the **Workflow**tab. There are three different views that can be used for developing a workflow:
+The Visual Designer in SharePoint Designer 2013 is accessed through the Views drop-down menu of the **Workflow** tab. There are three different views that can be used for developing a workflow:
   
     
     
 
-- **Text-Based Designer:**A text-based workflow development environment.
+- **Text-Based Designer:** A text-based workflow development environment.
     
   
-- **Visual Designer:**A visual workflow development environment where shapes can be dragged onto the design surface in order to develop the workflow. (Requires Visio Professional 2013)
+- **Visual Designer:** A visual workflow development environment where shapes can be dragged onto the design surface in order to develop the workflow. (Requires Visio Professional 2013)
     
   
-- **Stage View:**Provides a high-level view of the visual design surface by showing how stages of the workflow fit together. It is similar to the**Visual Designer**view but it does not show the shape-level detail. (Requires Visio Professional 2013)
+- **Stage View:** Provides a high-level view of the visual design surface by showing how stages of the workflow fit together. It is similar to the **Visual Designer** view but it does not show the shape-level detail. (Requires Visio Professional 2013)
     
   
-You can switch between **Views**in the**Manage**portion of the**Workflow**ribbon as shown in the figure.
+You can switch between **Views** in the **Manage** portion of the **Workflow** ribbon as shown in the figure.
   
     
     

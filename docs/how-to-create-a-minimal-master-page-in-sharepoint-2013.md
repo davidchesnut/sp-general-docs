@@ -29,7 +29,7 @@ Starting with a minimal master page is useful when:
 - You want to rapidly test or prototype a design element that requires a working SharePoint master page. For example, creating a minimal master page does not require preparing an HTML file for conversion or resolving any preview errors that result from markup that is not valid in the HTML file. This means you can immediately work with the server-side preview or the Snippet Gallery.
     
   
-- You want to work directly with the .master file. If you're an ASP.NET developer or a SharePoint developer, you can create a minimal master page, remove the association between the HTML file and the .master file by clearing the **Associated File**check box in the properties of the HTML file, and then work directly with the .master file.
+- You want to work directly with the .master file. If you're an ASP.NET developer or a SharePoint developer, you can create a minimal master page, remove the association between the HTML file and the .master file by clearing the **Associated File** check box in the properties of the HTML file, and then work directly with the .master file.
     
   
 
@@ -56,11 +56,11 @@ Starting with a minimal master page is useful when:
 4. Choose **Create a minimal master page**.
     
   
-5. In the **Create a Master Page**dialog box, enter a name for the master page, and then choose**OK**.
+5. In the **Create a Master Page** dialog box, enter a name for the master page, and then choose **OK**.
     
     At this point, SharePoint creates both a .master file and an associated HTML file with the same name in the Master Page Gallery.
     
-    In Design Manager, your HTML file now appears with **Conversion successful**displayed in the Status column.
+    In Design Manager, your HTML file now appears with **Conversion successful** displayed in the Status column.
     
   
 6. Follow the link in the Status column to preview the file.
@@ -69,17 +69,17 @@ Starting with a minimal master page is useful when:
     
     For more information about previewing the master page with different pages, see  [How to: Change the preview page in SharePoint 2013 Design Manager](how-to-change-the-preview-page-in-sharepoint-2013-design-manager.md).
     
-    The preview page also contains a **Snippets**link in the upper-right corner. This link opens the Snippet Gallery, where you can begin replacing static or mock-up controls in your design with dynamic SharePoint controls. For more information, see [SharePoint 2013 Design Manager snippets](sharepoint-2013-design-manager-snippets.md).
+    The preview page also contains a **Snippets** link in the upper-right corner. This link opens the Snippet Gallery, where you can begin replacing static or mock-up controls in your design with dynamic SharePoint controls. For more information, see [SharePoint 2013 Design Manager snippets](sharepoint-2013-design-manager-snippets.md).
     
-    After your master page previews successfully, you will see a **<div>**tag that gets added to your HTML file. You may have to scroll to the bottom of the page to see the**<div>**tag.
+    After your master page previews successfully, you will see a **<div>** tag that gets added to your HTML file. You may have to scroll to the bottom of the page to see the **<div>** tag.
     
-    This **<div>**is the main content block. It resides inside a content placeholder named**ContentPlaceHolderMain**. At run time, when a visitor browses your site and requests a page, this content placeholder gets filled with content from a page layout that contains content in a matching content region. You should position this **<div>**where you want your page layouts to appear on the master page.
+    This **<div>** is the main content block. It resides inside a content placeholder named **ContentPlaceHolderMain**. At run time, when a visitor browses your site and requests a page, this content placeholder gets filled with content from a page layout that contains content in a matching content region. You should position this **<div>** where you want your page layouts to appear on the master page.
     
   
 7. You can edit the HTML file that resides directly on the server by using an HTML editor to open and edit the HTML file in a mapped drive. Each time you save the HTML file, any changes are synced to the associated .master file. For more information, see  [How to: Map a network drive to the SharePoint 2013 Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-2013-master-page-gallery.md).
     
   
-8. To work only with the .master file and not the HTML file, you must break the association between the two files. In Design Manager, on the Edit Master Pages page, select the HTML file, open the **Properties**menu, and then choose**Edit Properties**. On the **Edit**tab, clear the**Associated File**check box, and then choose**Save**.
+8. To work only with the .master file and not the HTML file, you must break the association between the two files. In Design Manager, on the Edit Master Pages page, select the HTML file, open the **Properties** menu, and then choose **Edit Properties**. On the **Edit** tab, clear the **Associated File** check box, and then choose **Save**.
     
     Breaking the association enables you to work directly with the .master file and save changes without having them overwritten by any changes made to the HTML file. You can restore this association at any time. If you restore the association, the associated HTML file will sync to the .master file and overwrite it.
     

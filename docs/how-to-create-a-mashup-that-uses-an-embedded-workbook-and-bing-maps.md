@@ -23,7 +23,7 @@ When the user selects different options from the UI, JavaScript is used to proce
   
     
     
-**The "Travel workbook"**
+ **The "Travel workbook"**
   
     
     
@@ -31,7 +31,7 @@ The Destination Explorer depends heavily on an embedded workbook that contains a
   
     
     
-**Excel Services JavaScript API**
+ **Excel Services JavaScript API**
   
     
     
@@ -39,7 +39,7 @@ The mashup uses the Excel Services JavaScript API to embed the workbook and to i
   
     
     
-**Bing Maps JavaScript API**
+ **Bing Maps JavaScript API**
   
     
     
@@ -92,7 +92,7 @@ The integration happens in the following 3 steps:
 
 1. **Create the page structure for the mashup**
     
-    An HTML select control on the web page is populated with data from the Travel workbook when the page loads or whenever the user changes the current region or the destination type. The definition for this select control ( *destinations*  ) is shown in**Snippet 1**.**Snippet 1**also shows the definition for the other key elements on the page:**chartDiv**,**chartDiv2**, and**mapDiv**. The chart div elements are containers for the two charts defined in the Travel workbook. The map div is the container for the Bing Map control.
+    An HTML select control on the web page is populated with data from the Travel workbook when the page loads or whenever the user changes the current region or the destination type. The definition for this select control ( *destinations*  ) is shown in **Snippet 1**. **Snippet 1** also shows the definition for the other key elements on the page: **chartDiv**, **chartDiv2**, and **mapDiv**. The chart div elements are containers for the two charts defined in the Travel workbook. The map div is the container for the Bing Map control.
     
     **Snippet 1: Structuring the web page**
     
@@ -117,7 +117,7 @@ The integration happens in the following 3 steps:
     
     The next step is to initialize the Excel components and the Bing Map when the page loads. In order to access an embedded Excel workbook programmatically, you need to refer to it by a file token. See  [http://msdn.microsoft.com/en-us/library/hh315812.aspx](http://msdn.microsoft.com/en-us/library/hh315812.aspx%28Office.15%29.aspx) for information on how to get the appropriate file token for your workbook.
     
-    The code in **Snippet 2**completes three main tasks inside the**Page_Load**event handler. First, it establishes a reference to the Travel workbook to display the chart named *Chart 1*  inside the**chartDiv**element on the web page. Second, it calls a simple function named**GetMap**to initialize the Bing Map. Third, it creates a second reference to the Travel workbook to display the chart named *Chart 2*  inside the**chartDiv2**element.
+    The code in **Snippet 2** completes three main tasks inside the **Page_Load** event handler. First, it establishes a reference to the Travel workbook to display the chart named *Chart 1*  inside the **chartDiv** element on the web page. Second, it calls a simple function named **GetMap** to initialize the Bing Map. Third, it creates a second reference to the Travel workbook to display the chart named *Chart 2*  inside the **chartDiv2** element.
     
     **Snippet 2: Initializing the Page**
     
@@ -194,7 +194,7 @@ The integration happens in the following 3 steps:
 
 3. **Create the appropriate callback functions**
     
-    All calls to functions in the Excel Services JavaScript API usually take a callback as a parameter to the function. The callback parameter is the name of the function in your JavaScript that should be run when the call to the Excel Services JavaScript API completes. You can see a callback used in the **EwaControl.loadEwaAsync**function in**Snippet 2**:
+    All calls to functions in the Excel Services JavaScript API usually take a callback as a parameter to the function. The callback parameter is the name of the function in your JavaScript that should be run when the call to the Excel Services JavaScript API completes. You can see a callback used in the **EwaControl.loadEwaAsync** function in **Snippet 2**:
     
 
 
@@ -206,25 +206,25 @@ Ewa.EwaControl.loadEwaAsync(fileToken, "chartDiv", props, onEwaChartLoaded);
 
     The callback used here is **onEwaChartLoaded**. This launches the following chain of calls to the Excel Services JavaScript API and callbacks within the Destination Explorer. The callbacks used in this chain are: 
     
-  - **onEwaChartLoaded()**- This function saves a reference to the Excel Web Access Control associated with the chart. After it has the control, it calls the method**getRangeA1Async()**to get the range represented by the name *OutputTopFiveDetails*  .
+  - **onEwaChartLoaded()** - This function saves a reference to the Excel Web Access Control associated with the chart. After it has the control, it calls the method **getRangeA1Async()** to get the range represented by the name *OutputTopFiveDetails*  .
     
   
-  - **onGotDetailRange()**- The call to**getRangeA1Async()**returns the range, not the values so this callback calls the method**getValuesAsync()**to get the values associated with the range.
+  - **onGotDetailRange()** - The call to **getRangeA1Async()** returns the range, not the values so this callback calls the method **getValuesAsync()** to get the values associated with the range.
     
   
-  - **onGotDetailValues()**- The values associated with the range are stored in a variable for later use and then this method calls the following methods defined within the Destination Explorer:
+  - **onGotDetailValues()** - The values associated with the range are stored in a variable for later use and then this method calls the following methods defined within the Destination Explorer:
     
-  - **loadDestinations()**- Populates the select element with the destinations within the range *OutputTopFiveDetails* 
-    
-  
-  - **updateMap()**- Updates the map if necessary
+  - **loadDestinations()** - Populates the select element with the destinations within the range *OutputTopFiveDetails* 
     
   
-  - **updateChart()**- Updates the chart if necessary
+  - **updateMap()** - Updates the map if necessary
+    
+  
+  - **updateChart()** - Updates the chart if necessary
     
   
 
-    The purpose of the chain of callbacks shown in **Snippet 3**is to update the data shown on the HTML page. There is another chain of callback functions used to modify data within the Travel workbook. For example, if you change the region from North America to Europe, several things need to happen such as repopulating the list of destinations, updating the map, and hiding the charts. Repopulating the list of destination is the first thing that needs to happen and this involves modifying data in Excel.**Snippet 3**shows the code for these tasks. Note that the function named**updateExcel()**and an associated callback named**onGotRange()**handle the chore of changing values on the Input worksheet of the Travel workbook.
+    The purpose of the chain of callbacks shown in **Snippet 3** is to update the data shown on the HTML page. There is another chain of callback functions used to modify data within the Travel workbook. For example, if you change the region from North America to Europe, several things need to happen such as repopulating the list of destinations, updating the map, and hiding the charts. Repopulating the list of destination is the first thing that needs to happen and this involves modifying data in Excel. **Snippet 3** shows the code for these tasks. Note that the function named **updateExcel()** and an associated callback named **onGotRange()** handle the chore of changing values on the Input worksheet of the Travel workbook.
     
     **Snippet 3: The callback chain for modifying inputs in the Travel workbook**
     

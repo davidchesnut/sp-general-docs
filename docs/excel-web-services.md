@@ -104,7 +104,7 @@ This section contains information about Excel Web Services and explains how to u
   
     
     
-> Learn how you can use the **Refresh**method to retrieve updated data from external data sources for an open workbook.
+> Learn how you can use the **Refresh** method to retrieve updated data from external data sources for an open workbook.
     
   
  [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes.md)
@@ -118,7 +118,7 @@ This section contains information about Excel Web Services and explains how to u
 ## Reference
 
 
-**Microsoft.Office.Excel.Server.WebServices**
+ **Microsoft.Office.Excel.Server.WebServices**
   
     
     

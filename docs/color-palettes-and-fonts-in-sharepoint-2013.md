@@ -17,7 +17,7 @@ A color palette is the combination of colors that are used in a SharePoint site.
 
 - **Color palette file (.spcolor)**
     
-    Color palette files are used in the **Change the look**wizard, which enables users to change the look and feel of their site by using the SharePoint themes user interface. By default, 32 color palette files are installed with SharePoint 2013. You can also create additional color palette files. The following example shows the format of a color palette file.
+    Color palette files are used in the **Change the look** wizard, which enables users to change the look and feel of their site by using the SharePoint themes user interface. By default, 32 color palette files are installed with SharePoint 2013. You can also create additional color palette files. The following example shows the format of a color palette file.
     
 
 
@@ -32,7 +32,7 @@ A color palette is the combination of colors that are used in a SharePoint site.
 
     In a color palette file, the following placeholders are replaced: 
     
-  -  _InvertedSetting_ is a Boolean value.**true**if the color palette is generally light text on a dark background.**false**if the color palette is generally dark text on a light background.
+  -  _InvertedSetting_ is a Boolean value. **true** if the color palette is generally light text on a dark background. **false** if the color palette is generally dark text on a light background.
     
   
   -  _Slot1_ is the annotation name of the color slot to use as the first block of the palette icon in the color palette picker of the theming experience.
@@ -51,12 +51,12 @@ A color palette is the combination of colors that are used in a SharePoint site.
     
   
 
-    The color palette files are located in the Theme Gallery of the root site, in the site collection in the **15**folder (http:// _SiteCollectionName_/_catalogs/theme/15/). To access the Theme Gallery from the SharePoint user interface, on the **Site Settings**page, under**Web Designer Galleries**, select **Themes**, and then select **15**. 
+    The color palette files are located in the Theme Gallery of the root site, in the site collection in the **15** folder (http:// _SiteCollectionName_/_catalogs/theme/15/). To access the Theme Gallery from the SharePoint user interface, on the **Site Settings** page, under **Web Designer Galleries**, select **Themes**, and then select **15**. 
     
   
 - **Master page preview file (.preview)**
     
-    Master page preview files are used to generate thumbnail images and preview images when you use the **Change the look**wizard. A master page must have a corresponding preview file to be used in the**Change the look**wizard. A preview file is a specially formatted file that has sections for the default color palette, default font scheme, tokenized CSS, and tokenized HTML. It uses string tokens to get the value of color slots, font names, and localized UI strings. The following example shows color slots being used in the master page preview file.
+    Master page preview files are used to generate thumbnail images and preview images when you use the **Change the look** wizard. A master page must have a corresponding preview file to be used in the **Change the look** wizard. A preview file is a specially formatted file that has sections for the default color palette, default font scheme, tokenized CSS, and tokenized HTML. It uses string tokens to get the value of color slots, font names, and localized UI strings. The following example shows color slots being used in the master page preview file.
     
 
 
@@ -205,7 +205,7 @@ Table 1 describes the color slots that are available and where color slots are u
 ## Font schemes
 <a name="font"> </a>
 
-Fonts are defined in the font scheme (.spfont file) and the master page preview (.preview file) for a given SharePoint site. The font scheme defines the fonts that are used in four areas: title, navigation, heading, and body. Seven font schemes are included in SharePoint 2013. You can create additional font schemes. The font scheme files are located in the **15**subfolder of the Theme Gallery of the root site of the site collection (http:// _SiteCollectionName_/_catalogs/theme/15/). To access the Theme Gallery from the SharePoint user interface, on the **Site Settings**page, under**Web Designer Galleries**, select **Themes**, and then select **15**. 
+Fonts are defined in the font scheme (.spfont file) and the master page preview (.preview file) for a given SharePoint site. The font scheme defines the fonts that are used in four areas: title, navigation, heading, and body. Seven font schemes are included in SharePoint 2013. You can create additional font schemes. The font scheme files are located in the **15** subfolder of the Theme Gallery of the root site of the site collection (http:// _SiteCollectionName_/_catalogs/theme/15/). To access the Theme Gallery from the SharePoint user interface, on the **Site Settings** page, under **Web Designer Galleries**, select **Themes**, and then select **15**. 
   
     
     
@@ -240,10 +240,10 @@ In an .spfont file, the following placeholders are replaced:
 -  _FontSchemeName_ is the name of the font scheme.
     
   
--  _Slot1_ is the name of the font slot that you want to use as the first block of the font icon in the font scheme picker in the**Change the look**wizard.
+-  _Slot1_ is the name of the font slot that you want to use as the first block of the font icon in the font scheme picker in the **Change the look** wizard.
     
   
--  _Slot2_ is the name of the font slot that you want to use as the second block of the font icon in the font scheme picker in the**Change the look**wizard.
+-  _Slot2_ is the name of the font slot that you want to use as the second block of the font icon in the font scheme picker in the **Change the look** wizard.
     
   
 -  _FontSlotName_ is the name of the font slot that you are defining (for example, title).
@@ -253,10 +253,10 @@ In an .spfont file, the following placeholders are replaced:
     
     > [!NOTE]  
 > You must provide additional information to use web fonts in your font scheme. For more information, see the  [Web fonts](#webFont) section in this article.
--  _EAScriptFont_ is the font to use for East Asia scripts. The**<s:ea>**element is not currently used by SharePoint. But, the**<s:ea>**element is still required in the font scheme.
+-  _EAScriptFont_ is the font to use for East Asia scripts. The **<s:ea>** element is not currently used by SharePoint. But, the **<s:ea>** element is still required in the font scheme.
     
   
--  _CSFont_ is the font to use for complex scripts. The**<s:cs>**element is not currently used by SharePoint. But, the**<s:cs>**element is still required in the font scheme.
+-  _CSFont_ is the font to use for complex scripts. The **<s:cs>** element is not currently used by SharePoint. But, the **<s:cs>** element is still required in the font scheme.
     
   
 -  _Language_ is the language script.
@@ -321,7 +321,7 @@ SharePoint 2013 includes support for web fonts. You must provide additional info
 ### Web-safe fonts
 <a name="websafeFont"> </a>
 
-Web-safe fonts are a set of fonts that are widely used and available on most devices by default. To specify a web-safe font in the font scheme, include the name of the font in the **typeface**attribute of the font slot. The following example shows a web-safe font used in a font scheme.
+Web-safe fonts are a set of fonts that are widely used and available on most devices by default. To specify a web-safe font in the font scheme, include the name of the font in the **typeface** attribute of the font slot. The following example shows a web-safe font used in a font scheme.
   
     
     
@@ -342,7 +342,7 @@ Web fonts are fonts that are available on the Internet. When a user views a site
   
     
     
-The following example describes the information that is required to use a web font in an **<s:latin>**element.
+The following example describes the information that is required to use a web font in an **<s:latin>** element.
   
     
     

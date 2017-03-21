@@ -186,13 +186,13 @@ The following code example publishes a post that mentions a user. It shows how t
 - Add the  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) to the [ContentItems](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.ContentItems.aspx) property of the [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) object that's used to create the post.
     
   
-In the social feed, clicking a mention redirects to the mentioned person's **About**page.
+In the social feed, clicking a mention redirects to the mentioned person's **About** page.
   
     
     
 
 > [!NOTE]  
-> Change the placeholder values for the **serverURL**and**accountName**variables before you run the code.
+> Change the placeholder values for the **serverURL** and **accountName** variables before you run the code.
   
     
     
@@ -269,7 +269,7 @@ The following code example publishes a post that includes a tag. It shows how to
     
     
 
-- Create a  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) object to represent the tag. The [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) specifies the [SocialDataItemType.Tag](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.Tag.aspx) field and the tag name, which must include a**#**character.
+- Create a  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) object to represent the tag. The [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) specifies the [SocialDataItemType.Tag](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.Tag.aspx) field and the tag name, which must include a **#** character.
     
   
 - Add a placeholder to the post text to indicate where the tag should appear. 
@@ -278,13 +278,13 @@ The following code example publishes a post that includes a tag. It shows how to
 - Add the  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) to the [ContentItems](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.ContentItems.aspx) property of the [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) object that's used to create the post.
     
   
-In the social feed, clicking a tag redirects to the tag's **About**page. If the tag doesn't already exist, the server creates it.
+In the social feed, clicking a tag redirects to the tag's **About** page. If the tag doesn't already exist, the server creates it.
   
     
     
 
 > [!NOTE]  
-> Change the placeholder values for the **serverURL**and**tagName**variables before you run the code.
+> Change the placeholder values for the **serverURL** and **tagName** variables before you run the code.
   
     
     

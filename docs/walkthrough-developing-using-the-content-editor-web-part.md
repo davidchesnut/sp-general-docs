@@ -1,6 +1,6 @@
 ---
 title: Walkthrough Developing Using the Content Editor Web Part
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: 0b5e74b7-405c-43c5-b2dd-1dff77280856
 ---
 

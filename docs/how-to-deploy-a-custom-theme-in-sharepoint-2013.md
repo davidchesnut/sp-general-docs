@@ -38,17 +38,17 @@ You can create custom themes by creating additional color palettes and font sche
     
     
 
-- **Master Page Gallery**Lists the master page files, and their corresponding preview files (.preview files). A master page preview file is required if you want the master page to be available in the**Change the look**wizard. JavaScript files and other design assets can also be uploaded to the Master Page Gallery.
+- **Master Page Gallery** Lists the master page files, and their corresponding preview files (.preview files). A master page preview file is required if you want the master page to be available in the **Change the look** wizard. JavaScript files and other design assets can also be uploaded to the Master Page Gallery.
     
-    To access the Master Page Gallery from the SharePoint user interface, on the **Site Settings**page, under**Web Designer Galleries**, choose **Master pages**. You can also navigate directly to the site (http://  _SiteName_/_catalogs/masterpage/). 
-    
-  
-- **Theme Gallery**Lists the color palettes and font schemes that are available to the theming experience. SharePoint looks in the**15**folder to determine the available color palettes and font schemes.
-    
-    To access the Theme Gallery from the SharePoint user interface, on the **Site Settings**page, under**Web Designer Galleries**, choose **Themes**. You can also navigate directly to the site (http:// _SiteCollectionName_/_catalogs/theme/15/). 
+    To access the Master Page Gallery from the SharePoint user interface, on the **Site Settings** page, under **Web Designer Galleries**, choose **Master pages**. You can also navigate directly to the site (http://  _SiteName_/_catalogs/masterpage/). 
     
   
-- **Style library**Lists custom CSS files that you want to use in the theming experience. You can navigate directly to the Style library (replace _SiteCollectionName_ and _language_ in this URL: http:// _SiteCollectionName_/Style Library/ _language_/Themable/). 
+- **Theme Gallery** Lists the color palettes and font schemes that are available to the theming experience. SharePoint looks in the **15** folder to determine the available color palettes and font schemes.
+    
+    To access the Theme Gallery from the SharePoint user interface, on the **Site Settings** page, under **Web Designer Galleries**, choose **Themes**. You can also navigate directly to the site (http:// _SiteCollectionName_/_catalogs/theme/15/). 
+    
+  
+- **Style library** Lists custom CSS files that you want to use in the theming experience. You can navigate directly to the Style library (replace _SiteCollectionName_ and _language_ in this URL: http:// _SiteCollectionName_/Style Library/ _language_/Themable/). 
     
     > [!NOTE]  
 > Place the custom CSS files in the Themable folder in the Style library, not the Themable folder in the Master Page Gallery. Only CSS files that are stored in the Themable folder in the Style library are recognized by the theming engine. 
@@ -78,34 +78,34 @@ A composed look, or design, is the color palette, font scheme, background image,
 ### To add a composed look
 
 
-1. Choose the **Settings**icon, and then choose**Site settings**. 
+1. Choose the **Settings** icon, and then choose **Site settings**. 
     
   
 2. Under **Web Designer Galleries**, choose **Composed looks**. 
     
   
-3. In the **Composed Looks**list, select**new item**. 
+3. In the **Composed Looks** list, select **new item**. 
     
   
-4. In the **Title**text box, enter a title for the design.
+4. In the **Title** text box, enter a title for the design.
     
   
-5. In the **Name**text box, enter a name for the design. The name appears in the Composed Looks list and in the design gallery.
+5. In the **Name** text box, enter a name for the design. The name appears in the Composed Looks list and in the design gallery.
     
   
-6. In the **Master Page URL**text box, enter the URL of the master page. The URL can be a relative URL.
+6. In the **Master Page URL** text box, enter the URL of the master page. The URL can be a relative URL.
     
   
-7. In the **Theme URL**text box, enter the URL of the color palette (the URL to the .spcolor file). The URL can be a relative URL.
+7. In the **Theme URL** text box, enter the URL of the color palette (the URL to the .spcolor file). The URL can be a relative URL.
     
   
-8. In the **Image URL**text box, enter the URL of the background image. This is optional. The URL can be a relative URL.
+8. In the **Image URL** text box, enter the URL of the background image. This is optional. The URL can be a relative URL.
     
   
-9. In the **Font Scheme URL**text box, enter the URL of the font scheme (the URL to the .spfont file). This is optional. The URL can be a relative URL.
+9. In the **Font Scheme URL** text box, enter the URL of the font scheme (the URL to the .spfont file). This is optional. The URL can be a relative URL.
     
   
-10. In the **Display Order**text box, enter the display order number. This determines where the design appears in the design gallery.
+10. In the **Display Order** text box, enter the display order number. This determines where the design appears in the design gallery.
     
   
 11. Choose **Save**. 
@@ -170,9 +170,9 @@ theme.ApplyTo(Web, true);
 
 
     > [!NOTE]  
-> The  _shareGenerated_ parameter in the**ApplyTo**method specifies whether the themed files can be shared across sites in a site collection. In general, it is set to**true**for SharePoint Server and SharePoint Online sites and set to**false**for SharePoint Foundation sites. The _shareGenerated_ parameter must be set to**true**if you intend the themed files to be shared. For more information, see [ApplyTo(SPWeb, Boolean)](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPTheme.ApplyTo.aspx) .
+> The  _shareGenerated_ parameter in the **ApplyTo** method specifies whether the themed files can be shared across sites in a site collection. In general, it is set to **true** for SharePoint Server and SharePoint Online sites and set to **false** for SharePoint Foundation sites. The _shareGenerated_ parameter must be set to **true** if you intend the themed files to be shared. For more information, see [ApplyTo(SPWeb, Boolean)](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPTheme.ApplyTo.aspx) .
 
-    When a user applies a theme in the **Change the look**wizard, the wizard also updates a theme named Current in the Composed Looks list and the design gallery. When you apply a theme programmatically, you have to update the Current theme manually. The following example shows how to update the Current theme.
+    When a user applies a theme in the **Change the look** wizard, the wizard also updates a theme named Current in the Composed Looks list and the design gallery. When you apply a theme programmatically, you have to update the Current theme manually. The following example shows how to update the Current theme.
     
 
 

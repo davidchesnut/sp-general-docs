@@ -54,7 +54,7 @@ The Machine Translation Service object model is modeled after the Word Automatio
 ## Using the Machine Translation Service server object model
 <a name="TranslationSvc_ServerOM"> </a>
 
-Applications that use the server object model must run directly on a server that is running SharePoint 2013. For information about creating applications that can be hosted remotely, see  [Using the Machine Translation Services client object model](#TranslationSvc_UsingCSOM) later in this topic. The Machine Translation Service server object model resides in the**Microsoft.Office.TranslationServices**namespace, which is located in Microsoft.Office.TranslationServices.dll.
+Applications that use the server object model must run directly on a server that is running SharePoint 2013. For information about creating applications that can be hosted remotely, see  [Using the Machine Translation Services client object model](#TranslationSvc_UsingCSOM) later in this topic. The Machine Translation Service server object model resides in the **Microsoft.Office.TranslationServices** namespace, which is located in Microsoft.Office.TranslationServices.dll.
   
     
     
@@ -77,7 +77,7 @@ For sample code demonstrating how to use the server object model from a console 
 
 ### Asynchronous translation using the server object model
 
-The **TranslationJob**class defines a set of items to be translated. This can be a single file or every file within a folder or document library. Translation jobs that are submitted this way are stored in the translation database. Each time the translation timer job runs, it takes some of the jobs from the translation database and adds them to the asynchronous queue to be translated. The default interval of the translation timer job is 15 minutes.
+The **TranslationJob** class defines a set of items to be translated. This can be a single file or every file within a folder or document library. Translation jobs that are submitted this way are stored in the translation database. Each time the translation timer job runs, it takes some of the jobs from the translation database and adds them to the asynchronous queue to be translated. The default interval of the translation timer job is 15 minutes.
   
     
     
@@ -155,7 +155,7 @@ using (SPSite siteIn = new SPSite(inputList))
 
 ### Synchronous translation using the server object model
 
-You use the **SyncTranslator**class to request instant translation for files and streams. Translation requests that are made by using this class are not routed the same way as requests that are made by using the**TranslationJob**class. They are immediately added to the synchronous queue to be processed. The**TranslationItemInfo**class contains the details for a single item that is translated by the Machine Translation Service. The**SyncTranslator.Translate**method returns an instance of this class in synchronous translation jobs.
+You use the **SyncTranslator** class to request instant translation for files and streams. Translation requests that are made by using this class are not routed the same way as requests that are made by using the **TranslationJob** class. They are immediately added to the synchronous queue to be processed. The **TranslationItemInfo** class contains the details for a single item that is translated by the Machine Translation Service. The **SyncTranslator.Translate** method returns an instance of this class in synchronous translation jobs.
   
     
     
@@ -238,7 +238,7 @@ The Machine Translation Service CSOM includes a .NET managed client-side object 
   
     
     
-For more information about the SharePoint CSOM, see  [SharePoint 2010 Client Object Model](http://msdn.microsoft.com/library/8c086b11-2b8b-41ec-82ae-cd4fef0aeac6%28Office.15%29.aspx). For more information about the **ClientContext**object, which is the entry point to the CSOM, see [Client Context as Central Object](http://msdn.microsoft.com/library/6299f0df-ab4c-40e6-b709-ec80271c99b3%28Office.15%29.aspx). 
+For more information about the SharePoint CSOM, see  [SharePoint 2010 Client Object Model](http://msdn.microsoft.com/library/8c086b11-2b8b-41ec-82ae-cd4fef0aeac6%28Office.15%29.aspx). For more information about the **ClientContext** object, which is the entry point to the CSOM, see [Client Context as Central Object](http://msdn.microsoft.com/library/6299f0df-ab4c-40e6-b709-ec80271c99b3%28Office.15%29.aspx). 
   
     
     
@@ -262,7 +262,7 @@ Table 1 shows the equivalent objects that the CSOM APIs provide for the Machine 
 ### Machine Translation Service .NET managed CSOM and Silverlight CSOM
 <a name="TranslationSvc_ManagedCSOM"> </a>
 
-For the .NET managed CSOM, get a **ClientContext**instance (located in the**Microsoft.SharePoint.Client**namespace in the Microsoft.SharePoint.Client.dll). Then use the object model in the**Microsoft.Office.TranslationServices.Client**namespace in the Microsoft.Office.TranslationServices.Client.dll.
+For the .NET managed CSOM, get a **ClientContext** instance (located in the **Microsoft.SharePoint.Client** namespace in the Microsoft.SharePoint.Client.dll). Then use the object model in the **Microsoft.Office.TranslationServices.Client** namespace in the Microsoft.Office.TranslationServices.Client.dll.
   
     
     
@@ -278,7 +278,7 @@ For sample code demonstrating how to use the .NET Managed CSOM, see  [SharePoint
   
     
     
-For the Silverlight CSOM, get a **ClientContext**instance (located in the**Microsoft.SharePoint.Client**namespace in the Microsoft.SharePoint.Client.Silverlight.dll). Then use the object model in the**Microsoft.Office.TranslationServices.Client**namespace in the Microsoft.Office.TranslationServices.Silverlight.dll.
+For the Silverlight CSOM, get a **ClientContext** instance (located in the **Microsoft.SharePoint.Client** namespace in the Microsoft.SharePoint.Client.Silverlight.dll). Then use the object model in the **Microsoft.Office.TranslationServices.Client** namespace in the Microsoft.Office.TranslationServices.Silverlight.dll.
   
     
     
@@ -480,7 +480,7 @@ clientContext.ExecuteQuery();
 ### Machine Translation Service JavaScript CSOM
 <a name="TranslationSvc_JavaScriptCSOM"> </a>
 
-For the JavaScript CSOM, get an **SP.ClientContext**instance, and then use the object model in the SP.Translation.js file.
+For the JavaScript CSOM, get an **SP.ClientContext** instance, and then use the object model in the SP.Translation.js file.
   
     
     

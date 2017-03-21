@@ -52,7 +52,7 @@ There are some cases where cross-site publishing is not efficient or appropriate
 |:-----|:-----|
 |**Lag time**|If the delay between the time an author publishes a page and when it shows up on the site is too long for someone who depends on it, you may want to consider using content deployment instead. |
 |**Search database implementation**|If you connect your search database to an external data source and you use an external (non-SharePoint) connector, you can't use cross-site publishing. If you use business connection services (BCS), you can use cross-site publishing. Using cross-site publishing with the search database makes sense in some cases but not others. You should not use cross-site publishing to publish from a source site directly to the Internet in a way that does not include your search database in the planning or custom code implementation. |
-|**Variations implementation**|If you are implementing a basic variations site that makes a pages library, document library, and general lists available in a few languages, cross-site publishing makes sense. The same is true if you choose to implement managed navigation or structured navigation on a variations site. Cross-site publishing works for some architectures but not others. For example, you can use cross-site publishing to publish content from a variations **SPSite**to a publishing site with variations enabled if the source**SPSite**is not consuming data from another variations site or site collection.|
+|**Variations implementation**|If you are implementing a basic variations site that makes a pages library, document library, and general lists available in a few languages, cross-site publishing makes sense. The same is true if you choose to implement managed navigation or structured navigation on a variations site. Cross-site publishing works for some architectures but not others. For example, you can use cross-site publishing to publish content from a variations **SPSite** to a publishing site with variations enabled if the source **SPSite** is not consuming data from another variations site or site collection.|
 |**Catalog implementation**|Whether you implement the product catalog into your site architecture and how you implement it may affect whether cross-site publishing is the most effective or appropriate choice. If you are using the product catalog to support a multilingual variations site configuration and are publishing to an Internet site, you can implement cross-site publishing. |
 |**Managed navigation**|Cross-site publishing works with most implementations of managed navigation and the term store. In some implementations, navigation metadata transfer may not work as expected. For example, when one variations site depends on metadata from another variations site to drive site navigation, and you use cross-site publishing to publish content to the target site, navigation metadata transfer may not work as expected. |
    
@@ -74,7 +74,7 @@ SharePoint 2013 introduces classes that you can use to support cross-site publis
     
     
 
-- Use the **PublishingCatalogUtility**class to retrieve a list of available catalogs, get information about catalogs and their statuses, get information about lists and libraries that can be connected to catalogs, and start or stop sharing catalogs.
+- Use the **PublishingCatalogUtility** class to retrieve a list of available catalogs, get information about catalogs and their statuses, get information about lists and libraries that can be connected to catalogs, and start or stop sharing catalogs.
     
     
     
@@ -108,7 +108,7 @@ public static bool GetCatalogConfiguration(SPList list, out CatalogShareSettings
 public static void UnPublishCatalog(SPList list)
   ```
 
-- Use the **CatalogCollectionManager**class to consume catalogs from search. Learn about the connection that a catalog has to search, and get information about it. Add or remove a catalog from the internal collection of catalogs, and queue an operation to queue up a connection that is configured to rewrite URLs when the**Update**method is called.
+- Use the **CatalogCollectionManager** class to consume catalogs from search. Learn about the connection that a catalog has to search, and get information about it. Add or remove a catalog from the internal collection of catalogs, and queue an operation to queue up a connection that is configured to rewrite URLs when the **Update** method is called.
     
     
     

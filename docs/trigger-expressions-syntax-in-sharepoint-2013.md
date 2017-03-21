@@ -32,7 +32,7 @@ Elements that can be used in a trigger expression are:
   
 
 > [!NOTE]  
-> The string "**Null**" is reserved for the value **Null**. 
+> The string " **Null**" is reserved for the value **Null**. 
   
     
     
@@ -228,7 +228,7 @@ A wide collection of functions ranging from mathematical functions such as  `Flo
 ## Constants in trigger expressions
 <a name="SP15triggerex_constants"> </a>
 
-There are two sets of constants that can be used with specific functions: **DatePartConstant**and**RegexOptionConstant**. Table 2 lists the two examples of these constants and where you can use them. 
+There are two sets of constants that can be used with specific functions: **DatePartConstant** and **RegexOptionConstant**. Table 2 lists the two examples of these constants and where you can use them. 
   
     
     
@@ -238,8 +238,8 @@ There are two sets of constants that can be used with specific functions: **Date
 
 |**Group of constants**|**Examples**|**Usage**|
 |:-----|:-----|:-----|
-|**DatePartConstant**|**Day**, **Month**, **Year**, **Hour**, **Minute**, **Second**. |With the **GetDatePart**function|
-|**RegexOptionConstant**|**IgnoreCase**|With the **IsMatch**, **Match**, **ReplaceRegex**, and **IndexOfRegex**functions.|
+|**DatePartConstant**|**Day**, **Month**, **Year**, **Hour**, **Minute**, **Second**. |With the **GetDatePart** function|
+|**RegexOptionConstant**|**IgnoreCase**|With the **IsMatch**, **Match**, **ReplaceRegex**, and **IndexOfRegex** functions.|
    
 
 ## Additional resources

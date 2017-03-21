@@ -67,7 +67,7 @@ A master page defines the chrome (the shared framing elements) of your site. The
   
     
     
-A master page also defines regions called content placeholders that are filled in by content from matching regions on page layouts. Most commonly, the body of a master page contains just a single content placeholder (named **PlaceHolderMain**, which is created automatically), and all of the content from a page layout appears inside this one content placeholder (the **PlaceHolderMain**content placeholder is outlined in red in Figure 3).
+A master page also defines regions called content placeholders that are filled in by content from matching regions on page layouts. Most commonly, the body of a master page contains just a single content placeholder (named **PlaceHolderMain**, which is created automatically), and all of the content from a page layout appears inside this one content placeholder (the **PlaceHolderMain** content placeholder is outlined in red in Figure 3).
   
     
     
@@ -85,7 +85,7 @@ A master page also defines regions called content placeholders that are filled i
   
     
     
-When you preview a master page in Design Manager, you see the following message. This **<div>**resides inside the main content placeholder. Put simply, the master page defines the chrome of a page, and the page layout defines the body contained in the main content placeholder.
+When you preview a master page in Design Manager, you see the following message. This **<div>** resides inside the main content placeholder. Put simply, the master page defines the chrome of a page, and the page layout defines the body contained in the main content placeholder.
   
     
     

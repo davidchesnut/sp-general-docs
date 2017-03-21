@@ -94,12 +94,12 @@ Figure 1 shows a view form with a custom-rendered field type.
 ### To create the farm solution project
 
 
-1. Open Visual Studio 2012 as administrator (right-click the Visual Studio 2012 icon in the **Start**menu, and then choose**Run as administrator**).
+1. Open Visual Studio 2012 as administrator (right-click the Visual Studio 2012 icon in the **Start** menu, and then choose **Run as administrator** ).
     
   
-2. Create a new project using the **SharePoint 2013 Project**template
+2. Create a new project using the ** SharePoint 2013 Project** template
     
-    Figure 2 shows the location of the **SharePoint 2013 Project**template in Visual Studio 2012, under**Templates**, **Visual C#**, **Office SharePoint**, **SharePoint Solutions**. 
+    Figure 2 shows the location of the ** SharePoint 2013 Project** template in Visual Studio 2012, under **Templates**, **Visual C#**, **Office SharePoint**, **SharePoint Solutions**. 
     
 
    **Figure 2. SharePoint 2013 project Visual Studio template**
@@ -115,7 +115,7 @@ Figure 1 shows a view form with a custom-rendered field type.
 3. Provide the URL of the SharePoint website that you want to use for debugging. 
     
   
-4. Select the **Deploy as a farm solution**option.
+4. Select the **Deploy as a farm solution** option.
     
   
 
@@ -127,13 +127,13 @@ Figure 1 shows a view form with a custom-rendered field type.
   
 2. Copy the following code and paste it in the FavoriteColorFieldType.cs file. The code performs the following tasks: 
     
-  - Declares a **FavoriteColorField**class that inherits from**SPFieldText**. 
+  - Declares a **FavoriteColorField** class that inherits from **SPFieldText**. 
     
   
-  - Provides two constructors for the **FavoriteColorField**class.
+  - Provides two constructors for the **FavoriteColorField** class.
     
   
-  - Overrides the **JSLink**property.
+  - Overrides the **JSLink** property.
     
     > [!NOTE]  
 > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
@@ -210,7 +210,7 @@ namespace Microsoft.SDK.SharePoint.Samples.WebControls
 ### To add an XML definition for the custom field type
 
 
-1. Right-click the farm solution project, and add a SharePoint mapped folder. In the dialog box, select the **{SharePointRoot}\\Template\\XML**folder.
+1. Right-click the farm solution project, and add a SharePoint mapped folder. In the dialog box, select the **{SharePointRoot}\\Template\\XML** folder.
     
   
 2. Right-click the XML folder created in the last step, and add a new XML file. Name the XML file fldtypes_FavoriteColorFieldType.xml. 
@@ -331,7 +331,7 @@ function favoriteColorViewTemplate(ctx) {
 
 |**Problem**|**Solution**|
 |:-----|:-----|
-|Field type **FavoriteColorField**is not installed properly. Go to the list settings page to delete this field.|Execute the following command from an elevated command prompt: **iisreset /noforce**.> [!CAUTION]  > If you are deploying the solution to a production environment, wait for an appropriate time to reset the web server using **iisreset /noforce**.          |
+|Field type **FavoriteColorField** is not installed properly. Go to the list settings page to delete this field.|Execute the following command from an elevated command prompt: **iisreset /noforce**.> [!CAUTION]  > If you are deploying the solution to a production environment, wait for an appropriate time to reset the web server using **iisreset /noforce**.          |
    
 
 ## Next steps

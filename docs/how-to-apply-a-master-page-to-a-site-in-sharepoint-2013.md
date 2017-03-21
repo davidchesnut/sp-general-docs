@@ -24,17 +24,17 @@ In SharePoint 2013, a master page defines the shared framing elements such as th
 ### To map a master page to a SharePoint site
 
 
-1.  In**Site Settings**for the designated site, under the**Look and Feel**section, choose**Master Page**. 
+1.  In **Site Settings** for the designated site, under the **Look and Feel** section, choose **Master Page**. 
     
     > [!NOTE]  
-> If the **Master Page**link is not there, you need to enable the publishing feature with these steps. Navigate to**Site Settings | Site Collection Administration | Site Collection Features**. Scroll down to the **SharePoint Server Publishing Infrastructure**feature and press**Activate**. 
-2. On **Site Master Page Settings**, select one of the two options for the **Site Master Page**or**System Master Page**sections:
+> If the **Master Page** link is not there, you need to enable the publishing feature with these steps. Navigate to **Site Settings | Site Collection Administration | Site Collection Features**. Scroll down to the **SharePoint Server Publishing Infrastructure** feature and press **Activate**. 
+2. On **Site Master Page Settings**, select one of the two options for the **Site Master Page** or **System Master Page** sections:
     
-  - **Inherit site master page from parent site**Choose this option if you are configuring a child SharePoint site and want to use the parent master page.
+  - **Inherit site master page from parent site** Choose this option if you are configuring a child SharePoint site and want to use the parent master page.
     
     > [!NOTE]  
 > If you are working on the top-level parent site this option is unavailable. 
-  - **Specify a master page to be used by this site and all sites that inherit from it**Choose this option if you want to map a specific master page to the site, or if you want to map a specific master page for administrative pages. A drop-down box named**Default**or**All Channels**is available for you, depending on your site or system configuration, so you can select a specific master page stored in the master page gallery. Select the desired master page from the drop-down box.
+  - **Specify a master page to be used by this site and all sites that inherit from it** Choose this option if you want to map a specific master page to the site, or if you want to map a specific master page for administrative pages. A drop-down box named **Default** or **All Channels** is available for you, depending on your site or system configuration, so you can select a specific master page stored in the master page gallery. Select the desired master page from the drop-down box.
     
     > [!NOTE]  
 > If you have any device channels configured, there are additional drop-down boxes available for additional master page mapping options. 

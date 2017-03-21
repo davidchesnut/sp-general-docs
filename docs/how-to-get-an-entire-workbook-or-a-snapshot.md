@@ -21,7 +21,7 @@ You can acquire a snapshot of a workbook you already saved to the server, even i
     
     
 
-You use the Web service's **GetWorkbook**method to get either the entire workbook or one of the snapshot types. For example, the following code returns a snapshot of the entire Excel workbook. It uses the**WorkbookType.FullSnapshot**enumeration as the second argument in the**GetWorkbook**method.
+You use the Web service's **GetWorkbook** method to get either the entire workbook or one of the snapshot types. For example, the following code returns a snapshot of the entire Excel workbook. It uses the **WorkbookType.FullSnapshot** enumeration as the second argument in the **GetWorkbook** method.
 
 
 ```cs
@@ -36,7 +36,7 @@ byte[] workbook = xlService.GetWorkbook(sessionId, WorkbookType.FullSnapshot, ou
 Dim workbook() As Byte = xlService.GetWorkbook(sessionId, WorkbookType.FullSnapshot, status)
 ```
 
-The **GetWorkbook**method returns a byte array, in the same Excel file format as the one loaded into the session.To get a snapshot of the items that the Excel workbook author selected as viewable when saving the workbook from Excel to the server, use the **WorkbookType.PublishedItemsSnapshot**enumeration as shown here:
+The **GetWorkbook** method returns a byte array, in the same Excel file format as the one loaded into the session.To get a snapshot of the items that the Excel workbook author selected as viewable when saving the workbook from Excel to the server, use the **WorkbookType.PublishedItemsSnapshot** enumeration as shown here:
 
 
 ```cs
@@ -50,7 +50,7 @@ byte[] workbook = xlService.GetWorkbook(sessionId, WorkbookType.PublishedItemsSn
 Dim workbook() As Byte = xlService.GetWorkbook(sessionId, WorkbookType.FullSnapshot, status)
 ```
 
-To get a snapshot of the entire workbook in its current session state, use the **WorkbookType.FullWorkbook**enumeration:
+To get a snapshot of the entire workbook in its current session state, use the **WorkbookType.FullWorkbook** enumeration:
 
 
 ```cs
@@ -64,7 +64,7 @@ byte[] workbook = xlService.GetWorkbook(sessionId, WorkbookType.FullWorkbook, ou
 Dim workbook() As Byte = xlService.GetWorkbook(sessionId, WorkbookType.FullWorkbook, status)
 ```
 
-The **WorkbookType.FullWorkbook**option works only if the user has open rights to the file; if the user has view-only rights, the call will fail.In some cases, your code would need to save the result of a **GetWorkbook**call. For a discussion about how to save a workbook, see the [How to: Save a Workbook](http://msdn.microsoft.com/library/feb74f7a-2d8f-4672-911b-de85f8852aea%28Office.15%29.aspx) example.For more information about the **GetWorkbook**method and the**WorkbookType**enumeration, see the Excel Web Services reference documentation.
+The **WorkbookType.FullWorkbook** option works only if the user has open rights to the file; if the user has view-only rights, the call will fail.In some cases, your code would need to save the result of a **GetWorkbook** call. For a discussion about how to save a workbook, see the [How to: Save a Workbook](http://msdn.microsoft.com/library/feb74f7a-2d8f-4672-911b-de85f8852aea%28Office.15%29.aspx) example.For more information about the **GetWorkbook** method and the **WorkbookType** enumeration, see the Excel Web Services reference documentation.
 ## Example
 
 The following program (a console application) receives one command-line argument, which is the path to the workbook on the server. The program calls the Web service to open the workbook on the server and get a snapshot. It then writes it to standard output so that you can redirect it to a new snapshot file. 

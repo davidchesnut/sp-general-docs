@@ -51,7 +51,7 @@ The DLL must export a method with the following signature.
 ```
 
 HRESULT HrGetDocExporter (
-IMsoDocExporter**ppimde,
+IMsoDocExporter **ppimde,
 IMsoServerFileManagerSite *psfms,
 PFNKeepAlive pfnKeepAlive
 )
@@ -68,11 +68,11 @@ If the function returns failure the service will not fall back to the Microsoft-
 
 ## IMsoDocExporter
 
-The **IMsoDocExporter**interface is identical to the existing interface documented on MSDN. For more information, see [Extending the Office 2007 Fixed-Format Export Feature](http://msdn.microsoft.com/en-us/library/aa338206.aspx). When the previous method returns success, this interface performs the conversion. 
+The **IMsoDocExporter** interface is identical to the existing interface documented on MSDN. For more information, see [Extending the Office 2007 Fixed-Format Export Feature](http://msdn.microsoft.com/en-us/library/aa338206.aspx). When the previous method returns success, this interface performs the conversion. 
   
     
     
-Beyond the requirements described in the aforementioned article, developers of fixed-format export DLLs must be aware that the service can call the provided **IMsoDocExporter**on a different thread from the one on which the service called**HrGetDocExporter**. The DLL must be able to handle this without marshalling the call back to the thread that called **HrGetDocExporter**, because the service does not run a message pump and the marshaled call will never get through (resulting in a hang and subsequent failure). 
+Beyond the requirements described in the aforementioned article, developers of fixed-format export DLLs must be aware that the service can call the provided **IMsoDocExporter** on a different thread from the one on which the service called **HrGetDocExporter**. The DLL must be able to handle this without marshalling the call back to the thread that called **HrGetDocExporter**, because the service does not run a message pump and the marshaled call will never get through (resulting in a hang and subsequent failure). 
   
     
     
@@ -137,14 +137,14 @@ BOOL fWrite
 |:-----|:-----|
 |Parameter |Description |
 |**pwzFile**|Specifies the name of the file the fixed-format export DLL wants to open. This must not be a full file path—it must specify only a file name (for example, Output.pdf). |
-|**phFile**|Specifies the handle to the specified file, if the file is opened successfully. The fixed-format export DLL can then use this HANDLE in normal file operations until it closes it by calling the **FCloseHandle**method.|
+|**phFile**|Specifies the handle to the specified file, if the file is opened successfully. The fixed-format export DLL can then use this HANDLE in normal file operations until it closes it by calling the **FCloseHandle** method.|
 |**fRead**|Specifies whether the file is to be opened with read access. |
 |**fWrite**|Specifies whether the file is to be opened with write access. This function returns TRUE to indicate success and FALSE to indicate failure. |
    
 
 ### FCloseHandle
 
-The fixed-format export DLL calls this function to close file handles obtained through calls to the **FGetHandle**method.
+The fixed-format export DLL calls this function to close file handles obtained through calls to the **FGetHandle** method.
   
     
     
@@ -163,7 +163,7 @@ The  *phFile*  parameter specifies the handle to the file to be closed. If the v
 
 ## PFNKeepAlive
 
-When the fixed-format export DLL is active, it must call the **KeepAlive**function at regular intervals (configurable by the administrator) to prevent the service from assuming that the fixed-format export DLL is hung and terminating the process.
+When the fixed-format export DLL is active, it must call the **KeepAlive** function at regular intervals (configurable by the administrator) to prevent the service from assuming that the fixed-format export DLL is hung and terminating the process.
   
     
     

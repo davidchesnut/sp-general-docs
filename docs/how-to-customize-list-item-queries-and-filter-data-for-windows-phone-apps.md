@@ -60,7 +60,7 @@ When you create a SharePoint list app for a Windows Phone by using the Windows P
 </View>
 ```
 
-As with other existing views for the Tasks list that you choose to include in your Windows Phone app when you create your project, a **PivotItem**control corresponding to the chosen view is added to the**Pivot**control that constitutes the main user interface (UI) element in the app.
+As with other existing views for the Tasks list that you choose to include in your Windows Phone app when you create your project, a **PivotItem** control corresponding to the chosen view is added to the **Pivot** control that constitutes the main user interface (UI) element in the app.
   
     
     
@@ -75,21 +75,21 @@ For one reason or another, it may not be possible or reasonable to configure vie
 
 ### The ListDataProvider.cs file
 
-In a project based on the Windows Phone SharePoint List Application template, the ListDataProvider.cs file defines objects that provide for accessing and configuring a SharePoint list as a data source for the views in the Windows Phone app. In the List.xaml file, which defines the main application page for the app, a **Pivot**control (itself containing the child**PivotItem**controls) is declared with an event handler assigned to its**LoadedPivotItem**event. The**LoadDataFromServer**method in the ListDataProvider.cs file is ultimately called when a**PivotItem**control (which is used as the rendering container for list items in the Windows Phone app) is loaded on the main application page of the app.
+In a project based on the Windows Phone SharePoint List Application template, the ListDataProvider.cs file defines objects that provide for accessing and configuring a SharePoint list as a data source for the views in the Windows Phone app. In the List.xaml file, which defines the main application page for the app, a **Pivot** control (itself containing the child **PivotItem** controls) is declared with an event handler assigned to its **LoadedPivotItem** event. The **LoadDataFromServer** method in the ListDataProvider.cs file is ultimately called when a **PivotItem** control (which is used as the rendering container for list items in the Windows Phone app) is loaded on the main application page of the app.
   
     
     
 
-1. The **PivotItem**associated with a given list view is loaded in the UI.
+1. The **PivotItem** associated with a given list view is loaded in the UI.
     
   
-2. In the List.xaml.cs file, the handler for the **LoadedPivotItem**event calls the**LoadData**method implemented in the ListViewModel.cs file, passing the name of the**PivotItem**control that has finished loading. (In the design of projects based on the Windows Phone SharePoint List Application template, the name of a given**PivotItem**control is set to be the same as the key value for the CAML query string for the view associated with that control in the**ViewXmls****Dictionary**type defined in the**CamlQueryBuilder**class in ListViewModel.cs.)
+2. In the List.xaml.cs file, the handler for the **LoadedPivotItem** event calls the **LoadData** method implemented in the ListViewModel.cs file, passing the name of the **PivotItem** control that has finished loading. (In the design of projects based on the Windows Phone SharePoint List Application template, the name of a given **PivotItem** control is set to be the same as the key value for the CAML query string for the view associated with that control in the **ViewXmls** **Dictionary** type defined in the **CamlQueryBuilder** class in ListViewModel.cs.)
     
   
-3. The **LoadData**method in ListViewModel.cs calls the**LoadData**method implemented in the ListDataProvider.cs file.
+3. The **LoadData** method in ListViewModel.cs calls the **LoadData** method implemented in the ListDataProvider.cs file.
     
   
-4. The **LoadData**method in ListDataProvider.cs calls the**LoadDataFromServer**method also implemented in that same file. The**LoadDataFromServer**method then does the following:
+4. The **LoadData** method in ListDataProvider.cs calls the **LoadDataFromServer** method also implemented in that same file. The **LoadDataFromServer** method then does the following:
     
 1. Gets the CAML query string associated with a given view. 
     
@@ -111,7 +111,7 @@ CamlQuery query = CamlQueryBuilder.GetCamlQuery(ViewName);
 Context.Load(items, listItems => listItems.Include(item => item.FieldValuesAsText));
   ```
 
-4. Calls **ExecuteQueryAsync**to send the requests to SharePoint Server and retrieve the data (asynchronously).
+4. Calls **ExecuteQueryAsync** to send the requests to SharePoint Server and retrieve the data (asynchronously).
     
   
 
@@ -137,7 +137,7 @@ For the following code sample, assume again that the target installation of Shar
 1. In **Solution Explorer**, double-click the ListDataProvider.cs file (or choose the file and press F7) to open the file for editing. 
     
   
-2. Update the definition of the **ViewXmls****Dictionary**type in the static**CamlQueryBuilder**class to include an additional CAML query, with a WHERE clause stipulating the appropriate filtering condition.
+2. Update the definition of the **ViewXmls** **Dictionary** type in the static **CamlQueryBuilder** class to include an additional CAML query, with a WHERE clause stipulating the appropriate filtering condition.
     
   ```cs
   
@@ -157,7 +157,7 @@ static Dictionary<string, string> ViewXmls = new Dictionary<string, string>()
 3. Double-click the List.xaml file to open the file for editing. 
     
   
-4. Add markup to define an additional child **PivotItem**control within the main**Pivot**control. The**Grid**element in which the UI elements that define the main application page are declared should resemble the following code.
+4. Add markup to define an additional child **PivotItem** control within the main **Pivot** control. The **Grid** element in which the UI elements that define the main application page are declared should resemble the following code.
     
   ```XML
   
@@ -203,12 +203,12 @@ static Dictionary<string, string> ViewXmls = new Dictionary<string, string>()
 
 
     > [!NOTE]  
->  In particular that the value of the**Name**attribute ("View2") of the**PivotItem**control is the same as the key value of the entry added to the**Dictionary**type defined in step 2. This value is used to identify the appropriate CAML query to use to retrieve the data to be displayed in the**PivotItem**. Also note that the **ListBox**declared here (named "lstBox2" simply to distinguish it from the**ListBox**for the default view) is also bound to the view.
+>  In particular that the value of the **Name** attribute ("View2") of the **PivotItem** control is the same as the key value of the entry added to the **Dictionary** type defined in step 2. This value is used to identify the appropriate CAML query to use to retrieve the data to be displayed in the **PivotItem**. Also note that the **ListBox** declared here (named "lstBox2" simply to distinguish it from the **ListBox** for the default view) is also bound to the view.
 
     
     
   
-When you start your project (by pressing F5), the **Pivot**control for the app includes the two**PivotItem**controls and the data retrieved by the CAML queries associated with their respective views. The default All Items view displays all the orders, as shown in Figure 1 (with sample data).
+When you start your project (by pressing F5), the **Pivot** control for the app includes the two **PivotItem** controls and the data retrieved by the CAML queries associated with their respective views. The default All Items view displays all the orders, as shown in Figure 1 (with sample data).
   
     
     

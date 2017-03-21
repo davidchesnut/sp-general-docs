@@ -52,7 +52,7 @@ The following table describes each element in the URL.
     
 
 
-|****URL element****|****Description****|
+|** **URL element****|** **Description****|
 |:-----|:-----|
 | _server_|The name of the server on which Microsoft SharePoint Server 2010 is deployed. |
 | _customsite_|A custom SharePoint Server 2010 site that the server administrator creates. |

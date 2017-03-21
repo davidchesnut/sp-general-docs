@@ -71,7 +71,7 @@ Follow these steps to create an external content type:
 1. In **Solution Explorer**, open the shortcut menu for the project, and choose **Add**, **Content types for External Data source**. 
     
   
-2. On the **Specify OData Source**page, enter the URL of the Duet Enterprise Workflow Service.
+2. On the **Specify OData Source** page, enter the URL of the Duet Enterprise Workflow Service.
     
   
 3. Choose a name for your OData source. 
@@ -91,7 +91,7 @@ Visual Studio will create a new folder named External Content Types where you wi
 ## Configuring the BDC model
 <a name="ConfiguringProject"> </a>
 
-The most important thing to make the project work, is to add the **ODataExtensionProvider**property to the BDC model. This property defines the extension provider that provides BCS with the SAP extensions needed for creating app code.
+The most important thing to make the project work, is to add the **ODataExtensionProvider** property to the BDC model. This property defines the extension provider that provides BCS with the SAP extensions needed for creating app code.
   
     
     

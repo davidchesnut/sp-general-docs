@@ -123,7 +123,7 @@ Visual Studio 2012 has SharePoint 2013 workflow project types built in. To creat
 ### To create a workflow using Visual Studio
 
 
-1. Open Visual Studio 2012 and create a new project. In the **New Project**dialog box, choose**Templates**, **Visual C#**, **Office SharePoint**, **SharePoint Solutions**, and **SharePoint 2013 Project**, as shown in Figure 2. 
+1. Open Visual Studio 2012 and create a new project. In the **New Project** dialog box, choose **Templates**, **Visual C#**, **Office SharePoint**, **SharePoint Solutions**, and **SharePoint 2013 Project**, as shown in Figure 2. 
     
    **Figure 2. New Project dialog box**
 
@@ -135,7 +135,7 @@ Visual Studio 2012 has SharePoint 2013 workflow project types built in. To creat
   
 
   
-2. With the project created, choose **Add New Item**on the**Project**menu, and then choose**Workflow**under the**Office SharePoint**item, as shown in Figure 3.
+2. With the project created, choose **Add New Item** on the **Project** menu, and then choose **Workflow** under the **Office SharePoint** item, as shown in Figure 3.
     
    **Figure 3. Add New Item dialog box**
 
@@ -180,7 +180,7 @@ For more information about **SharePoint Add-ins**, see the following:
 -  [Work with external data in SharePoint 2013](http://msdn.microsoft.com/library/1534a5f4-1d83-45b4-9714-3a1995677d85%28Office.15%29.aspx)
     
   
-For more information about developing workflows using **Visual Studio 2012**and**SharePoint Designer 2013**, see the following:
+For more information about developing workflows using **Visual Studio 2012** and **SharePoint Designer 2013**, see the following:
   
     
     

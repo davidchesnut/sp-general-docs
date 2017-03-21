@@ -39,7 +39,7 @@ Figure 1. Using device channels across different device platforms
   
     
     
-You can create and configure a device channel from the **Site Settings**menu under the**Look and Feel**section, or alternatively through the**Design Manager**option in the same section. When you create a device channel item, there are five required and optional fields to supply for the process. Table 1 lists these fields and describes what type of information must be provided.
+You can create and configure a device channel from the **Site Settings** menu under the **Look and Feel** section, or alternatively through the **Design Manager** option in the same section. When you create a device channel item, there are five required and optional fields to supply for the process. Table 1 lists these fields and describes what type of information must be provided.
   
     
     
@@ -67,7 +67,7 @@ You can create and configure a device channel from the **Site Settings**menu und
     
     
 
-After a device channel is created and activated, device redirection to a specific master page, for example a mobile version, is possible. The next step is to specify what master page should be displayed for mobile devices at the site level, through either the **Site Master Page Settings**or by using the**Publish and Apply**option in Design Manager.
+After a device channel is created and activated, device redirection to a specific master page, for example a mobile version, is possible. The next step is to specify what master page should be displayed for mobile devices at the site level, through either the **Site Master Page Settings** or by using the **Publish and Apply** option in Design Manager.
   
     
     
@@ -93,7 +93,7 @@ As seen in Figure 2, you can assign a specific master page for regular desktop v
 ### User agent substrings and device channel rankings
 <a name="PlanDeviceChannels_UserAgentSubstrings"> </a>
 
-When creating a device channel, you are asked to supply a user agent substring that is responsible for device redirection to a specified master page. If you do not provide this value in the **Device Inclusion Rules**field, device redirection is not possible and the channel cannot be created. Table 2 provides some sample user agent substring values that can be used when you are creating a device channel.
+When creating a device channel, you are asked to supply a user agent substring that is responsible for device redirection to a specified master page. If you do not provide this value in the **Device Inclusion Rules** field, device redirection is not possible and the channel cannot be created. Table 2 provides some sample user agent substring values that can be used when you are creating a device channel.
   
     
     
@@ -108,7 +108,7 @@ When creating a device channel, you are asked to supply a user agent substring t
 |iPad |iPad |
 |Android |Android |
    
-In the **Device Inclusion Rules**field, you add just the substring value or values for the devices that you want to include.
+In the **Device Inclusion Rules** field, you add just the substring value or values for the devices that you want to include.
   
     
     
@@ -159,7 +159,7 @@ A device channel panel is a container that can be used on a master page or page 
   
     
     
-A device channel panel snippet can be produced from the snippet gallery when you are previewing a master page or page layout. The following HTML example shows how to create a device channel panel. In this scenario, there is a paragraph of inserted text that is rendered only for a specific device channel. The attribute **IncludedChannels**is where you specify the alias of your configured device channel. Again, an alias is a name that is assigned during the device channel creation process and can be referenced in your code.
+A device channel panel snippet can be produced from the snippet gallery when you are previewing a master page or page layout. The following HTML example shows how to create a device channel panel. In this scenario, there is a paragraph of inserted text that is rendered only for a specific device channel. The attribute **IncludedChannels** is where you specify the alias of your configured device channel. Again, an alias is a name that is assigned during the device channel creation process and can be referenced in your code.
   
     
     
@@ -225,7 +225,7 @@ To determine the number of device channels, you should reference the information
 
 ### Where is a list of all of the device substrings I can use?
 
-There are some generic manufacturer user agent substrings that you can use for device redirection such as Windows Phone OS or iPhone, as shown in Table 2. The substring needed in the **Device Inclusion Rules**field is usually a subset of the much larger user agent string provided when the device connects to the site. It is recommended that you find a device-specific string by locating it on the manufacturer or software provider website, or through a general web-based search. Sometimes a specific, versioned substring might be difficult to isolate given similarities in user agent string construction. Table 4 provides two sample user agent strings, for Windows 8 desktop and for a tablet device.
+There are some generic manufacturer user agent substrings that you can use for device redirection such as Windows Phone OS or iPhone, as shown in Table 2. The substring needed in the **Device Inclusion Rules** field is usually a subset of the much larger user agent string provided when the device connects to the site. It is recommended that you find a device-specific string by locating it on the manufacturer or software provider website, or through a general web-based search. Sometimes a specific, versioned substring might be difficult to isolate given similarities in user agent string construction. Table 4 provides two sample user agent strings, for Windows 8 desktop and for a tablet device.
   
     
     
@@ -245,7 +245,7 @@ There are some generic manufacturer user agent substrings that you can use for d
 |Windows 8 desktop |(compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0) |
 |Windows 8 tablet (example) |(compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0; touch) |
    
-These strings are very similar in format; the only difference is the inclusion of  `touch` for the Windows 8 tablet example. For this particular scenario, if you wanted a specific master page rendering for the tablet device, you would supply `touch` as your substring when you are creating a device inclusion rule. The key, when you deal with situations such as this, is to find a point of differentiation between similar strings. If you were to create a device channel with a device inclusion rule using a common value such as**MSIE 10.0**, there would be no way to differentiate between the desktop and the tablet. 
+These strings are very similar in format; the only difference is the inclusion of  `touch` for the Windows 8 tablet example. For this particular scenario, if you wanted a specific master page rendering for the tablet device, you would supply `touch` as your substring when you are creating a device inclusion rule. The key, when you deal with situations such as this, is to find a point of differentiation between similar strings. If you were to create a device channel with a device inclusion rule using a common value such as **MSIE 10.0**, there would be no way to differentiate between the desktop and the tablet. 
   
     
     
@@ -259,7 +259,7 @@ No. Device channel panels are helpful when you want to allow, adjust, or prevent
 
 ### Can I use cookies to select a device channel?
 
-Yes, you can force or override device channel selection through the use of cookies. To do so, you have to create a browser cookie named deviceChannel, and provide it with the alias of your specified device channel. Also, device channels can set a JavaScript variable called **effectiveDeviceChannel**that contains the current channel alias. This variable can be used to show which channel is currently being used. To make your site emit the JavaScript variable, add this property to the root web property bag:
+Yes, you can force or override device channel selection through the use of cookies. To do so, you have to create a browser cookie named deviceChannel, and provide it with the alias of your specified device channel. Also, device channels can set a JavaScript variable called **effectiveDeviceChannel** that contains the current channel alias. This variable can be used to show which channel is currently being used. To make your site emit the JavaScript variable, add this property to the root web property bag:
   
     
     
@@ -285,7 +285,7 @@ Use this procedure to create a new device channel.
 ### To create a device channel
 
 
-1. Start Design Manager. (For example, on the **Settings**menu, choose**Design Manager**.) 
+1. Start Design Manager. (For example, on the **Settings** menu, choose **Design Manager**.) 
     
   
 2. In the numbered list, select **Manage Device Channels**. 
@@ -294,19 +294,19 @@ Use this procedure to create a new device channel.
 3. On the Design Manager: Manage Device Channels page, choose **Create a channel**. 
     
   
-4. On the Device Channels - New Item page, in the **Name**text box, enter a name for the device channel.
+4. On the Device Channels - New Item page, in the **Name** text box, enter a name for the device channel.
     
   
-5. In the **Alias**text box, enter an alias for the device channel. The alias must be alphanumeric characters and may not contain spaces. You will use the alias to refer to the device channel in code and in other contexts.
+5. In the **Alias** text box, enter an alias for the device channel. The alias must be alphanumeric characters and may not contain spaces. You will use the alias to refer to the device channel in code and in other contexts.
     
   
-6. In the **Description**text box, enter a brief description of the devices or browsers that the channel will capture.
+6. In the **Description** text box, enter a brief description of the devices or browsers that the channel will capture.
     
   
-7. In the **Device Inclusion Rules**text box, enter the user agent substrings for the channel. A request for a webpage will use this channel if any of the strings that you provide match the user agent string of the request.
+7. In the **Device Inclusion Rules** text box, enter the user agent substrings for the channel. A request for a webpage will use this channel if any of the strings that you provide match the user agent string of the request.
     
   
-8. If you are ready to make the channel available to render pages, select the **Active**check box.
+8. If you are ready to make the channel available to render pages, select the **Active** check box.
     
   
 9. Choose **Save**. 
@@ -331,7 +331,7 @@ Use this procedure to change an existing device channel.
 ### To change a device channel
 
 
-1. Start Design Manager. (For example, on the **Settings**menu, choose**Design Manager**.) 
+1. Start Design Manager. (For example, on the **Settings** menu, choose **Design Manager**.) 
     
   
 2. In the numbered list, select **Manage Device Channels**. 
@@ -340,23 +340,23 @@ Use this procedure to change an existing device channel.
 3. On the Design Manager: Manage Device Channels page, choose **Edit or reorder existing channels**. 
     
   
-4. In the **Device Channels**list, select the device channel that you want to change, and then, on the**ITEMS**tab, choose**Edit Item**. 
+4. In the **Device Channels** list, select the device channel that you want to change, and then, on the **ITEMS** tab, choose **Edit Item**. 
     
   
-5. To change the name of the device channel, enter a new name in the **Name**text box.
+5. To change the name of the device channel, enter a new name in the **Name** text box.
     
   
-6. To change the alias of the device channel, enter a new alias in the **Alias**text box.
+6. To change the alias of the device channel, enter a new alias in the **Alias** text box.
     
     > [!NOTE]  
 > If you change a device channel's alias, you must manually change the alias in other places where you use it. For example, you must manually change the alias in custom code or markup, and you must manually change the mappings between the device channel and master pages. 
-7. To change the description of the device channel, enter a new description in the **Description**text box.
+7. To change the description of the device channel, enter a new description in the **Description** text box.
     
   
-8. To change the device inclusion rules, edit the strings in the **Device Inclusion Rules**text box.
+8. To change the device inclusion rules, edit the strings in the **Device Inclusion Rules** text box.
     
   
-9. To make the device channel active, select the **Active**check box. To make the channel inactive, clear the**Active**check box.
+9. To make the device channel active, select the **Active** check box. To make the channel inactive, clear the **Active** check box.
     
   
 10. Choose **Save**. 
@@ -381,7 +381,7 @@ Use this procedure to delete an existing device channel.
 ### To delete a device channel
 
 
-1. Start Design Manager. (For example, on the **Settings**menu, choose**Design Manager**.) 
+1. Start Design Manager. (For example, on the **Settings** menu, choose **Design Manager**.) 
     
   
 2. In the numbered list, select **Manage Device Channels**. 
@@ -390,10 +390,10 @@ Use this procedure to delete an existing device channel.
 3. On the Design Manager: Manage Device Channels page, choose **Edit or reorder existing channels**. 
     
   
-4. In the **Device Channels**list, select the device channel that you want to delete.
+4. In the **Device Channels** list, select the device channel that you want to delete.
     
   
-5. On the **ITEMS**tab, choose**Delete Item**. 
+5. On the **ITEMS** tab, choose **Delete Item**. 
     
   
 6. Choose **OK**. 
@@ -411,7 +411,7 @@ Use this procedure to change the order of device channels.
 ### To reorder device channels
 
 
-1. Start Design Manager. (For example, on the **Settings**menu, choose**Design Manager**.) 
+1. Start Design Manager. (For example, on the **Settings** menu, choose **Design Manager**.) 
     
   
 2. In the numbered list, select **Manage Device Channels**. 
@@ -420,10 +420,10 @@ Use this procedure to change the order of device channels.
 3. On the Design Manager: Manage Device Channels page, choose **Edit or reorder existing channels**. 
     
   
-4. On the **ITEMS**tab, choose**Reorder Channels**. 
+4. On the **ITEMS** tab, choose **Reorder Channels**. 
     
   
-5. On the Device Channel Reordering page, choose the channel whose order you want to change, and then select **Move Up**or**Move Down**. 
+5. On the Device Channel Reordering page, choose the channel whose order you want to change, and then select **Move Up** or **Move Down**. 
     
   
 6. After the channels are ordered the way that you want them, choose **OK**. 

@@ -8,7 +8,7 @@ ms.assetid: 061985ec-6129-4e91-991b-a72488ce1d34
 
 # Programming models in SharePoint 2013
 Get a quick overview of the different kinds of SharePoint development projects. 
- ***Applies to:***
+ * **Applies to: *** 
   
     
     

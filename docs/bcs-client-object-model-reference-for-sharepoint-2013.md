@@ -33,7 +33,7 @@ The following objects are available for creating client-side scripts using the S
 ## Entity object
 <a name="bkmk_Entity"> </a>
 
-The **Entity**object essentially represents a table in a database. The methods and properties presented here show the objects that can be manipulated through the use of the client code library. Each of these calls maps directly to a server object model call. However, they are callable by a detached client, such as in a web browser using JavaScript.
+The **Entity** object essentially represents a table in a database. The methods and properties presented here show the objects that can be manipulated through the use of the client code library. Each of these calls maps directly to a server object model call. However, they are callable by a detached client, such as in a web browser using JavaScript.
   
     
     
@@ -107,7 +107,7 @@ The **Entity**object essentially represents a table in a database. The methods a
 ## EntityView method
 <a name="bkmk_entityview"> </a>
 
-Specifies a customized view of the **Entity**data
+Specifies a customized view of the **Entity** data
   
     
     
@@ -128,7 +128,7 @@ Specifies a customized view of the **Entity**data
 |**GetDefaultValues_Client()**|**FieldValueDictionary**|Gets a field value dictionary that contains the default values for this view. |
 |**GetXmlSchema()**|**string**|Gets the XML Schema of the view. |
 |**GetType(string fieldDotNotation)**|**string**|Gets the type of the specified field. |
-|**GetType(string fieldDotNotation)**|**TypeDescriptor**|Gets the **TypeDescriptor**object that corresponds to the given dot notation.|
+|**GetType(string fieldDotNotation)**|**TypeDescriptor**|Gets the **TypeDescriptor** object that corresponds to the given dot notation.|
    
 
 **Properties**
@@ -137,8 +137,8 @@ Specifies a customized view of the **Entity**data
 |**Property**||**Description**|
 |:-----|:-----|:-----|
 | `Fields { get; }`|**FieldCollection**|Gets the collection of fields in the view. |
-| `Name { get; }`|**string**|Gets the name of this **View**object|
-| `RelatedSpecificFinderName { get; }`|**string**|Retrieves the name of the specific finder **MethodInstance**that this view is tied to.|
+| `Name { get; }`|**string**|Gets the name of this **View** object|
+| `RelatedSpecificFinderName { get; }`|**string**|Retrieves the name of the specific finder **MethodInstance** that this view is tied to.|
    
 
 ## LobSystem method
@@ -466,12 +466,12 @@ The namespace is **Microsoft.BusinessData.MetadataModel**.
 
 |**Interface**|**Description**|
 |:-----|:-----|
-|**IMetadataCatalog**|The entry point into the BDC object model. Use the **DatabaseBasedMetadataCatalog**on the server.|
+|**IMetadataCatalog**|The entry point into the BDC object model. Use the **DatabaseBasedMetadataCatalog** on the server.|
 |**ILobSystem**|Contains the details about an external system. |
 |**IEntity**|An external content type in the BDC Metadata Store. |
 |**IMethod**|An operation that can be performed on the external content type. |
-|**IEntityInstance**|An entity instance (also known as external item) is a single item returned from an external system in BDC. The **IEntityInstance**interface abstracts the underlying data sources and insulates the clients from having to learn application-specific coding paradigms; it enables them to access all business data in a single, simplified way. By using the**IEntityInstance**interface, you can work with a row of data from a database in just the same way as working with a complex .NET Framework structure returned by a web service.An entity instance in BDC has special semantics attached to it. For example, it has the ability to know which field or fields in the row represent the identifier for the entity instance, and it enables you to call methods, such as **GetAssociated**, **GetIdentifierValues**, and **Execute**, on that entity instance. |
-|**IEntityInstanceEnumerator**|Enumerators can be used to read the data in the external items collection, but they cannot be used to modify the underlying collection. **IEntityInstanceEnumerator**supports streaming and is therefore very useful when the back-end application returns large amounts of data.|
+|**IEntityInstance**|An entity instance (also known as external item) is a single item returned from an external system in BDC. The **IEntityInstance** interface abstracts the underlying data sources and insulates the clients from having to learn application-specific coding paradigms; it enables them to access all business data in a single, simplified way. By using the **IEntityInstance** interface, you can work with a row of data from a database in just the same way as working with a complex .NET Framework structure returned by a web service.An entity instance in BDC has special semantics attached to it. For example, it has the ability to know which field or fields in the row represent the identifier for the entity instance, and it enables you to call methods, such as **GetAssociated**, **GetIdentifierValues**, and **Execute**, on that entity instance. |
+|**IEntityInstanceEnumerator**|Enumerators can be used to read the data in the external items collection, but they cannot be used to modify the underlying collection. **IEntityInstanceEnumerator** supports streaming and is therefore very useful when the back-end application returns large amounts of data.|
    
 
 ## Client Object model FAQ

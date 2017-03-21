@@ -39,13 +39,13 @@ To select the SharePoint 2010 Workflow platform when you create a workflow:
     
     
 
-1. In the **Navigation**pane, click**Workflows**. 
+1. In the **Navigation** pane, click **Workflows**. 
     
   
-2. On the **Workflows**tab, in the**New**section, click**List Workflow**, **Reusable Workflow**, or **Site Workflow**. 
+2. On the **Workflows** tab, in the **New** section, click **List Workflow**, **Reusable Workflow**, or **Site Workflow**. 
     
   
-3. In the **Create Workflow**dialog box, in the**Platform Type**box, click**SharePoint 2010 Workflow**. 
+3. In the **Create Workflow** dialog box, in the **Platform Type** box, click **SharePoint 2010 Workflow**. 
     
   
 You can visualize workflows in SharePoint Designer in two ways: 
@@ -84,10 +84,10 @@ To import a SharePoint workflow, do the following:
     
     
 
-1. In SharePoint Designer 2013, in the **Navigation**pane, click**Workflows**. 
+1. In SharePoint Designer 2013, in the **Navigation** pane, click **Workflows**. 
     
   
-2. On the **Workflows**tab, in the**Manage**group, click**Import from Visio**. 
+2. On the **Workflows** tab, in the **Manage** group, click **Import from Visio**. 
     
      ![Import workflow](images/spd15-ImportFromVisio.JPG)
   
@@ -95,15 +95,15 @@ To import a SharePoint workflow, do the following:
   
 
   
-3. In the **Import Workflow from Visio Drawing**dialog box, browse to and select the Visio Workflow Interchange (.vwi) file you want to use, and then click**Next**. 
+3. In the **Import Workflow from Visio Drawing** dialog box, browse to and select the Visio Workflow Interchange (.vwi) file you want to use, and then click **Next**. 
     
   
 4. Type a name for the workflow, and then select the type of workflow you want it to be once it has been imported. Your choices are: 
     
-  - **List workflow**A workflow that is attached to a specific list. If you select this option, you must choose the list to which the workflow will be attached.
+  - **List workflow** A workflow that is attached to a specific list. If you select this option, you must choose the list to which the workflow will be attached.
     
   
-  - **Reusable workflow**A workflow that is attached to a content type, and is therefore portable. It can be used by different lists on a SharePoint site. If you select this option, you must choose the content type on which the workflow will run.
+  - **Reusable workflow** A workflow that is attached to a content type, and is therefore portable. It can be used by different lists on a SharePoint site. If you select this option, you must choose the content type on which the workflow will run.
     
   
 5. Click **Finish**. 
@@ -145,13 +145,13 @@ To export a workflow, do the following:
     
     
 
-1. In SharePoint Designer 2013, click **Workflows**in the**Navigation**pane.
+1. In SharePoint Designer 2013, click **Workflows** in the **Navigation** pane.
     
   
-2. On the **Workflow**tab, in the**Manage**group, click**Export to Visio**. 
+2. On the **Workflow** tab, in the **Manage** group, click **Export to Visio**. 
     
   
-3. In the **Export Workflow to Visio Drawing**dialog box, name the file, select a location, and then click**Save**. The exported file is saved as a .vwi file that can be opened directly in Visio Professional 2013. 
+3. In the **Export Workflow to Visio Drawing** dialog box, name the file, select a location, and then click **Save**. The exported file is saved as a .vwi file that can be opened directly in Visio Professional 2013. 
     
   
 

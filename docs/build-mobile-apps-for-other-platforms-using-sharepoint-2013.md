@@ -49,13 +49,13 @@ In general:
     
     
 
-- Endpoints that represent read operations map to HTTP **GET**commands.
+- Endpoints that represent read operations map to HTTP **GET** commands.
     
   
-- Endpoints that represent update operations map to HTTP **POST**commands.
+- Endpoints that represent update operations map to HTTP **POST** commands.
     
   
-- Endpoints that represent update or insert operations map to HTTP **PUT**commands.
+- Endpoints that represent update or insert operations map to HTTP **PUT** commands.
     
   
 In choosing an HTTP request to use, you should also consider the following: 
@@ -63,16 +63,16 @@ In choosing an HTTP request to use, you should also consider the following:
     
     
 
-- Use **POST**to create artifacts such as lists and sites. The SharePoint 2013 REST service supports sending**POST**commands that include object definitions to endpoints that represent collections.
+- Use **POST** to create artifacts such as lists and sites. The SharePoint 2013 REST service supports sending **POST** commands that include object definitions to endpoints that represent collections.
     
   
-- For **POST**operations, any properties that are not required are set to their default values. If you try to set a read-only property as part of a**POST**operation, the service returns an exception.
+- For **POST** operations, any properties that are not required are set to their default values. If you try to set a read-only property as part of a **POST** operation, the service returns an exception.
     
   
-- Use **PUT**, **PATCH**, and **MERGE**operations to update existing SharePoint objects. Any service endpoint that represents an object property**set**operation supports both**PUT**requests and**MERGE**requests. For**MERGE**requests, setting properties is optional; any properties that you do not explicitly set retain their current property. But for**PUT**commands, any properties you do not explicitly set are set to their default properties. In addition, if you do not specify all settable properties in object updates when you use HTTP**PUT**commands, the REST service returns an exception.
+- Use **PUT**, **PATCH**, and **MERGE** operations to update existing SharePoint objects. Any service endpoint that represents an object property **set** operation supports both **PUT** requests and **MERGE** requests. For **MERGE** requests, setting properties is optional; any properties that you do not explicitly set retain their current property. But for **PUT** commands, any properties you do not explicitly set are set to their default properties. In addition, if you do not specify all settable properties in object updates when you use HTTP **PUT** commands, the REST service returns an exception.
     
   
-- Use the HTTP **DELETE**command against the specific endpoint URL to delete the SharePoint object represented by that endpoint. For recyclable objects, such as lists, files, and list items, this results in a**Recycle**operation. For more information, see [Get to know the SharePoint 2013 REST service](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx). 
+- Use the HTTP **DELETE** command against the specific endpoint URL to delete the SharePoint object represented by that endpoint. For recyclable objects, such as lists, files, and list items, this results in a **Recycle** operation. For more information, see [Get to know the SharePoint 2013 REST service](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx). 
     
   
 
@@ -133,11 +133,11 @@ void odataAt_AuthenticationCompleted(object sender, AuthenticationCompletedEvent
 
 ```
 
-To authenticate an **HttpWebrequest**to the endpoint, you should first authenticate to SharePoint with the**ODataAuthenticator**class. Before calling the**Authenticate**method, register the**ODataAuthenticator**object to the**AuthenticationCompleted**event.
+To authenticate an **HttpWebrequest** to the endpoint, you should first authenticate to SharePoint with the **ODataAuthenticator** class. Before calling the **Authenticate** method, register the **ODataAuthenticator** object to the **AuthenticationCompleted** event.
   
     
     
-After authentication is done inside the **OnAuthenticationCompleted**event, you can use the**CookieContainer**property on the**ODataAuthenticator**object, which can be attached to the**HttpWebRequest**object to authenticate the REST calls to SharePoint.
+After authentication is done inside the **OnAuthenticationCompleted** event, you can use the **CookieContainer** property on the **ODataAuthenticator** object, which can be attached to the **HttpWebRequest** object to authenticate the REST calls to SharePoint.
   
     
     
@@ -145,7 +145,7 @@ After authentication is done inside the **OnAuthenticationCompleted**event, you 
 ## Work with SharePoint list items using REST
 <a name="BuildMobileAppsInSharePoint2013ForNonWindowsPhone_WorkingWithTheSharePointListItemUsingREST"> </a>
 
-The following example shows how to **retrieve**all of a list's items.
+The following example shows how to **retrieve** all of a list's items.
   
     
     
@@ -163,7 +163,7 @@ headers:
 
 ```
 
-The following example shows how to **retrieve**a specific list item.
+The following example shows how to **retrieve** a specific list item.
   
     
     
@@ -209,13 +209,13 @@ The following XML shows an example of the list item properties that are returned
 </content>
 ```
 
-The following example shows how to **create**a list item.
+The following example shows how to **create** a list item.
   
     
     
 
 > [!NOTE]  
-> To do this operation, you must know the **ListItemEntityTypeFullName**property of the list and pass that as the value of**type**in the HTTP request body.
+> To do this operation, you must know the **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
   
     
     
@@ -238,13 +238,13 @@ headers:
     content-length:length of post body
 ```
 
-The following example shows how to **update**a list item.
+The following example shows how to **update** a list item.
   
     
     
 
 > [!NOTE]  
-> To do this operation, you must know the **ListItemEntityTypeFullName**property of the list and pass that as the value of**type**in the HTTP request body.
+> To do this operation, you must know the **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
   
     
     
@@ -268,7 +268,7 @@ headers:
     content-length:length of post body
 ```
 
-The following example shows how to **delete**a list item.
+The following example shows how to **delete** a list item.
   
     
     

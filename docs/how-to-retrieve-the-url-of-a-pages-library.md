@@ -10,7 +10,7 @@ Learn how to retrieve the URL for the pages list for a publishing web in a site 
 ## Core concepts to know for retrieving the URL of a Pages list
 <a name="SP15_Core_Concepts_URL_MP"> </a>
 
-When developing custom applications for publishing sites, you may notice that the  [PublishingWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.PublishingWeb.aspx) object model does not expose a way to retrieve the URL for the Pages list of a publishing web in a site collection that differs from the current context. Although the**PublishingWeb**class wraps the [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) class for instances that have the publishing feature activated, the class is not intended to be used to instantiate**SPWeb**objects outside of the current context.
+When developing custom applications for publishing sites, you may notice that the  [PublishingWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.PublishingWeb.aspx) object model does not expose a way to retrieve the URL for the Pages list of a publishing web in a site collection that differs from the current context. Although the **PublishingWeb** class wraps the [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) class for instances that have the publishing feature activated, the class is not intended to be used to instantiate **SPWeb** objects outside of the current context.
   
     
     
@@ -28,7 +28,7 @@ If you need to retrieve the URL for the Pages list for a different web applicati
 | [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)|Represents a SharePoint Foundation website. |
 | [Properties](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.Properties.aspx)|Gets a  [SPPropertyBag](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPPropertyBag.aspx) object with metadata for the current website.|
 | [SPPropertyBag](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPPropertyBag.aspx)|Stores arbitrary key and value pairs that contain custom property settings. |
-| [PublishingWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.PublishingWeb.aspx)|Provides publishing behavior for an instance of **SPWeb**that supports publishing.|
+| [PublishingWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.PublishingWeb.aspx)|Provides publishing behavior for an instance of **SPWeb** that supports publishing.|
    
 
 ## Retrieve the URL of a Pages list for a publishing web in a site collection that differs from the current context

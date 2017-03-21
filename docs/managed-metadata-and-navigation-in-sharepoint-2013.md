@@ -52,7 +52,7 @@ When you want to create a new CSOM project in Visual Studio that uses taxonomy f
 - Microsoft.SharePoint.Client.Taxonomy.dll 
     
   
-Developing customizations with CSOM is very similar to developing .NET server taxonomy solutions: get a reference to the **TaxonomySession**object and the**TermStore**object,**Group**objects,**TermSet**objects, and**Term**objects required for the session.
+Developing customizations with CSOM is very similar to developing .NET server taxonomy solutions: get a reference to the **TaxonomySession** object and the **TermStore** object, **Group** objects, **TermSet** objects, and **Term** objects required for the session.
   
     
     
@@ -60,7 +60,7 @@ Developing customizations with CSOM is very similar to developing .NET server ta
 ### Code Examples: Basic operations with the Taxonomy CSOM
 <a name="SP15_ManagedMetadataAndNav_ExampleBasicOperations"> </a>
 
-You can use the following code examples to complete basic operations with the taxonomy CSOM. The first example creates a **Group**object, a**TermSet**object, and**Term**objects. The second example iterates on a**Group**object and writes its contents.
+You can use the following code examples to complete basic operations with the taxonomy CSOM. The first example creates a **Group** object, a **TermSet** object, and **Term** objects. The second example iterates on a **Group** object and writes its contents.
   
     
     

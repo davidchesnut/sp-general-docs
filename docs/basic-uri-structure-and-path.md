@@ -1,6 +1,6 @@
 ---
 title: Basic URI Structure and Path
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: d73cf6c2-0677-4726-8a3e-2ad130e1a12c
 ---
 
@@ -28,13 +28,13 @@ The REST API in Excel Services gives you the ability to access resources like ch
     
     
 
-1. **REST aspx Page URI**The entry point to an .aspx page
+1. **REST aspx Page URI** The entry point to an .aspx page
     
   
-2. **Workbook Location**The path to the workbook
+2. **Workbook Location** The path to the workbook
     
   
-3. **Resource Location**The path to the requested resource inside the workbook
+3. **Resource Location** The path to the requested resource inside the workbook
     
   
 Following is the construct for the REST URL to a specific element in a workbook: 

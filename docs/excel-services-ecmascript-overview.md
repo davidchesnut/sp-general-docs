@@ -1,6 +1,6 @@
 ---
 title: Excel Services ECMAScript Overview
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: f8c1be86-df19-44c3-a3bc-c0da2b80df10
 ---
 

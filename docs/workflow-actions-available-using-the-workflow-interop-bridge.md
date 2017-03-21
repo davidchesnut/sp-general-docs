@@ -83,7 +83,7 @@ The following actions are available only when you use the workflow interop bridg
 ## Conditions and blocks
 <a name="bkm_wfconditions"> </a>
 
-**Conditions**
+ **Conditions**
   
     
     
@@ -97,7 +97,7 @@ The following actions are available only when you use the workflow interop bridg
 - Check list item permissions
     
   
-**Blocks**
+ **Blocks**
   
     
     

@@ -20,13 +20,13 @@ The following are some of the enhancements added to SharePoint 2013:
   - SharePoint 2013 continues to offer support for both claims and classic authentication modes. Claims authentication is the default authentication option in SharePoint 2013. Classic-mode authentication is deprecated and can be managed only by using Windows PowerShell. A lot of features in SharePoint 2013 require claims-mode. 
     
   
-  - The **MigrateUsers**method from SharePoint 2010 is now deprecated, it's no longer the correct way to migrate accounts. To migrate accounts, use the new Windows PowerShell cmdlet called `Convert-SPWebApplication`. For more information see  [Migrate from classic-mode to claims-based authentication in SharePoint 2013](http://technet.microsoft.com/en-us/library/gg251985.aspx). 
+  - The **MigrateUsers** method from SharePoint 2010 is now deprecated, it's no longer the correct way to migrate accounts. To migrate accounts, use the new Windows PowerShell cmdlet called `Convert-SPWebApplication`. For more information see  [Migrate from classic-mode to claims-based authentication in SharePoint 2013](http://technet.microsoft.com/en-us/library/gg251985.aspx). 
     
   
   - Requirement to register claims providers is eliminated. However, you do have to pre-configure claims type. You can choose the characters for the claim type and there is no enforcement on the ordering of claim types. 
     
   
-  - SharePoint 2013 tracks **FedAuth**cookies in the new distributed cache service using Windows Server AppFabric Caching.
+  - SharePoint 2013 tracks **FedAuth** cookies in the new distributed cache service using Windows Server AppFabric Caching.
     
   
   - Significantly more logging is provided to help troubleshoot authentication issues. 
@@ -64,13 +64,13 @@ SharePoint 2013 supports the following types of authentication:
     
     
 
-- **Windows:**All Internet Information Services (IIS) and Windows authentication integration options, including Basic, Digest, Certificates, Windows NT LAN Manager (NTLM), and Kerberos are supported. Windows authentication allows IIS to perform the authentication for SharePoint 2013.
+- **Windows:** All Internet Information Services (IIS) and Windows authentication integration options, including Basic, Digest, Certificates, Windows NT LAN Manager (NTLM), and Kerberos are supported. Windows authentication allows IIS to perform the authentication for SharePoint 2013.
     
     For information about signing in to SharePoint by using Windows claims mode, see  [Incoming claims: Signing into SharePoint 2013](incoming-claims-signing-into-sharepoint-2013.md). 
     
     > [!IMPORTANT]  
 >  For information about suspending impersonation, see [Avoid suspending impersonation of the calling user](http://msdn.microsoft.com/en-us/library/ff407852.aspx). 
-- **ASP.NET Forms:**A non-Windows identity management system that uses the pluggable ASP.NET forms-based authentication system is supported. This mode enables SharePoint 2013 to work with a variety of identity management systems, including externally defined groups or roles such as Lightweight Directory Access Protocol (LDAP) and light-weight database identity management systems. Forms authentication allows ASP.NET to perform the authentication for SharePoint 2013, often involving a redirect to a log-on page. In SharePoint 2013, ASP.NET forms are supported only under claims authentication. A forms provider must be registered within a web application that is configured for claims.
+- **ASP.NET Forms:** A non-Windows identity management system that uses the pluggable ASP.NET forms-based authentication system is supported. This mode enables SharePoint 2013 to work with a variety of identity management systems, including externally defined groups or roles such as Lightweight Directory Access Protocol (LDAP) and light-weight database identity management systems. Forms authentication allows ASP.NET to perform the authentication for SharePoint 2013, often involving a redirect to a log-on page. In SharePoint 2013, ASP.NET forms are supported only under claims authentication. A forms provider must be registered within a web application that is configured for claims.
     
     For information about signing in to SharePoint by using ASP.NET membership and role passive sign-in, see  [Incoming claims: Signing into SharePoint 2013](incoming-claims-signing-into-sharepoint-2013.md). 
     

@@ -10,7 +10,7 @@ Learn about the SharePoint 2013 implementation of version 1.0 of the OASIS Conte
 ## Introduction to CMIS in SharePoint 2013
 <a name="SP15CMIS_Intro"> </a>
 
-SharePoint Server compliance with version 1.0 of the  [OASIS Content Management Interoperability Services (CMIS) standard](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cmis) enables integration between SharePoint Server content repositories and other enterprise content management (ECM) repositories in an enterprise. CMIS enables information to be shared across Internet protocols among and between document systems, publishers, and repositories, within the enterprise, and between companies—all in a vendor-neutral format. The CMIS standard supports basic document management operations such as create, read, update, delete, check in, and check out. The standard supports managing versions of documents and their metadata. CMIS is available on any on-premises SharePoint 2013 site after the**Content Management Interoperability Services (CMIS) Producer**feature is activated in the**Manage Site Features**section of**Site Settings**. In SharePoint 2013, the SharePoint CMIS Producer is available but turned off by default on all on-premises sites. 
+SharePoint Server compliance with version 1.0 of the  [OASIS Content Management Interoperability Services (CMIS) standard](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cmis) enables integration between SharePoint Server content repositories and other enterprise content management (ECM) repositories in an enterprise. CMIS enables information to be shared across Internet protocols among and between document systems, publishers, and repositories, within the enterprise, and between companies—all in a vendor-neutral format. The CMIS standard supports basic document management operations such as create, read, update, delete, check in, and check out. The standard supports managing versions of documents and their metadata. CMIS is available on any on-premises SharePoint 2013 site after the **Content Management Interoperability Services (CMIS) Producer** feature is activated in the **Manage Site Features** section of **Site Settings**. In SharePoint 2013, the SharePoint CMIS Producer is available but turned off by default on all on-premises sites. 
   
     
     
@@ -45,7 +45,7 @@ The CMIS data model defines a repository that contains the other CMIS data types
 
 ### CMIS repositories and SharePoint document libraries
 
-The CMIS repository is the container for the rest of the CMIS data model. In SharePoint 2013, the document library is equivalent to the CMIS repository (lists are not supported in the SharePoint 2013 CMIS Producer). Accessing the repository is usually the launching point for a client application. For example, consider a SharePoint Server site that contains multiple document libraries, which are equivalent to repositories in CMIS. The CMIS specification describes a mandatory service, **getRepositories**, that in SharePoint Server obtains all of the valid repositories (document libraries) in the current  [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) object. A developer can connect to repositories by calling either the**getRepositories**service or the**getRepositoryInfo**service;**getRepositoryInfo**obtains the repository specified by the developer.
+The CMIS repository is the container for the rest of the CMIS data model. In SharePoint 2013, the document library is equivalent to the CMIS repository (lists are not supported in the SharePoint 2013 CMIS Producer). Accessing the repository is usually the launching point for a client application. For example, consider a SharePoint Server site that contains multiple document libraries, which are equivalent to repositories in CMIS. The CMIS specification describes a mandatory service, **getRepositories**, that in SharePoint Server obtains all of the valid repositories (document libraries) in the current  [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) object. A developer can connect to repositories by calling either the **getRepositories** service or the **getRepositoryInfo** service; **getRepositoryInfo** obtains the repository specified by the developer.
   
     
     
@@ -56,7 +56,7 @@ The CMIS repository contains the other CMIS capabilities that SharePoint Server 
 
 ### CMIS documents, folders, and other object types
 
-CMIS defines an object-type capability that is equivalent to the idea of content types in SharePoint Server (specifically, the [SPContentType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentType.aspx) class). Each read-only CMIS object-type consists of attributes and property definitions. Attributes define whether an object can be, for example, queried or versioned. CMIS supports property definitions for properties that are associated with equivalent object types in SharePoint 2013, where applicable. For example, a document object or a folder object in CMIS may have a**LastModifiedBy**property, which uses this syntax: `cmis:LastModifiedBy`. An **Author**property associated with a**Document**object is written as `cmis:Author`. The CMIS standard defines four object-types, which serve as base types. Table 1 describes the CMIS object-types, whether they are supported in SharePoint 2013, and their equivalent functionality in SharePoint, if any. 
+CMIS defines an object-type capability that is equivalent to the idea of content types in SharePoint Server (specifically, the [SPContentType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentType.aspx) class). Each read-only CMIS object-type consists of attributes and property definitions. Attributes define whether an object can be, for example, queried or versioned. CMIS supports property definitions for properties that are associated with equivalent object types in SharePoint 2013, where applicable. For example, a document object or a folder object in CMIS may have a **LastModifiedBy** property, which uses this syntax: `cmis:LastModifiedBy`. An **Author** property associated with a **Document** object is written as `cmis:Author`. The CMIS standard defines four object-types, which serve as base types. Table 1 describes the CMIS object-types, whether they are supported in SharePoint 2013, and their equivalent functionality in SharePoint, if any. 
   
     
     
@@ -70,8 +70,8 @@ CMIS defines an object-type capability that is equivalent to the idea of content
 
 |**CMIS object-type**|**Supported in SharePoint Server?**|**SharePoint 2013 equivalent functionality**|**Description**|
 |:-----|:-----|:-----|:-----|
-|document |yes |**Document**objects|The CMIS document object-type maps directly to the **Document**object in SharePoint Server.Documents have properties and a content stream attached to them, can be versioned, and support basic create, read, update, and delete (CRUD) operations. |
-|folder |yes | [SPFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFolder.aspx) objects|The CMIS folder object-type maps directly to the **SPFolder**object in SharePoint Server.Folders can contain documents and other folders, and must have a single parent folder. Folders have properties attached to them, and they support the same CRUD operations that the document object supports. CMIS folders cannot be versioned. |
+|document |yes |**Document** objects|The CMIS document object-type maps directly to the **Document** object in SharePoint Server.Documents have properties and a content stream attached to them, can be versioned, and support basic create, read, update, and delete (CRUD) operations. |
+|folder |yes | [SPFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFolder.aspx) objects|The CMIS folder object-type maps directly to the **SPFolder** object in SharePoint Server.Folders can contain documents and other folders, and must have a single parent folder. Folders have properties attached to them, and they support the same CRUD operations that the document object supports. CMIS folders cannot be versioned. |
 |policy |no |none |The CMIS policy object-type is not equivalent to the concept of policy in SharePoint, or to any policy objects defined in the SharePoint object model. |
 |relationship |no |none |Not supported. |
    
@@ -83,11 +83,11 @@ CMIS does not provide methods for creating, modifying, or deleting object-types.
   
     
     
-Figure 2 shows example relationships that can exist between CMIS document and folder object-types. The figure uses labels that one may find in a SharePoint Server document management scenario. For example, a CMIS object-type named **cmis:folder**is the parent of an object-type named**cmis:documentset**. The **cmis:documentset**can contain, but does not have to contain, document objects organized into a [DocumentSet](https://msdn.microsoft.com/library/Microsoft.Office.DocumentManagement.DocumentSets.DocumentSet.aspx) object.
+Figure 2 shows example relationships that can exist between CMIS document and folder object-types. The figure uses labels that one may find in a SharePoint Server document management scenario. For example, a CMIS object-type named **cmis:folder** is the parent of an object-type named **cmis:documentset**. The **cmis:documentset** can contain, but does not have to contain, document objects organized into a [DocumentSet](https://msdn.microsoft.com/library/Microsoft.Office.DocumentManagement.DocumentSets.DocumentSet.aspx) object.
   
     
     
-The CMIS document object-type also supports parent/child relationships, as shown here where the **cmis:document**object-type is a parent to the**cmis:specification**, **cmis:report**, and **cmis:image**document object-types. It is possible that these documents could be organized into SharePoint Server document sets, but CMIS does not define such a construct. Instead, CMIS recognizes individual objects as being of the document object-type or the folder object-type, or as a subset of either of those two object-types.
+The CMIS document object-type also supports parent/child relationships, as shown here where the **cmis:document** object-type is a parent to the **cmis:specification**, **cmis:report**, and **cmis:image** document object-types. It is possible that these documents could be organized into SharePoint Server document sets, but CMIS does not define such a construct. Instead, CMIS recognizes individual objects as being of the document object-type or the folder object-type, or as a subset of either of those two object-types.
   
     
     
@@ -186,7 +186,7 @@ With CMIS capabilities in SharePoint 2013, developers can create applications th
   
     
     
-When creating an app, consider code that implements a dictionary that initializes all of the parameters. The parameters are used to authenticate to repositories, and specify data such as the binding that is in use (for example, REST, AtomPub, SOAP), the URL for the server to access the REST endpoint, user name, password, and the authentication provider class (for example, Basic AuthN). After the parameters have been set up, the developer can use the **getRepositories**call to connect to each repository.
+When creating an app, consider code that implements a dictionary that initializes all of the parameters. The parameters are used to authenticate to repositories, and specify data such as the binding that is in use (for example, REST, AtomPub, SOAP), the URL for the server to access the REST endpoint, user name, password, and the authentication provider class (for example, Basic AuthN). After the parameters have been set up, the developer can use the **getRepositories** call to connect to each repository.
   
     
     
@@ -263,7 +263,7 @@ CMIS 1.1 is not supported in SharePoint 2013, but the newer version of the CMIS 
 - **Type mutability**: Capability to create and modify content types. 
     
   
-- **Repository features**: Capability to extend the **getRepositoryInfo**service to publish a list of extensions to the standards it supports.
+- **Repository features**: Capability to extend the **getRepositoryInfo** service to publish a list of extensions to the standards it supports.
     
   
 - **Retention and hold**: Services for requiring a document to not be deleted for a period of time or indefinitely. 

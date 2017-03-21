@@ -1,6 +1,6 @@
 ---
 title: Workflow actions quick reference (SharePoint 2013 Workflow platform)
-ms.prod: SHAREPOINT
+ms.prod: SHAREPOINTDESIGNER
 ms.assetid: eb3434e5-bc75-4474-8873-4980062fd29c
 ---
 
@@ -34,7 +34,7 @@ Core actions are those that are most commonly performed, and they are grouped to
 |Build Dictionary |Builds a Dictionary variable of key/value pairs. > [!NOTE]  > The Dictionary uses JSON notation to store data.           For more information on the Dictionary variable, see  [Understanding Dictionary actions in SharePoint Designer 2013](understanding-dictionary-actions-in-sharepoint-designer-2013.md)|
 |Call HTTP Web Service |Functions as a method call to an HTTP web service and returns data using the JSON format. Basic authentication is supported through the RequestHeader. For more information on the Dictionary variable, see  [Understanding Dictionary actions in SharePoint Designer 2013](understanding-dictionary-actions-in-sharepoint-designer-2013.md)|
 |Count Items in a Dictionary |Returns a count of the number of items in a specified dictionary. |
-|Do Calculation |Performs an arithmetic calculation and stores the output value in a variable. > [!NOTE]  > For SharePoint 2013, this action supports only the **Double**numeric type. Integers are not supported. Use of the "+" operator (concatenation) for strings is not supported.          |
+|Do Calculation |Performs an arithmetic calculation and stores the output value in a variable. > [!NOTE]  > For SharePoint 2013, this action supports only the **Double** numeric type. Integers are not supported. Use of the "+" operator (concatenation) for strings is not supported.          |
 |Get an Item from a Dictionary |Returns a particular item from a dictionary variable. |
 |Log to History List |Writes a message from a list of predefined message items to the workflow history list. |
 |Pause for Duration |Causes a workflow to pause executing for a specified time interval, in days, hours, and minutes. |
@@ -80,12 +80,12 @@ List actions group together actions that are used to manipulate lists and list i
 |Check Out Item |Checks out an item. The workflow verifies whether the item is checked in before it checks out a document. You can check out items only from a library in your site. > [!CAUTION]  > The workflow crashes if you try to check out an item that is not checked in.           |
 |Copy Document |Copies a document from the current list to a different Document Library list. |
 |Create List Item |Creates a new list item in the list that you specify. You can supply the fields and values in the new item. You can use this action whenever you want a new item to be created with specific information. |
-|Delete Item |Deletes an item. > [!NOTE]  > This action is terminated on the computer running the Workflow Manager workflow engine and throws a **System.InvalidOperationException**exception. There is no workaround.          |
+|Delete Item |Deletes an item. > [!NOTE]  > This action is terminated on the computer running the Workflow Manager workflow engine and throws a **System.InvalidOperationException** exception. There is no workaround.          |
 |Discard Check Out Item |Discards the changes and checks the item back in if an item is checked out and changes have been made to it. > [!CAUTION]  > The workflow crashes if you try to check in an item that is not checked out.           |
-|Set Field in Current Item |Sets a specified field in the current item to a specified value. > [!NOTE]  > If you need the workflow to pause until the value of the field has changed, use the **Wait for Event in List Item**action instead of this action.          |
+|Set Field in Current Item |Sets a specified field in the current item to a specified value. > [!NOTE]  > If you need the workflow to pause until the value of the field has changed, use the **Wait for Event in List Item** action instead of this action.          |
 |Translate Document |Translates a document into a particular language > [!NOTE]  > Requires a preconfigured Machine Translation Service Application.           |
 |Update List Item |Updates a list item. You can specify the fields and the new values in those fields. |
-|Wait for Event in List Item |[Enhanced version of Office 2010 action.] Pauses the current instance of the workflow to await a specified list item event. This action listens for two events: **ItemUpdated**and**ItemAdded**. |
+|Wait for Event in List Item |[Enhanced version of Office 2010 action.] Pauses the current instance of the workflow to await a specified list item event. This action listens for two events: **ItemUpdated** and **ItemAdded**. |
 |Wait for Field Change in Current Item |Waits for a field on the current item to equal a particular value. |
    
 

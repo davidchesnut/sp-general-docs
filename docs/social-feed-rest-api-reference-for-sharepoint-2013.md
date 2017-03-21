@@ -7,20 +7,20 @@ ms.assetid: f1cb914f-1e91-4e23-bf53-d2ab323eac13
 
 
 # Social feed REST API reference for SharePoint 2013
-Find SharePoint REST endpoints for reading and writing to social feeds by using the **SocialRestFeedManager**resource.
-You can use the SharePoint 2013 Representational State Transfer (REST) service to do the same things that you can do with the .NET client object models and the JavaScript object model. The REST service exposes resources that correspond to SharePoint objects, properties, and methods. To use the REST service, you build and send HTTP **GET**and**POST**requests to the resource endpoints that represent the tasks you want to do.
+Find SharePoint REST endpoints for reading and writing to social feeds by using the **SocialRestFeedManager** resource.
+You can use the SharePoint 2013 Representational State Transfer (REST) service to do the same things that you can do with the .NET client object models and the JavaScript object model. The REST service exposes resources that correspond to SharePoint objects, properties, and methods. To use the REST service, you build and send HTTP **GET** and **POST** requests to the resource endpoints that represent the tasks you want to do.
   
     
     
 
-The endpoint URIs for most feed tasks begin with the **SocialRestFeedManager**resource ( `social.feed`), followed by the  `my` resource or the `post` resource:
+The endpoint URIs for most feed tasks begin with the **SocialRestFeedManager** resource ( `social.feed`), followed by the  `my` resource or the `post` resource:
 - The  `my` resource represents the current user. When used inline in the endpoint URI, it sets the context of the request to the current user. For example, `http://contoso.com/_api/social.feed/my/news` gets the newsfeed for the current user.
     
   
 - The  `post` resource represents a specific thread or post. When used inline in the endpoint URI, it sets the context of the request to the specified thread or post. For example, `http://contoso.com/_api/social.feed/post/lock` locks the specified thread.
     
   
-If the resource endpoint takes a parameter, the parameter metadata is specified in the URI or in the request body. By default, the REST service returns responses formatted in the Atom protocol, but you can request the JSON format by using HTTP **Accept**headers. See [Example REST requests for feed tasks](social-feed-rest-api-reference-for-sharepoint-2013.md#bk_exampleRequests) for examples of complete requests.
+If the resource endpoint takes a parameter, the parameter metadata is specified in the URI or in the request body. By default, the REST service returns responses formatted in the Atom protocol, but you can request the JSON format by using HTTP **Accept** headers. See [Example REST requests for feed tasks](social-feed-rest-api-reference-for-sharepoint-2013.md#bk_exampleRequests) for examples of complete requests.
 ## Resource endpoints for feed tasks
 <a name="bk_Overview"> </a>
 
@@ -51,9 +51,9 @@ If the resource endpoint takes a parameter, the parameter metadata is specified 
 
 > [!NOTE]  
 >  The following feed-related REST resources use the same pattern as the other SharePoint REST APIs to construct the endpoint URI.
->  For**CreateImageAttachment**, send a **POST**request to `http://<siteCollection>/<site>/_api/SP.Social.SocialFeedManager/CreateImageAttachment`
->  For**GetPreview**, send a **POST**request to `http://<siteCollection>/<site>/_api/SP.Social.SocialFeedManager/GetPreview`
->  For**SuppressThreadNotifications**, send a **POST**request to `http://<siteCollection>/<site>/_api/SP.Social.SocialFeedManager/SuppressThreadNotifications`
+>  For **CreateImageAttachment**, send a **POST** request to `http://<siteCollection>/<site>/_api/SP.Social.SocialFeedManager/CreateImageAttachment`
+>  For **GetPreview**, send a **POST** request to `http://<siteCollection>/<site>/_api/SP.Social.SocialFeedManager/GetPreview`
+>  For **SuppressThreadNotifications**, send a **POST** request to `http://<siteCollection>/<site>/_api/SP.Social.SocialFeedManager/SuppressThreadNotifications`
   
     
     
@@ -66,14 +66,14 @@ Gets information about the current user.
   
     
     
-The **my**endpoint sets the current user as the context for any subsequent resource in the URI. For example, `http://contoso.com/_api/social.feed/my/news` gets the newsfeed for the current user.
+The **my** endpoint sets the current user as the context for any subsequent resource in the URI. For example, `http://contoso.com/_api/social.feed/my/news` gets the newsfeed for the current user.
   
     
     
 
 ### Endpoint URI structure
 
-**GET**`http://<siteCollection>/<site>/_api/social.feed/my`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/my`
   
     
     
@@ -95,7 +95,7 @@ Information about the current user.
   
     
     
-You can call **SocialRestActor**properties individually in the URI, for example `http://<siteCollection>/<site>/_api/social.feed/my/me` gets only the**Me**property.
+You can call **SocialRestActor** properties individually in the URI, for example `http://<siteCollection>/<site>/_api/social.feed/my/me` gets only the **Me** property.
   
     
     
@@ -161,7 +161,7 @@ You can post only in the context of the current user. You cannot create a root p
 
 ### Endpoint URI structure
 
-**POST**`http://<siteCollection>/<site>/_api/social.feed/my/feed/post`
+ **POST** `http://<siteCollection>/<site>/_api/social.feed/my/feed/post`
   
     
     
@@ -176,7 +176,7 @@ Type:  [SP.Social.SocialRestPostCreationData](social-feed-rest-api-reference-for
   
     
     
-A **null**ID and the properties of the new post, as shown in the following example.
+A **null** ID and the properties of the new post, as shown in the following example.
   
     
     
@@ -290,18 +290,18 @@ The following response example represents the thread that contains the new root 
 ## My/Feed
 <a name="bk_myFeed"> </a>
 
-Gets the feed of activity by the current user (**Personal**feed type).
+Gets the feed of activity by the current user ( **Personal** feed type).
   
     
     
 
 ### Endpoint URI structure
 
-**GET**`http://<siteCollection>/<site>/_api/social.feed/my/feed`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/my/feed`
   
     
     
-**GET**`http://<siteCollection>/<site>/_api/social.feed/my/feed(MaxThreadCount=10,SortOrder=1,NewerThan=@v)?@v=datetime'2013-01-01T08:00'`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/my/feed(MaxThreadCount=10,SortOrder=1,NewerThan=@v)?@v=datetime'2013-01-01T08:00'`
   
     
     
@@ -316,11 +316,11 @@ Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoi
   
     
     
-The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount**property.
+The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount** property.
   
     
     
-You can use an **@**alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/feed(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the**@v**alias to send a**:**character.
+You can use an **@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/feed(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **@v** alias to send a **:** character.
   
     
     
@@ -645,18 +645,18 @@ The following response example represents the current user's personal feed.
 ## My/News
 <a name="bk_myNews"> </a>
 
-Gets the feed of activity by the current user and by people and content the user is following, sorted by last modified date (**News**feed type).
+Gets the feed of activity by the current user and by people and content the user is following, sorted by last modified date ( **News** feed type).
   
     
     
 
 ### Endpoint URI structure
 
-**GET**`http://<siteCollection>/<site>/_api/social.feed/my/news`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/my/news`
   
     
     
-**GET**`http://<siteCollection>/<site>/_api/social.feed/my/news(MaxThreadCount=10,NewerThan=@v)?@v=datetime'2013-01-01T08:00'`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/my/news(MaxThreadCount=10,NewerThan=@v)?@v=datetime'2013-01-01T08:00'`
   
     
     
@@ -671,11 +671,11 @@ Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoi
   
     
     
-The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount**property.
+The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount** property.
   
     
     
-You can use an **@**alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/News(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the**@v**alias to send a**:**character.
+You can use an **@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/News(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **@v** alias to send a **:** character.
   
     
     
@@ -878,18 +878,18 @@ The following response example represents the current user's newsfeed.
 ## My/TimelineFeed
 <a name="bk_myTimelineFeed"> </a>
 
-Gets the feed of activity by the current user and by people and content the user is following, sorted by created date (**Timeline**feed type).
+Gets the feed of activity by the current user and by people and content the user is following, sorted by created date ( **Timeline** feed type).
   
     
     
 
 ### Endpoint URI structure
 
-**GET**`http://<siteCollection>/<site>/_api/social.feed/my/timelinefeed`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/my/timelinefeed`
   
     
     
-**GET**`http://<siteCollection>/<site>/_api/social.feed/my/timelinefeed(MaxThreadCount=10,NewerThan=@v)?@v=datetime'2013-01-01T08:00'`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/my/timelinefeed(MaxThreadCount=10,NewerThan=@v)?@v=datetime'2013-01-01T08:00'`
   
     
     
@@ -904,11 +904,11 @@ Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoi
   
     
     
-The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount**property.
+The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount** property.
   
     
     
-You can use an **@**alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/timelinefeed(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the**@v**alias to send a**:**character.
+You can use an **@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/timelinefeed(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **@v** alias to send a **:** character.
   
     
     
@@ -1069,18 +1069,18 @@ The following response example represents the current user's timeline feed, whic
 ## My/Likes
 <a name="bk_myLikes"> </a>
 
-Gets the feed of microblog posts that the current user likes, represented by **LikeReference**thread types. See [Reference threads and digest threads in SharePoint Server 2013 social feeds](reference-threads-and-digest-threads-in-sharepoint-server-2013-social-feeds.md). 
+Gets the feed of microblog posts that the current user likes, represented by **LikeReference** thread types. See [Reference threads and digest threads in SharePoint Server 2013 social feeds](reference-threads-and-digest-threads-in-sharepoint-server-2013-social-feeds.md). 
   
     
     
 
 ### Endpoint URI structure
 
-**GET**`http://<siteCollection>/<site>/_api/social.feed/my/likes`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/my/likes`
   
     
     
-**GET**`http://<siteCollection>/<site>/_api/social.feed/my/likes(MaxThreadCount=10,SortOrder=1,NewerThan=@v)?@v=datetime'2013-01-01T08:00'`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/my/likes(MaxThreadCount=10,SortOrder=1,NewerThan=@v)?@v=datetime'2013-01-01T08:00'`
   
     
     
@@ -1095,11 +1095,11 @@ Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoi
   
     
     
-The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount**property.
+The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount** property.
   
     
     
-You can optionally specify retrieval options in the query string. You can use an **@**alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/likes(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the**@v**alias to send a**:**character.
+You can optionally specify retrieval options in the query string. You can use an **@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/likes(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **@v** alias to send a **:** character.
   
     
     
@@ -1114,7 +1114,7 @@ A feed that contains posts that the current user likes.
   
     
     
-The following response example represents a reference to a post that the current user likes. The thread is a **LikeReference**thread type (value =**1**) whose **PostReference**property references the actual post.
+The following response example represents a reference to a post that the current user likes. The thread is a **LikeReference** thread type (value = **1**) whose **PostReference** property references the actual post.
   
     
     
@@ -1270,18 +1270,18 @@ The following response example represents a reference to a post that the current
 ## My/MentionFeed
 <a name="bk_myMentionFeed"> </a>
 
-Gets the feed of microblog posts that mention the current user, represented by **MentionReference**thread types. See [Reference threads and digest threads in SharePoint Server 2013 social feeds](reference-threads-and-digest-threads-in-sharepoint-server-2013-social-feeds.md). 
+Gets the feed of microblog posts that mention the current user, represented by **MentionReference** thread types. See [Reference threads and digest threads in SharePoint Server 2013 social feeds](reference-threads-and-digest-threads-in-sharepoint-server-2013-social-feeds.md). 
   
     
     
 
 ### Endpoint URI structure
 
-**GET**`http://<siteCollection>/<site>/_api/social.feed/my/mentionfeed`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/my/mentionfeed`
   
     
     
-**GET**`http://<siteCollection>/<site>/_api/social.feed/my/mentionfeed(MaxThreadCount=10,SortOrder=1,NewerThan=@v)?@v=datetime'2013-01-01T08:00'`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/my/mentionfeed(MaxThreadCount=10,SortOrder=1,NewerThan=@v)?@v=datetime'2013-01-01T08:00'`
   
     
     
@@ -1296,11 +1296,11 @@ Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoi
   
     
     
-The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount**property.
+The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount** property.
   
     
     
-You can use an **@**alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/likes(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the**@v**alias to send a**:**character.
+You can use an **@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/likes(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **@v** alias to send a **:** character.
   
     
     
@@ -1315,7 +1315,7 @@ A feed that contains posts that mention the current user.
   
     
     
-The following response example represents one thread that mentions the current user. The thread is a **MentionReference**thread type (value =**3**) whose **PostReference**property references the actual post.
+The following response example represents one thread that mentions the current user. The thread is a **MentionReference** thread type (value = **3**) whose **PostReference** property references the actual post.
   
     
     
@@ -1464,14 +1464,14 @@ The following response example represents one thread that mentions the current u
 ## My/MentionFeed/ClearUnreadMentionCount
 <a name="bk_myMentionFeedClearUnreadMentionCount"> </a>
 
-Gets the feed of microblog posts that mention the current user, represented by **MentionReference**thread types, and sets the user's unread mention count to 0. See [Reference threads and digest threads in SharePoint Server 2013 social feeds](reference-threads-and-digest-threads-in-sharepoint-server-2013-social-feeds.md). 
+Gets the feed of microblog posts that mention the current user, represented by **MentionReference** thread types, and sets the user's unread mention count to 0. See [Reference threads and digest threads in SharePoint Server 2013 social feeds](reference-threads-and-digest-threads-in-sharepoint-server-2013-social-feeds.md). 
   
     
     
 
 ### Endpoint URI structure
 
-**POST**`http://<siteCollection>/<site>/_api/social.feed/my/mentionfeed/clearunreadmentioncount`
+ **POST** `http://<siteCollection>/<site>/_api/social.feed/my/mentionfeed/clearunreadmentioncount`
   
     
     
@@ -1486,7 +1486,7 @@ Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoi
   
     
     
-This parameter must be sent as an empty string in the **data**attribute of the request body, as shown in the following example.
+This parameter must be sent as an empty string in the **data** attribute of the request body, as shown in the following example.
   
     
     
@@ -1511,7 +1511,7 @@ The current user's mention feed.
   
     
     
-The following response example represents the current user's mention feed. The thread is a **MentionReference**thread type (value =**3**) whose **PostReference**property references the actual post. The unread mention count is cleared after the feed is retrieved.
+The following response example represents the current user's mention feed. The thread is a **MentionReference** thread type (value = **3**) whose **PostReference** property references the actual post. The unread mention count is cleared after the feed is retrieved.
   
     
     
@@ -1667,7 +1667,7 @@ Gets the count of unread mentions for the current user.
 
 ### Endpoint URI structure
 
-**GET**`http://<siteCollection>/<site>/_api/social.feed/my/unreadmentioncount`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/my/unreadmentioncount`
   
     
     
@@ -1719,11 +1719,11 @@ Gets information about the specified user and the current user.
 
 ### Endpoint URI structure
 
-**GET**`http://<siteCollection>/<site>/_api/social.feed/actor(item='domain\\\\user')`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/actor(item='domain\\\\user')`
   
     
     
-**GET**`http://<siteCollection>/<site>/_api/social.feed/actor(item=@v)?@v='i:0"%23".f|membership|user@domain.com'`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/actor(item=@v)?@v='i:0"%23".f|membership|user@domain.com'`
   
     
     
@@ -1742,7 +1742,7 @@ The account name of the specified user.
   
     
     
-You send the  _item_ parameter in the query string. You can use an**@**alias to pass special characters. For example, `<siteUri>/_api/social.feed/actor(item=@v)?@v='i:0"%23".f|membership|user@domain.com'` uses the**@v**alias and the**"%23"**encoding to send a**#**character.
+You send the  _item_ parameter in the query string. You can use an **@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/actor(item=@v)?@v='i:0"%23".f|membership|user@domain.com'` uses the **@v** alias and the **"%23"** encoding to send a **#** character.
   
     
     
@@ -1757,7 +1757,7 @@ Information about the specified user and the current user.
   
     
     
-You can call **SocialRestActor**properties individually in the URI, for example `http://<siteCollection>/<site>/_api/social.feed/actor(item='domain\\\\user')/followableitem` gets only the**FollowableItem**property for the specified actor.
+You can call **SocialRestActor** properties individually in the URI, for example `http://<siteCollection>/<site>/_api/social.feed/actor(item='domain\\\\user')/followableitem` gets only the **FollowableItem** property for the specified actor.
   
     
     
@@ -1823,26 +1823,26 @@ The following response example represents information about the specified user a
 ## Actor/Feed
 <a name="bk_actorFeed"> </a>
 
-Gets the feed of activity by the specified user (**Personal**feed type) or gets the specified site feed.
+Gets the feed of activity by the specified user ( **Personal** feed type) or gets the specified site feed.
   
     
     
 
 ### Endpoint URI structure
 
-**GET**`http://<siteCollection>/<site>/_api/social.feed/actor(item='domain\\\\user')/feed`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/actor(item='domain\\\\user')/feed`
   
     
     
-**GET**`http://<siteCollection>/<site>/_api/social.feed/actor(item=@v)/feed?@v='i:0"%23".f|membership|user@domain.com'`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/actor(item=@v)/feed?@v='i:0"%23".f|membership|user@domain.com'`
   
     
     
-**GET**`http://<siteCollection>/<site>/_api/social.feed/actor(item='domain\\\\user')/feed(MaxThreadCount=10,SortOrder=1,NewerThan=@v)?@v=datetime'2013-01-01T08:00'`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/actor(item='domain\\\\user')/feed(MaxThreadCount=10,SortOrder=1,NewerThan=@v)?@v=datetime'2013-01-01T08:00'`
   
     
     
-**GET**`http://<siteCollection>/<site>/_api/social.feed/actor(item=@v)/feed?@v='http://<teamSiteUri>/newsfeed.aspx'`
+ **GET** `http://<siteCollection>/<site>/_api/social.feed/actor(item=@v)/feed?@v='http://<teamSiteUri>/newsfeed.aspx'`
   
     
     
@@ -1857,11 +1857,11 @@ Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoi
   
     
     
-The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount**property.
+The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount** property.
   
     
     
-You can use an **@**alias to pass special characters. For example, `<siteUri>/_api/social.feed/actor(item=@v)/feed(NewerThan=@x)?@v='i:0"%23".f|membership|user@domain.com'&amp;@x=datetime'2013-01-01T08:00'` uses the**@v**alias and the**"%23"**encoding to send a**#**character, and the**@x**alias to send a**:**character.
+You can use an **@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/actor(item=@v)/feed(NewerThan=@x)?@v='i:0"%23".f|membership|user@domain.com'&amp;@x=datetime'2013-01-01T08:00'` uses the **@v** alias and the **"%23"** encoding to send a **#** character, and the **@x** alias to send a **:** character.
   
     
     
@@ -2076,7 +2076,7 @@ You can post only in the context of the current user. You cannot create a root p
 
 ### Endpoint URI structure
 
-**POST**`http://<siteCollection>/<site>/_api/social.feed/actor(item=@v)/feed/post?@v='http://<siteCollection>/<teamSite>/newsfeed.aspx'`
+ **POST** `http://<siteCollection>/<site>/_api/social.feed/actor(item=@v)/feed/post?@v='http://<siteCollection>/<teamSite>/newsfeed.aspx'`
   
     
     
@@ -2091,7 +2091,7 @@ Type:  [SP.Social.SocialRestPostCreationData](social-feed-rest-api-reference-for
   
     
     
-A **null**ID and the properties of the new post, as shown in the following example.
+A **null** ID and the properties of the new post, as shown in the following example.
   
     
     
@@ -2231,14 +2231,14 @@ Gets a full thread that contains the specified microblog post.
 
 ### Endpoint URI structure
 
-**POST**`http://<siteCollection>/<site>/_api/social.feed/post`
+ **POST** `http://<siteCollection>/<site>/_api/social.feed/post`
   
     
     
 
 ### Request parameter
 
-**ID**
+ **ID**
   
     
     
@@ -2393,7 +2393,7 @@ Posts a reply to the specified post.
 
 ### Endpoint URI structure
 
-**POST**`http://<siteCollection>/<site>/_api/social.feed/post/reply`
+ **POST** `http://<siteCollection>/<site>/_api/social.feed/post/reply`
   
     
     
@@ -2554,14 +2554,14 @@ Deletes the specified microblog post. If the post is the root post, the whole th
 
 ### Endpoint URI structure
 
-**POST**`http://<siteCollection>/<site>/_api/social.feed/post/delete`
+ **POST** `http://<siteCollection>/<site>/_api/social.feed/post/delete`
   
     
     
 
 ### Request parameter
 
-**ID**
+ **ID**
   
     
     
@@ -2602,14 +2602,14 @@ Makes the current user a liker of the specified microblog post.
 
 ### Endpoint URI structure
 
-**POST**`http://<siteCollection>/<site>/_api/social.feed/post/like`
+ **POST** `http://<siteCollection>/<site>/_api/social.feed/post/like`
   
     
     
 
 ### Request parameter
 
-**ID**
+ **ID**
   
     
     
@@ -2749,14 +2749,14 @@ Removes the current user from the list of likers for the specified microblog pos
 
 ### Endpoint URI structure
 
-**POST**`http://<siteCollection>/<site>/_api/social.feed/post/unlike`
+ **POST** `http://<siteCollection>/<site>/_api/social.feed/post/unlike`
   
     
     
 
 ### Request parameter
 
-**ID**
+ **ID**
   
     
     
@@ -2896,14 +2896,14 @@ Gets the users who like the specified microblog post.
 
 ### Endpoint URI structure
 
-**POST**`http://<siteCollection>/<site>/_api/social.feed/post/likers`
+ **POST** `http://<siteCollection>/<site>/_api/social.feed/post/likers`
   
     
     
 
 ### Request parameter
 
-**ID**
+ **ID**
   
     
     
@@ -2924,7 +2924,7 @@ The ID of the post to get the likers for, as shown in the following example.
 
 ### Response
 
-**Likers**
+ **Likers**
   
     
     
@@ -2981,14 +2981,14 @@ Locks the specified thread. If a thread is locked, no reply posts can be added t
 
 ### Endpoint URI structure
 
-**POST**`http://<siteCollection>/<site>/_api/social.feed/post/lock`
+ **POST** `http://<siteCollection>/<site>/_api/social.feed/post/lock`
   
     
     
 
 ### Request parameter
 
-**ID**
+ **ID**
   
     
     
@@ -3017,7 +3017,7 @@ A digest of the locked thread.
   
     
     
-The following response example represents a locked thread. The **Attributes**property of the thread contains a bitwise value from the [SP.Social.SocialThreadAttributes](http://msdn.microsoft.com/library/21ff9f92-3223-bcc7-ceec-7b899ee29b6e%28Office.15%29.aspx) enumeration, which indicates whether the thread is locked.
+The following response example represents a locked thread. The **Attributes** property of the thread contains a bitwise value from the [SP.Social.SocialThreadAttributes](http://msdn.microsoft.com/library/21ff9f92-3223-bcc7-ceec-7b899ee29b6e%28Office.15%29.aspx) enumeration, which indicates whether the thread is locked.
   
     
     
@@ -3130,14 +3130,14 @@ Unlocks the specified thread.
 
 ### Endpoint URI structure
 
-**POST**`http://<siteCollection>/<site>/_api/social.feed/post/unlock`
+ **POST** `http://<siteCollection>/<site>/_api/social.feed/post/unlock`
   
     
     
 
 ### Request parameter
 
-**ID**
+ **ID**
   
     
     
@@ -3166,7 +3166,7 @@ A digest of the unlocked thread.
   
     
     
-The following response example represents the unlocked thread. The **Attributes**property of the thread contains a bitwise value from the [SP.Social.SocialThreadAttributes](http://msdn.microsoft.com/library/21ff9f92-3223-bcc7-ceec-7b899ee29b6e%28Office.15%29.aspx) enumeration, which indicates whether the thread is locked.
+The following response example represents the unlocked thread. The **Attributes** property of the thread contains a bitwise value from the [SP.Social.SocialThreadAttributes](http://msdn.microsoft.com/library/21ff9f92-3223-bcc7-ceec-7b899ee29b6e%28Office.15%29.aspx) enumeration, which indicates whether the thread is locked.
   
     
     
@@ -3272,17 +3272,17 @@ The following response example represents the unlocked thread. The **Attributes*
 ## Example REST requests for feed tasks
 <a name="bk_exampleRequests"> </a>
 
-**GET**requests for feed tasks specify parameters in the URI or in the**url**attribute of the request.**POST**requests specify parameters in the**data**attribute of the request body in XML or JavaScript Object Notation (JSON) format. You can make HTTP requests in any language, including JavaScript and C#. The following example requests show how to make requests by using JavaScript and how to pass entity information in JSON format.
+ **GET** requests for feed tasks specify parameters in the URI or in the **url** attribute of the request. **POST** requests specify parameters in the **data** attribute of the request body in XML or JavaScript Object Notation (JSON) format. You can make HTTP requests in any language, including JavaScript and C#. The following example requests show how to make requests by using JavaScript and how to pass entity information in JSON format.
   
     
     
-**Example:**How to specify the _ID_ parameter in the request body (in the**data**attribute).
+ **Example:** How to specify the _ID_ parameter in the request body (in the **data** attribute).
   
     
     
 
 > [!NOTE]  
-> The values of thread and post **Id**properties are too long to send in a URL, so you have to send them in the request body. As a result, even read-only operations that are logically**GET**requests must be sent as**POST**requests. For example, to get a thread, you have to send a**POST**request and pass the thread**Id**as an entity in the request body.
+> The values of thread and post **Id** properties are too long to send in a URL, so you have to send them in the request body. As a result, even read-only operations that are logically **GET** requests must be sent as **POST** requests. For example, to get a thread, you have to send a **POST** request and pass the thread **Id** as an entity in the request body.
   
     
     
@@ -3319,7 +3319,7 @@ $.ajax({
 });
 ```
 
-**Example:**How to publish a root post and specify the _restCreationData_ parameter in the**data**attribute.
+ **Example:** How to publish a root post and specify the _restCreationData_ parameter in the **data** attribute.
   
     
     
@@ -3366,7 +3366,7 @@ $.ajax({
 });
 ```
 
-To publish a reply to a specified thread, send a **POST**request to the**Reply**resource ( `<site url>/_api/social.feed/Post/Reply`) and pass **restCreationData**information that includes the target post ID.
+To publish a reply to a specified thread, send a **POST** request to the **Reply** resource ( `<site url>/_api/social.feed/Post/Reply`) and pass **restCreationData** information that includes the target post ID.
   
     
     
@@ -3402,7 +3402,7 @@ Represents options that you can specify when retrieving a feed.
   
     
     
-Client-side **GET**requests for feeds can optionally specify**SocialFeedOptions**properties as parameters. These properties are specified in the query string.
+Client-side **GET** requests for feeds can optionally specify **SocialFeedOptions** properties as parameters. These properties are specified in the query string.
   
     
     
@@ -3410,9 +3410,9 @@ Client-side **GET**requests for feeds can optionally specify**SocialFeedOptions*
 ||||
 |:-----|:-----|:-----|
 |MaxThreadCount |**Int32**|The maximum number of threads to retrieve. The default number is 20. |
-|NewerThan |**String**|The "newer than" boundary of the time span to retrieve, as a string representation of a **DateTime**object. The default is no specified boundary.|
-|OlderThan |**String**|The "older than" boundary of the time span to retrieve, as a string representation of a **DateTime**object. The default is no specified boundary.|
-|SortOrder |**Int32**|The sort order of the threads in the feed. The default sort order is by modified date, except for the timeline feed, which is sorted by created date.          **0**sorts threads by modified time, according to the most recent modification times of their posts.          **1**sorts threads by created time, according to the creation times of their root posts.|
+|NewerThan |**String**|The "newer than" boundary of the time span to retrieve, as a string representation of a **DateTime** object. The default is no specified boundary.|
+|OlderThan |**String**|The "older than" boundary of the time span to retrieve, as a string representation of a **DateTime** object. The default is no specified boundary.|
+|SortOrder |**Int32**|The sort order of the threads in the feed. The default sort order is by modified date, except for the timeline feed, which is sorted by created date.          **0** sorts threads by modified time, according to the most recent modification times of their posts.          **1** sorts threads by created time, according to the creation times of their root posts.|
    
 
   
@@ -3430,11 +3430,11 @@ Represents a user, document, site, or tag.
   
     
     
-The server returns a **SocialRestActor**resource in the response to a client-side request for actor information.
+The server returns a **SocialRestActor** resource in the response to a client-side request for actor information.
   
     
     
-**SocialRestActor**has the following properties.
+ **SocialRestActor** has the following properties.
   
     
     
@@ -3442,7 +3442,7 @@ The server returns a **SocialRestActor**resource in the response to a client-sid
 ||||
 |:-----|:-----|:-----|
 |FollowableItem |**String**|The unique identifier of the specified actor. Returns the account name for a user or the URI for a document, site, or tag. |
-|FollowableItemActor | [SP.Social.SocialActor](http://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx)|The specified user. Returns **null**if the user is the current user or if the resource is not a user-type actor.|
+|FollowableItemActor | [SP.Social.SocialActor](http://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx)|The specified user. Returns **null** if the user is the current user or if the resource is not a user-type actor.|
 |Me | [SP.Social.SocialActor](http://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx)|The current user. |
    
 
@@ -3461,11 +3461,11 @@ Represents a social feed.
   
     
     
-The server returns a **SocialRestFeed**resource in the response to a client-side request for feed content.
+The server returns a **SocialRestFeed** resource in the response to a client-side request for feed content.
   
     
     
-**SocialRestFeed**contains a wrapped [SP.Social.SocialFeed](http://msdn.microsoft.com/library/356c5475-2fd6-a655-c271-5d7f21af45e2%28Office.15%29.aspx) object, which has the following properties.
+ **SocialRestFeed** contains a wrapped [SP.Social.SocialFeed](http://msdn.microsoft.com/library/356c5475-2fd6-a655-c271-5d7f21af45e2%28Office.15%29.aspx) object, which has the following properties.
   
     
     
@@ -3494,20 +3494,20 @@ Represents content and related information for a new post.
   
     
     
-Clients specify **SocialRestPostCreationData**properties as parameters in a request to publish a root post or a reply. These properties are specified in the**data**attribute of the request body.
+Clients specify **SocialRestPostCreationData** properties as parameters in a request to publish a root post or a reply. These properties are specified in the **data** attribute of the request body.
   
     
     
-**SocialRestPostCreationData**contains an**ID**property and a wrapped [SP.Social.SocialPostCreationData](http://msdn.microsoft.com/library/f0e1fa3e-6fc9-48e0-5570-92091abfef33%28Office.15%29.aspx) object.**ID**is required but the**SocialPostCreationData**properties are optional.
+ **SocialRestPostCreationData** contains an **ID** property and a wrapped [SP.Social.SocialPostCreationData](http://msdn.microsoft.com/library/f0e1fa3e-6fc9-48e0-5570-92091abfef33%28Office.15%29.aspx) object. **ID** is required but the **SocialPostCreationData** properties are optional.
   
     
     
 
 ||||
 |:-----|:-----|:-----|
-|ID (required) |**null**or**String**|The target destination for the post. The value can be one of the following:           **null**to publish a root post to the current user's feed           The ID of a post to reply to           The URL of a site feed to post to (for example: `http://<teamSiteURL>/newsfeed.aspx`) |
+|ID (required) |**null** or **String**|The target destination for the post. The value can be one of the following:           **null** to publish a root post to the current user's feed           The ID of a post to reply to           The URL of a site feed to post to (for example: `http://<teamSiteURL>/newsfeed.aspx`) |
    
-The following properties belong to the **SocialPostCreationData**object.
+The following properties belong to the **SocialPostCreationData** object.
   
     
     
@@ -3537,11 +3537,11 @@ Represents a thread that contains a root post and a set of replies.
   
     
     
-The server returns a **SocialRestThread**resource in the response to a client-side request to create a post or to get a full thread.
+The server returns a **SocialRestThread** resource in the response to a client-side request to create a post or to get a full thread.
   
     
     
-**SocialRestThread**contains an**ID**property and a wrapped [SP.Social.SocialThread](http://msdn.microsoft.com/library/46aa4beb-d708-f20e-471e-626c8a7efab7%28Office.15%29.aspx) object.
+ **SocialRestThread** contains an **ID** property and a wrapped [SP.Social.SocialThread](http://msdn.microsoft.com/library/46aa4beb-d708-f20e-471e-626c8a7efab7%28Office.15%29.aspx) object.
   
     
     
@@ -3550,7 +3550,7 @@ The server returns a **SocialRestThread**resource in the response to a client-si
 |:-----|:-----|:-----|
 |ID |**String**|The unique identifier of the thread. |
    
-The following properties belong to the **SocialThread**object.
+The following properties belong to the **SocialThread** object.
   
     
     
@@ -3586,6 +3586,6 @@ The following properties belong to the **SocialThread**object.
 -  [Following people and content REST API reference for SharePoint 2013](following-people-and-content-rest-api-reference-for-sharepoint-2013.md)
     
   
-- To see the members in the **SP.Social**OData schema used by the SharePoint 2013 REST service, browse to `http://<siteUri>/_api/$metadata`. 
+- To see the members in the **SP.Social** OData schema used by the SharePoint 2013 REST service, browse to `http://<siteUri>/_api/$metadata`. 
     
   

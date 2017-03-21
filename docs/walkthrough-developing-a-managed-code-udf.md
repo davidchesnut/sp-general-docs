@@ -49,7 +49,7 @@ In order to complete this walkthrough, you will need:
 - To enable running the UDF assembly. 
     
   
-- A trusted SharePoint document library in which to store a workbook, and to allow the workbook to call UDFs by setting the **AllowUdfs**value to**true**. 
+- A trusted SharePoint document library in which to store a workbook, and to allow the workbook to call UDFs by setting the **AllowUdfs** value to **true**. 
     
   
 - A sample workbook that calls the UDF stored in a trusted SharePoint document library. 
@@ -65,7 +65,7 @@ In order to complete this walkthrough, you will need:
 - To save the workbook as an .xlsx or .xlsb file. 
     
     > [!NOTE]  
-> For more information about how to trust a location, how to enable UDFs, and how to set the **AllowUdfs**flag, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
+> For more information about how to trust a location, how to enable UDFs, and how to set the **AllowUdfs** flag, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
 
 ## See also
 

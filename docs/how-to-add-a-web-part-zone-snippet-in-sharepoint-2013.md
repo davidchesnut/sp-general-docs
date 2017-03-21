@@ -105,7 +105,7 @@ Table 1 shows important properties to consider when you want to restrict a Web P
 |**Property Name**|**Description**|
 |:-----|:-----|
 |**AllowLayoutChange**|Specifies whether Web Parts within the zone can be closed, minimized, deleted, or restored. If set to **False**, users cannot close, minimize, delete, or restore Web Parts in the zone, drag Web Parts to a different zone, or rearrange or move Web Parts within the zone. Users also cannot add Web Parts from the Web Part catalog, and several properties that affect the UI of Web Parts in the zone are disabled. This property does not affect the ability to change the layout programmatically. If set to **True**, users with appropriate permissions can perform these actions. |
-|**LockLayout**|Specifies whether Web Parts within the zone can be added, deleted, resized, or moved. This property works the same whether the Web Part Page is in personal view or shared view. If set to **True**, the specific Web Part properties for each Web Part in the zone that are affected are: **Zone (ZoneID)**, **Part Order (PartOrder)**, **Visible on Page (IsVisible)**, **Height (Height)**, **Width (Width)**, **Allow Close (AllowRemove)**, and **IsIncluded**(the**Close**command on the**Web Part**menu). Other Web Part properties are not affected.If set to **False**, the Web Part properties determine whether modifications can be made (together with the appropriate site permissions). |
+|**LockLayout**|Specifies whether Web Parts within the zone can be added, deleted, resized, or moved. This property works the same whether the Web Part Page is in personal view or shared view. If set to **True**, the specific Web Part properties for each Web Part in the zone that are affected are: **Zone (ZoneID)**, **Part Order (PartOrder)**, **Visible on Page (IsVisible)**, **Height (Height)**, **Width (Width)**, **Allow Close (AllowRemove)**, and **IsIncluded** (the **Close** command on the **Web Part** menu). Other Web Part properties are not affected.If set to **False**, the Web Part properties determine whether modifications can be made (together with the appropriate site permissions). |
 |**AllowCustomization**|Specifies whether shared property values of Web Parts within the zone can be modified. If set to **True**, users with appropriate permissions can make changes to the Web Parts in the zone for all users. If set to **False**, users cannot make changes to the Web Parts in the zone in the UI in shared view. But, changes can still be made programmatically and by using the Web Part Maintenance page. |
 |**AllowPersonalization**|Specifies whether personal property values of Web Parts within the zone can be modified. If set to **True**, users with appropriate permissions can make personal changes to the Web Parts in the zone. If set to **False**, users cannot make personal changes to the Web Parts through the UI, unless the Web Part is a private Web Part and they have appropriate permissions. |
    
@@ -140,21 +140,21 @@ Like all snippets, you add this snippet from the Snippet Gallery. To navigate to
 4. Select the name of the page layout that you want to add the snippet to. 
     
   
-5. To open the Snippet Gallery, choose **Snippets**in the upper-right corner of the server-side preview.
+5. To open the Snippet Gallery, choose **Snippets** in the upper-right corner of the server-side preview.
     
   
-6. On the ribbon, on the **Design**tab, choose**Web Part zone**. 
+6. On the ribbon, on the **Design** tab, choose **Web Part zone**. 
     
   
 7. On the right side of the Snippet Gallery, under **About this Component**, click or select section headers to expand or collapse groups of properties, and then configure any custom settings that you want. 
     
-    The section named **Important**contains the properties that are key to how this particular snippet works. For a Web Part zone, the snippet has a unique ID. After you copy the snippet into your page layout, you should not reuse this ID. If you want to add another Web Part zone snippet, choose**Refresh**to generate a new ID for the next snippet.
+    The section named **Important** contains the properties that are key to how this particular snippet works. For a Web Part zone, the snippet has a unique ID. After you copy the snippet into your page layout, you should not reuse this ID. If you want to add another Web Part zone snippet, choose **Refresh** to generate a new ID for the next snippet.
     
-    For descriptions of properties that are necessary for restricting a Web Part zone (**LockLayout**, **AllowCustomization**, and **AllowPersonalization**), see Table 1. 
+    For descriptions of properties that are necessary for restricting a Web Part zone ( **LockLayout**, **AllowCustomization**, and **AllowPersonalization**), see Table 1. 
     
     > [!NOTE]  
 > You may notice that some property names are bold in the property grid of the Snippet Gallery. These properties have values that have been changed from the default setting for this component, but these properties are not necessarily relevant to a designer scenario. In other words, a property may be bold but not necessarily important for your scenario. 
-8. After you configure any properties, choose **Update**. This updates the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose **Reset**to return all properties to their default settings.
+8. After you configure any properties, choose **Update**. This updates the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose **Reset** to return all properties to their default settings.
     
   
 9. On the left side of the Snippet Gallery, under **HTML Snippet**, choose **Copy to Clipboard**. 
@@ -170,10 +170,10 @@ Like all snippets, you add this snippet from the Snippet Gallery. To navigate to
     When you are adding the snippet to a page layout, make sure to paste the snippet inside **PlaceHolderMain**. 
     
   
-12. Replace the **<div>**where `class="DefaultContentBlock"` with your own specific content.
+12. Replace the **<div>** where `class="DefaultContentBlock"` with your own specific content.
     
   
-13. If you want to prepopulate the zone with Web Parts—for example, if the zone will restrict content authors to modifying only existing Web Parts and not adding new ones—insert Web Part snippets where the **<!--DC … -->**tag appears.
+13. If you want to prepopulate the zone with Web Parts—for example, if the zone will restrict content authors to modifying only existing Web Parts and not adding new ones—insert Web Part snippets where the **<!--DC … -->** tag appears.
     
   
 14. Save the page, and then refresh the server-side preview in Design Manager to make sure the page appears as expected. 
@@ -183,17 +183,17 @@ Like all snippets, you add this snippet from the Snippet Gallery. To navigate to
 ## Understanding the snippet markup
 <a name="UnderstandMarkup"> </a>
 
-The two most important parts of a Web Part zone snippet are the **ID**property and the**<!--DC … -->**comment. Each zone should have a unique ID. If you want to add more than one Web Part zone to your page layout, make sure to choose**Refresh**in the Snippet Gallery before copying each snippet so that a new ID is generated. The**<!--DC … -->**comment should be replaced with any Web Parts that you want to appear in the zone by default.
+The two most important parts of a Web Part zone snippet are the **ID** property and the **<!--DC … -->** comment. Each zone should have a unique ID. If you want to add more than one Web Part zone to your page layout, make sure to choose **Refresh** in the Snippet Gallery before copying each snippet so that a new ID is generated. The **<!--DC … -->** comment should be replaced with any Web Parts that you want to appear in the zone by default.
   
     
     
-Additional properties that can be used to restrict how content authors can use zones (**AllowCustomization**, **AllowPersonalization**, and **LockLayout**) are shown in the following code. 
+Additional properties that can be used to restrict how content authors can use zones ( **AllowCustomization**, **AllowPersonalization**, and **LockLayout**) are shown in the following code. 
   
     
     
 
 > [!NOTE]  
-> The **AllowCustomization**, **AllowPersonalization**, and **LockLayout**properties appear in the markup only if you change their default values in the property grid.
+> The **AllowCustomization**, **AllowPersonalization**, and **LockLayout** properties appear in the markup only if you change their default values in the property grid.
   
     
     

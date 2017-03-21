@@ -1,6 +1,6 @@
 ---
 title: How to Avoid getting throttled or blocked in SharePoint Online
-ms.prod: MULTIPLEPRODUCTS
+ms.prod: SHAREPOINT
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ---
 
@@ -180,7 +180,7 @@ Before you run this code sample:
     
     
 
-- Open **Program.cs**and enter the following information in the**Main**method:
+- Open **Program.cs** and enter the following information in the **Main** method:
     
   - Your Office 365 Developer account credentials. 
     
@@ -191,28 +191,28 @@ Before you run this code sample:
   - The name of a test document library on your Office 365 Developer Site. 
     
   
-- If you receive an error stating that the **App.Config**file is invalid, go to**Solution Explorer**, right click**App.config**, and choose**Exclude From Project**.
+- If you receive an error stating that the **App.Config** file is invalid, go to **Solution Explorer**, right click **App.config**, and choose **Exclude From Project**.
     
   
-**Core.Throttling**runs as a console application using a user-only authorization policy, which means this code sample uses the permissions of the current user. In the**Main**method in Program.cs, a while loop repeatedly creates new folders in the test document library. A call is then made to**ctx.ExecuteQueryWithExponentialRetry**, which uses CSOM to perform the**ExecuteQuery**method.**ExecuteQueryWithExponentialRetry**is an extension method on the [ClientContext](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.clientcontext%28v=office.15%29.aspx) object, and is defined in**ClientContextExtension.cs**.
+ **Core.Throttling** runs as a console application using a user-only authorization policy, which means this code sample uses the permissions of the current user. In the **Main** method in Program.cs, a while loop repeatedly creates new folders in the test document library. A call is then made to **ctx.ExecuteQueryWithExponentialRetry**, which uses CSOM to perform the **ExecuteQuery** method. **ExecuteQueryWithExponentialRetry** is an extension method on the [ClientContext](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.clientcontext%28v=office.15%29.aspx) object, and is defined in **ClientContextExtension.cs**.
   
     
     
-If SharePoint Online throttles the **ExecuteQuery**statement,**ExecuteQueryWithIncrementalRetry**starts the incremental back off technique by:
+If SharePoint Online throttles the **ExecuteQuery** statement, **ExecuteQueryWithIncrementalRetry** starts the incremental back off technique by:
   
     
     
 
-- Catching a **WebException**and checking the**HttpWebResponse.StatusCode**. If SharePoint Online throttled the**ExecuteQuery**statement, the**HttpWebResponse.StatusCode**is 429.
+- Catching a **WebException** and checking the **HttpWebResponse.StatusCode**. If SharePoint Online throttled the **ExecuteQuery** statement, the **HttpWebResponse.StatusCode** is 429.
     
   
 - The current thread is suspended for the period specified in **backoffInterval**.
     
   
-- When the current thread resumes, the **backoffInterval**is doubled and the number of retries performed (**retryAttempts**) is incremented. By doubling**backoffInterval**your code suspends activity for a longer period of time before retrying the code that was throttled by SharePoint Online.
+- When the current thread resumes, the **backoffInterval** is doubled and the number of retries performed ( **retryAttempts** ) is incremented. By doubling **backoffInterval** your code suspends activity for a longer period of time before retrying the code that was throttled by SharePoint Online.
     
   
-- The process is repeated until either the **ExecuteQuery**statement is successful, or the number of allowed retries (**retryCount**) is exceeded.
+- The process is repeated until either the **ExecuteQuery** statement is successful, or the number of allowed retries ( **retryCount** ) is exceeded.
     
   
 

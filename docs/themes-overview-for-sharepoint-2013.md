@@ -14,7 +14,7 @@ Themes provide a quick and easy way to apply lightweight branding to a SharePoin
   
     
     
-The theming experience in SharePoint 2013 was redesigned to simplify the process of customizing sites. The themes user interface was redesigned and there is a set of new file formats related to themes. The **Change the look**wizard is the entry point to the theming experience where you can change the look and feel of your site. You can select a design for the site. Then, you can customize the design by changing the site layout, background, color palette, or font scheme. You can preview the site before applying the design. For more information, see [Choose a theme for your publishing site](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx) on Office.com.
+The theming experience in SharePoint 2013 was redesigned to simplify the process of customizing sites. The themes user interface was redesigned and there is a set of new file formats related to themes. The **Change the look** wizard is the entry point to the theming experience where you can change the look and feel of your site. You can select a design for the site. Then, you can customize the design by changing the site layout, background, color palette, or font scheme. You can preview the site before applying the design. For more information, see [Choose a theme for your publishing site](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx) on Office.com.
   
     
     
@@ -33,31 +33,31 @@ The theming experience includes the following:
   
     
     
-**Color palette**A color palette, or color scheme, defines the combination of colors that are used in a site. Thirty-two color palettes are installed with SharePoint 2013. They are available to users when they choose to modify a design in the design gallery.
+ **Color palette** A color palette, or color scheme, defines the combination of colors that are used in a site. Thirty-two color palettes are installed with SharePoint 2013. They are available to users when they choose to modify a design in the design gallery.
   
     
     
-Color palettes are XML files (.spcolor files). They are stored in the Theme Gallery of the root site of the site collection in the **15**folder (http:// _SiteCollectionName_/_catalogs/theme/15/). 
+Color palettes are XML files (.spcolor files). They are stored in the Theme Gallery of the root site of the site collection in the **15** folder (http:// _SiteCollectionName_/_catalogs/theme/15/). 
   
     
     
-**Font scheme**A font scheme defines the fonts that are used in a site. Seven font schemes are included in SharePoint 2013. They are available to users when they choose to modify a design in the design gallery.
+ **Font scheme** A font scheme defines the fonts that are used in a site. Seven font schemes are included in SharePoint 2013. They are available to users when they choose to modify a design in the design gallery.
   
     
     
-Font schemes are XML files (.spfont files). They are stored in the Theme Gallery of the root site of the site collection in the **15**folder (http:// _SiteCollectionName_/_catalogs/theme/15/). 
+Font schemes are XML files (.spfont files). They are stored in the Theme Gallery of the root site of the site collection in the **15** folder (http:// _SiteCollectionName_/_catalogs/theme/15/). 
   
     
     
-**Background image**The background image that is used in the site.
+ **Background image** The background image that is used in the site.
   
     
     
-**Master page**A master page defines the chrome (the shared framing elements) of a site. The theming experience lets users select the master page to apply to a site.
+ **Master page** A master page defines the chrome (the shared framing elements) of a site. The theming experience lets users select the master page to apply to a site.
   
     
     
-**Master page preview**A master page preview is used to render a preview image of the selected theme components. Each master page must have a corresponding master page preview file for the master page to be available in the theming experience.
+ **Master page preview** A master page preview is used to render a preview image of the selected theme components. Each master page must have a corresponding master page preview file for the master page to be available in the theming experience.
   
     
     
@@ -65,19 +65,19 @@ Master page preview files (.preview files) are stored in the Master Page Gallery
   
     
     
-**Composed look**A composed look, or design, is the color palette, font scheme, background image, and master page that determine the look and feel of a site. Design and theme can be used interchangeably to describe the overall look of a site.
+ **Composed look** A composed look, or design, is the color palette, font scheme, background image, and master page that determine the look and feel of a site. Design and theme can be used interchangeably to describe the overall look of a site.
   
     
     
-The theming experience uses the Composed Looks list to determine the available designs. You can create additional designs by creating list items in the Composed Looks list. To access the composed looks list, on the **Site Settings**page, under**Web Designer Galleries**, choose **Composed looks**. 
+The theming experience uses the Composed Looks list to determine the available designs. You can create additional designs by creating list items in the Composed Looks list. To access the composed looks list, on the **Site Settings** page, under **Web Designer Galleries**, choose **Composed looks**. 
   
     
     
-**Change the look**The**Change the look**wizard is the entry point to the theming experience that lets users change the look and feel of their site. To access the**Change the look**wizard, choose the**Settings**icon, and then choose**Change the look**. 
+ **Change the look** The **Change the look** wizard is the entry point to the theming experience that lets users change the look and feel of their site. To access the **Change the look** wizard, choose the **Settings** icon, and then choose **Change the look**. 
   
     
     
-**Design gallery**The design gallery is the first page in the**Change the look**wizard. The design gallery shows a thumbnail view of available designs.
+ **Design gallery** The design gallery is the first page in the **Change the look** wizard. The design gallery shows a thumbnail view of available designs.
   
     
     

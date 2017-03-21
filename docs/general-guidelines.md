@@ -69,21 +69,21 @@ This section contains general information related to Excel Services.
 ## Reference
 
 
-**[Microsoft.Office.Excel.Server.Udf]**
+ **[Microsoft.Office.Excel.Server.Udf]**
   
     
     
 > Excel Services UDF attributes.
     
   
-**[Microsoft.Office.Excel.Server.WebServices]**
+ **[Microsoft.Office.Excel.Server.WebServices]**
   
     
     
 > The Excel Web Services API.
     
   
-**[Microsoft.Office.Excel.WebUI]**
+ **[Microsoft.Office.Excel.WebUI]**
   
     
     

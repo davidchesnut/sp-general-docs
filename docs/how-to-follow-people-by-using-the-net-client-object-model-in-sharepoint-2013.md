@@ -34,7 +34,7 @@ To create a console application that uses the .NET client object model to work w
 - Visual Studio 2012 
     
   
-- **Full Control**access permissions to the User Profile service application for the logged-on user
+- **Full Control** access permissions to the User Profile service application for the logged-on user
     
   
 
@@ -52,13 +52,13 @@ To create a console application that uses the .NET client object model to work w
 1. Open Visual Studio, and choose **File**, **New**, **Project**. 
     
   
-2. In the **New Project**dialog box, choose**.NET Framework 4.5**from the drop-down list at the top of the dialog box.
+2. In the **New Project** dialog box, choose **.NET Framework 4.5** from the drop-down list at the top of the dialog box.
     
   
-3. In the **Templates**list, choose**Windows**, and then choose the **Console Application**template.
+3. In the **Templates** list, choose **Windows**, and then choose the **Console Application** template.
     
   
-4. Name the project FollowPeopleCSOM, and then choose the **OK**button.
+4. Name the project FollowPeopleCSOM, and then choose the **OK** button.
     
   
 5. Add references to the following assemblies: 
@@ -72,7 +72,7 @@ To create a console application that uses the .NET client object model to work w
   - **Microsoft.SharePoint.Client.UserProfiles**
     
   
-6. Replace the contents of the **Program**class with the code example from one of the following scenarios:
+6. Replace the contents of the **Program** class with the code example from one of the following scenarios:
     
   -  [Start and stop following people](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint-2013.md#bkmk_FollowPeople)
     
@@ -110,7 +110,7 @@ This code example uses the  [SocialFollowResult](https://msdn.microsoft.com/libr
     
 
 > [!NOTE]  
-> Change the placeholder values for the **serverUrl**and**targetUser**variables before you run the code.
+> Change the placeholder values for the **serverUrl** and **targetUser** variables before you run the code.
   
     
     
@@ -227,7 +227,7 @@ The following code example gets the people who the current user is following, ge
   
 
 > [!NOTE]  
-> Change the placeholder values for the **serverUrl**and**targetUser**variables before you run the code.
+> Change the placeholder values for the **serverUrl** and **targetUser** variables before you run the code.
   
     
     

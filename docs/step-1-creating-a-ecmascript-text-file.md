@@ -1,6 +1,6 @@
 ---
 title: Step 1 Creating a ECMAScript Text File
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: f1c2b359-5b0d-467d-a863-6732e23863b9
 ---
 
@@ -21,7 +21,7 @@ For this walkthrough, you will create an ECMAScript (JavaScript, JScript) text f
   
 2. Add the following script to the JSOM_FeedToContentEditor.txt file. 
     
-    **Sample code provided by:**Vidya Joshi, Microsoft Corporation.
+    **Sample code provided by:** Vidya Joshi, Microsoft Corporation.
     
 
 

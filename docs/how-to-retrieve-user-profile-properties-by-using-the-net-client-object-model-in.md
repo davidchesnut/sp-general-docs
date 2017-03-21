@@ -55,7 +55,7 @@ To create a console application that uses the .NET client object model to retrie
 - Visual Studio 2012 
     
   
-- **Full Control**connection permissions to access the User Profile service application for the current user.
+- **Full Control** connection permissions to access the User Profile service application for the current user.
     
   
 
@@ -73,13 +73,13 @@ To create a console application that uses the .NET client object model to retrie
 1. On your development computer, open Visual Studio and choose **File**, **New**, **Project**. 
     
   
-2. In the **New Project**dialog box, choose**.NET Framework 4.5**from the drop-down list at the top of the dialog box.
+2. In the **New Project** dialog box, choose **.NET Framework 4.5** from the drop-down list at the top of the dialog box.
     
   
 3. From the project templates, choose **Windows**, and then choose **Console Application**. 
     
   
-4. Name the project UserProfilesCSOM, and then choose the **OK**button.
+4. Name the project UserProfilesCSOM, and then choose the **OK** button.
     
   
 5. Add references to the following assemblies: 
@@ -93,7 +93,7 @@ To create a console application that uses the .NET client object model to retrie
   - **Microsoft.SharePoint.Client.UserProfiles**
     
   
-6. In the **Main**method, define variables for the server URL and the target user name, as shown in the following code.
+6. In the **Main** method, define variables for the server URL and the target user name, as shown in the following code.
     
   ```cs
   
@@ -112,7 +112,7 @@ ClientContext clientContext = new ClientContext(serverUrl);
 
   ```
 
-8. Get the target user's properties from the **PeopleManager**object, as shown in the following code.
+8. Get the target user's properties from the **PeopleManager** object, as shown in the following code.
     
   ```cs
   
@@ -121,10 +121,10 @@ PersonProperties personProperties = peopleManager.GetPropertiesFor(targetUser);
   ```
 
 
-    The **personProperties**object is a client object. Some client objects contain no data until they are initialized. For example, you cannot access the property values of the**personProperties**object until you initialize it. If you try to access a property before it is initialized, you receive a**PropertyOrFieldNotInitializedException**exception.
+    The **personProperties** object is a client object. Some client objects contain no data until they are initialized. For example, you cannot access the property values of the **personProperties** object until you initialize it. If you try to access a property before it is initialized, you receive a **PropertyOrFieldNotInitializedException** exception.
     
   
-9. To initialize the **personProperties**object, register the request that you want to run, and then run the request on the server, as shown in the following code.
+9. To initialize the **personProperties** object, register the request that you want to run, and then run the request on the server, as shown in the following code.
     
   ```cs
   
@@ -133,10 +133,10 @@ clientContext.ExecuteQuery();
   ```
 
 
-    When you call the **Load**method (or the**LoadQuery**method), you pass in the object that you want to retrieve or change. In this example, the call to the**Load**method passes in optional parameters to filter the request. The parameters are lambda expressions that request only the**AccountName**property and**UserProfileProperties**property of the**personProperties**object.
+    When you call the **Load** method (or the **LoadQuery** method), you pass in the object that you want to retrieve or change. In this example, the call to the **Load** method passes in optional parameters to filter the request. The parameters are lambda expressions that request only the **AccountName** property and **UserProfileProperties** property of the **personProperties** object.
     
     > [!TIP]  
-> To reduce network traffic, request only the properties that you want to work with when you call the **Load**method. In addition, if you're working with multiple objects, group multiple calls to the**Load**method when possible before you call the**ExecuteQuery**method.
+> To reduce network traffic, request only the properties that you want to work with when you call the **Load** method. In addition, if you're working with multiple objects, group multiple calls to the **Load** method when possible before you call the **ExecuteQuery** method.
 10. Iterate through the user profile properties and read the name and value of each property, as shown in the following code. 
     
   ```cs
@@ -262,7 +262,7 @@ The following code example shows how to retrieve a specific set of user profile 
     
     
 
-Unlike the previous code example that retrieves a  [PersonProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PersonProperties.aspx) object for the target user, this example calls the [PeopleManager.GetUserProfilePropertiesFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetUserProfilePropertiesFor.aspx) method and passes in a [UserProfilePropertiesForUser](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.UserProfilePropertiesForUser.aspx) object that specifies the target user and the user profile properties to retrieve. [GetUserProfilePropertiesFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetUserProfilePropertiesFor.aspx) returns an**IEnumerable<string>**collection that contains the values of the properties that you specify.
+Unlike the previous code example that retrieves a  [PersonProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PersonProperties.aspx) object for the target user, this example calls the [PeopleManager.GetUserProfilePropertiesFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetUserProfilePropertiesFor.aspx) method and passes in a [UserProfilePropertiesForUser](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.UserProfilePropertiesForUser.aspx) object that specifies the target user and the user profile properties to retrieve. [GetUserProfilePropertiesFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetUserProfilePropertiesFor.aspx) returns an **IEnumerable<string>** collection that contains the values of the properties that you specify.
   
     
     

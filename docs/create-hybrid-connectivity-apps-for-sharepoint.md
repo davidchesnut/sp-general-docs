@@ -83,13 +83,13 @@ To create an OData endpoint, you will need to follow these steps for creating a 
     
     > [!NOTE]  
 > It's not necessary for SharePoint to be installed on this server. In fact, for the sake of simplicity and performance, it's better if SharePoint is not installed on the server that hosts the WCF data service. 
-2. Create a new project in Visual Studio 2012 using the **ASP.NET Empty Web Application**template.
+2. Create a new project in Visual Studio 2012 using the **ASP.NET Empty Web Application** template.
     
   
-3. In **Solution Explorer**add a new**ADO.NET Entity Data Model**. 
+3. In **Solution Explorer** add a new **ADO.NET Entity Data Model**. 
     
   
-4. Choose the **Generate from database**option in the**Entity Data Model Wizard**. 
+4. Choose the **Generate from database** option in the **Entity Data Model Wizard**. 
     
   
 5. Select an existing connection, or create a new one. 
@@ -101,7 +101,7 @@ To create an OData endpoint, you will need to follow these steps for creating a 
 7. Select the items that you want to include in the model, and choose **Finish**. 
     
   
-8. Again in **Solution Explorer**, add a new **WCF Data Service**using the Visual Studio template.
+8. Again in **Solution Explorer**, add a new **WCF Data Service** using the Visual Studio template.
     
   
 9. Name the data service, and choose **Next**. 
@@ -159,13 +159,13 @@ To add a BDC model or external content type to your project, do the following.
 1. With your new project still open, open the shortcut menu for the solution, and choose **Add**, **Content types for an External Data source**. 
     
   
-2. The first page of the wizard is used to specify the URL of the data service. On the **Specify OData Source**page, enter the URL of the OData service that you want to connect to. The URL should resemble the following:**http://services.odata.org/Northwind/Northwind.svc/**.
+2. The first page of the wizard is used to specify the URL of the data service. On the **Specify OData Source** page, enter the URL of the OData service that you want to connect to. The URL should resemble the following: **http://services.odata.org/Northwind/Northwind.svc/**.
     
   
 3. Choose a name for your OData source, and then choose **Next**. 
     
   
-4. A list of data entities that are being exposed by the OData service appears. Make sure that the **Create list instances for the selected data entities**check box is selected.
+4. A list of data entities that are being exposed by the OData service appears. Make sure that the **Create list instances for the selected data entities** check box is selected.
     
   
 5. Select one or more of the entities, and choose **Finish**. 

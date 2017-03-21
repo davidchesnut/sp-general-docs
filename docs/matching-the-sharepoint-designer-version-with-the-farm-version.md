@@ -1,6 +1,6 @@
 ---
 title: Matching the SharePoint Designer version with the farm version
-ms.prod: SHAREPOINTDESIGNER
+ms.prod: SHAREPOINT
 ms.assetid: 6ea44d3f-0b05-43d4-99ae-98886b6909f0
 ---
 

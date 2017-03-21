@@ -28,7 +28,7 @@ MSMQ is provided as a "Feature" in Windows Server. To enable MSMQ, do the follow
 1. On your SharePoint Server computer, open **Server Manager**. 
     
   
-2. Select the **Features**icon in the left pane, then select**Add Features**, as depicted in Figure 1. 
+2. Select the **Features** icon in the left pane, then select **Add Features**, as depicted in Figure 1. 
     
    **Figure 1. Adding the Message Queuing feature.**
 
@@ -40,13 +40,13 @@ MSMQ is provided as a "Feature" in Windows Server. To enable MSMQ, do the follow
   
 
   
-3. In the **Add Features Wizard**that appears, select**Message Queuing**. Accept the default selections and then click **Next**, then click **Install**. 
+3. In the **Add Features Wizard** that appears, select **Message Queuing**. Accept the default selections and then click **Next**, then click **Install**. 
     
   
 4. You must now restart your computer. 
     
   
-5. Once restarted, open **Server Manager**and then open**Message Queuing**icon in the left pane. Notice that it now contains a**Message Queuing**folder and subdirectories, as depicted in Figure 2.
+5. Once restarted, open **Server Manager** and then open **Message Queuing** icon in the left pane. Notice that it now contains a **Message Queuing** folder and subdirectories, as depicted in Figure 2.
     
     > [!NOTE]  
 > In Windows Server 2012 you will not find the queues in **Server Manager**. Instead, go to **Computer Management**, then select **Services and applications**. 
@@ -63,8 +63,8 @@ MSMQ is provided as a "Feature" in Windows Server. To enable MSMQ, do the follow
     
     
     > [!NOTE]  
-> When you first add the **Message Queuing**feature, the**Private Queues**folder is empty. However, after a workflow runs that fires an event (or a workflow triggered by a SharePoint content change event runs), the**Private Queues**folder is populated as shown in Figure 2.
-7. To complete the installation, you must set the **SPWorkflowServiceApplicationProxy.AllowQueue**property to**true**using a Windows PowerShell script. In the**SharePoint Administration shell**, run the following: 
+> When you first add the **Message Queuing** feature, the **Private Queues** folder is empty. However, after a workflow runs that fires an event (or a workflow triggered by a SharePoint content change event runs), the **Private Queues** folder is populated as shown in Figure 2.
+7. To complete the installation, you must set the **SPWorkflowServiceApplicationProxy.AllowQueue** property to **true** using a Windows PowerShell script. In the **SharePoint Administration shell**, run the following: 
     
   ```
   

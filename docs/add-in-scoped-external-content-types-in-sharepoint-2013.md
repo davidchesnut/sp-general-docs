@@ -94,11 +94,11 @@ The concept of a file-based metadata catalog was introduced in SharePoint 2010. 
   
     
     
-In SharePoint 2013, **SPListDataSource**has been modified to add a property that indicates the scope of the application.
+In SharePoint 2013, **SPListDataSource** has been modified to add a property that indicates the scope of the application.
   
     
     
-This class serves as the bridge between **SPList**and an external list. Use the associated**SPList**to retrieve entity fields and data. Retrieve an instance of**SPListDataSource**from the**HasExternalDataSource**property. When**HasExternalDataSource**is not null, the**SPList**object's data is external to SharePoint 2013.
+This class serves as the bridge between **SPList** and an external list. Use the associated **SPList** to retrieve entity fields and data. Retrieve an instance of **SPListDataSource** from the **HasExternalDataSource** property. When **HasExternalDataSource** is not null, the **SPList** object's data is external to SharePoint 2013.
   
     
     
@@ -106,11 +106,11 @@ When you want to add an add-in-scoped external content type, this property is se
   
     
     
-The **MetadataCatalogFileName**property is used to define the BDC model file that contains the external content type definition. This property can be defined declaratively or programmatically, but not in the SharePoint user interface (UI).
+The **MetadataCatalogFileName** property is used to define the BDC model file that contains the external content type definition. This property can be defined declaratively or programmatically, but not in the SharePoint user interface (UI).
   
     
     
-The following example shows how to set the **MetadataCatalogFileName**property declaratively.
+The following example shows how to set the **MetadataCatalogFileName** property declaratively.
   
     
     
@@ -155,7 +155,7 @@ You can include a BDC model in a WSP file for deployment. The following example 
 
 
 > [!IMPORTANT]  
-> Only one BDC model file can be included per add-in. While the file name in this example is BDCMetadata.bdcm, the model file can actually be any name you choose as long as the file name matches that is in the **Path**attribute of the BDC model file.
+> Only one BDC model file can be included per add-in. While the file name in this example is BDCMetadata.bdcm, the model file can actually be any name you choose as long as the file name matches that is in the **Path** attribute of the BDC model file.
   
     
     

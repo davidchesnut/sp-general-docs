@@ -10,25 +10,25 @@ ms.assetid: 8c1af2eb-bb22-45e1-82de-a2b4b53d7a26
 
 # How to: Enable UDFs
 
-Each Excel Services trusted location in the Shared Services Provider (SSP) has an **AllowUdfs**flag.
+Each Excel Services trusted location in the Shared Services Provider (SSP) has an **AllowUdfs** flag.
   
     
     
 
 
 > [!NOTE]  
-> The **AllowUdfs**flag is denoted by the**User-defined functions allowed**option on the Excel Services Trusted File Locations page.
+> The **AllowUdfs** flag is denoted by the **User-defined functions allowed** option on the Excel Services Trusted File Locations page.
   
     
     
 
 
-The default **AllowUdfs**value is**false**. If the **AllowUdfs**value is set to**false**in a particular trusted location, the workbooks in that trusted location are not allowed to call UDFs.
+The default **AllowUdfs** value is **false**. If the **AllowUdfs** value is set to **false** in a particular trusted location, the workbooks in that trusted location are not allowed to call UDFs.
   
     
     
 
-In order to allow UDFs to be called from a specific trusted location, you set the **AllowUdfs**value to**true**. If the **AllowUdfs**value is**false**when a session is started on a workbook that has UDF calls in this trusted location, the UDF calls will fail. If you change the**AllowUdfs**value to**true**after a session has started, the UDF calls will also fail. This is because changes in the**AllowUdfs**flag take effect on the next session, after the configuration database has been updated.You can get around this by restarting the session—for example, by selecting **Reload Workbook**in Excel Web Access.
+In order to allow UDFs to be called from a specific trusted location, you set the **AllowUdfs** value to **true**. If the **AllowUdfs** value is **false** when a session is started on a workbook that has UDF calls in this trusted location, the UDF calls will fail. If you change the **AllowUdfs** value to **true** after a session has started, the UDF calls will also fail. This is because changes in the **AllowUdfs** flag take effect on the next session, after the configuration database has been updated.You can get around this by restarting the session—for example, by selecting **Reload Workbook** in Excel Web Access.
 > [!CAUTION]  
 > If you choose to reset Microsoft Internet Information Services (IIS) instead, it will end all current sessions. 
   
@@ -46,10 +46,10 @@ To do the following steps, you need a computer that has Microsoft SharePoint Ser
 ### To enable UDFs
 
 
-1. On the **Start**menu, click**All Programs**. 
+1. On the **Start** menu, click **All Programs**. 
     
   
-2. Point to **Microsoft Office Server**and click**SharePoint Central Administration**. 
+2. Point to **Microsoft Office Server** and click **SharePoint Central Administration**. 
     
   
 3. On the Quick Launch, click your Shared Services Provider (SSP) link—for example, "SharedServices1"—to view the Shared Services home page for that particular SSP. 
@@ -58,17 +58,17 @@ To do the following steps, you need a computer that has Microsoft SharePoint Ser
 4. Under **Excel Services Settings**, click **User-defined functions**. 
     
   
-5. On the Excel Services User-Defined Functions page, click **Add User-Defined Function**to open the Excel Services Add User-Defined Function Assembly page.
+5. On the Excel Services User-Defined Functions page, click **Add User-Defined Function** to open the Excel Services Add User-Defined Function Assembly page.
     
   
-6. In the **Assembly**box, type the path to the UDF assembly. For example,C:\\MyUdfFolder\\MyUdf.dll. 
+6. In the **Assembly** box, type the path to the UDF assembly. For example,C:\\MyUdfFolder\\MyUdf.dll. 
     
   
 7. Under **Assembly Location**, click **Local file**. 
     
     > [!NOTE]  
->  The**Local file**option will be replaced with**File path**in future releases of Excel Services. If you see**File path**, select that instead. 
-8. Under **Enable Assembly**, the **Assembly enabled**check box should be selected by default.
+>  The **Local file** option will be replaced with **File path** in future releases of Excel Services. If you see **File path**, select that instead. 
+8. Under **Enable Assembly**, the **Assembly enabled** check box should be selected by default.
     
   
 9. Click **OK**. 
@@ -85,7 +85,7 @@ To do the following steps, you need a computer that has Microsoft SharePoint Ser
     
     > [!NOTE]  
 > For more information about trusting a location, see  [How to: Trust a Location](how-to-trust-a-location.md). 
-2. Under **Allow User-Defined Functions**, select **User-defined functions allowed**to allow UDFs to be called from workbooks stored in this trusted location.
+2. Under **Allow User-Defined Functions**, select **User-defined functions allowed** to allow UDFs to be called from workbooks stored in this trusted location.
     
   
 3. Click **OK**. 

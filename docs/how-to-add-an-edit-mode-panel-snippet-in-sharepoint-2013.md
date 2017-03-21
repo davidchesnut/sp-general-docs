@@ -58,24 +58,24 @@ Like all snippets, you add this snippet from the Snippet Gallery. To navigate to
 2. In the upper-right corner of the page, choose the Settings gear, and then choose **Design Manager**. 
     
   
-3. In Design Manager, in the left navigation pane, choose **Edit Master Pages**or**Edit Page Layouts**, depending on what type of file you're editing. 
+3. In Design Manager, in the left navigation pane, choose **Edit Master Pages** or **Edit Page Layouts**, depending on what type of file you're editing. 
     
   
 4. Select the name of the master page or page layout that you want to add the snippet to. 
     
   
-5. To open the Snippet Gallery, choose **Snippets**in the upper-right corner of the server-side preview.
+5. To open the Snippet Gallery, choose **Snippets** in the upper-right corner of the server-side preview.
     
   
-6. On the ribbon, on the **Design**tab, choose**Edit Mode Panel**, and then choose the mode that you want your snippet to be displayed in. 
+6. On the ribbon, on the **Design** tab, choose **Edit Mode Panel**, and then choose the mode that you want your snippet to be displayed in. 
     
   
 7. On the right side of the Snippet Gallery, under **About this Component**, click or select section headers to expand or collapse groups of properties, and then configure any custom settings that you want. 
     
-    The section named Important contains the properties that are most important to how this particular snippet works. For an Edit Mode Panel, the **PageDisplayMode**property will be set to either**Edit**or**Display**, depending on the mode that you selected on the ribbon. 
+    The section named Important contains the properties that are most important to how this particular snippet works. For an Edit Mode Panel, the **PageDisplayMode** property will be set to either **Edit** or **Display**, depending on the mode that you selected on the ribbon. 
     
   
-8. After you configure any properties, choose **Update**. This updates the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose **Reset**to return all properties to their default settings.
+8. After you configure any properties, choose **Update**. This updates the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose **Reset** to return all properties to their default settings.
     
   
 9. On the left side of the Snippet Gallery, under **HTML Snippet**, choose **Copy to Clipboard**. 
@@ -86,10 +86,10 @@ Like all snippets, you add this snippet from the Snippet Gallery. To navigate to
   
 11. In the HTML file, paste the snippet where you want the markup to appear. 
     
-    If you're adding the Edit Mode Panel to a page layout, make sure to paste the snippet inside **PlaceHolderMain**so that the panel is visible to content authors in edit mode. You can paste the snippet immediately before a specific page field, or you can put one or more page fields inside the Edit Mode Panel.
+    If you're adding the Edit Mode Panel to a page layout, make sure to paste the snippet inside **PlaceHolderMain** so that the panel is visible to content authors in edit mode. You can paste the snippet immediately before a specific page field, or you can put one or more page fields inside the Edit Mode Panel.
     
   
-12. Replace the **<div>**where `class="DefaultContentBlock"` with your own specific content—for example, with notes or instructions to content authors, or specific page fields that are useful for authors but not site visitors.
+12. Replace the **<div>** where `class="DefaultContentBlock"` with your own specific content—for example, with notes or instructions to content authors, or specific page fields that are useful for authors but not site visitors.
     
   
 13. Save the page, and then refresh the server-side preview in Design Manager to make sure the Edit Mode Panel appears as expected. 
@@ -99,7 +99,7 @@ Like all snippets, you add this snippet from the Snippet Gallery. To navigate to
 ## Understand the snippet markup
 <a name="UnderstandMarkup"> </a>
 
-The two most important parts of an Edit Mode Panel snippet are the **PageDisplayMode**property and the**<div>**where `class="DefaultContentBlock"`. The **PageDisplayMode**property determines whether the contents of the panel are displayed only in edit mode or in regular/display mode (meaning whenever the page is not in edit mode).
+The two most important parts of an Edit Mode Panel snippet are the **PageDisplayMode** property and the **<div>** where `class="DefaultContentBlock"`. The **PageDisplayMode** property determines whether the contents of the panel are displayed only in edit mode or in regular/display mode (meaning whenever the page is not in edit mode).
   
     
     
@@ -110,7 +110,7 @@ The two most important parts of an Edit Mode Panel snippet are the **PageDisplay
     
     
 
-The **<div>**where `class="DefaultContentBlock"` is what you replace with your own content, which can include other snippets and controls.
+The **<div>** where `class="DefaultContentBlock"` is what you replace with your own content, which can include other snippets and controls.
   
     
     

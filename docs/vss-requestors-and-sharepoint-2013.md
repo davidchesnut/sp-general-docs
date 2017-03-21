@@ -6,7 +6,7 @@ ms.assetid: 0b2e5a4e-40f0-4ccf-a21a-7274921f2169
 
 
 # VSS requestors and SharePoint 2013
-**Summary:**Learn about how the requestor system of the Volume Shadow Copy Service (VSS) system works with Microsoft SharePoint 2013.
+ **Summary:** Learn about how the requestor system of the Volume Shadow Copy Service (VSS) system works with Microsoft SharePoint 2013.
 VSS in Windows Server can be used to create applications that back up and restore Microsoft SharePoint Foundation. The VSS provides an infrastructure that enables third-party storage management programs, business programs, and hardware providers to cooperate in creating and managing shadow copies. Solutions based on this infrastructure can use the shadow copies (or mirrored copies) to back up and restore one or more SharePoint Foundation databases.
   
     

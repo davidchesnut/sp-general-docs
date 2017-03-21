@@ -88,7 +88,7 @@ A term is a word or a phrase that can be associated with an item in SharePoint 2
     
     
 
-You can create a term set programmatically by using the types exposed via  [Microsoft.SharePoint.Taxonomy](https://msdn.microsoft.com/library/Microsoft.SharePoint.Taxonomy.aspx) . The following code example shows how to create a**TermSet**object and obtain the**NavigationTermSet**. Next, you create **Term**objects within your**TermSet**. Finally, commit these changes to the **TermStore**and load the**TermSet**to use for navigation.
+You can create a term set programmatically by using the types exposed via  [Microsoft.SharePoint.Taxonomy](https://msdn.microsoft.com/library/Microsoft.SharePoint.Taxonomy.aspx) . The following code example shows how to create a **TermSet** object and obtain the **NavigationTermSet**. Next, you create **Term** objects within your **TermSet**. Finally, commit these changes to the **TermStore** and load the **TermSet** to use for navigation.
   
     
     
@@ -161,7 +161,7 @@ In your custom Web Part, you can re-implement either the  [OnLoad()](https://msd
 
 ### Example 1: Add Male and Female user segments to your SharePoint Server 2013 site
 
-To add **Male**and**Female**user segments, you can re-implement the [OnLoad()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.OnLoad.aspx) method as shown in the following code.
+To add **Male** and **Female** user segments, you can re-implement the [OnLoad()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.OnLoad.aspx) method as shown in the following code.
   
     
     
@@ -182,7 +182,7 @@ protected override void OnLoad(EventArgs e)
 }
 ```
 
-The corresponding **AddMycustomProperties**method would look like the following code.
+The corresponding **AddMycustomProperties** method would look like the following code.
   
     
     
@@ -223,7 +223,7 @@ private void AddMycustomProperties(object sender, BeforeSerializeToClientEventAr
 
 ### Example 2: Create user segments based on the type of Web browser your end-user is using when
 
-To create user segments based on the type of web browser the end-user is using, to view your SharePoint Server 2013 site, re-implement the **OnLoad**method as shown in the following code.
+To create user segments based on the type of web browser the end-user is using, to view your SharePoint Server 2013 site, re-implement the **OnLoad** method as shown in the following code.
   
     
     
@@ -244,7 +244,7 @@ protected override void OnLoad(EventArgs e)
 }
 ```
 
-The code for the **AddMycustomProperties**method would look like the following example.
+The code for the **AddMycustomProperties** method would look like the following example.
   
     
     
@@ -286,7 +286,7 @@ In order to use your custom Web Part in your page, you need to upload the Web Pa
   
     
     
-In the **SharePoint Web Part Gallery**, choose **Site Settings**, and then choose **Web parts**under**Web Designer Galleries**. On the **Files**tab, choose**Upload Document**. 
+In the **SharePoint Web Part Gallery**, choose **Site Settings**, and then choose **Web parts** under **Web Designer Galleries**. On the **Files** tab, choose **Upload Document**. 
   
     
     
@@ -312,19 +312,19 @@ When implementing user segmentation, you use query rules to define conditions an
 2. Choose a result source, and then choose **New Query Rule**. 
     
   
-3. Type a rule name in the **Rule Name**field. Then, click to expand**Context**. 
+3. Type a rule name in the **Rule Name** field. Then, click to expand **Context**. 
     
   
-4. Under the **Query is performed by these user segments**section, choose**One of these user segments**, and then click **Add User Segment**. 
+4. Under the **Query is performed by these user segments** section, choose **One of these user segments**, and then click **Add User Segment**. 
     
   
-5. In the **Title**field, type a name for this user segment query rule. Choose**Add user segment term**. 
+5. In the **Title** field, type a name for this user segment query rule. Choose **Add user segment term**. 
     
   
-6. In the **Import from term store**dialog box, expand the**Managed Metadata Service**. Under **Site Collection**, locate the term set that holds the user segmentation terms that you previously defined in  [Create a term set](#SP15_Create_a_term_set). Select the user segment for which you want to apply this query rule. Then, click **Save**. 
+6. In the **Import from term store** dialog box, expand the **Managed Metadata Service**. Under **Site Collection**, locate the term set that holds the user segmentation terms that you previously defined in  [Create a term set](#SP15_Create_a_term_set). Select the user segment for which you want to apply this query rule. Then, click **Save**. 
     
   
-7. Name your user segment n the **Add User Segment**dialog box.
+7. Name your user segment n the **Add User Segment** dialog box.
     
     You have now mapped a query rule to a user segment, which in turn is mapped to a user segment term. 
     
@@ -334,7 +334,7 @@ When implementing user segmentation, you use query rules to define conditions an
     This specifies that the query configured in the  [ContentBySearchWebPart](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebConrols.ContentBySearchWebPart.aspx) will act as the query condition.
     
   
-9. Set the corresponding actions that your query rule will perform. Under the **Actions**section, select a corresponding action that you want to take as a result of -your query rule. You can select to either**Add Promoted Result**or**Add a Result Block**. 
+9. Set the corresponding actions that your query rule will perform. Under the **Actions** section, select a corresponding action that you want to take as a result of -your query rule. You can select to either **Add Promoted Result** or **Add a Result Block**. 
     
   
 10. Save your query rule. 
@@ -358,13 +358,13 @@ You need to add your custom Web Part to your SharePoint page.
 1. Navigate to a category page, choose **Edit page**, and then choose **Edit page template**. 
     
   
-2. Select **Add a Web Part**in the top section of the page. Then, select your custom Web Part from the drop-down menu in the upper right corner of the Web Part.
+2. Select **Add a Web Part** in the top section of the page. Then, select your custom Web Part from the drop-down menu in the upper right corner of the Web Part.
     
   
 3. Click **Edit Web Part**. 
     
   
-4. Expand the **Settings**section, and in the**Result Table**field, choose**SpecialTermResults**. 
+4. Expand the **Settings** section, and in the **Result Table** field, choose **SpecialTermResults**. 
     
   
 5. Save your configuration. 

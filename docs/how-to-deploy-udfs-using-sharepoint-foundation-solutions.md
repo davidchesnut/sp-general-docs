@@ -3,7 +3,7 @@ title: How to Deploy UDFs Using SharePoint Foundation Solutions
 keywords: how to,howdoi,howto,udf list,WSS Solutions
 f1_keywords:
 - how to,howdoi,howto,udf list,WSS Solutions
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: 97751a6c-ef73-4d95-a3c4-98014d84ba48
 ---
 
@@ -40,15 +40,15 @@ The procedure for creating and deploying a UDF assembly by using SharePoint Foun
 5. Deploy the solution by using stsadm.exe. 
     
   
-Each Excel Services trusted location has an **AllowUdfs**flag.
+Each Excel Services trusted location has an **AllowUdfs** flag.
 > [!NOTE]  
-> The **AllowUdfs**flag is denoted by the**User-defined functions allowed**option on the Excel Services Trusted File Locations page. To learn how to navigate to the Trusted File Locations page, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
+> The **AllowUdfs** flag is denoted by the **User-defined functions allowed** option on the Excel Services Trusted File Locations page. To learn how to navigate to the Trusted File Locations page, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
   
     
     
 
 In order to allow UDFs to be called from a specific trusted location, you must: 
-- Set the **AllowUdfs**value to**true**. The default value is **false**. 
+- Set the **AllowUdfs** value to **true**. The default value is **false**. 
     
   
 - Add the UDF assembly to the trusted UDF list to allow the UDF to be called from a workbook. 
@@ -91,7 +91,7 @@ For more information on how to enable UDFs and add UDFs to the trusted UDF list,
 
 
     > [!NOTE]  
-> You should generate a unique GUID for each solution. For more information about **Solution**element, see the SharePoint Foundation [Solutions and Web Part Packages](http://msdn.microsoft.com/library/a145a5eb-fbb6-4328-b5b3-96bf5ce89a19%28Office.15%29.aspx) (http://msdn.microsoft.com/en-us/library/ms413687.aspx).
+> You should generate a unique GUID for each solution. For more information about **Solution** element, see the SharePoint Foundation [Solutions and Web Part Packages](http://msdn.microsoft.com/library/a145a5eb-fbb6-4328-b5b3-96bf5ce89a19%28Office.15%29.aspx) (http://msdn.microsoft.com/en-us/library/ms413687.aspx).
 
 ### To create a solution package
 
@@ -105,7 +105,7 @@ For more information on how to enable UDFs and add UDFs to the trusted UDF list,
 
 1. Click **Start**, point to **Administrative Tools**, and then double-click **Services**. 
     
-    The **Services**dialog box appears.
+    The **Services** dialog box appears.
     
   
 2. Make sure that the status of SharePoint Foundation Administration service shows **Started**. If it does not, right-click SharePoint Foundation Administration, and then select **Start**. 
@@ -115,7 +115,7 @@ For more information on how to enable UDFs and add UDFs to the trusted UDF list,
 ### To add the solution
 
 
-1. Click **Start**, click**Run**, and then typecmd. 
+1. Click **Start**, click **Run**, and then typecmd. 
     
     The command prompt console appears. 
     
@@ -138,7 +138,7 @@ For more information on how to enable UDFs and add UDFs to the trusted UDF list,
 ### To deploy the solution
 
 
-1. Click **Start**, click**Run**, and then typecmd. 
+1. Click **Start**, click **Run**, and then typecmd. 
     
     The command prompt console appears. 
     

@@ -33,7 +33,7 @@ To understand pinning in SharePoint 2013, you may want to learn about managed me
 ## Use code to complete pinning tasks
 <a name="SP15_H2UseCodeToPinTerms_UseCodeToCompletePinning"> </a>
 
-You can use custom code from the .NET server, .NET client (CSOM), Silverlight, or JavaScript programming models to complete pinning operations on terms and term sets. The following .NET server code examples include a test for pinning terms to navigation term sets, and a method that you can use to test whether a **Term**object is pinned to a specified**TermSet**object. Then, the test creates**Term**objects, and pins one of them to the specified**NavigationTermSet**object.
+You can use custom code from the .NET server, .NET client (CSOM), Silverlight, or JavaScript programming models to complete pinning operations on terms and term sets. The following .NET server code examples include a test for pinning terms to navigation term sets, and a method that you can use to test whether a **Term** object is pinned to a specified **TermSet** object. Then, the test creates **Term** objects, and pins one of them to the specified **NavigationTermSet** object.
   
     
     
@@ -43,7 +43,7 @@ You can use custom code from the .NET server, .NET client (CSOM), Silverlight, o
 
 - The following sample tests pinning terms to navigation term sets. It uses the  [NavigationTermSet](https://msdn.microsoft.com/library/Microsoft.SharePoint.SharePoint.NavigationTermSet.aspx) object, which contains methods and properties that are handy in managed navigation scenarios, such as creating taxonomy-driven site navigation menus.
     
-    The sample first checks whether a **NavigationTermSet**object exists. If one doesn't exist, then the code creates a**NavigationTermSet**. (If one already exists, the code deletes the old one before it creates a new one). Then, after the code creates some **Term**objects to pick from, it creates a publishing page (.aspx) file for demonstration purposes, sets it as the custom target page for pinned terms, and then pins some navigation properties to the page.
+    The sample first checks whether a **NavigationTermSet** object exists. If one doesn't exist, then the code creates a **NavigationTermSet**. (If one already exists, the code deletes the old one before it creates a new one). Then, after the code creates some **Term** objects to pick from, it creates a publishing page (.aspx) file for demonstration purposes, sets it as the custom target page for pinned terms, and then pins some navigation properties to the page.
     
 
 

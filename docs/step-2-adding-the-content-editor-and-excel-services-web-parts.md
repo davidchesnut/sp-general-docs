@@ -1,6 +1,6 @@
 ---
 title: Step 2 Adding the Content Editor and Excel Services Web Parts
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: c9c66843-fd77-4a0d-a512-d936d15d4429
 ---
 
@@ -36,7 +36,7 @@ Next, display a workbook by using the Excel Services Web Part that you added to 
 ### To run the ECMAScript sample
 
 
-1. Upload a workbook to a trusted document library. Use the **Modify Shared Web Part**menu to display the Excel Services Web Part task pane. In the**Workbook Display**section, in the**Workbook**field, type the URL to the workbook that you want the Excel Services Web Part to load and display. For example:
+1. Upload a workbook to a trusted document library. Use the **Modify Shared Web Part** menu to display the Excel Services Web Part task pane. In the **Workbook Display** section, in the **Workbook** field, type the URL to the workbook that you want the Excel Services Web Part to load and display. For example:
     
      `http://` _myserver_ `/Docs/Documents/WorkbookToDisplay.xlsx`
     

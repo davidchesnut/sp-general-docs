@@ -1,6 +1,6 @@
 ---
 title: Advanced Scenarios and Additional Samples
-ms.prod: OFFICE365
+ms.prod: SHAREPOINT
 ms.assetid: 110bcc88-2b55-4d80-ab5c-dc3b9658e48d
 ---
 

@@ -116,19 +116,19 @@ However, for SharePoint 2013 to enable BCS to receive notifications from remote 
 ### To create a new WCF project
 
 
-1. In Visual Studio, on the **File**menu, choose**New**, **Project**. 
+1. In Visual Studio, on the **File** menu, choose **New**, **Project**. 
     
   
-2. In the **New Project**dialog box, choose the**Web**template, and then choose**ASP.NET Web Application**. 
+2. In the **New Project** dialog box, choose the **Web** template, and then choose **ASP.NET Web Application**. 
     
   
-3. Enter **AdventureWorksService**for the project name, and choose**OK**. 
+3. Enter **AdventureWorksService** for the project name, and choose **OK**. 
     
   
 4. In **Solution Explorer**, open the shortcut menu for the ASP.NET project that you just created, and choose **Properties**. 
     
   
-5. Select the **Web**tab, and set the value of the**Specific port**text box to8008. 
+5. Select the **Web** tab, and set the value of the **Specific port** text box to8008. 
     
   
 
@@ -138,7 +138,7 @@ However, for SharePoint 2013 to enable BCS to receive notifications from remote 
 1. In **Solution Explorer**, open the shortcut menu for the ASP.NET project, and choose **Add New Item**. 
     
   
-2. In the **Add New Item**dialog box, choose the Data template, and then choose**ADO.NET Entity Data Model**. 
+2. In the **Add New Item** dialog box, choose the Data template, and then choose **ADO.NET Entity Data Model**. 
     
   
 3. For the name of the data model, enter **AdventureWorks.edmx**. 
@@ -158,7 +158,7 @@ However, for SharePoint 2013 to enable BCS to receive notifications from remote 
   - On the final page of the wizard, select the check boxes for all tables in the database, and clear the check boxes for views and stored procedures. 
     
   
-6. Choose **Finish**to close the wizard.
+6. Choose **Finish** to close the wizard.
     
   
 
@@ -168,7 +168,7 @@ However, for SharePoint 2013 to enable BCS to receive notifications from remote 
 1. In **Solution Explorer**, open the shortcut menu for your ASP.NET project, and then choose **Add New Item**. 
     
   
-2. In the **Add New Item**dialog box, choose**WCF Data Service**. 
+2. In the **Add New Item** dialog box, choose **WCF Data Service**. 
     
   
 3. For the name of the service, enter **AdventureWorks**. 
@@ -176,7 +176,7 @@ However, for SharePoint 2013 to enable BCS to receive notifications from remote 
     Visual Studio creates the XML markup and code files for the new service. By default, the code-editor window opens. In **Solution Explorer**, the service will have the name, **AdventureWorks**, with the extension .svc.cs or .svc.vb. 
     
   
-4. Replace the comment  `/* TODO: put your data source class name here */` in the definition of the class that defines the data service with the type that is the entity container of the data model, which in this case is**AdventureWorksEntities**. The class definition should look like the following: 
+4. Replace the comment  `/* TODO: put your data source class name here */` in the definition of the class that defines the data service with the type that is the entity container of the data model, which in this case is **AdventureWorksEntities**. The class definition should look like the following: 
     
   ```cs
   
@@ -191,7 +191,7 @@ By default, when a WCF service is created, it cannot be accessed due to its secu
 ### To enable access to data service resources
 
 
-- In the code for the data service, replace the placeholder code in the **InitializeService**function with the following.
+- In the code for the data service, replace the placeholder code in the **InitializeService** function with the following.
     
   ```cs
   
@@ -208,7 +208,7 @@ For BCS to receive notifications, there must be a mechanism on the back-end data
   
     
     
-The last step in creating the service is to add service operations for the **Subscribe**and**Unsubscribe**stereotypes that are defined in the BDC model.
+The last step in creating the service is to add service operations for the **Subscribe** and **Unsubscribe** stereotypes that are defined in the BDC model.
   
     
     
@@ -228,7 +228,7 @@ public string subscriptionStorePath = @"\\\\[SHARE_NAME]\\SubscriptionStore\\Sub
 > This file is an XML file that is updated with the new subscriptions. Access to this file will be made by the server process, so make sure you have granted sufficient rights for this file access. 
 > You might also want to create a database solution for storing subscription information. 
 
-    Then add the following two **WebGet**methods to handle the subscriptions.
+    Then add the following two **WebGet** methods to handle the subscriptions.
     
 
 

@@ -22,7 +22,7 @@ Developers familiar with SharePoint know they can build server-side farm solutio
   
     
     
-**For SharePoint Add-ins development**
+ **For SharePoint Add-ins development**
   
     
     
@@ -34,7 +34,7 @@ The following article can help you get acquainted with SharePoint Add-ins and de
 -  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions.md)
     
   
-**For SharePoint solutions and add-ins for mobility features development**
+ **For SharePoint solutions and add-ins for mobility features development**
   
     
     
@@ -68,7 +68,7 @@ The following sections provide information about SharePoint 2013 features that a
 ## Set up your development environment and start developing
 <a name="bk_getstarted"> </a>
 
-**For SharePoint solutions and add-ins for mobility features development**
+ **For SharePoint solutions and add-ins for mobility features development**
   
     
     
@@ -92,7 +92,7 @@ Table 1 shows the resources for setting up a development environment and beginni
 | [Programming models in SharePoint 2013](programming-models-in-sharepoint-2013.md)|Provides a quick overview of the different kinds of SharePoint development projects that you can create with SharePoint 2013. |
 | [Add SharePoint 2013 capabilities](add-sharepoint-2013-capabilities.md)|Provides a gateway to detailed information about using the capabilities of SharePoint 2013 in your solutions. |
    
-**For SharePoint Add-ins development**
+ **For SharePoint Add-ins development**
   
     
     

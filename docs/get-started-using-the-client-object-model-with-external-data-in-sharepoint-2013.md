@@ -37,7 +37,7 @@ For information about how to set up your development environment, see  [Setting 
   
     
     
-To access the capabilities provided by the client object model, you need only to add references to the **Microsoft.SharePoint.Client.Runtime.dll**and**Microsoft.SharePoint.Client.dll**files in their projects. You can also use the client object model by referencing the following DLLs in the global assembly cache:
+To access the capabilities provided by the client object model, you need only to add references to the **Microsoft.SharePoint.Client.Runtime.dll** and **Microsoft.SharePoint.Client.dll** files in their projects. You can also use the client object model by referencing the following DLLs in the global assembly cache:
   
     
     
@@ -165,7 +165,7 @@ ctx.ExecuteQuery();
 
 ### Query for filtered information
 
-The following example demonstrates how to return a filtered result set. In this case, the data column filtered is the **X.Y.Z.Country**field. The code looks for anything with the value of "India", and then puts that into a collection.
+The following example demonstrates how to return a filtered result set. In this case, the data column filtered is the **X.Y.Z.Country** field. The code looks for anything with the value of "India", and then puts that into a collection.
   
     
     

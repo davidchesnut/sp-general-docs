@@ -1,6 +1,6 @@
 ---
 title: Getting Ranges Using Atom Feed and HTML Fragment
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: 45d4ef08-02d6-48dd-b0ef-a748db1a0c6a
 ---
 
@@ -39,7 +39,7 @@ As described in the  [Discovery in Excel Services REST API](discovery-in-excel-s
 http://<ServerName>/_vti_bin/ExcelRest.aspx/<DocumentLibrary>/<FileName>/model
 ```
 
-Therefore, for a workbook with the file name **sampleWorkbook.xlsx**that is saved to `http://` _<ServerName>_ `/Docs/Documents/sampleWorkbook.xlsx`, following is the URI to the model page: 
+Therefore, for a workbook with the file name **sampleWorkbook.xlsx** that is saved to `http://` _<ServerName>_ `/Docs/Documents/sampleWorkbook.xlsx`, following is the URI to the model page: 
   
     
     
@@ -50,7 +50,7 @@ Therefore, for a workbook with the file name **sampleWorkbook.xlsx**that is save
 http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model
 ```
 
-Using the discovery mechanism described in  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api.md), if you click on the **Ranges**Atom feed on the model page on the server, ( `http://` _<ServerName>_ `/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model`), it displays a page that shows all the named ranges in the workbook. The sampleWorkbook.xlsx contains one named range, **SampleNamedRange**, as shown in the following screen shot: 
+Using the discovery mechanism described in  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api.md), if you click on the **Ranges** Atom feed on the model page on the server, ( `http://` _<ServerName>_ `/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model`), it displays a page that shows all the named ranges in the workbook. The sampleWorkbook.xlsx contains one named range, **SampleNamedRange**, as shown in the following screen shot: 
   
     
     
@@ -85,7 +85,7 @@ Using the discovery mechanism described in  [Discovery in Excel Services REST AP
 
 ### Accessing Ranges by Using an Atom Feed
 
-If you click **SampleNamedRange**in the range discovery page, you navigate to the following URL:
+If you click **SampleNamedRange** in the range discovery page, you navigate to the following URL:
   
     
     
@@ -190,19 +190,19 @@ The feed item contains XML that represents the data inside the range. Following 
     
     
 
-- **<range>**The range element. Represents the container of the returned range.
+- **<range>** The range element. Represents the container of the returned range.
     
   
-- **<row>**The row element. Represents each row in the range.
+- **<row>** The row element. Represents each row in the range.
     
   
-- **<c>**The cell element. Represents each cell in a row.
+- **<c>** The cell element. Represents each cell in a row.
     
   
-- **<fv>**The formatted value element. Represents the value as it is formatted by Excel. If the value is of type string in the workbook, the formatted value element is the only element under**<c>**. 
+- **<fv>** The formatted value element. Represents the value as it is formatted by Excel. If the value is of type string in the workbook, the formatted value element is the only element under **<c>**. 
     
   
-- **<v>**The value element. Represents a number value. If the value in the cell is a number instead of a string, the value element contains that information.
+- **<v>** The value element. Represents a number value. If the value in the cell is a number instead of a string, the value element contains that information.
     
   
 Using XML gives you an easier way to get data out of an Excel range so that you can use it in your application. 

@@ -27,10 +27,10 @@ There are two limitations to using a Device Channel Panel:
     
     
 
-- **Display templates**Because display templates are rendered on the client side and Device Channel Panels run on the server side, you cannot use a Device Channel Panel within a display template. Instead, you should use two different Content Search Web Parts within Device Channel Panels on your page layout, or use the JavaScript variable to trigger the behavior you want within the display template itself.
+- **Display templates** Because display templates are rendered on the client side and Device Channel Panels run on the server side, you cannot use a Device Channel Panel within a display template. Instead, you should use two different Content Search Web Parts within Device Channel Panels on your page layout, or use the JavaScript variable to trigger the behavior you want within the display template itself.
     
   
-- **Web Part zones**You cannot insert a Web Part zone inside a Device Channel Panel. If you want to allow authors to add Web Parts to a page, and if you are not concerned about the page weight for mobile devices, you can add a Rich Text Editor page field to a Device Channel Panel, and then instruct authors to add Web Parts there. You can add Web Parts directly to a Device Channel Panel (without a Web Part zone).
+- **Web Part zones** You cannot insert a Web Part zone inside a Device Channel Panel. If you want to allow authors to add Web Parts to a page, and if you are not concerned about the page weight for mobile devices, you can add a Rich Text Editor page field to a Device Channel Panel, and then instruct authors to add Web Parts there. You can add Web Parts directly to a Device Channel Panel (without a Web Part zone).
     
   
 
@@ -51,25 +51,25 @@ Like all snippets, you add a Device Channel Panel snippet from the Snippet Galle
 2. In the upper-right corner of the page, choose the Settings gear, and then choose **Design Manager**. 
     
   
-3. In Design Manager, in the left navigation pane, choose **Edit Master Pages**or**Edit Page Layouts**, depending on what type of file you're editing. 
+3. In Design Manager, in the left navigation pane, choose **Edit Master Pages** or **Edit Page Layouts**, depending on what type of file you're editing. 
     
   
 4. Select the name of the master page or page layout that you want to add the snippet to. 
     
   
-5. To open the Snippet Gallery, choose **Snippets**in the upper-right corner of the server-side preview.
+5. To open the Snippet Gallery, choose **Snippets** in the upper-right corner of the server-side preview.
     
   
-6. On the ribbon, on the **Design**tab, choose**Device Channel Panel**. 
+6. On the ribbon, on the **Design** tab, choose **Device Channel Panel**. 
     
   
 7. On the right side of the Snippet Gallery, under **About this Component**, click or select section headers to expand or collapse groups of properties, and then configure any custom settings that you want. 
     
-    The section named **Important**contains the properties that are key to how this particular snippet works. For a Device Channel Panel, the**IncludedChannels**property is the most important. For this property, enter the alias of each Device Channel that you want to display the content contained in this Device Channel Panel. If you enter more than one alias, separate each with a comma.
+    The section named **Important** contains the properties that are key to how this particular snippet works. For a Device Channel Panel, the **IncludedChannels** property is the most important. For this property, enter the alias of each Device Channel that you want to display the content contained in this Device Channel Panel. If you enter more than one alias, separate each with a comma.
     
     > [!NOTE]  
-> If you edit the alias of a channel in the Device Channels list, you must manually find and update that alias wherever it appears in your design files, including updating the **IncludedChannels**property for every Device Channel Panel that uses that alias
-8. After you configure any other properties, choose **Update**. This updates the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose **Reset**to return all properties to their default settings.
+> If you edit the alias of a channel in the Device Channels list, you must manually find and update that alias wherever it appears in your design files, including updating the **IncludedChannels** property for every Device Channel Panel that uses that alias
+8. After you configure any other properties, choose **Update**. This updates the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose **Reset** to return all properties to their default settings.
     
   
 9. On the left side of the Snippet Gallery, under **HTML Snippet**, choose **Copy to Clipboard**. 
@@ -85,9 +85,9 @@ Like all snippets, you add a Device Channel Panel snippet from the Snippet Galle
     If you are adding the snippet to a page layout, make sure to paste the snippet inside **PlaceHolderMain**. 
     
   
-12. Replace the **<div>**where `class="DefaultContentBlock"` with your own specific content.
+12. Replace the **<div>** where `class="DefaultContentBlock"` with your own specific content.
     
-    Typically, if you're adding a Device Channel Panel to a page layout, you replace the **<div>**by copying page fields inside the panel.
+    Typically, if you're adding a Device Channel Panel to a page layout, you replace the **<div>** by copying page fields inside the panel.
     
   
 13. Save the page, and then refresh the server-side preview in Design Manager to make sure the Device Channel Panel appears as expected. 
@@ -99,18 +99,18 @@ Like all snippets, you add a Device Channel Panel snippet from the Snippet Galle
 ## Understanding the snippet markup
 <a name="UnderstandMarkup"> </a>
 
-The two most important parts of a Device Channel Panel snippet are the **IncludedChannels**property and the**<div>**where `class="DefaultContentBlock"`. By default, the **IncludedChannels**property is empty. In the**Important**section of the property grid, you should enter the aliases, separated by commas, of the device channels that you want to display the content in this panel.
+The two most important parts of a Device Channel Panel snippet are the **IncludedChannels** property and the **<div>** where `class="DefaultContentBlock"`. By default, the **IncludedChannels** property is empty. In the **Important** section of the property grid, you should enter the aliases, separated by commas, of the device channels that you want to display the content in this panel.
   
     
     
 
 > [!NOTE]  
-> If you change an alias in the Device Channels list, you must also change that alias wherever it appears in your markup, including in the **IncludedChannels**property for every Device Channel Panel that uses that alias.
+> If you change an alias in the Device Channels list, you must also change that alias wherever it appears in your markup, including in the **IncludedChannels** property for every Device Channel Panel that uses that alias.
   
     
     
 
-The **<div>**where `class="DefaultContentBlock"` should be replaced with whatever specific content you want to display for the included channels. A Device Channel Panel can include almost any type of content, including a link to a CSS file or a .js file. The most common scenario for using Device Channel Panels is to include specific page fields from a page layout for specific channels. In this case, you copy the page field markup where the**<div>**is positioned inside the Device Channel Panel.
+The **<div>** where `class="DefaultContentBlock"` should be replaced with whatever specific content you want to display for the included channels. A Device Channel Panel can include almost any type of content, including a link to a CSS file or a .js file. The most common scenario for using Device Channel Panels is to include specific page fields from a page layout for specific channels. In this case, you copy the page field markup where the **<div>** is positioned inside the Device Channel Panel.
   
     
     

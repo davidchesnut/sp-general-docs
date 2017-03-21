@@ -7,7 +7,7 @@ ms.assetid: 0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8
 
 # SharePoint Add-ins compared with SharePoint solutions
 Learn about when to develop your SharePoint 2013 extension as a SharePoint Add-in and when to develop it as a SharePoint farm solution or a no-code sandboxed solution. 
- ***Applies to:***
+ * **Applies to: *** 
   
     
     
@@ -94,7 +94,7 @@ You may encounter one of the small number of SharePoint development scenarios fo
     
     > [!NOTE]  
 > Note that SharePointfarm solutions are potentially more powerful than either NCSSs or SharePoint Add-ins for branding, but they are not an option on SharePoint Online. 
-- **"Template-like" extensions:**Suppose that you need to create a crisis management extension for SharePoint for the collaborative analysis and solution of business crises. Your extension includes several custom list types, no-code workflows, and other SharePoint components, all combined into a custom WebTemplate. Suppose you package and deploy the extension as an NCSS. After the Feature in the solution has been activated, users can create a crisis management subweb of their SharePoint website whenever a crisis occurs. They can populate the website with data that is specific to the crisis. On the other hand, you could implement the same extension as a SharePoint Add-in using exactly the same set of SharePoint components. When the add-in is installed on the team site, the subweb (known as the "add-in web") is immediately created. Again, users populate the website with relevant data.
+- **"Template-like" extensions:** Suppose that you need to create a crisis management extension for SharePoint for the collaborative analysis and solution of business crises. Your extension includes several custom list types, no-code workflows, and other SharePoint components, all combined into a custom WebTemplate. Suppose you package and deploy the extension as an NCSS. After the Feature in the solution has been activated, users can create a crisis management subweb of their SharePoint website whenever a crisis occurs. They can populate the website with data that is specific to the crisis. On the other hand, you could implement the same extension as a SharePoint Add-in using exactly the same set of SharePoint components. When the add-in is installed on the team site, the subweb (known as the "add-in web") is immediately created. Again, users populate the website with relevant data.
     
     Now, what happens when a second crisis occurs? If you implemented the extension as an NCSS, your users can merely create another subweb from your custom WebTemplate. However, if you implemented the extension as a SharePoint Add-in, your users have a problem. They cannot install a second instance of the same add-in on the parent website. Only one instance of any add-in can be installed on a host web. The best that you can do is create a subsite of the parent website to serve as a location for another instance of the add-in to be installed. When the add-in is installed, a new add-in web, which is a sub-subweb of the parent website, is created for the add-in components. This comparison shows a general, but not absolute, principle: SharePoint extensions that have a "template-like" character - that is, a reusable collection of components that must be configured for each specific use case, but which naturally have multiple instances associated with the same SharePoint website - fit better with the NCSS development model than with the add-in model. In this example, the variable element is the crisis, but it is easy to imagine template-like SharePoint extensions in which the instances vary by region, date, or any number of other characteristics. 
     
@@ -134,10 +134,10 @@ Some SharePoint components, listed below, are used in end-user scenarios, but ha
     
     
 
-- **Custom site definitions**But custom WebTemplates, which are functionally similar to site definitions, are available in both NCSSs and SharePoint Add-ins. For more information, see [Working with Site Templates and Definitions](http://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01%28Office.15%29.aspx). 
+- **Custom site definitions** But custom WebTemplates, which are functionally similar to site definitions, are available in both NCSSs and SharePoint Add-ins. For more information, see [Working with Site Templates and Definitions](http://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01%28Office.15%29.aspx). 
     
   
-- **Delegate controls**For more information, see [Delegate Control (Control Templatization)](http://msdn.microsoft.com/library/e979328d-4985-4ed6-9085-7ff32a998dfc%28Office.15%29.aspx). 
+- **Delegate controls** For more information, see [Delegate Control (Control Templatization)](http://msdn.microsoft.com/library/e979328d-4985-4ed6-9085-7ff32a998dfc%28Office.15%29.aspx). 
     
   
 - **Custom themes**
@@ -146,14 +146,14 @@ Some SharePoint components, listed below, are used in end-user scenarios, but ha
 - **Custom action groups and custom action hiding**
     
   
-- **User controls (.ascx files)**No scenario actually requires these.
+- **User controls (.ascx files)** No scenario actually requires these.
     
   
 
 ### Use add-in event handlers conservatively
 <a name="AppEventHandlers"> </a>
 
-You can overcome some of the limitations of SharePoint Add-ins by creating handlers for the add-in installed, add-in updated, and add-in uninstalling events. These handlers are web services that are hosted on web servers outside the SharePoint farm, possibly in the cloud. They can use the SharePoint client object model, or the REST APIs, to perform CRUD operations on SharePoint components, including components in the host web. In theory, you could use such handlers to overcome some deployment restrictions in the **Branding**and**Template-like extensions**items, discussed earlier. However, we recommend that you use such handlers only as a last resort, when there is no other way to give customers the functionality your use case requires. When deciding whether to create a handler, consider the following:
+You can overcome some of the limitations of SharePoint Add-ins by creating handlers for the add-in installed, add-in updated, and add-in uninstalling events. These handlers are web services that are hosted on web servers outside the SharePoint farm, possibly in the cloud. They can use the SharePoint client object model, or the REST APIs, to perform CRUD operations on SharePoint components, including components in the host web. In theory, you could use such handlers to overcome some deployment restrictions in the **Branding** and **Template-like extensions** items, discussed earlier. However, we recommend that you use such handlers only as a last resort, when there is no other way to give customers the functionality your use case requires. When deciding whether to create a handler, consider the following:
   
     
     
@@ -173,7 +173,7 @@ You can overcome some of the limitations of SharePoint Add-ins by creating handl
 - Add-in event handlers are not possible with the type of SharePoint Add-in known as SharePoint-hosted. 
     
   
-For more information about add-in event handlers, see the SDK node  [Handle events in SharePoint Add-ins](http://msdn.microsoft.com/library/c050d056-8548-4496-a053-016779d723d9%28Office.15%29.aspx). For information about rollback logic, see the **Add rollback logic to the handler**section of the topic [Create a handler for the update event in SharePoint Add-ins](http://msdn.microsoft.com/library/0fa088c5-54c6-482c-84ed-51c4f77c4127%28Office.15%29.aspx) The latter topic is written in the context of the add-in updated event, but the basic principles apply to all add-in event handlers.
+For more information about add-in event handlers, see the SDK node  [Handle events in SharePoint Add-ins](http://msdn.microsoft.com/library/c050d056-8548-4496-a053-016779d723d9%28Office.15%29.aspx). For information about rollback logic, see the **Add rollback logic to the handler** section of the topic [Create a handler for the update event in SharePoint Add-ins](http://msdn.microsoft.com/library/0fa088c5-54c6-482c-84ed-51c4f77c4127%28Office.15%29.aspx) The latter topic is written in the context of the add-in updated event, but the basic principles apply to all add-in event handlers.
   
     
     
@@ -181,7 +181,7 @@ For more information about add-in event handlers, see the SDK node  [Handle even
 ### Add-ins that create extensions
 <a name="ExtensionFactories"> </a>
 
-Another way to use the SharePoint client object model -- or its REST APIs -- to resolve component deployment issues with SharePoint Add-ins, is to have CRUD code inside the add-in itself, instead of in an add-in event handler. The add-in then becomes a kind of factory for a type of custom extension. For example, a SharePoint-hosted add-in could use the SharePointJavaScript object model to perform deployment and other CRUD operations on the host web or elsewhere in the tenancy or web application. For another example, see the **Quick introduction to remote provisioning**section of [Site provisioning techniques and remote provisioning in SharePoint 2013](http://blogs.msdn.com/b/vesku/archive/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint-2013.aspx), which describes how a provider-hosted SharePoint Add-in is used to provide subweb provisioning a lot like SharePoint's in-the-box subweb provisioning. There is, however, a lot of wheel-reinvention, and hence a lot of work in creating a factory SharePoint Add-in. In addition, this kind of add-in cannot be sold through the Office Store because the add-in requires Full Control of the host web. 
+Another way to use the SharePoint client object model -- or its REST APIs -- to resolve component deployment issues with SharePoint Add-ins, is to have CRUD code inside the add-in itself, instead of in an add-in event handler. The add-in then becomes a kind of factory for a type of custom extension. For example, a SharePoint-hosted add-in could use the SharePointJavaScript object model to perform deployment and other CRUD operations on the host web or elsewhere in the tenancy or web application. For another example, see the **Quick introduction to remote provisioning** section of [Site provisioning techniques and remote provisioning in SharePoint 2013](http://blogs.msdn.com/b/vesku/archive/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint-2013.aspx), which describes how a provider-hosted SharePoint Add-in is used to provide subweb provisioning a lot like SharePoint's in-the-box subweb provisioning. There is, however, a lot of wheel-reinvention, and hence a lot of work in creating a factory SharePoint Add-in. In addition, this kind of add-in cannot be sold through the Office Store because the add-in requires Full Control of the host web. 
   
     
     

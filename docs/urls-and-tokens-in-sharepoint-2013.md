@@ -21,16 +21,16 @@ SharePoint 2013 parses URL strings to determine the form of URL based on a speci
     
     
 
-- An **absolute URL**specifies a full path and begins with a protocol. For example, `http://` _domain_or_server_/[ `sites/`] _Web_Site_/ `Lists`/ _List_Title_/ `AllItems.aspx`. 
+- An **absolute URL** specifies a full path and begins with a protocol. For example, `http://` _domain_or_server_/[ `sites/`] _Web_Site_/ `Lists`/ _List_Title_/ `AllItems.aspx`. 
     
   
-- A **domain-relative URL**is based on the domain (which might be the name of a server) address and always begins with a forward slash. It specifies a complete path from top-level website to file name. For example, /[ `sites/`] _Web_Site_/ `Lists`/ _List_Title_/ `AllItems.aspx`. 
+- A **domain-relative URL** is based on the domain (which might be the name of a server) address and always begins with a forward slash. It specifies a complete path from top-level website to file name. For example, /[ `sites/`] _Web_Site_/ `Lists`/ _List_Title_/ `AllItems.aspx`. 
     
   
-- A **website-relative URL**is based on the address of a website object ( [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) ). It does _not_ begin with a forward slash, and it specifies a complete path from the website address to the file name. For example, `Lists/` _List_Title_/ `AllItems.aspx`. 
+- A **website-relative URL** is based on the address of a website object ( [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) ). It does _not_ begin with a forward slash, and it specifies a complete path from the website address to the file name. For example, `Lists/` _List_Title_/ `AllItems.aspx`. 
     
   
-- A **URL relative to a file or folder**is based on the folder containing the file. It does not contain _any_ forward slashes. It simply specifies the name of the file. For example, `AllItems.aspx`. 
+- A **URL relative to a file or folder** is based on the folder containing the file. It does not contain _any_ forward slashes. It simply specifies the name of the file. For example, `AllItems.aspx`. 
     
   
 
@@ -60,7 +60,7 @@ The tokens in the tables of this section can be used in URLs in a wide variety o
   
     
     
-The **StartPage**column specifies whether the token can be used in the**StartPage**element of an app manifest. The**Custom Action**column specifies whether the token can be used in the URL of a custom action on a host web. The**App Part**column specifies whether the token can be used in the [Src](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebControls.SPAppIFrame.Src.aspx) property of the app part.
+The **StartPage** column specifies whether the token can be used in the **StartPage** element of an app manifest. The **Custom Action** column specifies whether the token can be used in the URL of a custom action on a host web. The **App Part** column specifies whether the token can be used in the [Src](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebControls.SPAppIFrame.Src.aspx) property of the app part.
   
     
     
@@ -75,7 +75,7 @@ The **StartPage**column specifies whether the token can be used in the**StartPag
 |~site |The URL of the current website. |No |No |Yes ||
 |~sitecollection |The URL of the parent site collection of the current website. |No |No |Yes ||
    
-Except where indicated otherwise, none of these tokens in the next table can be used in the  *path*  portion of the [Src](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebControls.SPAppIFrame.Src.aspx) property value of the app part. The**App Part**column refers to their use in the *query string*  portion of the value.
+Except where indicated otherwise, none of these tokens in the next table can be used in the  *path*  portion of the [Src](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebControls.SPAppIFrame.Src.aspx) property value of the app part. The **App Part** column refers to their use in the *query string*  portion of the value.
   
     
     

@@ -74,7 +74,7 @@ To add the default functionality back to the template, you must modify the Onet.
 3. Open Onet.xml in an XML editor. 
     
   
-4. Make sure that each of the features in Table 1 are contained in the **WebFeatures**section.
+4. Make sure that each of the features in Table 1 are contained in the **WebFeatures** section.
     
    **Table 1. Default web template features**
 

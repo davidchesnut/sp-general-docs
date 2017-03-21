@@ -33,19 +33,19 @@ The following project uses Microsoft Visual Studio 2003.
 1. Start Visual Studio. 
     
   
-2. On the **File**menu, point to**New**, and then click **Project**. The **New Project**dialog box appears.
+2. On the **File** menu, point to **New**, and then click **Project**. The **New Project** dialog box appears.
     
   
-3. In the **Project Type**pane, select**Visual C# Projects**. 
+3. In the **Project Type** pane, select **Visual C# Projects**. 
     
   
-4. In the **Templates**pane, click**Console Application**. 
+4. In the **Templates** pane, click **Console Application**. 
     
   
-5. In the **Name**box, type**SampleApplication**. 
+5. In the **Name** box, type **SampleApplication**. 
     
   
-6. In the **Location**box, enter the path where you want to save your project, or click**Browse**to navigate to the folder.
+6. In the **Location** box, enter the path where you want to save your project, or click **Browse** to navigate to the folder.
     
   
 7. Click **OK**. Your newly created project appears in **Solution Explorer**. 

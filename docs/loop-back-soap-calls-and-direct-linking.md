@@ -1,6 +1,6 @@
 ---
 title: Loop-Back SOAP Calls and Direct Linking
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: bffc6565-636f-40d4-ba17-2511070ba5db
 ---
 
@@ -29,12 +29,12 @@ You can find Microsoft.Office.Excel.Server.WebServices.dll in one of the followi
 
 ## Adding a Reference to Microsoft.Office.Excel.Server.WebServices.dll
 
-To link directly to Microsoft.Office.Excel.Server.WebServices.dll in your project and call it from your code, you add a reference to it. On the computer where you have installed Microsoft SharePoint Server 2010, using the **Add Reference**dialog box in Microsoft Visual Studio, you can do one of the following:
+To link directly to Microsoft.Office.Excel.Server.WebServices.dll in your project and call it from your code, you add a reference to it. On the computer where you have installed Microsoft SharePoint Server 2010, using the **Add Reference** dialog box in Microsoft Visual Studio, you can do one of the following:
   
     
     
 
-- Select **Excel Web Services**from the**Component Name**list in the**.NET**tab.
+- Select **Excel Web Services** from the **Component Name** list in the **.NET** tab.
     
   
 - Browse to Microsoft.Office.Excel.Server.WebServices.dll located in:

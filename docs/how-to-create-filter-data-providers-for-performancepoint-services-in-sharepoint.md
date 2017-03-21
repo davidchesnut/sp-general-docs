@@ -14,7 +14,7 @@ In PerformancePoint Services, custom data providers retrieve data from a filter'
   
     
     
-The following procedures and examples that show you how to create, configure, and define a filter data provider are based on the **SampleFilterDataProvider**class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the report's name and description. For the complete code for the class, see  [Code example: Create a data provider for custom PerformancePoint Services filters in SharePoint Server 2013](#bk_example). 
+The following procedures and examples that show you how to create, configure, and define a filter data provider are based on the **SampleFilterDataProvider** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the report's name and description. For the complete code for the class, see  [Code example: Create a data provider for custom PerformancePoint Services filters in SharePoint Server 2013](#bk_example). 
   
     
     
@@ -47,7 +47,7 @@ We recommend that you use the sample data provider as a template. The sample sho
     Depending on your extension's functionality, other project references may be required. 
     
   
-4. In your provider class, add **using**directives for the following PerformancePoint Services namespaces:
+4. In your provider class, add **using** directives for the following PerformancePoint Services namespaces:
     
   -  [Microsoft.PerformancePoint.Scorecards](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.aspx)
     
@@ -56,13 +56,13 @@ We recommend that you use the sample data provider as a template. The sample sho
     
   
 
-    Depending on your extension's functionality, other **using**directives may be required.
+    Depending on your extension's functionality, other **using** directives may be required.
     
   
 5. Inherit from the  [CustomParameterDataProvider](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Server.Extensions.CustomParameterDataProvider.aspx) base class.
     
   
-6. Set the string identifier for the data provider name. This must match the key that you add to the **CustomParameterDataProviders**section of the web.config file when you register the extension. For more information, see [How to: Manually Register PerformancePoint Services Extensions](http://msdn.microsoft.com/library/3aa6d340-4b05-46b3-9648-2b6e18e04e09%28Office.15%29.aspx). 
+6. Set the string identifier for the data provider name. This must match the key that you add to the **CustomParameterDataProviders** section of the web.config file when you register the extension. For more information, see [How to: Manually Register PerformancePoint Services Extensions](http://msdn.microsoft.com/library/3aa6d340-4b05-46b3-9648-2b6e18e04e09%28Office.15%29.aspx). 
     
   
 7. Override the  [GetId()](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Server.Extensions.CustomParameterDataProvider.GetId.aspx) method to return the identifier for your data provider.
@@ -70,23 +70,23 @@ We recommend that you use the sample data provider as a template. The sample sho
   
 8. Override the  [GetDisplayDataInternal](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Server.Extensions.CustomParameterDataProvider.GetDisplayDataInternal.aspx) method to define a [DataTable](https://msdn.microsoft.com/library/System.Data.DataTable.aspx) object to store the data values from the underlying data source. The filter uses this method to populate the filter selection control. The display data table must contain the following column names:
     
-  - **Key**The unique identifier for the record. This value cannot be null. For performance and security purposes, controls emit only a key; they do not emit values from the other columns.
+  - **Key** The unique identifier for the record. This value cannot be null. For performance and security purposes, controls emit only a key; they do not emit values from the other columns.
     
   
-  - **Display**The value that appears in the filter control.
+  - **Display** The value that appears in the filter control.
     
   
-  - **ParentKey**This value is used to arrange hierarchical data in a tree control.
+  - **ParentKey** This value is used to arrange hierarchical data in a tree control.
     
   
-  - **IsDefault**This value is used for filter persistence.
+  - **IsDefault** This value is used for filter persistence.
     
     > [!TIP]  
 > You can add more columns to extend the filter's functionality. 
 
      [GetDisplayDataInternal](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Server.Extensions.CustomParameterDataProvider.GetDisplayDataInternal.aspx) calls the [DataSourceRegistry.GetDataSource(DataSource)](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceRegistry.GetDataSource.aspx) method to verify the data source type by name, as follows:
     
-  - It references a custom data source type by using the  [SubTypeId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.SubTypeId.aspx) property of the data source, which is the same value as the**subType**attribute that is registered in the PerformancePoint Services web.config file for the data source extension.
+  - It references a custom data source type by using the  [SubTypeId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.SubTypeId.aspx) property of the data source, which is the same value as the **subType** attribute that is registered in the PerformancePoint Services web.config file for the data source extension.
     
   
   - It references a native data source by using the  [SourceName](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.SourceName.aspx) property, which returns a field from the [DataSourceNames](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceNames.aspx) class.

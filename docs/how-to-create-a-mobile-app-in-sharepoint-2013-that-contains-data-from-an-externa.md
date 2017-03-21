@@ -41,7 +41,7 @@ SharePoint 2013 enables you to build mobile applications that can access externa
 ## Step 1: Upload a BDC metadata model
 <a name="HowToCreateSimpleExternalListBasedPhoneApp_Step1"> </a>
 
-A BDC model is the core of Business Connectivity Services. It's an XML file that uses data structures such as **Entity**(external content type) and**Method**to abstract out complex details about the external system. It's auto-generated when you create an external content type using SharePoint Designer and for some data source types such .NET and OData sources, you need to create the BDC model manually or by using Visual Studio. When you upload a BDC model to the BDC metadata store using SharePoint Central Administration, the external content types defined in the model can be used to create external lists in SharePoint which are lists that display data from the underlying external system. In this step, you'll upload the Northwind sample BDC model to the Metadata Store using SharePoint Central Administration.
+A BDC model is the core of Business Connectivity Services. It's an XML file that uses data structures such as **Entity** (external content type) and **Method** to abstract out complex details about the external system. It's auto-generated when you create an external content type using SharePoint Designer and for some data source types such .NET and OData sources, you need to create the BDC model manually or by using Visual Studio. When you upload a BDC model to the BDC metadata store using SharePoint Central Administration, the external content types defined in the model can be used to create external lists in SharePoint which are lists that display data from the underlying external system. In this step, you'll upload the Northwind sample BDC model to the Metadata Store using SharePoint Central Administration.
   
     
     
@@ -52,7 +52,7 @@ A BDC model is the core of Business Connectivity Services. It's an XML file that
 2. Choose **Application Management**, and then choose **Manage Service Applications**. 
     
   
-3. On the Service Application page, choose**Business Data Connectivity Service**. 
+3. On the Service Application page, choose ** Business Data Connectivity Service**. 
     
   
 4. On the ribbon in the BDC Service application, choose **Import**. 
@@ -67,10 +67,10 @@ A BDC model is the core of Business Connectivity Services. It's an XML file that
 7. On the Import BDC Model page, choose **Browse**. 
     
   
-8. In the **Choose a File to upload**dialog box, browse to the Northwind_oData.bdcm file, and then choose**Open**. 
+8. In the **Choose a File to upload** dialog box, browse to the Northwind_oData.bdcm file, and then choose **Open**. 
     
   
-9. After the file is imported, choose the **OK**button.
+9. After the file is imported, choose the **OK** button.
     
   
 
@@ -91,7 +91,7 @@ Next you need to set permissions on the BDC model to specify who can execute the
 3. On the Service Application page, choose **Business Data Connectivity Service**. 
     
   
-4. In the ribbon, choose **BDC Models**from the drop-down list in the**View**group.
+4. In the ribbon, choose **BDC Models** from the drop-down list in the **View** group.
     
   
 5. In the list of BDC models, hover over Northwind_oData.bdcm and choose **Set Permissions**, as shown in Figure 1. 
@@ -106,10 +106,10 @@ Next you need to set permissions on the BDC model to specify who can execute the
   
 
   
-6. In the **Set Object Permissions**dialog box, choose the**Browse**button.
+6. In the **Set Object Permissions** dialog box, choose the **Browse** button.
     
   
-7. In the **Select People and Groups**dialog box, search for your account and choose the**OK**button.
+7. In the **Select People and Groups** dialog box, search for your account and choose the **OK** button.
     
   
 8. Select the permissions for **Edit**, **Execute**, **Selectable In Clients**, and **Set Permissions**, as shown in Figure 2. 
@@ -124,25 +124,25 @@ Next you need to set permissions on the BDC model to specify who can execute the
   
 
   
-9. Choose the **OK**button.
+9. Choose the **OK** button.
     
   
-10. In the ribbon, select **External Content Types**from the drop-down list in the**View**group.
+10. In the ribbon, select **External Content Types** from the drop-down list in the **View** group.
     
   
 11. In the list of external content types, hover over **Customer**, and then choose **Set Permissions**. 
     
   
-12. In the **Set Object Permissions**dialog box, choose the**Browse**button and search for your account.
+12. In the **Set Object Permissions** dialog box, choose the **Browse** button and search for your account.
     
   
-13. In the **Set Object Permissions**dialog box, choose**Add**and select the permissions for**Edit**, **Execute**, **Selectable In Clients**, and **Set Permissions**. 
+13. In the **Set Object Permissions** dialog box, choose **Add** and select the permissions for **Edit**, **Execute**, **Selectable In Clients**, and **Set Permissions**. 
     
   
-14. Ensure that the **Propagate Permissions**box is selected.
+14. Ensure that the **Propagate Permissions** box is selected.
     
   
-15. Choose the **OK**button.
+15. Choose the **OK** button.
     
   
 
@@ -163,19 +163,19 @@ Now that you've uploaded the BDC model and set permissions, you can create an ex
 3. On the Apps page, choose **Add an App**. 
     
   
-4. On the Add an App page, hover over **External List**and choose**Add it**. 
+4. On the Add an App page, hover over **External List** and choose **Add it**. 
     
   
-5. In the **Adding an External List**dialog box, enter a name such asCustomers in the**Name**field.
+5. In the **Adding an External List** dialog box, enter a name such asCustomers in the **Name** field.
     
   
-6. In the **External Content Type**box, specify the external data source that you uploaded in step 1.
+6. In the ** External Content Type** box, specify the external data source that you uploaded in step 1.
     
   
-7. Choose the **OK**button.
+7. Choose the **OK** button.
     
   
-8. On the Apps page, choose **Customers List**to view the list.
+8. On the Apps page, choose **Customers List** to view the list.
     
   
 
@@ -190,10 +190,10 @@ Your external list is ready and you can now create a Windows Phone 7 app that co
 1. Start Visual Studio 2010 Express. 
     
   
-2. On the menu bar, choose **File**, **New Project**. The **New Project**dialog box opens.
+2. On the menu bar, choose **File**, **New Project**. The **New Project** dialog box opens.
     
   
-3. In the **New Project**dialog box, choose**Visual C#**, choose **Silverlight for Windows Phone**, and then choose **Windows Phone SharePoint List Application**. 
+3. In the **New Project** dialog box, choose **Visual C#**, choose **Silverlight for Windows Phone**, and then choose **Windows Phone SharePoint List Application**. 
     
   
 4. Specify a name for the project. We use CustomerApp in this example, as shown in Figure 3.
@@ -208,25 +208,25 @@ Your external list is ready and you can now create a Windows Phone 7 app that co
   
 
   
-5. Choose the **OK**button.
+5. Choose the **OK** button.
     
   
 6. In the **SharePoint Phone Application Wizard**, enter the URL of the SharePoint site in which you created the external list. 
     
   
-7. Choose the **Customers**list, and choose**Next**. 
+7. Choose the **Customers** list, and choose **Next**. 
     
   
-8. On the **Choose Views**screen, select**Customer Read List**and choose**Next**. 
+8. On the **Choose Views** screen, select **Customer Read List** and choose **Next**. 
     
   
-9. On the **Choose Operations**screen, choose**Display**, and then choose **Next**. 
+9. On the **Choose Operations** screen, choose **Display**, and then choose **Next**. 
     
   
-10. On the **Choose Fields**screen, select the fields you want to use or display in your mobile app, and then choose**Next**. 
+10. On the **Choose Fields** screen, select the fields you want to use or display in your mobile app, and then choose **Next**. 
     
   
-11. On the **Order Fields**screen, reorder the fields if needed, and then choose**Finish**. 
+11. On the **Order Fields** screen, reorder the fields if needed, and then choose **Finish**. 
     
   
 12. You've now successfully created the app that connects to the external list. 

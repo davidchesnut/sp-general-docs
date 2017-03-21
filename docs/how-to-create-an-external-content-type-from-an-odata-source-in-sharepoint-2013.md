@@ -66,7 +66,7 @@ The following steps show how to use Visual Studio 2012 to create an external con
 ### To create a new SharePoint Add-in
 
 
-1. In Visual Studio 2012, create a new **App for SharePoint 2013**project, which is located under the**SharePoint 2013 template**node.
+1. In Visual Studio 2012, create a new **App for SharePoint 2013** project, which is located under the **SharePoint 2013 template** node.
     
   
 2. Name your project, and choose **OK**. 
@@ -91,7 +91,7 @@ After the project is created, you use the new autogeneration tooling for OData s
     This starts a wizard that will help you discover the selected data source and create the BDC model. 
     
   
-2. The first page of the wizard is used to collect the URL of the data service. On the **Specify OData Source**page, enter the URL of the OData service that you want to connect to. The URL should resemble the following: `http://services.odata.org/Northwind/Northwind.svc/`. 
+2. The first page of the wizard is used to collect the URL of the data service. On the **Specify OData Source** page, enter the URL of the OData service that you want to connect to. The URL should resemble the following: `http://services.odata.org/Northwind/Northwind.svc/`. 
     
     > [!NOTE]  
 > You will show the Northwind service that is available from the producers list found on the  [Open Data Protocol website](http://www.odata.org/ecosystem#liveservices). 
@@ -105,7 +105,7 @@ After the project is created, you use the new autogeneration tooling for OData s
 ### To view the structure of the entities
 
 
-- Notice that Visual Studio created a new folder named External Content Types. Inside that folder, you will find a subfolder with the name of your new data source. If you further expand this, you will see an item that represents the entity you selected. To view a graphical list of the entities and their types, open the **ect**file that you want to view.
+- Notice that Visual Studio created a new folder named External Content Types. Inside that folder, you will find a subfolder with the name of your new data source. If you further expand this, you will see an item that represents the entity you selected. To view a graphical list of the entities and their types, open the **ect** file that you want to view.
     
     You can also view the XML of the entities by opening the ect files in an XML editor. 
     

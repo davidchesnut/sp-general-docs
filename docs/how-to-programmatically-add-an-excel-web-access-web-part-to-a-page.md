@@ -47,13 +47,13 @@ The following steps show how to locate Microsoft.Office.Excel.WebUI.dll and how 
 ### To add a reference to Microsoft.Office.Excel.WebUI.dll
 
 
-1. On the **Project**menu, click**Add Reference**. 
+1. On the **Project** menu, click **Add Reference**. 
     
   
-2. In the **Add Reference**dialog box, click**Browse**. 
+2. In the **Add Reference** dialog box, click **Browse**. 
     
     > [!NOTE]  
-> You can also open the **Add Reference**dialog box in the**Solution Explorer**pane by right-clicking**References**and selecting**Add Reference**. 
+> You can also open the **Add Reference** dialog box in the **Solution Explorer** pane by right-clicking **References** and selecting **Add Reference**. 
 3. Browse to the location of Microsoft.Office.Excel.WebUI.dll. 
     
   
@@ -99,9 +99,9 @@ Dim ewaWebPart As New ExcelWebRenderer()
 ### To display a workbook programmatically
 
 
-1. In this example, the **AddWebPart**method takes in the path to an Excel workbook location as an argument. The user provides the path by typing in a Windows Forms text box and clicking a button.
+1. In this example, the **AddWebPart** method takes in the path to an Excel workbook location as an argument. The user provides the path by typing in a Windows Forms text box and clicking a button.
     
-    **Sample code provided by:**Daniel Mullowney, Microsoft Corporation
+    **Sample code provided by:** Daniel Mullowney, Microsoft Corporation
     
 
 
@@ -153,7 +153,7 @@ End Sub
 > Ensure that the location where the workbook is saved is a trusted location. 
 2. You can display an Excel workbook programmatically by using the following code. 
     
-    **Sample code provided by:**Daniel Mullowney, Microsoft Corporation
+    **Sample code provided by:** Daniel Mullowney, Microsoft Corporation
     
 
 
@@ -214,7 +214,7 @@ The code sample is the code from the Form1.cs and Form1.vb example files describ
   
     
     
-**Sample code provided by:**Daniel Mullowney, Microsoft Corporation
+ **Sample code provided by:** Daniel Mullowney, Microsoft Corporation
   
     
     

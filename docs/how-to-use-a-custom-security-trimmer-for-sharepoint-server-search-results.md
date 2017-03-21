@@ -58,7 +58,7 @@ In this step, you will create the custom security trimmer project, and then add 
 2. In **Project types**, under **C#**, choose **SharePoint**. 
     
   
-3. Under **Templates**, choose **Empty SharePoint Project**. In the **Name**field, type**CustomSecurityTrimmerSample**, and then choose the **OK**button.
+3. Under **Templates**, choose **Empty SharePoint Project**. In the **Name** field, type **CustomSecurityTrimmerSample**, and then choose the **OK** button.
     
   
 4. In the **SharePoint Customization Wizard**, choose **Deploy as a farm solution**, and then choose **Finish**. 
@@ -68,19 +68,19 @@ In this step, you will create the custom security trimmer project, and then add 
 ### To add references to the custom security trimmer project
 
 
-1. On the **Project**menu, choose**Add Reference**. 
+1. On the **Project** menu, choose **Add Reference**. 
     
   
-2. On the **.NET**tab, choose the references with the following component names, and then choose the**OK**button:
+2. On the **.NET** tab, choose the references with the following component names, and then choose the **OK** button:
     
   - **Microsoft Search component**
     
-    You should see two entries on the **.NET**tab with the component name**Microsoft Search component**. Select the entry where the Path column is \\ISAPI\\Microsoft.Office.Server.Search.dll. If this entry is missing from the **.NET**tab in the**Add References**dialog box, you must add the reference from the**Browse**tab by using the path to the Microsoft.Office.Server.Search.dll.
+    You should see two entries on the **.NET** tab with the component name **Microsoft Search component**. Select the entry where the Path column is \\ISAPI\\Microsoft.Office.Server.Search.dll. If this entry is missing from the **.NET** tab in the **Add References** dialog box, you must add the reference from the **Browse** tab by using the path to the Microsoft.Office.Server.Search.dll.
     
   
   - **Microsoft.IdentityModel**
     
-    If **Microsoft.IdentityModel**is not listed on the**.NET**tab, you must add the reference to the Microsoft.IdentityModel.dll from the**Browse**tab, by using the following path:
+    If **Microsoft.IdentityModel** is not listed on the **.NET** tab, you must add the reference to the Microsoft.IdentityModel.dll from the **Browse** tab, by using the following path:
     
      `%ProgramFiles%\\Reference Assemblies\\Microsoft\\Windows Identity Foundation\\v4.0.`
     
@@ -93,10 +93,10 @@ In this step, you will create the custom security trimmer project, and then add 
 ### To create the class file for the security pre-trimmer
 
 
-1. On the **Project**menu, choose**Add New Item**. 
+1. On the **Project** menu, choose **Add New Item**. 
     
   
-2. Under **Visual C# Items**in**Installed Templates**, choose **Code**, and then choose **Class**. 
+2. Under **Visual C# Items** in **Installed Templates**, choose **Code**, and then choose **Class**. 
     
   
 3. Type **CustomSecurityPreTrimmer.cs**, and then choose **Add**. 
@@ -105,7 +105,7 @@ In this step, you will create the custom security trimmer project, and then add 
 
 ### Writing the custom security pre-trimmer code
 
-Your custom security trimmer must implement the **ISecurityTrimmerPre**interface. The following code example is a basic implementation of this interface.
+Your custom security trimmer must implement the **ISecurityTrimmerPre** interface. The following code example is a basic implementation of this interface.
   
     
     
@@ -113,7 +113,7 @@ Your custom security trimmer must implement the **ISecurityTrimmerPre**interface
 ### To modify the default code in CustomSecurityPreTrimmer
 
 
-1. Add the following **using**directives at the beginning of the class.
+1. Add the following **using** directives at the beginning of the class.
     
   ```cs
   
@@ -128,7 +128,7 @@ using Microsoft.Office.Server.Search.Administration;
 
   ```
 
-2. Specify that the **CustomSecurityPreTrimmer**class implements the [ISecurityTrimmerPre](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.aspx) interface in the class declaration, as shown in the following code.
+2. Specify that the **CustomSecurityPreTrimmer** class implements the [ISecurityTrimmerPre](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.aspx) interface in the class declaration, as shown in the following code.
     
   ```cs
   
@@ -149,7 +149,7 @@ public class CustomSecurityPreTrimmer : ISecurityTrimmerPre
   ```
 
 
-    The basic version of this sample does not include any code in the **Initialize**method.
+    The basic version of this sample does not include any code in the **Initialize** method.
     
   
 2. Add the following code for the  [AddAccess()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.AddAccess.aspx) method declaration.
@@ -163,7 +163,7 @@ public IEnumerable<Tuple<Claim, bool>> AddAccess(
 }
   ```
 
-3. For the first part of the **AddAccess**method implementation, we find out who the user is by looking at the _passedUserIdentity_. 
+3. For the first part of the **AddAccess** method implementation, we find out who the user is by looking at the _passedUserIdentity_. 
     
   ```cs
   
@@ -231,7 +231,7 @@ if (!string.IsNullOrEmpty(strUser))
   ```
 
 
-    The **GetMembership**method contains the custom logic of your trimmer.
+    The **GetMembership** method contains the custom logic of your trimmer.
     
   
 
@@ -242,10 +242,10 @@ if (!string.IsNullOrEmpty(strUser))
 ### To create the class file for the security post-trimmer
 
 
-1. On the **Project**menu, choose**Add New Item**. 
+1. On the **Project** menu, choose **Add New Item**. 
     
   
-2. Under **Visual C# Items**in**Installed Templates**, choose **Code**, and then choose **Class**.. 
+2. Under **Visual C# Items** in **Installed Templates**, choose **Code**, and then choose **Class**.. 
     
   
 3. Type CustomSecurityPostTrimmer.cs, and then choose **Add**. 
@@ -254,7 +254,7 @@ if (!string.IsNullOrEmpty(strUser))
 
 ### Writing the custom security post-trimmer code
 
-Your custom security trimmer must implement the **ISecurityTrimmerPost**interface. The code example in this section is a basic implementation of this interface.
+Your custom security trimmer must implement the **ISecurityTrimmerPost** interface. The code example in this section is a basic implementation of this interface.
   
     
     
@@ -262,7 +262,7 @@ Your custom security trimmer must implement the **ISecurityTrimmerPost**interfac
 ### To modify the default code in CustomSecurityPostTrimmer
 
 
-1. Add the following **using**directives at the beginning of the class:
+1. Add the following **using** directives at the beginning of the class:
     
   ```cs
   
@@ -277,7 +277,7 @@ using Microsoft.Office.Server.Search.Administration;
 
   ```
 
-2. Specify that the **CustomSecurityPostTrimmer**class implements the [ISecurityTrimmerPost](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.aspx) interface in the class declaration, as follows:
+2. Specify that the **CustomSecurityPostTrimmer** class implements the [ISecurityTrimmerPost](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.aspx) interface in the class declaration, as follows:
     
   ```cs
   
@@ -311,7 +311,7 @@ public BitArray CheckAccess(IList<string> documentCrawlUrls, IList<string> docum
 }
   ```
 
-3. For the first part of the **CheckAccess**method implementation, declare and initialize a**BitArray**variable to store the results of the access check for each URL in the**documentCrawlUrls**collection, and retrieve the user who submitted the query, as shown in the following code.
+3. For the first part of the **CheckAccess** method implementation, declare and initialize a **BitArray** variable to store the results of the access check for each URL in the **documentCrawlUrls** collection, and retrieve the user who submitted the query, as shown in the following code.
     
   ```cs
   
@@ -356,10 +356,10 @@ if (claimsIdentity != null)
   ```
 
 
-    If the user has access to the content item, set the value of the **BitArray**item at that index,**urlStatusArray[i]**, to **true**; otherwise, set it to **false**. 
+    If the user has access to the content item, set the value of the **BitArray** item at that index, **urlStatusArray[i]**, to **true**; otherwise, set it to **false**. 
     
   
-5. Set the return value of the **CheckAccess**method to**urlStatusArray**, as shown in the following code. 
+5. Set the return value of the **CheckAccess** method to **urlStatusArray**, as shown in the following code. 
     
   ```cs
   
@@ -384,7 +384,7 @@ This step describes how to configure the custom security trimmer, and includes t
 
 ### Register the custom security trimmer
 
-You use the SharePoint Management Shell to register a custom security trimmer with  _ClassName_. In our case,  _ClassName_ could be either**CustomSecurityPreTrimmer**or**CustomSecurityPostTrimmer**. The following procedure shows how to register a custom security trimmer, with the ID set to 1 for the Search service application. 
+You use the SharePoint Management Shell to register a custom security trimmer with  _ClassName_. In our case,  _ClassName_ could be either **CustomSecurityPreTrimmer** or **CustomSecurityPostTrimmer**. The following procedure shows how to register a custom security trimmer, with the ID set to 1 for the Search service application. 
   
     
     
@@ -398,7 +398,7 @@ You use the SharePoint Management Shell to register a custom security trimmer wi
 2. Open the shortcut menu for the file, and then choose Properties. 
     
   
-3. On the **General**tab in the**Properties**dialog box, select the token and copy it.
+3. On the **General** tab in the **Properties** dialog box, select the token and copy it.
     
   
 4. Open the SharePoint Management Shell. For information about using this tool, see  [Administering Service Applications Using the SharePoint 2010 Management Shell](http://msdn.microsoft.com/library/aff64855-7377-4e4a-b3a9-b620c9047076%28Office.15%29.aspx)
@@ -413,7 +413,7 @@ Version=1.0.0.0, Culture=neutral, PublicKeyToken=token" -RulePath "xmldoc://*"
   ```
 
 
-    In the command, replace  _ClassName_ either with**CustomSecurityPreTrimmer**or**CustomSecurityPostTrimmer**and _token_ with the Public Key Token for the CustomSecurityTrimmerSample.dll file. You must associate all post-trimmers with a crawl rule, _"xmldoc://*"_; but this is optional for pre-trimmers. 
+    In the command, replace  _ClassName_ either with **CustomSecurityPreTrimmer** or **CustomSecurityPostTrimmer** and _token_ with the Public Key Token for the CustomSecurityTrimmerSample.dll file. You must associate all post-trimmers with a crawl rule, _"xmldoc://*"_; but this is optional for pre-trimmers. 
     
     > [!NOTE]  
 > If you have multiple front-end web servers, you must deploy your security trimmer to the global assembly cache on all the front-end web servers in the farm. 

@@ -7,16 +7,16 @@ ms.assetid: 26873259-330c-493f-b935-297a7a5a086d
 
 # How to: Create Custom SharePoint Server 2013 Workflow Forms with Visual Studio 2012
 Presents workflow forms in SharePoint Server 2013. This article uses SharePoint Server 2013 with the March 2013 Public Update applied and Office Developer tools for Visual Studio 2012. Everything in this article applies to both SharePoint Server 2013 on-premises deployments as well as Office 365. 
-**Provided by:**[Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [www.AndrewConnell.com](http://www.andrewconnell.com)
+ **Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [www.AndrewConnell.com](http://www.andrewconnell.com)
   
     
     
 
 Since the release of Microsoft SharePoint 2007, the SharePoint platform has supported using workflows to automate business processes. The SharePoint workflow platform is built on the Windows Workflow Foundation, which is part of the .NET Framework. While the Workflow Foundation provides many capabilities for authoring custom workflows and managing automated business processes, SharePoint also adds end-user integration. This integration is implemented in two parts: 
-- **Tasks**assigned to users and groups that can be created and monitored by the workflows.
+- **Tasks** assigned to users and groups that can be created and monitored by the workflows.
     
   
-- **Forms**that collect information from users when workflows are associated with a type of content (for example, a site, list, or library) or when a workflow is started.
+- **Forms** that collect information from users when workflows are associated with a type of content (for example, a site, list, or library) or when a workflow is started.
     
   
 
@@ -73,7 +73,7 @@ The Workflow Services CSOM is very robust and gives you a lot of room for innova
 ## Workflow forms available in SharePoint Sever 2013
 <a name="sec3"> </a>
 
-Prior the release of SharePoint Server 2013, there were three types of custom workflow forms you could create: **Initiation**,**Association**, and**Task Edit**forms. Of these three types of forms, task edit forms have been de-emphasized as a custom forms solution. The de-emphasis of Task Edit forms started with SharePoint 2010 because the Visual Studio 2010 SharePoint development tools lacked a project item for task forms, relying instead on the standard list display and edit forms to render tasks.
+Prior the release of SharePoint Server 2013, there were three types of custom workflow forms you could create: **Initiation**, **Association**, and **Task Edit** forms. Of these three types of forms, task edit forms have been de-emphasized as a custom forms solution. The de-emphasis of Task Edit forms started with SharePoint 2010 because the Visual Studio 2010 SharePoint development tools lacked a project item for task forms, relying instead on the standard list display and edit forms to render tasks.
   
     
     
@@ -133,13 +133,13 @@ In this walkthrough we demonstrate how to create a custom association form and u
 2. In Visual Studio, create a new SharePoint Server 2013 app project and configure it as a SharePoint-hosted app. 
     
   
-3. Add a new **Announcement**list to the project. This list will be associated with the workflow and events on this list will trigger the workflow.
+3. Add a new **Announcement** list to the project. This list will be associated with the workflow and events on this list will trigger the workflow.
     
   
-4. Add a workflow item the project by right-clicking the project in the **Solution Explorer**and selecting**Add**, followed by **New Item**. In the **Add New Item**dialog box, select the**Workflow**project item from the**Office/SharePoint**category. Enter "SampleWorkflow" as the name and then click**Next**. When prompted by the SharePoint Customization Wizard, set the new item to be a **List Workflow**. 
+4. Add a workflow item the project by right-clicking the project in the **Solution Explorer** and selecting **Add**, followed by **New Item**. In the **Add New Item** dialog box, select the **Workflow** project item from the **Office/SharePoint** category. Enter "SampleWorkflow" as the name and then click **Next**. When prompted by the SharePoint Customization Wizard, set the new item to be a **List Workflow**. 
     
   
-5. The next page of the **SharePoint Customization Wizard**, shown in Figure 1., allows you to automatically create a workflow association. However, when you're creating a custom association forms, you do **not**want to exercise this option. Instead, deselect this check box and click**Finish**. 
+5. The next page of the **SharePoint Customization Wizard**, shown in Figure 1., allows you to automatically create a workflow association. However, when you're creating a custom association forms, you do **not** want to exercise this option. Instead, deselect this check box and click **Finish**. 
     
    **Figure 1. Deselect the option to automatically associate the workflow.**
 
@@ -153,7 +153,7 @@ In this walkthrough we demonstrate how to create a custom association form and u
   
 6. Next, add the form to the Visual Studio project by right-clicking the workflow item in **Solution Explorer**, then selecting **Add**, **New Item**. 
     
-    This last step is important because it tells the **Add New Item**dialog that the context is a workflow item. This then causes the**Add New Item**dialog to display the two form project item templates (Initiation form and Association form) as options, as shown in Figure 2.
+    This last step is important because it tells the **Add New Item** dialog that the context is a workflow item. This then causes the **Add New Item** dialog to display the two form project item templates (Initiation form and Association form) as options, as shown in Figure 2.
     
 
    **Figure 2. Selecting the Association Form template.**
@@ -166,7 +166,7 @@ In this walkthrough we demonstrate how to create a custom association form and u
   
 
   
-7. Select the **Workflow Association Form**item and remove the "1" from the field name. Click Add to complete the process.
+7. Select the **Workflow Association Form** item and remove the "1" from the field name. Click Add to complete the process.
     
   
 
@@ -216,7 +216,7 @@ Once the new form is added to the project, Visual Studio automatically opens it.
   ```
 
 
-    This table displays a simple HTML textbox which is used to pass information into the workflow association. Note that the form has two buttons These buttons are used to save or cancel the workflow. When you click the **Save**button, the workflow calls the JavaScript function,**runAssocWfTask()**, which is located a few lines farther down in the source file. We need to modify that next. 
+    This table displays a simple HTML textbox which is used to pass information into the workflow association. Note that the form has two buttons These buttons are used to save or cancel the workflow. When you click the **Save** button, the workflow calls the JavaScript function, **runAssocWfTask()**, which is located a few lines farther down in the source file. We need to modify that next. 
     
   
 
@@ -251,7 +251,7 @@ The critical part that you need to be concerned with when creating the custom as
  `var metadata = new Object();`
     
   
-3. Next, add a collection of name-value pairs representing your form fields that you wish to pass into SharePoint. For the custom form in this walkthrough, all you need is the following JavaScript, so update the block that sets the **metadata**variable as follows:
+3. Next, add a collection of name-value pairs representing your form fields that you wish to pass into SharePoint. For the custom form in this walkthrough, all you need is the following JavaScript, so update the block that sets the **metadata** variable as follows:
     
   ```XML
   
@@ -272,7 +272,7 @@ With the form complete, the next step is to configure the workflow to use the va
     
     
 
-1. Open the workflow in Visual Studio, go to the **Variables**tab, and create a new string variable called**AssociationFormValue**, as shown in Figure 3. 
+1. Open the workflow in Visual Studio, go to the **Variables** tab, and create a new string variable called **AssociationFormValue**, as shown in Figure 3. 
     
    **Figure 3. Creating the AssociationFormValue variable.**
 
@@ -284,7 +284,7 @@ With the form complete, the next step is to configure the workflow to use the va
   
 
   
-2. Drag and drop a **GetConfigurationValue**activity on the workflow designer surface and set the**Name**property to the name of the metadata property used in the form, as shown in Figure 4.
+2. Drag and drop a **GetConfigurationValue** activity on the workflow designer surface and set the **Name** property to the name of the metadata property used in the form, as shown in Figure 4.
     
    **Figure 4.**
 
@@ -296,9 +296,9 @@ With the form complete, the next step is to configure the workflow to use the va
   
 
   
-3. Set the **Result**property to the name of the variable, as shown in Figure 4.
+3. Set the **Result** property to the name of the variable, as shown in Figure 4.
     
-    This activity pulls the **AssociationFormValue**property value out of the workflow's metadata and stores it in the local variable. To see the contents of the variable, add a**WriteToHistory**activity to the workflow and set its**Message**property to write the value of the variable to the history list.
+    This activity pulls the **AssociationFormValue** property value out of the workflow's metadata and stores it in the local variable. To see the contents of the variable, add a **WriteToHistory** activity to the workflow and set its **Message** property to write the value of the variable to the history list.
     
   
 4. You have completed the steps necessary to associate the form values with the workflow. Save your work and test the form. 
@@ -308,10 +308,10 @@ With the form complete, the next step is to configure the workflow to use the va
 ### Test the custom association form
 
 
-1. To test the workflow, press **F5**, or click the **Start**button in Visual Studio. This walkthrough presumes an on-premises, local installation of SharePoint Server 2013, so Visual Studio launches the Workflow Manager Test Service Host utility and deploys the workflow to the developer site.
+1. To test the workflow, press **F5**, or click the **Start** button in Visual Studio. This walkthrough presumes an on-premises, local installation of SharePoint Server 2013, so Visual Studio launches the Workflow Manager Test Service Host utility and deploys the workflow to the developer site.
     
   
-2. Create the association by navigating to the **Announcements**list, then on the ribbon select the**List**tab and click the**Workflow Settings**, **Workflow Settings**button, then click the**Add a workflow**link. At this point you are presented with the SharePoint association form.
+2. Create the association by navigating to the **Announcements** list, then on the ribbon select the **List** tab and click the **Workflow Settings**, **Workflow Settings** button, then click the **Add a workflow** link. At this point you are presented with the SharePoint association form.
     
   
 3. In the association form, select the workflow you wish to test and give it a name. 
@@ -335,7 +335,7 @@ With the form complete, the next step is to configure the workflow to use the va
 6. Enter a value in the form field and click **Save**. This creates the association and stores the custom value in the metadata for the workflow association. 
     
   
-7. To verify the workflow can extract the value from the configuration settings, navigate back to the **Announcements**list and create a new item. After creating the item, start the custom workflow manually. Once the workflow has started, navigate to the item's workflow instance status page and confirm that the value that has been written to the history list, as illustrated in Figure 6.
+7. To verify the workflow can extract the value from the configuration settings, navigate back to the **Announcements** list and create a new item. After creating the item, start the custom workflow manually. Once the workflow has started, navigate to the item's workflow instance status page and confirm that the value that has been written to the history list, as illustrated in Figure 6.
     
    **Figure 6. Workflow status page.**
 
@@ -365,19 +365,19 @@ This walkthrough demonstrates creating a custom association form and using it to
 2. Create a new SharePoint project that is configured as a SharePoint-hosted app. 
     
   
-3. Add a new **Announcement**list to the project. We'll use this list as the container for items that we use to trigger the workflow.
+3. Add a new **Announcement** list to the project. We'll use this list as the container for items that we use to trigger the workflow.
     
   
-4. Next, add a workflow item to the project by right-clicking on the project icon in **Solution Explorer**and selecting**Add**, **New Item**, and then, in the **Add New Item**dialog box, selecting the**Workflow**project item. and
+4. Next, add a workflow item to the project by right-clicking on the project icon in **Solution Explorer** and selecting **Add**, **New Item**, and then, in the **Add New Item** dialog box, selecting the **Workflow** project item. and
     
   
 5. Name the new workflow "SampleInitFormWorkflow", then click **Next**. 
     
   
-6. When prompted, set the new workflow item to be a **List Workflow**associated with the**Announcements**list; set the workflow to start manually. (Note that the initiation form will not be displayed if the workflow starts automatically.)
+6. When prompted, set the new workflow item to be a **List Workflow** associated with the **Announcements** list; set the workflow to start manually. (Note that the initiation form will not be displayed if the workflow starts automatically.)
     
   
-7. At this point, the project appears in **Solution Explorer**as shown in Figure 7. Note that some elements, like the**WorkflowHistoryList**and**WorkflowTaskList**, were added automatically when the association was created. 
+7. At this point, the project appears in **Solution Explorer** as shown in Figure 7. Note that some elements, like the **WorkflowHistoryList** and **WorkflowTaskList**, were added automatically when the association was created. 
     
    **Figure 7. Appearance of the project in Solution Explorer.**
 
@@ -397,7 +397,7 @@ The workflow initiation form prompts users for two pieces of information that it
     
     
 
-1. In the workflow designer, click the **Arguments**tab at the bottom of the screen and create two arguments, as shown in Figure 8. Name them**UserLoginName**and**SomeRandomString**. 
+1. In the workflow designer, click the **Arguments** tab at the bottom of the screen and create two arguments, as shown in Figure 8. Name them **UserLoginName** and **SomeRandomString**. 
     
    **Figure 8. Configuring the initiation form arguments.**
 
@@ -409,14 +409,14 @@ The workflow initiation form prompts users for two pieces of information that it
   
 
   
-2. Set the **Argument type**to**String**for both; also for both, set the**Direction**to**In**, as shown in Figure 8. 
+2. Set the **Argument type** to **String** for both; also for both, set the **Direction** to **In**, as shown in Figure 8. 
     
-    You can think of the **Direction**property as if it were a property on a .NET class. When the direction is set to**In**, the property would have a public **Set**method, but a private**Get**method. When the direction is set to**Out**, the property would have a public **Get**but a private**Set**. Finally, when set to **In/Out**, both the **Get**and**Set**methods would be public.
+    You can think of the **Direction** property as if it were a property on a .NET class. When the direction is set to **In**, the property would have a public **Set** method, but a private **Get** method. When the direction is set to **Out**, the property would have a public **Get** but a private **Set**. Finally, when set to **In/Out**, both the **Get** and **Set** methods would be public.
     
   
-3. To view the contents of these two arguments, add a pair of **WriteToHistory**activities to the workflow and configure each one to write the contents of the arguments to the history list.
+3. To view the contents of these two arguments, add a pair of **WriteToHistory** activities to the workflow and configure each one to write the contents of the arguments to the history list.
     
-    You can use these arguments the same way you use variables, but keep in mind when setting **Direction**that you are dictating their read/write capability. Figure 9 shows what one of these activities might look like when configured:
+    You can use these arguments the same way you use variables, but keep in mind when setting **Direction** that you are dictating their read/write capability. Figure 9 shows what one of these activities might look like when configured:
     
 
    **Figure 9. Configuring a WriteToHistory activity to test arguments**
@@ -437,13 +437,13 @@ With the workflow configured to accept two input arguments from the form, the ne
     
     
 
-1. Right-click the workflow item in **Solution Explorer**and select**Add**, then select **New Item**. 
+1. Right-click the workflow item in **Solution Explorer** and select **Add**, then select **New Item**. 
     
   
-2. Select the **Workflow Initiation Form**project item and remove the number "1" from the name so the form is called "InitForm.aspx", then click**Add**. This causes Visual Studio to add the new ASPX page to the **Pages**module that is already present in the project tree. This ensures that the form will be provisioned to the**Pages**subfolder in the app. Visual Studio also modified properties on the workflow item.
+2. Select the **Workflow Initiation Form** project item and remove the number "1" from the name so the form is called "InitForm.aspx", then click **Add**. This causes Visual Studio to add the new ASPX page to the **Pages** module that is already present in the project tree. This ensures that the form will be provisioned to the **Pages** subfolder in the app. Visual Studio also modified properties on the workflow item.
     
   
-3. Select the workflow item **SimpleInitFormWorkflow**in**Solution Explorer**and in the**Properties**grid, notice which properties on the initiation form have been set. One of them is actually pointing to the site relative path of the form that was just added to the**Pages**module.
+3. Select the workflow item **SimpleInitFormWorkflow** in **Solution Explorer** and in the **Properties** grid, notice which properties on the initiation form have been set. One of them is actually pointing to the site relative path of the form that was just added to the **Pages** module.
     
   
 
@@ -462,7 +462,7 @@ When you added the new initiation form to the project, Visual Studio 2012 automa
   
 
 > [!NOTE]  
-> In the source file, note that first ASP.NET content placeholder, **PlaceHolderAdditionalPageHead**, contains references to the Workflow Services CSOM library (**sp.workflowservices.js**) and the core SharePoint Server 2013 CSOM libraries (**sp.js**and**sp.runtime.js**). Immediately following this section of code, there is a server-side comment that contains a commented note. Be mindful that this note, shown in Figure 10, is irrelevant and should be ignored.
+> In the source file, note that first ASP.NET content placeholder, **PlaceHolderAdditionalPageHead**, contains references to the Workflow Services CSOM library ( **sp.workflowservices.js** ) and the core SharePoint Server 2013 CSOM libraries ( **sp.js** and **sp.runtime.js** ). Immediately following this section of code, there is a server-side comment that contains a commented note. Be mindful that this note, shown in Figure 10, is irrelevant and should be ignored.
   
     
     
@@ -520,7 +520,7 @@ The table now contains two input controls. The first is a standard HTML text box
   
     
     
-Now notice the two buttons on the form, **Start**("startWorkflowButton") and**Cancel**("cancelButton"). Clicking the Start button calls the**StartWorkflow()**JavaScript function. The function itself is located in a script block farther down in the form file and is the subject of the next change that we need to make. 
+Now notice the two buttons on the form, **Start** ("startWorkflowButton") and **Cancel** ("cancelButton"). Clicking the Start button calls the **StartWorkflow()**JavaScript function. The function itself is located in a script block farther down in the form file and is the subject of the next change that we need to make. 
   
     
     
@@ -536,7 +536,7 @@ Now notice the two buttons on the form, **Start**("startWorkflowButton") and**Ca
 2. Locate the following line of code:  `var wfParams = new Object();`
     
   
-3. Immediately following this line, replace the existing code with your own code to pull values from the two HTML form fields that we created a few moments ago: **strInput**and**peoplePicker**. To do this, add the following reference to the jQuery library to the **PlaceHolderAdditionalPageHead**element in the HTML markup. This makes it easier to grab values from the form.
+3. Immediately following this line, replace the existing code with your own code to pull values from the two HTML form fields that we created a few moments ago: **strInput** and **peoplePicker**. To do this, add the following reference to the jQuery library to the **PlaceHolderAdditionalPageHead** element in the HTML markup. This makes it easier to grab values from the form.
     
   ```
   
@@ -573,7 +573,7 @@ The code that we've modified in the preceding procedure does a large amount of w
   - The ID of the workflow association on the current site, list, or document library, saved in the JavaScript variable **[subscriptionId]**.
     
   
-  - The URL that the user came from, saved in the JavaScript**[redirectUrl]**variable. This is where the user will be taken to when they complete the form and the workflow has been started.
+  - The URL that the user came from, saved in the JavaScript **[redirectUrl]** variable. This is where the user will be taken to when they complete the form and the workflow has been started.
     
   
 - Creates an array of properties to be sent to the workflow, saved in the JavaScript variable **[wfParams]**. These are the values that you will need to collect from the form and the second of the two minimal steps required for editing the custom initiation form.
@@ -582,28 +582,28 @@ The code that we've modified in the preceding procedure does a large amount of w
 - Obtains references to a SharePoint CSOM client context as well as the necessary workflow services. 
     
   
-- Once the script is connected to the Workflow Services Subscription Service (referenced in the variable **[subscriptionService]**), it performs one of the following tasks:
+- Once the script is connected to the Workflow Services Subscription Service (referenced in the variable **[subscriptionService]** ), it performs one of the following tasks:
     
   
 - 
-  - If the script obtained an item ID from the query string in the first step, then it starts a new instance of the workflow on the specified list item by calling the function **[startWorkflowOnListItem()]**from the Workflow Services instance service.
+  - If the script obtained an item ID from the query string in the first step, then it starts a new instance of the workflow on the specified list item by calling the function **[startWorkflowOnListItem()]** from the Workflow Services instance service.
     
   
-  - If no ID was found, it starts a new instance of the workflow on the current site by calling the function **[startWorkflow()]**from the Workflow Services instance service.
+  - If no ID was found, it starts a new instance of the workflow on the current site by calling the function **[startWorkflow()]** from the Workflow Services instance service.
     
   
 
 ### Test the custom initiation form
 
-Test the workflow by pressing F5 or by clicking the **Start**button in Visual Studio 2012. If you are testing in an on-premises local installation of SharePoint Server 2013, Visual Studio 2012 will start the Workflow Manager Test Service Host utility and deploy the workflow to the developer site. After a moment, the developer site will open.
+Test the workflow by pressing F5 or by clicking the **Start** button in Visual Studio 2012. If you are testing in an on-premises local installation of SharePoint Server 2013, Visual Studio 2012 will start the Workflow Manager Test Service Host utility and deploy the workflow to the developer site. After a moment, the developer site will open.
   
     
     
-Navigate to the **Announcements**list and create a new item. After creating the item, start the custom workflow.
+Navigate to the **Announcements** list and create a new item. After creating the item, start the custom workflow.
   
     
     
-Because the workflow definition contains a reference to an initiation form, the user is taken to that form first. Fill in the requested values, then click the **Start**button. This triggers the JavaScript on the page, which starts the workflow instance, as shown in Figure 11.
+Because the workflow definition contains a reference to an initiation form, the user is taken to that form first. Fill in the requested values, then click the **Start** button. This triggers the JavaScript on the page, which starts the workflow instance, as shown in Figure 11.
   
     
     

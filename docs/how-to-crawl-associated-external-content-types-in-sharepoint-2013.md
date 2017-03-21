@@ -61,7 +61,7 @@ When processing crawl deletions, if the parent external content type is deleted 
 ## Crawling associated external content type attachments
 <a name="HowToCrawlAssociations_CrawlingAttachments"> </a>
 
-To mark an association so that it is crawled as an attachment, add the **AttachmentAccessor**property to the**Association**method instance, as follows.
+To mark an association so that it is crawled as an attachment, add the **AttachmentAccessor** property to the **Association** method instance, as follows.
   
     
     
@@ -80,7 +80,7 @@ To mark an association so that it is crawled as an attachment, add the **Attachm
 
 
 > [!NOTE]  
-> You can specify any value for the **AttachmentAccessor**property; Search does not examine this value.
+> You can specify any value for the **AttachmentAccessor** property; Search does not examine this value.
   
     
     
@@ -89,7 +89,7 @@ To mark an association so that it is crawled as an attachment, add the **Attachm
 ## Crawling associated external content types as child external content types
 <a name="HowToCrawlAssociations_CrawlingChildExternalTypes"> </a>
 
-To mark an association so that it is crawled as a child external content type, add the **DirectoryLink**property to the**Association**method instance, as follows.
+To mark an association so that it is crawled as a child external content type, add the **DirectoryLink** property to the **Association** method instance, as follows.
   
     
     
@@ -107,7 +107,7 @@ To mark an association so that it is crawled as a child external content type, a
 
 
 > [!NOTE]  
-> You can specify any value for the **DirectoryLink**property. Search does not examine this value.
+> You can specify any value for the **DirectoryLink** property. Search does not examine this value.
   
     
     

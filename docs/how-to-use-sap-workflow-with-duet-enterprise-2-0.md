@@ -36,7 +36,7 @@ The first step is to create an SharePoint Add-in that will contain the connectio
 2. Choose **File**, **New**, **New Project**. 
     
   
-3. In the **New Project**dialog box, expand the**Visual C#**node, expand the**Office/SharePoint**node, and then choose the**Apps**node.
+3. In the **New Project** dialog box, expand the **Visual C#** node, expand the **Office/SharePoint** node, and then choose the **Apps** node.
     
   
 4. Choose **App for SharePoint 2013**. 
@@ -45,10 +45,10 @@ The first step is to create an SharePoint Add-in that will contain the connectio
 5. Name the project and click **OK**. 
     
   
-6. In the first **Specify the App for SharePoint Settings**dialog box, name your app and choose**SharePoint-hosted**under**How do you want to host your app for SharePoint**. Also specify the URL of the **Duet Workflow site**you want to debug against under**What SharePoint site do you want to use for debugging your app**and choose**Finish**. 
+6. In the first **Specify the App for SharePoint Settings** dialog box, name your app and choose **SharePoint-hosted** under **How do you want to host your app for SharePoint**. Also specify the URL of the **Duet Workflow site** you want to debug against under **What SharePoint site do you want to use for debugging your app** and choose **Finish**. 
     
   
-7. On the Build menu, choose **Deploy***<your app name>*  .
+7. On the Build menu, choose **Deploy** *<your app name>*  .
     
   
 After the app is deployed, Visual Studio will launch the default page for the app. 
@@ -70,7 +70,7 @@ BCS must be made aware of the external data source. This is done using an extern
 1. In the **Solution Explorer**, open the shortcut menu for the project, and choose **Add**, **Content types for External Data source**. 
     
   
-2. On the **Specify OData Source**page, enter the URL of the Duet Enterprise Workflow Service. The following is an example of a Duet service URL:
+2. On the **Specify OData Source** page, enter the URL of the Duet Enterprise Workflow Service. The following is an example of a Duet service URL:
     
      *https://<<DUETGATEWAY>>:<<PORT>>/sap/opu/odata/IWWRK/DUET_WORKFLOW_CORE;mo;c=SHAREPOINT_DE* 
     
@@ -107,7 +107,7 @@ BCS must be made aware of the external data source. This is done using an extern
   - **WorkflowTaskCollection**
     
   
-6. Select the **Create list instances for the selected data entities (except Service Operations)**check box.
+6. Select the **Create list instances for the selected data entities (except Service Operations)** check box.
     
   
 7. Choose **Finish**. 
@@ -132,10 +132,10 @@ In order to provide a way for the user to work with the new functionality added 
 ### To add a custom action:
 
 
-1. Right-click the SharePoint Add-in project, and add a new **UI Custom Action**item.
+1. Right-click the SharePoint Add-in project, and add a new **UI Custom Action** item.
     
   
-2. Open the **Elements.xml**file of the custom action host web feature. By replacing the code in the file with the following XML, the custom action will:
+2. Open the **Elements.xml** file of the custom action host web feature. By replacing the code in the file with the following XML, the custom action will:
     
   - Declare an ECB custom action and its attributes. 
     
@@ -145,7 +145,7 @@ In order to provide a way for the user to work with the new functionality added 
   
   - Declare the app webpage target and the values that are passed to it through the query string. 
     
-    The **UrlAction**element uses several tokens. For more information, see [URL strings and tokens in SharePoint Add-ins](http://msdn.microsoft.com/library/800ec8cd-a448-46bc-b41e-d4030eeb4048%28Office.15%29.aspx). 
+    The **UrlAction** element uses several tokens. For more information, see [URL strings and tokens in SharePoint Add-ins](http://msdn.microsoft.com/library/800ec8cd-a448-46bc-b41e-d4030eeb4048%28Office.15%29.aspx). 
     
   
 
@@ -202,10 +202,10 @@ In order to provide a way for the user to work with the new functionality added 
 3. Add a new page, ViewDetails.aspx page to the project. 
     
   
-4. Press **F5**to build and deploy the SharePoint app.
+4. Press **F5** to build and deploy the SharePoint app.
     
   
-5. Go to the **WorkItem**list in the host web and choose**View Details**in the context menu. You will be redirected to**ViewDetails.aspx**. 
+5. Go to the **WorkItem** list in the host web and choose **View Details** in the context menu. You will be redirected to **ViewDetails.aspx**. 
     
   
 
@@ -215,7 +215,7 @@ In order to provide a way for the user to work with the new functionality added 
     
     
 
-If you deploy the app and then navigate to **Lists/WorkflowTaskCollection**inside your app, you will see the following message:
+If you deploy the app and then navigate to **Lists/WorkflowTaskCollection** inside your app, you will see the following message:
   
     
     
@@ -265,16 +265,16 @@ DUET_WORKFLOW_CORE;mo;c=SHAREPOINT_DE"
 5. Open the **AppManifest.xml**. 
     
   
-6. In **Permission Requests**, select **Scope**, **BCS**then**Permission**= Read.
+6. In **Permission Requests**, select **Scope**, **BCS** then **Permission** = Read.
     
   
-7. Press **F5**to deploy the app.
+7. Press **F5** to deploy the app.
     
   
-8. On the **Permissions**page for the app, select the OData connection this app will use.
+8. On the **Permissions** page for the app, select the OData connection this app will use.
     
   
-9. Choose the **Trust It**button.
+9. Choose the **Trust It** button.
     
   
 10. Navigate to **../Lists/WorkflowTaskCollection**. You should see the SAP tasks assigned to you coming directly from the SAP system. 
@@ -292,7 +292,7 @@ Since SharePoint Add-ins must use client code to communicate with SharePoint, th
 ### To create the code:
 
 
-1. Right-click the **Pages**folder in the**Solution Explorer**, add a .NET page and name it **ViewDetails.aspx**
+1. Right-click the **Pages** folder in the **Solution Explorer**, add a .NET page and name it **ViewDetails.aspx**
     
   
 2. Paste the following HTML in the  `PlaceHolderAdditionalPageHead` section. This will set the style sheet reference, load the script and then return the related workflow tasks from SAP.
@@ -319,7 +319,7 @@ Since SharePoint Add-ins must use client code to communicate with SharePoint, th
 
   ```
 
-3. Right-click the **Scripts**folder and add a JavaScript file. Name it**ViewDetails.js**. 
+3. Right-click the **Scripts** folder and add a JavaScript file. Name it **ViewDetails.js**. 
     
   
 4. This markup will do the following: 
@@ -521,16 +521,16 @@ function getQueryStringParameter(paramToRetrieve) {
 
   ```
 
-6. Open the **AppManifest.xml**file.
+6. Open the **AppManifest.xml** file.
     
   
-7. In **Permission Requests**, select **Scope**, **Web and Permission**and set the value to *Read*  .
+7. In **Permission Requests**, select **Scope**, **Web and Permission** and set the value to *Read*  .
     
   
-8. Press **F5**to deploy the solution to the duet workflow site.
+8. Press **F5** to deploy the solution to the duet workflow site.
     
   
-9. Go to **My Workflow Tasks**. Select **View Details**in the ECB menu or select a task and press**View Details**in the ribbon. You will be redirected to**ViewDetails.aspx**where you will see an alert containing the count for some of the elements associated to the workflow.
+9. Go to **My Workflow Tasks**. Select **View Details** in the ECB menu or select a task and press **View Details** in the ribbon. You will be redirected to **ViewDetails.aspx** where you will see an alert containing the count for some of the elements associated to the workflow.
     
   
 
@@ -564,7 +564,7 @@ Here is one option for your custom user interface. Adding a Lync control will gi
 ### To add a Lync control:
 
 
-1. Right-click the **Scripts**folder in solution explorer, add a JavaScript file and name it**People.js**. 
+1. Right-click the **Scripts** folder in solution explorer, add a JavaScript file and name it **People.js**. 
     
   
 2. The following markup will: 
@@ -576,7 +576,7 @@ Here is one option for your custom user interface. Adding a Lync control will gi
     
   
 
-    Paste the following code into the **People.js**page.
+    Paste the following code into the **People.js** page.
     
 
 
@@ -776,13 +776,13 @@ function RegisterCallOut(divId, displayName, aboutme, userUrl, isFollowed) {
 
     > [!NOTE]  
 > The user name of the participant in company's network is same as that in SAP. 
-3. Open the **AppManifest.xml**page.
+3. Open the **AppManifest.xml** page.
     
   
-4. In **Permission Requests**, select **Scope**, **User Profiles and Permission**and set its value to *Read*  .
+4. In **Permission Requests**, select **Scope**, **User Profiles and Permission** and set its value to *Read*  .
     
   
-5. Copy the following markup and paste it in the  `PlaceHolderAdditionalPageHead` section in**ViewDetails.aspx**. 
+5. Copy the following markup and paste it in the  `PlaceHolderAdditionalPageHead` section in **ViewDetails.aspx**. 
     
   ```HTML
   

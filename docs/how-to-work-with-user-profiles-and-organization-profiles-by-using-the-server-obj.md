@@ -35,7 +35,7 @@ To create a console application that uses the server object model to work with u
 - Visual Studio 2012. 
     
   
-- Permissions to create, retrieve, and change user profile objects. (Creating and modifying profiles requires the **Modify User Profiles**permission.)
+- Permissions to create, retrieve, and change user profile objects. (Creating and modifying profiles requires the **Modify User Profiles** permission.)
     
   
 
@@ -46,16 +46,16 @@ To create a console application that uses the server object model to work with u
 1. Open Visual Studio and choose **File**, **New**, **Project**. 
     
   
-2. In the **New Project**dialog box, choose**.NET Framework 4.5**from the drop-down list at the top of the dialog box.
+2. In the **New Project** dialog box, choose **.NET Framework 4.5** from the drop-down list at the top of the dialog box.
     
   
-3. In the **Templates**list, choose**Windows**, and then choose **Console Application**. 
+3. In the **Templates** list, choose **Windows**, and then choose **Console Application**. 
     
   
-4. Name the project UserProfilesSSOM, and then choose the **OK**button.
+4. Name the project UserProfilesSSOM, and then choose the **OK** button.
     
     > [!NOTE]  
-> Make sure the **Prefer 32-bit**setting is not selected in the project's**Build**properties.
+> Make sure the **Prefer 32-bit** setting is not selected in the project's **Build** properties.
 5. Add references to the following assemblies: 
     
   - Microsoft.Office.Server 
@@ -70,7 +70,7 @@ To create a console application that uses the server object model to work with u
   - System.Web 
     
   
-6. Replace the contents of the **Program**class with the code example from one of the following scenarios:
+6. Replace the contents of the **Program** class with the code example from one of the following scenarios:
     
   -  [Create a user profile](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md#bkmk_CreateUP)
     
@@ -87,7 +87,7 @@ To create a console application that uses the server object model to work with u
   -  [Retrieve and change values for user properties](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md#bkmk_GetChangePropValues)
     
   
-7. To test the console application, on the menu bar, choose **Debug**, **Start Debugging**. You can check your changes from the **Manage Profile Service**page for the User Profile Service Application in Central Administration.
+7. To test the console application, on the menu bar, choose **Debug**, **Start Debugging**. You can check your changes from the **Manage Profile Service** page for the User Profile Service Application in Central Administration.
     
   
 
@@ -416,7 +416,7 @@ namespace UserProfilesSSOM
 ## Code example: Retrieve and change values for user properties by using the SharePoint 2013 server object model
 <a name="bkmk_GetChangePropValues"> </a>
 
-The following code example retrieves all **UserProfile**type properties and retrieves the property values for a specific user. Then, it changes the single-value [PictureUrl](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.PictureUrl.aspx) property and the multivalue [PastProjects](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.PastProjects.aspx) property. For the complete list of profile property name constants, see [PropertyConstants](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.aspx) .
+The following code example retrieves all **UserProfile** type properties and retrieves the property values for a specific user. Then, it changes the single-value [PictureUrl](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.PictureUrl.aspx) property and the multivalue [PastProjects](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.PastProjects.aspx) property. For the complete list of profile property name constants, see [PropertyConstants](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.aspx) .
   
     
     

@@ -3,7 +3,7 @@ title: Excel Services User-Defined Functions
 keywords: functions
 f1_keywords:
 - functions
-ms.prod: SHAREPOINT
+ms.prod: OFFICE365
 ms.assetid: 27dd8024-7e00-40de-a688-afc67c880603
 ---
 
@@ -79,7 +79,7 @@ This section contains information about user-defined functions (UDFs) and how to
 ## Reference
 
 
-**[Microsoft.Office.Excel.Server.Udf]**
+ **[Microsoft.Office.Excel.Server.Udf]**
   
     
     

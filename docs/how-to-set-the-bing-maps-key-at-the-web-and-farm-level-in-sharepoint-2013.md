@@ -81,13 +81,13 @@ The Bing Maps key can be set at the farm or web level. To set the Bing Maps key 
 1. Start Visual Studio. 
     
   
-2. On the menu bar, choose **File**, **New Project**. The **New Project**dialog box opens.
+2. On the menu bar, choose **File**, **New Project**. The **New Project** dialog box opens.
     
   
-3. In the **New Project**dialog box, choose**C#**in the**Installed Templates**box, and then choose the**Console Application**template.
+3. In the **New Project** dialog box, choose **C#** in the **Installed Templates** box, and then choose the **Console Application** template.
     
   
-4. Give the project a name, and then choose the **OK**button.
+4. Give the project a name, and then choose the **OK** button.
     
   
 5. Visual Studio creates the project. Add a reference to the following assemblies, and choose **OK**. 
@@ -98,7 +98,7 @@ The Bing Maps key can be set at the farm or web level. To set the Bing Maps key 
   - Microsoft.SharePoint.Client.Runtime.dll 
     
   
-6. In the default .cs file, add a **using**directive as follows.
+6. In the default .cs file, add a **using** directive as follows.
     
      `using Microsoft.SharePoint.Client;`
     

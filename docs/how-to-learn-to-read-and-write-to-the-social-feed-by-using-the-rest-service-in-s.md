@@ -32,7 +32,7 @@ If you're not using Napa on a Developer Site, you'll need the following:
 - Visual Studio 2012 and Office Developer Tools for Visual Studio 2013 
     
   
-- **Full Control**access permissions to the User Profile service application for the logged-on user
+- **Full Control** access permissions to the User Profile service application for the logged-on user
     
   
 
@@ -68,27 +68,27 @@ The SharePoint-hosted app that you create in this article uses JavaScript to bui
 1. On your Developer Site, open Napa, and then choose **Add New Project**. 
     
   
-2. Choose the **App for SharePoint**template, name the projectSocialFeedREST, and then choose the **Create**button.
+2. Choose the **App for SharePoint** template, name the projectSocialFeedREST, and then choose the **Create** button.
     
   
 3. Specify the permissions that your app needs: 
     
-1. Choose the **Properties**button at the bottom of the page.
+1. Choose the **Properties** button at the bottom of the page.
     
   
-2. In the **Properties**window, choose**Permissions**. 
+2. In the **Properties** window, choose **Permissions**. 
     
   
-3. In the **Content**category, set**Write**permissions for the**Tenant**scope.
+3. In the **Content** category, set **Write** permissions for the **Tenant** scope.
     
   
-4. In the **Social**category, set**Read**permissions for the**User Profiles**scope.
+4. In the **Social** category, set **Read** permissions for the **User Profiles** scope.
     
   
-5. Close the **Properties**window.
+5. Close the **Properties** window.
     
   
-4. Expand the **Scripts**node, choose the App.js file, and delete the contents of the file.
+4. Expand the **Scripts** node, choose the App.js file, and delete the contents of the file.
     
   
 
@@ -96,14 +96,14 @@ The SharePoint-hosted app that you create in this article uses JavaScript to bui
 <a name="bkmk_PubPost"> </a>
 
 
-1. In the App.js file, declare a global variable for the URL of the **SocialFeedManager**endpoint.
+1. In the App.js file, declare a global variable for the URL of the **SocialFeedManager** endpoint.
     
   ```
   
 var feedManagerEndpoint;
   ```
 
-2. Add the following code, which gets the **SPAppWebUrl**parameter from the query string and uses it to build the**SocialFeedManager**endpoint.
+2. Add the following code, which gets the **SPAppWebUrl** parameter from the query string and uses it to build the **SocialFeedManager** endpoint.
     
   ```
   $(document).ready(function () {
@@ -118,9 +118,9 @@ var feedManagerEndpoint;
 });
   ```
 
-3. Add the following code, which builds the HTTP **POST**request for the `/my/Feed/Post` endpoint, defines the post's creation data, and publishes the post.
+3. Add the following code, which builds the HTTP **POST** request for the `/my/Feed/Post` endpoint, defines the post's creation data, and publishes the post.
     
-    The request sends a **SocialRestPostCreationData**resource in the request body.**SocialRestPostCreationData**contains the target for the post (in this case, `null` to specify a root post for the current user) and a**SocialPostCreationData**complex type that defines the post's properties.
+    The request sends a **SocialRestPostCreationData** resource in the request body. **SocialRestPostCreationData** contains the target for the post (in this case, `null` to specify a root post for the current user) and a **SocialPostCreationData** complex type that defines the post's properties.
     
 
 
@@ -163,7 +163,7 @@ function postToMyFeed() {
 ## Retrieve the social feed for the current user by using the SharePoint 2013 REST service
 <a name="bkmk_GetFeed"> </a>
 
-Add the following code, which gets the **Personal**feed type for the current user by using the `/my/Feed` endpoint. The**accept**header requests that the server return a JavaScript Object Notation (JSON) representation of the feed in its response.
+Add the following code, which gets the **Personal** feed type for the current user by using the `/my/Feed` endpoint. The **accept** header requests that the server return a JavaScript Object Notation (JSON) representation of the feed in its response.
   
     
     
@@ -189,7 +189,7 @@ function getMyFeed() {
 ## Iterate through the social feed and read from it by using the SharePoint 2013 REST service
 <a name="bkmk_ReadFeed"> </a>
 
-Add the following code, which prepares the returned data by using the **JSON.stringify**function and the**JSON.parse**function, and then iterates through the feed and gets the thread's owner and the root post's text.
+Add the following code, which prepares the returned data by using the **JSON.stringify** function and the **JSON.parse** function, and then iterates through the feed and gets the thread's owner and the root post's text.
   
     
     
@@ -219,10 +219,10 @@ function feedRetrieved(data) {
 <a name="bkmk_ReadFeed"> </a>
 
 
-1. To run the app, choose the **Run Project**button at the bottom of the page.
+1. To run the app, choose the **Run Project** button at the bottom of the page.
     
   
-2. In the **Do you trust**page that opens, choose the**Trust It**button. The app page opens and displays the owner's name and the text of each root post in the feed.
+2. In the **Do you trust** page that opens, choose the **Trust It** button. The app page opens and displays the owner's name and the text of each root post in the feed.
     
   
 

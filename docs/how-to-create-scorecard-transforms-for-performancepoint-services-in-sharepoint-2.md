@@ -30,7 +30,7 @@ In PerformancePoint Services, scorecard transforms change the appearance, conten
 3. Add Microsoft.PerformancePoint.Scorecards.Client.dll as an assembly reference to the project. 
     
   
-4. Add **using**directives for the following namespaces:
+4. Add **using** directives for the following namespaces:
     
   - **Microsoft.PerformancePoint.Scorecards**
     
@@ -44,10 +44,10 @@ In PerformancePoint Services, scorecard transforms change the appearance, conten
 5. Implement the  [IGridViewTransform](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.IGridViewTransform.aspx) interface.
     
   
-6. Override the  [GetId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.IGridViewTransform.GetId.aspx) method to return the string identifier for your transform. [GetId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.IGridViewTransform.GetId.aspx) must return the same string as the**key**attribute that is registered for the transform in the PerformancePoint Services web.config file. For more information about registering scorecard transforms, see [How to: Manually Register PerformancePoint Services Extensions](http://msdn.microsoft.com/library/3aa6d340-4b05-46b3-9648-2b6e18e04e09%28Office.15%29.aspx). 
+6. Override the  [GetId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.IGridViewTransform.GetId.aspx) method to return the string identifier for your transform. [GetId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.IGridViewTransform.GetId.aspx) must return the same string as the **key** attribute that is registered for the transform in the PerformancePoint Services web.config file. For more information about registering scorecard transforms, see [How to: Manually Register PerformancePoint Services Extensions](http://msdn.microsoft.com/library/3aa6d340-4b05-46b3-9648-2b6e18e04e09%28Office.15%29.aspx). 
     
   
-7. Override the  [GetTransformType](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.IGridViewTransform.GetTransformType.aspx) method to specify when to run the transform. The point at which a transform runs depends on its type, as defined by the [GridViewTransformType](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.GridViewTransformType.aspx) enumeration:**PreQuery**, **PostQuery**, or **PreRender**. For more information, see  [Types of Transforms](http://msdn.microsoft.com/library/d69d171b-827a-48a8-a3e1-7aaf0bfbc7f8%28Office.15%29.aspx). 
+7. Override the  [GetTransformType](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.IGridViewTransform.GetTransformType.aspx) method to specify when to run the transform. The point at which a transform runs depends on its type, as defined by the [GridViewTransformType](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.GridViewTransformType.aspx) enumeration: **PreQuery**, **PostQuery**, or **PreRender**. For more information, see  [Types of Transforms](http://msdn.microsoft.com/library/d69d171b-827a-48a8-a3e1-7aaf0bfbc7f8%28Office.15%29.aspx). 
     
   
 8. Override the  [Execute](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Extensions.IGridViewTransform.Execute.aspx) method to define how to transform the scorecard. The following code examples show how to add a column to a scorecard view and how to change the formatting of empty scorecard cells.
@@ -57,7 +57,7 @@ After you sign and build your DLL, install the extension as described in  [How t
 ## Code example 1: Add a column to PerformancePoint Services scorecards
 <a name="bk_example1"> </a>
 
-The following code example creates a **PreQuery**transform that adds a column to rendered scorecard views that contain a KPI at the column leaf level. (If the scorecard view includes members below the KPIs, the column is not added.)
+The following code example creates a **PreQuery** transform that adds a column to rendered scorecard views that contain a KPI at the column leaf level. (If the scorecard view includes members below the KPIs, the column is not added.)
   
     
     
@@ -148,13 +148,13 @@ namespace Microsoft.PerformancePoint.SDK.Samples.ScorecardTransforms.PreQuery
 ## Code example 2: Change the format of empty cells in PerformancePoint Services scorecards
 <a name="bk_example2"> </a>
 
-The following code example creates a **PreQuery**transform that applies a grey background color to empty scorecard cells.
+The following code example creates a **PreQuery** transform that applies a grey background color to empty scorecard cells.
   
     
     
 
 > [!NOTE]  
-> Before you can compile this code example, you must configure your development environment as described in  [Create transforms for PerformancePoint Services scorecards](#BKMK_CreateClass). In addition, you must add a reference to the **System.Drawing**assembly to your project.
+> Before you can compile this code example, you must configure your development environment as described in  [Create transforms for PerformancePoint Services scorecards](#BKMK_CreateClass). In addition, you must add a reference to the **System.Drawing** assembly to your project.
   
     
     

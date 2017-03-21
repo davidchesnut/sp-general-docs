@@ -16,10 +16,10 @@ InSharePoint 2013, Design Manager can help web developers and designers build an
     
     
 
-- **New Design**—A company with limited web design capabilities might contract a vendor agency to refresh their current SharePoint site with a more modern interpretation. The agency can create the site and easily package the contents for importing back into the company SharePoint farm.
+- **New Design** —A company with limited web design capabilities might contract a vendor agency to refresh their current SharePoint site with a more modern interpretation. The agency can create the site and easily package the contents for importing back into the company SharePoint farm.
     
   
-- **Cross-Site Publishing**—An enterprise IT department using cross-site publishing in SharePoint 2013 might have to share a visual design across multiple site collections. They create the site in-house and want a simple way to transport the design across several SharePoint websites. The design package functionality through Device Manager enables them to export and import with reduced administrative support and complexity.
+- **Cross-Site Publishing** —An enterprise IT department using cross-site publishing in SharePoint 2013 might have to share a visual design across multiple site collections. They create the site in-house and want a simple way to transport the design across several SharePoint websites. The design package functionality through Device Manager enables them to export and import with reduced administrative support and complexity.
     
   
 This article can help you understand design packaging in SharePoint 2013 by providing an overview of package creation, and offers workflow guidance for package exporting and importing. It also discusses required permissions for specific operations, and design package architecture. 
@@ -52,7 +52,7 @@ Figure 1 shows the option in Design Manager for naming and creating the design p
   
     
     
-Alternatively, you can import a design package from another SharePoint 2013 site collection through Design Manager on the Welcome page, or by choosing **Import design package**in**Site Settings**. 
+Alternatively, you can import a design package from another SharePoint 2013 site collection through Design Manager on the Welcome page, or by choosing **Import design package** in **Site Settings**. 
   
     
     
@@ -64,7 +64,7 @@ Alternatively, you can import a design package from another SharePoint 2013 site
     
     
 
-There is a check box for including the search configuration in the design package. You would choose this option if you are designing a site and creating conditional search results, or controlling the search experience. This configuration contains assets like query rules, result sources, result types, and any schema and ranking models. To ensure that the import of the search configuration does not fail, there must not be duplicate names for any elements of the search configuration. For example, if you have a query rule in a site collection named **SampleQueryRule**, and you import it into another site collection with an existing rule named **SampleQueryRule**, importing the search configuration fails. To prevent this, you can rename or delete the query rule on the source or on the target. Result sources, and the schema, also have to be uniquely named. If you want to include a search configuration in your design package, you must activate the following features at the site level under **Manage Site Features**before you export the design package:
+There is a check box for including the search configuration in the design package. You would choose this option if you are designing a site and creating conditional search results, or controlling the search experience. This configuration contains assets like query rules, result sources, result types, and any schema and ranking models. To ensure that the import of the search configuration does not fail, there must not be duplicate names for any elements of the search configuration. For example, if you have a query rule in a site collection named **SampleQueryRule**, and you import it into another site collection with an existing rule named **SampleQueryRule**, importing the search configuration fails. To prevent this, you can rename or delete the query rule on the source or on the target. Result sources, and the schema, also have to be uniquely named. If you want to include a search configuration in your design package, you must activate the following features at the site level under **Manage Site Features** before you export the design package:
   
     
     
@@ -99,9 +99,9 @@ You can approach an end-to-end packaging workflow several ways, with much of the
 
 |**Step**|**Action**|**Description**|
 |:-----|:-----|:-----|
-|1 |Customer contracts vendor agency to create visual design. | The vendor designer creates site, based on company requirements.> [!NOTE]  >  The vendor designer must have the**Designers**permission level to use Design Manager and create and export packages. More specifically, the**Design**permission that allows viewing, adding, updating, deleting, approving, and customizing visual designs.          |
+|1 |Customer contracts vendor agency to create visual design. | The vendor designer creates site, based on company requirements.> [!NOTE]  >  The vendor designer must have the **Designers** permission level to use Design Manager and create and export packages. More specifically, the **Design** permission that allows viewing, adding, updating, deleting, approving, and customizing visual designs.          |
 |2 |Vendor designer exports visual design into a design package. | The vendor designer exports the SharePoint solution package (.wsp file) after completing the other required branding and publishing steps. The design package is delivered to the customer via a secure channel.|
-|3 |Customer imports visual design into their specified SharePoint 2013 site collection. | The customer receives the design package via a secure channel. Through the Welcome page in Design Manager or by choosing**Import design package**in**Site Settings**, the customer imports the .wsp file and applies the design package to the specified site collection. > [!NOTE]  >  The customer must have the**Designers**permission level to use Design Manager and import design packages.          |
+|3 |Customer imports visual design into their specified SharePoint 2013 site collection. | The customer receives the design package via a secure channel. Through the Welcome page in Design Manager or by choosing **Import design package** in **Site Settings**, the customer imports the .wsp file and applies the design package to the specified site collection. > [!NOTE]  >  The customer must have the **Designers** permission level to use Design Manager and import design packages.          |
    
 
 ## Understanding design package contents

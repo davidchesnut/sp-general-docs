@@ -46,7 +46,7 @@ The Geolocation field type is not available in the default content type of any l
     
     
 
-After you add the Geolocation field type to SharePoint 2013, you can use it to render maps by using Bing Maps. The built-in Geolocation field can render only with Bing Maps. However, you can create a custom field by using the Geolocation field as a parent field type. Custom rendering can be provided through the **JSLink**property in the client-side rendering framework. The client-side rendering framework is introduced in SharePoint 2013. For more information, see [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md). 
+After you add the Geolocation field type to SharePoint 2013, you can use it to render maps by using Bing Maps. The built-in Geolocation field can render only with Bing Maps. However, you can create a custom field by using the Geolocation field as a parent field type. Custom rendering can be provided through the **JSLink** property in the client-side rendering framework. The client-side rendering framework is introduced in SharePoint 2013. For more information, see [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md). 
 > [!NOTE]  
 > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
   
@@ -102,7 +102,7 @@ You must have the following:
 1. Start Visual Studio 2012 on the same computer where SharePoint Server 2013 is installed. 
     
   
-2. In the **New Project**dialog box, under**Installed templates**, choose **Visual C#**, **Office SharePoint**, **SharePoint Solutions**. Choose the **SharePoint 2013**project type. Figure 1 shows the location of the**SharePoint 2013 Project**template in Visual Studio 2012. Make it a**farm solution**, not a sandboxed solution. 
+2. In the **New Project** dialog box, under **Installed templates**, choose **Visual C#**, **Office SharePoint**, **SharePoint Solutions**. Choose the **SharePoint 2013** project type. Figure 1 shows the location of the **SharePoint 2013 Project** template in Visual Studio 2012. Make it a **farm solution**, not a sandboxed solution. 
     
    **Figure 1. SharePoint 2013 project template in Visual Studio**
 
@@ -114,7 +114,7 @@ You must have the following:
   
 
   
-3. Specify a name for the project. We are using **CustomGeolocationField**in this example. Then choose the**OK**button.
+3. Specify a name for the project. We are using **CustomGeolocationField** in this example. Then choose the **OK** button.
     
   
 4. In the **SharePoint Customization Wizard**, enter the URL for the SharePoint site where you want to deploy your new custom field type. 
@@ -123,41 +123,41 @@ You must have the following:
 5. In **Solution Explorer**, open the shortcut menu for the project name (in our example, it is **CustomGeolocationField**), and choose **Add**, **New Item**. 
     
   
-6. In the **Add New Item**dialog box, under the**Code**templates, choose**Class**, and specify the name for the class (**CustomGeolocationField.cs**in this example).
+6. In the **Add New Item** dialog box, under the **Code** templates, choose **Class**, and specify the name for the class ( **CustomGeolocationField.cs** in this example).
     
   
 7. In **Solution Explorer**, open the shortcut menu for the project name, and choose **Add**, **SharePoint mapped folder**. 
     
   
-8. In the **Add SharePoint Mapped Folder**dialog box, use the tree control to map the folder to**TEMPLATE\\LAYOUTS**, and choose the **OK**button.
+8. In the **Add SharePoint Mapped Folder** dialog box, use the tree control to map the folder to **TEMPLATE\\LAYOUTS**, and choose the **OK** button.
     
   
-9. In **Solution Explorer**, open the shortcut menu for the new **LAYOUTS**folder (not the project name), and choose**Add**, **New Item**. 
+9. In **Solution Explorer**, open the shortcut menu for the new **LAYOUTS** folder (not the project name), and choose **Add**, **New Item**. 
     
   
-10. In the **Add New Item**dialog box, choose**Visual C#**, **Web**, and then choose **Javascript File**under**Templates**. 
+10. In the **Add New Item** dialog box, choose **Visual C#**, **Web**, and then choose **Javascript File** under **Templates**. 
     
   
-11. In the **Name**box, specify the name for the file (CustomGeolocationField in our example), and choose**Add**. 
+11. In the **Name** box, specify the name for the file (CustomGeolocationField in our example), and choose **Add**. 
     
   
-12. Repeat step 8 to create another SharePoint mapped folder, and map it to **TEMPLATE\\XML**. Then choose the **OK**button.
+12. Repeat step 8 to create another SharePoint mapped folder, and map it to **TEMPLATE\\XML**. Then choose the **OK** button.
     
   
-13. In **Solution Explorer**, open the shortcut menu for the new **XML**folder (not the project name), and choose**Add**, **New Item**. 
+13. In **Solution Explorer**, open the shortcut menu for the new **XML** folder (not the project name), and choose **Add**, **New Item**. 
     
   
-14. In the **Add New Item**dialog box, choose**Visual C#**, **Data**, and then choose **XML File**under**Templates**. 
+14. In the **Add New Item** dialog box, choose **Visual C#**, **Data**, and then choose **XML File** under **Templates**. 
     
   
-15. In the **Name**box, specify the name for the file (this example usesfldtypes_CustomGeolocationControl.xml), and choose the **Add**button.
+15. In the **Name** box, specify the name for the file (this example usesfldtypes_CustomGeolocationControl.xml), and choose the **Add** button.
     
   
 
 ## Step 2: Create a custom field class
 <a name="CreatingCustomGeolocationStep_2"> </a>
 
- A field class is a class whose instances can represent particular fields that are based on your custom field type. This class must inherit from**SPField**or one of the classes in SharePoint Foundation that derive from it. To enable you to extend or customize the Geolocation field type, this class must inherit from**SPFieldGeolocation**. For more information about creating field types, see  [Walkthrough: Creating a Custom Field Type](http://msdn.microsoft.com/library/089a1b8a-cafc-4050-b445-16650602fe4f%28Office.15%29.aspx). 
+ A field class is a class whose instances can represent particular fields that are based on your custom field type. This class must inherit from **SPField** or one of the classes in SharePoint Foundation that derive from it. To enable you to extend or customize the Geolocation field type, this class must inherit from **SPFieldGeolocation**. For more information about creating field types, see  [Walkthrough: Creating a Custom Field Type](http://msdn.microsoft.com/library/089a1b8a-cafc-4050-b445-16650602fe4f%28Office.15%29.aspx). 
   
     
     
@@ -172,7 +172,7 @@ You must have the following:
 ### To create a custom field class
 
 
-1. Open the CustomGeolocationField.cs file, and add a **using**directive as follows.
+1. Open the CustomGeolocationField.cs file, and add a **using** directive as follows.
     
   ```cs
   
@@ -214,7 +214,7 @@ public class CustomGeolocationField : SPFieldGeolocation
         }
   ```
 
-4. Add the following override of the **JSLink**method to the class. CustomGeolocationControl.js is a JavaScript file that you create in the following step. By providing your own JavaScript file, you are overriding the default rendering of Bing Maps. If you do not override this method, the default rendering will be from Bing Maps. The**JSLink**property is introduced in SharePoint 2013. For more information about the**JSLink**property, see [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md). 
+4. Add the following override of the **JSLink** method to the class. CustomGeolocationControl.js is a JavaScript file that you create in the following step. By providing your own JavaScript file, you are overriding the default rendering of Bing Maps. If you do not override this method, the default rendering will be from Bing Maps. The **JSLink** property is introduced in SharePoint 2013. For more information about the **JSLink** property, see [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md). 
     
   ```cs
   
@@ -235,7 +235,7 @@ public override string JSLink
         }
   ```
 
-5. The **GetFieldValue**method converts the specified value into a field type value. For more information about the**GetFieldValue**method, see [GetFieldValue(String)](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.GetFieldValue.aspx) . Add the following override of the**GetFieldValue**method to the**CustomGeolocationField**class.
+5. The **GetFieldValue** method converts the specified value into a field type value. For more information about the **GetFieldValue** method, see [GetFieldValue(String)](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.GetFieldValue.aspx) . Add the following override of the **GetFieldValue** method to the **CustomGeolocationField** class.
     
   ```cs
   
@@ -251,7 +251,7 @@ public override string JSLink
         }
   ```
 
-6. Add the following override of the  [GetValidatedString](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.GetValidatedString.aspx) method to the**CustomGeolocationField**class:
+6. Add the following override of the  [GetValidatedString](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.GetValidatedString.aspx) method to the **CustomGeolocationField** class:
     
   ```cs
   
@@ -271,7 +271,7 @@ public override string JSLink
 ## Step 3: Create rendering for the new custom field
 <a name="CreatingCustomGeolocationStep_3"> </a>
 
-Next, you should create the JavaScript file that the **JSLink**method of the field class points to. This file should define the rendering of the custom field type using the new client-side rendering framework. For more information, see [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md). 
+Next, you should create the JavaScript file that the **JSLink** method of the field class points to. This file should define the rendering of the custom field type using the new client-side rendering framework. For more information, see [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md). 
   
     
     
@@ -526,10 +526,10 @@ A field type definition is an XML file with a name like  _fldtypes*.xml_ that is
   ```
 
 
-    This file defines the custom field type for SharePoint 2013. For details about the purpose and meaning of its elements, see  [Custom Field Type Definition](http://msdn.microsoft.com/library/b3315997-671f-4c29-9518-48cc4592f205%28Office.15%29.aspx),  [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx),  [FieldTypes Element (Field Types)](http://msdn.microsoft.com/library/ebac779f-c7c5-401b-8503-e514cd96f5a7%28Office.15%29.aspx),  [FieldType Element (Field Types)](http://msdn.microsoft.com/library/9ab89988-3462-422f-9808-40618da7316b%28Office.15%29.aspx), and  [Field Element (Field Types)](http://msdn.microsoft.com/library/c168e8bc-8aba-4b72-a9c4-a0ad7a4aff9a%28Office.15%29.aspx). Note that the **<Field Name="FieldTypeClass">**element must be entirely on one line.
+    This file defines the custom field type for SharePoint 2013. For details about the purpose and meaning of its elements, see  [Custom Field Type Definition](http://msdn.microsoft.com/library/b3315997-671f-4c29-9518-48cc4592f205%28Office.15%29.aspx),  [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx),  [FieldTypes Element (Field Types)](http://msdn.microsoft.com/library/ebac779f-c7c5-401b-8503-e514cd96f5a7%28Office.15%29.aspx),  [FieldType Element (Field Types)](http://msdn.microsoft.com/library/9ab89988-3462-422f-9808-40618da7316b%28Office.15%29.aspx), and  [Field Element (Field Types)](http://msdn.microsoft.com/library/c168e8bc-8aba-4b72-a9c4-a0ad7a4aff9a%28Office.15%29.aspx). Note that the **<Field Name="FieldTypeClass">** element must be entirely on one line.
     
   
-3. The value of the **<Field Name="FieldTypeClass">**element is the fully qualified name of your custom field class followed by a comma and then a Visual Studio token ( `$SharePoint.Project.AssemblyFullName$`). When you compile the project, a copy of this file is created in which the token is replaced by the full four-part name of the assembly. That copy is deployed when you choose **Deploy Solution**on the Visual Studio**Build**menu in Visual Studio 2012.
+3. The value of the **<Field Name="FieldTypeClass">** element is the fully qualified name of your custom field class followed by a comma and then a Visual Studio token ( `$SharePoint.Project.AssemblyFullName$`). When you compile the project, a copy of this file is created in which the token is replaced by the full four-part name of the assembly. That copy is deployed when you choose **Deploy Solution** on the Visual Studio **Build** menu in Visual Studio 2012.
     
   
 

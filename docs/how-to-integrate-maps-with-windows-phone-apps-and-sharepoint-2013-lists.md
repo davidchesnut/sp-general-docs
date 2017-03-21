@@ -59,25 +59,25 @@ The Geolocation column is not available by default in SharePoint lists. You have
 1. Log on as an administrator to the server running SharePoint 2013. 
     
   
-2. Start **Visual Studio**and choose**File**, **New Project**. The **New Project**dialog box opens.
+2. Start **Visual Studio** and choose **File**, **New Project**. The **New Project** dialog box opens.
     
   
-3. In the **New Project**dialog box, choose**Visual C#**, choose **SharePoint 2013**, and then choose the **SharePoint 2013**Project type.
+3. In the **New Project** dialog box, choose **Visual C#**, choose **SharePoint 2013**, and then choose the **SharePoint 2013** Project type.
     
   
-4. Name the project. In this example, we use **GeoList**. Choose the **OK**button.
+4. Name the project. In this example, we use **GeoList**. Choose the **OK** button.
     
   
 5. In the **SharePoint Customization Wizard**, enter the URL for the site collection that uses the same SharePoint list that you want to access for phone development. 
     
   
-6. In **Solution Explorer**, open the shortcut menu for the **GeoList**project, and then choose**Add**, **New Item**. 
+6. In **Solution Explorer**, open the shortcut menu for the **GeoList** project, and then choose **Add**, **New Item**. 
     
   
-7. In the **Add New Item**dialog box, choose**List**. Name the list. In this example, we use **ServiceCalls**. 
+7. In the **Add New Item** dialog box, choose **List**. Name the list. In this example, we use **ServiceCalls**. 
     
   
-8. In the **Choose List Settings**dialog box, add a display name. In this example, we use**Service Calls**. For **Choose to customize the list based on**, choose **Default (Blank)**, as shown in Figure 1. 
+8. In the **Choose List Settings** dialog box, add a display name. In this example, we use **Service Calls**. For **Choose to customize the list based on**, choose **Default (Blank)**, as shown in Figure 1. 
     
     Then, choose **Finish**. 
     
@@ -96,13 +96,13 @@ The Geolocation column is not available by default in SharePoint lists. You have
 ### To add a Feature to the SharePoint list
 
 
-1. In **Solution Explorer**, and then expand the **Features**node.
+1. In **Solution Explorer**, and then expand the **Features** node.
     
   
-2. Open the shortcut menu for the **Feature1**node, and then choose**Add**, **Add Event Receiver**. 
+2. Open the shortcut menu for the **Feature1** node, and then choose **Add**, **Add Event Receiver**. 
     
   
-3. Uncomment the **FeatureActivated**method and**FeatureDeactivating**method, and then add the following code.
+3. Uncomment the **FeatureActivated** method and **FeatureDeactivating** method, and then add the following code.
     
   ```cs
   
@@ -146,7 +146,7 @@ In this step, you deploy the newly created list from Visual Studio and use the n
 ### To deploy the SharePoint list
 
 
-- In **Solution Explorer**, open the shortcut menu for the **GeoList**project, and then choose**Deploy**. 
+- In **Solution Explorer**, open the shortcut menu for the **GeoList** project, and then choose **Deploy**. 
     
   
 
@@ -156,16 +156,16 @@ In this step, you deploy the newly created list from Visual Studio and use the n
 1. After the list successfully deploys, open the site you are using for phone development. 
     
   
-2. Choose **More**, and then choose the **Service Calls**list.
+2. Choose **More**, and then choose the **Service Calls** list.
     
   
 3. Choose **Add New Item**. 
     
   
-4. Provide a title for the **Title**field. For this example, use**New Geolocation Item**. 
+4. Provide a title for the **Title** field. For this example, use **New Geolocation Item**. 
     
   
-5. Choose **Use Current Location**in the**Location**field, or you can choose**Specify Location**, and then enter values for**Longitude**and**Latitude**. 
+5. Choose **Use Current Location** in the **Location** field, or you can choose **Specify Location**, and then enter values for **Longitude** and **Latitude**. 
     
   
 6. Choose **Save**. 
@@ -188,31 +188,31 @@ In this step, you create a phone app that uses the SharePoint list you created p
   
 3. On the menu bar, choose **File**, **New Project**. 
     
-    The **New Project**dialog box opens.
+    The **New Project** dialog box opens.
     
   
-4. In the **New Project**dialog box, choose**Visual C#**, **Silverlight for Windows Phone**, **Windows Phone SharePoint List Application**. 
+4. In the **New Project** dialog box, choose **Visual C#**, **Silverlight for Windows Phone**, **Windows Phone SharePoint List Application**. 
     
   
-5. Name the project. In this example, we use GeoApp. Choose the **OK**button.
+5. Name the project. In this example, we use GeoApp. Choose the **OK** button.
     
   
 6. In the **SharePoint Phone Application Wizard**, enter the URL of the SharePoint site where you have deployed the list in **Step 2. Deploy the list and enter data into the location-based SharePoint list**, and then choose **Find Lists**. 
     
   
-7. Choose the **Service Calls**list, and then choose**Next**. 
+7. Choose the **Service Calls** list, and then choose **Next**. 
     
   
-8. On the **Choose Views**page, choose**All Items**, and then choose **Next**. 
+8. On the **Choose Views** page, choose **All Items**, and then choose **Next**. 
     
   
-9. On the **Choose Operations**page, choose**Display**, and then choose **Next**. 
+9. On the **Choose Operations** page, choose **Display**, and then choose **Next**. 
     
   
-10. On the **Choose Fields**page, choose the field you want to see on your phone app, and then choose**Next**. 
+10. On the **Choose Fields** page, choose the field you want to see on your phone app, and then choose **Next**. 
     
   
-11. On the **Order Fields**page, reorder the fields as you need, and then choose**Finish**. 
+11. On the **Order Fields** page, reorder the fields as you need, and then choose **Finish**. 
     
   
 
@@ -233,10 +233,10 @@ In this step, you can run your app and validate it.
 3. For this example, choose the first entry, **Brian Cox**. 
     
   
-4. Choose the **Map It**link found in the**Location**field.
+4. Choose the **Map It** link found in the **Location** field.
     
   
-5. On the **Allow maps to access and use your location**privacy policy screen, choose**Allow**, as shown in Figure 2. 
+5. On the **Allow maps to access and use your location** privacy policy screen, choose **Allow**, as shown in Figure 2. 
     
    **Figure 2. Mobile app request to have access to your current location**
 
@@ -260,7 +260,7 @@ In this step, you can run your app and validate it.
   
 
 > [!NOTE]  
-> The user's experience of the Geolocation field can be different on mobile devices than in browsers. The **Use Specific Location**option, available in the browser, is not available for mobile devices. For mobile devices, only one option is available:**Use my location**. 
+> The user's experience of the Geolocation field can be different on mobile devices than in browsers. The **Use Specific Location** option, available in the browser, is not available for mobile devices. For mobile devices, only one option is available: **Use my location**. 
   
     
     

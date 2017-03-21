@@ -39,11 +39,11 @@ By default, snippets inherit their styles from SharePoint 2013 style sheets such
 - Use the features of your HTML editor to inspect the default styles in the read-only preview of a snippet, and then identify specific styles to override. 
     
   
-To identify the default styles by using the developer tools in Internet Explorer, you should use the server-side preview in Design Manager to view your HTML master page or page layout, press **F12**to start the developer tools, choose the**Find**menu, and then choose**Select element by click**. This enables you to click elements on the page and see exactly what styles to override by adding CSS to the custom style sheet that your HTML master page or page layout links to. 
+To identify the default styles by using the developer tools in Internet Explorer, you should use the server-side preview in Design Manager to view your HTML master page or page layout, press **F12** to start the developer tools, choose the **Find** menu, and then choose **Select element by click**. This enables you to click elements on the page and see exactly what styles to override by adding CSS to the custom style sheet that your HTML master page or page layout links to. 
   
     
     
-The default SharePoint 2013 style sheets contain many styles, which can make it challenging to identify specific styles. As an alternative to browser-based tools, and depending on your HTML editor, you may find it easier to copy the snippet from the Snippet Gallery into your HTML file, and then use the HTML editor to identify the styles. In the Snippet Gallery, when you choose **Update**and then choose**Copy to Clipboard**, the snippet contains an HTML preview of that snippet. After you copy the snippet into your HTML file, you can inspect the styles used in the read-only preview contained in the snippet. This way, you are parsing a smaller subset of the default styles. 
+The default SharePoint 2013 style sheets contain many styles, which can make it challenging to identify specific styles. As an alternative to browser-based tools, and depending on your HTML editor, you may find it easier to copy the snippet from the Snippet Gallery into your HTML file, and then use the HTML editor to identify the styles. In the Snippet Gallery, when you choose **Update** and then choose **Copy to Clipboard**, the snippet contains an HTML preview of that snippet. After you copy the snippet into your HTML file, you can inspect the styles used in the read-only preview contained in the snippet. This way, you are parsing a smaller subset of the default styles. 
   
     
     
@@ -55,7 +55,7 @@ Depending on the snippet and the extent of your customization, you may want to u
 ## Example: Style the top navigation snippet
 <a name="Example"> </a>
 
-The top navigation snippet is one of the most commonly used snippets, so it's also one of the most commonly branded snippets. In a SharePoint 2013 site, you can select an option to use managed navigation, so that a term store becomes the data source for the top navigation snippet. This way, you can use the Term Store Management tool in **Site Settings**to add or delete navigation terms and to manage the navigation taxonomy that is displayed by the Top Navigation snippet.
+The top navigation snippet is one of the most commonly used snippets, so it's also one of the most commonly branded snippets. In a SharePoint 2013 site, you can select an option to use managed navigation, so that a term store becomes the data source for the top navigation snippet. This way, you can use the Term Store Management tool in **Site Settings** to add or delete navigation terms and to manage the navigation taxonomy that is displayed by the Top Navigation snippet.
   
     
     
@@ -66,7 +66,7 @@ In this example, the site uses managed navigation, so the top navigation control
 
 ### Sample 1: Navigation <div> from the HTML mockup file
 
-Before you use Design Manager, when you design the HTML mockup for your master page, you'll likely use HTML and CSS to design a functional top navigation element. This HTML sample uses a basic structure for the top navigation: a **<div>**element with an ID and class name, a list for the top-level navigation entries, and a nested list for each flyout submenu.
+Before you use Design Manager, when you design the HTML mockup for your master page, you'll likely use HTML and CSS to design a functional top navigation element. This HTML sample uses a basic structure for the top navigation: a **<div>** element with an ID and class name, a list for the top-level navigation entries, and a nested list for each flyout submenu.
   
     
     
@@ -108,7 +108,7 @@ Before you use Design Manager, when you design the HTML mockup for your master p
 
 ### Sample 2: Navigation <div> styled with custom CSS
 
-To override the default SharePoint styles, in the mockup HTML file, include a standard link to your CSS file  `(<link rel="stylesheet" type="text/css" href="URLtoYourCustomCSSFile"/>`) just before the closing **</head>**tag.
+To override the default SharePoint styles, in the mockup HTML file, include a standard link to your CSS file  `(<link rel="stylesheet" type="text/css" href="URLtoYourCustomCSSFile"/>`) just before the closing **</head>** tag.
   
     
     
@@ -117,13 +117,13 @@ In these HTML and CSS samples, note the following:
     
     
 
-- Navigation entries are styled by using the format  `.msax-Navigation ul li` instead of applying classes directly to the**<ul>**or**<li>**tags.
+- Navigation entries are styled by using the format  `.msax-Navigation ul li` instead of applying classes directly to the **<ul>** or **<li>** tags.
     
   
-- Styles use the syntax  `.msax-Navigation ul li` instead of `.msax-Navigation ul>li` because the snippet markup may contain intervening**<div>**tags between the selected elements.
+- Styles use the syntax  `.msax-Navigation ul li` instead of `.msax-Navigation ul>li` because the snippet markup may contain intervening **<div>** tags between the selected elements.
     
   
-- The HTML mockup contains an empty **<li></li>**element as the last entry of the top-level**<ul>**. This is because, with managed navigation turned on, SharePoint adds an **Edit Links**command as the final entry to the top-level navigation, and the final site typically does not need to display this option. The CSS sample uses `.msax-Navigation ul li:last-child` to select this entry and set the display value to `none`. The empty **<li></li>**element in the HTML file is a temporary substitute for the default**Edit Links**entry. Be aware of this final**<li>**element if your site uses managed navigation and your CSS uses any `li:last-child` selectors.
+- The HTML mockup contains an empty **<li></li>** element as the last entry of the top-level **<ul>**. This is because, with managed navigation turned on, SharePoint adds an **Edit Links** command as the final entry to the top-level navigation, and the final site typically does not need to display this option. The CSS sample uses `.msax-Navigation ul li:last-child` to select this entry and set the display value to `none`. The empty **<li></li>** element in the HTML file is a temporary substitute for the default **Edit Links** entry. Be aware of this final **<li>** element if your site uses managed navigation and your CSS uses any `li:last-child` selectors.
     
   
 
@@ -214,25 +214,25 @@ In the Snippet Gallery, when you configure the properties of the top navigation 
     
     
 
-- In the **Important**section at the top, do not make any changes to the**CssClass**property.
+- In the **Important** section at the top, do not make any changes to the **CssClass** property.
     
   
-- Do not make any changes to properties under the **AjaxDelta**heading because these properties are related to the MDS properties that SharePoint uses to convert the HTML snippet into the corresponding ASP.NET snippet. This applies to any snippet, not just the top navigation snippet.
+- Do not make any changes to properties under the **AjaxDelta** heading because these properties are related to the MDS properties that SharePoint uses to convert the HTML snippet into the corresponding ASP.NET snippet. This applies to any snippet, not just the top navigation snippet.
     
   
-- If you're planning to override the default SharePoint styles, in the Snippet Gallery, in the **Behavior**section under**AspMenu**(there may be more than one**Behavior**section if the snippet contains more than one control, such as a delegate control), set**ClientIDMode**to**Static**. If you leave **ClientIDMode**set to the default setting,**Inherit**, the snippet's applied CSS classes will change based on the ordering of snippets on the page. For more information about **ClientIDMode**, see  [Control.ClientIDMode property](http://msdn.microsoft.com/en-us/library/system.web.ui.control.clientidmode.aspx). 
+- If you're planning to override the default SharePoint styles, in the Snippet Gallery, in the **Behavior** section under **AspMenu** (there may be more than one **Behavior** section if the snippet contains more than one control, such as a delegate control), set **ClientIDMode** to **Static**. If you leave **ClientIDMode** set to the default setting, **Inherit**, the snippet's applied CSS classes will change based on the ordering of snippets on the page. For more information about **ClientIDMode**, see  [Control.ClientIDMode property](http://msdn.microsoft.com/en-us/library/system.web.ui.control.clientidmode.aspx). 
     
-    For example, by default, the top navigation control uses default SharePoint ID attributes such as **zz5_TopNavigationMenu**and**zz6_RootAspMenu**. By changing **ClientIDMode**to**Static**, you make it possible to use these default IDs as selectors in your own CSS to override the default SharePoint styles. 
-    
-  
-- Some properties are already configured to make branding the top navigation snippet easier by eliminating the default dynamic CSS and JavaScript behaviors—for example, by default **UseSimpleRendering**is set to**True**and**MaximumDynamicDisplayLevels**is set to**0**. For more information about specific properties of the top navigation snippet, see  [AspMenu properties](http://msdn.microsoft.com/en-us/library/ms412476.aspx) and [Menu properties](http://msdn.microsoft.com/en-us/library/282668a1.aspx). 
+    For example, by default, the top navigation control uses default SharePoint ID attributes such as **zz5_TopNavigationMenu** and **zz6_RootAspMenu**. By changing **ClientIDMode** to **Static**, you make it possible to use these default IDs as selectors in your own CSS to override the default SharePoint styles. 
     
   
-After you configure the top navigation snippet in the Snippet Gallery, choose **Update**, and then choose **Copy to Clipboard**. In the HTML master page, delete the contents of the navigation  `<div id="navigation" class="msax-Navigation">` that contains your mockup control (delete just the contents of the**<div>**tag, not the**<div>**tag itself), and then copy the snippet into the navigation**<div>**. If necessary, reposition the navigation **<div>**, typically just after the start of the  `<div id="s4-bodyContainer">` tag but before the**<div>**containing `PlaceHolderMain`. 
+- Some properties are already configured to make branding the top navigation snippet easier by eliminating the default dynamic CSS and JavaScript behaviors—for example, by default **UseSimpleRendering** is set to **True** and **MaximumDynamicDisplayLevels** is set to **0**. For more information about specific properties of the top navigation snippet, see  [AspMenu properties](http://msdn.microsoft.com/en-us/library/ms412476.aspx) and [Menu properties](http://msdn.microsoft.com/en-us/library/282668a1.aspx). 
+    
+  
+After you configure the top navigation snippet in the Snippet Gallery, choose **Update**, and then choose **Copy to Clipboard**. In the HTML master page, delete the contents of the navigation  `<div id="navigation" class="msax-Navigation">` that contains your mockup control (delete just the contents of the **<div>** tag, not the **<div>** tag itself), and then copy the snippet into the navigation **<div>**. If necessary, reposition the navigation **<div>**, typically just after the start of the  `<div id="s4-bodyContainer">` tag but before the **<div>** containing `PlaceHolderMain`. 
   
     
     
-For easy comparison with the HTML of the navigation **<div>**above, the following sample contains the navigation**<div>**portion of the top navigation snippet. Note that this is not the entire snippet.
+For easy comparison with the HTML of the navigation **<div>** above, the following sample contains the navigation **<div>** portion of the top navigation snippet. Note that this is not the entire snippet.
   
     
     
@@ -322,7 +322,7 @@ For easy comparison with the HTML of the navigation **<div>**above, the followin
 
 ```
 
-Instead of using only custom styles, you may have a scenario where you want to override just a specific style. For example, to hide the **Edit Links**node, you can create a custom style that uses the default id**zz7_TopNavigationMenu_NavMenu_Edit**to set the display setting to `none`. 
+Instead of using only custom styles, you may have a scenario where you want to override just a specific style. For example, to hide the **Edit Links** node, you can create a custom style that uses the default id **zz7_TopNavigationMenu_NavMenu_Edit** to set the display setting to `none`. 
   
     
     

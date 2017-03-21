@@ -17,7 +17,7 @@ This series of sample workflows was developed to demonstrate the large range of 
 
 ### SharePoint 2013 workflow: Call an external web service
 
-This sample uses Visual Studio to demonstrate creating a workflow that calls an external web service using the **HttpGet**activity. In calling the web service, the workflow also uses the new**DynamicValue**data type.
+This sample uses Visual Studio to demonstrate creating a workflow that calls an external web service using the **HttpGet** activity. In calling the web service, the workflow also uses the new **DynamicValue** data type.
   
     
     
@@ -28,7 +28,7 @@ The sample, along with a readme file, is available here:  [SharePoint 2013 workf
 
 ### SharePoint 2013 workflow: Create a custom action
 
-This sample uses Visual Studio to demonstrate creating a workflow that calls an external web service. In calling the web service, the workflow also uses the new **DynamicValue**data type. The part of the workflow that calls the web service and extracts the details from the response is contained within a custom activity,**GetNWCustomerDetailsWorkflow**.
+This sample uses Visual Studio to demonstrate creating a workflow that calls an external web service. In calling the web service, the workflow also uses the new **DynamicValue** data type. The part of the workflow that calls the web service and extracts the details from the response is contained within a custom activity, **GetNWCustomerDetailsWorkflow**.
   
     
     
@@ -61,7 +61,7 @@ The sample, along with a readme file, is available here:  [SharePoint 2013 workf
 
 ### SharePoint 2013 workflow: Workflow OM in a SharePoint app
 
-The **SharePoint 2013 workflow: Workflow OM in a SharePoint app**code sample is an example of an interactive SharePoint-hosted app that uses the SharePoint workflow JSOM to deploy workflow definitions to both an app web and to a "parent web" (that is, a SharePoint web that is hosting the app).
+The **SharePoint 2013 workflow: Workflow OM in a SharePoint app** code sample is an example of an interactive SharePoint-hosted app that uses the SharePoint workflow JSOM to deploy workflow definitions to both an app web and to a "parent web" (that is, a SharePoint web that is hosting the app).
   
     
     

@@ -14,7 +14,7 @@ In PerformancePoint Services, custom report renderers are web server controls th
   
     
     
-The following procedures and code examples are based on the **SampleReportRenderer**class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The renderer renders a table and populates it with values received from a linked filter. For the complete code for the class, see  [Code example: Create a renderer for custom PerformancePoint Services reports in SharePoint Server 2013](#bk_example). 
+The following procedures and code examples are based on the **SampleReportRenderer** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The renderer renders a table and populates it with values received from a linked filter. For the complete code for the class, see  [Code example: Create a renderer for custom PerformancePoint Services reports in SharePoint Server 2013](#bk_example). 
   
     
     
@@ -54,7 +54,7 @@ We recommend that you use the sample report renderer as a template. The sample s
     Depending on your extension's functionality, other project references may be required. 
     
   
-4. In your renderer class, add **using**directives for the following PerformancePoint Services namespaces:
+4. In your renderer class, add **using** directives for the following PerformancePoint Services namespaces:
     
   -  [Microsoft.PerformancePoint.Scorecards](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.aspx)
     
@@ -66,7 +66,7 @@ We recommend that you use the sample report renderer as a template. The sample s
     
   
 
-    Depending on your extension's functionality, other **using**directives may be required.
+    Depending on your extension's functionality, other **using** directives may be required.
     
   
 5. Inherit from the  [ParameterizableControl](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Server.Extensions.ParameterizableControl.aspx) base class.
